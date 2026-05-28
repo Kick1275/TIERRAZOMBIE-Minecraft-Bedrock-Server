@@ -1,0 +1,56 @@
+{
+    "format_version": "1.21.10",
+    "minecraft:block": {
+        "description": {
+            "identifier": "rt:31x31_block",
+            "menu_category": {
+                "category": "construction",
+                "is_hidden_in_commands": false
+            }
+        },
+        "components": {
+            "minecraft:light_emission": 4,
+            "minecraft:geometry": {
+                "identifier": "minecraft:geometry.full_block"
+            },
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "31x31_on_block",
+                    "render_method": "opaque",
+                    "face_dimming": true,
+                    "ambient_occlusion": true
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -8,
+                    0,
+                    -8
+                ],
+                "size": [
+                    16,
+                    16,
+                    16
+                ]
+            },
+            "minecraft:destructible_by_mining": false,
+            "minecraft:destructible_by_explosion": false,
+            "minecraft:custom_components": [
+                "rt:31x31_block"
+            ],
+            "minecraft:map_color": "#a3a3a3"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "format_version": "1.21.10",
+
+    "rt:11x11_on_block": {
+        "sound": "metal",
+        "textures": "11x11_on_block"
+    },
+    "rt:11x11_openlist_block": {
+        "sound": "metal",
+        "textures": "11x11_openlist_block"
+    },
+    "rt:21x21_on_block": {
+        "sound": "metal",
+        "textures": "21x21_on_block"
+    },
+    "rt:21x21_openlist_block": {
+        "sound": "metal",
+        "textures": "21x21_openlist_block"
+    },
+    "rt:31x31_on_block": {
+        "sound": "metal",
+        "textures": "31x31_on_block"
+    },
+    "rt:31x31_openlist_block": {
+        "sound": "metal",
+        "textures": "31x31_openlist_block"
+    },
+    "rt:11x11_block": {
+        "sound": "metal",
+        "textures": "11x11_on_block"
+    },
+    "rt:21x21_block": {
+        "sound": "metal",
+        "textures": "21x21_on_block"
+    },
+    "rt:31x31_block": {
+        "sound": "metal",
+        "textures": "31x31_on_block"
+    }
+}

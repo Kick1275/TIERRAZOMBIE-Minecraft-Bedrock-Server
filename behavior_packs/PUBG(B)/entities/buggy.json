@@ -1,0 +1,424 @@
+{
+"format_version": "1.17.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "pubg:buggy",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "start_up",
+                    "damage_slow",
+                    "sound_stop",
+                    "damage_fast",
+                    "drive",
+                    "idle",
+                    "seat"
+                ]
+            },
+            "animations": {
+                "start_up": "controller.animation.buggy_startup",
+                "sound_stop": "controller.animation.buggy_sound_stop",
+                "damage_slow": "controller.animation.buggy_damage_slow",
+                "damage_fast": "controller.animation.buggy_damage_fast",
+                "drive": "controller.animation.buggy_drive",
+                "idle": "controller.animation.buggy_idle",
+                "seat": "controller.animation.buggy_seat"
+            }
+        },
+        "component_groups": {
+            "speed_1": {
+                "minecraft:movement": {
+                    "value": 0.15
+                },
+                "minecraft:timer": {
+                    "time": 0.6,
+                    "time_down_event": {
+                        "event": "speed_2"
+                    }
+                }
+            },
+            "speed_2": {
+                "minecraft:movement": {
+                    "value": 0.2
+                },
+                "minecraft:timer": {
+                    "time": 0.6,
+                    "time_down_event": {
+                        "time": 1,
+                        "event": "speed_3"
+                    }
+                }
+            },
+            "speed_3": {
+                "minecraft:movement": {
+                    "value": 0.27
+                },
+                "minecraft:timer": {
+                    "time": 0.5,
+                    "time_down_event": {
+                        "event": "speed_4"
+                    }
+                }
+            },
+            "speed_4": {
+                "minecraft:movement": {
+                    "value": 0.3
+                },
+                "minecraft:timer": {
+                    "time": 0.5,
+                    "time_down_event": {
+                        "event": "speed_5"
+                    }
+                }
+            },
+            "speed_5": {
+                "minecraft:movement": {
+                    "value": 0.35
+                },
+                "minecraft:timer": {
+                    "time": 0.4,
+                    "time_down_event": {
+                        "event": "speed_6"
+                    }
+                }
+            },
+            "speed_6": {
+                "minecraft:movement": {
+                    "value": 0.43
+                }
+            },
+            "buggy:damage_slow": {
+                "minecraft:area_attack": {
+                    "damage_per_tick": 5,
+                    "damage_range": 0.8,
+                    "cause": "contact",
+                    "entity_filter": {
+                        "none_of": [
+                            {
+                                "test": "is_riding",
+                                "subject": "other",
+                                "value": true
+                            },
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "vehicles"
+                            }
+                        ]
+                    }
+                }
+            },
+            "buggy:damage_fast": {
+                "minecraft:area_attack": {
+                    "damage_per_tick": 10,
+                    "damage_range": 0.8,
+                    "cause": "contact",
+                    "entity_filter": {
+                        "none_of": [
+                            {
+                                "test": "is_riding",
+                                "subject": "other",
+                                "value": true
+                            },
+                            {
+                                "test": "is_family",
+                                "subject": "other",
+                                "value": "vehicles"
+                            }
+                        ]
+                    }
+                }
+            },
+            "buggy:destroy": {
+                "minecraft:transformation": {
+                    "into": "pubg:buggy_destroyed",
+                    "delay": {
+                        "value": 0
+                    }
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "vehiculos"
+                ]
+            },
+            "minecraft:scale": {
+                "value": 1
+            },
+            "minecraft:collision_box": {
+                "width": 2,
+                "height": 1.6
+            },
+            "minecraft:health": {
+                "value": 500,
+                "max": 1540
+            },
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:underwater_movement": {
+                "value": 0
+            },
+            "minecraft:input_ground_controlled": {},
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:rideable": {
+                "interact_text": "Drive Buggy",
+                "family_types": [
+                    "player"
+                ],
+                "seat_count": 2,
+                "seats": [
+                    {
+                        "position": [
+                            0,
+                            0.15,
+                            -0.1
+                        ],
+                        "min_rider_count": 0,
+                        "max_rider_count": 0
+                    },
+                    {
+                        "position": [
+                            0,
+                            0.9,
+                            -1
+                        ],
+                        "min_rider_count": 0,
+                        "max_rider_count": 0,
+                        "lock_rider_rotation": 360,
+                        "rotate_rider_by": 180
+                    }
+                ],
+                "controlling_seat": 1
+            },
+            "minecraft:physics": {
+                "has_collision": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:is_stackable": {},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "magic",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "drowning",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "magma",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "fire_tick",
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "suffocation",
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 1.2,
+                        "height": 0.9,
+                        "pivot": [
+                            0,
+                            0.65,
+                            1.8
+                        ]
+                    },
+                    {
+                        "width": 1.2,
+                        "height": 0.9,
+                        "pivot": [
+                            0,
+                            0.65,
+                            1.2
+                        ]
+                    },
+                    {
+                        "width": 1.2,
+                        "height": 0.6,
+                        "pivot": [
+                            0,
+                            0.5,
+                            0.2
+                        ]
+                    },
+                    {
+                        "width": 1.2,
+                        "height": 0.9,
+                        "pivot": [
+                            0,
+                            0.65,
+                            -1.4
+                        ]
+                    }
+                ]
+            },
+            "minecraft:on_death": {
+                "filters": {
+                    "any_of": [
+                        {
+                            "subject": "self",
+                            "value": "vehiculos",
+                            "test": "is_family"
+                        }
+                    ]
+                },
+                "target": "self",
+                "event": "buggy:destroy"
+            }
+        },
+        "events": {
+            "buggy_speed_1": {
+                "add": {
+                    "component_groups": [
+                        "speed_1"
+                    ]
+                },
+                "run_command": {
+                    "command": [
+                        "playsound vehicle.buggy.engine @a[r=50] ~~~"
+                    ]
+                }
+            },
+            "speed_2": {
+                "add": {
+                    "component_groups": [
+                        "speed_2"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "speed_1"
+                    ]
+                }
+            },
+            "speed_3": {
+                "add": {
+                    "component_groups": [
+                        "speed_3"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "speed_2"
+                    ]
+                }
+            },
+            "speed_4": {
+                "add": {
+                    "component_groups": [
+                        "speed_4"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "speed_3",
+                        "buggy:movement_basic"
+                    ]
+                }
+            },
+            "speed_5": {
+                "add": {
+                    "component_groups": [
+                        "speed_5"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "speed_4"
+                    ]
+                }
+            },
+            "speed_6": {
+                "add": {
+                    "component_groups": [
+                        "speed_6"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "speed_5"
+                    ]
+                }
+            },
+            "buggy:destroy": {
+                "add": {
+                    "component_groups": [
+                        "buggy:destroy"
+                    ]
+                }
+            },
+            "buggy:damage_slow": {
+                "add": {
+                    "component_groups": [
+                        "buggy:damage_slow"
+                    ]
+                }
+            },
+            "buggy:damage_fast": {
+                "add": {
+                    "component_groups": [
+                        "buggy:damage_fast"
+                    ]
+                }
+            },
+            "buggy:idle": {
+                "remove": {
+                    "component_groups": [
+                        "speed_1",
+                        "speed_2",
+                        "speed_3",
+                        "speed_4",
+                        "speed_5",
+                        "speed_6",
+                        "buggy:damage_slow",
+                        "buggy:damage_fast",
+                        "buggy:break_block"
+                    ]
+                }
+            },
+            "buggy:break_block": {
+                "add": {
+                    "component_groups": [
+                        "buggy:break_block"
+                    ]
+                }
+            },
+            "buggy:movement_basic": {
+                "add": {
+                    "component_groups": [
+                        "buggy:movement_basic"
+                    ]
+                }
+            },
+            "buggy:no_movement_basic": {
+                "remove": {
+                    "component_groups": [
+                        "buggy:movement_basic"
+                    ]
+                }
+            }
+        }
+    }
+}

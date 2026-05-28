@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:gas_canister",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/gas_canister"
+			},
+			"geometry": {
+				"default": "geometry.gas_canister"
+			},
+			"render_controllers": [
+				"controller.render.gas_canister"
+			],
+			"spawn_egg": {
+				"texture": "af_gas_canister_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"open": "animation.gas_canister.open",
+				"opening": "controller.animation.gas_canister.opening"
+			},
+			"scripts": {
+				"animate": [
+					"opening"
+				]
+			}
+		}
+	}
+}

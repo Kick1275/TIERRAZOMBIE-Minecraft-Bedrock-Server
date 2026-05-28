@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "ranzie:iron_spiked_plate",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

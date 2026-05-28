@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.NpcFoodShop": {
+			"initial_state": "Inactivo",
+			"states": {
+				"Inactivo": {
+					"animations": [
+						"NPC.Inactivo"
+					]
+				}
+			}
+		}
+	}
+}

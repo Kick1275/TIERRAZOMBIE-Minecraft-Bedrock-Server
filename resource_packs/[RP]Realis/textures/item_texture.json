@@ -1,0 +1,67 @@
+{
+	"texture_data": {
+		"efm_sieve": {
+			"textures": "textures/items/sieve_full"
+		},
+		"efm_salt": {
+			"textures": "textures/items/salt"
+		},
+		"efm_rotten_apple": {
+			"textures": "textures/items/apple_rot"
+		},
+		"efm_rotten_cooked_beef": {
+			"textures": "textures/items/beef_cooked_rot"
+		},
+		"efm_rotten_raw_beef": {
+			"textures": "textures/items/beef_raw_rot"
+		},
+		"efm_rotten_beetroot": {
+			"textures": "textures/items/beetroot_rot"
+		},
+		"efm_rotten_soup": {
+			"textures": "textures/items/beetroot_soup_rot"
+		},
+		"efm_rotten_bread": {
+			"textures": "textures/items/bread_rot"
+		},
+		"efm_rotten_carrot": {
+			"textures": "textures/items/carrot_rot"
+		},
+		"efm_rotten_cooked_chicken": {
+			"textures": "textures/items/chicken_cooked_rot"
+		},
+		"efm_rotten_chicken": {
+			"textures": "textures/items/chicken_raw_rot"
+		},
+		"efm_rotten_fish": {
+			"textures": "textures/items/fish_rot"
+		},
+		"efm_rotten_cooked_mutton": {
+			"textures": "textures/items/mutton_cooked_rot"
+		},
+		"efm_rotten_mutton": {
+			"textures": "textures/items/mutton_raw_rot"
+		},
+		"efm_rotten_cooked_porkchop": {
+			"textures": "textures/items/porkchop_cooked_rot"
+		},
+		"efm_rotten_porkchop": {
+			"textures": "textures/items/porkchop_raw_rot"
+		},
+		"efm_rotten_baked_potato": {
+			"textures": "textures/items/potato_baked_rot"
+		},
+		"efm_rotten_potato": {
+			"textures": "textures/items/potato_rot"
+		},
+		"efm_rotten_pumpkin_pie": {
+			"textures": "textures/items/pumpkin_pie_rot"
+		},
+		"efm_rotten_cooked_rabbit": {
+			"textures": "textures/items/rabbit_cooked_rot"
+		},
+		"efm_rotten_rabbit": {
+			"textures": "textures/items/rabbit_raw_rot"
+		}
+	}
+}

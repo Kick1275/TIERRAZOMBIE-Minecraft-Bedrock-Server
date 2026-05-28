@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.guardia1": {
+            "initial_state": "Inactivo",
+            "states": {
+                "Inactivo": {
+                    "animations": [
+                        "Guardia_Inactivo"
+                    ]
+                },
+                "Interact": {
+                    "animations": [
+                        "Guardia_Interact"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,332 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.pkm": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='pkm' && q.is_using_item) || query.get_equipped_item_name=='pkm_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s pkm 75",
+            "@s[hasitem={item=krep:pkm, location=slot.weapon.mainhand}] krep:noreload",
+            "@s pkm:noammo"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "pkm.30": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') >= 13 && q.mark_variant != 2"
+            },
+            {
+              "pkm.12": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 12 && q.mark_variant != 2"
+            },
+            {
+              "pkm.11": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 11 && q.mark_variant != 2"
+            },
+            {
+              "pkm.10": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 10 && q.mark_variant != 2"
+            },
+            {
+              "pkm.9": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 9 && q.mark_variant != 2"
+            },
+            {
+              "pkm.8": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 8 && q.mark_variant != 2"
+            },
+            {
+              "pkm.7": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 7 && q.mark_variant != 2"
+            },
+            {
+              "pkm.6": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 6 && q.mark_variant != 2"
+            },
+            {
+              "pkm.5": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 5 && q.mark_variant != 2"
+            },
+            {
+              "pkm.4": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 4 && q.mark_variant != 2"
+            },
+            {
+              "pkm.3": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 3 && q.mark_variant != 2"
+            },
+            {
+              "pkm.2": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 2 && q.mark_variant != 2"
+            },
+            {
+              "pkm.1": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 1 && q.mark_variant != 2"
+            },
+            {
+              "pkm.31": "query.get_equipped_item_name=='pkm' && query.is_using_item && query.scoreboard('pkm') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function pkm",
+            "@s pkm:noammo"
+          ]
+        },
+        "pkm.31": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0"
+          ]
+        },
+        "pkm.30": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:12",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.12": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:11",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.11": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:10",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.10": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:9",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.9": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:8",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.8": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:7",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.7": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:6",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.6": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:5",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.5": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:4",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.4": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:3",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.3": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:2",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.2": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:0",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        },
+        "pkm.1": {
+          "animations": [
+            "pkmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:pkm_fire",
+            "/scoreboard players set @s[scores={pkm=77..}] pkm 76",
+            "@s pkm:0",
+            "/scoreboard players remove @s[scores={pkm=1..76}] pkm 1",
+            "/playsound pkm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={pkm=0}] slot.weapon.mainhand 1 krep:pkm_emp 1 0",
+            "/title @s[scores={pkm=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

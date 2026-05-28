@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.item.first_person",
+				"texture_width": 16,
+				"texture_height": 16
+			},
+			"bones": [
+				{
+					"name": "rightitem",
+					"pivot": [0, 0, 0],
+					"texture_meshes": [
+						{
+							"texture": "default",
+							"position": [0, -4, 10],
+							"rotation": [0, -135, 90],
+							"local_pivot": [6, 0, 6]
+						}
+					],
+					"locators": {
+						"locator": [1.5, -9, -3]
+					}
+				}
+			]
+		}
+	]
+}

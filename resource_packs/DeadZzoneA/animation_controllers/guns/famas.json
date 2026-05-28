@@ -1,0 +1,134 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.famas.person": {
+      "initial_state": "draw",
+      "states": {
+        "draw": {
+          "animations": [
+           {
+            "guns.draw": "variable.all_famas"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_famas && query.any_animation_finished"
+            },
+            {
+              "draw": "!variable.all_famas"
+            }
+          ]
+        },
+        "holding": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.hold": "variable.all_famas"
+            }
+          ],
+          "transitions": [
+            {
+              "sprint": "variable.all_famas && query.is_sprinting && !q.is_in_water"
+            },
+            {
+              "aim": "variable.all_famas && query.is_sneaking"
+            },
+            {
+              "back": "variable.all_famas && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.famas_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_famas"
+            }
+          ]
+        },
+        "sprint": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.sprint": "variable.all_famas"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_famas && !query.is_sprinting"
+            },
+            {
+              "back": "variable.all_famas && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.famas_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_famas"
+            }
+          ]
+        },
+        "back": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.back": "variable.all_famas"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_famas && !query.is_swimming"
+            },
+            {
+             "sprint": "variable.all_famas && query.is_sprinting && !query.is_in_water"
+            },
+            {
+              "reload": "variable.famas_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_famas"
+            }
+          ]
+        },
+        "aim": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.aim": "variable.all_famas"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_famas && !query.is_sneaking"
+            },
+            {
+              "reload": "variable.famas_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_famas"
+            }
+          ]
+        },
+        "reload": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "back_mag.reload_full": "variable.all_famas"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_famas && query.all_animations_finished"
+            },
+            {
+              "draw": "!variable.all_famas"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

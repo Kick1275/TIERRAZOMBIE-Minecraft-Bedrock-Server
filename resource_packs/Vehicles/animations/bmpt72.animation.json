@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bmpt72.shoot": {
+			"loop": true,
+			"animation_length": 0.1,
+			"bones": {
+				"MG": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							2
+						],
+						"0.1": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "flash",
+					"locator": "particle"
+				},
+				"0.1": {
+					"effect": "smoke",
+					"locator": "particle"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.awp.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.0,
+      "timeline": {
+        "2.88": [
+          "/scoreboard players set @s[scores={awp=7..}] awp 6",
+          "/function awp"
+        ],
+        "2.8": [
+          "/function awpreload",
+          "/event entity @s krep:awp_reload"
+        ]
+      }
+    }
+  }
+}

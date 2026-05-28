@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.t50.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.1,
+      "timeline": {
+        "2.0": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:t50 1 0",
+          "/scoreboard players set @s[scores={t50=9..}] t50 8",
+          "/function t50"
+        ],
+        "1.9": [
+          "/function t50reload",
+          "/event entity @s krep:t50_reload"
+        ]
+      }
+    }
+  }
+}

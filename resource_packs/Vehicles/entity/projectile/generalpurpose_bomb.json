@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:generalpurpose_bomb",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/generalpurpose_bomb"
+			},
+			"geometry": {
+				"default": "geometry.generalpurpose_bomb"
+			},
+			"render_controllers": [
+				"controller.render.generalpurpose_bomb"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"fall": "animation.bomb.fall"
+			},
+			"scripts": {
+				"animate": [
+					"fall"
+				]
+			}
+		}
+	}
+}

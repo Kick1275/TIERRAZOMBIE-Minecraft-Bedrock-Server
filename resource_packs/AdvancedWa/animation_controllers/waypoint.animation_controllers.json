@@ -1,0 +1,43 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.advanced_waypoints.waypoint.scale_fov": {
+      "initial_state": "lower",
+      "states": {
+        "lower": {
+          "animations": ["scale_fov_stop_see"],
+          "transitions": [
+            {"upper": "v.need_look_show_info == true ? v.looking == true : true"}
+          ],
+          "blend_transition": 0.25
+        },
+        "upper": {
+          "animations": ["scale_fov_seeing"],
+          "transitions": [
+            {"lower": "v.need_look_show_info == true ? v.looking == false : false"}
+          ],
+          "blend_transition": 0.25
+        }
+      }
+    },
+    "controller.animation.advanced_waypoints.waypoint.beacon": {
+      "initial_state": "lower",
+      "states": {
+        "lower": {
+          "animations": ["beacon_disabled"],
+          "transitions": [
+            {"upper": "v.need_look_show_beam == true ? (v.looking == true && q.distance_from_camera > 7) : true"}
+          ],
+          "blend_transition": 0.5
+        },
+        "upper": {
+          "animations": ["beacon_enabled"],
+          "transitions": [
+            {"lower": "v.need_look_show_beam == true ? (v.looking == false || q.distance_from_camera < 7) : false"}
+          ],
+          "blend_transition": 0.5
+        }
+      }
+    }
+  }
+}

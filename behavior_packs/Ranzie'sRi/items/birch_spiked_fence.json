@@ -1,0 +1,20 @@
+{
+	"format_version" : "1.20.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "ranzie:birch_spiked_fence",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.fence"
+			}
+		},
+		"components" : {
+			"minecraft:icon" : {
+				"texture" : "birch_spiked_fence_item"
+			},
+			"minecraft:block_placer" : {
+				"block" : "ranzie:birch_upgraded_spiked_fence_block"
+			}
+		}
+	}
+}

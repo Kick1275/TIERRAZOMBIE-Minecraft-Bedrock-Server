@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.tanker": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "look_at_target",
+            {
+              "move": "query.modified_move_speed"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true,
+          "transitions": [
+            {
+              "attack": "variable.attack_time \u003e 0.0 && query.any_animation_finished"
+            }
+          ]
+        },
+        "move": {
+          "animations": [
+            "move"
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "transitions": [
+            {
+              "move": "query.modified_move_speed"
+            }
+          ]
+        },
+        "attack": {
+          "animations": [
+            "attack"
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true,
+          "transitions": [
+            {
+              "default": "variable.attack_time <= 0 && query.any_animation_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.deagle.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.43,
+      "timeline": {
+        "2.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:deagle 1 0",
+          "/scoreboard players set @s[scores={deagle=8..}] deagle 7",
+          "/function deagle"
+        ],
+        "2.38": [
+          "/function deaglereload",
+          "/event entity @s krep:deagle_reload"
+        ]
+      }
+    }
+  }
+}

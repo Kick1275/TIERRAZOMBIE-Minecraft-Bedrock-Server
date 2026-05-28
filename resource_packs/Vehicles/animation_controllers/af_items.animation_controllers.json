@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.af_items.gun.shoot": {
+			"initial_state": "no_shoot",
+			"states": {
+				"no_shoot": {
+					"transitions": [
+						{
+							"shooting": "query.is_using_item"
+						}
+					]
+				},
+				"shooting": {
+					"animations": [
+						{
+							"shoot": "math.min(1,1)"
+						},
+						{
+							"1st_person_shoot": "context.is_first_person&&math.min(1,1)"
+						}
+					],
+					"transitions": [
+						{
+							"no_shoot": "!query.is_using_item&&query.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,181 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.male_eyes": {
+      "arrays": {
+        "textures": {
+          "Array.eyes": [
+            "Texture.male_eyes_0",
+            "Texture.male_eyes_1",
+            "Texture.male_eyes_2",
+            "Texture.male_eyes_3",
+            "Texture.male_eyes_4",
+            "Texture.male_eyes_5",
+            "Texture.male_eyes_6",
+            "Texture.male_eyes_7",
+            "Texture.male_eyes_8",
+            "Texture.male_eyes_9",
+            "Texture.male_eyes_10",
+            "Texture.male_eyes_11",
+            "Texture.male_eyes_12",
+            "Texture.male_eyes_13",
+            "Texture.male_eyes_14",
+            "Texture.male_eyes_15"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.eyes"
+        }
+      ],
+      "textures": [
+        "Array.eyes[v.male_eyes]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    "controller.render.male_sprinter_eyes": {
+      "arrays": {
+        "textures": {
+          "Array.eyes": [
+            "Texture.male_sprinter_eyes_0",
+            "Texture.male_sprinter_eyes_1",
+            "Texture.male_sprinter_eyes_2",
+            "Texture.male_sprinter_eyes_3",
+            "Texture.male_sprinter_eyes_4",
+            "Texture.male_sprinter_eyes_5",
+            "Texture.male_sprinter_eyes_6",
+            "Texture.male_sprinter_eyes_7",
+            "Texture.male_sprinter_eyes_8",
+            "Texture.male_sprinter_eyes_9",
+            "Texture.male_sprinter_eyes_10",
+            "Texture.male_sprinter_eyes_11"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.eyes"
+        }
+      ],
+      "textures": [
+        "Array.eyes[v.male_sprinter_eyes]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    "controller.render.female_eyes": {
+      "arrays": {
+        "textures": {
+          "Array.eyes": [
+            "Texture.female_eyes_0",
+            "Texture.female_eyes_1",
+            "Texture.female_eyes_2",
+            "Texture.female_eyes_3",
+            "Texture.female_eyes_4",
+            "Texture.female_eyes_5",
+            "Texture.female_eyes_6",
+            "Texture.female_eyes_7",
+            "Texture.female_eyes_8",
+            "Texture.female_eyes_9",
+            "Texture.female_eyes_10",
+            "Texture.female_eyes_11",
+            "Texture.female_eyes_12",
+            "Texture.female_eyes_13",
+            "Texture.female_eyes_14",
+            "Texture.female_eyes_15"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.eyes"
+        }
+      ],
+      "textures": [
+        "Array.eyes[v.male_eyes]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    "controller.render.female_sprinter_eyes": {
+      "arrays": {
+        "textures": {
+          "Array.eyes": [
+            "Texture.female_sprinter_eyes_0",
+            "Texture.female_sprinter_eyes_1",
+            "Texture.female_sprinter_eyes_2",
+            "Texture.female_sprinter_eyes_3",
+            "Texture.female_sprinter_eyes_4",
+            "Texture.female_sprinter_eyes_5",
+            "Texture.female_sprinter_eyes_6",
+            "Texture.female_sprinter_eyes_7",
+            "Texture.female_sprinter_eyes_8",
+            "Texture.female_sprinter_eyes_9",
+            "Texture.female_sprinter_eyes_10",
+            "Texture.female_sprinter_eyes_11"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.eyes"
+        }
+      ],
+      "textures": [
+        "Array.eyes[v.male_sprinter_eyes]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

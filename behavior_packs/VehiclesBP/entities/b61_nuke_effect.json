@@ -1,0 +1,72 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:b61_nuke_effect",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 50
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:explode": {
+				"fuse_length": 5,
+				"power": 10,
+				"fuse_lit": true,
+				"causes_fire": true,
+				"breaks_blocks": true,
+				"fire_affected_by_griefing": true,
+				"destroy_affected_by_griefing": true
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.2,
+				"time_down_event": {
+					"event": "af:explode",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"af:explode": {
+				"queue_command": {
+					"command": [
+						"summon af:b61_nuke_shockwave ^ ^ ^128",
+						"summon af:b61_nuke_shockwave ^ ^ ^64"
+					]
+				}
+			}
+		}
+	}
+}

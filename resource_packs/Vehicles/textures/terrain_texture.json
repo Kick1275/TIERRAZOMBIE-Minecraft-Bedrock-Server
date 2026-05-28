@@ -1,0 +1,41 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Bean's Armed Forces",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"af_oil": {
+			"textures": "textures/blocks/oil_block"
+		},
+		"af_weapontable_side": {
+			"textures": "textures/blocks/weapontable_side"
+		},
+		"af_weapontable_top": {
+			"textures": "textures/blocks/weapontable_top"
+		},
+		"af_wasteland_grass_side": {
+			"textures": "textures/blocks/wasteland_grass_side"
+		},
+		"af_wasteland_grass_top": {
+			"textures": "textures/blocks/wasteland_grass_top"
+		},
+		"af_bullet_light": {
+			"textures": "textures/blocks/invisible"
+		},
+		"af_uranium_ore": {
+			"textures": "textures/blocks/uranium_ore"
+		},
+		"af_steel_frame_top": {
+			"textures": "textures/blocks/steel_frame_top"
+		},
+		"af_steel_frame_side": {
+			"textures": "textures/blocks/steel_frame_side"
+		},
+		"af_aluminium_ore": {
+			"textures": "textures/blocks/aluminium_ore"
+		},
+		"af_titanium_ore": {
+			"textures": "textures/blocks/titanium_ore"
+		}
+	}
+}

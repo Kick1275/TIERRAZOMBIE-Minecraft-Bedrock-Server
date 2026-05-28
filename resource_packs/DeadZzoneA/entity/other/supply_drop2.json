@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:supply_drop_2",
+      "materials": {
+        "default": "slime"
+      },
+      "textures": {
+        "default": "textures/blocks/supply/supply0"
+      },
+      "geometry": {
+        "default": "geometry.supply_block"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

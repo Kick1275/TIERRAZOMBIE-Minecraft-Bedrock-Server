@@ -1,0 +1,46 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pg117.drive": {
+			"loop": true,
+			"animation_length": 0.16,
+			"bones": {
+				"propeller": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 0, 442.5],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"pointer3": {
+					"rotation": {
+						"0.0": {
+							"post": [0, 0, -210],
+							"lerp_mode": "catmullrom"
+						},
+						"0.16": {
+							"post": [0, 0, -180],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.pg117.turn": {
+			"loop": true,
+			"bones": {
+				"steeringwheel": {
+					"rotation": [0, 0, "Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*-1"]
+				},
+				"skeg": {
+					"rotation": [0, "Math.max(20, Math.min(-20,query.yaw_speed * 0.5))*-1", 0]
+				}
+			}
+		}
+	}
+}

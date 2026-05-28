@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.vault": {
+			"initial_state": "vault_inactivo",
+			"states": {
+				"vault_inactivo": {
+					"animations": [
+						"vault_inactive"
+					]
+				}
+			}
+		}
+	}
+}

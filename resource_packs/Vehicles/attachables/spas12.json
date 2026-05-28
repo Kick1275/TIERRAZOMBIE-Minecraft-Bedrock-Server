@@ -1,0 +1,61 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:spas12",
+			"item": {
+				"af:spas12": "query.owner_identifier=='minecraft:player'"
+			},
+			"materials": {
+				"default": "entity_emissive_alpha",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/armor/spas12",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.spas12"
+			},
+			"animations": {
+				"model_adjust": "animation.af_anygun.model_adjust",
+				"1st_person_no_sneak": "animation.af_anygun.1st_person.no_sneak",
+				"1st_person_sneaking": "animation.af_anygun.1st_person.sneaking",
+				"1st_person_shoot": "animation.af_anygun.1st_person.shoot",
+				"3rd_person_no_sneak": "animation.af_anygun.3rd_person.no_sneak",
+				"3rd_person_sneaking": "animation.af_anygun.3rd_person.sneaking",
+				"shoot": "animation.af_anygun.shoot",
+				"shoot_controller": "controller.animation.af_items.gun.shoot"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.charge_amount=math.clamp((query.main_hand_item_max_duration-(query.main_hand_item_use_duration-query.frame_alpha+1.0))/10.0,0.0,1.0f);"
+				],
+				"animate": [
+					"model_adjust",
+					{
+						"1st_person_no_sneak": "context.is_first_person && !query.is_sneaking"
+					},
+					{
+						"1st_person_sneaking": "context.is_first_person && query.is_sneaking"
+					},
+					{
+						"3rd_person_no_sneak": "!context.is_first_person && !query.is_sneaking"
+					},
+					{
+						"3rd_person_sneaking": "!context.is_first_person && query.is_sneaking"
+					},
+					"shoot_controller"
+				]
+			},
+			"sound_effects": {
+				"reload": "item.shotgun.rack",
+				"trigger": "af.attachables.gun.trigger",
+				"firing": "item.shotgun.shoot"
+			},
+			"render_controllers": [
+				"controller.render.af_items.enchanted"
+			]
+		}
+	}
+}

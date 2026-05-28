@@ -1,0 +1,69 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "WorldEdit Bedrock Edition 0.10.4",
+        "description": "pack.description",
+        "uuid": "3cdb2ddf-662e-4f8f-a0a1-1293b91ccb2f",
+        "version": [
+            0,
+            10,
+            4
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            130
+        ]
+    },
+    "modules": [
+        {
+            "description": "item and entity definitions",
+            "type": "data",
+            "uuid": "f0bc63f7-f2b2-4de2-a27c-6a3d5ac7cee4",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "scripts",
+            "type": "script",
+            "language": "javascript",
+            "uuid": "7f97c5a5-a9ec-4773-b29f-a26e0f653ee2",
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "entry": "scripts/index.js"
+        }
+    ],
+    "capabilities": [
+        "script_eval"
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "beta"
+        },
+        {
+            "uuid": "e304a4eb-f0a0-4979-ac17-7b0f46a555c8",
+            "version": [
+                0,
+                10,
+                4
+            ]
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "SIsilicon"
+        ],
+        "license": "GPL-3.0-or-later"
+    }
+}

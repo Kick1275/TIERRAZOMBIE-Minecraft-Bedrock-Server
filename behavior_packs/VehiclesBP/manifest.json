@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"BeanPlus"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.45"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"min_engine_version": [
+			1,
+			21,
+			50
+		],
+		"uuid": "1540965b-552e-4304-8175-c914e756821b",
+		"version": [
+			3,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "bd30ac15-70ba-437a-af8c-028230e87e4b",
+			"version": [
+				3,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "01cf9f1a-ff90-41b5-b844-77251387d9ef",
+			"version": [
+				3,
+				0,
+				0
+			]
+		}
+	]
+}

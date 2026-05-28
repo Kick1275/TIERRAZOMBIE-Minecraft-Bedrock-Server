@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.look": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1.5,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -45, 0],
+						"1.0": [0, 45, 0],
+						"1.5": [0, 0, 0]
+					},
+					"position": [0, 0, 0],
+					"scale": 1
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,491 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"music.snare": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/battotai",
+					"stream": true,
+					"volume": 0.2
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/over_there",
+					"stream": true,
+					"volume": 0.2
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/snare_drums",
+					"stream": true,
+					"volume": 0.2
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/teufelslied",
+					"stream": true,
+					"volume": 0.2
+				}
+			]
+		},
+		"artillery.move": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_artillery/artillery_move"
+			]
+		},
+		"artillery.hurt": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_artillery/artillery_hurt"
+			]
+		},
+		"artillery.fire": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_artillery/artillery_fire"
+			],
+			"min_distance": 0,
+			"max_distance": 80
+		},
+		"jet.altitude": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/altitude"
+			]
+		},
+		"jet.bingo": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/bingo"
+			]
+		},
+		"jet.flare": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/flare"
+			]
+		},
+		"jet.high_beep": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/high_beep"
+			]
+		},
+		"jet.lock": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/lock"
+			]
+		},
+		"jet.loud_beep": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/loud_beep"
+			]
+		},
+		"jet.pull_up": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/pull_up"
+			]
+		},
+		"jet.warning": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_rwr/warning"
+			]
+		},
+		"jet.fly_quiet": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/fly"
+			],
+			"min_distance": 0,
+			"max_distance": 100
+		},
+		"jet.fly": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/fly"
+			],
+			"min_distance": 0,
+			"max_distance": 100
+		},
+		"jet.fly_loud": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/fly"
+			],
+			"min_distance": 0,
+			"max_distance": 100
+		},
+		"vehicle.chaingun_fire": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 100,
+			"sounds": [
+				"sounds/af_chaingun/shoot1",
+				"sounds/af_chaingun/shoot2",
+				"sounds/af_chaingun/shoot3",
+				"sounds/af_chaingun/shoot4"
+			]
+		},
+		"vehicle.gun_fire": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 100,
+			"sounds": [
+				"sounds/af_common/bullet_shoot"
+			]
+		},
+		"c_ram.spin": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 100,
+			"sounds": [
+				"sounds/c_ram_spin"
+			]
+		},
+		"libernia.speaker": {
+			"category": "record",
+			"min_distance": 500,
+			"max_distance": 1000,
+			"sounds": [
+				"sounds/libernia_speaker"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"telslakia.speaker": {
+			"category": "record",
+			"min_distance": 500,
+			"max_distance": 1000,
+			"sounds": [
+				"sounds/telslakia_speaker"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"bullet.hit": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 64,
+			"sounds": [
+				"sounds/af_bullet/hit1",
+				"sounds/af_bullet/hit2"
+			]
+		},
+		"bullet.pass": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 64,
+			"sounds": [
+				"sounds/af_bullet/pass1",
+				"sounds/af_bullet/pass2"
+			]
+		},
+		"af.attachables.gun.reload": {
+			"sounds": [
+				"sounds/af/attachables/gun/reload"
+			]
+		},
+		"af.attachables.gun.trigger": {
+			"sounds": [
+				"sounds/af/attachables/gun/trigger"
+			]
+		},
+		"af.entity.gun.bullet.firing": {
+			"max_distance": 16,
+			"sounds": [
+				"sounds/af/entity/gun_bullet/firing"
+			]
+		},
+		"nuke.shockwave": {
+			"__use_legacy_max_distance": false,
+			"category": "ambient",
+			"min_distance": 128,
+			"max_distance": 1000,
+			"sounds": [
+				"sounds/nuke_shockwave"
+			]
+		},
+		"nuke.explode": {
+			"__use_legacy_max_distance": false,
+			"category": "ambient",
+			"min_distance": 128,
+			"max_distance": 1000,
+			"sounds": [
+				"sounds/nuke_explosion"
+			]
+		},
+		"tank.load": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/load1",
+				"sounds/af_tank/load2",
+				"sounds/af_tank/load3",
+				"sounds/af_tank/load4"
+			]
+		},
+		"tank.hit": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/tank_hit"
+			]
+		},
+		"tank.drive": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_tank/move1",
+				"sounds/af_tank/move2",
+				"sounds/af_tank/move3"
+			]
+		},
+		"vehicle.drive": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 64,
+			"sounds": [
+				"sounds/af_common/vehicle_drive"
+			]
+		},
+		"vehicle.explode": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_common/vehicle_explosion"
+			]
+		},
+		"vehicle.mg_fire": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_common/mg_fire1",
+				"sounds/af_common/mg_fire2",
+				"sounds/af_common/mg_fire3"
+			]
+		},
+		"tank.fire": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_tank/tank_fire"
+			],
+			"min_distance": 16,
+			"max_distance": 128
+		},
+		"tank.beep": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/tank_beep"
+			]
+		},
+		"tank.fire_inside": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/tank_fire2"
+			]
+		},
+		"vehicle.system_load": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_common/system_load"
+			]
+		},
+		"missile.fire": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/missile_fire"
+			],
+			"min_distance": 16,
+			"max_distance": 128
+		},
+		"cd.ewtrtw": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/EWTRTW"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.c": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/C"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.cd": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/CD"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.fmttm": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/FMTTM"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.hc": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/HC"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.swm": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/SWM"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.tmwstw": {
+			"category": "record",
+			"min_distance": 16,
+			"max_distance": 128,
+			"sounds": [
+				"sounds/af_cd/TMWSTW"
+			],
+			"__use_legacy_max_distance": true
+		},
+		"grenade.pop": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_common/grenade_pop"
+			]
+		},
+		"heli.blades": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 100,
+			"sounds": [
+				"sounds/af_heli/heli1",
+				"sounds/af_heli/heli2",
+				"sounds/af_heli/heli3"
+			]
+		},
+		"vehicle.brt": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"min_distance": 256,
+			"max_distance": 500,
+			"sounds": [
+				"sounds/af_brt/brt1",
+				"sounds/af_brt/brt2",
+				"sounds/af_brt/brt3"
+			]
+		},
+		"item.pistol.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_gun/pistol_shoot",
+				"sounds/af_gun/pistol_shoot1",
+				"sounds/af_gun/pistol_shoot2"
+			]
+		},
+		"item.rifle.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_gun/rifle_shoot"
+			]
+		},
+		"item.shotgun.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_gun/shotgun_shoot",
+				"sounds/af_gun/shotgun_shoot1",
+				"sounds/af_gun/shotgun_shoot3"
+			]
+		},
+		"item.shotgun.rack": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_gun/shotgun_rack",
+				"sounds/af_gun/shotgun_rack1"
+			]
+		},
+		"item.sniper.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_gun/sniper_shoot"
+			]
+		},
+		"item.sniper.rack": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"min_distance": 0,
+			"max_distance": 32,
+			"sounds": [
+				"sounds/af_gun/sniper_rack"
+			]
+		}
+	}
+}

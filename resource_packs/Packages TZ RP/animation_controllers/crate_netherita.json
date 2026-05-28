@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.c_netherita": {
+			"initial_state": "c_netherita_inactive",
+			"states": {
+				"c_netherita_inactive": {
+					"animations": [
+						"crate.netherita_inactive"
+					]
+				}
+			}
+		}
+	}
+}

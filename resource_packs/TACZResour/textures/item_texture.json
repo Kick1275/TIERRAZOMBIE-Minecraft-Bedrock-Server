@@ -1,0 +1,180 @@
+{
+  "resource_pack_name": "M2543",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "m16a1": {
+      "textures": "textures/items/m16a1"
+    },
+    "g36": {
+      "textures": "textures/items/g36"
+    },
+    "minigun": {
+      "textures": "textures/items/minigun"
+    },
+    "g3": {
+      "textures": "textures/items/g3"
+    },
+    "m107": {
+      "textures": "textures/items/m107"
+    },
+    "mk14": {
+      "textures": "textures/items/mk14"
+    },
+    "evolys": {
+      "textures": "textures/items/evolys"
+    },
+    "m249": {
+      "textures": "textures/items/m249"
+    },
+    "fal": {
+      "textures": "textures/items/fal"
+    },
+    "m16": {
+      "textures": "textures/items/m16"
+    },
+    "cp": {
+      "textures": "textures/items/cp"
+    },
+    "qbz191": {
+      "textures": "textures/items/qbz191"
+    },
+    "type81": {
+      "textures": "textures/items/type81"
+    },
+    "saiga12": {
+      "textures": "textures/items/saiga12"
+    },
+    "762mmr": {
+      "textures": "textures/items/762mmr"
+    },
+    "50ae": {
+      "textures": "textures/items/50ae"
+    },
+    "357mag": {
+      "textures": "textures/items/357mag"
+    },
+    "308win": {
+      "textures": "textures/items/308win"
+    },
+    "308winbox": {
+      "textures": "textures/items/308winbox"
+    },
+    "50bmg": {
+      "textures": "textures/items/50bmg"
+    },
+    "5728mm": {
+      "textures": "textures/items/5728mm"
+    },
+    "p320": {
+      "textures": "textures/items/p320"
+    },
+    "hk416": {
+      "textures": "textures/items/hk416"
+    },
+    "m1014": {
+      "textures": "textures/items/m1014"
+    },
+    "p90": {
+      "textures": "textures/items/p90"
+    },
+    "vector": {
+      "textures": "textures/items/vector"
+    },
+    "mp7": {
+      "textures": "textures/items/mp7"
+    },
+    "45acp": {
+      "textures": "textures/items/45acp"
+    },
+    "m885": {
+      "textures": "textures/items/m885"
+    },
+    "m43": {
+      "textures": "textures/items/m43"
+    },
+    "9mm": {
+      "textures": "textures/items/9mm"
+    },
+    "db": {
+      "textures": "textures/items/db"
+    },
+    "deagle": {
+      "textures": "textures/items/deagle"
+    },
+    "127mm": {
+      "textures": "textures/items/127mm"
+    },
+    "scarh": {
+      "textures": "textures/items/scarh"
+    },
+    "scarl": {
+      "textures": "textures/items/scarl"
+    },
+    "mp5": {
+      "textures": "textures/items/mp5"
+    },
+    "b93": {
+      "textures": "textures/items/b93"
+    },
+    "rpg": {
+      "textures": "textures/items/rpg"
+    },
+    "ump": {
+      "textures": "textures/items/ump45"
+    },
+    "awp": {
+      "textures": "textures/items/awp"
+    },
+    "sks": {
+      "textures": "textures/items/sks"
+    },
+    "rpgrocket": {
+      "textures": "textures/items/rpgrocket"
+    },
+    "m1911": {
+      "textures": "textures/items/m1911"
+    },
+    "deagleg": {
+      "textures": "textures/items/deagleg"
+    },
+    "12gauge": {
+      "textures": "textures/items/12gauge"
+    },
+    "aa12": {
+      "textures": "textures/items/aa12"
+    },
+    "338lapua": {
+      "textures": "textures/items/338lapua"
+    },
+    "m870": {
+      "textures": "textures/items/m870"
+    },
+    "uzi": {
+      "textures": "textures/items/uzi"
+    },
+    "g17": {
+      "textures": "textures/items/g17"
+    },
+    "qbz95": {
+      "textures": "textures/items/qbz95"
+    },
+    "g18": {
+      "textures": "textures/items/g18"
+    },
+    "akm": {
+      "textures": "textures/items/akm"
+    },
+    "t50": {
+      "textures": "textures/items/t50"
+    },
+    "m4a1": {
+      "textures": "textures/items/m4a1"
+    },
+    "4630mm": {
+      "textures": "textures/items/4630mm"
+    },
+    "5842mm": {
+      "textures": "textures/items/5842mm"
+    }
+  }
+}

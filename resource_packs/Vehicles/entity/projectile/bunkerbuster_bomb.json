@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:bunkerbuster_bomb",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/bunkerbuster_bomb"
+			},
+			"geometry": {
+				"default": "geometry.bunkerbuster_bomb"
+			},
+			"render_controllers": [
+				"controller.render.bunkerbuster_bomb"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"fall": "animation.bomb.fall"
+			},
+			"scripts": {
+				"animate": [
+					"fall"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.minigun.overheat": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.5,
+      "timeline": {
+        "2.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:minigun 1 0",
+          "/scoreboard players set @s minigunoverheat 75",
+          "/function minigun"
+        ]
+      }
+    }
+  }
+}

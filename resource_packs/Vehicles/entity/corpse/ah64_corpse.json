@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:ah64_corpse",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"libernia": "textures/entity/vehicle_corpse",
+				"telslakia": "textures/entity/vehicle_corpse2"
+			},
+			"geometry": {
+				"default": "geometry.ah64"
+			},
+			"render_controllers": [
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_ah64_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.helicopter.scale",
+				"rotations": "animation.vehicle.rotations"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"rotations"
+				]
+			},
+			"particle_effects": {
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

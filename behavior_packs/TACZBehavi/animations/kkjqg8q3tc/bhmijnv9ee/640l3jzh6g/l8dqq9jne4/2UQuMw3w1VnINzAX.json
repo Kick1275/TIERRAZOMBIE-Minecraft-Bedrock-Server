@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m4a1.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.2,
+      "timeline": {
+        "2.1": [
+          "/scoreboard players set @s[scores={m4a1=32..}] m4a1 31",
+          "/function m4a1"
+        ],
+        "2.0": [
+          "/function m4a1reload",
+          "/event entity @s krep:m4a1_reload"
+        ]
+      }
+    }
+  }
+}

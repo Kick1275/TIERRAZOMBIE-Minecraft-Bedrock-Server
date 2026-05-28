@@ -1,0 +1,1203 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"miter_saw": {
+			"textures": [
+				{
+					"path": "textures/blocks/miter_saw"
+				}
+			]
+		},
+		"catalog": {
+			"textures": [
+				"textures/items/catalog"
+			]
+		},
+		"single_glass_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_1"
+				}
+			]
+		},
+		"single_glass_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_2"
+				}
+			]
+		},
+		"single_glass_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_3"
+				}
+			]
+		},
+		"single_glass_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_4"
+				}
+			]
+		},
+		"single_glass_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_5"
+				}
+			]
+		},
+		"single_glass_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_6"
+				}
+			]
+		},
+		"single_glass_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_7"
+				}
+			]
+		},
+		"single_glass_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_8"
+				}
+			]
+		},
+		"single_glass_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_9"
+				}
+			]
+		},
+		"single_glass_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_10"
+				}
+			]
+		},
+		"single_glass_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_11"
+				}
+			]
+		},
+		"single_glass_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_13"
+				}
+			]
+		},
+		"single_glass_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_glass_door_14"
+				}
+			]
+		},
+		"single_barred_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_1"
+				}
+			]
+		},
+		"single_barred_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_10"
+				}
+			]
+		},
+		"single_barred_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_11"
+				}
+			]
+		},
+		"single_barred_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_13"
+				}
+			]
+		},
+		"single_barred_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_14"
+				}
+			]
+		},
+		"single_barred_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_2"
+				}
+			]
+		},
+		"single_barred_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_3"
+				}
+			]
+		},
+		"single_barred_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_4"
+				}
+			]
+		},
+		"single_barred_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_5"
+				}
+			]
+		},
+		"single_barred_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_6"
+				}
+			]
+		},
+		"single_barred_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_7"
+				}
+			]
+		},
+		"single_barred_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_8"
+				}
+			]
+		},
+		"single_barred_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_barred_door_9"
+				}
+			]
+		},
+		"single_full_glass_door_black": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_black"
+				}
+			]
+		},
+		"single_full_glass_door_blue": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_blue"
+				}
+			]
+		},
+		"single_full_glass_door_brown": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_brown"
+				}
+			]
+		},
+		"single_full_glass_door_cyan": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_cyan"
+				}
+			]
+		},
+		"single_full_glass_door_gray": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_gray"
+				}
+			]
+		},
+		"single_full_glass_door_green": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_green"
+				}
+			]
+		},
+		"single_full_glass_door_light_blue": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_light_blue"
+				}
+			]
+		},
+		"single_full_glass_door_lime": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_lime"
+				}
+			]
+		},
+		"single_full_glass_door_magenta": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_magenta"
+				}
+			]
+		},
+		"single_full_glass_door_orange": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_orange"
+				}
+			]
+		},
+		"single_full_glass_door_pink": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_pink"
+				}
+			]
+		},
+		"single_full_glass_door_purple": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_purple"
+				}
+			]
+		},
+		"single_full_glass_door_red": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_red"
+				}
+			]
+		},
+		"single_full_glass_door_silver": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_silver"
+				}
+			]
+		},
+		"single_full_glass_door_tinted": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_tinted"
+				}
+			]
+		},
+		"single_full_glass_door_transparent": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_transparent"
+				}
+			]
+		},
+		"single_full_glass_door_white": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_white"
+				}
+			]
+		},
+		"single_full_glass_door_yellow": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_full_glass_door_yellow"
+				}
+			]
+		},
+		"single_screen_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_1"
+				}
+			]
+		},
+		"single_screen_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_10"
+				}
+			]
+		},
+		"single_screen_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_11"
+				}
+			]
+		},
+		"single_screen_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_13"
+				}
+			]
+		},
+		"single_screen_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_14"
+				}
+			]
+		},
+		"single_screen_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_2"
+				}
+			]
+		},
+		"single_screen_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_3"
+				}
+			]
+		},
+		"single_screen_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_4"
+				}
+			]
+		},
+		"single_screen_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_5"
+				}
+			]
+		},
+		"single_screen_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_6"
+				}
+			]
+		},
+		"single_screen_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_7"
+				}
+			]
+		},
+		"single_screen_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_8"
+				}
+			]
+		},
+		"single_screen_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_screen_door_9"
+				}
+			]
+		},
+		"single_sturdy_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_1"
+				}
+			]
+		},
+		"single_sturdy_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_10"
+				}
+			]
+		},
+		"single_sturdy_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_11"
+				}
+			]
+		},
+		"single_sturdy_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_13"
+				}
+			]
+		},
+		"single_sturdy_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_14"
+				}
+			]
+		},
+		"single_sturdy_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_2"
+				}
+			]
+		},
+		"single_sturdy_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_3"
+				}
+			]
+		},
+		"single_sturdy_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_4"
+				}
+			]
+		},
+		"single_sturdy_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_5"
+				}
+			]
+		},
+		"single_sturdy_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_6"
+				}
+			]
+		},
+		"single_sturdy_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_7"
+				}
+			]
+		},
+		"single_sturdy_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_8"
+				}
+			]
+		},
+		"single_sturdy_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_door_9"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_1"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_10"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_11"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_13"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_14"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_2"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_3"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_4"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_5"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_6"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_7"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_8"
+				}
+			]
+		},
+		"single_sturdy_windowed_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_sturdy_windowed_door_9"
+				}
+			]
+		},
+		"single_jail_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_13"
+				}
+			]
+		},
+		"single_jail_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_14"
+				}
+			]
+		},
+		"single_jail_door_15": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_15"
+				}
+			]
+		},
+		"single_jail_door_16": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_16"
+				}
+			]
+		},
+		"single_jail_door_17": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_17"
+				}
+			]
+		},
+		"single_jail_door_18": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_18"
+				}
+			]
+		},
+		"single_jail_door_19": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_19"
+				}
+			]
+		},
+		"single_jail_door_20": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_jail_door_20"
+				}
+			]
+		},
+		"single_long_hinge_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_1"
+				}
+			]
+		},
+		"single_long_hinge_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_10"
+				}
+			]
+		},
+		"single_long_hinge_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_11"
+				}
+			]
+		},
+		"single_long_hinge_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_13"
+				}
+			]
+		},
+		"single_long_hinge_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_14"
+				}
+			]
+		},
+		"single_long_hinge_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_2"
+				}
+			]
+		},
+		"single_long_hinge_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_3"
+				}
+			]
+		},
+		"single_long_hinge_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_4"
+				}
+			]
+		},
+		"single_long_hinge_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_5"
+				}
+			]
+		},
+		"single_long_hinge_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_6"
+				}
+			]
+		},
+		"single_long_hinge_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_7"
+				}
+			]
+		},
+		"single_long_hinge_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_8"
+				}
+			]
+		},
+		"single_long_hinge_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_long_hinge_door_9"
+				}
+			]
+		},
+		"single_timber_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_1"
+				}
+			]
+		},
+		"single_timber_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_10"
+				}
+			]
+		},
+		"single_timber_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_11"
+				}
+			]
+		},
+		"single_timber_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_13"
+				}
+			]
+		},
+		"single_timber_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_14"
+				}
+			]
+		},
+		"single_timber_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_2"
+				}
+			]
+		},
+		"single_timber_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_3"
+				}
+			]
+		},
+		"single_timber_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_4"
+				}
+			]
+		},
+		"single_timber_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_5"
+				}
+			]
+		},
+		"single_timber_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_6"
+				}
+			]
+		},
+		"single_timber_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_7"
+				}
+			]
+		},
+		"single_timber_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_8"
+				}
+			]
+		},
+		"single_timber_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_timber_door_9"
+				}
+			]
+		},
+		"single_multi_panel_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_1"
+				}
+			]
+		},
+		"single_multi_panel_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_2"
+				}
+			]
+		},
+		"single_multi_panel_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_3"
+				}
+			]
+		},
+		"single_multi_panel_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_4"
+				}
+			]
+		},
+		"single_multi_panel_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_5"
+				}
+			]
+		},
+		"single_multi_panel_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_6"
+				}
+			]
+		},
+		"single_multi_panel_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_7"
+				}
+			]
+		},
+		"single_multi_panel_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_8"
+				}
+			]
+		},
+		"single_multi_panel_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_9"
+				}
+			]
+		},
+		"single_multi_panel_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_10"
+				}
+			]
+		},
+		"single_multi_panel_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_11"
+				}
+			]
+		},
+		"single_multi_panel_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_13"
+				}
+			]
+		},
+		"single_multi_panel_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_multi_panel_door_14"
+				}
+			]
+		},
+		"single_twin_glass_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_1"
+				}
+			]
+		},
+		"single_twin_glass_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_2"
+				}
+			]
+		},
+		"single_twin_glass_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_3"
+				}
+			]
+		},
+		"single_twin_glass_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_4"
+				}
+			]
+		},
+		"single_twin_glass_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_5"
+				}
+			]
+		},
+		"single_twin_glass_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_6"
+				}
+			]
+		},
+		"single_twin_glass_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_7"
+				}
+			]
+		},
+		"single_twin_glass_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_8"
+				}
+			]
+		},
+		"single_twin_glass_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_9"
+				}
+			]
+		},
+		"single_twin_glass_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_10"
+				}
+			]
+		},
+		"single_twin_glass_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_11"
+				}
+			]
+		},
+		"single_twin_glass_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_13"
+				}
+			]
+		},
+		"single_twin_glass_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_twin_glass_door_14"
+				}
+			]
+		},
+		"single_japanese_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_1"
+				}
+			]
+		},
+		"single_japanese_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_2"
+				}
+			]
+		},
+		"single_japanese_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_3"
+				}
+			]
+		},
+		"single_japanese_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_4"
+				}
+			]
+		},
+		"single_japanese_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_5"
+				}
+			]
+		},
+		"single_japanese_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_6"
+				}
+			]
+		},
+		"single_japanese_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_7"
+				}
+			]
+		},
+		"single_japanese_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_8"
+				}
+			]
+		},
+		"single_japanese_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_9"
+				}
+			]
+		},
+		"single_japanese_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_10"
+				}
+			]
+		},
+		"single_japanese_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_11"
+				}
+			]
+		},
+		"single_japanese_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_13"
+				}
+			]
+		},
+		"single_japanese_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_japanese_door_14"
+				}
+			]
+		},
+		"single_ventilation_door_1": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_1"
+				}
+			]
+		},
+		"single_ventilation_door_2": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_2"
+				}
+			]
+		},
+		"single_ventilation_door_3": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_3"
+				}
+			]
+		},
+		"single_ventilation_door_4": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_4"
+				}
+			]
+		},
+		"single_ventilation_door_5": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_5"
+				}
+			]
+		},
+		"single_ventilation_door_6": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_6"
+				}
+			]
+		},
+		"single_ventilation_door_7": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_7"
+				}
+			]
+		},
+		"single_ventilation_door_8": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_8"
+				}
+			]
+		},
+		"single_ventilation_door_9": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_9"
+				}
+			]
+		},
+		"single_ventilation_door_10": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_10"
+				}
+			]
+		},
+		"single_ventilation_door_11": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_11"
+				}
+			]
+		},
+		"single_ventilation_door_13": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_13"
+				}
+			]
+		},
+		"single_ventilation_door_14": {
+			"textures": [
+				{
+					"path": "textures/blocks/single_ventilation_door_14"
+				}
+			]
+		}
+	}
+}

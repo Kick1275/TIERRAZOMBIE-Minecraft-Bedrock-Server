@@ -1,0 +1,96 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crosshair",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "crosshair",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "player",
+					"parent": "crosshair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -0.5, 0], "size": [1, 1, 0], "uv": [4, 5]}
+					]
+				},
+				{
+					"name": "pistol",
+					"parent": "crosshair",
+					"pivot": [0, -0.5, -1],
+					"cubes": [
+						{"origin": [-0.5, -0.5, 0], "size": [1, 1, 0], "uv": [4, 4]},
+						{"origin": [3.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 1]},
+						{"origin": [-8.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "rifle",
+					"parent": "crosshair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -0.5, 0], "size": [1, 1, 0], "uv": [4, 6]},
+						{"origin": [-10.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 3]},
+						{"origin": [5.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 2]},
+						{"origin": [-0.5, -10.5, 0], "size": [1, 5, 0], "uv": [0, 4]},
+						{"origin": [-0.5, 5.5, 0], "size": [1, 5, 0], "uv": [2, 4]}
+					]
+				},
+				{
+					"name": "sniper",
+					"parent": "crosshair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-18.5, -0.5, 0], "size": [9, 1, 0], "uv": [-4, 3]},
+						{"origin": [9.5, -0.5, 0], "size": [9, 1, 0], "uv": [0, 2]},
+						{"origin": [-0.5, -18.5, 0], "size": [1, 9, 0], "uv": [0, 4]},
+						{"origin": [-0.5, 9.5, 0], "size": [1, 9, 0], "uv": [2, 4]}
+					]
+				},
+				{
+					"name": "shotgun",
+					"parent": "crosshair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 4]},
+						{"origin": [3.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 4]},
+						{"origin": [-0.5, -8.5, 0], "size": [1, 5, 0], "uv": [2, 4]}
+					]
+				},
+				{
+					"name": "launcher",
+					"parent": "crosshair",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -0.5, 0], "size": [1, 1, 0], "uv": [4, 6]},
+						{"origin": [-4.5, -7.5, 0], "size": [1, 15, 0], "uv": [4, 6]},
+						{"origin": [-9.5, 6.5, 0], "size": [5, 1, 0], "uv": [0, 6]},
+						{"origin": [-8.5, 3.5, 0], "size": [4, 1, 0], "uv": [1, 6]},
+						{"origin": [-7.5, 0.5, 0], "size": [3, 1, 0], "uv": [2, 6]},
+						{"origin": [-6.5, -2.5, 0], "size": [2, 1, 0], "uv": [3, 6]},
+						{"origin": [-5.5, -5.5, 0], "size": [1, 1, 0], "uv": [4, 6]},
+						{"origin": [3.5, -7.5, 0], "size": [1, 15, 0], "uv": [4, 6]},
+						{"origin": [4.5, 6.5, 0], "size": [5, 1, 0], "uv": [4, 6]},
+						{"origin": [4.5, 3.5, 0], "size": [4, 1, 0], "uv": [4, 6]},
+						{"origin": [4.5, 0.5, 0], "size": [3, 1, 0], "uv": [4, 6]},
+						{"origin": [4.5, -2.5, 0], "size": [2, 1, 0], "uv": [4, 6]},
+						{"origin": [4.5, -5.5, 0], "size": [1, 1, 0], "uv": [4, 6]}
+					]
+				}
+			]
+		}
+	]
+}

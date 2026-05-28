@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:firefighter_loot",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/loots/firefighter_box"
+      },
+      "geometry": {
+        "default": "geometry.firefighter_box"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

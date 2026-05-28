@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tz:crate_diamond",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/crate"
+			},
+			"geometry": {
+				"default": "geometry.crate"
+			},
+			"render_controllers": [
+				"controller.render.crate_diamond"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"crate.diamond_inactive": "animation.crate.inactive",
+				"crate.diamond_interact": "animation.crate.interact",
+				"crate.diamond_open": "animation.crate.open",
+				"crate.diamond_controller": "controller.animation.c_diamond"
+			},
+			"scripts": {
+				"animate": [
+					"crate.diamond_controller"
+				]
+			}
+		}
+	}
+}

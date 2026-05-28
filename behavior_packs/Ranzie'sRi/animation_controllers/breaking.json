@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.zombie.level": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "level0": "query.scoreboard('level') == 0" },
+            { "level1": "query.scoreboard('level') == 1" },
+            { "level2": "query.scoreboard('level') == 2" },
+            { "level3": "query.scoreboard('level') == 3" },
+            { "level4": "query.scoreboard('level') == 4" }
+          ]
+        },
+        "level0": {
+          "transitions": [
+            { "default": "query.scoreboard('level') != 0" }
+          ]
+        },
+        "level1": {
+          "animations": [ "cbreak1" ],
+          "transitions": [
+            { "default": "query.scoreboard('level') != 1" }
+          ]
+        },
+        "level2": {
+          "animations": [ "cbreak2" ],
+          "transitions": [
+            { "default": "query.scoreboard('level') != 2" }
+          ]
+        },
+        "level3": {
+          "animations": [ "cbreak3" ],
+          "transitions": [
+            { "default": "query.scoreboard('level') != 3" }
+          ]
+        },
+        "level4": {
+          "animations": [ "cbreak4" ],
+          "transitions": [
+            { "default": "query.scoreboard('level') != 4" }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "plugs:scoreboard",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/invisible"
+            },
+            "geometry": {
+                "default": "geometry.invisible"
+            },
+            "render_controllers": [
+                "controller.render.invisible"
+            ],
+            "scripts": {
+                "pre_animation": [
+                    "variable.is_invisible = 1.0;"
+                ]
+            }
+        }
+    }
+}

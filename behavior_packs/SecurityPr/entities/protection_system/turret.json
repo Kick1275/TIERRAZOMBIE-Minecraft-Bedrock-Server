@@ -1,0 +1,361 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "rt:turret",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "properties": {
+        "rt:is_objective": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        }
+      }
+    },
+    "component_groups": {
+      "neutral_turret_group": {
+        "minecraft:variant": {
+          "value": 0
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "hostile_turret_event"
+              },
+              "interact_text": "action.interact.turret.mode1"
+            }
+          ]
+        }
+      },
+      "hostile_turret_group": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "off_turret_event"
+              },
+              "interact_text": "action.interact.turret.mode2"
+            }
+          ]
+        }
+      },
+      "off_turret_group": {
+        "minecraft:variant": {
+          "value": 2
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "neutral_turret_event"
+              },
+              "interact_text": "action.interact.turret.mode3"
+            }
+          ]
+        }
+      },
+      "attackable_neutral_group": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "monster"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "infected"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "zombie"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "marauder"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "bandit"
+                  }
+                ]
+              }
+            }
+          ],
+          "must_see": true
+        }
+      },
+      "attackable_hostile_group": {
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 0,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "has_tag",
+                        "subject": "other",
+                        "operator": "equals",
+                        "value": "intruso"
+                      },
+                      {
+                        "test": "has_tag",
+                        "subject": "other",
+                        "operator": "not",
+                        "value": "dueño"
+                      },
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      }
+                    ]
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "monster"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "infected"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "zombie"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "marauder"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "bandit"
+                  }
+                ]
+              }
+            }
+          ],
+          "must_see": true
+        }
+      },
+      "enabled_turret_group": {
+        "minecraft:behavior.ranged_attack": {
+          "attack_interval": 0.1,
+          "attack_radius": 20
+        },
+        "minecraft:shooter": {
+          "def": "rt:iron_bullet",
+          "sound": "bow"
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 5
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "turret",
+          "mob"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 1
+      },
+      "minecraft:on_target_acquired": {
+        "event": "is_objective_event",
+        "target": "self"
+      },
+      "minecraft:on_target_escape": {
+        "event": "no_objective_event",
+        "target": "self"
+      },
+      "minecraft:movement": {
+        "value": 0.0,
+        "max": 0.0
+      },
+      "minecraft:navigation.walk": {},
+      "minecraft:movement.basic": {},
+      "minecraft:health": {
+        "value": 1000,
+        "max": 1000
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      "minecraft:fire_immune": true
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "enabled_turret_group",
+            "neutral_turret_group",
+            "attackable_neutral_group"
+          ]
+        }
+      },
+      "neutral_turret_event": {
+        "queue_command": {
+          "command": [
+            "playsound click_off.bamboo_wood_button @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "neutral_turret_group",
+            "enabled_turret_group",
+            "attackable_neutral_group"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "off_turret_group"
+          ]
+        }
+      },
+      "hostile_turret_event": {
+        "queue_command": {
+          "command": [
+            "playsound click_off.bamboo_wood_button @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "hostile_turret_group",
+            "attackable_hostile_group"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "neutral_turret_group",
+            "attackable_neutral_group"
+          ]
+        }
+      },
+      "off_turret_event": {
+        "set_property": {
+          "rt:is_objective": false
+        },
+        "queue_command": {
+          "command": [
+            "playsound click_off.bamboo_wood_button @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "off_turret_group"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "hostile_turret_group",
+            "enabled_turret_group",
+            "attackable_neutral_group",
+            "attackable_hostile_group"
+          ]
+        }
+      },
+      "no_objective_event": {
+        "set_property": {
+          "rt:is_objective": false
+        },
+        "queue_command": {
+          "command": [
+            "playsound vault.deactivate @a ~~~"
+          ]
+        }
+      },
+      "is_objective_event": {
+        "set_property": {
+          "rt:is_objective": true
+        },
+        "queue_command": {
+          "command": [
+            "playsound vault.activate @a ~~~"
+          ]
+        }
+      }
+    }
+  }
+}

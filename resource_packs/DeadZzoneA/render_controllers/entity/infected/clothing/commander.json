@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.commander_woodland": {
+			"textures": [
+				"Texture.commander_woodland"
+			],
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.commander_desert": {
+			"textures": [
+				"Texture.commander_desert"
+			],
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.commander_artic": {
+			"textures": [
+				"Texture.commander_artic"
+			],
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:steel_frame"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:steel_ingot"
+			},
+			"J": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"NJN",
+			"N N",
+			"NJN"
+		],
+		"result": {
+			"item": "af:steel_frame",
+			"count": 32
+		}
+	}
+}

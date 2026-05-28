@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.scream_dress": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.clothes": [
+						"Texture.top_0",
+						"Texture.top_1",
+						"Texture.top_2",
+						"Texture.top_3",
+						"Texture.top_4",
+						"Texture.top_5",
+						"Texture.top_6",
+						"Texture.top_7",
+						"Texture.top_8",
+						"Texture.top_9",
+						"Texture.top_10",
+						"Texture.top_11",
+						"Texture.top_12",
+						"Texture.top_13",
+						"Texture.top_14",
+						"Texture.top_15"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.clothes[v.clothes]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+},

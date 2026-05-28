@@ -1,0 +1,17 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.causal.grappling.dummy1": {
+            "animation_length": 0.05
+        },
+        "animation.causal.grappling.dummy2":{
+            "animation_length": 0.05
+        },
+        "animation.causal.grappling.dummy3":{
+            "animation_length": 0.05
+        },
+        "animation.causal.grappling.dummy4":{
+            "animation_length": 0.05
+        }
+    }
+}

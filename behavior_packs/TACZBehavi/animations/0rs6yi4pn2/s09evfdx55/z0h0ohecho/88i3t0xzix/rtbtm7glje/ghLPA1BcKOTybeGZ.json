@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.evolys.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 7.18,
+      "timeline": {
+        "7.0": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:evolys 1 0",
+          "/scoreboard players set @s[scores={evolys=76..}] evolys 75",
+          "/function evolys"
+        ],
+        "6.9": [
+          "/function evolysreload",
+          "/event entity @s krep:evolys_reload"
+        ]
+      }
+    }
+  }
+}

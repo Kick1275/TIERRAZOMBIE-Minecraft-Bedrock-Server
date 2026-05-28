@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:emerald_bars_0"
+		},
+		"tags": [
+			"workbench"
+		],
+		"pattern": [
+			"AAA",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:emerald",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "medieval:emerald_bars_0",
+			"count": 16
+		}
+	}
+}

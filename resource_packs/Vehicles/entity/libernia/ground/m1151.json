@@ -1,0 +1,51 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:m1151",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/m1151/m1151",
+				"libernia": "textures/entity/m1151/m1151_libernia",
+				"telslakia": "textures/entity/m1151/m1151_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.m1151"
+			},
+			"render_controllers": [
+				"controller.render.m1151",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_m1151_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.m1151.move",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.tank.brake",
+				"scale": "animation.m1151.scale",
+				"look": "animation.m1151.look_at_target",
+				"rotations": "animation.vehicle.rotations",
+				"turn": "animation.m1151.turn",
+				"is_body": "animation.tank.is_body",
+				"is_turret": "animation.tank.is_turret"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"drive",
+					"look",
+					"rotations",
+					"turn",
+					"is_body"
+				]
+			},
+			"particle_effects": {
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

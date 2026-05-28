@@ -1,0 +1,25 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§lBy Realtern Art",
+        "name": "Security Protection Blocks v1.5.7 [R]",
+        "platform_locked" : false,
+        "uuid": "304905db-9f3b-4757-ba08-383cbb2d46e3",
+        "version": [1, 5, 7],
+        "min_engine_version": [ 1, 21, 80 ]
+    },
+    "modules": [
+        {
+            "description": "By realtern",
+            "type": "resources",
+            "uuid": "eba9f52e-4570-4fa3-a957-111be877c306",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "ae52d72a-9f87-4495-83aa-512a9d1ba3b5",
+            "version": [1, 5, 7]
+        }
+    ]
+}

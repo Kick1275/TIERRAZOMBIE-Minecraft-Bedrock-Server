@@ -1,0 +1,55 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"af:oil": {
+		"sound": "honey_block",
+		"textures": "af_oil",
+		"isotropic": true
+	},
+	"af:weapon_table": {
+		"sound": "copper",
+		"textures": {
+			"up": "af_weapontable_top",
+			"down": "oak_planks",
+			"side": "af_weapontable_side"
+		}
+	},
+	"af:wasteland_grass": {
+		"sound": "dirt_with_roots",
+		"textures": {
+			"up": "af_wasteland_grass_top",
+			"side": "af_wasteland_grass_side",
+			"down": "dirt"
+		},
+		"isotropic": {
+			"up": true
+		}
+	},
+	"af:bullet_light": {
+		"sound": "web",
+		"textures": "af_bullet_light"
+	},
+	"af:uranium_ore": {
+		"sound": "stone",
+		"textures": "af_uranium_ore"
+	},
+	"af:steel_frame": {
+		"sound": "copper_grate",
+		"textures": {
+			"side": "af_steel_frame_side",
+			"up": "af_steel_frame_top",
+			"down": "af_steel_frame_top"
+		}
+	},
+	"af:aluminium_ore": {
+		"sound": "stone",
+		"textures": "af_aluminium_ore"
+	},
+	"af:titanium_ore": {
+		"sound": "stone",
+		"textures": "af_titanium_ore"
+	}
+}

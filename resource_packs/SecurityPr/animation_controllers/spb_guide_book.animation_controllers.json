@@ -1,0 +1,71 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.spb_guide_book": {
+      "initial_state": "open",
+      "states": {
+        "close": {
+          "animations": [
+            "close_animation"
+          ],
+          "transitions": [
+            {
+              "open": "query.is_baby"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "open": {
+          "animations": [
+            "open_animation"
+          ],
+          "transitions": [
+            {
+              "default": "query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "default": {
+          "transitions": [
+            {
+              "close_sound": "!query.is_baby"
+            }
+          ],
+          "blend_transition": 1
+        },
+        "close_sound": {
+          "animations": [
+            "close_sound_animation"
+          ],
+          "transitions": [
+            {
+              "close": "query.all_animations_finished"
+            }
+          ],
+          "blend_transition": 1
+        }
+      }
+    },
+    "controller.animation.spb_guide_book_pages": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "change_page_initial": "query.is_angry"
+            }
+          ]
+        },
+        "change_page_initial": {
+          "animations": ["change_page_animation"],
+          "transitions": [
+            {
+              "default": "query.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

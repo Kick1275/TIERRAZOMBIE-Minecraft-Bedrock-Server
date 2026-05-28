@@ -1,0 +1,286 @@
+{
+  "namespace": "hud",
+
+  "deadzone_watermark": {
+    "type": "label",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "text": "Footage from Developer Deadzone 1.6",
+    "shadow": true,
+    "localize": true,
+    "alpha": 0.5,
+    "layer": 31
+  },
+
+  "hud_actionbar_text": {
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "type": "image",
+    "size": [
+      "95%c + 10px",
+      "95%c + 4px"
+    ],
+    "offset": [
+      0,
+      -130
+    ],
+    "texture": "textures/ui/hud_tip_text_background",
+    "alpha": "@hud.anim_actionbar_text_background_alpha_out",
+    "controls": [
+      {
+        "actionbar_message": {
+          "type": "label",
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "color": "$tool_tip_text",
+          "layer": 31,
+          "text": "$actionbar_text",
+          "shadow": true,
+          "localize": true,
+          "alpha": 0.5,
+          "alpha": "@hud.anim_actionbar_text_alpha_out"
+        }
+      }
+    ]
+  },
+  
+  "anim_title_text_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": 1,
+    "next": "@hud.anim_title_text_alpha_stay"
+  },
+  "anim_title_text_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@hud.anim_title_text_alpha_out"
+  },
+  "anim_title_text_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": 1,
+    "to": 0,
+    "destroy_at_end": "hud_title_text",
+    "end_event": "hud_title_text_complete"
+  },
+  "anim_title_background_alpha_in": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": "$title_alpha",
+    "next": "@hud.anim_title_background_alpha_stay"
+  },
+  "anim_title_background_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@hud.anim_title_background_alpha_out"
+  },
+  "anim_title_background_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": "$title_alpha",
+    "to": 0,
+    "destroy_at_end": "hud_title_text",
+    "end_event": "hud_title_text_complete"
+  },
+  "anim_subtitle_text_alpha_in": {
+    "anim_type": "alpha",
+    "play_event": "anim_subtitle_text_alpha_in_play_event",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": 1,
+    "next": "@hud.anim_subtitle_text_alpha_stay"
+  },
+  "anim_subtitle_text_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@hud.anim_subtitle_text_alpha_out"
+  },
+  "anim_subtitle_text_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": 1,
+    "to": 0,
+    "end_event": "hud_subtitle_text_complete"
+  },
+  "anim_subtitle_background_alpha_in": {
+    "anim_type": "alpha",
+    "play_event": "anim_subtitle_text_alpha_in_play_event",
+    "easing": "linear",
+    "duration": "$title_fade_in_time",
+    "from": 0,
+    "to": "$title_alpha",
+    "next": "@hud.anim_subtitle_background_alpha_stay"
+  },
+  "anim_subtitle_background_alpha_stay": {
+    "anim_type": "wait",
+    "duration": "$title_stay_time",
+    "next": "@hud.anim_subtitle_background_alpha_out"
+  },
+  "anim_subtitle_background_alpha_out": {
+    "anim_type": "alpha",
+    "easing": "linear",
+    "duration": "$title_fade_out_time",
+    "from": "$title_alpha",
+    "to": 0,
+    "end_event": "hud_subtitle_text_complete"
+  },
+  
+  "hud_title_text": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "offset": [
+      0,
+      -19
+    ],
+    "layer": 1,
+    "alpha": "@hud.anim_title_text_alpha_in",
+    "propagate_alpha": true,
+    "controls": [
+      {
+        "title_frame": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "title_background": {
+                "type": "image",
+                "size": [
+                  "100%sm + 30px",
+                  "100%sm + 6px"
+                ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "alpha": "@hud.anim_title_background_alpha_in"
+              }
+            },
+            {
+              "title": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "extra_large",
+                "variables": [
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "text_alignment": "center",
+                "offset": [
+                  0,
+                  6
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_title_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "subtitle_frame": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%cm"
+          ],
+          "controls": [
+            {
+              "subtitle_background": {
+                "type": "image",
+                "size": [
+                  "100%sm + 20px",
+                  "100%sm + 5px"
+                ],
+                "offset": [
+                  0,
+                  16
+                ],
+                "texture": "textures/ui/hud_tip_text_background",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$subtitle_bg": "@hud.anim_title_background_alpha_in"
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$subtitle_bg": "@hud.anim_subtitle_background_alpha_in"
+                  }
+                ],
+                "alpha": "$subtitle_bg"
+              }
+            },
+            {
+              "subtitle": {
+                "type": "label",
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "color": "$title_command_text_color",
+                "text": "#text",
+                "layer": 31,
+                "localize": false,
+                "font_size": "large",
+                "variables": [
+                  {
+                    "requires": "$subtitle_initially_visible",
+                    "$anim_type": 1.0
+                  },
+                  {
+                    "requires": "(not $subtitle_initially_visible)",
+                    "$anim_type": "@hud.anim_subtitle_text_alpha_in"
+                  },
+                  {
+                    "requires": "(not $title_shadow)",
+                    "$show_shadow": false
+                  },
+                  {
+                    "requires": "$title_shadow",
+                    "$show_shadow": true
+                  }
+                ],
+                "shadow": "$show_shadow",
+                "alpha": "$anim_type",
+                "text_alignment": "center",
+                "offset": [
+                  1,
+                  19
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_subtitle_text_string",
+                    "binding_name_override": "#text",
+                    "binding_type": "global"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

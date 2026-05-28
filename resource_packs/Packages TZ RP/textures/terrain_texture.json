@@ -1,0 +1,11 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Packages TZ",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"tz_radio_voz": {
+			"textures": "textures/blocks/radioVoice"
+		}
+	}
+}

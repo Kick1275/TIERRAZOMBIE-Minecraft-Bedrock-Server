@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:motor",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "variant_0": "textures/entity/vehicles/motor/motor1",
+        "variant_1": "textures/entity/vehicles/motor/motor2",
+        "variant_2": "textures/entity/vehicles/motor/motor3",
+        "variant_3": "textures/entity/vehicles/motor/motor4",
+        "variant_4": "textures/entity/vehicles/motor/motor5",
+        "variant_5": "textures/entity/vehicles/motor/motor6",
+       "variant_6": "textures/entity/vehicles/motor/motor7",
+       "variant_7": "textures/entity/vehicles/motor/motor8",
+       "variant_8": "textures/entity/vehicles/motor/motor9"
+
+      },
+      "geometry": {
+        "default": "geometry.motor"
+      },
+      "spawn_egg": {
+        "texture": "motor",
+        "texture_index": 0
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 \u003d (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "animate": [
+          {
+            "move": "query.modified_move_speed"
+          },
+          "steer"
+        ]
+      },
+      "animations": {
+        "move": "animation.motor.move",
+        "steer": "animation.motor.steer"
+      },
+      "render_controllers": [
+        "controller.render.variant_motor"
+      ]
+    }
+  }
+}

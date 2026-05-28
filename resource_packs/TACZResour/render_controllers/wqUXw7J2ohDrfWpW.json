@@ -1,0 +1,165 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.akm": {
+      "geometry": "geometry.akm",
+      "materials": [
+        {
+          "*": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "stock_0": "q.property('krep:stock') == 0"
+        },
+        {
+          "stock_1": "q.property('krep:stock') == 1"
+        },
+        {
+          "stock_2": "q.property('krep:stock') == 2"
+        },
+        {
+          "stock_3": "q.property('krep:stock') == 3"
+        },
+        {
+          "ar_stock_adapter": "q.property('krep:stock') >= 4"
+        },
+        {
+          "stock_4": "q.property('krep:stock') == 4"
+        },
+        {
+          "stock_5": "q.property('krep:stock') == 5"
+        },
+        {
+          "stock_6": "q.property('krep:stock') == 6"
+        },
+        {
+          "stock_7": "q.property('krep:stock') == 7"
+        },
+        {
+          "stock_8": "q.property('krep:stock') == 8"
+        },
+        {
+          "stock_9": "q.property('krep:stock') == 9"
+        },
+        {
+          "stock_10": "q.property('krep:stock') == 10"
+        },
+        {
+          "stock_11": "q.property('krep:stock') == 11"
+        },
+        {
+          "muzzle_1": "q.property('krep:muzzle') == 1"
+        },
+        {
+          "muzzle_2": "q.property('krep:muzzle') == 2"
+        },
+        {
+          "muzzle_3": "q.property('krep:muzzle') == 3"
+        },
+        {
+          "muzzle_4": "q.property('krep:muzzle') == 4"
+        },
+        {
+          "muzzle_5": "q.property('krep:muzzle') == 5"
+        },
+        {
+          "muzzle_6": "q.property('krep:muzzle') == 6"
+        },
+        {
+          "mount": "q.property('krep:akmscope')!='nothing'"
+        },
+        {
+          "rail2": "q.property('krep:akmscope')!='nothing'"
+        },
+        {
+          "group": "q.property('krep:akmscope')!='nothing'"
+        },
+        {
+          "coyote": "q.property('krep:akmscope')=='coyote'"
+        },
+        {
+          "coyote_reticle": "q.property('krep:akmscope')=='coyote'"
+        },
+        {
+          "acog": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "acog_lens": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "acog_lens2": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "acog_back": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "acog_reticle": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "acog_scope": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "acog_other": "q.property('krep:akmscope')=='acog'"
+        },
+        {
+          "okp7": "q.property('krep:akmscope')=='okp7'"
+        },
+        {
+          "okp7re": "q.property('krep:akmscope')=='okp7'"
+        },
+        {
+          "elcan": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_lens": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_reticle": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_ring": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_ring2": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_body": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_knob": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_part2": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "elcan_part": "q.property('krep:akmscope')=='elcan'"
+        },
+        {
+          "552": "q.property('krep:akmscope')=='holo'"
+        },
+        {
+          "552_reticle": "q.property('krep:akmscope')=='holo'"
+        }
+      ],
+      "textures": [
+        "texture.akm"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

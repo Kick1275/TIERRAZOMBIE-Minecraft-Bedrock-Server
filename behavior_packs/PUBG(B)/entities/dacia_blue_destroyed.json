@@ -1,0 +1,84 @@
+//bridge-file-version: #53
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "pubg:dacia_blue_destroyed",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"destroyed"
+				]
+			},
+			"animations": {
+				"destroyed": "controller.animation.dacia_destroyed"
+			}
+		},
+		"component_groups": {
+			"dacia_blue:destroyed_death": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicles"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 1.6
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:push_through": {
+				"value": 0
+			},
+			"minecraft:is_stackable": {},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {},
+			"minecraft:on_death": {
+				"filters": {
+					"any_of": [
+						{
+							"subject": "self",
+							"value": "vehicles",
+							"test": "is_family"
+						}
+					]
+				},
+				"target": "self",
+				"event": "dacia_blue:destroyed_death"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"dacia_blue:destroyed_death": {
+				"add": {
+					"component_groups": [
+						"dacia_blue:destroyed_death"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:flag_pole",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/flag_pole/flag_pole",
+				"libernia": "textures/entity/flag_pole/flag_pole_libernia",
+				"telslakia": "textures/entity/flag_pole/flag_pole_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.flag_pole",
+				"hide": "geometry.flag_pole"
+			},
+			"render_controllers": [
+				"controller.render.flag_pole",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_flag_pole_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"angle": "animation.flag_pole.angle",
+				"flow": "animation.flag_pole.flow",
+				"down": "animation.flag_pole.down",
+				"change": "controller.animation.flag_pole.change"
+			},
+			"scripts": {
+				"animate": [
+					"change",
+					"angle"
+				]
+			}
+		}
+	}
+}

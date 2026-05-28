@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "mcpe:ak47",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+                "default": "textures/misc/empty"
+            },
+            "geometry": {
+                "default": "geometry.ak47"
+            },
+            "animations": {
+            	"gun":"controller.animation.ak47",
+            	"guns.draw": "animation.guns.draw",
+            	"guns.hold": "animation.guns.hold",
+            	"guns.sprint": "animation.guns.sprint",
+          	  "ak.reload_full": "animation.guns.hold"
+            },
+            "scripts": {
+            	"animate": [
+            		{
+            			"gun": "c.is_first_person"
+            		}
+            	]
+            },
+            "sound_effects": {
+            	"draw.sound": "gun.draw"
+            },
+            "render_controllers": [
+            	"controller.render.default"
+           ]
+		}
+	}
+}

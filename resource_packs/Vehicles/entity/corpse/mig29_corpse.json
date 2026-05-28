@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:mig29_corpse",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"libernia": "textures/entity/vehicle_corpse",
+				"telslakia": "textures/entity/vehicle_corpse2"
+			},
+			"geometry": {
+				"default": "geometry.mig29"
+			},
+			"render_controllers": [
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_f16_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"rotations": "animation.aircraft.rotations",
+				"scale": "animation.mig29.scale"
+			},
+			"scripts": {
+				"animate": [
+					"rotations",
+					"scale"
+				],
+				"should_update_bones_and_effects_offscreen": true,
+				"should_update_effects_offscreen": true
+			}
+		}
+	}
+}

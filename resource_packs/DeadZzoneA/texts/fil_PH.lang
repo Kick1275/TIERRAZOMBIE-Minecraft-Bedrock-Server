@@ -1,0 +1,838 @@
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## You can translate from here
+## welcome message
+game.message.welcome_dz=Maligayang pagdating sa Dead§4Z§rone
+game.message.deadzone_1=§eIsulat ang §r§o!avatar§e para-makagawa o mag-riset ng skin.
+game.message.deadzone_2=§eIsulat ang §r§o!status§r§e para makita mo ang iyong progreso sa paglalaro
+
+## death message
+death.attack.bullet.headshot=%1$s binaril sa ulo, galing kay %2$s
+death.attack.bullet=%1$s binaril ka, galing kay %2$s
+death.attack.freeze.temperature=%1$s namatay sa panlalamig
+death.attack.heat.temperature=%1$s namatay sa heatstroke
+death.attack.thirst=%1$s namatay sa pagka-uhaw
+death.attack.bleeding=%1$s namatay sa bleeding
+death.attack.infection=%1$s pumanaw sa impeksyon
+death.attack.blood_loss=%1$s namatay sa pagkawala ng dugo 
+
+## cc
+cc.random_avatar.gui=Iba't ibang karakter
+cc.default_skin.gui=Orihinal na karakter
+cc.skin.gui=Balat
+cc.hair.gui=Buhok
+cc.eye.gui=Mata
+cc.gender.gui=Kasarian
+cc.glove.gui=Gwantes
+cc.message.default_skin=Gusto mo ba talaga gamitin ang Orihinal na karakter?.
+cc.message.warning=Pumili kana muna ng kasarian bago ang ibang katangian.
+cc.message.warning_eye_first=Pasensya, ngunit hindi mo maari gamitin ang babaeng mata.
+cc.message.warning_eye_second=Pasensya, ngunut hindi mo maari gamitin ang panglalaki na mata.
+
+## config
+config.title=DeadZone Settings
+config.despawn_time=Itakda ang "Corpse Despawn Time" (Minuto)
+config.max_corpse=Itakda ang limit ng Dami ng mga Bangkay.
+config.allow_corpse_creation=Tulutan ang paggamit ng "Paglikha ng mga Bangkay"
+config.reset_statu_on_death=I-reset ang Katayuan pagkatapos ng Kamatayan
+config.hardcore_infected_mode=Paganahin ang "Hardcore Infected Mode"
+
+## horde config
+horde.config.title=Horde Settings
+horde.config.enable_horde=Paganahin ang "Horde System"
+horde.config.spawn_chance=Pagkakataong mag "Spawn Horde" (Persyento)
+horde.config.min_Interval=Minimum na oras para sa "Interval for Horde" (Minuto)
+horde.config.max_Interval=Maximum na oras para sa "Interval for Horde" (Minuto)
+horde.config.min_distance=Minimum na Distansya ng mga Horde (Blocks)
+horde.config.size_group=Ang kalakihan ng Horde (Bilang ng mga Infected)
+horde.config.civilian_spawn_chance=Pagkakataong mag "Spawn Civlian" (Persyento)
+horde.config.screamer_spawn_chance=Pagkakataong mag "Spawn Screamer" (Persyento)
+
+## statu
+statu.player_name=Pangalan
+statu.player_killed=Ang manglalari ay namatay
+statu.infected_killed=Ang infected ay namatay
+statu.time_playing=Oras sa paglalaro
+statu.time_survived=Ang iyong oras noo'y buhay ka pa
+statu.kill_distance=Pinakamalayo na distansiya mong napatay
+
+## action
+action.interact.cut=Kumuha ng 'Steak'
+action.interact.bury= Ilibing ang bangkay
+action.hint.exit.mcpe:sedan= Tumalon/crouch para maka-alis sa sasakyan
+action.hint.exit.mcpe:humvee= Tumalon/crouch para maka-alis sa sasakyan
+action.hint.exit.mcpe:motor= Tumalon/crouch para maka-alis sa Rusi
+
+## game message
+game.message.blood_test=§aAng iyong blood type ay
+game.message.warning_lockpick=§4Kailangan mo ng lockpick para mabuksan ang surplus box.
+game.message.lockpick_broken=§cAng iyont lockpick ay nasira!
+game.message.lockpick_attempt=§cHindi gumuna ang iyong pagbubukas gamit ang lockpick.
+game.message.corpse_despawn_time=Ang oras para sa 'Corpse despawn' ay
+game.message.reset_statu_on_death=Ipinapakita na ang i-status sa creative mode.
+game.message.show_statu=Mag-rireset na ang status kapag ika'y mamatay
+game.message.warning_blood_type=cHindi mo pa nga alam ang blood type mo.
+game.message.warning_overdose_first=§cKakaiba ang pakiramdam ko...
+game.message.warning_overdose_second=§cHigh-na-high ata ako...
+game.message.blood_type_first=§aAng iyong blood type ay A.
+game.message.blood_type_second=§aAng iyong blood type ay AB.
+game.message.blood_type_third=§aAng iyong blood type ay B.
+game.message.blood_type_fourth=§aAng iyotn blood type ay O.
+game.message.blood_transfer= ang 'Blood transfusion' ay tapos na at gumana.
+game.message.bleeding_warning=§cDumurogo ako.
+game.message.broken_bone_warning=§cNabali yung paa ko.
+game.message.temperature_warning_first=Nasusunog ako.
+game.message.temperature_warning_second=Gagi, ang lamig.
+game.message.unsupport_warning=Ang bagay na ito ay hindi supportado. I-click lang ang screen/right-click para makuha at maibalik ang bagay na iyon.
+game.message.blood_type=Ang iyong blood type ay 
+
+## spawn egg
+item.spawn_egg.entity.mcpe:civilian.name=Spawn Infected na Tao
+item.spawn_egg.entity.mcpe:military.name=Spawn Infected na Sundalo
+item.spawn_egg.entity.mcpe:hazmat.name=Spawn Infected Hazmat
+item.spawn_egg.entity.mcpe:militia.name=Spawn Infected Battalion na Sundalo
+item.spawn_egg.entity.mcpe:screamer.name=Spawn Infected Screamer
+item.spawn_egg.entity.mcpe:commander.name=Spawn Infected Kommandante
+item.spawn_egg.entity.mcpe:sedan.name=Spawn Sedan
+item.spawn_egg.entity.mcpe:motor.name=Spawn Rusi
+item.spawn_egg.entity.mcpe:humvee.name=Spawn Humvee
+
+item.spawn_egg.entity.mcpe:marauder.name=Spawn Mga Bandito na grupo
+item.spawn_egg.entity.mcpe:scavenger.name=Spawn Mga Manlalakal na grupo
+
+## entity
+entity.mcpe:civilian.name=Infected na Tao
+entity.mcpe:military.name=Infected na Sundalo
+entity.mcpe:hazmat.name=Infected Hazmat
+entity.mcpe:commander.name=Infected Kommandante
+entity.mcpe:militia.name=Infected Battalion na Sundalo
+
+entity.mcpe:marauder.name=Bandito
+entity.mcpe:scavenger.name=Manlalakal
+
+entity.unknown.name=loot
+
+## item
+item.mcpe:vending_popsi_icon.name=Popsi na hulog-hulog
+item.mcpe:vending_exp_icon.name=EXP-coke na hulog-hulog
+item.mcpe:vending_sprot_icon.name=Sprot na hulog-hulog
+item.mcpe:slack_black.name=Itim na slack pants
+item.mcpe:plastic_explosive.name=Plastik na paputok
+item.mcpe:electric_scrap.name=Mga komponento na hindi ginagamit
+item.mcpe:baseball_bat.name=Baseball bat
+item.mcpe:barbedwire_bat.name=Isang baseball bat na may tusok tusok
+item.mcpe:cleaver_knife.name=Cleaver knife
+item.mcpe:combat_knife.name=Combat knife
+item.mcpe:crowbar.name=Crowbar
+item.mcpe:engineer_shovel.name=Malaking Pala
+item.mcpe:fireman_axe.name=Atsa para sa mga bombero
+item.mcpe:flanged_mace.name=Flanged Mace
+item.mcpe:frying_pan.name=Kawali
+item.mcpe:golf_club.name=Pamalo sa golf
+item.mcpe:golok_machete.name=Golok machete
+item.mcpe:hammer.name=Martilyo
+item.mcpe:hatchet.name=Palasak
+item.mcpe:hunting_knife.name=Kutsilyo para sa pangangaso
+item.mcpe:ice_hockey.name=Ice hockey stick
+item.mcpe:ice_pick.name=Pang-sira sa yelo
+item.mcpe:katana.name=Ispada ng hapon
+item.mcpe:kitchen_knife.name=Kutsilyo para sa kusina
+item.mcpe:knight_sword.name=Ispada ng mga knight
+item.mcpe:kukri_machete.name=Kukri machete
+item.mcpe:lead_pipe.name=Metal na Tubo
+item.mcpe:machete.name=Lagari
+item.mcpe:metal_bat.name=Metal baseball bat
+item.mcpe:miner_pickaxe.name=Miner pickaxe
+item.mcpe:nailed_bat.name=Naka-lansang na baseball bat
+item.mcpe:nailed_plank.name=Naka-lansang na wooden plank
+item.mcpe:pipe_wrench.name=wrencho ng tubo
+item.mcpe:pitchfork.name=Pitchfork
+item.mcpe:police_baton.name=Baton ng mga Polisya
+item.mcpe:rolling_pin.name=Belan
+item.mcpe:sabre_sword.name=Ispadang sable
+item.mcpe:screwdriver.name=Distornilyador
+item.mcpe:farm_sickle.name=Sangot
+item.mcpe:sledgehammer.name=Malaking Martilyo/Maso
+item.mcpe:snow_shovel.name=Pala para niyebe
+item.mcpe:splitting_axe.name=Palakol na maliit
+item.mcpe:tactical_axe.name=Taktikal na palakol
+item.mcpe:tactical_shovel.name=Taktikal na pala
+item.mcpe:tire_iron.name=Tire iron
+item.mcpe:wooden_plank.name=Kahoy na tabla
+item.mcpe:wrench.name=Wrencho
+item.mcpe:hacksaw.name=Lagaring pambakal
+
+item.mcpe:blood_test_kit.name=Kit ng pagsusuri ng dugo
+item.mcpe:blood_bag_emp.name=Walang laman na lalagyan ng dugo
+item.mcpe:blood_bag_unknown.name=Type unknown na lalagyan ng dugo
+item.mcpe:blood_bag_type_a.name=Type A na lalagyan ng dugo
+item.mcpe:blood_bag_type_ab.name=Type AB lalagyan ng dugo
+item.mcpe:blood_bag_type_b.name=Type B lalagyan ng dugo
+item.mcpe:blood_bag_type_o.name=Type O lalagyan ng dugo
+
+item.mcpe:first_aid.name=First Aid Bag
+item.mcpe:bandage.name=Bendahe
+item.mcpe:bandage_sterilized.name=naka isterilisyado na bendahe
+item.mcpe:rags.name=Basahan
+item.mcpe:rags_dirty.name=Madumi na Basahan
+item.mcpe:rags_sterilized.name=naka isterilisyado na basahon
+item.mcpe:blood_bag.name=Lalagyan ng dugo
+item.mcpe:painkiller.name=Pangpawala ng sakit
+item.mcpe:adrenaline.name=Adrenaline auto injector
+item.mcpe:morphine.name=Morphine auto injector
+item.mcpe:splint.name=Splint
+item.mcpe:water_purification.name=Pang pamlinis ng tubig (tabletas)
+item.mcpe:alcoholic_tinture.name=Alcoholic Tincture
+item.mcpe:antidote.name=Labatiba na may laman na Antidote
+
+
+item.mcpe:avatar_custome.name=Customization para sa karakter
+item.mcpe:barbed_wire.name=Mga wire na may tusok tusok
+item.mcpe:bear_trap.name=Pang-bitag para sa mga uso
+item.mcpe:bleach.name=Sabon na pang labahan
+item.mcpe:bottle_water_emp.name=Walang laman na water bottle
+item.mcpe:detonator.name=Pambabasabok na remote
+item.mcpe:can_opener.name=Pang-bukas ng lata
+item.mcpe:duct_tape.name=Duct tape
+item.mcpe:flashlight.name=Flashlight
+item.mcpe:fumo_hat.name= Da Zaza Fumos
+item.mcpe:funi_vest.name=Funi vest
+item.mcpe:ham_radios.name=HAM radyo
+item.mcpe:landmine.name=Landmine
+item.mcpe:lockpick.name=Lockpick
+item.mcpe:nail_box.name=Isang kahon na lansang
+item.mcpe:nail.name=Mga lansang
+item.mcpe:cooking_pot.name=Walang laman na cooking pot
+item.mcpe:radios.name=Radyo
+item.mcpe:Random_paper.name=Mga walang kuwentang papel
+item.mcpe:remote.name=Funi vest remote
+item.mcpe:sawoff_pipe.name=Putol na tubo
+item.mcpe:spray_can.name=Lata/Bote ng spray
+item.mcpe:walkie_talkie.name=Woki-Toki
+item.mcpe:wire_cutter.name=Pamputol ng wire
+item.mcpe:wooden_barricade.name=Kahoy na pang-harang
+item.mcpe:fvla_flags.name=Free vostrovian legion army flag
+item.mcpe:vostrovia_flags.name=Republic vostrovian flag
+item.mcpe:nekoi_flags.name=Neko ¡ project flag
+item.mcpe:nails.name=Lansang
+
+
+item.mcpe:chip_potato.name=Potato chip
+item.mcpe:chip_tortilla.name=Tortilla chip
+item.mcpe:chocolate_bar.name=Chocolate bar
+item.mcpe:creeper_crunch.name=Creeper crunch
+item.mcpe:meat_jerky.name=Beef jerky
+item.mcpe:mre.name=Meal ready-to-eat
+item.mcpe:rice.name=Isang sakong bigas
+item.mcpe:strawberry_jam.name=Strawberry jam
+item.mcpe:tactical_sandwich.name=Tactical sandwich
+item.mcpe:apple_green.name=Berdeng mansanas
+item.mcpe:banana.name=Saging
+item.mcpe:cucumber.name=Pipino
+item.mcpe:pear.name=Peras
+item.mcpe:tomato.name=Kamatis
+item.mcpe:zucchini.name=Zucchini
+item.mcpe:raw_player.name=Hilaw na karne ng Tao
+item.mcpe:cooked_player.name=Luto na karne ng Tao
+
+
+item.mcpe:canned_bacon.name=Naka lata na taktikal bacon
+item.mcpe:canned_beans.name=Naka lnamea na baked beans
+item.mcpe:canned_beef_stew.name=Naka lata na beef stew
+item.mcpe:canned_chicken.name=Naka lata na chicken
+item.mcpe:canned_chili.name=Naka lata na chili
+item.mcpe:canned_corned.name=Naka lata na Corned beef
+item.mcpe:canned_fruit.name=Naka lata na fruit cocktail
+item.mcpe:canned_ham.name=Naka lata na ham
+item.mcpe:canned_peaches.name=Naka lata na sweet peaches
+item.mcpe:canned_ration.name=Naka lata na Field rations
+item.mcpe:canned_sardine.name=Naka lata na sardinas
+item.mcpe:canned_spaghetti.name=Naka lata na spaghetti bolognese
+item.mcpe:canned_tomato.name=Naka lata na tomato soup
+item.mcpe:canned_tuna.name=Naka lata na tuna
+
+
+item.mcpe:canned_bacon_open.name=Naka bukas na lata ng tactical bacon
+item.mcpe:canned_beans_open.name=Naka bukas na lata ng baked beans
+item.mcpe:canned_beef_stew_open.name=Naka bukas na lata ng beef stew
+item.mcpe:canned_chicken_open.name=Naka bukas na lata ng chicken
+item.mcpe:canned_chili_open.name=Naka bukas na lata ng chili
+item.mcpe:canned_corned_open.name=Open canned Corned beef
+item.mcpe:canned_fruit_open.name=Naka bukas na lata ng fruit cocktail
+item.mcpe:canned_ham_open.name=Naka bukas na lata ng ham
+item.mcpe:canned_peaches_open.name=Naka bukas na lata ng sweet peaches
+item.mcpe:canned_ration_open.name=Naka bukas na lata ng Field rations
+item.mcpe:canned_sardine_open.name=Naka bukas na lata ng sardinas
+item.mcpe:canned_spaghetti_open.name=Naka bukas na lata ng spaghetti bolognese
+item.mcpe:canned_tomato_open.name=Naka bukas na lata ng tomato soup
+item.mcpe:canned_tuna_open.name=Naka bukas na lata ng tuna
+
+
+item.mcpe:canned_bacon_open_bad.name=Hindi maganda na tactical bacon
+item.mcpe:canned_beans_open_bad.name=Hindi maganda na baked beans
+item.mcpe:canned_beef_stew_open_bad.name=Hindi maganda na beef stew
+item.mcpe:canned_chicken_open_bad.name=Hindi maganda na chicken
+item.mcpe:canned_chili_open_bad.name=Hindi maganda na chili
+item.mcpe:canned_corned_open_bad.name=Hindi maganda na Corned beef
+item.mcpe:canned_fruit_open_bad.name=Hindi maganda na fruit cocktail
+item.mcpe:canned_ham_open_bad.name=Hindi maganda na ham
+item.mcpe:canned_peaches_open_bad.name=Hindi maganda na sweet peaches
+item.mcpe:canned_ration_open_bad.name=Hindi maganda na Field rations
+item.mcpe:canned_sardine_open_bad.name=Hindi maganda na sardinas
+item.mcpe:canned_spaghetti_open_bad.name=Hindi maganda na spaghetti bolognese
+item.mcpe:canned_tomato_open_bad.name=Hindi maganda na tomato soup
+item.mcpe:canned_tuna_open_bad.name=Hindi maganda na tuna
+
+
+item.mcpe:beer_bottle.name=Beer na nasa bote
+item.mcpe:bottle_water_bleach.name=Naka bote na tubig
+item.mcpe:bottle_water_unpure.name=Madumi na bote ng tubig
+item.mcpe:bottle_water.name=Naka bote na tubig
+item.mcpe:coffee.name=Kape
+item.mcpe:energy_drink.name=Energy drink
+item.mcpe:exp_coke.name=EXP coke
+item.mcpe:grape_soda.name=Grape soda
+item.mcpe:lemonade.name=Lemonade
+item.mcpe:milk_gallon.name=Isang gallon ng gatas
+item.mcpe:popsi_cola.name=PoPsi cola
+item.mcpe:pot_cook_water.name=Isang pot ng mainit na tubig
+item.mcpe:pot_water.name=Isanf pot ng madumi na tubig
+item.mcpe:red_wine.name=Pulang wine bottle
+item.mcpe:vodka.name=Vodka
+item.mcpe:whiskey.name=Whiskey
+
+## ammo
+item.mcpe:ammo_7_62x39mm.name=Isang kahon ng bala ng 7.62x39mm
+item.mcpe:ammo_5_45x39mm.name=Isang kahon ng bala ng 5.45x39mm
+item.mcpe:ammo_5_56x45mm.name=Isang kahon ng bala ng 5.56x45mm
+item.mcpe:ammo_7_62x51mm.name=Isang kahon ng bala ng 7.62x51mm
+item.mcpe:ammo_7_62x54mmr.name=Isang kahon ng bala ng 7.62x54mmR
+item.mcpe:ammo_9x39mm.name=Isang kahon ng bala ng 9x39mm
+item.mcpe:ammo_9x19mm.name=Isang kahon ng bala ng 9x19mm
+item.mcpe:ammo_9x18mm.name=Isang kahon ng bala ng 9x18mm
+item.mcpe:ammo_12gauge.name=Isang kahon ng bala ng 12 gauge
+item.mcpe:ammo_40mm.name=Isang kahon ng bala ng 40mm
+item.mcpe:ammo_44magnum.name=Isang kahon ng bala ng .44 magnum
+item.mcpe:ammo_357magnum.name=Isang kahon ng bala ng .357 magnum
+item.mcpe:ammo_45acp.name=Isang kahon ng bala ng .45 ACP
+item.mcpe:ammo_32acp.name=Isang kahon ng bala ng .32 ACP
+
+## grenade
+item.mcpe:frag_grenade.name=Frag grenade
+item.mcpe:smoke_grenade.name=Smoke grenade
+item.mcpe:flash_grenade.name=Flash grenade
+item.mcpe:c4_explosive.name=C-4 explosive
+item.mcpe:pipe_bomb.name=Pipe bomb
+item.mcpe:nerve_grenade.name=Nerve gas grenade
+
+## armor/clothes
+item.mcpe:assault_vest_black.name=Itim na assault vest
+item.mcpe:assault_vest_olive.name=Olibo na assault vest
+item.mcpe:biker_vest.name=Biker vest
+item.mcpe:biker_vest_skull.name=Skull biker vest
+item.mcpe:chest_navy.name=Navy na chest rig
+item.mcpe:chest_tan.name=Tan na chest rig
+item.mcpe:chest_green.name=Berde na chest rig
+item.mcpe:chest_white.name=Puti na chest rig
+item.mcpe:chest_brown.name=Kayumanggi na chest rig
+item.mcpe:combat_olive.name=Olibo na combat vest
+item.mcpe:combat_white.name=Puti na combat vest
+item.mcpe:combat_tan.name=Tan na combat vest
+item.mcpe:hunting_brown.name=Kayumanggi na hunting vest
+item.mcpe:hunting_navy.name=Navy hunting vest
+item.mcpe:plate_vest_gray.name=Gray plate vest
+item.mcpe:plate_vest_white.name=Puti na plate vest
+item.mcpe:plate_vest_olive.name=Olibo na plate vest
+item.mcpe:plate_vest_tan.name=Tan na plate vest
+item.mcpe:police_vest.name=Vest para sa mga polisya
+item.mcpe:press_vest.name=Press vest
+item.mcpe:reflective_lime.name=Apog na reflective vest
+item.mcpe:reflective_orange.name=Kahel na reflective vest
+item.mcpe:reflective_yellow.name=Dilaw na reflective vest
+item.mcpe:stab_vest_gray.name=Gray na stab vest
+item.mcpe:stab_vest_tan.name=Tan na stab vest
+item.mcpe:stab_vest_white.name=Puti na stab vest
+item.mcpe:tactical_vest_black.name=Itim na taktikal vest
+item.mcpe:tactical_vest_white.name=Puti na taktikal vest
+item.mcpe:tactical_vest_tan.name=Tan na taktikal vest
+item.mcpe:tactical_vest_olive.name=Olibo na taktikal vest
+item.mcpe:webbing_brown.name=Kayumanggi na webbing
+item.mcpe:webbing_black.name=Itim na webbing
+item.mcpe:webbing_tan.name=Tan na webbing
+item.mcpe:webbing_green.name=Berde na webbing
+item.mcpe:webbing_white.name=Kayumanggi na webbing
+
+
+item.mcpe:army_artic.name=Artiko na army helmet
+item.mcpe:army_desert.name=Disyerto na army helmet
+item.mcpe:army_woodland.name=Woodland na army helmet
+item.mcpe:assault_helmet_black.name=Itim na assault helmet
+item.mcpe:assault_helmet_olive.name=Olibo na assault helmet
+item.mcpe:balaclava_black.name=Itim na balaclava mask
+item.mcpe:ballistic_black.name=Itim na ballistic helmet
+item.mcpe:ballistic_green.name=Berde na ballistic helmet
+item.mcpe:ballistic_Tan.name=Tan na ballistic helmet
+item.mcpe:ballistic_white.name=Puti na ballistic helmet
+item.mcpe:bandana_blue.name=Asul na bandana mask
+item.mcpe:bandana_green.name=Berde na bandana mask
+item.mcpe:bandana_red.name=Pula na bandana mask
+item.mcpe:beanie_black.name=Itim na beanie
+item.mcpe:beanie_brown.name=Kayumanggi na Beanie
+item.mcpe:beanie_white.name=Puti na beanie 
+item.mcpe:beanie_olive.name=Olibo na beanie
+item.mcpe:beret_red.name=Pula na beret
+item.mcpe:beret_green.name=Berde na beret
+item.mcpe:beret_blue.name=Asul na beret
+item.mcpe:biker_black.name=Itim na biker helmet
+item.mcpe:biker_white.name=Puti na biker helmet
+item.mcpe:biker_yellow.name=Dilaw na biker helmet
+item.mcpe:biker_red.name=Pula na biker helmet
+item.mcpe:biker_green.name=Berde na biker helmet
+item.mcpe:biker_blue.name=Asul na biker helmet
+item.mcpe:boonie_artic.name=Artiko na camo boonie hat
+item.mcpe:boonie_woodland.name=Woodland camo boonie hat
+item.mcpe:boonie_desert.name=Disyerto na camo boonie hat
+item.mcpe:boonie_black.name=Itim na boonie hat
+item.mcpe:boonie_green.name=Berde na boonie hat
+item.mcpe:boonie_white.name=Puti na boonie hat
+item.mcpe:boonie_tan.name=Tan na boonie hat
+item.mcpe:cap_black.name=Itim na sombrero
+item.mcpe:cap_green.name=Berde na sombrero
+item.mcpe:cap_blue.name=Asul na sombrero
+item.mcpe:cap_red.name=Pula na sombrero
+item.mcpe:clown_wig.name=Wig para sa payaso
+item.mcpe:cowboy_brown.name=Kayumanggi na cowboy hat
+item.mcpe:cowboy_black.name=Itim na cowboy hat
+item.mcpe:cowboy_white.name=Puti na cowboy hat
+item.mcpe:durag_black.name=Itim na durag
+item.mcpe:durag_brown.name=Kayumanggi na durag
+item.mcpe:firefighter_hat.name=sumbrero para sa bombero
+item.mcpe:flat_black.name=Itim na flat cap
+item.mcpe:flat_brown.name=Kayumanggi na flat cap
+item.mcpe:gasmask_black.name=Itim na gasmask
+item.mcpe:gasmask_white.name=Puti na gasmask
+item.mcpe:gasmask_tactical.name=Taktikal na gasmask
+item.mcpe:great_helmet.name=Great helmet
+item.mcpe:hard_blue.name=Asul na hard hat
+item.mcpe:hard_red.name=Pula na hard hat
+item.mcpe:hard_yellow.name=Dilaw na hard hat
+item.mcpe:hard_white.name=Puti na hard hat
+item.mcpe:hard_orange.name=Kahel na hard hat
+item.mcpe:headlamp.name=Ilaw na suotin sa ulo
+item.mcpe:hunting_hat.name=sumbrero para sa pangangaso
+item.mcpe:maid_bonnet.name=Maid bonnet
+item.mcpe:mask_fawkes.name=Fawkes face mask
+item.mcpe:mask_funni.name=Funni face mask
+item.mcpe:mask_troll.name=Troll face mask
+item.mcpe:night_goggles.name=Night goggles
+item.mcpe:peaked_green.name=Berde na peaked cap
+item.mcpe:peaked_white.name=Puti na peaked cap
+item.mcpe:peaked_tan.name=Tan na peaked cap
+item.mcpe:plague_hat.name=Plague doctor hat
+item.mcpe:police_hat.name=Sumbrero para sa Polisya
+item.mcpe:police_riot.name=Riot Helmet para sa Polisya
+item.mcpe:respirator_mask.name=Respiratory gasmask
+item.mcpe:shemagh_blue.name=Asul na shemagh
+item.mcpe:shemagh_red.name=Pula na shemagh
+item.mcpe:shemagh_tan.name=Tan na shemagh
+item.mcpe:shemagh_brown.name=Kayumanggi na shemagh
+item.mcpe:shemagh_black.name=Itim na shemagh
+item.mcpe:shemagh_olive.name=Olibo na shemagh
+item.mcpe:shemagh_gray.name=Gray na shemagh
+item.mcpe:skimask_black.name=Itim na ski mask
+item.mcpe:spec_helmet.name=Special operation helmet
+item.mcpe:tactical_helmet_black.name=Itim na taktikal helmet
+item.mcpe:tactical_helmet_tan.name=Tan na taktikal helmet
+item.mcpe:tactical_helmet_white.name=Puti na taktikal helmet
+item.mcpe:tactical_helmet_olive.name=Olibo na taktikal helmet
+item.mcpe:ushanka.name=Ushanka
+item.mcpe:un_helmet.name=UN helmet
+item.mcpe:welder_mask.name=Welder mask
+
+item.mcpe:bdu_artic_bottom.name=Artiko na pantalon ng BDU 
+item.mcpe:bdu_desert_bottom.name=Disyerto na pantalon ng BDU
+item.mcpe:bdu_woodland_bottom.name=Woodland na pantalon ng BDU 
+item.mcpe:cargo_black.name=Itim na cargo pants
+item.mcpe:cargo_brown.name=Kayumanggi na cargo pants
+item.mcpe:cargo_tan.name=Tan na cargo pants
+item.mcpe:cargo_white.name=Puti na cargo pants
+item.mcpe:cargo_green.name=Berde na cargo pants
+item.mcpe:chainmail_bottom.name=Chainmail pants
+item.mcpe:clown_bottom.name=Pantalon ng payaso
+item.mcpe:firefighter_bottom.name=Pantalon ng bombero
+item.mcpe:ghillie_drygrass_bottom.name=Drygrass ghillie pants
+item.mcpe:ghillie_forest_bottom.name=Forest ghillie pants
+item.mcpe:ghillie_snow_bottom.name=Snow ghillie pants
+item.mcpe:ggorka_bottom.name=Gorka pants
+item.mcpe:hazmat_white_bottom.name=Puti na hazmat pants
+item.mcpe:hazmat_yellow_bottom.name=Dilaw na hazmat pants
+item.mcpe:jean_black.name=Itil na jeans
+item.mcpe:jean_blue.name=Asul na jeans
+item.mcpe:jean_brown.name=Kayumanggi na jeans
+item.mcpe:jean_light.name=Light na puti na jeans
+item.mcpe:khaki_light.name=Banayad na khaki na pants
+item.mcpe:maid_bottom.name=Maid bottoms
+item.mcpe:overall_black.name=Itim na overalls
+item.mcpe:overall_brown.name=Kayumanggi na overalls
+item.mcpe:overall_blue.name=Asul na overalls
+item.mcpe:paramedic_bottom.name=Paramedic pants
+item.mcpe:plague_bottom.name=Plague doctor bottoms
+item.mcpe:police_special_bottom.name=Pantalon para sa Special Police Force
+item.mcpe:police_bottom.name=Pantalon para sa Polisya
+item.mcpe:prisoner_bottom.name=Pang bilango na pantalon
+item.mcpe:suit_bottom_black.name=Itim na suit pants
+item.mcpe:special_bottom.name=Special operation pants
+item.mcpe:suspender_black.name=Itim na suspender slack
+item.mcpe:trackpants_black.name=Itim na trackpants
+item.mcpe:trackpants_blue.name=Asul na trackpants
+item.mcpe:trackpants_red.name=Pula na trackpants
+item.mcpe:berezka_desert_bottom.name=Disyerto na berezka pants
+item.mcpe:berezka_forest_bottom.name=Pang kagubatan na berezka pants
+item.mcpe:berezka_tundra_bottom.name=Pang tundra na berezka pants
+item.mcpe:desert_camo_bottom.name=Disyerto na camo pants
+item.mcpe:tundra_camo_bottom.name=Tundra na camo pants
+item.mcpe:woodland_camo_bottom.name=Woodland na camo pants
+item.mcpe:field_butan_desert_bottom.name=Disyerto na field butan pants
+item.mcpe:field_forest_desert_bottom.name=Forest na field butan pants
+item.mcpe:field_tan_bottom.name=Tan na field pants
+item.mcpe:field_olive_bottom.name=Olibo na field pants
+item.mcpe:hunting_autumn_bottom.name=Taglagas na pangangaso'ng pantalon
+item.mcpe:hunting_spring_bottom.name=Tagsibol na pangangaso'ng pantalon
+item.mcpe:hunting_winter_bottom.name=Taglamig na pangangaso'ng pantalon
+item.mcpe:paramedic_blue_bottom.name=Asul na paramedic pants
+item.mcpe:paramedic_green_bottom.name=Berde na paramedic pants
+item.mcpe:paramedic_red_bottom.name=Pula na paramedic pants
+item.mcpe:trackpants_yellow.name=Dilaw na trackpants
+item.mcpe:trackpants_green.name=Berde na trackpants
+item.mcpe:trackpants_cyan.name=Cyan na trackpants
+item.mcpe:cargo_gray.name=Gray na cargo pants
+item.mcpe:firefighter_black_bottom.name=Itim na firefighter pants
+item.mcpe:firefighter_tan_bottom.name=Tan na firefighter pants
+item.mcpe:hazmat_gray_bottom.name=Gray na hazmat pants
+item.mcpe:jean_gray.name=Gray na jeans
+item.mcpe:jean_green.name=Berde na jeans
+item.mcpe:jean_red.name=Pula na jeans
+item.mcpe:jean_khaki.name=Khaki na jeans
+item.mcpe:overall_gray.name=Gray na overall pants
+item.mcpe:overall_green.name=Berde na overall pants
+item.mcpe:overall_khaki.name=khaki na overall pants
+item.mcpe:slack_blue.name=Asul na slack pants
+item.mcpe:slack_brown.name=Kayumanggi na slack pants
+item.mcpe:slack_gray.name=Gray na slack pants
+item.mcpe:slack_tan.name=Tan na slack pants
+
+
+item.mcpe:bdu_artic_top.name=Artiko na camo BDU
+item.mcpe:bdu_desert_top.name=Disyerto na camo BDU
+item.mcpe:bdu_woodland_top.name=Woodland camo BDU
+item.mcpe:chainmail_top.name=Chainmail top
+item.mcpe:clown_top.name=Pang-payaso na temo
+item.mcpe:crusader_top.name=Crusaders top
+item.mcpe:firefighter_top.name=Firefighter jacket
+item.mcpe:flannel_red.name=Pula na flannel shirt
+item.mcpe:flannel_green.name=Berde na flannel shirt
+item.mcpe:flannel_blue.name=Asul na flannel shirt
+item.mcpe:flannel_white.name=Puti na flannel shirt
+item.mcpe:flannel_gray.name=Gray na flannel shirt
+item.mcpe:ghillie_drygrass_top.name=Dry grass ghillie suit
+item.mcpe:ghillie_forest_top.name=Forest ghillie suit
+item.mcpe:ghillie_snow_top.name=Snow ghillie suit
+item.mcpe:gorka_top.name=Gorka uniform
+item.mcpe:hawaiian_black.name=Itim na hawaiian shirt
+item.mcpe:hawaiian_red.name=Pula na hawaiian shirt
+item.mcpe:hazmat_white_top.name=Puti na hazmat suit
+item.mcpe:hazmat_yellow_top.name=Dilaw na hazmat suit
+item.mcpe:hero_flannel.name=Hero flannel shirt
+item.mcpe:hiking_black.name=Itim na hiking jacket
+item.mcpe:hiking_blue.name=Asul na hiking jacket
+item.mcpe:hoodie_black.name=Itim na hoodie
+item.mcpe:hoodie_blue.name=Asul na hoodie
+item.mcpe:hoodie_green.name=Berde na hoodie
+item.mcpe:hoodie_red.name=Pula na hoodie
+item.mcpe:hoodie_yellow.name=Dilaw na hoodie
+item.mcpe:hoodie_white.name=Puti na hoodie
+item.mcpe:leather_black.name=Itim na leather jacket
+item.mcpe:leather_brown.name=Kayumanggi na leather jacket
+item.mcpe:maid_top.name=Maid dress
+item.mcpe:paramedic_top.name=Paramedic jacket
+item.mcpe:plague_top.name=Plague doctor upper
+item.mcpe:plaid_red.name=Pula na plaid shirt
+item.mcpe:plaid_blue.name=Asul na plaid shirt
+item.mcpe:plaid_olive.name=Olibo na plaid shirt
+item.mcpe:plaid_white.name=Puti na plaid shirt
+item.mcpe:plaid_gray.name=Gray na plaid shirt
+item.mcpe:plaid_tan.name=Tan na plaid shirt
+item.mcpe:police_special_top.name=Police special force jacket
+item.mcpe:police_top.name=Pang-Polisya na uniform
+item.mcpe:prisoner_top.name=Pang-billango na jacket
+item.mcpe:puffer_blue.name=Asul na puffer jacket
+item.mcpe:puffer_black.name=Itim na puffer jacket
+item.mcpe:special_top.name=Special operation uniform
+item.mcpe:striped_blue.name=Asul na striped bottom-up shirt
+item.mcpe:striped_white.name=Puti na striped bottom-up shirt
+item.mcpe:stripeds_black.name=Itim na striped longsleeve shirt
+item.mcpe:suede_brown.name=Kayumanggi na suede jacket
+item.mcpe:suit_black.name=Itim na suit
+item.mcpe:sweater_white.name=Puti na sweater
+item.mcpe:sweater_green.name=Berde na sweater
+item.mcpe:tactical_tan.name=Tan na taktikal sweater
+item.mcpe:tactical_green.name=Berde na taktikal sweater
+item.mcpe:tactical_navy.name=Navy na taktikal sweater
+item.mcpe:tactical_red.name=Pula na taktikal sweater
+item.mcpe:tactical_white.name=Puti na taktikal sweater
+item.mcpe:tracksuit_black.name=Itim na tracksuit
+item.mcpe:tracksuit_blue.name=Asul na tracksuit
+item.mcpe:tracksuit_red.name=Pula na tracksuit
+item.mcpe:tshirt_black.name=Itim na tisyort
+item.mcpe:tshirt_blue.name=Asul na tisyort
+item.mcpe:tshirt_red.name=Pula na tisyort
+item.mcpe:tshirt_green.name=Berde na tisyort
+item.mcpe:tshirt_white.name=Puti na tisyort
+item.mcpe:tshirt_yellow.name=Dilaw na tisyort
+item.mcpe:varsity_blue.name=Asul na varsity jacket
+item.mcpe:varsity_green.name=Berde na varsity jacket
+item.mcpe:varsity_red.name=Pula na varsity jacket
+item.mcpe:varsity_brown.name=Kayumanggi na varsity jacket
+item.mcpe:berezka_desert_top.name=Disyerto na berezka uniform
+item.mcpe:berezka_forest_top.name=Forest na berezka uniform
+item.mcpe:berezka_tundra_top.name=Tundra na berezka uniform
+item.mcpe:bottom_up_purple.name=Lila na bottom-up shirt
+item.mcpe:bottom_up_green.name=Berde na bottom-up shirt
+item.mcpe:bottom_up_blue.name=Asul na bottom-up shirt
+item.mcpe:bottom_up_white.name=Puti na bottom-up shirt
+item.mcpe:desert_camo_top.name=Disyerto na camo uniform
+item.mcpe:tundra_camo_top.name=Tundra na camo uniform
+item.mcpe:woodland_camo_top.name=Woodland na camo uniform
+item.mcpe:field_butan_desert_top.name=Disyeryo na field butan uniform
+item.mcpe:field_forest_top.name=Forest na field butan uniform
+item.mcpe:field_tan_top.name=Tan na field uniform
+item.mcpe:field_olive_top.name=Olibo na field uniform
+item.mcpe:firefighter_black_top.name=Itim na firefighter jacket
+item.mcpe:firefighter_tan_top.name=Tan na firefighter jacket
+item.mcpe:flannel_cyan.name=Cyan na flannel shirt
+item.mcpe:flannel_black.name=Itim na flannel shirt
+item.mcpe:hazmat_gray_top.name=Gray na hazmat suit
+item.mcpe:hiking_green.name=Berde na hiking jacket
+item.mcpe:hiking_red.name=Pula na hiking jacket
+item.mcpe:hunting_autumn_top.name=Jacket sa pangangaso ng taglagas
+item.mcpe:hunting_spring_top.name=Jacket sa pangangaso ng Tagsibol
+item.mcpe:hunting_winter_top.name=Jacket sa pangangaso ng Taglamig
+item.mcpe:lab_coat.name=Lab coat
+item.mcpe:paramedic_blue_top.name=Asul na paramedic jacket
+item.mcpe:paramedic_green_top.name=Berde na paramedic jacket
+item.mcpe:paramedic_red_top.name=Pula na paramedic jacket
+item.mcpe:puffer_purple.name=Lila na puffer jacket
+item.mcpe:puffer_yellow.name=Dilaw na puffer jacket
+item.mcpe:puffer_gray.name=Gray na puffer jacket
+item.mcpe:striped_sleeve_black.name=Itim na striped longsleeve shirt
+item.mcpe:striped_sleeve_black.name=Asul na striped longsleeve shirt
+item.mcpe:striped_tan.name=Tan na striped bottom-up shirt
+item.mcpe:suede_black.name=Itim na suede jacket
+item.mcpe:suit_blue.name=Asul na temo
+item.mcpe:suit_brown.name=Kayumanggi na temo
+item.mcpe:suit_gray.name=Gray na temo
+item.mcpe:suit_tan.name=Tan na temo
+item.mcpe:sweater_black.name=Iitm na sweater
+item.mcpe:sweater_cyan.name=Cyan na sweater
+item.mcpe:sweater_brown.name=Kayumanggi na sweater
+item.mcpe:sweater_red.name=Pula na sweater
+item.mcpe:tactical_olive.name=Olibo na taktikal sweater
+item.mcpe:tactical_gray.name=Gray na taktikal sweater
+item.mcpe:tracksuit_yellow.name=Dillaw na tracksuit
+item.mcpe:tracksuit_green.name=Berde na tracksuit
+item.mcpe:tracksuit_cyan.name=Cyan na tracksuit
+item.mcpe:tropical_black.name=Itim na tropikal shirt
+item.mcpe:tropical_red.name=Pula na tropikal shirt
+item.mcpe:tropical_blue.name=Asul na tropikal shirt
+item.mcpe:tshirt_cyan.name=Cyan na tisyort
+item.mcpe:varsity_black.name=Itim na varsity jacket
+item.mcpe:trench_coat.name=Trench coat
+
+## backpack
+item.mcpe:improvised_bag.name=Gawa-gawa na bag
+item.mcpe:school_blue_backpack.name=Asul na pang-paaralan na backpack
+item.mcpe:school_green_backpack.name=Berde na pang-paaralan na backpack
+item.mcpe:school_red_backpack.name=Pula na pang-paaralan na backpack
+item.mcpe:taloon_yellow_backpack.name=Dilaw na taloon backpack
+item.mcpe:taloon_blue_backpack.name=Asul na taloon backpack
+item.mcpe:taloon_green_backpack.name=Berde na taloon backpack
+item.mcpe:taloon_red_backpack.name=Pula na taloon backpack
+
+## loot
+tile.mcpe:civilian_loot.name=Ordinaryong Kahon (Civilian lootbox)
+tile.mcpe:construction_loot.name=Lalagyan ng mga tools (Construction lootbox)
+tile.mcpe:firefighter_loot.name=Kahon para sa gamit ng bombero (Firefighter lootbox)
+tile.mcpe:food_loot.name=Kahon para sa mga pagkain (Food lootbox)
+tile.mcpe:medical_loot.name=Kahon para sa mga medikal tools (Medical lootbox)
+tile.mcpe:artic_loot.name=Puti na kaha (Military artic lootbox)
+tile.mcpe:desert_loot.name=Tan na kaha (Military desert lootbox)
+tile.mcpe:woodland_loot.name=Berde na kaha (Military woodland lootbox)
+tile.mcpe:medieval_loot.name=Antigong kahon (Medival lootbox)
+tile.mcpe:police_loot.name=Kaha para sa baril (Police lootbox) 
+tile.mcpe:rare_loot.name=Kahon para sa mga labis na gamit (Rare lootbox)
+tile.mcpe:supply_block.name=Kahon puno ng good-supply
+
+## misc
+tile.mcpe:barbed_wires.name=Mga wire na may tusok tusok
+tile.mcpe:landmine.name=Landmine
+tile.mcpe:nail_trap.name=Gawa-gawa na nails trap
+tile.mcpe:fumo.name=NZ plushie on yo head
+tile.mcpe:radio.name=Radyo
+tile.mcpe:radio_ham.name=Ham radyo
+tile.mcpe:wheat.name=Trigo
+tile.mcpe:wood_stake.name=kahoy'ng istaka na pang-harang
+tile.mcpe:spawner_military.name=Spawner Sundalo
+tile.mcpe:spawner_civilian.name=Spawner Tao
+tile.mcpe:spawner_scavenger.name=Spawner Manlalakal
+tile.mcpe:spawner_marauder.name=Spawner Bandito
+tile.mcpe:server_button.name=Button para sa Server
+tile.mcpe:server_button_delay.name=Server button delay
+tile.mcpe:bear_trap_close.name=Naka-sirado na bitag para sa uso
+tile.mcpe:bear_trap_open.name=Naka-bukas na bitag para sa uso
+
+## barrel
+tile.mcpe:barrel_blue.name=Asul na barrel
+tile.mcpe:barrel_explosive.name=Pumuputok na barrel
+tile.mcpe:barrel_green.name=Berde na barrel
+tile.mcpe:barrel_red.name=Pula na barrel
+tile.mcpe:barrel_yellow.name=Dilaw na barrel
+
+## display_rack
+tile.mcpe:display_rack_middle_bottom.name=Display rack bottom
+tile.mcpe:display_rack_middle_top.name=Display rack top
+tile.mcpe:display_rack_side_bottom.name=Display rack side bottom
+tile.mcpe:display_rack_side_top.name=Display rack side top
+
+## flag
+tile.mcpe:flag_fvla.name=Fvla flag
+tile.mcpe:flag_nekoi.name=Neko flag
+tile.mcpe:flag_vostrovia.name=Vostrovia flag
+
+## folding_chair
+tile.mcpe:folding_chair_blue.name=Asul na upuan (folding)
+tile.mcpe:folding_chair_brown.name=Kayumanggi na upuan (folding)
+tile.mcpe:folding_chair_green.name=Berde na upuan (folding)
+tile.mcpe:folding_chair_red.name=Pula na upuan (folding)
+
+## hesco
+tile.mcpe:hesco_olive.name=Olibo na hesco bastion
+tile.mcpe:hesco_tan.name=Tan na hesco bastion
+tile.mcpe:hesco_white.name=Puti na hesco bastion
+
+## light
+tile.mcpe:ceiling_light_broken.name=Sira na ceiling light
+tile.mcpe:ceiling_light.name=Ceiling light
+tile.mcpe:exit_sign.name=Exit sign
+tile.mcpe:worklight.name=Worklight
+
+## monobloc
+tile.mcpe:monobloc_black.name=Itim na upuan (monobloc)
+tile.mcpe:monobloc_blue.name=Asul na upuan (monobloc)
+tile.mcpe:monobloc_green.name=Berde na upuan (monobloc)
+tile.mcpe:monobloc_red.name=Pula na upuan (monobloc)
+tile.mcpe:monobloc_tan.name=Tan na upuan (monobloc)
+tile.mcpe:monobloc_white.name=Puti upuan (monobloc)
+tile.mcpe:monobloc_yellow.name=Dilaw upuan (monobloc)
+
+## office_chair
+tile.mcpe:office_chair_black.name=Itim na upuan (pang-opisina)
+tile.mcpe:office_chair_blue.name=Asul na upuan (pang-opisina)
+tile.mcpe:office_chair_brown.name=Kayumanggi na upuan (pang-opisina)
+tile.mcpe:office_chair_green.name=Berde na upuan (pang-opisina)
+tile.mcpe:office_chair_red.name=Pula na upuan (pang-opisina)
+tile.mcpe:office_chair_white.name=Puti na upuan (pang-opisina)
+
+## plastic_table
+tile.mcpe:plastic_black.name=Iitm na lamesa (plastik)
+tile.mcpe:plastic_blue.name=Asul na lamesa (plastik)
+tile.mcpe:plastic_green.name=Berde na lamesa (plastik)
+tile.mcpe:plastic_red.name=Pula na lamesa (plastik)
+tile.mcpe:plastic_tan.name=Tan na lamesa (plastik)
+tile.mcpe:plastic_white.name=Puti na lamesa (plastik)
+tile.mcpe:plastic_yellow.name=Dilaw na lamesa (plastik)
+
+## road_barrier
+tile.mcpe:barrier_wall.name=Wall barrier
+tile.mcpe:caution_barrier_wall.name=Caution wall barrier
+tile.mcpe:caution_road_barrier.name=Caution road barrier
+tile.mcpe:road_barrier.name=Road barrier
+
+## sandbag
+tile.mcpe:sandbag_corner_olive.name=Olibo na sandbag corner
+tile.mcpe:sandbag_corner_tan.name=Tan na sandbag corner
+tile.mcpe:sandbag_corner_white.name=Puti na sandbag corner
+tile.mcpe:sandbag_olive.name=Olibo na sandbag
+tile.mcpe:sandbag_tan.name=Tan na sandbag
+tile.mcpe:sandbag_white.name=Puti na sandbag
+
+## sign
+tile.mcpe:traffic_becareful.name="Mag ingat" na traffic sign
+tile.mcpe:traffic_intersection.name="Interseksyon" na traffic sign
+tile.mcpe:traffic_no_entry.name="Hindi pwede pasukan" na traffic sign
+tile.mcpe:traffic_no_parking.name="Hindi pwedeng paradahan" na traffic sign
+tile.mcpe:traffic_parking.name="Paradahan" na traffic sign
+tile.mcpe:traffic_question.name="Question mark" na traffic sign
+tile.mcpe:traffic_section_left.name="Kaliwa na seksyon" na traffic sign
+tile.mcpe:traffic_section_right.name="Kanan na seksyon" na traffic sign
+tile.mcpe:traffic_stop.name="Huminto" na traffic sign
+tile.mcpe:traffic_turn_left.name="Lumiko sa kaliwa" na traffic sign
+tile.mcpe:traffic_turn_right.name=Lumiko sa Kanan" na traffic sign
+tile.mcpe:traffic_rod.name=Traffic rod
+
+## street_bench
+tile.mcpe:street_bench_blue.name=Asul na street bench
+tile.mcpe:street_bench_green.name=Berde na street bench
+tile.mcpe:street_bench_red.name=Pula na street bench
+tile.mcpe:street_bench_white.name=Puti na street bench
+
+## table_cloth
+tile.mcpe:table_cloth_black.name=Lamesa na may itim na tela
+tile.mcpe:table_cloth_blue.name=Lamesa na may asul na tela
+tile.mcpe:table_cloth_green.name=Lamesa na may berde na tela
+tile.mcpe:table_cloth_red.name=Lamesa na may pula na tela
+
+## variant
+tile.mcpe:graffiti.name=Graffitiko
+tile.mcpe:metal_rack.name=Metal rack
+tile.mcpe:papers.name=Mga papel
+
+## water_pump
+tile.mcpe:water_pump.name=Water pump
+tile.mcpe:water_pump_emp.name=Water pump empty
+
+## more furniture
+tile.mcpe:crowd_fence.name=Crowd fence
+tile.mcpe:construction_barrier.name=Construction barrier
+tile.mcpe:microwave.name=Microwave
+tile.mcpe:monitor.name=Monitor
+tile.mcpe:monitor_keyboard.name=Monitor namay keyboard
+tile.mcpe:reloading_table.name=Reloading table
+tile.mcpe:sink.name=Lababo
+tile.mcpe:toilet.name=Bowul
+tile.mcpe:traffic_cone.name=Traffic cone
+tile.mcpe:trash_bin.name=Basurahan
+tile.mcpe:trash_can.name=Basurahan (lata)
+tile.mcpe:tv.name=TV
+tile.mcpe:tv_old.name=Antigo'ng TV
+tile.mcpe:wood_barrier.name=Kahoy na pangharang
+tile.mcpe:wood_chair.name=Kahoy na upuan
+tile.mcpe:wood_table.name=Kahoy na lamesa
+
+## more block
+tile.mcpe:bath_tiles.name=Bath tiles
+tile.mcpe:brick_big.name=Big brick
+tile.mcpe:caution_block.name=Caution block
+tile.mcpe:corrugated_metal.name=Corrugated metal block
+tile.mcpe:corrugated_metal_rusty.name=Rusted corrugated metal block
+tile.mcpe:crate.name=Malaking kahon
+tile.mcpe:farm_block.name=Farm block
+tile.mcpe:filing_cabinet.name=Filling cabinet
+tile.mcpe:hazard_block.name=Hazard block
+tile.mcpe:military_wall.name=Military wall
+tile.mcpe:smooth_stone_brick.name=Smooth stone brick
+tile.mcpe:tiles_bnw.name=Itim na checker tiles
+tile.mcpe:tiles_white.name=Puti na tiles
+tile.mcpe:trace_plate.name=Trace plate
+tile.mcpe:washing_machine.name=Washing machine

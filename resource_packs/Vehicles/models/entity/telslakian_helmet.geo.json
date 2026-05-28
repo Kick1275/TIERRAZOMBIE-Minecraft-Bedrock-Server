@@ -1,0 +1,184 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.telslakian_helmet",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [
+					0,
+					1.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [
+						0,
+						12,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								24,
+								-4
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"inflate": 0.25,
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-4,
+								30.2,
+								-4
+							],
+							"size": [
+								8,
+								3,
+								8
+							],
+							"inflate": 0.8,
+							"uv": [
+								0,
+								16
+							]
+						},
+						{
+							"origin": [
+								-4,
+								27,
+								0
+							],
+							"size": [
+								8,
+								2,
+								4
+							],
+							"inflate": 0.65,
+							"uv": [
+								0,
+								27
+							]
+						},
+						{
+							"origin": [
+								-5.5,
+								26.4,
+								1.5
+							],
+							"size": [
+								11,
+								1,
+								4
+							],
+							"uv": [
+								0,
+								59
+							]
+						},
+						{
+							"origin": [
+								-5.5,
+								26.4,
+								-1.5
+							],
+							"size": [
+								11,
+								4,
+								3
+							],
+							"uv": [
+								24,
+								0
+							]
+						},
+						{
+							"origin": [
+								-4.5,
+								29.6,
+								-6.5
+							],
+							"size": [
+								9,
+								1,
+								2
+							],
+							"uv": [
+								0,
+								43
+							]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [
+						5,
+						22,
+						0
+					]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [
+						6,
+						15,
+						1
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					]
+				}
+			]
+		}
+	]
+}

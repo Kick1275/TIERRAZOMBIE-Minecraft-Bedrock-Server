@@ -1,0 +1,456 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:m24sniper_bullet",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:wind_charge_projectile"
+		},
+		"components": {
+			"minecraft:tick_world": {},
+			"minecraft:collision_box": {
+				"width": 0.075,
+				"height": 0.0625
+			},
+			"minecraft:type_family": {
+				"family": [
+					"af_glock17_bullet_entity",
+					"af_glock17_bullet",
+					"af_bullet",
+					"af_dangerous_projectile",
+					"bullet",
+					"no_mob",
+					"inanimate"
+				]
+			},
+			"minecraft:dimension_bound": {},
+			"minecraft:persistent": {},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"minecraft:black_stained_glass",
+					"minecraft:black_stained_glass_pane",
+					"minecraft:blue_stained_glass",
+					"minecraft:blue_stained_glass_pane",
+					"minecraft:brown_stained_glass",
+					"minecraft:brown_stained_glass_pane",
+					"minecraft:cyan_stained_glass",
+					"minecraft:cyan_stained_glass_pane",
+					"minecraft:frosted_ice",
+					"minecraft:glass",
+					"minecraft:glass_pane",
+					"minecraft:gray_stained_glass",
+					"minecraft:gray_stained_glass_pane",
+					"minecraft:green_stained_glass",
+					"minecraft:green_stained_glass_pane",
+					"minecraft:ice",
+					"minecraft:iron_bars",
+					"minecraft:light_blue_stained_glass",
+					"minecraft:light_blue_stained_glass_pane",
+					"minecraft:light_gray_stained_glass",
+					"minecraft:light_gray_stained_glass_pane",
+					"minecraft:lime_stained_glass",
+					"minecraft:lime_stained_glass_pane",
+					"minecraft:magenta_stained_glass",
+					"minecraft:magenta_stained_glass_pane",
+					"minecraft:orange_stained_glass",
+					"minecraft:orange_stained_glass_pane",
+					"minecraft:pink_stained_glass",
+					"minecraft:pink_stained_glass_pane",
+					"minecraft:purple_stained_glass",
+					"minecraft:purple_stained_glass_pane",
+					"minecraft:red_stained_glass",
+					"minecraft:red_stained_glass_pane",
+					"minecraft:tinted_glass",
+					"minecraft:white_stained_glass",
+					"minecraft:white_stained_glass_pane",
+					"minecraft:yellow_stained_glass",
+					"minecraft:yellow_stained_glass_pane"
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": [
+					2,
+					2
+				],
+				"time_down_event": {
+					"event": "af:despawn"
+				}
+			},
+			"minecraft:on_death": {
+				"event": "af:despawn",
+				"target": "self"
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:ambient_sound_interval": {
+				"range": 0,
+				"value": 0,
+				"event_name": "ambient"
+			}
+		},
+		"component_groups": {
+			"af:no_sneak_and_no_crawl": {
+				"minecraft:projectile": {
+					"onHit": {
+						"impact_damage": {
+							"damage": {
+								"range_min": 5,
+								"range_max": 20
+							},
+							"knockback": true,
+							"semi_random_diff_damage": false,
+							"destroy_on_hit": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:projectile_hit_something",
+								"target": "self"
+							}
+						}
+					},
+					"power": 3,
+					"liquid_inertia": 2.5,
+					"gravity": 0,
+					"offset": [
+						0,
+						-0.05,
+						0
+					],
+					"angle_offset": "query.cardinal_facing",
+					"catch_fire": false,
+					"uncertainty_base": 8,
+					"uncertainty_multiplier": 4
+				}
+			},
+			"af:sneaking": {
+				"minecraft:projectile": {
+					"onHit": {
+						"impact_damage": {
+							"damage": {
+								"range_min": 20,
+								"range_max": 25
+							},
+							"knockback": true,
+							"semi_random_diff_damage": false,
+							"destroy_on_hit": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:projectile_hit_something",
+								"target": "self"
+							}
+						}
+					},
+					"power": 5,
+					"liquid_inertia": 2.5,
+					"gravity": 0,
+					"offset": [
+						0,
+						-0.385,
+						0
+					],
+					"angle_offset": "query.cardinal_facing",
+					"catch_fire": false,
+					"uncertainty_base": 2,
+					"uncertainty_multiplier": 8
+				}
+			},
+			"af:crawling": {
+				"minecraft:projectile": {
+					"onHit": {
+						"impact_damage": {
+							"damage": {
+								"range_min": 20,
+								"range_max": 25
+							},
+							"knockback": true,
+							"semi_random_diff_damage": false,
+							"destroy_on_hit": false
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:projectile_hit_something",
+								"target": "self"
+							}
+						}
+					},
+					"power": 5,
+					"liquid_inertia": 2.5,
+					"gravity": 0,
+					"offset": [
+						0,
+						-1.25,
+						0
+					],
+					"angle_offset": "query.cardinal_facing",
+					"catch_fire": false,
+					"uncertainty_base": 2,
+					"uncertainty_multiplier": 8
+				}
+			},
+			"af:firing": {
+				"minecraft:is_charged": {}
+			},
+			"af:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_component",
+									"subject": "self",
+									"operator": "!=",
+									"value": "minecraft:projectile"
+								}
+							]
+						},
+						"sequence": [
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"operator": "==",
+											"domain": "hand",
+											"value": "af:m24sniper"
+										}
+									]
+								},
+								"sequence": [
+									{
+										"add": {
+											"component_groups": [
+												"af:firing"
+											]
+										}
+									},
+									{
+										"queue_command": {
+											"command": [
+												"tag @e[family=phonophobic_mob,r=8,c=32] add in_sound_stunning_mode"
+											]
+										}
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"any_of": [
+														{
+															"all_of": [
+																{
+																	"test": "has_tag",
+																	"subject": "other",
+																	"operator": "==",
+																	"value": "is_player"
+																},
+																{
+																	"test": "has_tag",
+																	"subject": "other",
+																	"operator": "!=",
+																	"value": "player_sneaking"
+																},
+																{
+																	"test": "has_tag",
+																	"subject": "other",
+																	"operator": "!=",
+																	"value": "player_crawling"
+																}
+															]
+														},
+														{
+															"all_of": [
+																{
+																	"test": "has_tag",
+																	"subject": "other",
+																	"operator": "!=",
+																	"value": "is_player"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										"add": {
+											"component_groups": [
+												"af:no_sneak_and_no_crawl"
+											]
+										}
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"operator": "==",
+													"value": "is_player"
+												},
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"operator": "==",
+													"value": "player_sneaking"
+												},
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"operator": "!=",
+													"value": "player_crawling"
+												}
+											]
+										},
+										"add": {
+											"component_groups": [
+												"af:sneaking"
+											]
+										}
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"operator": "==",
+													"value": "is_player"
+												},
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"operator": "!=",
+													"value": "player_sneaking"
+												},
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"operator": "==",
+													"value": "player_crawling"
+												}
+											]
+										},
+										"add": {
+											"component_groups": [
+												"af:crawling"
+											]
+										}
+									}
+								]
+							},
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"operator": "!=",
+											"domain": "hand",
+											"value": "af:m24sniper"
+										}
+									]
+								},
+								"add": {
+									"component_groups": [
+										"af:despawn"
+									]
+								}
+							}
+						]
+					},
+					{
+						"queue_command": {
+							"command": [
+								"camerashake add @p 0.1 0.1 rotational"
+							]
+						}
+					}
+				]
+			},
+			"af:projectile_hit_something": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_component",
+									"subject": "self",
+									"operator": "!=",
+									"value": "minecraft:projectile"
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"af:despawn"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_component",
+									"subject": "self",
+									"operator": "==",
+									"value": "minecraft:projectile"
+								}
+							]
+						},
+						"randomize": [
+							{
+								"weight": 80
+							},
+							{
+								"weight": 20,
+								"trigger": "af:despawn"
+							}
+						]
+					}
+				],
+				"queue_command": {
+					"command": [
+						"playsound bullet.hit @a ~ ~ ~ 50 1",
+						"camerashake add @p[r=8] 0.1 0.05 positional",
+						"particle af:vehicle_dust ~ ~1 ~"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"af:despawn"
+					]
+				}
+			}
+		}
+	}
+}

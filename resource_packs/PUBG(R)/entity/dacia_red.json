@@ -1,0 +1,50 @@
+//bridge-file-version: #9
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:dacia_red",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/dacia_red"
+			},
+			"geometry": {
+				"default": "geometry.dacia"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"turn",
+					"terrain",
+					"smoke",
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.dacia.drive",
+				"turn": "animation.dacia.turn",
+				"down": "animation.dacia.down",
+				"up": "animation.dacia.up",
+				"terrain": "controller.animation.dacia.terrain",
+				"smoke": "controller.animation.dacia.driving",
+				"engine_smoke": "controller.animation.dacia.fatal"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"spawn_egg": {
+				"texture": "spawn_dacia_red",
+				"texture_index": 0
+			},
+			"particle_effects": {
+				"smoke": "pubg:smoke",
+				"engine": "pubg:engine_smoke",
+				"flame": "pubg:engine_fire"
+			}
+		}
+	}
+}

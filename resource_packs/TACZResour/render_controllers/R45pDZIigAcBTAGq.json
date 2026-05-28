@@ -1,0 +1,150 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.m107": {
+      "geometry": "geometry.m107",
+      "materials": [
+        {
+          "*": "material.invisible"
+        },
+        {
+          "elcan_reticle": "material.guns"
+        },
+        {
+          "acog_reticle": "material.guns"
+        },
+        {
+          "standard_8_reticle": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "mag_standard": "q.property('krep:magazine') == 0"
+        },
+        {
+          "mag_extended": "q.property('krep:magazine') >= 1"
+        },
+        {
+          "scope1": "q.property('krep:m107scope')!='nothing' && q.property('krep:m107scope')!='coyote'"
+        },
+        {
+          "scope2": "q.property('krep:m107scope')!='nothing' && q.property('krep:m107scope')!='coyote'"
+        },
+        {
+          "scope3": "q.property('krep:m107scope')!='nothing' && q.property('krep:m107scope')!='coyote'"
+        },
+        {
+          "foresightfold": "q.property('krep:m107scope')!='nothing'"
+        },
+        {
+          "foresight":  "q.property('krep:m107scope')=='nothing'"
+        },
+        {
+          "rearsightfold": "q.property('krep:m107scope')!='nothing'"
+        },
+        {
+          "rearsight":  "q.property('krep:m107scope')=='nothing'"
+        },
+        {
+          "standard_8": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_lens": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_reticle": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_base": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_part": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_mount": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_hide_when_ads": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "standard_8_ring": "q.property('krep:m107scope')=='standard_8'"
+        },
+        {
+          "acog": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "acog_lens": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "acog_lens2": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "acog_back": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "acog_reticle": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "acog_scope": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "acog_other": "q.property('krep:m107scope')=='acog'"
+        },
+        {
+          "elcan": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_lens": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_lens2": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_reticle": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_ring": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_ring2": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_body": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_knob": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_part2": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "elcan_part": "q.property('krep:m107scope')=='elcan'"
+        },
+        {
+          "coyote": "q.property('krep:m107scope')=='coyote'"
+        },
+        {
+          "coyote_reticle": "q.property('krep:m107scope')=='coyote'"
+        }
+      ],
+      "textures": [
+        "texture.m107"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

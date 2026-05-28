@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:grenade_smoke"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"G": {
+				"item": "minecraft:white_dye"
+			},
+			"P": {
+				"item": "minecraft:planks"
+			}
+		},
+		"pattern": [
+			" RP",
+			"RGR",
+			" R "
+		],
+		"result": {
+			"item": "af:grenade_smoke",
+			"count": 1
+		}
+	}
+}

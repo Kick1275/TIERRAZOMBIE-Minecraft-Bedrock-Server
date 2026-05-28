@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:radio_tower"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "minecraft:iron_ingot"
+			},
+			"J": {
+				"item": "minecraft:gold_nugget"
+			},
+			"A": {
+				"item": "af:aluminium_ingot"
+			}
+		},
+		"pattern": [
+			"JAJ",
+			" A ",
+			"NNN"
+		],
+		"result": {
+			"item": "af:radio_tower_spawn_egg",
+			"count": 1
+		}
+	}
+}

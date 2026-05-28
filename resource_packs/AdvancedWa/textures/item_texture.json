@@ -1,0 +1,7 @@
+{
+  "resource_pack_name": "Simple Waypoints",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "waypoint_item": { "textures": "textures/advanced_waypoints/items/waypoint_item" }
+  }
+}

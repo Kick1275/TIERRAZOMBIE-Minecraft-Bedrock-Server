@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:spawner",
+      "materials": {
+        "default": "zombie"
+      },
+      "textures": {
+        "default": "textures/blocks/empty"
+      },
+      "geometry": {
+        "default": "geometry.muzzle_block"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 0
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

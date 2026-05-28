@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.fal.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.8,
+      "timeline": {
+        "3.7": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:fal 1 0",
+          "/scoreboard players set @s[scores={fal=21..}] fal 20",
+          "/function fal"
+        ],
+        "3.6": [
+          "/function falreload",
+          "/event entity @s krep:fal_reload"
+        ]
+      }
+    }
+  }
+}

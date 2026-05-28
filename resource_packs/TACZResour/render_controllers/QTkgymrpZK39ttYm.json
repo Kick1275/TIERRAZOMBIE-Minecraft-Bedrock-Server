@@ -1,0 +1,45 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.db": {
+      "geometry": "geometry.db",
+      "materials": [
+        {
+          "*": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "stock_0": "q.property('krep:stock') == 0"
+        },
+        {
+          "stock_1": "q.property('krep:stock') == 1"
+        },
+        {
+          "muzzle_1": "q.property('krep:muzzle') == 1"
+        },
+        {
+          "muzzle_0": "q.property('krep:muzzle') == 0"
+        }
+      ],
+      "textures": [
+        "texture.db"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.turret.look": {
+			"loop": true,
+			"bones": {
+				"camera": {
+					"rotation": [
+						0,
+						"q.target_y_rotation",
+						0
+					]
+				},
+				"head": {
+					"rotation": [
+						"q.target_x_rotation",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.turret.target": {
+			"loop": true,
+			"animation_length": 0.1667,
+			"bones": {
+				"barrel": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							1
+						],
+						"0.1667": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.turret.camera": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"camera": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							360,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

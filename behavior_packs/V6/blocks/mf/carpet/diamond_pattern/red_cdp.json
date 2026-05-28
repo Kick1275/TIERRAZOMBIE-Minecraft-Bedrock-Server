@@ -1,0 +1,51 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "medieval:red_carpet_diamond_pattern",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.woolCarpet"
+			},
+			"states": {
+				"medieval:n": [0,1],
+				"medieval:s": [0,1],
+				"medieval:w": [0,1],
+				"medieval:e": [0,1]
+			}
+		},
+		"components": {
+			"tag:medieval_furniture": {},
+			"minecraft:geometry": {
+				"identifier": "geometry.m.carpet_0",
+				"bone_visibility": {
+					"carpet0": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 0",
+					"carpet1": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 0",
+					"carpet2": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 0",
+					"carpet3": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 0",
+					"carpet4": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 1",
+					"carpet5": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 0",
+					"carpet6": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 1",
+					"carpet7": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 1",
+					"carpet8": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 0",
+					"carpet9": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 1",
+					"carpet10": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 0",
+					"carpet11": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 0 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 1",
+					"carpet12": "q.block_state('medieval:n') == 0 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 1",
+					"carpet13": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 0",
+					"carpet14": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 0 && q.block_state('medieval:e') == 1",
+					"carpet15": "q.block_state('medieval:n') == 1 && q.block_state('medieval:s') == 1 && q.block_state('medieval:w') == 1 && q.block_state('medieval:e') == 1"
+				}
+			},
+			"minecraft:material_instances": {"*": {"texture": "m.red_carpet_diamond_pattern","render_method": "opaque"}},
+			"tag:carpet_diamond": {},
+			"minecraft:collision_box": {"origin": [-8,0.0,-8],"size": [16,1,16]},
+			"minecraft:selection_box": {"origin": [-8,0.0,-8],"size": [16,1,16]},
+			"minecraft:light_dampening": 0.0,
+			"minecraft:destructible_by_explosion": {"explosion_resistance": 1.0},
+			"minecraft:destructible_by_mining": {"seconds_to_destroy": 0.1},
+			"minecraft:custom_components": ["mf:carpet_connection"],
+			"minecraft:map_color": "#e61010"
+		}
+	}
+}

@@ -1,0 +1,120 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m1014.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 6.5,
+      "timeline": {
+        "0.2": [
+          "/function m1014quantity1"
+        ],
+        "1.2": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "1.3": [
+          "/function m1014",
+          "/function m1014quantity1"
+        ],
+        "1.83": [
+          "/function m1014quantity1"
+        ],
+        "1.93": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "2.03": [
+          "/function m1014",
+          "/function m1014quantity1",
+          "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0"
+        ],
+        "2.57": [
+          "/function m1014quantity1"
+        ],
+        "2.67": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "2.76": [
+          "/function m1014",
+          "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0",
+          "/function m1014quantity1"
+        ],
+        "3.30": [
+          "/function m1014quantity1"
+        ],
+        "3.40": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "3.50": [
+          "/function m1014",
+          "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0",
+          "/function m1014quantity1"
+        ],
+        "4.03": [
+          "/function m1014quantity1"
+        ],
+        "4.13": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "4.23": [
+          "/function m1014",
+          "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0",
+          "/function m1014quantity1"
+        ],
+        "4.76": [
+          "/function m1014quantity1"
+        ],
+        "4.87": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "4.97": [
+          "/function m1014",
+          "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0",
+          "/function m1014quantity1"
+        ],
+        "5.50": [
+          "/function m1014quantity1"
+        ],
+        "5.60": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "5.70": [
+          "/function m1014",
+          "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0",
+          "/function m1014quantity1"
+        ],
+        "6.23": [
+          "/function m1014quantity1"
+        ],
+        "6.33": [
+          "/clear @s[m=!c,scores={m1014=6..},hasitem=[{item=krep:gauge12,quantity=1..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=1},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 1",
+          "/clear @s[m=!c,scores={m1014=..5},hasitem=[{item=krep:gauge12,quantity=2..},{item=krep:ammoboxc,quantity=0}]] krep:gauge12 0 2",
+          "/event entity @s krep:m1014_reload"
+        ],
+        "6.43": [
+          "/function m1014"
+        ]
+      }
+    }
+  }
+}

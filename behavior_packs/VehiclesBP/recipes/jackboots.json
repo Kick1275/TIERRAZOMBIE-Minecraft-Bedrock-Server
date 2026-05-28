@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:jackboots"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:leather"
+			},
+			"B": {
+				"item": "minecraft:black_dye"
+			}
+		},
+		"pattern": [
+			"LBL",
+			"LBL",
+			"LBL"
+		],
+		"result": {
+			"item": "af:jackboots",
+			"count": 1
+		}
+	}
+}

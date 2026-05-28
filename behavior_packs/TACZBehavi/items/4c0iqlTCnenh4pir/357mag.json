@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "krep:mag357",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "357mag"
+      },
+      "minecraft:display_name": {
+        "value": ".357 Magnum"
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:creative_category": {
+        "parent": "equipment"
+      }
+    }
+  }
+}

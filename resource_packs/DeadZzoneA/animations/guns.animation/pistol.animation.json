@@ -1,0 +1,314 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pistol.draw": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4167,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.is_first_person ? 180 : 0", 0],
+					"position": [0, "v.is_first_person ? -1 : 0", "v.is_first_person ? 2 : 0"]
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, 22.5, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-73.16727, 32.64875, 34.68422],
+						"0.375": [-79.64753, 24.71888, 38.29191]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [-1, -1, -3],
+						"0.375": [-2, -2, -1]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-95.36144, -23.27905, -0.4133],
+						"0.25": [-95.36144, -23.27905, -0.4133],
+						"0.4167": [-98.04919, -22.35885, 10.03377]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [0, -1, -1],
+						"0.2083": [0, -1, -1],
+						"0.375": [0.56, -0.68, -0.7]
+					}
+				},
+				"guns": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-95.36144, -23.27905, -0.4133],
+						"0.25": [-95.36144, -23.27905, -0.4133],
+						"0.4167": [-93.04919, -22.35885, 10.03377]
+					},
+					"position": {
+						"0.0": [0, -2, 0],
+						"0.1667": [0, -1, -2],
+						"0.2083": [1, -1, -2],
+						"0.4167": [1.56, 0.32, -1.7]
+					},
+					"scale": [1, 0.8, 0.8]
+				}
+			},
+			"sound_effects": {
+				"0.0417": {
+					"effect": "draw.sound"
+				}
+			}
+		},
+		"animation.pistol_emp.draw": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4167,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.is_first_person ? 180 : 0", 0],
+					"position": [0, "v.is_first_person ? -1 : 0", "v.is_first_person ? 2 : 0"]
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, 22.5, 0]
+					},
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-73.16727, 32.64875, 34.68422],
+						"0.375": [-79.64753, 24.71888, 38.29191]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [-1, -1, -3],
+						"0.375": [-2, -2, -1]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-95.36144, -23.27905, -0.4133],
+						"0.25": [-95.36144, -23.27905, -0.4133],
+						"0.4167": [-98.04919, -22.35885, 10.03377]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [0, -1, -1],
+						"0.2083": [0, -1, -1],
+						"0.375": [0.56, -0.68, -0.7]
+					}
+				},
+				"guns": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.2083": [-95.36144, -23.27905, -0.4133],
+						"0.25": [-95.36144, -23.27905, -0.4133],
+						"0.4167": [-93.04919, -22.35885, 10.03377]
+					},
+					"position": {
+						"0.0": [0, -2, 0],
+						"0.1667": [0, -1, -2],
+						"0.2083": [1, -1, -2],
+						"0.4167": [1.56, 0.32, -1.7]
+					},
+					"scale": [1, 0.8, 0.8]
+				},
+				"kokang": {
+					"position": [0, -1.125, 1.175]
+				}
+			},
+			"sound_effects": {
+				"0.0417": {
+					"effect": "draw.sound"
+				}
+			}
+		},
+		"animation.pistol.hold": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.is_first_person ? 180 : 0", 0],
+					"position": [0, "v.is_first_person ? -1 : 0", "v.is_first_person ? 2 : 0"]
+				},
+				"waist": {
+					"rotation": ["q.target_x_rotation * 0.4", "22.5 + q.target_y_rotation * 0.2", 0]
+				},
+				"leftArm": {
+					"rotation": [-79.64753, 24.71888, 38.29191],
+					"position": [-2, -2, -1]
+				},
+				"rightArm": {
+					"rotation": [-98.04919, -22.35885, 10.03377],
+					"position": [0.56, -0.68, -0.7]
+				},
+				"guns": {
+					"rotation": [-93.04919, -22.35885, 10.03377],
+					"position": [1.56, 0.32, -1.7],
+					"scale": [1, 0.8, 0.8]
+				}
+			}
+		},
+		"animation.pistol_emp.hold": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.is_first_person ? 180 : 0", 0],
+					"position": [0, "v.is_first_person ? -1 : 0", "v.is_first_person ? 2 : 0"]
+				},
+				"waist": {
+					"rotation": [0, 22.5, 0],
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-79.64753, 24.71888, 38.29191],
+					"position": [-2, -2, -1]
+				},
+				"rightArm": {
+					"rotation": [-98.04919, -22.35885, 10.03377],
+					"position": [0.56, -0.68, -0.7]
+				},
+				"guns": {
+					"rotation": [-93.04919, -22.35885, 10.03377],
+					"position": [1.56, 0.32, -1.7],
+					"scale": [1, 0.8, 0.8]
+				},
+				"kokang": {
+					"position": [0, -1.125, 1.175]
+				}
+			}
+		},
+		"animation.pistol.aim": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"waist": {
+					"rotation": [2.5, 25, 0],
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-83.10808, 22.48889, 29.15966],
+					"position": [-2, -2, 0]
+				},
+				"rightArm": {
+					"rotation": [-95.45659, -19.87037, 9.77679],
+					"position": [0.56, -0.68, 0.3]
+				},
+				"guns": {
+					"rotation": [-95.45659, -19.87037, 9.77679],
+					"position": [1.56, -0.68, -0.7],
+					"scale": [1, 0.8, 0.8]
+				},
+				"head": {
+					"rotation": [0, 0, -15]
+				}
+			}
+		},
+		"animation.pistol_emp.aim": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"waist": {
+					"rotation": [2.5, 25, 0],
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-83.10808, 22.48889, 29.15966],
+					"position": [-2, -2, 0]
+				},
+				"rightArm": {
+					"rotation": [-95.45659, -19.87037, 9.77679],
+					"position": [0.56, -0.68, 0.3]
+				},
+				"guns": {
+					"rotation": [-95.45659, -19.87037, 9.77679],
+					"position": [1.56, -0.68, -0.7],
+					"scale": [1, 0.8, 0.8]
+				},
+				"head": {
+					"rotation": [0, 0, -15]
+				},
+				"kokang": {
+					"position": [0, -1.125, 1.175]
+				}
+			}
+		},
+		"animation.pistol.sprint": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.is_first_person ? 180 : 0", 0],
+					"position": [0, "v.is_first_person ? -1 : 0", "v.is_first_person ? 2 : 0"]
+				},
+				"waist": {
+					"rotation": [10, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-122.50329, 44.72537, -11.1293],
+					"position": [-2, -2, -3]
+				},
+				"rightArm": {
+					"rotation": [-123.60693, -12.45167, 5.12076],
+					"position": [0, -3, 0]
+				},
+				"guns": {
+					"rotation": [-123.60693, -12.45167, 5.12076],
+					"position": [0.56, -3.68, 0.3],
+					"scale": 1
+				}
+			}
+		},
+		"animation.pistol_emp.sprint": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.is_first_person ? 180 : 0", 0],
+					"position": [0, "v.is_first_person ? -1 : 0", "v.is_first_person ? 2 : 0"]
+				},
+				"waist": {
+					"rotation": [10, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-122.50329, 44.72537, -11.1293],
+					"position": [-2, -2, -3]
+				},
+				"rightArm": {
+					"rotation": [-123.60693, -12.45167, 5.12076],
+					"position": [0, -3, 0]
+				},
+				"guns": {
+					"rotation": [-123.60693, -12.45167, 5.12076],
+					"position": [0.56, -3.68, 0.3],
+					"scale": 1
+				},
+				"kokang": {
+					"position": [0, -1.125, 1.175]
+				}
+			}
+		},
+		"animation.pistol.waist": {
+			"loop": true,
+			"bones": {
+				"guns": {
+					"rotation": [-7.47365, 1.98315, 1.52251],
+					"position": [1, -3, 2],
+					"scale": [1, 0.8, 0.8]
+				}
+			}
+		}
+	}
+}

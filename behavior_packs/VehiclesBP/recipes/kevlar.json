@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:kevlar"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"pattern": [
+			"RNR",
+			"NRN",
+			"RNR"
+		],
+		"result": {
+			"item": "af:kevlar",
+			"count": 1
+		}
+	}
+}

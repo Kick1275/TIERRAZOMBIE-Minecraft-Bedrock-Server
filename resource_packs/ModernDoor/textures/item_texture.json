@@ -1,0 +1,25 @@
+{
+	"texture_data": {
+		"screwdriver": {
+			"textures": "textures/items/screwdriver.png"
+		},
+		"catalog": {
+			"textures": "textures/items/catalog"
+		},
+		"iron_key": {
+			"textures": "textures/items/iron_key"
+		},
+		"gold_key": {
+			"textures": "textures/items/gold_key"
+		},
+		"copper_key": {
+			"textures": "textures/items/copper_key"
+		},
+		"oxidized_key": {
+			"textures": "textures/items/oxidized_key"
+		},
+		"paper": {
+			"textures": "textures/items/paper"
+		}
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "namespace": "progress",
+  "modal_progress_screen@progress_screen": {
+	"$screen_bg_content": "common.setwarp_screen"
+  },
+
+  "delete_progress_screen@modal_progress_screen": {
+	"$screen_bg_content": "common.setwarp_screen"
+  },
+
+  "world_loading_progress_screen@progress_screen": {
+    "$screen_bg_content": "common.setwarp_screen"
+  },
+  "world_saving_progress_screen@progress_screen": {
+	"$screen_bg_content": "common.setwarp_screen"
+  },
+
+
+  "world_convert_modal_progress_screen@progress.progress_screen": {
+	"$screen_bg_content": "common.setwarp_screen"
+  }
+}

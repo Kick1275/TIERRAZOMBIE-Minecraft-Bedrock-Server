@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dz:bossbar_timer",
+      "materials": { "default": "entity_alphatest" },
+      "textures": { "default": "textures/entity/invisible" },
+      "geometry": { "default": "geometry.humanoid.custom" },
+      "render_controllers": ["controller.render.default"],
+      "spawn_egg": { "base_color": "#000000", "overlay_color": "#000000" }
+    }
+  }
+}

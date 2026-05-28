@@ -1,0 +1,58 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m870.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.8667,
+      "timeline": {
+        "0.9": [
+          "/function m870quantity"
+        ],
+        "1.0": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "1.1": [
+          "/function m870"
+        ],
+        "1.6": [
+          "/function m870quantity"
+        ],
+        "1.7": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "1.8": [
+          "/function m870"
+        ],
+        "2.3": [
+          "/function m870quantity"
+        ],
+        "2.4": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "2.5": [
+          "/function m870"
+        ],
+        "3.0": [
+          "/function m870quantity"
+        ],
+        "3.1": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "3.2": [
+          "/function m870"
+        ],
+        "3.7": [
+          "/function m870quantity"
+        ],
+        "3.8": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ]
+      }
+    }
+  }
+}

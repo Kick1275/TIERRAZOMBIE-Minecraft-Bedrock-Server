@@ -1,0 +1,64 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "rt:21x21",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "instant_despawn_group": {
+        "minecraft:instant_despawn": {}
+      },
+      "timer_despawn_group": {
+        "minecraft:timer": {
+          "looping": false,
+          "time": 0.1,
+          "time_down_event": {
+            "event": "instant_despawn_event"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:physics": {
+        "has_collision": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "deals_damage": false
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "queue_command": {
+          "command": [
+            "summon rt:runa_proteccion ~~~ ~~ 21x21_claim_event unnamed",
+            "setblock ~~~ rt:21x21_on_block",
+            "playsound dig.stone @a ~~~"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "timer_despawn_group"
+          ]
+        }
+      },
+      "instant_despawn_event": {
+        "add": {
+          "component_groups": [
+            "instant_despawn_group"
+          ]
+        }
+      }
+    }
+  }
+}

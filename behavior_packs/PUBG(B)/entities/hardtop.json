@@ -1,0 +1,550 @@
+{
+  "format_version": "1.17.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "pubg:hardtop",
+      "is_summonable": true,
+      "is_spawnable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "drive",
+          "damage_slow",
+          "damage_fast",
+          "idle",
+          "startup",
+          "seat",
+          "sound_stop"
+        ]
+      },
+      "animations": {
+        "drive": "controller.animation.uaz_drive",
+        "damage_slow": "controller.animation.uaz_damage_slow",
+        "damage_fast": "controller.animation.uaz_damage_fast",
+        "idle": "controller.animation.uaz_idle",
+        "startup": "controller.animation.uaz_startup",
+        "seat": "controller.animation.uaz_seat",
+        "sound_stop": "controller.animation.uaz_sound_stop"
+      }
+    },
+    "component_groups": {
+      "speed_1": {
+        "minecraft:movement": {
+          "value": 0.17
+        },
+        "minecraft:timer": {
+          "time": 0.4,
+          "time_down_event": {
+            "event": "speed_2"
+          }
+        }
+      },
+      "speed_2": {
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        "minecraft:timer": {
+          "time": 0.45,
+          "time_down_event": {
+            "event": "speed_3"
+          }
+        }
+      },
+      "speed_3": {
+        "minecraft:timer": {
+          "time": 0.45,
+          "time_down_event": {
+            "event": "speed_4"
+          }
+        },
+        "minecraft:movement": {
+          "value": 0.27
+        }
+      },
+      "speed_4": {
+        "minecraft:movement": {
+          "value": 0.3
+        },
+        "minecraft:timer": {
+          "time": 0.45,
+          "time_down_event": {
+            "event": "speed_5"
+          }
+        }
+      },
+      "speed_5": {
+        "minecraft:movement": {
+          "value": 0.37
+        },
+        "minecraft:timer": {
+          "time": 0.4,
+          "time_down_event": {
+            "event": "speed_6"
+          }
+        }
+      },
+      "speed_6": {
+        "minecraft:movement": {
+          "value": 0.4
+        },
+        "minecraft:timer": {
+          "time": 0.4,
+          "time_down_event": {
+            "event": "speed_7"
+          }
+        }
+      },
+      "speed_7": {
+        "minecraft:movement": {
+          "value": 0.47
+        },
+        "minecraft:timer": {
+          "time": 0.3,
+          "time_down_event": {
+            "event": "speed_8"
+          }
+        }
+      },
+      "speed_8": {
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:timer": {
+          "time": 0.3,
+          "time_down_event": {
+            "event": "speed_9"
+          }
+        }
+      },
+      "speed_9": {
+        "minecraft:movement": {
+          "value": 0.54
+        }
+      },
+      "uaz:damage_slow": {
+        "minecraft:area_attack": {
+          "damage_per_tick": 5,
+          "damage_range": 1,
+          "cause": "contact",
+          "entity_filter": {
+            "none_of": [
+              {
+                "test": "is_riding",
+                "subject": "other",
+                "value": true
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "vehicles"
+              }
+            ]
+          }
+        }
+      },
+      "uaz:damage_fast": {
+        "minecraft:area_attack": {
+          "damage_per_tick": 10,
+          "damage_range": 1,
+          "cause": "contact",
+          "entity_filter": {
+            "none_of": [
+              {
+                "test": "is_riding",
+                "subject": "other",
+                "value": true
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "value": "vehicles"
+              }
+            ]
+          }
+        }
+      },
+      "hardtop:destroy": {
+        "minecraft:transformation": {
+          "into": "pubg:hardtop_destroyed",
+          "delay": {
+            "value": 0
+          }
+        }
+      },
+      "uaz:movement_basic": {
+        "minecraft:movement.basic": {
+          "max_turn": 30
+        }
+      },
+      "uaz:break_block": {
+        "minecraft:break_blocks": {
+          "breakable_blocks": [
+            "minecraft:fence",
+            "minecraft:fence_gate",
+            "minecraft:spruce_fence_gate",
+            "minecraft:birch_fence_gate",
+            "minecraft:jungle_fence_gate",
+            "minecraft:dark_oak_fence_gate",
+            "minecraft:acacia_fence_gate",
+            "minecraft:iron_bars",
+            "minecraft:glass"
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "vehicles"
+        ]
+      },
+      "minecraft:scale": {
+        "value": 1
+      },
+      "minecraft:collision_box": {
+        "width": 2.9,
+        "height": 2.4
+      },
+      "minecraft:health": {
+        "value": 1000,
+        "max": 1000
+      },
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:movement.basic": {
+        "max_turn": 30
+      },
+      "minecraft:jump.static": {},
+      "minecraft:underwater_movement": {
+        "value": 0
+      },
+      "minecraft:input_ground_controlled": {},
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:rideable": {
+        "interact_text": "Drive UAZ",
+        "family_types": [
+          "player"
+        ],
+        "seat_count": 4,
+        "seats": [
+          {
+            "position": [
+              0.5,
+              0.55,
+              -0.1
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 0
+          },
+          {
+            "position": [
+              -0.555,
+              0.55,
+              -0.3
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 4
+          },
+          {
+            "position": [
+              -0.53,
+              0.55,
+              -1.15
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 4
+          },
+          {
+            "position": [
+              0.53,
+              0.55,
+              -1.15
+            ],
+            "min_rider_count": 2,
+            "max_rider_count": 4
+          }
+        ],
+        "controlling_seat": 0
+      },
+      "minecraft:physics": {
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:is_stackable": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "magic",
+            "deals_damage": false
+          },
+          {
+            "cause": "drowning",
+            "deals_damage": false
+          },
+          {
+            "cause": "magma",
+            "deals_damage": false
+          },
+          {
+            "cause": "fire_tick",
+            "deals_damage": false
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:push_through": {
+        "value": 1
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 2.1,
+            "height": 1.5,
+            "pivot": [
+              0,
+              0.75,
+              1.5
+            ]
+          },
+          {
+            "width": 2.1,
+            "height": 1.3,
+            "pivot": [
+              0,
+              0.65,
+              -0.2
+            ]
+          },
+          {
+            "width": 2.1,
+            "height": 1.3,
+            "pivot": [
+              0,
+              0.65,
+              -1.6
+            ]
+          },
+          {
+            "width": 1,
+            "height": 1.2,
+            "pivot": [
+              0,
+              1.8,
+              -2.1
+            ]
+          },
+          {
+            "width": 2,
+            "height": 0.15,
+            "pivot": [
+              0,
+              2.275,
+              -0.8
+            ]
+          },
+          {
+            "width": 2,
+            "height": 0.15,
+            "pivot": [
+              0,
+              2.275,
+              -1.25
+            ]
+          },
+          {
+            "width": 2,
+            "height": 0.15,
+            "pivot": [
+              0,
+              2.275,
+              -0.35
+            ]
+          }
+        ]
+      },
+      "minecraft:on_death": {
+        "target": "self",
+        "event": "hardtop:destroy"
+      }
+    },
+    "events": {
+      "speed_1": {
+        "add": {
+          "component_groups": [
+            "speed_1"
+          ]
+        },
+        "run_command": {
+          "command": [
+            "playsound vehicle.uaz.engine_rev @a[r=50] ~~~"
+          ]
+        }
+      },
+      "speed_2": {
+        "add": {
+          "component_groups": [
+            "speed_2"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_1"
+          ]
+        }
+      },
+      "speed_3": {
+        "add": {
+          "component_groups": [
+            "speed_3"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_2"
+          ]
+        }
+      },
+      "speed_4": {
+        "add": {
+          "component_groups": [
+            "speed_4"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_3"
+          ]
+        }
+      },
+      "speed_5": {
+        "add": {
+          "component_groups": [
+            "speed_5"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_4"
+          ]
+        }
+      },
+      "speed_6": {
+        "add": {
+          "component_groups": [
+            "speed_6"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_5"
+          ]
+        }
+      },
+      "speed_7": {
+        "add": {
+          "component_groups": [
+            "speed_7"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_6",
+            "uaz:movement_basic"
+          ]
+        }
+      },
+      "speed_8": {
+        "add": {
+          "component_groups": [
+            "speed_8"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_7"
+          ]
+        }
+      },
+      "speed_9": {
+        "add": {
+          "component_groups": [
+            "speed_9"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "speed_8"
+          ]
+        }
+      },
+      "hardtop:destroy": {
+        "add": {
+          "component_groups": [
+            "hardtop:destroy"
+          ]
+        }
+      },
+      "uaz:damage_slow": {
+        "add": {
+          "component_groups": [
+            "uaz:damage_slow"
+          ]
+        }
+      },
+      "uaz:damage_fast": {
+        "add": {
+          "component_groups": [
+            "uaz:damage_fast"
+          ]
+        }
+      },
+      "uaz:idle": {
+        "remove": {
+          "component_groups": [
+            "speed_1",
+            "speed_2",
+            "speed_3",
+            "speed_4",
+            "speed_5",
+            "speed_6",
+            "speed_7",
+            "speed_8",
+            "uaz:damage_slow",
+            "uaz:damage_fast",
+            "uaz:break_block"
+          ]
+        }
+      },
+      "uaz:break_block": {
+        "add": {
+          "component_groups": [
+            "uaz:break_block"
+          ]
+        }
+      },
+      "uaz:add_movementb": {
+        "add": {
+          "component_groups": [
+            "uaz:movement_basic"
+          ]
+        }
+      },
+      "uaz:remove_movementb": {
+        "remove": {
+          "component_groups": [
+            "uaz:movement_basic"
+          ]
+        }
+      }
+    }
+  }
+}

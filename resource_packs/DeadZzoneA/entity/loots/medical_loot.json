@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:medical_loot",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/loots/medical_box"
+      },
+      "geometry": {
+        "default": "geometry.medical_box"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

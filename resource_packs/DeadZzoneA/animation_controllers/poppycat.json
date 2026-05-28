@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.poppycat.idle": {
+      "initial_state": "moving",
+      "states": {
+        "moving": {
+          "transitions": [
+            { "idle": "query.modified_move_speed < 0.01" }
+          ]
+        },
+        "idle": {
+          "transitions": [
+            { "moving": "query.modified_move_speed >= 0.01" },
+            { "sit": "query.life_time - variable.idle_start_time >= 5.0" }
+          ],
+          "on_entry": [
+            "variable.idle_start_time = query.life_time;"
+          ]
+        },
+        "sit": {
+          "animations": ["poppycat_sit"],
+          "transitions": [
+            { "moving": "query.modified_move_speed >= 0.01" }
+          ]
+        }
+      }
+    }
+  }
+}

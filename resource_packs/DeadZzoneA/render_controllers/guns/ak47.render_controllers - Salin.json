@@ -1,0 +1,28 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.ak47": {
+      "geometry": "Geometry.ak47",
+      "materials": [
+        {
+          "*default": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.ak47"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

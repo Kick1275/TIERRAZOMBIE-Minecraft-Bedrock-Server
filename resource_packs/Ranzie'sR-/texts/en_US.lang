@@ -1,0 +1,99 @@
+item.cooked_flesh.name=Cooked Flesh
+item.raw_flesh.name=Raw Flesh
+item.settings.name=§2R&S Settings
+tile.ranzie:wired_fence_block.name=Wired Fence
+tile.ranzie:wired_wall_block.name=Wired Wall
+tile.ranzie:cheval_fence_block.name=Cheval Fence
+tile.ranzie:cheval_fence.name=Cheval Fence
+tile.ranzie:spiked_fence_block.name=Spiked Fence
+tile.ranzie:connected_spiked_fence.name=Connected Spiked Fence
+tile.ranzie:reinforced_spiked_fence.name=Reinforced Spiked Fence
+item.ranzie:wired_fence=Wired Fence
+item.ranzie:wired_wall=Wired Wall
+item.ranzie:chain_fence=Chain Fence
+potion.weakness=Infected
+
+item.ranzie:oak_reinforced_spiked_fence=Oak Reinforced Spiked Fence
+item.ranzie:spruce_reinforced_spiked_fence=Spruce Reinforced Spiked Fence
+item.ranzie:acacia_reinforced_spiked_fence=Acacia Reinforced Spiked Fence
+item.ranzie:birch_reinforced_spiked_fence=Birch Reinforced Spiked Fence
+item.ranzie:dark_oak_reinforced_spiked_fence=Dark Oak Reinforced Spiked Fence
+item.ranzie:jungle_reinforced_spiked_fence=Jungle Reinforced Spiked Fence
+item.ranzie:mangrove_reinforced_spiked_fence=Mangrove Reinforced Spiked Fence
+item.ranzie:pale_reinforced_spiked_fence=Pale Oak Reinforced Spiked Fence
+item.ranzie:bamboo_reinforced_spiked_fence=Bamboo Reinforced Spiked Fence
+item.ranzie:crimson_reinforced_spiked_fence=Crimson Reinforced Spiked Fence
+item.ranzie:warped_reinforced_spiked_fence=Warped Reinforced Spiked Fence
+item.ranzie:cherry_reinforced_spiked_fence=Cherry Reinforced Spiked Fence
+
+item.ranzie:oak_spiked_fence=Oak Upgraded Spiked Fence
+item.ranzie:spruce_spiked_fence=Spruce Upgraded Spiked Fence
+item.ranzie:acacia_spiked_fence=Acacia Upgraded Spiked Fence
+item.ranzie:birch_spiked_fence=Birch Upgraded Spiked Fence
+item.ranzie:dark_oak_spiked_fence=Dark Oak Upgraded Spiked Fence
+item.ranzie:jungle_spiked_fence=Jungle Upgraded Spiked Fence
+item.ranzie:mangrove_spiked_fence=Mangrove Upgraded Spiked Fence
+item.ranzie:pale_spiked_fence=Pale Oak Upgraded Spiked Fence
+item.ranzie:bamboo_spiked_fence=Bamboo Upgraded Spiked Fence
+item.ranzie:crimson_spiked_fence=Crimson Upgraded Spiked Fence
+item.ranzie:warped_spiked_fence=Warped Upgraded Spiked Fence
+item.ranzie:cherry_spiked_fence=Cherry Upgraded Spiked Fence
+
+tile.ranzie:oak_reinforced_spiked_fence_block.name=Oak Reinforced Spiked Fence
+tile.ranzie:spruce_reinforced_spiked_fence_block.name=Spruce Reinforced Spiked Fence
+tile.ranzie:acacia_reinforced_spiked_fence_block.name=Acacia Reinforced Spiked Fence
+tile.ranzie:birch_reinforced_spiked_fence_block.name=Birch Reinforced Spiked Fence
+tile.ranzie:dark_oak_reinforced_spiked_fence_block.name=Dark Oak Reinforced Spiked Fence
+tile.ranzie:jungle_reinforced_spiked_fence_block.name=Jungle Reinforced Spiked Fence
+tile.ranzie:mangrove_reinforced_spiked_fence_block.name=Mangrove Reinforced Spiked Fence
+tile.ranzie:pale_reinforced_spiked_fence_block.name=Pale Oak Reinforced Spiked Fence
+tile.ranzie:bamboo_reinforced_spiked_fence_block.name=Bamboo Reinforced Spiked Fence
+tile.ranzie:crimson_reinforced_spiked_fence_block.name=Crimson Reinforced Spiked Fence
+tile.ranzie:warped_reinforced_spiked_fence_block.name=Warped Reinforced Spiked Fence
+tile.ranzie:cherry_reinforced_spiked_fence_block.name=Cherry Reinforced Spiked Fence
+
+tile.ranzie:oak_upgraded_spiked_fence_block.name=Oak Upgraded Spiked Fence
+tile.ranzie:spruce_upgraded_spiked_fence_block.name=Spruce Upgraded Spiked Fence
+tile.ranzie:acacia_upgraded_spiked_fence_block.name=Acacia Upgraded Spiked Fence
+tile.ranzie:birch_upgraded_spiked_fence_block.name=Birch Upgraded Spiked Fence
+tile.ranzie:dark_oak_upgraded_spiked_fence_block.name=Dark Oak Upgraded Spiked Fence
+tile.ranzie:jungle_upgraded_spiked_fence_block.name=Jungle Upgraded Spiked Fence
+tile.ranzie:mangrove_upgraded_spiked_fence_block.name=Mangrove Upgraded Spiked Fence
+tile.ranzie:pale_upgraded_spiked_fence_block.name=Pale Oak Upgraded Spiked Fence
+tile.ranzie:bamboo_upgraded_spiked_fence_block.name=Bamboo Upgraded Spiked Fence
+tile.ranzie:crimson_upgraded_spiked_fence_block.name=Crimson Upgraded Spiked Fence
+tile.ranzie:warped_upgraded_spiked_fence_block.name=Warped Upgraded Spiked Fence
+tile.ranzie:cherry_upgraded_spiked_fence_block.name=Cherry Upgraded Spiked Fence
+
+tile.ranzie:bamboo_spiked_plate_block.name=Bamboo Spiked Plate
+tile.ranzie:spruce_spiked_plate_block.name=Spruce Spiked Plate
+tile.ranzie:acacia_spiked_plate_block.name=Acacia Spiked Plate
+tile.ranzie:oak_spiked_plate_block.name=Oak Spiked Plate
+tile.ranzie:dark_oak_spiked_plate_block.name=Dark Oak Spiked Plate
+tile.ranzie:pale_spiked_plate_block.name=Pale Oak Spiked Plate
+tile.ranzie:jungle_spiked_plate_block.name=Jungle Spiked Plate
+tile.ranzie:cherry_spiked_plate_block.name=cherry Spiked Plate
+tile.ranzie:mangrove_spiked_plate_block.name=Mangrove Spiked Plate
+tile.ranzie:birch_spiked_plate_block.name=Birch Spiked Plate
+tile.ranzie:warped_spiked_plate_block.name=Warped Spiked Plate
+tile.ranzie:crimson_spiked_plate_block.name=Crimson Spiked Plate
+tile.ranzie:iron_spiked_plate_block.name=Iron Spiked Plate
+
+tile.ranzie:bamboo_reinforced_spiked_plate_block.name=Bamboo Reinforced Spiked Plate
+tile.ranzie:spruce_reinforced_spiked_plate_block.name=Spruce Reinforced Spiked Plate
+tile.ranzie:acacia_reinforced_spiked_plate_block.name=Acacia Reinforced Spiked Plate
+tile.ranzie:oak_reinforced_spiked_plate_block.name=Oak Reinforced Spiked Plate
+tile.ranzie:dark_oak_reinforced_spiked_plate_block.name=Dark Oak Reinforced Spiked Plate
+tile.ranzie:pale_reinforced_spiked_plate_block.name=Pale Oak Reinforced Spiked Plate
+tile.ranzie:jungle_reinforced_spiked_plate_block.name=Jungle Reinforced Spiked Plate
+tile.ranzie:cherry_reinforced_spiked_plate_block.name=cherry Reinforced Spiked Plate
+tile.ranzie:mangrove_reinforced_spiked_plate_block.name=Mangrove Reinforced Spiked Plate
+tile.ranzie:birch_reinforced_spiked_plate_block.name=Birch Reinforced Spiked Plate
+tile.ranzie:warped_reinforced_spiked_plate_block.name=Warped Reinforced Spiked Plate
+tile.ranzie:crimson_reinforced_spiked_plate_block.name=Crimson Reinforced Spiked Plate
+tile.ranzie:iron_reinforced_spiked_plate_block.name=Iron Reinforced Spiked Plate
+
+ranzie.setting.block=Zombies can place blocks
+ranzie.setting.mine=Zombies can mine
+
+

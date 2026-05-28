@@ -1,0 +1,89 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.male": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.male_skin": [
+						"Texture.male_0",
+						"Texture.male_1",
+						"Texture.male_2",
+						"Texture.male_3",
+						"Texture.male_4",
+						"Texture.male_5",
+						"Texture.male_6",
+						"Texture.male_7",
+						"Texture.male_8",
+						"Texture.male_9",
+						"Texture.male_10",
+						"Texture.male_11",
+						"Texture.male_12",
+						"Texture.male_13",
+						"Texture.male_14",
+						"Texture.male_15",
+						"Texture.male_16"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ 
+				"Array.male_skin[v.male_skin]"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.female": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.female_skin": [
+						"Texture.female_0",
+						"Texture.female_1",
+						"Texture.female_2",
+						"Texture.female_3",
+						"Texture.female_4",
+						"Texture.female_5",
+						"Texture.female_6",
+						"Texture.female_7",
+						"Texture.female_8",
+						"Texture.female_9",
+						"Texture.female_10",
+						"Texture.female_11",
+						"Texture.female_12",
+						"Texture.female_13",
+						"Texture.female_14",
+						"Texture.female_15",
+						"Texture.female_16"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ 
+				"Array.female_skin[v.female_skin]"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

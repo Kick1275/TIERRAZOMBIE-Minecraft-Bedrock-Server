@@ -1,0 +1,41 @@
+//bridge-file-version: #22
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:buggy_destroyed",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/destroyed_vehicles/buggy_destroyed"
+			},
+			"geometry": {
+				"default": "geometry.buggy_destroyed"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"terrain",
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.buggy.drive",
+				"down": "animation.buggy.down",
+				"up": "animation.buggy.up",
+				"terrain": "controller.animation.buggydestroyed.terrain",
+				"engine_smoke": "controller.animation.buggydestroyed.smoke"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"particle_effects": {
+				"flame": "pubg:engine_fire",
+				"engine": "pubg:engine_smoke_black"
+			}
+		}
+	}
+}

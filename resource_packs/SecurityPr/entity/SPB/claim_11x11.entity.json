@@ -1,0 +1,24 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "rt:runa_proteccion",
+            "materials": {
+                "default": "skeleton"
+            },
+            "textures": {
+                "default": "textures/elements/null"
+            },
+            "geometry": {
+                "default": "geometry.sponge"
+            },
+            "spawn_egg": {
+                "texture": "sponge",
+                "texture_index": 0
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

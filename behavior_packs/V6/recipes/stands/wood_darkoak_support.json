@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:darkoak_wood_support"
+		},
+		"tags": [ "workbench" ],
+		"pattern": [
+			"###",
+			"  A"
+		],
+		"key": {
+			"#": {
+				"item": "medieval:darkoak_wood_mslab"
+			},
+			"A": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "medieval:darkoak_wood_support",
+			"count": 3
+		}
+	}
+}

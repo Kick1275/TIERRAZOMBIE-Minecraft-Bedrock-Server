@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fal": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='fal' && q.is_using_item) || query.get_equipped_item_name=='fal_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s fal 20",
+            "@s[hasitem={item=krep:fal, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "fal.30": "query.get_equipped_item_name=='fal' && query.is_using_item && query.scoreboard('fal') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "fal.31": "query.get_equipped_item_name=='fal' && query.is_using_item && query.scoreboard('fal') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function fal"
+          ]
+        },
+        "fal.31": {
+          "animations": [
+            "falshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={fal=0}] slot.weapon.mainhand 1 krep:fal_emp 1 0"
+          ]
+        },
+        "fal.30": {
+          "animations": [
+            "falshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:fal_fire",
+            "/scoreboard players set @s[scores={fal=22..}] fal 21",
+            "/scoreboard players remove @s[scores={fal=1..21}] fal 1",
+            "/playsound fal.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={fal=0}] slot.weapon.mainhand 1 krep:fal_emp 1 0",
+            "/title @s[scores={fal=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

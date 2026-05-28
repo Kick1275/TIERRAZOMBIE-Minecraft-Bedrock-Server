@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:gas_mask",
+			"materials": {
+				"default": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/armor/gasmask"
+			},
+			"geometry": {
+				"default": "geometry.gasmask"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.helmet_layer_visible = 0.0;"
+				],
+				"animate": [
+					{
+						"hide_mask": "c.is_first_person"
+					},
+					{
+						"hide_tint": "!c.is_first_person"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.gasmask"
+			],
+			"animations": {
+				"hide_mask": "animation.gasmask.hide_mask",
+				"hide_tint": "animation.gasmask.hide_tint"
+			}
+		}
+	}
+}

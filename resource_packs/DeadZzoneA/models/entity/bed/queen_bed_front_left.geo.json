@@ -1,0 +1,51 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.xp_furniture.queen_bed_left_1",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 26]
+				},
+				{
+					"name": "bed",
+					"parent": "root",
+					"pivot": [0, 0, 26],
+					"cubes": [
+						{
+							"origin": [-6, 1, -8],
+							"size": [14, 5, 16],
+							"uv": {
+								"east": {"uv": [12, 38], "uv_size": [16, 5], "material_instance": "bed"},
+								"down": {"uv": [60, 28], "uv_size": [14, -16], "material_instance": "bed"}
+							}
+						}
+					]
+				},
+				{
+					"name": "sheet",
+					"parent": "root",
+					"pivot": [0, 0, 26],
+					"cubes": [
+						{
+							"origin": [-6, 6, -8],
+							"size": [14, 6, 16],
+							"uv": {
+								"east": {"uv": [12, 32], "uv_size": [16, 6], "material_instance": "sheet"},
+								"up": {"uv": [32, 12], "uv_size": [14, 16], "material_instance": "sheet"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1 @@
+import{getCommandFunc as r,registerCommand as i}from"../register_commands.js";const m={name:"hpyramid",permission:"worldedit.generation.pyramid",description:"commands.wedit:hpyramid.description",usage:[{name:"pattern",type:"Pattern"},{name:"size",type:"int",range:[1,null]}]};i(m,function*(e,t,n){return n.set("h",!0),yield*r("pyramid")(e,t,n)});

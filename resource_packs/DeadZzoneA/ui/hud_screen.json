@@ -1,0 +1,96 @@
+{
+	"horse_heart_renderer": {
+		"ignored": true
+	},
+	"vignette_renderer": {
+		"ignored": true
+	},
+	"cursor_renderer": {
+		"ignored": true
+	},
+	
+	"hud_actionbar_text": {
+		"anchor_from": "right_middle",
+		"anchor_to": "right_middle",
+		"size": [
+			"95%c + 10px",
+			"95%c + 4px"
+		],
+		"texture": "textures/ui/hud_tip_text_background",
+		"alpha": "@hud.anim_actionbar_text_background_alpha_out",
+		"controls": [
+			{
+				"actionbar_message": {
+					"type": "label",
+					"anchor_from": "bottom_left",
+					"anchor_to": "bottom_left",
+					"color": "$tool_tip_text",
+					"layer": 31,
+					"text": "$actionbar_text",
+					"shadow": true,
+					"localize": true,
+					"alpha": 0.5,
+					"alpha": "@hud.anim_actionbar_text_alpha_out"
+				}
+			}
+		]
+	},
+	
+	"deadzonewatermark": {
+		"type": "label",
+		"text": "V1.6.6-1",
+		"font_type": "normal",
+		"shadow": true,
+		"localize": true,
+		"alpha": 0.43,
+		"layer": 31
+	},
+	
+	"crosshair": {
+		"type": "panel",
+		"size": [
+			34,
+			34
+		],
+		"controls": [
+			{
+				"hud_player": {
+					"type": "custom",
+					"renderer": "live_player_renderer",
+					"layer": 1
+				}
+			}
+		]
+	},
+	
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"deadzonewatermark@hud.deadzonewatermark": {
+							"offset": [
+								0,
+								0
+							],
+							"anchor_from": "bottom_right",
+							"anchor_to": "bottom_right"
+						}
+					},
+					{
+						"crosshair@hud.crosshair": {
+							"offset": [
+								-11,
+								2370.3
+							],
+							"anchor_from": "center",
+							"anchor_to": "center"
+						}
+					}
+				]
+			}
+		]
+	}
+}

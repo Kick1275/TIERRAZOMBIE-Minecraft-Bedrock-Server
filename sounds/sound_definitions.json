@@ -1,0 +1,2947 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"bs": {
+			"category": "music",
+			"sounds": [
+				{
+			    	"name": "sounds/bs1",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs2",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs4",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs5",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs6",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs7",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs8",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs9",
+					"stream": true
+				},
+				{
+					"name": "sounds/bs10",
+					"stream": true
+				},
+				{
+					"name": "sounds/radio1",
+					"stream": true
+				},
+				{
+					"name": "sounds/radio2",
+					"stream": true
+				},
+				{
+					"name": "sounds/radio3",
+					"stream": true
+				},
+				{
+					"name": "sounds/radio4",
+					"stream": true
+				},
+				{
+					"name": "sounds/radio5",
+					"stream": true
+				},
+				{
+					"name": "sounds/radio6",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/BadVoodoo",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/DeadManWalking",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/FarAway",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/midnightride",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/MuertosRojosAkaTheGunslingersLament",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/onebadman",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/rocketride",
+					"stream": true
+				},
+				{
+					"name": "sounds/Musica/ShowdownatEscalera",
+					"stream": true
+				},
+				{
+					"name":  "sounds/Musica/StinkinZombies",
+					"stream": true
+				}
+			]
+		},
+		"bs1": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs1",
+					"stream": true
+				}
+			]
+		},
+		"bs2": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs2",
+					"stream": true
+				}
+			]
+		},
+		"bs3": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs3",
+					"stream": true
+				}
+			]
+		},
+		"bs4": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs4",
+					"stream": true
+				}
+			]
+		},
+		"bs5": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs5",
+					"stream": true
+				}
+			]
+		},
+		"bs6": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs6",
+					"stream": true
+				}
+			]
+		},
+		"bs7": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs7",
+					"stream": true
+				}
+			]
+		},
+		"bs8": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs8",
+					"stream": true
+				}
+			]
+		},
+		"bs9": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs9",
+					"stream": true
+				}
+			]
+		},
+		"ms1": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/ms1",
+					"stream": true
+				}
+			]
+		},
+		"ms2": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/ms2",
+					"stream": true
+				}
+			]
+		},
+		"ms3": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/ms3",
+					"stream": true
+				}
+			]
+		},
+		"ms4": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/ms4",
+					"stream": true
+				}
+			]
+		},
+		"bs10": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/radio1"
+				}
+			]
+		},
+		"bs11": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/radio2"
+				}
+			]
+		},
+		"bs12": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/radio3"
+				}
+			]
+		},
+		"bs13": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/radio4"
+				}
+			]
+		},
+		"bs14": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/radio5"
+				}
+			]
+		},
+		"bs15": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/radio6"
+				}
+			]
+		},
+		"bs16": {
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/bs10"
+				}
+			]
+		},
+		"Ellis.AlertGiveItem_es": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AlertGiveItem01",
+					"volume": 3
+				},
+				{
+					"name":"sounds/Ellis/AlertGiveItem02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItem03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItem04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItem05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItem07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItem08",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.AlertGiveItemStop_es": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AlertGiveItemStop01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItemStop02",
+					"volume": 3
+				}
+				,
+				{
+					"name": "sounds/Ellis/AlertGiveItemStop03",
+					"volume": 3
+				}
+				,
+				{
+					"name": "sounds/Ellis/AlertGiveItemStop04",
+					"volume": 3
+				}
+				,
+				{
+					"name": "sounds/Ellis/AlertGiveItemStop05",
+					"volume": 3
+				}
+				,
+				{
+					"name": "sounds/Ellis/AlertGiveItemStop06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AlertGiveItemStopC101",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.FriendlyFire_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire10",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FriendlyFire11",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.GettingRevived_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GettingRevived08",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.GoingToDie_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__GoingToDie10",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.Grenade_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Grenade10",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.HealOther_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__HealOther08",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.Help_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__Help01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Help02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Help03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Help05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Help06",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.Hurrah_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__Hurrah09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Hurrah10",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Hurrah11",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Hurrah12",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.AskReady_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/AskReady01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AskReady02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AskReady03",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.BackUp_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/BackUp01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUp02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUp03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUp04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUp05",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.BackUpQuiet_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/BackUpQuiet02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUpQuiet03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUpQuiet04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BackUpQuiet05",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.BattleCry_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/BattleCry01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BattleCry02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BattleCry03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/BattleCry04",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.CallForRescue_es": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/CallForRescue01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue12",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue10",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CallForRescue11",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.CloseTheDoor01_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/CloseTheDoor01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CloseTheDoor02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CloseTheDoor03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CloseTheDoorC101",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CloseTheDoorC102",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.CoverMe_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/CoverMe05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CoverMe06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CoverMe07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/CoverMe08",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.DeathScream_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/DeathScream01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/DeathScream02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/DeathScream03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/DeathScream04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/DeathScream05",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.EmphaticGo_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/EmphaticGo02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/EmphaticGo03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/EmphaticGo04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/EmphaticGo05",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.EmphaticGoQuiet_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/EmphaticGoQuiet01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/EmphaticGoQuiet02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/EmphaticGoQuiet03",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.FollowMe_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/FollowMe01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/FollowMe02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/FollowMe04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/AnyConv.com__FollowMe03",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.HurtCritical_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/HurtCritical01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtCritical02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtCritical03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtCritical04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtCritical05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtCritical06",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.HurtMajor_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/HurtMajor01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtMajor02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtMajor03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtMajor04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtMajor05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/HurtMajor06",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.IncapacitatedInitial_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/IncapacitatedInitial01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/IncapacitatedInitial02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/IncapacitatedInitial03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/IncapacitatedInjury01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/IncapacitatedInjury02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/incapacitatedinjury03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/incapacitatedinjury04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/incapacitatedinjury05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/IncapacitatedInjury06",
+					"volume": 3
+				}
+			]
+		}, 
+		"Ellis.Incoming_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/Incoming01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Incoming02",
+					"volume": 3
+				},				
+				{
+					"name": "sounds/Ellis/Incoming03",
+					"volume": 3
+				},				
+				{
+					"name": "sounds/Ellis/Incoming04",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.Laughter_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/Laughter04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Laughter05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Laughter06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Laughter07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Laughter13b",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Laughter13c",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Laughter13d",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.Look_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/Look02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Look10",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.LookHere_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/LookHere01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/LookHere02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/LookHere03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/LookHere04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/LookHere05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/LookHere06",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.MoveOn_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/MoveOn01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/MoveOn02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/MoveOn03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/MoveOn04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/MoveOn05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/MoveOn06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/MoveOn07",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.NiceJob_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/NiceJob01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/NiceJob10",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.No_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/No01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No10",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/No11",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.ReviveFriend_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/ReviveFriend01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend09",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/ReviveFriend10",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.YellRun_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/YellRun01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YellRun02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YellRun03",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.Yes_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/Yes01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/Yes08",
+					"volume": 3
+				}
+			]
+		},
+		"Ellis.YouAreWelcome_es" : {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/Ellis/YouAreWelcome01",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome02",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome03",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome04",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome05",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome06",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome07",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome08",
+					"volume": 3
+				},
+				{
+					"name": "sounds/Ellis/YouAreWelcome09",
+					"volume": 3
+				}
+			]
+		},
+		"SafeRoom" :{
+			"category": "player",
+			"sounds": [
+				{
+					"name": "sounds/Music/safe/themonsterswithout",
+					"volume": 2
+				},
+				{
+					"name": "sounds/Music/safe/themonsterswithout_s",
+					"volume": 2
+				}
+			]
+		},
+		"St.Music" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Music/stMusic/youhadbetterpray",
+				"sounds/Music/stMusic/nohopeinhell"
+			]
+		},
+		"Safe.Room" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Music/safe/themonsterswithout",
+				"sounds/Music/safe/themonsterswithout_s"
+			]
+		},
+		"Couch.AlertGiveItem_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/AlertGiveItem01",
+				"sounds/Couch/AlertGiveItem02",
+				"sounds/Couch/AlertGiveItem03",
+				"sounds/Couch/AlertGiveItem04",
+				"sounds/Couch/AlertGiveItemC101",
+				"sounds/Couch/AlertGiveItemC103",
+				"sounds/Couch/AlertGiveItemCombat01",
+				"sounds/Couch/AlertGiveItemCombat02",
+				"sounds/Couch/AlertGiveItemCombat03",
+				"sounds/Couch/AlertGiveItemCombat04",
+				"sounds/Couch/AlertGiveItemCombat05",
+				"sounds/Couch/AlertGiveItemStop01",
+				"sounds/Couch/AlertGiveItemStop02",
+				"sounds/Couch/AlertGiveItemStop03",
+				"sounds/Couch/AlertGiveItemStopC101",
+				"sounds/Couch/AlertGiveItemStopC102"
+			]
+		},
+		"Couch.FollowMe_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/AnyConv.com__FollowMe01",
+				"sounds/Couch/AnyConv.com__FollowMe02",
+				"sounds/Couch/AnyConv.com__FollowMe03",
+				"sounds/Couch/AnyConv.com__FollowMe04",
+				"sounds/Couch/AnyConv.com__FollowMe05",
+				"sounds/Couch/FollowMe06"
+			]
+		},
+		"Couch.FriendlyFire_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/AnyConv.com__FriendlyFire01",
+				"sounds/Couch/AnyConv.com__FriendlyFire02",
+				"sounds/Couch/AnyConv.com__FriendlyFire03",
+				"sounds/Couch/AnyConv.com__FriendlyFire04",
+				"sounds/Couch/AnyConv.com__FriendlyFire05",
+				"sounds/Couch/AnyConv.com__FriendlyFire06",
+				"sounds/Couch/AnyConv.com__FriendlyFire07",
+				"sounds/Couch/AnyConv.com__FriendlyFire08",
+				"sounds/Couch/AnyConv.com__FriendlyFire09",
+				"sounds/Couch/AnyConv.com__FriendlyFire10",
+				"sounds/Couch/FriendlyFire13"
+			]
+		},
+		"Couch.GettingRevived_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/AnyConv.com__GettingRevived01",
+				"sounds/Couch/AnyConv.com__GettingRevived02",
+				"sounds/Couch/AnyConv.com__GettingRevived03",
+				"sounds/Couch/AnyConv.com__GettingRevived04",
+				"sounds/Couch/AnyConv.com__GettingRevived05",
+				"sounds/Couch/AnyConv.com__GettingRevived07",
+				"sounds/Couch/AnyConv.com__GettingRevived08",
+				"sounds/Couch/AnyConv.com__GettingRevived09",
+				"sounds/Couch/AnyConv.com__GettingRevived10",
+				"sounds/Couch/AnyConv.com__GettingRevived11",
+				"sounds/Couch/AnyConv.com__GettingRevived12",
+				"sounds/Couch/AnyConv.com__GettingRevived13",
+				"sounds/Couch/AnyConv.com__GettingRevived14",
+				"sounds/Couch/AnyConv.com__GettingRevived15",
+				"sounds/Couch/AnyConv.com__GettingRevived16",
+				"sounds/Couch/AnyConv.com__GettingRevived18",
+				"sounds/Couch/AnyConv.com__GettingRevived19",
+				"sounds/Couch/AnyConv.com__GettingRevived20",
+				"sounds/Couch/AnyConv.com__GettingRevived21",
+				"sounds/Couch/AnyConv.com__GettingRevived22",
+				"sounds/Couch/AnyConv.com__GettingRevived23",
+				"sounds/Couch/AnyConv.com__GettingRevived24",
+				"sounds/Couch/AnyConv.com__GettingRevived25",
+				"sounds/Couch/AnyConv.com__GettingRevived26",
+				"sounds/Couch/AnyConv.com__GettingRevived27",
+				"sounds/Couch/AnyConv.com__GettingRevived28",
+				"sounds/Couch/AnyConv.com__GettingRevived29"
+			]
+		},
+		"Couch.AskReady_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/AskReady02",
+				"sounds/Couch/AskReady03",
+				"sounds/Couch/AskReady04",
+				"sounds/Couch/AskReady05",
+				"sounds/Couch/AskReady06",
+				"sounds/Couch/AskReady07",
+				"sounds/Couch/AskReady09"
+			]
+		},
+		"Couch.BackUp_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/BackUp01",
+				"sounds/Couch/BackUp02",
+				"sounds/Couch/BackUp03",
+				"sounds/Couch/BackUp04",
+				"sounds/Couch/BackUp05",
+				"sounds/Couch/BackUp06",
+				"sounds/Couch/BackUpQuiet01",
+				"sounds/Couch/BackUpQuiet02",
+				"sounds/Couch/BackUpQuiet03"
+			]
+		},
+		"Couch.BattleCry_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/BattleCry01",
+				"sounds/Couch/BattleCry02",
+				"sounds/Couch/BattleCry03",
+				"sounds/Couch/BattleCry04",
+				"sounds/Couch/BattleCry05",
+				"sounds/Couch/BattleCry08",
+				"sounds/Couch/BattleCry09"
+			]
+		},
+		"Couch.CallForRescue_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/CallForRescue01",
+				"sounds/Couch/CallForRescue02",
+				"sounds/Couch/CallForRescue03",
+				"sounds/Couch/CallForRescue04",
+				"sounds/Couch/CallForRescue05",
+				"sounds/Couch/CallForRescue06",
+				"sounds/Couch/CallForRescue07",
+				"sounds/Couch/CallForRescue08",
+				"sounds/Couch/CallForRescue09",
+				"sounds/Couch/CallForRescue10",
+				"sounds/Couch/CallForRescue11",
+				"sounds/Couch/CallForRescue12"
+			]
+		},
+		"Couch.Choke_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Choke01",
+				"sounds/Couch/Choke02",
+				"sounds/Couch/Choke03",
+				"sounds/Couch/Choke04",
+				"sounds/Couch/Choke05",
+				"sounds/Couch/Choke06",
+				"sounds/Couch/Choke07"
+			]
+		},
+		"Couch.CloseTheDoor_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/CloseTheDoor01",
+				"sounds/Couch/CloseTheDoor02",
+				"sounds/Couch/CloseTheDoor03",
+				"sounds/Couch/CloseTheDoor04",
+				"sounds/Couch/CloseTheDoor05",
+				"sounds/Couch/CloseTheDoor06"
+			]
+		},
+		"Couch.CoverMe_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/CoverMe01",
+				"sounds/Couch/CoverMe02",
+				"sounds/Couch/CoverMe03",
+				"sounds/Couch/CoverMe04",
+				"sounds/Couch/CoverMe05",
+				"sounds/Couch/CoverMe06",
+				"sounds/Couch/CoverMe07",
+				"sounds/Couch/CoverMe08"
+			]
+		},
+		"Couch.DeathScream_es":{
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/DeathScream01",
+				"sounds/Couch/DeathScream02",
+				"sounds/Couch/DeathScream03",
+				"sounds/Couch/DeathScream04"
+			]
+		},
+		"Couch.HurtMajor_es" : {
+			"category": "hostile" ,
+			"sounds": [
+				"sounds/Couch/HurtMajor01",
+				"sounds/Couch/HurtMajor02",
+				"sounds/Couch/HurtMajor03",
+				"sounds/Couch/HurtMajor04",
+				"sounds/Couch/HurtMajor05",
+				"sounds/Couch/FabConvert.com_HurtMajor06",
+				"sounds/Couch/FabConvert.com_HurtMajor07",
+				"sounds/Couch/FabConvert.com_HurtMajor08",
+				"sounds/Couch/FabConvert.com_HurtMajor09",
+				"sounds/Couch/FabConvert.com_HurtMajor10",
+				"sounds/Couch/FabConvert.com_HurtMajor11",
+				"sounds/Couch/HurtMajor01",
+				"sounds/Couch/HurtMajor02",
+				"sounds/Couch/HurtMajor03",
+				"sounds/Couch/HurtMajor04",
+				"sounds/Couch/HurtMajor05"
+
+			]
+		},
+		"Couch.HurtMinor_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/FabConvert.com_HurtMinor01",
+				"sounds/Couch/FabConvert.com_HurtMinor02",
+				"sounds/Couch/FabConvert.com_HurtMinor03",
+				"sounds/Couch/FabConvert.com_HurtMinor04",
+				"sounds/Couch/FabConvert.com_HurtMinor05",
+				"sounds/Couch/FabConvert.com_HurtMinor06"
+			]
+		},
+		"Couch.ImWhitYou_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/FabConvert.com_ImWithYou01",
+				"sounds/Couch/FabConvert.com_ImWithYou02",
+				"sounds/Couch/FabConvert.com_ImWithYou03",
+				"sounds/Couch/FabConvert.com_ImWithYou02",
+				"sounds/Couch/FabConvert.com_ImWithYou02",
+				"sounds/Couch/FabConvert.com_ImWithYou02"
+			]
+		},
+		"Couch.IncapacitatedInitial_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Ellis/IncapacitatedInitial01",
+				"sounds/Ellis/IncapacitatedInitial02",
+				"sounds/Ellis/IncapacitatedInitial03",
+				"sounds/Ellis/IncapacitatedInjury01",
+				"sounds/Ellis/IncapacitatedInjury02"
+			]
+		},
+		"Couch.Incoming_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Incoming08",
+				"sounds/Couch/Incoming09",
+				"sounds/Couch/Incoming10",
+				"sounds/Couch/FabConvert.com_Incoming01",
+				"sounds/Couch/FabConvert.com_Incoming02",
+				"sounds/Couch/FabConvert.com_Incoming03",
+				"sounds/Couch/FabConvert.com_Incoming04",
+				"sounds/Couch/FabConvert.com_Incoming05",
+				"sounds/Couch/FabConvert.com_Incoming06",
+				"sounds/Couch/FabConvert.com_Incoming07"
+
+			]
+		},
+		"Couch.Yes_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Yes01",
+				"sounds/Couch/Yes02",
+				"sounds/Couch/Yes03",
+				"sounds/Couch/Yes05",
+				"sounds/Couch/Yes06",
+				"sounds/Couch/Yes07",
+				"sounds/Couch/FabConvert.com_Yes08",
+				"sounds/Couch/AnyConv.com__Yes10"
+			]
+		},
+		"Couch.GoingToDie_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/GoingToDie01",
+				"sounds/Couch/GoingToDie02",
+				"sounds/Couch/GoingToDie03",
+				"sounds/Couch/GoingToDie04",
+				"sounds/Couch/GoingToDie05",
+				"sounds/Couch/GoingToDie06",
+				"sounds/Couch/GoingToDie07",
+				"sounds/Couch/GoingToDie08",
+				"sounds/Couch/GoingToDie09",
+				"sounds/Couch/GoingToDie10",
+				"sounds/Couch/GoingToDie11",
+				"sounds/Couch/GoingToDie12",
+				"sounds/Couch/GoingToDie13",
+				"sounds/Couch/GoingToDie14",
+				"sounds/Couch/GoingToDie15",
+				"sounds/Couch/GoingToDie303"
+			]
+		},
+		"Couch.Grenade_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Grenade01",
+				"sounds/Couch/Grenade02",
+				"sounds/Couch/Grenade03",
+				"sounds/Couch/Grenade04",
+				"sounds/Couch/Grenade05",
+				"sounds/Couch/Grenade06",
+				"sounds/Couch/Grenade07",
+				"sounds/Couch/Grenade11",
+				"sounds/Couch/Grenade12"
+
+			]
+		},
+		"Couch.HealOther_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/HealOther01",
+				"sounds/Couch/HealOther02",
+				"sounds/Couch/HealOther03",
+				"sounds/Couch/HealOther04",
+				"sounds/Couch/HealOther05",
+				"sounds/Couch/HealOther06",
+				"sounds/Couch/HealOther07",
+				"sounds/Couch/HealOtherC103",
+				"sounds/Couch/HealOtherCombat01",
+				"sounds/Couch/HealOtherCombat02",
+				"sounds/Couch/HealOtherCombat05"
+			]
+		},
+		"Couch.Help_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Help01",
+				"sounds/Couch/Help02",
+				"sounds/Couch/Help03"
+			]
+		},
+		"Couch.Hurrah_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Hurrah01",
+				"sounds/Couch/Hurrah02",
+				"sounds/Couch/Hurrah03",
+				"sounds/Couch/Hurrah04",
+				"sounds/Couch/Hurrah05",
+				"sounds/Couch/Hurrah06",
+				"sounds/Couch/Hurrah07",
+				"sounds/Couch/Hurrah08",
+				"sounds/Couch/Hurrah09",
+				"sounds/Couch/Hurrah10",
+				"sounds/Couch/Hurrah11",
+				"sounds/Couch/Hurrah12",
+				"sounds/Couch/Hurrah13",
+				"sounds/Couch/Hurrah14",
+				"sounds/Couch/Hurrah15",
+				"sounds/Couch/Hurrah16",
+				"sounds/Couch/Hurrah17",
+				"sounds/Couch/Hurrah18",
+				"sounds/Couch/Hurrah19",
+				"sounds/Couch/Hurrah20",
+				"sounds/Couch/Hurrah21"
+			]
+		},
+		"Couch.HurryUp_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/HurryUp01",
+				"sounds/Couch/HurryUp02",
+				"sounds/Couch/HurryUp03",
+				"sounds/Couch/HurryUp04",
+				"sounds/Couch/HurryUp05",
+				"sounds/Couch/HurryUp06",
+				"sounds/Couch/HurryUp07",
+				"sounds/Couch/HurryUp08"
+
+			]
+		},
+		"Couch.HurtCritical_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/HurtCritical01",
+				"sounds/Couch/HurtCritical02",
+				"sounds/Couch/HurtCritical03",
+				"sounds/Couch/HurtCritical04",
+				"sounds/Couch/HurtCritical05",
+				"sounds/Couch/HurtCritical06",
+				"sounds/Couch/HurtCritical07",
+				"sounds/Couch/HurtCritical08"
+			]
+		},
+		"Couch.Laughter01_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Laughter01",
+				"sounds/Couch/Laughter04",
+				"sounds/Couch/Laughter06",
+				"sounds/Couch/Laughter07",
+				"sounds/Couch/Laughter13",
+				"sounds/Couch/Laughter14",
+				"sounds/Couch/Laughter22"
+			]
+		},
+		"Couch.LedgeSave_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/LedgeSave01",
+				"sounds/Couch/LedgeSave02",
+				"sounds/Couch/LedgeSave03",
+				"sounds/Couch/LedgeSave04",
+				"sounds/Couch/LedgeSave05"
+			]
+		},
+		"Couch.Look_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Look01",
+				"sounds/Couch/Look02",
+				"sounds/Couch/Look03",
+				"sounds/Couch/LookHere01",
+				"sounds/Couch/LookHere02",
+				"sounds/Couch/LookHere03",
+				"sounds/Couch/LookHere04"
+			]
+		},
+		"Couch.LookOut_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/LookOut01",
+				"sounds/Couch/LookOut02",
+				"sounds/Couch/LookOut03",
+				"sounds/Couch/LookOut04"
+			]
+		},
+		"Couch.LostCall_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/LostCall01",
+				"sounds/Couch/LostCall02",
+				"sounds/Couch/LostCall03"
+			]
+		},
+		"Couch.MoveOn_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/MoveOn01",
+				"sounds/Couch/MoveOn02",
+				"sounds/Couch/MoveOn03",
+				"sounds/Couch/MoveOn04",
+				"sounds/Couch/MoveOn05",
+				"sounds/Couch/MoveOn06",
+				"sounds/Couch/MoveOn07",
+				"sounds/Couch/MoveOn08",
+				"sounds/Couch/MoveOn09"
+			]
+		},
+		"Couch.NiceJob_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/NiceJob01",
+				"sounds/Couch/NiceJob02",
+				"sounds/Couch/NiceJob03",
+				"sounds/Couch/NiceJob04",
+				"sounds/Couch/NiceJob05",
+				"sounds/Couch/NiceJob06",
+				"sounds/Couch/NiceJob07",
+				"sounds/Couch/NiceJob08",
+				"sounds/Couch/NiceJob13",
+				"sounds/Couch/NiceJob04"
+			]
+		},
+		"Couch.No_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/No03",
+				"sounds/Couch/No04",
+				"sounds/Couch/No05",
+				"sounds/Couch/No06",
+				"sounds/Couch/No07",
+				"sounds/Couch/No08",
+				"sounds/Couch/No09",
+				"sounds/Couch/No10",
+				"sounds/Couch/No11",
+				"sounds/Couch/No12"
+			]
+		},
+		"Couch.PainRelieftFirstAid_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/PainRelieftFirstAid08",
+				"sounds/Couch/PainRelieftFirstAid09",
+				"sounds/Couch/PainRelieftPills01",
+				"sounds/Couch/PainRelieftPills02",
+				"sounds/Couch/PainRelieftPills03",
+				"sounds/Couch/PainRelieftPills04"
+			]
+		},
+		"Couch.ReviveCriticalFriend_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/ReviveCriticalFriend01",
+				"sounds/Couch/ReviveCriticalFriend02",
+				"sounds/Couch/ReviveCriticalFriend03",
+				"sounds/Couch/ReviveCriticalFriend04",
+				"sounds/Couch/ReviveCriticalFriend05",
+				"sounds/Couch/ReviveCriticalFriend06",
+				"sounds/Couch/ReviveCriticalFriend07",
+				"sounds/Couch/ReviveFriend01",
+				"sounds/Couch/ReviveFriend02",
+				"sounds/Couch/ReviveFriend03",
+				"sounds/Couch/ReviveFriend04",
+				"sounds/Couch/ReviveFriend05",
+				"sounds/Couch/ReviveFriend06",
+				"sounds/Couch/ReviveFriend07",
+				"sounds/Couch/ReviveFriend08",
+				"sounds/Couch/ReviveFriend09",
+				"sounds/Couch/ReviveFriend10",
+				"sounds/Couch/ReviveFriend11",
+				"sounds/Couch/ReviveFriend12",
+				"sounds/Couch/ReviveFriend13",
+				"sounds/Couch/ReviveFriendA05"
+			]
+		},
+		"Couch.Sorry_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Sorry01",
+				"sounds/Couch/Sorry02",
+				"sounds/Couch/Sorry03",
+				"sounds/Couch/Sorry04",
+				"sounds/Couch/Sorry05",
+				"sounds/Couch/Sorry06",
+				"sounds/Couch/Sorry07"
+			]
+		},
+		"Couch.StayTogether_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/StayTogether01",
+				"sounds/Couch/StayTogether02",
+				"sounds/Couch/StayTogether03",
+				"sounds/Couch/StayTogether04",
+				"sounds/Couch/StayTogetherInside01"
+			]
+		},
+		"Couch.SuggestHealth_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/SuggestHealthC101",
+				"sounds/Couch/SuggestHealthC102",
+				"sounds/Couch/SuggestHealthC103"
+			]
+		},
+		"Couch.Taunt_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Taunt01",
+				"sounds/Couch/Taunt02",
+				"sounds/Couch/Taunt03",
+				"sounds/Couch/Taunt04",
+				"sounds/Couch/Taunt05"
+			]
+		},
+		"Couch.Thanks_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/Thanks01",
+				"sounds/Couch/Thanks02",
+				"sounds/Couch/Thanks04",
+				"sounds/Couch/Thanks05",
+				"sounds/Couch/Thanks06",
+				"sounds/Couch/Thanks07"
+			]
+		},
+		"Couch.TransitionClose_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/TransitionClose06",
+				"sounds/Couch/TransitionClose07",
+				"sounds/Couch/TransitionClose08",
+				"sounds/Couch/TransitionClose09",
+				"sounds/Couch/TransitionClose10",
+				"sounds/Couch/TransitionClose11",
+				"sounds/Couch/TransitionClose12",
+				"sounds/Couch/TransitionClose13",
+				"sounds/Couch/TransitionClose14",
+				"sounds/Couch/TransitionClose15",
+				"sounds/Couch/TransitionClose16"
+			]
+		},
+		"Couch.WaitHere_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/WaitHere01",
+				"sounds/Couch/WaitHere02",
+				"sounds/Couch/WaitHere03",
+				"sounds/Couch/WaitHere04",
+				"sounds/Couch/WaitHere05",
+				"sounds/Couch/WaitHere06"
+			]
+		},
+		"Couch.YellRun_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/YellRun01",
+				"sounds/Couch/YellRun02",
+				"sounds/Couch/YellRun03",
+				"sounds/Couch/YellRun04",
+				"sounds/Couch/YellRun05",
+				"sounds/Couch/YellRun06"
+			]
+		},
+		"Couch.YouAreWelcome_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Couch/YouAreWelcome04",
+				"sounds/Couch/YouAreWelcome05"
+			]
+		},
+		"NPC.Talk" : {
+			"category": "player",
+			"sounds": [
+				"sounds/NPC/NPCTalk1",
+				"sounds/NPC/NPCTalk2",
+				"sounds/NPC/NPCTalk3"
+			]
+		},
+		"NPC.Buy" : {
+			"category": "player",
+			"sounds": [
+				"sounds/NPC/BuySound"
+			]
+		},
+		"Machines.HeliPas" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Machines/heli_pass_quick1"
+			]
+			},
+		"zap1": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/zap1"
+			]
+		},
+		"zap2": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/zap2"
+			]
+		},
+		"zap3": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/zap3"
+			]
+		},
+		"spark5": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/spark5"
+			]
+		},
+		"Rocell.AlertGiveItem_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/AlertGiveItem01",
+				"sounds/Rocell/AlertGiveItem02",
+				"sounds/Rocell/AlertGiveItem03",
+				"sounds/Rocell/AlertGiveItem04",
+				"sounds/Rocell/AlertGiveItem05",
+				"sounds/Rocell/AlertGiveItemStop02"
+			]
+		},
+		"Rocell.AskReady_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/AskReady01",
+				"sounds/Rocell/AskReady02",
+				"sounds/Rocell/AskReady03"
+			]
+		},
+		"Rocell.BackUp_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/BackUp01",
+				"sounds/Rocell/BackUp02",
+				"sounds/Rocell/BackUp03",
+				"sounds/Rocell/BackUp04"
+			]
+		},
+		"Rocell.BackUpQuiet_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/BackUpQuiet01",
+				"sounds/Rocell/BackUpQuiet02",
+				"sounds/Rocell/BackUpQuiet04"
+			]
+		},
+		"Rocell.BattleCry_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/BattleCry01",
+				"sounds/Rocell/BattleCry02"
+			]
+		},
+		"Rocell.CallForRescue_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/CallForRescue01",
+				"sounds/Rocell/CallForRescue02",
+				"sounds/Rocell/CallForRescue03",
+				"sounds/Rocell/CallForRescue04",
+				"sounds/Rocell/CallForRescue05",
+				"sounds/Rocell/CallForRescue06",
+				"sounds/Rocell/CallForRescue07",
+				"sounds/Rocell/CallForRescue08",
+				"sounds/Rocell/CallForRescue09",
+				"sounds/Rocell/CallForRescue10"
+			]
+		},
+		"Rocell.CloseTheDoor_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/CloseTheDoor01",
+				
+							
+				"sounds/Rocell/CloseTheDoor04",
+				"sounds/Rocell/CloseTheDoor05"
+			]
+		},
+		"Rocell.CoverMe_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/CoverMe01",
+				"sounds/Rocell/CoverMe02",
+				"sounds/Rocell/CoverMe03",
+				"sounds/Rocell/CoverMe04",
+				"sounds/Rocell/CoverMe05",
+				"sounds/Rocell/CoverMe06"
+			]
+		},
+		"Rocell.FollowMe_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/FollowMe01",
+				"sounds/Rocell/FollowMe02",
+				"sounds/Rocell/FollowMe03",
+				"sounds/Rocell/FollowMe04",
+				"sounds/Rocell/FollowMe05"
+			]
+		},
+		"Rocell.FriendlyFire_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/FriendlyFire01",
+				"sounds/Rocell/FriendlyFire02",
+				"sounds/Rocell/FriendlyFire03",
+				"sounds/Rocell/FriendlyFire04",
+				"sounds/Rocell/FriendlyFire05",
+				"sounds/Rocell/FriendlyFire06",
+				"sounds/Rocell/FriendlyFire07",
+				"sounds/Rocell/FriendlyFire08",
+				"sounds/Rocell/FriendlyFire09",
+				"sounds/Rocell/FriendlyFire10",
+				"sounds/Rocell/FriendlyFire11",
+				"sounds/Rocell/FriendlyFire12",
+				"sounds/Rocell/FriendlyFire13",
+				"sounds/Rocell/FriendlyFire14",
+				"sounds/Rocell/FriendlyFire21"
+			]
+		},
+		"Rocell.GettingRevived_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/GettingRevived02",
+				"sounds/Rocell/GettingRevived03",
+				"sounds/Rocell/GettingRevived04",
+				"sounds/Rocell/GettingRevived05",
+				"sounds/Rocell/GettingRevived06",
+				"sounds/Rocell/GettingRevived07",
+				"sounds/Rocell/GettingRevived08",
+				"sounds/Rocell/GettingRevived09",
+				"sounds/Rocell/GettingRevived10",
+				"sounds/Rocell/GettingRevived11",
+				"sounds/Rocell/GettingRevived16"
+			]
+		},
+		"Rocell.YouAreWelcome_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/YouAreWelcome01",
+				"sounds/Rocell/YouAreWelcome02",
+				"sounds/Rocell/YouAreWelcome03",
+				"sounds/Rocell/YouAreWelcome04",
+				"sounds/Rocell/YouAreWelcome05",
+				"sounds/Rocell/YouAreWelcome06",
+				"sounds/Rocell/YouAreWelcome07",
+				"sounds/Rocell/YouAreWelcome08",
+				"sounds/Rocell/YouAreWelcome09",
+				"sounds/Rocell/YouAreWelcome10"
+			]
+		},
+		"Rocell.GoingToDie_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/GoingToDie01",
+				"sounds/Rocell/GoingToDie02",
+				"sounds/Rocell/GoingToDie03",
+				"sounds/Rocell/GoingToDie04",
+				"sounds/Rocell/GoingToDie05",
+				"sounds/Rocell/GoingToDie06",
+				"sounds/Rocell/GoingToDie08",
+				"sounds/Rocell/GoingToDie09",
+				"sounds/Rocell/GoingToDie10",
+				"sounds/Rocell/GoingToDie11",
+				"sounds/Rocell/GoingToDie13",
+				"sounds/Rocell/GoingToDie14",
+				"sounds/Rocell/GoingToDie17",
+				"sounds/Rocell/GoingToDie18",
+				"sounds/Rocell/GoingToDie21",
+				"sounds/Rocell/GoingToDie22",
+				"sounds/Rocell/GoingToDie23"
+			]
+		},
+		"Rocell.Grenade_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Grenade01",
+				"sounds/Rocell/Grenade02",
+				"sounds/Rocell/Grenade05",
+				"sounds/Rocell/Grenade06"
+			]
+		},
+		"Rocell.HealOther_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/HealOther01",
+				"sounds/Rocell/HealOther02",
+				"sounds/Rocell/HealOther03",
+				"sounds/Rocell/HealOther04"
+			]
+		},
+		"Rocell.Help_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Help01",
+				"sounds/Rocell/Help03",
+				"sounds/Rocell/Help04",
+				"sounds/Rocell/Help05",
+				"sounds/Rocell/Help06",
+				"sounds/Rocell/Help08"
+			]
+		},
+		"Rocell.Hurrah_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Hurrah01",
+				"sounds/Rocell/Hurrah02",
+				"sounds/Rocell/Hurrah04",
+				"sounds/Rocell/Hurrah05",
+				"sounds/Rocell/Hurrah06",
+				"sounds/Rocell/Hurrah07",
+				"sounds/Rocell/Hurrah08",
+				"sounds/Rocell/Hurrah09",
+				"sounds/Rocell/Hurrah10",
+				"sounds/Rocell/Hurrah11",
+				"sounds/Rocell/Hurrah15"
+			]
+		},
+		"Rocell.HurtCritical_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/HurtCritical01",
+				"sounds/Rocell/HurtCritical02",
+				"sounds/Rocell/HurtCritical03",
+				"sounds/Rocell/HurtCritical04"
+			]
+		},
+		"Rocell.HurtMajor_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/HurtMajor01",
+				"sounds/Rocell/HurtMajor02",
+				"sounds/Rocell/HurtMajor03",
+				"sounds/Rocell/HurtMajor04"
+			]
+		},
+		"Rocell.HurtMinor_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/HurtMinor01",
+				"sounds/Rocell/HurtMinor02",
+				"sounds/Rocell/HurtMinor03"
+			]
+		},
+		"Rocell.IncapacitatedInitial_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/IncapacitatedInitial01",
+				"sounds/Rocell/IncapacitatedInitial02",
+				"sounds/Rocell/IncapacitatedInitial03",
+				"sounds/Rocell/IncapacitatedInitial04",
+				"sounds/Rocell/IncapacitatedInjury01",
+				"sounds/Rocell/IncapacitatedInjury02",
+				"sounds/Rocell/IncapacitatedInjury03",
+				"sounds/Rocell/IncapacitatedInjury04"
+			]
+		},
+		"Rocell.Incoming_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Incoming01",
+				"sounds/Rocell/Incoming02",
+				"sounds/Rocell/Incoming03",
+				"sounds/Rocell/Incoming04",
+				"sounds/Rocell/Incoming05",
+				"sounds/Rocell/Incoming06",
+				"sounds/Rocell/Incoming07",
+				"sounds/Rocell/Incoming08"
+			]
+		},
+		"Rocell.Laughter_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Laughter12",
+				"sounds/Rocell/Laughter13",
+				"sounds/Rocell/Laughter14",
+				"sounds/Rocell/Laughter17"
+			]
+		},
+		"Rocell.LeadOn_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/LeadOn01",
+				"sounds/Rocell/LeadOn02",
+				"sounds/Rocell/LeadOn03",
+				"sounds/Rocell/LeadOn07",
+				"sounds/Rocell/LeadOn08",
+				"sounds/Rocell/LeadOn09",
+				"sounds/Rocell/LeadOn10"
+			]
+		},
+		"Rocell.Look_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Look01",
+				"sounds/Rocell/Look02",
+				"sounds/Rocell/Look03",
+				"sounds/Rocell/Look04",
+				"sounds/Rocell/Look05",
+				"sounds/Rocell/Look06"
+			]
+		},
+		"Rocell.LookHere_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/LookHere01",
+				"sounds/Rocell/LookHere04",
+				"sounds/Rocell/LookHere05"
+			]
+		},
+		"Rocell.NiceJob_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/NiceJob01",
+				"sounds/Rocell/NiceJob02",
+				"sounds/Rocell/NiceJob03",
+				"sounds/Rocell/NiceJob04",
+				"sounds/Rocell/NiceJob05",
+				"sounds/Rocell/NiceJob06",
+				"sounds/Rocell/NiceJob07",
+				"sounds/Rocell/NiceJob08",
+				"sounds/Rocell/NiceJob09",
+				"sounds/Rocell/NiceJob10",
+				"sounds/Rocell/NiceJob11",
+				"sounds/Rocell/NiceJob12"
+			]
+		},
+		"Rocell.No_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/No01",
+				"sounds/Rocell/No02",
+				"sounds/Rocell/No03",
+				"sounds/Rocell/No04",
+				"sounds/Rocell/No05",
+				"sounds/Rocell/No06",
+				"sounds/Rocell/No07",
+				"sounds/Rocell/No08",
+				"sounds/Rocell/No11",
+				"sounds/Rocell/No12"
+			]
+		},
+		"Rocell.ReviveFriend_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/ReviveFriend02",
+				"sounds/Rocell/ReviveFriend03",
+				"sounds/Rocell/ReviveFriend04",
+				"sounds/Rocell/ReviveFriend05",
+				"sounds/Rocell/ReviveFriend06",
+				"sounds/Rocell/ReviveFriend07",
+				"sounds/Rocell/ReviveFriend08",
+				"sounds/Rocell/ReviveFriend09",
+				"sounds/Rocell/ReviveFriend10",
+				"sounds/Rocell/ReviveFriend11",
+				"sounds/Rocell/ReviveFriend12",
+				"sounds/Rocell/ReviveFriend13",
+				"sounds/Rocell/ReviveFriend14"
+			]
+		},
+		"Rocell.Sorry_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Sorry01",
+				"sounds/Rocell/Sorry03",
+				"sounds/Rocell/Sorry04",
+				"sounds/Rocell/Sorry06",
+				"sounds/Rocell/Sorry07",
+				"sounds/Rocell/Sorry08"
+			]
+		},
+		"Rocell.StayTogether_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/StayTogether01",
+				"sounds/Rocell/StayTogether02",
+				"sounds/Rocell/StayTogether03",
+				"sounds/Rocell/StayTogether04",
+				"sounds/Rocell/StayTogether05"
+			]
+		},
+		"Rocell.SuggestHealth_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/SuggestHealth02",
+				"sounds/Rocell/SuggestHealth04",
+				"sounds/Rocell/SuggestHealth05",
+				"sounds/Rocell/SuggestHealth06",
+				"sounds/Rocell/SuggestHealth07",
+				"sounds/Rocell/SuggestHealth08"
+			]
+		},
+		"Rocell.Thanks_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Thanks01",
+				"sounds/Rocell/Thanks02",
+				"sounds/Rocell/Thanks03",
+				"sounds/Rocell/Thanks04",
+				"sounds/Rocell/Thanks05"
+			]
+		},
+		"Rocell.WaitHere_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/WaitHere01",
+				"sounds/Rocell/WaitHere02",
+				"sounds/Rocell/WaitHere03",
+				"sounds/Rocell/WaitHere04"
+			]
+		},
+		"Rocell.YellRun_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/YellRun01",
+				"sounds/Rocell/YellRun02",
+				"sounds/Rocell/YellRun03",
+				"sounds/Rocell/YellRun04"
+			]
+		},
+		"Rocell.Yes_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Rocell/Yes01",
+				"sounds/Rocell/Yes02",
+				"sounds/Rocell/Yes03",
+				"sounds/Rocell/Yes04",
+				"sounds/Rocell/Yes05",
+				"sounds/Rocell/Yes06",
+				"sounds/Rocell/Yes09"
+			]
+		},
+		"Nick.AlertGiveItem_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/AlertGiveItem01",
+				"sounds/Nick/AlertGiveItem02",
+				"sounds/Nick/AlertGiveItem03",
+				"sounds/Nick/AlertGiveItem04",
+				"sounds/Nick/AlertGiveItem05",
+				"sounds/Nick/AlertGiveItem06",
+				"sounds/Nick/AlertGiveItemStop01",
+				"sounds/Nick/AlertGiveItemStop02",
+				"sounds/Nick/AlertGiveItemStop03",
+				"sounds/Nick/AlertGiveItemStop04"
+			]
+		},
+		"Nick.AskReady_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/AskReady01",
+				"sounds/Nick/AskReady02",
+				"sounds/Nick/AskReady03",
+				"sounds/Nick/AskReady04",
+				"sounds/Nick/AskReady05",
+				"sounds/Nick/AskReady06",
+				"sounds/Nick/AskReady07",
+				"sounds/Nick/AskReady08",
+				"sounds/Nick/AskReady09"
+			]
+		},
+		"Nick.BattleCry_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/BattleCry01",
+				"sounds/Nick/BattleCry02",
+				"sounds/Nick/BattleCry03",
+				"sounds/Nick/BattleCry04"
+			]
+		},
+		"Nick.CallForRescue_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/CallForRescue01",
+				"sounds/Nick/CallForRescue02",
+				"sounds/Nick/CallForRescue03",
+				"sounds/Nick/CallForRescue04",
+				"sounds/Nick/CallForRescue05",
+				"sounds/Nick/CallForRescue06",
+				"sounds/Nick/CallForRescue07",
+				"sounds/Nick/CallForRescue08",
+				"sounds/Nick/CallForRescue09"
+			]
+		},
+		"Nick.CloseTheDoor_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/CloseTheDoor01",
+				"sounds/Nick/CloseTheDoor02",
+				"sounds/Nick/CloseTheDoor03",
+				"sounds/Nick/CloseTheDoor04",
+				"sounds/Nick/CloseTheDoor05",
+				"sounds/Nick/CloseTheDoor06",
+				"sounds/Nick/CloseTheDoor07",
+				"sounds/Nick/CloseTheDoor08",
+				"sounds/Nick/CloseTheDoor09"
+			]
+		},
+		"Nick.CoverMe_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/CoverMe01",
+				"sounds/Nick/CoverMe02",
+				"sounds/Nick/CoverMe03",
+				"sounds/Nick/CoverMe04",
+				"sounds/Nick/CoverMe05",
+				"sounds/Nick/CoverMe06",
+				"sounds/Nick/CoverMe07",
+				"sounds/Nick/CoverMe08"
+			]
+		},
+		"Nick.DeathScream_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/DeathScream01",
+				"sounds/Nick/DeathScream02",
+				"sounds/Nick/DeathScream03",
+				"sounds/Nick/DeathScream04",
+				"sounds/Nick/DeathScream05",
+				"sounds/Nick/DeathScream06"
+			]
+		},
+		"Nick_EmphaticGo_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/EmphaticGo02",
+				"sounds/Nick/EmphaticGo03",
+				"sounds/Nick/EmphaticGo04",
+				"sounds/Nick/EmphaticGo05",
+				"sounds/Nick/EmphaticGo06",
+				"sounds/Nick/EmphaticGo07"
+			]
+		},
+		"Nick.FollowMe_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/FollowMe01",
+				"sounds/Nick/FollowMe02",
+				"sounds/Nick/FollowMe03",
+				"sounds/Nick/FollowMe04",
+				"sounds/Nick/FollowMe05",
+				"sounds/Nick/FollowMe06",
+				"sounds/Nick/FollowMe07",
+				"sounds/Nick/FollowMe08",
+				"sounds/Nick/FollowMe09",
+				"sounds/Nick/FollowMe10",
+				"sounds/Nick/FollowMe11",
+				"sounds/Nick/FollowMe12",
+				"sounds/Nick/FollowMe13"
+			]
+		},
+		"Nick.Fall_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/fall02",
+				"sounds/Nick/fall03",
+				"sounds/Nick/fall04"
+			]
+		},
+		"Nick.FriendlyFire_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/FriendlyFire14",
+				"sounds/Nick/FriendlyFire15",
+				"sounds/Nick/FriendlyFire16",
+				"sounds/Nick/FriendlyFire17",
+				"sounds/Nick/FriendlyFire18"
+			]
+		},
+		"Nick.GettingRevived_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/GettingRevived04",
+				"sounds/Nick/GettingRevived05",
+				"sounds/Nick/GettingRevived06",
+				"sounds/Nick/GettingRevived07",
+				"sounds/Nick/GettingRevived08",
+				"sounds/Nick/GettingRevived09",
+				"sounds/Nick/GettingRevived10",
+				"sounds/Nick/GettingRevived11"
+			]
+		},
+		"Nick.GoingToDie_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/GoingToDie01",
+				"sounds/Nick/GoingToDie02",
+				"sounds/Nick/GoingToDie03",
+				"sounds/Nick/GoingToDie04",
+				"sounds/Nick/GoingToDie05",
+				"sounds/Nick/GoingToDie06",
+				"sounds/Nick/GoingToDie07"
+			]
+		},
+		"Nick.HealOther_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/HealOther02",
+				"sounds/Nick/HealOther03",
+				"sounds/Nick/HealOther04",
+				"sounds/Nick/HealOther05"
+			]
+		},
+		"Nick.Help_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/Help01",
+				"sounds/Nick/Help02",
+				"sounds/Nick/Help03",
+				"sounds/Nick/Help04",
+				"sounds/Nick/Help05"
+			]
+		},
+		"Nick.Hurrah_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/Hurrah01",
+				"sounds/Nick/Hurrah02",
+				"sounds/Nick/Hurrah03",
+				"sounds/Nick/Hurrah04",
+				"sounds/Nick/Hurrah05",
+				"sounds/Nick/Hurrah06",
+				"sounds/Nick/Hurrah07",
+				"sounds/Nick/Hurrah08",
+				"sounds/Nick/Hurrah09"
+			]
+		},
+		"Nick.HurryUp_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/HurryUp01",
+				"sounds/Nick/HurryUp02",
+				"sounds/Nick/HurryUp03",
+				"sounds/Nick/HurryUp04",
+				"sounds/Nick/HurryUp05"
+			]
+		},
+		"Nick.HurtCritical_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/HurtCritical04",
+				"sounds/Nick/HurtCritical05",
+				"sounds/Nick/HurtCritical06",
+				"sounds/Nick/HurtCritical07"
+			]
+		},
+		"Nick.HurtMajor_es" : {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/HurtMajor01",
+				"sounds/Nick/HurtMajor02",
+				"sounds/Nick/HurtMajor03",
+				"sounds/Nick/HurtMajor04",
+				"sounds/Nick/HurtMajor05",
+				"sounds/Nick/HurtMajor06",
+				"sounds/Nick/HurtMajor07",
+				"sounds/Nick/HurtMajor08",
+				"sounds/Nick/HurtMajor09"
+			]
+		},
+		"Nick.IncapacitatedInitial_es": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/Nick/IncapacitatedInitial02",
+				"sounds/Nick/IncapacitatedInitial03",
+				"sounds/Nick/IncapacitatedInitial04",
+				"sounds/Nick/IncapacitatedInjury01",
+				"sounds/Nick/IncapacitatedInjury02",
+				"sounds/Nick/IncapacitatedInjury03"
+			]
+		},
+		"Nick.Incoming_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/Incoming01",
+				"sounds/Nick/Incoming02",
+				"sounds/Nick/Incoming03",
+				"sounds/Nick/Incoming04",
+				"sounds/Nick/Incoming05",
+				"sounds/Nick/Incoming06",
+				"sounds/Nick/Incoming07"
+			]
+		},
+		"Nick.Laughter_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/Laughter01",
+				"sounds/Nick/Laughter03",
+				"sounds/Nick/Laughter06",
+				"sounds/Nick/Laughter15",
+				"sounds/Nick/Laughter16"
+			]
+		},
+		"Nick.Look_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/Look02",
+				"sounds/Nick/Look03",
+				"sounds/Nick/Look04",
+				"sounds/Nick/Look05",
+				"sounds/Nick/Look06",
+				"sounds/Nick/Look07"
+			]
+		},
+		"Nick.LookHere_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/LookHere01",
+				"sounds/Nick/LookHere02",
+				"sounds/Nick/LookHere03",
+				"sounds/Nick/LookHere04"
+			]
+		},
+		"Nick.NiceJob_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/NiceJob01",
+				"sounds/Nick/NiceJob02",
+				"sounds/Nick/NiceJob03",
+				"sounds/Nick/NiceJob04",
+				"sounds/Nick/NiceJob05",
+				"sounds/Nick/NiceJob06",
+				"sounds/Nick/NiceJob07",
+				"sounds/Nick/NiceJob08",
+				"sounds/Nick/NiceJob09",
+				"sounds/Nick/NiceJob10"
+			]
+		},
+		"Nick.No_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/No01",
+				"sounds/Nick/No02",
+				"sounds/Nick/No03",
+				"sounds/Nick/No04",
+				"sounds/Nick/No05",
+				"sounds/Nick/No06",
+				"sounds/Nick/No07",
+				"sounds/Nick/No08",
+				"sounds/Nick/No09",
+				"sounds/Nick/No10",
+				"sounds/Nick/No11",
+				"sounds/Nick/No12"
+			]
+		},
+		"Nick.ReviveFriend_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/ReviveFriend01",
+				"sounds/Nick/ReviveFriend02",
+				"sounds/Nick/ReviveFriend03",
+				"sounds/Nick/ReviveFriend04",
+				"sounds/Nick/ReviveFriend05",
+				"sounds/Nick/ReviveFriend06",
+				"sounds/Nick/ReviveFriend07",
+				"sounds/Nick/ReviveFriend08",
+				"sounds/Nick/ReviveFriend09",
+				"sounds/Nick/ReviveFriend10",
+				"sounds/Nick/ReviveFriend11",
+				"sounds/Nick/ReviveFriend12"
+			]
+		},
+		"Nick.Sorry_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/Sorry01",
+				"sounds/Nick/Sorry02",
+				"sounds/Nick/Sorry03",
+				"sounds/Nick/Sorry04",
+				"sounds/Nick/Sorry05",
+				"sounds/Nick/Sorry06",
+				"sounds/Nick/Sorry07"
+			]
+		},
+		"Nick.StayTogether_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/StayTogether01",
+				"sounds/Nick/StayTogether02",
+				"sounds/Nick/StayTogether03"
+			]
+		},
+		"Nick.StayTogetherInside_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/StayTogetherInside01",
+				"sounds/Nick/StayTogetherInside02",
+				"sounds/Nick/StayTogetherInside03"
+			]
+		},
+		"Nick.SuggestHealth_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/SuggestHealth01",
+				"sounds/Nick/SuggestHealth02",
+				"sounds/Nick/SuggestHealth03",
+				"sounds/Nick/SuggestHealth04",
+				"sounds/Nick/SuggestHealth05",
+				"sounds/Nick/SuggestHealth06"
+			]
+		},
+		"Nick.Thanks_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/Thanks01",
+				"sounds/Nick/Thanks03",
+				"sounds/Nick/Thanks04",
+				"sounds/Nick/Thanks05"
+			]
+		},
+		"Nick.TransitionClose_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/TransitionClose01",
+				"sounds/Nick/TransitionClose02",
+				"sounds/Nick/TransitionClose03",
+				"sounds/Nick/TransitionClose04",
+				"sounds/Nick/TransitionClose05",
+				"sounds/Nick/TransitionClose06",
+				"sounds/Nick/TransitionClose07",
+				"sounds/Nick/TransitionClose08"
+			]
+		},
+		"Nick.YellRun_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/YellRun01",
+				"sounds/Nick/YellRun02",
+				"sounds/Nick/YellRun03",
+				"sounds/Nick/YellRun04"
+			]
+		},
+		"Nick.Yes_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/Yes01",
+				"sounds/Nick/Yes02",
+				"sounds/Nick/Yes03",
+				"sounds/Nick/Yes04",
+				"sounds/Nick/Yes05",
+				"sounds/Nick/Yes06",
+				"sounds/Nick/Yes07",
+				"sounds/Nick/Yes08",
+				"sounds/Nick/Yes09",
+				"sounds/Nick/Yes10",
+				"sounds/Nick/Yes12"
+			]
+		},
+		"Nick.YouAreWelcome_es" : {
+			"category": "player",
+			"sounds": [
+				"sounds/Nick/YouAreWelcome01",
+				"sounds/Nick/YouAreWelcome02",
+				"sounds/Nick/YouAreWelcome03",
+				"sounds/Nick/YouAreWelcome04",
+				"sounds/Nick/YouAreWelcome05",
+				"sounds/Nick/YouAreWelcome06",
+				"sounds/Nick/YouAreWelcome07",
+				"sounds/Nick/YouAreWelcome08",
+				"sounds/Nick/YouAreWelcome09",
+				"sounds/Nick/YouAreWelcome10"
+			]
+		},
+		"Music.1" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/BadVoodoo"
+			]
+		},
+		"Music.2" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/DeadManWalking"
+			]
+		},
+		"Music.3" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/FarAway"
+			]
+		},
+		"Music.4" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/midnightride"
+			]
+		},
+		"Music.5" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/MuertosRojosAkaTheGunslingersLament"
+			]
+		},
+		"Music.6" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/onebadman"
+			]
+		},
+		"Music.7" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/rocketride"
+			]
+		},
+		"Music.8" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/ShowdownatEscalera"
+			]
+		},
+		"Music.9" : {
+			"category": "music",
+			"sounds": [
+				"sounds/Musica/StinkinZombies"
+			]
+		}
+	 
+	}
+}

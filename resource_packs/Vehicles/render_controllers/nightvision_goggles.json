@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.nightvision_goggles": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.nightvision_goggles_glow": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.glow"
+				}
+			],
+			"textures": [
+				"texture.glow"
+			],
+			"light_color_multiplier": 0.5,
+			"ignore_lighting": true
+		}
+	}
+}

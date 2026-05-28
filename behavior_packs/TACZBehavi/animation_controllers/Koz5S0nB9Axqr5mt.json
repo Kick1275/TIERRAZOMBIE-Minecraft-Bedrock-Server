@@ -1,0 +1,232 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.universalscope": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:normal",
+            "/hud @s reset crosshair"
+          ],
+          "transitions": [
+            {
+              "scope": "(query.get_equipped_item_name=='type81' || query.get_equipped_item_name=='type81_emp' || query.get_equipped_item_name=='m249' || query.get_equipped_item_name=='m249_emp' || query.get_equipped_item_name=='evolys' || query.get_equipped_item_name=='evolys_emp' || query.get_equipped_item_name=='mk14' || query.get_equipped_item_name=='mk14_emp' || query.get_equipped_item_name=='p320' || query.get_equipped_item_name=='p320_emp' || query.get_equipped_item_name=='qbz191' || query.get_equipped_item_name=='qbz191_emp' || query.get_equipped_item_name=='cp' || query.get_equipped_item_name=='cp_emp' || query.get_equipped_item_name=='m1014' || query.get_equipped_item_name=='m1014_emp' || query.get_equipped_item_name=='t50' || query.get_equipped_item_name=='t50_emp' || query.get_equipped_item_name=='sks' || query.get_equipped_item_name=='sks_emp' || query.get_equipped_item_name=='b93' || query.get_equipped_item_name=='b93_emp' || query.get_equipped_item_name=='qbz95' || query.get_equipped_item_name=='qbz95_emp' || query.get_equipped_item_name=='ump' || query.get_equipped_item_name=='ump_emp' || q.get_equipped_item_name=='m16a1' || q.get_equipped_item_name=='m16a1_emp' || q.get_equipped_item_name=='m16' || q.get_equipped_item_name=='m16_emp' || q.get_equipped_item_name=='vector' || q.get_equipped_item_name=='vector_emp' || q.get_equipped_item_name=='p90' || q.get_equipped_item_name=='p90_emp' || q.get_equipped_item_name=='g3' || q.get_equipped_item_name=='g3_emp' || q.get_equipped_item_name=='hk416' || q.get_equipped_item_name=='hk416_emp' || q.get_equipped_item_name=='deagle' || q.get_equipped_item_name=='deagle_emp' || q.get_equipped_item_name=='scarh' || q.get_equipped_item_name=='scarh_emp' || q.get_equipped_item_name=='mp5' || q.get_equipped_item_name=='mp5_emp' || q.get_equipped_item_name=='rpg' || q.get_equipped_item_name=='rpg_emp' || q.get_equipped_item_name=='aa12' || q.get_equipped_item_name=='aa12_emp' || q.get_equipped_item_name=='awp' || q.get_equipped_item_name=='awp_emp' || q.get_equipped_item_name=='scarl' || q.get_equipped_item_name=='scarl_emp' || q.get_equipped_item_name=='g17' || q.get_equipped_item_name=='g17_emp' || q.get_equipped_item_name=='m870' || q.get_equipped_item_name=='m870_emp' || q.get_equipped_item_name=='akm' || q.get_equipped_item_name=='akm_emp' || q.get_equipped_item_name=='m4a1' || q.get_equipped_item_name=='m4a1_emp' || q.get_equipped_item_name=='m1911' || q.get_equipped_item_name=='m1911_emp' || q.get_equipped_item_name=='g36' || q.get_equipped_item_name=='g36_emp' || q.get_equipped_item_name=='mp7' || q.get_equipped_item_name=='mp7_emp' || query.get_equipped_item_name=='deagleg' || query.get_equipped_item_name=='deagleg_emp' || query.get_equipped_item_name=='uzi' || query.get_equipped_item_name=='uzi_emp' || query.get_equipped_item_name=='db' || query.get_equipped_item_name=='db_emp' || q.get_equipped_item_name=='g18' || q.get_equipped_item_name=='g18_emp' || q.get_equipped_item_name=='saiga12' || q.get_equipped_item_name=='saiga12_emp' || q.get_equipped_item_name=='fal' || q.get_equipped_item_name=='fal_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1"
+            }
+          ]
+        },
+        "scope": {
+          "on_entry": [
+            "/hud @s hide crosshair"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='type81' && query.get_equipped_item_name!='type81_emp' && query.get_equipped_item_name!='m249' && query.get_equipped_item_name!='m249_emp' && query.get_equipped_item_name!='evolys' && query.get_equipped_item_name!='evolys_emp' && query.get_equipped_item_name!='mk14' && query.get_equipped_item_name!='mk14_emp' && query.get_equipped_item_name!='p320' && query.get_equipped_item_name!='p320_emp' && query.get_equipped_item_name!='qbz191' && query.get_equipped_item_name!='qbz191_emp' && query.get_equipped_item_name!='cp' && query.get_equipped_item_name!='cp_emp' && query.get_equipped_item_name!='m1014' && query.get_equipped_item_name!='m1014_emp' && query.get_equipped_item_name!='t50' && query.get_equipped_item_name!='t50_emp' && query.get_equipped_item_name!='sks' && query.get_equipped_item_name!='sks_emp' && query.get_equipped_item_name!='b93' && query.get_equipped_item_name!='b93_emp' && query.get_equipped_item_name!='qbz95' && query.get_equipped_item_name!='qbz95_emp' && query.get_equipped_item_name!='ump' && query.get_equipped_item_name!='ump_emp' && q.get_equipped_item_name!='m16a1' && q.get_equipped_item_name!='m16a1_emp' && q.get_equipped_item_name!='m16' && q.get_equipped_item_name!='m16_emp' && q.get_equipped_item_name!='vector' && q.get_equipped_item_name!='vector_emp' && q.get_equipped_item_name!='p90' && q.get_equipped_item_name!='p90_emp' && q.get_equipped_item_name!='g3' && q.get_equipped_item_name!='g3_emp' && q.get_equipped_item_name!='hk416' && q.get_equipped_item_name!='hk416_emp' && q.get_equipped_item_name!='deagle' && q.get_equipped_item_name!='deagle_emp' && q.get_equipped_item_name!='scarh' && q.get_equipped_item_name!='scarh_emp' && q.get_equipped_item_name!='mp5' && q.get_equipped_item_name!='mp5_emp' && q.get_equipped_item_name!='rpg' && q.get_equipped_item_name!='rpg_emp' && q.get_equipped_item_name!='aa12' && q.get_equipped_item_name!='aa12_emp' && q.get_equipped_item_name!='awp' && q.get_equipped_item_name!='awp_emp' && q.get_equipped_item_name!='scarl' && q.get_equipped_item_name!='scarl_emp' && q.get_equipped_item_name!='g17' && q.get_equipped_item_name!='g17_emp' && q.get_equipped_item_name!='m870' && q.get_equipped_item_name!='m870_emp' && q.get_equipped_item_name!='akm' && q.get_equipped_item_name!='akm_emp' && q.get_equipped_item_name!='m4a1' && q.get_equipped_item_name!='m4a1_emp' && q.get_equipped_item_name!='m1911' && q.get_equipped_item_name!='m1911_emp' && q.get_equipped_item_name!='g36' && q.get_equipped_item_name!='g36_emp' && q.get_equipped_item_name!='mp7' && q.get_equipped_item_name!='mp7_emp' && query.get_equipped_item_name!='deagleg' && query.get_equipped_item_name!='deagleg_emp' && query.get_equipped_item_name!='uzi' && query.get_equipped_item_name!='uzi_emp' && query.get_equipped_item_name!='db' && query.get_equipped_item_name!='db_emp' && q.get_equipped_item_name!='g18' && q.get_equipped_item_name!='g18_emp' && q.get_equipped_item_name!='saiga12' && q.get_equipped_item_name!='saiga12_emp' && q.get_equipped_item_name!='fal' && q.get_equipped_item_name!='fal_emp') || q.mark_variant == 2 || q.mark_variant == 1"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.awp.scope": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:normal"
+          ],
+          "transitions": [
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='elcan' && q.property('krep:ammoreload')!=1"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='acog' && q.property('krep:ammoreload')!=1"
+            },
+            {
+              "scope.standard_8": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='standard_8' && q.property('krep:ammoreload')!=1"
+            }
+          ]
+        },
+        "scope.elcan": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='awp' && query.get_equipped_item_name!='awp_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || q.property('krep:awpscope')=='coyote' || q.property('krep:awpscope')=='nothing'"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='acog'"
+            },
+            {
+              "scope.standard_8": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='standard_8'"
+            }
+          ]
+        },
+        "scope.acog": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='awp' && query.get_equipped_item_name!='awp_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || q.property('krep:awpscope')=='coyote' || q.property('krep:awpscope')=='nothing'"
+            },
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='elcan'"
+            },
+            {
+              "scope.standard_8": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='standard_8'"
+            }
+          ]
+        },
+        "scope.standard_8": {
+          "on_entry": [
+            "@s krep:scope8x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='awp' && query.get_equipped_item_name!='awp_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || q.property('krep:awpscope')=='coyote' || q.property('krep:awpscope')=='nothing'"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='acog'"
+            },
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:awpscope')=='elcan'"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.hk416.scope": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:normal"
+          ],
+          "transitions": [
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='hk416' || query.get_equipped_item_name=='hk416_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:hk416scope')=='elcan' && q.property('krep:ammoreload')!=1"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='hk416' || query.get_equipped_item_name=='hk416_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:hk416scope')=='acog' && q.property('krep:ammoreload')!=1"
+            }
+          ]
+        },
+        "scope.elcan": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='hk416' && query.get_equipped_item_name!='hk416_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || (q.property('krep:hk416scope')!='acog' && q.property('krep:hk416scope')!='elcan')"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='hk416' || query.get_equipped_item_name=='hk416_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:hk416scope')=='acog'"
+            }
+          ]
+        },
+        "scope.acog": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='hk416' && query.get_equipped_item_name!='hk416_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || (q.property('krep:hk416scope')!='acog' && q.property('krep:hk416scope')!='elcan')"
+            },
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='hk416' || query.get_equipped_item_name=='hk416_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:hk416scope')=='elcan'"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.m4a1.scope": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:normal"
+          ],
+          "transitions": [
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='m4a1' || query.get_equipped_item_name=='m4a1_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:m4a1scope')=='elcan' && q.property('krep:ammoreload')!=1"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='m4a1' || query.get_equipped_item_name=='m4a1_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:m4a1scope')=='acog' && q.property('krep:ammoreload')!=1"
+            }
+          ]
+        },
+        "scope.elcan": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='m4a1' && query.get_equipped_item_name!='m4a1_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || (q.property('krep:m4a1scope')!='acog' && q.property('krep:m4a1scope')!='elcan')"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='m4a1' || query.get_equipped_item_name=='m4a1_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:m4a1scope')=='acog'"
+            }
+          ]
+        },
+        "scope.acog": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='m4a1' && query.get_equipped_item_name!='m4a1_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || (q.property('krep:m4a1scope')!='acog' && q.property('krep:m4a1scope')!='elcan')"
+            },
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='m4a1' || query.get_equipped_item_name=='m4a1_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:m4a1scope')=='elcan'"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.akm.scope": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:normal"
+          ],
+          "transitions": [
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='akm' || query.get_equipped_item_name=='akm_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:akmscope')=='elcan' && q.property('krep:ammoreload')!=1"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='akm' || query.get_equipped_item_name=='akm_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:akmscope')=='acog' && q.property('krep:ammoreload')!=1"
+            }
+          ]
+        },
+        "scope.elcan": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='akm' && query.get_equipped_item_name!='akm_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || (q.property('krep:akmscope')!='acog' && q.property('krep:akmscope')!='elcan')"
+            },
+            {
+              "scope.acog": "(query.get_equipped_item_name=='akm' || query.get_equipped_item_name=='akm_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:akmscope')=='acog'"
+            }
+          ]
+        },
+        "scope.acog": {
+          "on_entry": [
+            "@s krep:scope4x"
+          ],
+          "transitions": [
+            {
+              "setup": "!query.is_sneaking || (query.get_equipped_item_name!='akm' && query.get_equipped_item_name!='akm_emp') || q.mark_variant == 2 || q.mark_variant == 1 || q.property('krep:ammoreload')==1 || (q.property('krep:akmscope')!='acog' && q.property('krep:akmscope')!='elcan')"
+            },
+            {
+              "scope.elcan": "(query.get_equipped_item_name=='akm' || query.get_equipped_item_name=='akm_emp') && query.is_sneaking && q.mark_variant != 2 && q.mark_variant != 1 && q.property('krep:akmscope')=='elcan'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "namespace": "hud",
+
+  "hud_crosshair1": {
+    "type": "image",
+    "texture": "textures/ui/crosshair1",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "size": [10, 10],
+    "offset": [0, 0]
+  },
+
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          { "hud_crosshair1@hud.hud_crosshair1": {} }
+        ]
+      }
+    ]
+  }
+}

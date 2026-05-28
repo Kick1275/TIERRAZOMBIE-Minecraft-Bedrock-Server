@@ -1,0 +1,43 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "rt:turret",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+        "default": "textures/elements/turret",
+        "objective": "textures/elements/turret_objective",
+        "off": "textures/elements/turret_off"
+      },
+      "geometry": {
+        "default": "geometry.turret"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.is_objective = query.property('rt:is_objective') == true;"
+        ],
+        "animate": [
+          "look_at_target",
+          "objective_turret_controller"
+        ]
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "objective_turret": "animation.turret_objective.particles",
+        "objective_turret_controller": "controller.animation.turret_objective"
+      },
+      "render_controllers": [
+        "controller.render.turret"
+      ],
+      "particle_effects": {
+        "rt_turret_objective_particle": "rt:objective_turret"
+      },
+			"spawn_egg": {
+				"texture": "spb_turret",
+				"texture_index": 0
+			}
+    }
+  }
+}

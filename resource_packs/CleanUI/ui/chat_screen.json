@@ -1,0 +1,76 @@
+{
+    "chat_background": {
+        "type": "image",
+        "size": [ "100%", "100%" ],
+        "texture": "textures/ui/screen_background",
+        "alpha": 0.35
+    },
+    "namespace": "chat",
+
+  "up_arrow": {
+     "type": "image",
+     "size": [ 14, 14 ],
+     "texture": "textures/ui/up_arrow"
+  },
+  "down_arrow": {
+     "type": "image",
+     "size": [ 14, 14 ],
+     "texture": "textures/ui/down_arrow"
+  },
+  "up_autocomplete": {
+     "type": "image",
+     "size": [ 14, 14],
+     "texture": "textures/ui/up_chevron"
+  },
+  "down_autocomplete": {
+     "type": "image",
+     "size": [ 14, 14],
+     "texture": "textures/ui/dropdown_chevron"
+  },
+  
+  "next_msg_button@chat.small_button": {
+
+     "$button_content": "chat.up_arrow",
+
+    "$pressed_button_name": "button.chat_next_message",
+    "$focus_id": "chat_settings_button_focus_id"
+  },
+  "prev_msg_button@chat.small_button": {
+     "$button_content": "chat.down_arrow",
+    "$pressed_button_name": "button.chat_previous_message",
+    "$focus_id": "chat_settings_button_focus_id"
+  },
+  "chat_auto_button@chat.small_button": {
+     "$button_content": "chat.down_autocomplete",
+    "$pressed_button_name": "button.chat_autocomplete",
+    "$focus_id": "chat_settings_button_focus_id"
+  },
+  "chat_auto_back_button@chat.small_button": {
+     "$button_content": "chat.up_autocomplete",
+    "$pressed_button_name": "button.chat_autocomplete_back",
+    "$focus_id": "chat_settings_button_focus_id"
+  },
+   "chat_bottom_panel": {
+      "modifications": [
+         {
+            "control_name": "chat_settings",
+            "operation": "insert_after",
+            "value": [
+               {
+                  "next_msg_button@chat.next_msg_button": {}
+                  
+               },
+               {
+                  "prev_msg_button@chat.prev_msg_button": {}
+               },
+               {
+                  "chat_auto_back_button@chat.chat_auto_back_button": {}
+               },
+               {
+                  "chat_auto_button@chat.chat_auto_button": {}
+               }
+            ]
+         }
+      ]
+   }
+}

@@ -1,0 +1,33 @@
+tile.rt:11x11_block.name=§dProtección de 11x11
+tile.rt:21x21_block.name=§dProtección de 21x21
+tile.rt:31x31_block.name=§dProtección de 31x31
+item.spawn_egg.entity.rt:protection_trader.name=Comerciante Protector
+item.spawn_egg.entity.rt:spb_guide_book.name=Guía de Protecciónes
+item.spawn_egg.entity.rt:turret.name=Torreta de Hierro
+item.rt:upgrade_protection=§eMejora de Protección
+
+proteccion.langcode.2= §f
+proteccion.langcode.3=§6[§e!§6] §g>§6>§r §cParte del area que quieres reclamar ya es de una Protección.
+proteccion.langcode.4=§6[§e!§6] §g>§6>§r §cNo puedes colocar Protecciónes en esta dimension.
+proteccion.langcode.7=
+proteccion.langcode.8=
+proteccion.langcode.9=§e¡Suscríbete a mi Patreon en §c§lpatreon.com/realtern§r§e para recibir actualizaciones exclusivas antes que nadie! Además, únete a mi Discord para mantenerte al tanto de todas las novedades. §cYT§r: Realtern Art.§r
+proteccion.langcode.10=§7Este mensaje solo aparecera una ves.
+proteccion.langcode.11=§6[§e!§6] §g>§6>§r §aLista blanca activada: §rCualquier jugador que interactúe con el bloque podrá construir y abrir cofres dentro de tu protección.
+proteccion.langcode.12=§6[§e!§6] §g>§6>§r §cLista blanca desactivada.
+proteccion.langcode.13=§6[§e!§6] §g>§6>§r §aTe uniste a esta protección.
+
+action.interact.protections=Remover
+action.interact.protections2=Abrir Lista blanca
+action.interact.protections3=Cerrar Lista blanca
+action.interact.protections4=Unirse
+action.interact.turret.mode1=Mode: §aNeutral§r
+action.interact.turret.mode2=Mode: §cHostil§r
+action.interact.turret.mode3=Mode: OFF
+
+entity.rt:protection_trader.name=Comerciante Protector
+entity.rt:turret.name=Torreta de Hierro
+
+gameMode.changed=Aquí %s.	#
+createWorldScreen.gameMode.survival=§aSI puedes construir	#
+createWorldScreen.gameMode.adventure=§cNO puedes construir	#

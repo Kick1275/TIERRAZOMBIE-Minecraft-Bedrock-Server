@@ -1,0 +1,1 @@
+import{PlayerUtil as m}from"server/modules/player_util.js";import{registerCommand as i}from"../register_commands.js";import{setPos1 as n}from"./pos1.js";const e={name:"hpos1",permission:"worldedit.selection.hpos",description:"commands.wedit:hpos1.description"};i(e,function(r,t){const o=m.traceForBlock(t);if(!o)throw"commands.wedit:jumpto.none";return n(r,o)});

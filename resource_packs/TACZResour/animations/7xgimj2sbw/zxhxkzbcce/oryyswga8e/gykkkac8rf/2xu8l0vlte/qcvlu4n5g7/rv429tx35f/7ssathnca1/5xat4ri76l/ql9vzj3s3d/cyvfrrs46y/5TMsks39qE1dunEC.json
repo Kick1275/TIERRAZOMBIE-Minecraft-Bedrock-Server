@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.minigun.tp": {
+			"loop": true,
+			"animation_length": 1.75,
+			"bones": {
+				"body": {
+					"rotation": [-12.5, 65, 0],
+					"position": [1, 0, 0]
+				},
+				"head": {
+					"rotation": ["q.is_sneaking ? 11.57881 : 0", "q.is_sneaking ? -56.7385 : 0", "q.is_sneaking ? -13.76772 : 0"]
+				},
+				"leftArm": {
+					"rotation": [-25, 0, 0],
+					"position": [-1, 0, -2]
+				},
+				"waist": {
+					"rotation": [
+						"query.is_swimming ? 0.0 : 0.0 + math.clamp(query.target_x_rotation, -45.0, 45.0) -this",
+						"query.is_swimming ? 0 : 0.0 + math.clamp(query.target_y_rotation, -50.0, 50.0) -this",
+						0
+					]
+				},
+				"rightArm": {
+					"rotation": [-10, 22.5, 0]
+				},
+				"Joints": {
+					"rotation": [25.8026, -62.14319, -27.48033],
+					"position": [7.31153, 8.5474, -7.64745],
+					"scale": 0.8
+				}
+			}
+		}
+	}
+}

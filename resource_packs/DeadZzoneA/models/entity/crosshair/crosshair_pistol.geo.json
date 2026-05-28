@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.crosshair_pistol",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "crosshair",
+					"parent": "head",
+					"pivot": [0, -0.5, -1],
+					"cubes": [
+						{"origin": [-0.5, -0.5, 0], "size": [1, 1, 0], "uv": [0, 2]},
+						{"origin": [-8.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 1]},
+						{"origin": [3.5, -0.5, 0], "size": [5, 1, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

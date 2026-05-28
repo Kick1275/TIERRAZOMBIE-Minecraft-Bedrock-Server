@@ -1,0 +1,90 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:missile_target",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.2,
+				"height": 0.2
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.01,
+				"time_down_event": {
+					"event": "af:despawn",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run event entity @e[type=af:missile_target,rm=1,r=5] af:despawn"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"libernia": {
+				"minecraft:type_family": {
+					"family": [
+						"libernia_target",
+						"libernia_missile",
+						"inanimate"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:type_family": {
+					"family": [
+						"telslakia_target",
+						"libernia_missile",
+						"inanimate"
+					]
+				}
+			}
+		}
+	}
+}

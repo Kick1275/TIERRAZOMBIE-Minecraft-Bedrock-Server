@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tz:npc_guardia1",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/Guardia1"
+			},
+			"geometry": {
+				"default": "geometry.npc_guardia1"
+			},
+			"render_controllers": [
+				"controller.render.npc_guardia1"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"Guardia_Inactivo": "animation.NpcGuardia1.Inactivo",
+				"Guardia_Interact": "animation.NpcGuardia1.Interact"
+			}
+		}
+	}
+}

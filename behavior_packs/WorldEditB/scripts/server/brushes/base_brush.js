@@ -1,0 +1,1 @@
+import{RawText as a}from"library/Minecraft.js";import t from"config.js";const y=new Map;class S{delete(){}assertSizeInRange(r){if(r>t.maxBrushRadius)throw a.translate("commands.wedit:brush.tooLarge").with(t.maxBrushRadius.toString())}toJSON(){return{id:this.id}}static parseJSON(r){return[]}}export{S as Brush,y as brushTypes};

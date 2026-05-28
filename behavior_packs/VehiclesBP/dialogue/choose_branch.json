@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "choose_branch",
+				"npc_name": "Arms Dealer",
+				"text": "Choose Arms Dealer's Branch.",
+				"buttons": [
+					{
+						"name": "Army",
+						"commands": [
+							"/tag @s add army",
+							"/execute as @s[tag=libernia] run event entity @s af:libernia_army",
+							"/execute as @s[tag=telslakia] run event entity @s af:telslakia_army",
+							"/playsound mob.villager.yes @a ~ ~ ~"
+						]
+					},
+					{
+						"name": "Airforce",
+						"commands": [
+							"/tag @s add air",
+							"/execute as @s[tag=libernia] run event entity @s af:libernia_air",
+							"/execute as @s[tag=telslakia] run event entity @s af:telslakia_air",
+							"/playsound mob.villager.yes @a ~ ~ ~"
+						]
+					}
+				],
+				"on_close_commands": [
+					"/playsound mob.villager.no @a ~ ~ ~"
+				]
+			}
+		]
+	}
+}

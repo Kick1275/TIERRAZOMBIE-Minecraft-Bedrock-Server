@@ -1,0 +1,836 @@
+{
+  "resource_pack_name": "deadzone addon",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "reloading_table": {
+      "textures": "textures/blocks/reloading_table"
+    },
+    "hesco_olive": {
+      "textures": "textures/blocks/hesco/hesco_bastion_olive"
+    },
+    "hesco_tan": {
+      "textures": "textures/blocks/hesco/hesco_bastion_tan"
+    },
+    "hesco_white": {
+      "textures": "textures/blocks/hesco/hesco_bastion_white"
+    },
+    "crate": {
+      "textures": "textures/blocks/crate/crate"
+    },
+    "crate_side": {
+      "textures": "textures/blocks/crate/crate_side"
+    },
+    "tiles_white": {
+      "textures": "textures/blocks/tiles_white"
+    },
+    "military_wall": {
+      "textures": "textures/blocks/military_wall"
+    },
+    "nz_fumo": {
+      "textures": "textures/blocks/fumo"
+    },
+    "cirno": {
+      "textures": "textures/blocks/cirno"
+    },
+    "sandbag_tan": {
+      "textures": "textures/blocks/sandbag/sandbag_tan"
+    },
+    "sandbag_olive": {
+      "textures": "textures/blocks/sandbag/sandbag_olive"
+    },
+    "sandbag_white": {
+      "textures": "textures/blocks/sandbag/sandbag_white"
+    },
+    "wood_chair": {
+      "textures": "textures/blocks/furniture/wood_chair"
+    },
+    "wood_table": {
+      "textures": "textures/blocks/furniture/wood_table"
+    },
+    "road_barrier": {
+      "textures": "textures/blocks/furniture/road_barrier"
+    },
+    "fire_light": {
+      "textures": "textures/blocks/empty"
+    },
+    "mcpe_wheat": {
+      "textures": "textures/blocks/wheat_stage_7"
+    },
+    "cartoon_box": {
+      "textures": "textures/blocks/loots/cartoon_box"
+    },
+    "cartoon_box_emp": {
+      "textures": "textures/blocks/loots/cartoon_box_emp"
+    },
+    "woodland_box": {
+      "textures": "textures/blocks/loots/woodland_box"
+    },
+    "police_case": {
+      "textures": "textures/blocks/loots/police_case"
+    },
+    "firefighter_box": {
+      "textures": "textures/blocks/loots/firefighter_box"
+    },
+    "medical_box": {
+      "textures": "textures/blocks/loots/medical_box"
+    },
+    "rare_box": {
+      "textures": "textures/blocks/loots/rare_box"
+    },
+    "sedan_block": {
+      "textures": "textures/entity/vehicles/sedan/sedan1"
+    },
+    "barrel_red": {
+      "textures": "textures/blocks/barrel/barrel_red"
+    },
+    "barrel_blue": {
+      "textures": "textures/blocks/barrel/barrel_blue"
+    },
+    "barrel_green": {
+      "textures": "textures/blocks/barrel/barrel_green"
+    },
+    "table_cloth_red": {
+      "textures": "textures/blocks/table_cloth/table_cloth_red"
+    },
+    "table_cloth_blue": {
+      "textures": "textures/blocks/table_cloth/table_cloth_blue"
+    },
+    "table_cloth_green": {
+      "textures": "textures/blocks/table_cloth/table_cloth_green"
+    },
+    "table_cloth_black": {
+      "textures": "textures/blocks/table_cloth/table_cloth_black"
+    },
+    "toilet": {
+      "textures": "textures/blocks/furniture/toilet"
+    },
+    "brick_big": {
+      "textures": "textures/blocks/brick_big"
+    },
+    "smooth_stone_brick": {
+      "textures": "textures/blocks/smooth_stone_brick"
+    },
+    "tiles_bnw": {
+      "textures": "textures/blocks/tiles_bnw"
+    },
+    "trash_can": {
+      "textures": "textures/blocks/furniture/trash_can"
+    },
+    "tv": {
+      "textures": "textures/blocks/furniture/tv"
+    },
+    "tv_old": {
+      "textures": "textures/blocks/furniture/tv_old"
+    },
+    "microwave": {
+      "textures": "textures/blocks/furniture/microwave"
+    },
+    "barbed_wires": {
+      "textures": "textures/blocks/barbed_wires"
+    },
+    "hazard_block": {
+      "textures": "textures/blocks/hazard_block"
+    },
+    "wood_barricade": {
+      "textures": "textures/blocks/furniture/wood_barricade"
+    },
+    "office_chair_blue": {
+      "textures": "textures/blocks/office_chair/office_chair_blue"
+    },
+    "office_chair_red": {
+      "textures": "textures/blocks/office_chair/office_chair_red"
+    },
+    "office_chair_green": {
+      "textures": "textures/blocks/office_chair/office_chair_green"
+    },
+    "office_chair_white": {
+      "textures": "textures/blocks/office_chair/office_chair_white"
+    },
+    "office_chair_black": {
+      "textures": "textures/blocks/office_chair/office_chair_black"
+    },
+    "office_chair_brown": {
+      "textures": "textures/blocks/office_chair/office_chair_brown"
+    },
+    "traffic_cone": {
+      "textures": "textures/blocks/furniture/traffic_cone"
+    },
+    "metal_rack_0": {
+      "textures": "textures/blocks/metal_rack/rack_0"
+    },
+    "metal_rack_1": {
+      "textures": "textures/blocks/metal_rack/rack_1"
+    },
+    "metal_rack_2": {
+      "textures": "textures/blocks/metal_rack/rack_2"
+    },
+    "metal_rack_3": {
+      "textures": "textures/blocks/metal_rack/rack_3"
+    },
+    "metal_rack_4": {
+      "textures": "textures/blocks/metal_rack/rack_4"
+    },
+    "metal_rack_5": {
+      "textures": "textures/blocks/metal_rack/rack_5"
+    },
+    "metal_rack_6": {
+      "textures": "textures/blocks/metal_rack/rack_6"
+    },
+    "metal_rack_7": {
+      "textures": "textures/blocks/metal_rack/rack_7"
+    },
+    "metal_rack_8": {
+      "textures": "textures/blocks/metal_rack/rack_8"
+    },
+    "metal_rack_9": {
+      "textures": "textures/blocks/metal_rack/rack_9"
+    },
+    "metal_rack_10": {
+      "textures": "textures/blocks/metal_rack/rack_10"
+    },
+    "metal_rack_11": {
+      "textures": "textures/blocks/metal_rack/rack_11"
+    },
+    "metal_rack_12": {
+      "textures": "textures/blocks/metal_rack/rack_12"
+    },
+    "metal_rack_13": {
+      "textures": "textures/blocks/metal_rack/rack_13"
+    },
+    "metal_rack_14": {
+      "textures": "textures/blocks/metal_rack/rack_14"
+    },
+    "metal_rack_15": {
+      "textures": "textures/blocks/metal_rack/rack_15"
+    },
+    "monitor": {
+      "textures": "textures/blocks/furniture/monitor"
+    },
+    "monitor_keyboard": {
+      "textures": "textures/blocks/furniture/monitor_keyboard"
+    },
+    "water_pump_blue": {
+      "textures": "textures/blocks/water_pump/water_pump_blue"
+    },
+    "water_pump_red": {
+      "textures": "textures/blocks/water_pump/water_pump_blue"
+    },
+    "water_pump_green": {
+      "textures": "textures/blocks/water_pump/water_pump_green"
+    },
+    "water_pump_black": {
+      "textures": "textures/blocks/water_pump/water_pump_black"
+    },
+    "monobloc_chair_black": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_black"
+    },
+    "monobloc_chair_tan": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_tan"
+    },
+    "monobloc_chair_white": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_white"
+    },
+    "monobloc_chair_blue": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_blue"
+    },
+    "monobloc_chair_red": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_red"
+    },
+    "monobloc_chair_green": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_green"
+    },
+    "monobloc_chair_yellow": {
+      "textures": "textures/blocks/monobloc/monobloc_chair_yellow"
+    },
+    "bear_trap": {
+      "textures": "textures/blocks/furniture/bear_trap"
+    },
+    "landmine": {
+      "textures": "textures/blocks/furniture/landmine"
+    },
+    "supply_drop": {
+      "textures": "textures/blocks/supply/supply0"
+    },
+    "supply_drop_emp": {
+      "textures": "textures/blocks/supply/supply_emp"
+    },
+    "paper_0": {
+      "textures": "textures/blocks/papers/paper_0"
+    },
+    "paper_1": {
+      "textures": "textures/blocks/papers/paper_1"
+    },
+    "paper_2": {
+      "textures": "textures/blocks/papers/paper_2"
+    },
+    "paper_3": {
+      "textures": "textures/blocks/papers/paper_3"
+    },
+    "paper_4": {
+      "textures": "textures/blocks/papers/paper_4"
+    },
+    "paper_5": {
+      "textures": "textures/blocks/papers/paper_5"
+    },
+    "paper_6": {
+      "textures": "textures/blocks/papers/paper_6"
+    },
+    "paper_7": {
+      "textures": "textures/blocks/papers/paper_7"
+    },
+    "paper_8": {
+      "textures": "textures/blocks/papers/paper_8"
+    },
+    "paper_9": {
+      "textures": "textures/blocks/papers/paper_9"
+    },
+    "radio": {
+      "textures": "textures/blocks/furniture/radio"
+    },
+    "radio_ham": {
+      "textures": "textures/blocks/furniture/radio_ham"
+    },
+    "sink": {
+      "textures": "textures/blocks/furniture/sink"
+    },
+    "bath_tiles": {
+      "textures": "textures/blocks/bath_tiles"
+    },
+    "artic_box": {
+      "textures": "textures/blocks/loots/artic_box"
+    },
+    "desert_box": {
+      "textures": "textures/blocks/loots/desert_box"
+    },
+    "food_crate": {
+      "textures": "textures/blocks/loots/food_crate"
+    },
+    "food_crate_emp": {
+      "textures": "textures/blocks/loots/food_crate_emp"
+    },
+    "toolbox": {
+      "textures": "textures/blocks/loots/toolbox"
+    },
+    "iron_bars": {
+      "textures": {
+        "variations": [
+          {
+            "path": "textures/blocks/iron_bars",
+            "weight": 90
+          },
+          {
+            "path": "textures/blocks/iron_bars/iron_bars_0",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/iron_bars/iron_bars_1",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/iron_bars/iron_bars_2",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/iron_bars/iron_bars_3",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/iron_bars/iron_bars_4",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/iron_bars/iron_bars_5",
+            "weight": 35
+          }
+        ]
+      }
+    },
+    "short_grass": {
+      "textures": {
+        "variations": [
+          {
+            "path": "textures/blocks/tallgrass",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_1",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_2",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_3",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_4",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_5",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_6",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_7",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_8",
+            "weight": 50
+          },
+          {
+            "path": "textures/blocks/grass/grass_9",
+            "weight": 50
+          }
+        ]
+      }
+    },
+    "brick": {
+      "textures": {
+        "variations": [
+          {
+            "path": "textures/blocks/brick/brick",
+            "weight": 90
+          },
+          {
+            "path": "textures/blocks/brick/brick_1",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_2",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_3",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_4",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_5",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_6",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_7",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_8",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_9",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_10",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_11",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_12",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_13",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_14",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_15",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_16",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_17",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_18",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/brick/brick_19",
+            "weight": 35
+          }
+        ]
+      }
+    },
+    "barrel_explosive": {
+      "textures": "textures/blocks/barrel/barrel_explosive"
+    },
+    "barrel_yellow": {
+      "textures": "textures/blocks/barrel/barrel_yellow"
+    },
+    "barrel_explosive_damage": {
+      "textures": "textures/blocks/barrel/barrel_explosive_damage"
+    },
+    "construction_barrier": {
+      "textures": "textures/blocks/furniture/construction_barrier"
+    },
+    "water_pump": {
+      "textures": "textures/blocks/furniture/water_pump"
+    },
+    "crowd_fence": {
+      "textures": "textures/blocks/furniture/crowd_fence"
+    },
+    "worklight_off": {
+      "textures": "textures/blocks/worklight/worklight_off"
+    },
+    "worklight_on": {
+      "textures": "textures/blocks/worklight/worklight_on"
+    },
+    "exit_sign": {
+      "textures": "textures/blocks/sign/exit_sign"
+    },
+    "traffic_rod": {
+      "textures": "textures/blocks/sign/traffic_rod"
+    },
+    "traffic_stop": {
+      "textures": "textures/blocks/sign/traffic_stop"
+    },
+    "traffic_becareful": {
+      "textures": "textures/blocks/sign/traffic_becareful"
+    },
+    "traffic_no_p": {
+      "textures": "textures/blocks/sign/traffic_no_p"
+    },
+    "traffic_parking": {
+      "textures": "textures/blocks/sign/traffic_parking"
+    },
+    "traffic_no_entry": {
+      "textures": "textures/blocks/sign/traffic_no_entry"
+    },
+    "traffic_question": {
+      "textures": "textures/blocks/sign/traffic_question"
+    },
+    "traffic_turn_left": {
+      "textures": "textures/blocks/sign/traffic_turn_left"
+    },
+    "traffic_turn_right": {
+      "textures": "textures/blocks/sign/traffic_turn_right"
+    },
+    "traffic_section_right": {
+      "textures": "textures/blocks/sign/traffic_section_right"
+    },
+    "traffic_section_left": {
+      "textures": "textures/blocks/sign/traffic_section_left"
+    },
+    "traffic_intersection": {
+      "textures": "textures/blocks/sign/traffic_intersection"
+    },
+    "graffiti": {
+      "textures": {
+        "path": "textures/blocks/papers/paper_0",
+        "variations": [
+          {
+            "path": "textures/blocks/graffiti/graffiti_0",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/graffiti/graffiti_1",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/graffiti/graffiti_2",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/graffiti/graffiti_3",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/graffiti/graffiti_4",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/graffiti/graffiti_5",
+            "weight": 35
+          },
+          {
+            "path": "textures/blocks/graffiti/graffiti_6",
+            "weight": 35
+          }
+        ]
+      }
+    },
+    "graffiti_0": {
+      "textures": "textures/blocks/graffiti/graffiti_0"
+    },
+    "graffiti_1": {
+      "textures": "textures/blocks/graffiti/graffiti_1"
+    },
+    "graffiti_2": {
+      "textures": "textures/blocks/graffiti/graffiti_2"
+    },
+    "graffiti_3": {
+      "textures": "textures/blocks/graffiti/graffiti_3"
+    },
+    "graffiti_4": {
+      "textures": "textures/blocks/graffiti/graffiti_4"
+    },
+    "graffiti_5": {
+      "textures": "textures/blocks/graffiti/graffiti_5"
+    },
+    "graffiti_6": {
+      "textures": "textures/blocks/graffiti/graffiti_6"
+    },
+    "trash_bin": {
+      "textures": "textures/blocks/furniture/trash_bin"
+    },
+    "caution_block": {
+      "textures": "textures/blocks/caution_block"
+    },
+    "trace_plate": {
+      "textures": "textures/blocks/trace_plate"
+    },
+    "radio_1": {
+      "textures": "textures/blocks/radio/radio_1"
+    },
+    "radio_2": {
+      "textures": "textures/blocks/radio/radio_2"
+    },
+    "radio_3": {
+      "textures": "textures/blocks/radio/radio_3"
+    },
+    "radio_4": {
+      "textures": "textures/blocks/radio/radio_4"
+    },
+    "radio_5": {
+      "textures": "textures/blocks/radio/radio_5"
+    },
+    "radio_6": {
+      "textures": "textures/blocks/radio/radio_6"
+    },
+    "radio_7": {
+      "textures": "textures/blocks/radio/radio_7"
+    },
+    "radio_8": {
+      "textures": "textures/blocks/radio/radio_8"
+    },
+    "radio_9": {
+      "textures": "textures/blocks/radio/radio_9"
+    },
+    "radio_0": {
+      "textures": "textures/blocks/radio/radio_10"
+    },
+    "street_white": {
+      "textures": "textures/blocks/street_bench/street_white"
+    },
+    "street_blue": {
+      "textures": "textures/blocks/street_bench/street_blue"
+    },
+    "street_red": {
+      "textures": "textures/blocks/street_bench/street_red"
+    },
+    "street_green": {
+      "textures": "textures/blocks/street_bench/street_green"
+    },
+    "folding_brown": {
+      "textures": "textures/blocks/folding_chair/folding_brown"
+    },
+    "folding_green": {
+      "textures": "textures/blocks/folding_chair/folding_green"
+    },
+    "folding_blue": {
+      "textures": "textures/blocks/folding_chair/folding_blue"
+    },
+    "folding_red": {
+      "textures": "textures/blocks/folding_chair/folding_red"
+    },
+    "ceiling_light_off": {
+      "textures": "textures/blocks/ceiling_light/ceiling_light_off"
+    },
+    "ceiling_light_on": {
+      "textures": "textures/blocks/ceiling_light/ceiling_light_on"
+    },
+    "corrugated_metal": {
+      "textures": "textures/blocks/corrugated_metal"
+    },
+    "corrugated_metal_rusty": {
+      "textures": "textures/blocks/corrugated_metal_rusty"
+    },
+    "display_rack_bottom": {
+      "textures": "textures/blocks/display_rack/display_rack_bottom"
+    },
+    "display_rack_top": {
+      "textures": "textures/blocks/display_rack/display_rack_top"
+    },
+    "nail_trap": {
+      "textures": "textures/blocks/furniture/nail_trap"
+    },
+    "wood_stake": {
+      "textures": "textures/blocks/furniture/wood_stake"
+    },
+    "caution_road_barrier": {
+      "textures": "textures/blocks/furniture/caution_road_barrier"
+    },
+    "old_chest": {
+      "textures": "textures/blocks/loots/old_chest"
+    },
+    "barrier_wall": {
+      "textures": "textures/blocks/furniture/barrier_wall"
+    },
+    "barrier_wall_caution": {
+      "textures": "textures/blocks/furniture/barrier_wall_caution"
+    },
+    "plastic_white": {
+      "textures": "textures/blocks/plastic_table/plastic_white"
+    },
+    "plastic_yellow": {
+      "textures": "textures/blocks/plastic_table/plastic_yellow"
+    },
+    "plastic_red": {
+      "textures": "textures/blocks/plastic_table/plastic_red"
+    },
+    "plastic_green": {
+      "textures": "textures/blocks/plastic_table/plastic_green"
+    },
+    "plastic_blue": {
+      "textures": "textures/blocks/plastic_table/plastic_blue"
+    },
+    "plastic_black": {
+      "textures": "textures/blocks/plastic_table/plastic_black"
+    },
+    "plastic_tan": {
+      "textures": "textures/blocks/plastic_table/plastic_tan"
+    },
+    "filing_cabinets": {
+      "textures": "textures/blocks/filing_cabinet/filing_cabinets"
+    },
+    "washing_machines": {
+      "textures": "textures/blocks/washing_machine/washing_machines"
+    },
+    "flag_fvla": {
+      "textures": "textures/blocks/flag/fvla_flag"
+    },
+    "flag_vostrovia": {
+      "textures": "textures/blocks/flag/vostrovia_flag"
+    },
+    "flag_nekoi": {
+      "textures": "textures/blocks/flag/nekoi_flag"
+    },
+    "server_button": {
+      "textures": "textures/blocks/server_button"
+    },
+    "server_button_delay": {
+      "textures": "textures/blocks/server_button_delay"
+    },
+    "vending_popsi": {
+      "textures": "textures/blocks/vending_machine/vending_popsi"
+    },
+    "kitchen_cabinet": {
+      "textures": "textures/blocks/kitchen/kitchen_cabinet"
+    },
+    "kitchen_counter": {
+      "textures": "textures/blocks/kitchen/kitchen_counter"
+    },
+    "kitchen_sink": {
+      "textures": "textures/blocks/kitchen/kitchen_sink"
+    },
+    "tiles_red": {
+      "textures": "textures/blocks/tiles_red"
+    },
+    "tiles_checker_red": {
+      "textures": "textures/blocks/tiles_checker_red"
+    },
+    "standard_locker_white": {
+      "textures": "textures/blocks/locker/standard_locker_white"
+    },
+    "standard_locker_red": {
+      "textures": "textures/blocks/locker/standard_locker_red"
+    },
+    "standard_locker_gray": {
+      "textures": "textures/blocks/locker/standard_locker_gray"
+    },
+    "standard_locker_tan": {
+      "textures": "textures/blocks/locker/standard_locker_tan"
+    },
+    "standard_locker_blue": {
+      "textures": "textures/blocks/locker/standard_locker_blue"
+    },
+    "standard_locker_green": {
+      "textures": "textures/blocks/locker/standard_locker_green"
+    },
+    "standard_locker_yellow": {
+      "textures": "textures/blocks/locker/standard_locker_yellow"
+    },
+    "multi_locker_white": {
+      "textures": "textures/blocks/locker/multi_locker_white"
+    },
+    "multi_locker_red": {
+      "textures": "textures/blocks/locker/multi_locker_red"
+    },
+    "multi_locker_gray": {
+      "textures": "textures/blocks/locker/multi_locker_gray"
+    },
+    "multi_locker_tan": {
+      "textures": "textures/blocks/locker/multi_locker_tan"
+    },
+    "multi_locker_blue": {
+      "textures": "textures/blocks/locker/multi_locker_blue"
+    },
+    "multi_locker_green": {
+      "textures": "textures/blocks/locker/multi_locker_green"
+    },
+    "multi_locker_yellow": {
+      "textures": "textures/blocks/locker/multi_locker_yellow"
+    },
+    "dual_locker_white": {
+      "textures": "textures/blocks/locker/dual_locker_white"
+    },
+    "dual_locker_red": {
+      "textures": "textures/blocks/locker/dual_locker_red"
+    },
+    "dual_locker_gray": {
+      "textures": "textures/blocks/locker/dual_locker_gray"
+    },
+    "dual_locker_tan": {
+      "textures": "textures/blocks/locker/dual_locker_tan"
+    },
+    "dual_locker_blue": {
+      "textures": "textures/blocks/locker/dual_locker_blue"
+    },
+    "dual_locker_green": {
+      "textures": "textures/blocks/locker/dual_locker_green"
+    },
+    "dual_locker_yellow": {
+      "textures": "textures/blocks/locker/dual_locker_yellow"
+    },
+    "fridge": {
+      "textures": "textures/blocks/furniture/fridge"
+    },
+    "wardrobe": {
+      "textures": "textures/blocks/furniture/wardrobe"
+    },
+    "wardrobe_dark": {
+      "textures": "textures/blocks/furniture/wardrobe_dark"
+    },
+    "camo_block_woodland": {
+      "textures": "textures/blocks/camo/woodland_camo"
+    }
+  }
+}

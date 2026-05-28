@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nightvision_goggles.active": {
+			"loop": true,
+			"bones": {
+				"goggles": {
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.nightvision_goggles.inactive": {
+			"loop": true,
+			"bones": {
+				"tint": {
+					"position": [
+						0,
+						32,
+						0
+					],
+					"scale": 0
+				}
+			}
+		}
+	}
+}

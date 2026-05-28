@@ -1,0 +1,60 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.player.third_person": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    },
+    "controller.render.player.first_person": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    },
+    "controller.render.player.first_person_spectator": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.spectator"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    },
+    "controller.render.player.third_person_spectator": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.spectator"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    },
+    "controller.render.player.map": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    }
+  }
+}

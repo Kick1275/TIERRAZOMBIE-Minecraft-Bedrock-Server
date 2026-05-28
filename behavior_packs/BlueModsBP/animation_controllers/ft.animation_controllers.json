@@ -1,0 +1,8 @@
+//░███░░██░░██░░█░████░██░░██░░████░░████░░░███░
+//░█░░█░█░░░░█░░█░█░░░░██░░██░█░░░█░░█░░░█░█░░█░
+//░███░░█░░░░█░░█░███░░██░░██░█░░░░█░█░░░█░██░░░
+//░█░░█░█░░░░█░░█░█░░░░█░██░█░█░░░░█░█░░░█░░░█░░
+//░█░░█░█░░█░█░░█░█░░█░█░██░█░█░░░█░░█░░░█░█░░█░
+//░███░░████░███░░████░█░█░░█░░███░░░████░░███░░
+// https://dsc.gg/bluemods
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.commands":{"states":{"default":{"transitions":[{"command":"query.is_alive"}]},"command":{"on_entry":["/execute as @e[type=bluemods:ft] run /tp @s ~ ~ ~","/effect @s clear"],"transitions":[{"default":"query.is_alive"}]}}}}}

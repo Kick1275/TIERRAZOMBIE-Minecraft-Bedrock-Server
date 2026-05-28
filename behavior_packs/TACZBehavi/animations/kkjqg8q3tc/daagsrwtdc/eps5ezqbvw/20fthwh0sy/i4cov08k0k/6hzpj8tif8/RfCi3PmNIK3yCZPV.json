@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.hk416.stop": {
+      "loop": true,
+      "animation_length": 0.1,
+      "timeline": {
+        "0.0": [
+          "/scriptevent krep:stop_hk416_shoot",
+          "/scriptevent krep:stop_hk416_suppress"
+        ]
+      }
+    }
+  }
+}

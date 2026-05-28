@@ -1,0 +1,13 @@
+clear @s[m=!c,scores={p320=12},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 1
+clear @s[m=!c,scores={p320=11},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 2
+clear @s[m=!c,scores={p320=10},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 3
+clear @s[m=!c,scores={p320=9},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 4
+clear @s[m=!c,scores={p320=8},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 5
+clear @s[m=!c,scores={p320=7},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 6
+clear @s[m=!c,scores={p320=6},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 7
+clear @s[m=!c,scores={p320=5},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 8
+clear @s[m=!c,scores={p320=4},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 9
+clear @s[m=!c,scores={p320=3},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 10
+clear @s[m=!c,scores={p320=2},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 11
+clear @s[m=!c,scores={p320=1},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 12
+clear @s[m=!c,scores={p320=0},hasitem={item=krep:ammoboxc,quantity=0}] krep:acp45 0 13

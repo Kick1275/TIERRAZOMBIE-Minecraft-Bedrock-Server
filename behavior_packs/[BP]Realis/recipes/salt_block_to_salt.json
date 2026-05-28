@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.70",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "efm:salt_block_to_salt"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "efm:salt_block",
+				"count": 1
+			}
+		],
+		"unlock": {
+			"context": "PlayerInWater"
+		},
+		"priority": 0,
+		"result": {
+			"count": 4,
+			"item": "_efm:salt"
+		}
+	}
+}

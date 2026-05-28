@@ -1,0 +1,151 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.helicopter.rotor": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"propeller": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							360,
+							0
+						]
+					}
+				},
+				"tail_blade": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							360,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "spin"
+				},
+				"0.0833": {
+					"effect": "spin"
+				},
+				"0.1667": {
+					"effect": "spin"
+				},
+				"0.25": {
+					"effect": "spin"
+				}
+			}
+		},
+		"animation.helicopter.rotations": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						"q.modified_move_speed*30",
+						0,
+						"query.yaw_speed*-0.3"
+					]
+				}
+			}
+		},
+		"animation.helicopter.fly": {
+			"loop": true,
+			"animation_length": 10,
+			"bones": {
+				"main": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.75": {
+							"post": [
+								2.8568,
+								0.01558,
+								-1.07138
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								5,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.5": {
+							"post": [
+								1.32609,
+								-0.16005,
+								1.9184
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"6.25": {
+							"post": [
+								-2.33163,
+								-0.4222,
+								-3.66219
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"8.0": {
+							"post": [
+								-1.30135,
+								0.09688,
+								2.95446
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"10.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.helicopter.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 3.3
+				}
+			}
+		},
+		"animation.helicopter.look": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"rotation": [
+						"q.target_x_rotation-this",
+						"q.target_y_rotation-this",
+						0
+					]
+				}
+			}
+		}
+	}
+}

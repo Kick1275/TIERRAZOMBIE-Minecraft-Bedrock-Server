@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ump.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.5,
+      "timeline": {
+        "2.4": [
+          "/scoreboard players set @s[scores={ump=27..}] ump 26",
+          "/function ump"
+        ],
+        "2.3": [
+          "/function umpreload",
+          "/event entity @s krep:ump_reload"
+        ]
+      }
+    }
+  }
+}

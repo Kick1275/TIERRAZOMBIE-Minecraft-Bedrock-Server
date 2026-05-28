@@ -1,0 +1,301 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:sam_turret",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"on": {
+				"minecraft:shooter": {
+					"def": "af:sam_missile<af:roar>"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 2,
+					"attack_interval": 10,
+					"attack_radius": 64,
+					"burst_shots": 4,
+					"burst_interval": 2.5
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:wrench",
+										"domain": "hand"
+									}
+								],
+								"event": "af:off",
+								"target": "self"
+							}
+						},
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:manual",
+										"domain": "hand"
+									}
+								],
+								"event": "af:manual",
+								"target": "self"
+							}
+						}
+					]
+				}
+			},
+			"off": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:wrench",
+										"domain": "hand"
+									}
+								],
+								"event": "af:on",
+								"target": "self"
+							}
+						},
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:manual",
+										"domain": "hand"
+									}
+								],
+								"event": "af:manual",
+								"target": "self"
+							}
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"telslakia",
+					"vehicle",
+					"c_ram"
+				]
+			},
+			"minecraft:health": {
+				"value": 1150
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 3.5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:on_death": {
+				"event": "af:destroy_base",
+				"target": "self"
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"test": "on_ground",
+								"subject": "self",
+								"value": false
+							}
+						],
+						"event": "af:destroy_self",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": true
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"within_radius": 128,
+				"entity_types": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "libernia"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "stealth",
+									"operator": "!="
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "aerial"
+								}
+							]
+						},
+						"max_dist": 128
+					}
+				],
+				"reselect_targets": true,
+				"must_see": false,
+				"target_search_height": 128,
+				"scan_interval": 50
+			},
+			"minecraft:movement.generic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_path_from_air": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:follow_range": {
+				"value": 128
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/sam_turret.json"
+			},
+			"minecraft:default_look_angle": {
+				"value": -25
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "minecraft:iron_ingot",
+						"heal_amount": 15
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia"
+										}
+									]
+								}
+							]
+						},
+						"deals_damage": false
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"af:on": {
+				"add": {
+					"component_groups": [
+						"on"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"off"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar SAM ACTIVATED"
+					]
+				}
+			},
+			"af:off": {
+				"add": {
+					"component_groups": [
+						"off"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"on"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar SAM DEACTIVATED"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"on"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar Will drop itself on death.",
+						"summon af:c_ram_base"
+					]
+				}
+			},
+			"af:destroy_base": {
+				"queue_command": {
+					"command": [
+						"kill @e[r=1,type=af:c_ram_base]",
+						"particle af:explosion_dust ~ ~ ~"
+					]
+				}
+			},
+			"af:destroy_self": {
+				"queue_command": {
+					"command": [
+						"kill @e[r=1,type=af:c_ram]"
+					]
+				}
+			},
+			"af:start_roar": {
+				"queue_command": {
+					"command": [
+						"summon af:c_ram_knockback",
+						"camerashake add @p[r=16] 0.1 0.1 rotational"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar will fire at enemy vehicles, can be picked up on destruction, toggle with Wrench."
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:throttle"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"P": {
+				"item": "minecraft:redstone"
+			},
+			"N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"RRR",
+			"N N",
+			"RPR"
+		],
+		"result": {
+			"item": "af:throttle",
+			"count": 1
+		}
+	}
+}

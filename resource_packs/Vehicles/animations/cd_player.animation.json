@@ -1,0 +1,157 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cd_player.enter": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"cd": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [
+								-10,
+								1,
+								-1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": {
+							"post": [
+								-13.3545,
+								1.01835,
+								4.06012
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.625": [
+							-6.90759,
+							-4.45354,
+							2.94693
+						],
+						"0.8333": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": {
+							"post": [
+								0,
+								3,
+								-6
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [
+								0,
+								3,
+								-6
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8333": [
+							0,
+							1.1,
+							0
+						],
+						"1.0": [
+							0,
+							1.1,
+							0
+						]
+					},
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							1,
+							1,
+							1
+						],
+						"1.0": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						}
+					}
+				},
+				"lid": {
+					"rotation": {
+						"0.0": [
+							-20,
+							0,
+							0
+						],
+						"0.8333": [
+							-20,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.cd_player.open": {
+			"loop": true,
+			"bones": {
+				"lid": {
+					"rotation": [
+						-20,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.cd_player.close": {
+			"loop": true,
+			"bones": {
+				"lid": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

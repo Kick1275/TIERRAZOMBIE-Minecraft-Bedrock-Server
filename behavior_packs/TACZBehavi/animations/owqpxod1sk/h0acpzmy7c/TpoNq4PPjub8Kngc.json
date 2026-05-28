@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.aa12.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 4.0,
+      "timeline": {
+        "3.9": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:aa12 1 0",
+          "/scoreboard players set @s[scores={aa12=11..}] aa12 10",
+          "/function aa12"
+        ],
+        "3.8": [
+          "/function aa12reload",
+          "/event entity @s krep:aa12_reload"
+        ]
+      }
+    }
+  }
+}

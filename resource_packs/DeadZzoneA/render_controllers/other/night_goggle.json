@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.night_goggle": {
+      "textures": [
+        "Texture.night_goggle"
+      ],
+      "geometry": "geometry.night_goggle",
+    "is_hurt_color": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "on_fire_color": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+      "materials": [
+        {
+          "*": "Material.night_vision"
+        }
+      ],
+      "light_color_multiplier": 1.5,
+      "ignore_lighting": true
+    }
+  }
+}

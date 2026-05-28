@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.uaz.seat": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-84.87927, 12.4517, -2.04127]
+				},
+				"rightArm": {
+					"rotation": [-84.92331, -9.96157, 1.79515]
+				}
+			}
+		}
+	}
+}

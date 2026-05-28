@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:charged_tnt"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "minecraft:tnt"
+			}
+		},
+		"pattern": [
+			"NNN",
+			"NNN",
+			"NNN"
+		],
+		"result": {
+			"item": "af:charged_tnt",
+			"count": 1
+		}
+	}
+}

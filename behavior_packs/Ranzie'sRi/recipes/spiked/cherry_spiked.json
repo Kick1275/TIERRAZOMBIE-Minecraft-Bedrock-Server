@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:cherry_spiked"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "BAB",
+      "BAB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stick"
+      },
+      "B": {
+        "item": "minecraft:cherry_log"
+      }
+    },
+    "result": {
+      "item": "ranzie:cherry_spiked_fence",
+      "count": 4
+    }
+  }
+}

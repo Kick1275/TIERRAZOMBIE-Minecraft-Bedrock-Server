@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:flare_entity",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/flare_entity"
+			},
+			"geometry": {
+				"default": "geometry.ap_shell"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"move": "animation.arrow.move",
+				"particle": "controller.animation.particle"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.shake = query.shake_time - query.frame_alpha;",
+					"variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+				],
+				"animate": [
+					"move",
+					"particle"
+				]
+			},
+			"particle_effects": {
+				"particle": "af:shell_smoke"
+			}
+		}
+	}
+}

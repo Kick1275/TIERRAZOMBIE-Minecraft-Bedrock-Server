@@ -1,0 +1,50 @@
+//bridge-file-version: #72
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:buggy",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/vehicles/buggy"
+			},
+			"geometry": {
+				"default": "geometry.buggy"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"turn",
+					"terrain",
+					"smoke",
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.buggy.drive",
+				"turn": "animation.buggy.turn",
+				"down": "animation.buggy.down",
+				"up": "animation.buggy.up",
+				"terrain": "controller.animation.buggy.terrain",
+				"smoke": "controller.animation.buggy.driving",
+				"engine_smoke": "controller.animation.buggy.fatal"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"spawn_egg": {
+				"texture": "spawn_buggy",
+				"texture_index": 0
+			},
+			"particle_effects": {
+				"smoke": "pubg:smoke",
+				"engine": "pubg:engine_smoke",
+				"flame": "pubg:engine_fire"
+			}
+		}
+	}
+}

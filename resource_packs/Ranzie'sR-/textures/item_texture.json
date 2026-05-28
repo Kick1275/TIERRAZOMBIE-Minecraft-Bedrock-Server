@@ -1,0 +1,210 @@
+{
+  "resource_pack_name": "Ranzie Textures",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "raw_flesh": {
+      "textures": "textures/items/raw_flesh"
+    },
+    "cooked_flesh": {
+      "textures": "textures/items/cooked_flesh"
+    },
+    "katana_wood": {
+      "textures": "textures/items/katana_wood"
+    },
+    "katana_stone": {
+      "textures": "textures/items/katana_stone"
+    },
+    "katana_gold": {
+      "textures": "textures/items/katana_gold"
+    },
+    "katana_iron": {
+      "textures": "textures/items/katana_iron"
+    },
+    "katana_diamond": {
+      "textures": "textures/items/katana_diamond"
+    },
+    "katana_netherite": {
+      "textures": "textures/items/katana_netherite"
+    },
+    "bolo_wood": {
+      "textures": "textures/items/bolo_wood"
+    },
+    "bolo_stone": {
+      "textures": "textures/items/bolo_stone"
+    },
+    "bolo_gold": {
+      "textures": "textures/items/bolo_gold"
+    },
+    "bolo_iron": {
+      "textures": "textures/items/bolo_iron"
+    },
+    "bolo_diamond": {
+      "textures": "textures/items/bolo_diamond"
+    },
+    "bolo_netherite": {
+      "textures": "textures/items/bolo_netherite"
+    },
+    "club": {
+      "textures": "textures/items/club"
+    },
+    "spiked_club": {
+      "textures": "textures/items/spiked_club"
+    },
+    "settings_icon": {
+      "textures": "textures/items/settings_icon"
+    },
+    "chain_fence_item": {
+      "textures": "textures/items/chain_fence_item"
+    },
+    "wired_wall_item": {
+      "textures": "textures/items/wired_wall_item"
+    },
+    "wired_fence_item": {
+      "textures": "textures/items/wired_fence_item"
+    },
+    "oak_spiked_fence_item": {
+			"textures": "textures/items/oak_spiked_fence_item"
+		},
+		"dark_oak_spiked_fence_item": {
+			"textures": "textures/items/dark_oak_spiked_fence_item"
+		},
+		"cherry_spiked_fence_item": {
+			"textures": "textures/items/cherry_spiked_fence_item"
+		},
+		"mangrove_spiked_fence_item": {
+			"textures": "textures/items/mangrove_spiked_fence_item"
+		},
+		"spruce_spiked_fence_item": {
+			"textures": "textures/items/spruce_spiked_fence_item"
+		},
+		"birch_spiked_fence_item": {
+			"textures": "textures/items/birch_spiked_fence_item"
+		},
+		"acacia_spiked_fence_item": {
+			"textures": "textures/items/acacia_spiked_fence_item"
+		},
+		"jungle_spiked_fence_item": {
+			"textures": "textures/items/jungle_spiked_fence_item"
+		},
+		"pale_spiked_fence_item": {
+			"textures": "textures/items/pale_spiked_fence_item"
+		},
+		"bamboo_spiked_fence_item": {
+			"textures": "textures/items/bamboo_spiked_fence_item"
+		},
+		"warped_spiked_fence_item": {
+			"textures": "textures/items/warped_spiked_fence_item"
+		},
+		"crimson_spiked_fence_item": {
+			"textures": "textures/items/crimson_spiked_fence_item"
+		},
+		"oak_reinforced_spiked_fence_item": {
+			"textures": "textures/items/oak_reinforced_spiked_fence_item"
+		},
+		"dark_oak_reinforced_spiked_fence_item": {
+			"textures": "textures/items/dark_oak_reinforced_spiked_fence_item"
+		},
+		"cherry_reinforced_spiked_fence_item": {
+			"textures": "textures/items/cherry_reinforced_spiked_fence_item"
+		},
+		"mangrove_reinforced_spiked_fence_item": {
+			"textures": "textures/items/mangrove_reinforced_spiked_fence_item"
+		},
+		"spruce_reinforced_spiked_fence_item": {
+			"textures": "textures/items/spruce_reinforced_spiked_fence_item"
+		},
+		"birch_reinforced_spiked_fence_item": {
+			"textures": "textures/items/birch_reinforced_spiked_fence_item"
+		},
+		"acacia_reinforced_spiked_fence_item": {
+			"textures": "textures/items/acacia_reinforced_spiked_fence_item"
+		},
+		"jungle_reinforced_spiked_fence_item": {
+			"textures": "textures/items/jungle_reinforced_spiked_fence_item"
+		},
+		"pale_reinforced_spiked_fence_item": {
+			"textures": "textures/items/pale_reinforced_spiked_fence_item"
+		},
+		"bamboo_reinforced_spiked_fence_item": {
+			"textures": "textures/items/bamboo_reinforced_spiked_fence_item"
+		},
+		"warped_reinforced_spiked_fence_item": {
+			"textures": "textures/items/warped_reinforced_spiked_fence_item"
+		},
+		"crimson_reinforced_spiked_fence_item": {
+			"textures": "textures/items/crimson_reinforced_spiked_fence_item"
+		},
+		"saber_wood": {
+			"textures": "textures/items/saber_wood"
+		},
+		"saber_stone": {
+			"textures": "textures/items/saber_stone"
+		},
+		"saber_iron": {
+			"textures": "textures/items/saber_iron"
+		},
+		"saber_gold": {
+			"textures": "textures/items/saber_gold"
+		},
+		"saber_diamond": {
+			"textures": "textures/items/saber_diamond"
+		},
+		"saber_netherite": {
+			"textures": "textures/items/saber_netherite"
+		},
+		"longsword_wood": {
+			"textures": "textures/items/longsword_wood"
+		},
+		"longsword_stone": {
+			"textures": "textures/items/longsword_stone"
+		},
+		"longsword_iron": {
+			"textures": "textures/items/longsword_iron"
+		},
+		"longsword_gold": {
+			"textures": "textures/items/longsword_gold"
+		},
+		"longsword_diamond": {
+			"textures": "textures/items/longsword_diamond"
+		},
+		"longsword_netherite": {
+			"textures": "textures/items/longsword_netherite"
+		},
+		"hammer_wood": {
+			"textures": "textures/items/hammer_wood"
+		},
+		"hammer_stone": {
+			"textures": "textures/items/hammer_stone"
+		},
+		"hammer_iron": {
+			"textures": "textures/items/hammer_iron"
+		},
+		"hammer_gold": {
+			"textures": "textures/items/hammer_gold"
+		},
+		"hammer_diamond": {
+			"textures": "textures/items/hammer_diamond"
+		},
+		"hammer_netherite": {
+			"textures": "textures/items/hammer_netherite"
+		},
+		"dagger_wood": {
+			"textures": "textures/items/dagger_wood"
+		},
+		"dagger_stone": {
+			"textures": "textures/items/dagger_stone"
+		},
+		"dagger_iron": {
+			"textures": "textures/items/dagger_iron"
+		},
+		"dagger_gold": {
+			"textures": "textures/items/dagger_gold"
+		},
+		"dagger_diamond": {
+			"textures": "textures/items/dagger_diamond"
+		},
+		"dagger_netherite": {
+			"textures": "textures/items/dagger_netherite"
+		}
+  }
+}

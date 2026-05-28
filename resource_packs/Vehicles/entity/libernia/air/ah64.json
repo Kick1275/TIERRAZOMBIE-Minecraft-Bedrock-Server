@@ -1,0 +1,52 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:ah64",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ah64/ah64",
+				"libernia": "textures/entity/ah64/ah64_libernia",
+				"telslakia": "textures/entity/ah64/ah64_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.ah64"
+			},
+			"render_controllers": [
+				"controller.render.ah64",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_ah64_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.helicopter.scale",
+				"rotor": "animation.helicopter.rotor",
+				"fly": "animation.helicopter.fly",
+				"rotations": "animation.helicopter.rotations",
+				"flying": "controller.animation.helicopter.flying",
+				"shoot": "animation.bmpt72.shoot",
+				"look": "animation.helicopter.look"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"flying",
+					{
+						"shoot": "query.is_roaring"
+					},
+					"look"
+				]
+			},
+			"sound_effects": {
+				"spin": "c_ram.spin"
+			},
+			"particle_effects": {
+				"flash": "af:mg_flash"
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"efm:salt_deposit": {
+		"sound": "wood"
+	},
+	"efm:": {
+		"sound": "stone",
+		"textures": "efm_"
+	},
+	"efm:salt_block": {
+		"sound": "stone",
+		"textures": "efm_salt_block"
+	}
+}

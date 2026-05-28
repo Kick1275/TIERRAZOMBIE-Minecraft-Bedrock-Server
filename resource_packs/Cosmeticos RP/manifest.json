@@ -1,0 +1,17 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Cosmeticos RP",
+    "description": "Recursos visuales para sistema de cosméticos",
+    "uuid": "d4e5f6a7-b8c9-0123-def1-234567890123",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "e5f6a7b8-c9d0-1234-ef12-345678901234",
+      "version": [1, 0, 0]
+    }
+  ]
+}

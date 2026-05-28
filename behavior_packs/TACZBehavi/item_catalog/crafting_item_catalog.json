@@ -1,0 +1,169 @@
+{
+   "format_version": "1.21.60",
+   "minecraft:crafting_items_catalog": {
+      "categories": [
+         {
+            "category_name": "equipment",
+            "groups": [
+               {
+                  "group_identifier": {
+                     "icon": "krep:akm",
+                     "name": "krep:itemGroup.name.ar"
+                  },
+                  "items": [
+                     "krep:akm",
+                     "krep:m4a1",
+                     "krep:hk416",
+                     "krep:qbz95",
+                     "krep:fal",
+                     "krep:scarl",
+                     "krep:scarh",
+                     "krep:g36",
+                     "krep:m16",
+                     "krep:m16a1",
+                     "krep:g3",
+                     "krep:qbz191",
+                     "krep:type81"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:m1911",
+                     "name": "krep:itemGroup.name.p"
+                  },
+                  "items": [
+                     "krep:m1911",
+                     "krep:b93",
+                     "krep:g17",
+                     "krep:g18",
+                     "krep:deagleg",
+                     "krep:deagle",
+                     "krep:t50",
+                     "krep:cp",
+                     "krep:p320"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:mp5",
+                     "name": "krep:itemGroup.name.sm"
+                  },
+                  "items": [
+                     "krep:mp5",
+                     "krep:p90",
+                     "krep:vector",
+                     "krep:ump",
+                     "krep:uzi",
+                     "krep:mp7"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:awp",
+                     "name": "krep:itemGroup.name.sr"
+                  },
+                  "items": [
+                     "krep:awp",
+                     "krep:sks",
+                     "krep:mk14"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:minigun",
+                     "name": "krep:itemGroup.name.misc"
+                  },
+                  "items": [
+                     "krep:minigun",
+                     "krep:evolys",
+                     "krep:m249",
+                     "krep:rpg"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:m870",
+                     "name": "krep:itemGroup.name.sg"
+                  },
+                  "items": [
+                     "krep:m870",
+                     "krep:saiga12",
+                     "krep:aa12",
+                     "krep:db",
+                     "krep:m1014"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:akm_emp",
+                     "name": "krep:itemGroup.name.empty"
+                  },
+                  "items": [
+                     "krep:akm_emp",
+                     "krep:m4a1_emp",
+                     "krep:hk416_emp",
+                     "krep:qbz95_emp",
+                     "krep:fal_emp",
+                     "krep:scarl_emp",
+                     "krep:scarh_emp",
+                     "krep:g36_emp",
+                     "krep:m16_emp",
+                     "krep:m16a1_emp",
+                     "krep:g3_emp",
+                     "krep:sks_emp",
+                     "krep:mk14_emp",
+                     "krep:qbz191_emp",
+                     "krep:type81_emp",
+                     "krep:m1911_emp",
+                     "krep:b93_emp",
+                     "krep:g17_emp",
+                     "krep:g18_emp",
+                     "krep:p320_emp",
+                     "krep:deagleg_emp",
+                     "krep:deagle_emp",
+                     "krep:t50_emp",
+                     "krep:cp_emp",
+                     "krep:mp5_emp",
+                     "krep:p90_emp",
+                     "krep:vector_emp",
+                     "krep:ump_emp",
+                     "krep:uzi_emp",
+                     "krep:mp7_emp",
+                     "krep:awp_emp",
+                     "krep:minigun_emp",
+                     "krep:m249_emp",
+                     "krep:evolys_emp",
+                     "krep:rpg_emp",
+                     "krep:m870_emp",
+                     "krep:saiga12_emp",
+                     "krep:aa12_emp",
+                     "krep:m1014_emp",
+                     "krep:db_emp"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:m885",
+                     "name": "krep:itemGroup.name.ammo"
+                  },
+                  "items": [
+                     "krep:m885",
+                     "krep:mm9",
+                     "krep:mm4630",
+                     "krep:mag357",
+                     "krep:mm5728",
+                     "krep:m43",
+                     "krep:gauge12",
+                     "krep:acp45",
+                     "krep:ae50",
+                     "krep:lapua338",
+                     "krep:win308",
+                     "krep:mm5842",
+                     "krep:rpgrocket"
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

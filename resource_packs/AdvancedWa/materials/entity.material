@@ -1,0 +1,63 @@
+{
+  "materials": {
+    "version": "1.0.0",
+
+    "waypoint_icon:entity_alphatest": {
+      "depthFunc": "Always",
+      "+states": [
+        "Blending"
+      ]
+    },
+
+    "waypoint_icon_background:entity_alphatest": {
+      "depthFunc": "Always",
+      "+states": [
+        // "Blending"
+      ]
+    },
+
+    "waypoint_letters:entity_alphatest": {
+      "depthFunc": "Always",
+      "primitiveMode": "TriangleStrip",
+      "+states": [
+        "Blending"
+      ]
+    },
+
+    "waypoint_background:waypoint_entity_flat_color_line": {
+      "depthFunc": "Always",
+      "+states": [
+        "DisableDepthWrite"
+      ]
+    },
+
+    "show_behide_walls_beam:entity_beam": {
+      "depthFunc": "Always",
+      "+states": [
+        // "Blending",
+        "DisableDepthWrite"
+      ],
+      "-states": [
+        "DisableCulling"
+      ]
+    },
+
+    "waypoint_entity_flat_color_line": {
+      "vertexShader": "shaders/position.vertex",
+      "vrGeometryShader": "shaders/position.geometry",
+      "fragmentShader": "shaders/entity.fragment",
+      "msaaSupport": "Both",
+      "+defines": [
+        "USE_SKINNING",
+        "LINE_STRIP"
+      ],
+      "primitiveMode": "LineList",
+      "vertexFields": [
+        { "field": "Position" },
+        { "field": "Color" },
+        { "field": "Normal" },
+        { "field": "UV0" }
+      ]
+    }
+  }
+}

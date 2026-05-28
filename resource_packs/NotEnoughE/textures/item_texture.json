@@ -1,0 +1,9 @@
+{
+	"resource_pack_name": "Not Enough Emotes",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"eu_emote": {
+			"textures": "textures/items/emote"
+		}
+	}
+}

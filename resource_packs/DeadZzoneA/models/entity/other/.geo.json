@@ -1,0 +1,74 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.ear_tail",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "ear",
+					"parent": "head",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "left_ear",
+					"parent": "ear",
+					"pivot": [-2, 32, -2],
+					"rotation": [-5.44101, -15.84652, -7.73097],
+					"cubes": [
+						{"origin": [-4, 32, -2], "size": [3, 2, 1], "uv": [0, 0], "mirror": true},
+						{"origin": [-4, 34, -2], "size": [2, 2, 0], "uv": [0, 4], "mirror": true}
+					]
+				},
+				{
+					"name": "right_ear",
+					"parent": "ear",
+					"pivot": [2, 32, -2],
+					"rotation": [-5.44101, 15.84652, 7.73097],
+					"cubes": [
+						{"origin": [1, 32, -2], "size": [3, 2, 1], "uv": [0, 0]},
+						{"origin": [2, 34, -2], "size": [2, 2, 0], "uv": [0, 4]}
+					]
+				},
+				{
+					"name": "jacket",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "tail",
+					"parent": "waist",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [0, 12, 2], "size": [0, 11, 9], "uv": [8, -9]}
+					]
+				}
+			]
+		}
+	]
+}

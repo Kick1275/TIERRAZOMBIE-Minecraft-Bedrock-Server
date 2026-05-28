@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+		"render_controllers": {
+			"controller.render.player_crosshair": {
+				"textures": [
+					"Texture.crosshair_player"
+				],
+				"geometry": "geometry.night_goggle",
+				"is_hurt_color": {},
+				"on_fire_color": {},
+				"materials": [
+					{
+						"*": "material.default"
+					}
+				]
+			},
+			"controller.render.crosshair": {
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"Texture.crosshair"
+			],
+			"geometry": "geometry.crosshair",
+			"on_fire_color": {},
+			"is_hurt_color": {},
+			"part_visibility": [
+				{
+					"player": "!v.guns"
+				},
+				{
+					"pistol": "v.pistol && !q.is_sneaking && !v.reload"
+				},
+				{
+					"rifle": "v.rifle && !q.is_sneaking && !v.reload"
+				},
+				{
+					"shotgun": "v.shotgun && !q.is_sneaking && !v.reload"
+				},
+				{
+					"sniper": "v.sniper && !q.is_sneaking && !v.reload"
+				},
+				{
+					"launcher": "v.launcher && !q.is_sneaking && !v.reload"
+				}
+			]
+		}
+	}
+}

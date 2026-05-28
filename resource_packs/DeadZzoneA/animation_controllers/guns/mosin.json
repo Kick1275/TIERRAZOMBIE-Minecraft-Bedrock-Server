@@ -1,0 +1,158 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mosin.person": {
+      "initial_state": "draw",
+      "states": {
+        "draw": {
+          "animations": [
+           {
+            "guns.draw": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_mosin && query.any_animation_finished"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        },
+        "holding": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.hold": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+              "shoot": "variable.mosin && query.is_using_item"
+            },
+            {
+              "sprint": "variable.all_mosin && query.is_sprinting && !q.is_in_water"
+            },
+            {
+              "aim": "variable.all_mosin && query.is_sneaking"
+            },
+            {
+              "back": "variable.all_mosin && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.mosin_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        },
+        "sprint": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.sprint": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_mosin && !query.is_sprinting"
+            },
+            {
+              "back": "variable.all_mosin && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.mosin_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        },
+        "back": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.back": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_mosin && !query.is_swimming"
+            },
+            {
+             "sprint": "variable.all_mosin && query.is_sprinting && !query.is_in_water"
+            },
+            {
+              "reload": "variable.mosin_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        },
+        "aim": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.aim": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_mosin && !query.is_sneaking"
+            },
+            {
+              "shoot": "variable.mosin && query.is_using_item"
+            },
+            {
+              "reload": "variable.mosin_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        },
+        "shoot": {
+          "animations": [
+           {
+            "mosin.shoots": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_mosin && query.all_animations_finished"
+            },
+            {
+              "aim": "variable.all_mosin && query.all_animations_finished"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        },
+        "reload": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "bolt_clip.reload_full": "variable.all_mosin"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_mosin && query.all_animations_finished"
+            },
+            {
+              "draw": "!variable.all_mosin"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.human_bottom": {
+      "arrays": {
+        "textures": {
+          "Array.bottom": [
+            "Texture.bottom_0",
+            "Texture.bottom_1",
+            "Texture.bottom_2",
+            "Texture.bottom_3",
+            "Texture.bottom_4",
+            "Texture.bottom_5",
+            "Texture.bottom_6",
+            "Texture.bottom_7",
+            "Texture.bottom_8",
+            "Texture.bottom_9",
+            "Texture.bottom_10",
+            "Texture.bottom_11",
+            "Texture.bottom_12",
+            "Texture.bottom_13",
+            "Texture.bottom_14",
+            "Texture.bottom_15",
+            "Texture.bottom_16",
+            "Texture.bottom_17",
+            "Texture.bottom_18",
+            "Texture.bottom_19",
+            "Texture.bottom_20",
+            "Texture.bottom_21",
+            "Texture.bottom_22",
+            "Texture.bottom_23",
+            "Texture.bottom_24",
+            "Texture.bottom_25",
+            "Texture.bottom_26",
+            "Texture.bottom_27",
+            "Texture.bottom_28",
+            "Texture.bottom_29",
+            "Texture.bottom_30",
+            "Texture.bottom_31",
+            "Texture.bottom_32",
+            "Texture.bottom_33"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+            {
+               "*": "Material.default"
+            }
+         ],
+      "textures": [
+        "Array.bottom[v.bottom]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

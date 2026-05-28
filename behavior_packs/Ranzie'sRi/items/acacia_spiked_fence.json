@@ -1,0 +1,20 @@
+{
+	"format_version" : "1.20.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "ranzie:acacia_spiked_fence",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.fence"
+			}
+		},
+		"components" : {
+			"minecraft:icon" : {
+				"texture" : "acacia_spiked_fence_item"
+			},
+			"minecraft:block_placer" : {
+				"block" : "ranzie:acacia_upgraded_spiked_fence_block"
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.g36": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='g36' && q.is_using_item) || query.get_equipped_item_name=='g36_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s g36 30",
+            "@s[hasitem={item=krep:g36, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "g36.30": "query.get_equipped_item_name=='g36' && query.is_using_item && query.scoreboard('g36') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "g36.31": "query.get_equipped_item_name=='g36' && query.is_using_item && query.scoreboard('g36') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function g36"
+          ]
+        },
+        "g36.31": {
+          "animations": [
+            "g36shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={g36=0}] slot.weapon.mainhand 1 krep:g36_emp 1 0"
+          ]
+        },
+        "g36.30": {
+          "animations": [
+            "g36shoot"
+          ],
+          "transitions": [
+            {
+              "delay.30": "query.get_equipped_item_name=='g36' && query.is_using_item && query.scoreboard('g36') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('g36') == 0"
+            }
+          ],
+          "on_entry": [
+            "@s krep:g36_fire",
+            "/function g36",
+            "/playsound g36.shoot @a[r=30]",
+            "/scoreboard players set @s[scores={g36=32..}] g36 31",
+            "/scoreboard players remove @s[scores={g36=1..31}] g36 1",
+            "/replaceitem entity @s[scores={g36=0}] slot.weapon.mainhand 1 krep:g36_emp 1 0",
+            "/title @s[scores={g36=0}] actionbar No Ammunition"
+          ]
+        },
+        "delay.30": {
+          "animations": [
+            "g36shoot"
+          ],
+          "transitions": [
+            {
+              "g36.29": "query.get_equipped_item_name=='g36' && query.is_using_item && query.scoreboard('g36') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('g36') == 0"
+            }
+          ]
+        },
+        "g36.29": {
+          "transitions": [
+            {
+              "g36.30": "query.get_equipped_item_name=='g36' && query.is_using_item && query.scoreboard('g36') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "query.scoreboard('g36') == 0"
+            }
+          ],
+          "on_entry": [
+            "@s krep:g36_fire",
+            "/function g36",
+            "/playsound g36.shoot @a[r=30]",
+            "/scoreboard players set @s[scores={g36=32..}] g36 31",
+            "/scoreboard players remove @s[scores={g36=1..31}] g36 1",
+            "/replaceitem entity @s[scores={g36=0}] slot.weapon.mainhand 1 krep:g36_emp 1 0",
+            "/title @s[scores={g36=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

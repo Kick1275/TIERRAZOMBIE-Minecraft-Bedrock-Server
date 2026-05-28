@@ -1,0 +1,227 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:gas_canister",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"opened": {
+				"minecraft:is_ignited": {},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:wrench"
+											}
+										]
+									}
+								],
+								"event": "af:close",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "eat"
+						},
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:manual"
+											}
+										]
+									}
+								],
+								"event": "af:manual",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "purr"
+						}
+					]
+				},
+				"minecraft:type_family": {
+					"family": [
+						"inanimate",
+						"gas_open"
+					]
+				}
+			},
+			"closed": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:wrench"
+											},
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:gas_mask"
+											}
+										]
+									}
+								],
+								"event": "af:open",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "milk"
+						},
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:wrench"
+											},
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:gas_mask",
+												"operator": "!="
+											}
+										]
+									}
+								],
+								"event": "af:warning",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "hurt"
+						},
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:manual"
+											}
+										]
+									}
+								],
+								"event": "af:manual",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "purr"
+						}
+					]
+				},
+				"minecraft:type_family": {
+					"family": [
+						"inanimate"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.7,
+				"height": 1
+			},
+			"minecraft:health": {
+				"value": 10
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/gas_canister.json"
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:physics": {},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			}
+		},
+		"events": {
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar will deploy mustard-gas on ignition with flint and steel, can be shut with wrench."
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar will drop on death."
+					]
+				},
+				"add": {
+					"component_groups": [
+						"closed"
+					]
+				}
+			},
+			"af:open": {
+				"add": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"closed"
+					]
+				}
+			},
+			"af:close": {
+				"add": {
+					"component_groups": [
+						"closed"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				}
+			},
+			"af:warning": {
+				"queue_command": {
+					"command": [
+						"title @a[r=8] actionbar equip gas mask."
+					]
+				}
+			}
+		}
+	}
+}

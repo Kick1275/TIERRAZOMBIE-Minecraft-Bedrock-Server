@@ -1,0 +1,2 @@
+scoreboard players set @e[type=rt:runa_proteccion,tag=inactividad,tag=runa3,x=~-32.380,y=-64,z=~-32.380,dx=62.7,dy=387,dz=62.7] inactividad 0
+tag @e[type=rt:runa_proteccion,tag=inactividad,tag=runa3,x=~-32.380,y=-64,z=~-32.380,dx=62.7,dy=387,dz=62.7] remove inactividad

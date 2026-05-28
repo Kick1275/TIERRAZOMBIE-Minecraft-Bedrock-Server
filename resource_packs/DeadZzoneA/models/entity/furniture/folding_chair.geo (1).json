@@ -1,0 +1,32 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.folding_chair",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-5, 7, -6], "size": [10, 1, 11], "uv": [0, 0]},
+						{"origin": [-6, 6, -1], "size": [12, 1, 4], "inflate": 0.1, "uv": [0, 13]},
+						{"origin": [-6, 0, -5], "size": [1, 20, 1], "pivot": [-6, 0, -4], "rotation": [-30, 0, 0], "uv": [0, 26]},
+						{"origin": [-5, 2, -5], "size": [10, 1, 1], "pivot": [-6, 0, -4], "rotation": [-30, 0, 0], "uv": [28, 22]},
+						{"origin": [-6, 0, 4], "size": [1, 11, 1], "pivot": [-6, 0, 4], "rotation": [15, 0, 0], "uv": [10, 26]},
+						{"origin": [5, 0, 4], "size": [1, 11, 1], "pivot": [6, 0, 4], "rotation": [15, 0, 0], "uv": [5, 26]},
+						{"origin": [-5, 3, 4], "size": [10, 1, 1], "pivot": [6, 0, 4], "rotation": [15, 0, 0], "uv": [28, 19]},
+						{"origin": [5, 0, -5], "size": [1, 20, 1], "pivot": [6, 0, -4], "rotation": [-30, 0, 0], "uv": [23, 19]},
+						{"origin": [-5, 15, -5], "size": [10, 5, 1], "pivot": [6, 0, -4], "rotation": [-30, 0, 0], "uv": [0, 19]}
+					]
+				}
+			]
+		}
+	]
+}

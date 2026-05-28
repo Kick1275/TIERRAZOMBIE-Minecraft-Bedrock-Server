@@ -1,0 +1,114 @@
+//bridge-file-version: #28
+{
+	"format_version": "1.17.0",
+	"sound_definitions": {
+		"vehicle.uaz.drive": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/uaz/uaz_drive"
+			]
+		},
+		"vehicle.uaz.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/hurt/hurt1",
+				"sounds/hurt/hurt2"
+			]
+		},
+		"vehicle.uaz.engine": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/uaz/engine_idle"
+			]
+		},
+		"vehicle.uaz.enginerev": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/uaz/engine_rev"
+			]
+		},
+		"vehicle.pg117.drive": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/pg117/pg117_drive"
+			]
+		},
+		"vehicle.pg117.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/hurt/hurt1",
+				"sounds/hurt/hurt2"
+			]
+		},
+		"vehicle.pg117.enginerev": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/pg117/engine_rev"
+			]
+		},
+		"vehicle.dacia.drive": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/dacia/dacia_drive"
+			]
+		},
+		"vehicle.dacia.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/hurt/hurt1",
+				"sounds/hurt/hurt2"
+			]
+		},
+		"vehicle.dacia.engine": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/dacia/engine_idle"
+			]
+		},
+		"vehicle.dacia.enginerev": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/dacia/engine_rev"
+			]
+		},
+		"vehicle.buggy.drive": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/buggy/buggy_drive"
+			],
+			"min_distance": 10
+		},
+		"vehicle.buggy.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/hurt/hurt1",
+				"sounds/hurt/hurt2"
+			]
+		},
+		"vehicle.buggy.startup": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/buggy/buggy_startup"
+			]
+		},
+		"vehicle.buggy.engine": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/buggy/engine_throttle"
+			]
+		},
+		"vehicle.buggy_destroyed": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/buggy/hurt1",
+				"sounds/buggy/hurt2"
+			]
+		},
+		"vehicle.fall": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/hurt/great_fall"
+			]
+		}
+	}
+}

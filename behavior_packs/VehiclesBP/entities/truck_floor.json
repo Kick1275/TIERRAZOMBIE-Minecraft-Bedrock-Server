@@ -1,0 +1,76 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:truck_floor",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:boat"
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:health": {
+				"value": 1100,
+				"max": 1100
+			},
+			"minecraft:collision_box": {
+				"width": 3,
+				"height": 1
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 60,
+					"max_dropped_ticks": 20,
+					"use_motion_prediction_hints": true
+				},
+				"conditional_values": [
+					{
+						"max_optimized_distance": 0,
+						"max_dropped_ticks": 0,
+						"use_motion_prediction_hints": true,
+						"conditional_values": [
+							{
+								"test": "is_moving",
+								"subject": "self",
+								"operator": "==",
+								"value": true
+							}
+						]
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:movement.basic": {
+				"max_turn": 16
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,170 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:radio_tower",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:boat"
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 2
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 8
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:is_stackable": {},
+			"minecraft:loot": {
+				"table": "loot_tables/radio_tower.json"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:despawn",
+							"target": "self",
+							"filters": {
+								"test": "is_sneaking",
+								"subject": "other",
+								"value": true
+							}
+						},
+						"add_items": {
+							"table": "loot_tables/radio_tower.json"
+						}
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:manual",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:manual"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "purr"
+					},
+					{
+						"on_interact": {
+							"event": "af:mq9",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:mq9_remote"
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"on_interact": {
+							"event": "af:gj2",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:gj2_remote"
+										}
+									]
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar Sneak and interact to pick up."
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar For controlling UAVs"
+					]
+				}
+			},
+			"af:mq9": {
+				"queue_command": {
+					"command": [
+						"tag @s add pilot_active",
+						"ride @p[tag=libernia,r=5] start_riding @e[type=af:mq9,family=libernia,c=1] teleport_rider if_group_fits",
+						"ride @p[tag=telslakia,r=5] start_riding @e[type=af:mq9,family=telslakia,c=1] teleport_rider if_group_fits",
+						"title @p[tag=!libernia,tag=!telslakia] actionbar You must join a Faction first."
+					]
+				}
+			},
+			"af:gj2": {
+				"queue_command": {
+					"command": [
+						"tag @s add pilot_active",
+						"ride @p[tag=libernia,r=5] start_riding @e[type=af:gj2,family=libernia,c=1] teleport_rider if_group_fits",
+						"ride @p[tag=telslakia,r=5] start_riding @e[type=af:gj2,family=telslakia,c=1] teleport_rider if_group_fits",
+						"title @p[tag=!libernia,tag=!telslakia] actionbar You must join a Faction first."
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}

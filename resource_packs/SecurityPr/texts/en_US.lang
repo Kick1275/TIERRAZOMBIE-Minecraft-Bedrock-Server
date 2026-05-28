@@ -1,0 +1,33 @@
+tile.rt:11x11_block.name=§dProtection 11x11§r
+tile.rt:21x21_block.name=§dProtection 21x21§r
+tile.rt:31x31_block.name=§dProtection 31x31§r
+item.spawn_egg.entity.rt:protection_trader.name=Protector Trader
+item.spawn_egg.entity.rt:spb_guide_book.name=Protection Guide
+item.spawn_egg.entity.rt:turret.name=Iron Turret
+item.rt:upgrade_protection=§eUpgrade Protection§r
+
+proteccion.langcode.2= §f
+proteccion.langcode.3=§6[§e!§6] §g>§6>§r §cPart of the area you want to claim is already from a protection.
+proteccion.langcode.4=§6[§e!§6] §g>§6>§r §cYou cannot place protections in this dimension.
+proteccion.langcode.7=
+proteccion.langcode.8=
+proteccion.langcode.9=§eSubscribe to my Patreon at §c§lpatreon.com/realtern§r§e for exclusive updates before anyone else! Also, join my Discord to stay updated on all the news. §cYT§e: Realtern Art.§r
+proteccion.langcode.10= §7This message will only appear once.
+proteccion.langcode.11=§6[§e!§6] §g>§6>§r §aWhitelist activated: §rAny player interacting with the block will be able to build and open chest within your protection.
+proteccion.langcode.12=§6[§e!§6] §g>§6>§r §cWhitelist deactivated.
+proteccion.langcode.13=§6[§e!§6] §g>§6>§r §aYou joined this protection.
+
+action.interact.protections=Remove
+action.interact.protections2=Open Whitelist
+action.interact.protections3=Close Whitelist
+action.interact.protections4=Join
+action.interact.turret.mode1=Mode: §aNeutral§r
+action.interact.turret.mode2=Mode: §cHostile§r
+action.interact.turret.mode3=Mode: OFF
+
+entity.rt:protection_trader.name=Protector Trader
+entity.rt:turret.name=Iron Turret
+
+gameMode.changed=Here %s.	#
+createWorldScreen.gameMode.survival=§aIF you can build	#
+createWorldScreen.gameMode.adventure=§cyou can NOT build	#

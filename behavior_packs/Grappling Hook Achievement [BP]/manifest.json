@@ -1,0 +1,54 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "product_type": "addon"
+    },
+    "header": {
+        "name": "Grappling Hook [Achievement Friendly]",
+        "description": "Add grappling gun to minecraft that can pull or swing",
+        "min_engine_version": [
+            1,
+            21,
+            130
+        ],
+        "uuid": "102ccb35-326a-4278-cd51-5ed4895309b3",
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "behavior",
+            "type": "script",
+            "uuid": "9ce14590-2dad-48ff-eb9f-04530cf88195",
+            "version": [
+                1,
+                0,
+                0
+            ],
+            "language": "javascript",
+            "entry": "scripts/index.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.4.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "ce9180e4-bd22-4379-89b6-bf6e1aff828f",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "subpacks": []
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "grenade:landmine",
+      "materials": {
+        "default": "slime"
+      },
+      "textures": {
+        "default": "textures/blocks/furniture/landmine"
+      },
+      "geometry": {
+        "default": "geometry.landmine"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ]
+    }
+  }
+}

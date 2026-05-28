@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mk14": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='mk14' && q.is_using_item) || query.get_equipped_item_name=='mk14_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s mk14 20",
+            "@s[hasitem={item=krep:mk14, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "mk14.21": "query.get_equipped_item_name=='mk14' && query.is_using_item && query.scoreboard('mk14') >= 1 && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "/function mk14"
+          ]
+        },
+        "mk14.21": {
+          "animations": [
+            "mk14shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mk14_fire",
+            "/scoreboard players remove @s[scores={mk14=1..}] mk14 1",
+            "/scoreboard players set @s[scores={mk14=22..}] mk14 21",
+            "/playsound mk14.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={mk14=0}] slot.weapon.mainhand 1 krep:mk14_emp 1 0",
+            "/title @s[scores={mk14=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

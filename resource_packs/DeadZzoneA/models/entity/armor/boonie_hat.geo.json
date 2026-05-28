@@ -1,0 +1,49 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.boonie_hat",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-7, 29.3, -7.7], "size": [14, 0, 3], "pivot": [0, 29.3, -4.7], "rotation": [5, 0, 0], "uv": [-3, 29]},
+						{"origin": [4.7, 29.3, -7], "size": [3, 0, 14], "pivot": [4.7, 29.3, 0], "rotation": [0, 0, 10], "uv": [20, 18]},
+						{"origin": [-7, 29.3, 4.7], "size": [14, 0, 3], "pivot": [0, 29.3, 4.7], "rotation": [-10, 0, 0], "uv": [-3, 26]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.7, "uv": [0, 0]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 1, "uv": [32, 0]},
+						{"origin": [-7.7, 29.3, -7], "size": [3, 0, 14], "pivot": [-4.7, 29.3, 0], "rotation": [0, 0, -10], "uv": [27, 18]}
+					]
+				}
+			]
+		}
+	]
+}

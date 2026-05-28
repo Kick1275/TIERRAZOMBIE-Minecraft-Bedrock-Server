@@ -1,0 +1,102 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:g_missile_target",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.01,
+				"time_down_event": {
+					"event": "af:despawn",
+					"target": "self"
+				}
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			}
+		},
+		"events": {
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:m551_libernia": {
+				"queue_command": {
+					"command": [
+						"tag @s add m551",
+						"tag @s add libernia"
+					]
+				}
+			},
+			"af:m551_telslakia": {
+				"queue_command": {
+					"command": [
+						"tag @s add m551",
+						"tag @s add telslakia"
+					]
+				}
+			},
+			"af:bmpt72_libernia": {
+				"queue_command": {
+					"command": [
+						"tag @s add bmpt72",
+						"tag @s add libernia"
+					]
+				}
+			},
+			"af:bmpt72_telslakia": {
+				"queue_command": {
+					"command": [
+						"tag @s add bmpt72",
+						"tag @s add telslakia"
+					]
+				}
+			},
+			"af:m2a2_libernia": {
+				"queue_command": {
+					"command": [
+						"tag @s add m2a2",
+						"tag @s add libernia"
+					]
+				}
+			},
+			"af:m2a2_telslakia": {
+				"queue_command": {
+					"command": [
+						"tag @s add m2a2",
+						"tag @s add telslakia"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {},
+				"minecraft:tick_world": {
+					"never_despawn": false
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:nightvision_goggles",
+			"materials": {
+				"glow": "entity_beam_additive",
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"glow": "textures/armor/nightvision_goggles_glow",
+				"default": "textures/armor/nightvision_goggles"
+			},
+			"geometry": {
+				"default": "geometry.nightvision_goggles"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.helmet_layer_visible = 0.0;"
+				],
+				"animate": [
+					"toggle",
+					{
+						"hide_mask": "c.is_first_person"
+					},
+					{
+						"hide_tint": "!c.is_first_person"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.nightvision_goggles_glow",
+				"controller.render.nightvision_goggles"
+			],
+			"animations": {
+				"active": "animation.nightvision_goggles.active",
+				"inactive": "animation.nightvision_goggles.inactive",
+				"toggle": "controller.animation.nightvision_goggles.toggle",
+				"hide_mask": "animation.gasmask.hide_mask",
+				"hide_tint": "animation.gasmask.hide_tint"
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+execute as @a[c=1] if entity @a[tag=!id] run function id/id

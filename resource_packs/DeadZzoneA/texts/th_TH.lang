@@ -1,0 +1,752 @@
+## Translated by Developer
+## Sorry for some bad translations
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## You can translate from here
+## welcome message
+game.message.welcome_dz=ยินดีตอนรับสู่ Dead§4Z§rone
+game.message.deadzone_1=§eพิมพ์ §r§o!avatar§r§e เพื่อสร้างอวาตาร์
+game.message.deadzone_2=§eพิมพ์ §r§o!status§r§e เพื่อดูสถานะความคืบหน้าของคุณ
+
+## death message
+death.attack.bullet.headshot=%1$s ถูกยิงที่หัวโดย %2$s
+death.attack.bullet=%1$s ถูกยิงโดย %2$s
+death.attack.freeze.temperature=%1$s เสียชีวิตจากการแข็งตาย
+death.attack.heat.temperature=%1$s เสียชีวิตจากโรคลมแดด
+death.attack.thirst=%1$s เสียชีวิตจากการขาดน้ำ
+death.attack.bleeding=%1$s เสียชีวิตจากอาการเลือดไหลไม่หยุด
+death.attack.infection=%1$s เสียชีวิตจากการติดเชื้อ
+death.attack.blood_loss=%1$s เสียชีวิตจากการสูญเสียเลือดมากเกินไป
+
+## cc
+cc.random_avatar.gui=สุ่มตัวละคร
+cc.default_skin.gui=สกินเริ่มต้น
+cc.skin.gui=ผิว
+cc.hair.gui=ผม
+cc.eye.gui=ตา
+cc.gender.gui=เพศ
+cc.glove.gui=ถุงมือ
+cc.message.default_skin=คุณแน่ใจหรอว่าจะเปลี่ยนไปใช้เป็นสกินเริ่มต้น?.
+cc.message.warning=โปรดเลือกเพศของคุณก่อนที่จะปรับเปลี่ยนส่วนอื่นๆ.
+cc.message.warning_eye_first=ขออภัย คุณไม่สามารถใช้ดวงตาของผู้หญิงได้.
+cc.message.warning_eye_second=ขออภัย คุณไม่สามารถใช้ดวงตาของผู้ชายได้.
+game.message.broken_bone_warning=§cขาของฉันมันหัก.
+
+## config
+config.title=DeadZone ตั้งค่า
+config.despawn_time=ตั้งค่าเวลาการลบศพ (นาที)
+config.max_corpse=ตั้งค่าจำนวนศพสูงสุด
+config.allow_corpse_creation=อนุญาตให้สร้างศพ
+config.reset_statu_on_death=ต้องการรีเซ็ตค่าสถานะเมื่อตายหรือไม่
+config.hardcore_infected_mode=เปิดใช้งานโหมดติดเชื้อฮาร์ดคอร์
+
+## horde config
+horde.config.title=การตั้งค่าฝูงชน
+horde.config.enable_horde=เปิดใช้งานระบบฝูงชน
+horde.config.spawn_chance=โอกาสเกิดของฝูงชน (เปอร์เซ็นต์)
+horde.config.min_Interval=ช่วงเวลาขั้นต่ำของฝูงชน (นาที)
+horde.config.max_Interval=ช่วงเวลาสูงสุดของฝูงชน (นาที)
+horde.config.min_distance=ระยะห่างขั้นต่ำของฝูงชน (บล็อก)
+horde.config.size_group=ขนาดของฝูงชน (จำนวนผู้ติดเชื้อ)
+horde.config.civilian_spawn_chance=โอกาสเกิดของพลเรือน (เปอร์เซ็นต์)
+horde.config.screamer_spawn_chance=โอกาสเกิดของกรีดร้อง (เปอร์เซ็นต์)
+
+## statu
+statu.player_name=ชื่อ
+statu.player_killed=ผู้เล่นที่ฆ่าได้
+statu.infected_killed=ผู้ติดเชื้อที่ฆ่าได้
+statu.time_playing=เวลาที่เล่น
+statu.time_survived=เวลาเอาตัวรอด
+statu.kill_distance=ฆ่าระยะไกลสูงสุด
+
+## action
+action.interact.cut=หั่นเนื้อ
+action.interact.bury=ฝังศพ
+action.hint.exit.mcpe:sedan=กระโดด/ย่อ เพื่อลงจากยานพาหนะ
+action.hint.exit.mcpe:humvee=กระโดด/ย่อ เพื่อลงจากยานพาหนะ
+action.hint.exit.mcpe:motor=กระโดด/ย่อ เพื่อลงจากยานพาหนะ
+
+## game message
+game.message.warning_lockpick=§4 คุณต้องมีกุญแจผีก่อนถึงจะสามารถเปิด กล่องได้.
+game.message.lockpick_broken=§cกุญแจผีของคุณหัก!
+game.message.lockpick_attempt=§cความพยายามงัดกุญแจผีล้มเหลว!
+game.message.corpse_despawn_time=เวลาตั้งค่าลบศพคือ
+game.message.reset_statu_on_death=ลบค่าสถานะเมื่อตาย
+game.message.show_statu=โชว์ค่าสถานะในโหมดสร้างสรรค์
+game.message.warning_blood_type=cคุณยังไม่รู้กรุ๊ปเลือดของคุณ.
+game.message.warning_overdose_first=§cฉันรู้สึกไม่ค่อยดีเลย...
+game.message.warning_overdose_second=§cฉันกินยาเกินขนาดแล้ว..
+game.message.blood_type_first=§a กรุ๊ปเลือดของคุณคือ A.
+game.message.blood_type_second=§aกร๊ปเลือดของคุณคือ AB.
+game.message.blood_type_third=§aกร๊ปเลือดของคุณคือ B.
+game.message.blood_type_fourth=§aกร๊ปเลือดของคุณคือ O.
+game.message.blood_transfer=ถ่ายโอนเลือดสำเร็จ.
+game.message.bleeding_warning=§cฉันกำลังเลือดออก.
+game.message.broken_bone_warning=§cฉันขาหัก.
+game.message.temperature_warning_first=ฉันกำลังถูกเผา.
+game.message.temperature_warning_second=ฉันกำลังแข็งตาย.
+game.message.unsupport_warning=รายการนี้ไม่ได้รับการสนับสนุน กรุณาคลิกบนหน้าจอ/คลิกขวาเพื่อนำรายการกลับมา.
+game.message.blood_type=กรุ๊ปเลือดของคุณคือ
+
+## spawn egg
+item.spawn_egg.entity.mcpe:civilian.name=ไข่เกิด ผู้ติดเชื้อพลเรือน
+item.spawn_egg.entity.mcpe:military.name=ไข่เกิด ผู้ติดเชื้อทหาร
+item.spawn_egg.entity.mcpe:hazmat.name=ไข่เกิด ผู้ติดเชื้อที่ใส่ชุดป้องกันสารเคมี
+item.spawn_egg.entity.mcpe:militia.name=ไข่เกิด ผู้ติดเชื้อทหารอาสา
+item.spawn_egg.entity.mcpe:screamer.name=ไข่เกิด ผู้ติดเชื้อกรีดร้อง
+item.spawn_egg.entity.mcpe:commander.name=ไข่เกิด ผู้ติดเชื้อบัญชาการ
+item.spawn_egg.entity.mcpe:sedan.name=ไข่เกิด รถเก๋ง
+item.spawn_egg.entity.mcpe:motor.name=ไข่เกิด จักรยานยนต์
+item.spawn_egg.entity.mcpe:humvee.name=ไข่เกิด รถฮัมวี
+
+item.spawn_egg.entity.mcpe:marauder.name=ไข่เกิด กลุ่มผู้รอดชีวิตมารอเดอร์
+item.spawn_egg.entity.mcpe:scavenger.name=ไข่เกิด กลุ่มผู้รอดชีวิตสกาเวนเจอร์
+
+## เอนทิตี้
+entity.mcpe:civilian.name=ผู้ติดเชื้อพลเรือน
+entity.mcpe:military.name=ผู้ติดเชื้อทหาร
+entity.mcpe:hazmat.name=ผู้ติดเชื้อที่ใส่ชุดป้องกันสารเคมีติด
+entity.mcpe:commander.name=ผู้ติดเชื้อบัญชาการทหาร
+entity.mcpe:militia.name=ผู้ติดเชื้อทหารอาสา
+
+entity.mcpe:marauder.name=มารอเดอร์
+entity.mcpe:scavenger.name=สกาเวนเจอร์
+
+entity.unknown.name=ปล้นสะดม
+
+## item
+item.mcpe:vending_popsi_icon.name=เครื่องจำหน่ายป๊อปซี่
+item.mcpe:vending_exp_icon.name=เครื่องจำหน่ายโค้ก-EXP
+item.mcpe:vending_sprot_icon.name=เครื่องจำหน่ายสป็อต
+item.mcpe:slack_black.name=กางเกงขายาวสีดำ
+item.mcpe:plastic_explosive.name=วัตถุระเบิดพลาสติก
+item.mcpe:electric_scrap.name=เศษโลหะไฟฟ้า
+item.mcpe:baseball_bat.name=ไม้เบสบอล
+item.mcpe:barbedwire_bat.name=ไม้เบสบอลลวดหนาม
+item.mcpe:cleaver_knife.name=มีดอีโต้
+item.mcpe:combat_knife.name=มีดต่อสู้
+item.mcpe:crowbar.name=ชะแลง
+item.mcpe:engineer_shovel.name=พลั่ววิศวกร
+item.mcpe:fireman_axe.name=ขวานนักดับเพลิง
+item.mcpe:flanged_mace.name=กระบองปีกนก
+item.mcpe:frying_pan.name=กระทะ
+item.mcpe:golf_club.name=ไม้กอล์ฟ
+item.mcpe:golok_machete.name=มีด Golok
+item.mcpe:hammer.name=ค้อน
+item.mcpe:hatchet.name=ขวาน
+item.mcpe:hunting_knife.name=มีดล่าสัตว์
+item.mcpe:ice_hockey.name=ไม้ฮอกกี้น้ำแข็ง
+item.mcpe:ice_pick.name=ที่เจาะน้ำแข็ง
+item.mcpe:katana.name=ดาบคาตานะ
+item.mcpe:kitchen_knife.name=มีดครัว
+item.mcpe:knight_sword.name=ดาบอัศวิน
+item.mcpe:kukri_machete.name=มีด Kukri
+item.mcpe:lead_pipe.name=ท่อเหล็ก
+item.mcpe:machete.name=มีดพร้า
+item.mcpe:metal_bat.name=ไม้เบสบอลโลหะ
+item.mcpe:miner_pickaxe.name=ขวานจามแร่
+item.mcpe:nailed_bat.name=ไม้เบสบอลตะปู
+item.mcpe:nailed_plank.name=แผ่นไม้ตะปู
+item.mcpe:pipe_wrench.name=ประแจท่อ
+item.mcpe:pitchfork.name=ส้อมหญ้า
+item.mcpe:police_baton.name=กระบองตำรวจ
+item.mcpe:rolling_pin.name=ไม้รีดแป้ง
+item.mcpe:sabre_sword.name=ดาบซาเบอร์
+item.mcpe:screwdriver.name=ไขควง
+item.mcpe:farm_sickle.name=เคียวฟาร์ม
+item.mcpe:sledgehammer.name=ค้อนขนาดใหญ่
+item.mcpe:snow_shovel.name=พลั่วหิมะ
+item.mcpe:splitting_axe.name=ขวานผ่าไม้
+item.mcpe:tactical_axe.name=ขวานยุทธวิธี
+item.mcpe:tactical_shovel.name=พลั่วยุทธวิธี
+item.mcpe:tire_iron.name=เหล็กขันล้อ
+item.mcpe:wooden_plank.name=แผ่นไม้
+item.mcpe:wrench.name=ประแจ
+item.mcpe:hacksaw.name=เลื่อยตัดเหล็ก
+
+item.mcpe:blood_test_kit.name=ชุดตรวจเลือด
+item.mcpe:blood_bag_emp.name=ถุงเลือดเปล่า
+item.mcpe:blood_bag_unknown.name=ถุงเลือดประเภทไม่ทราบ
+item.mcpe:blood_bag_type_a.name=ถุงเลือดประเภท A
+item.mcpe:blood_bag_type_ab.name=ถุงเลือดประเภท AB
+item.mcpe:blood_bag_type_b.name=ถุงเลือดประเภท B
+item.mcpe:blood_bag_type_o.name=ถุงเลือดประเภท O
+
+item.mcpe:first_aid.name=ชุดปฐมพยาบาล
+item.mcpe:bandage.name=ผ้าพันแผล
+item.mcpe:bandage_sterilized.name=ผ้าพันแผลที่ฆ่าเชื้อ
+item.mcpe:rags.name=ผ้า
+item.mcpe:rags_dirty.name=ผ้าสกปรก
+item.mcpe:rags_sterilized.name=ผ้าเช็ดที่ฆ่าเชื้อ
+item.mcpe:blood_bag.name=ถุงเลือด
+item.mcpe:painkiller.name=ยาแก้ปวด
+item.mcpe:adrenaline.name=หัวฉีดอะดรีนาลีน
+item.mcpe:morphine.name=หัวฉีดมอร์ฟีน
+item.mcpe:splint.name=ไม้เฝือก
+item.mcpe:water_purification.name=โต๊ะฆ่าเชื้อ
+item.mcpe:alcoholic_tinture.name=ยาฆ่าเชื้อแอลกอฮอล์
+item.mcpe:antidote.name=เข็มฉีดยาแก้พิษ
+
+item.mcpe:avatar_custome.name=ปรับแต่งตัวละคร
+item.mcpe:barbed_wire.name=ลวดหนาม
+item.mcpe:bear_trap.name=กับดักหมี
+item.mcpe:bleach.name=น้ำยาฟอกขาว
+item.mcpe:bottle_water_emp.name=ขวดน้ำเปล่า
+item.mcpe:detonator.name=ระเบิด
+item.mcpe:can_opener.name=ที่เปิดกระป๋อง
+item.mcpe:duct_tape.name=เทปพันสายไฟ
+item.mcpe:flashlight.name=ไฟฉาย
+item.mcpe:fumo_hat.name=หมวก Da Zaza Fumos
+item.mcpe:funi_vest.name=เสื้อกั๊ก Funi
+item.mcpe:ham_radios.name=วิทยุ HAM
+item.mcpe:landmine.name=ระเบิดใต้ดิน
+item.mcpe:lockpick.name=กุญแจผี
+item.mcpe:nail_box.name=กล่องตะปู
+item.mcpe:nail.name=ตะปู
+item.mcpe:cooking_pot.name=หม้อปรุงอาหารเปล่า
+item.mcpe:radios.name=วิทยุ
+item.mcpe:Random_paper.name=กระดาษสุ่ม
+item.mcpe:remote.name=รีโมทเสื้อกั๊ก Funi
+item.mcpe:sawoff_pipe.name=ท่อเหล็กตัด
+item.mcpe:spray_can.name=กระป๋องสเปรย์
+item.mcpe:walkie_talkie.name=วิทยุสื่อสาร
+item.mcpe:wire_cutter.name=กรรไกรตัดลวด
+item.mcpe:wooden_barricade.name=แนวกั้นไม้
+item.mcpe:fvla_flags.name=ธงกองทัพทหารเสรีแห่ง Vostrovian
+item.mcpe:vostrovia_flags.name=ธงสาธารณรัฐ Vostrovian
+item.mcpe:nekoi_flags.name=ธงโครงการ Neko ¡
+item.mcpe:nails.name=ตะปู
+
+
+item.mcpe:chip_potato.name=ชิปมันฝรั่ง
+item.mcpe:chip_tortilla.name=ชิปทอร์ติลล่า
+item.mcpe:chocolate_bar.name=ช็อกโกแลตบาร์
+item.mcpe:creeper_crunch.name=กรอบเครพเพอร์
+item.mcpe:meat_jerky.name=เนื้อแห้ง
+item.mcpe:mre.name=อาหารพร้อมรับประทาน
+item.mcpe:rice.name=ข้าวบรรจุซอง
+item.mcpe:strawberry_jam.name=แยมสตรอว์เบอร์รี
+item.mcpe:tactical_sandwich.name=แซนด์วิชยุทธวิธี
+item.mcpe:apple_green.name=แอปเปิ้ลเขียว
+item.mcpe:banana.name=กล้วย
+item.mcpe:cucumber.name=แตงกวา
+item.mcpe:pear.name=ลูกแพร์
+item.mcpe:tomato.name=มะเขือเทศ
+item.mcpe:zucchini.name=ซูกินี
+item.mcpe:raw_player.name=เนื้อดิบผู้เล่น
+item.mcpe:cooked_player.name=เนื้อผู้เล่นปรุงสุก
+
+
+item.mcpe:canned_bacon.name=เบคอนกระป๋อง
+item.mcpe:canned_beans.name=ถั่วกระป๋อง
+item.mcpe:canned_beef_stew.name=เนื้อวัวสตูว์กระป๋อง
+item.mcpe:canned_chicken.name=ไก่กระป๋อง
+item.mcpe:canned_chili.name=พริกกระป๋อง
+item.mcpe:canned_corned.name=เนื้อกระป๋อง
+item.mcpe:canned_fruit.name=ผลไม้รวมกระป๋อง
+item.mcpe:canned_ham.name=แฮมกระป๋อง
+item.mcpe:canned_peaches.name=พีชหวานกระป๋อง
+item.mcpe:canned_ration.name=อาหารสนามกระป๋อง
+item.mcpe:canned_sardine.name=ซาร์ดีนกระป๋อง
+item.mcpe:canned_spaghetti.name=สปาเก็ตตีกระป๋อง
+item.mcpe:canned_tomato.name=ซุปมะเขือเทศกระป๋อง
+item.mcpe:canned_tuna.name=ทูน่ากระป๋อง
+
+
+item.mcpe:canned_bacon_open.name=เบคอนกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_beans_open.name=ถั่วกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_beef_stew_open.name=เนื้อวัวสตูว์กระป๋อง (เปิดแล้ว)
+item.mcpe:canned_chicken_open.name=ไก่กระป๋อง (เปิดแล้ว)
+item.mcpe:canned_chili_open.name=พริกกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_corned_open.name=เนื้อกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_fruit_open.name=ผลไม้รวมกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_ham_open.name=แฮมกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_peaches_open.name=พีชหวานกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_ration_open.name=อาหารสนามกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_sardine_open.name=ซาร์ดีนกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_spaghetti_open.name=สปาเก็ตตีกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_tomato_open.name=ซุปมะเขือเทศกระป๋อง (เปิดแล้ว)
+item.mcpe:canned_tuna_open.name=ทูน่ากระป๋อง (เปิดแล้ว)
+
+
+item.mcpe:canned_bacon_open_bad.name=เบคอนกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_beans_open_bad.name=ถั่วกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_beef_stew_open_bad.name=เนื้อวัวสตูว์กระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_chicken_open_bad.name=ไก่กระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_chili_open_bad.name=พริกกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_corned_open_bad.name=เนื้อกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_fruit_open_bad.name=ผลไม้รวมกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_ham_open_bad.name=แฮมกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_peaches_open_bad.name=พีชหวานกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_ration_open_bad.name=อาหารสนามกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_sardine_open_bad.name=ซาร์ดีนกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_spaghetti_open_bad.name=สปาเก็ตตีกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_tomato_open_bad.name=ซุปมะเขือเทศกระป๋องคุณภาพต่ำ (เปิดแล้ว)
+item.mcpe:canned_tuna_open_bad.name=ทูน่ากระป๋องคุณภาพต่ำ (เปิดแล้ว)
+
+
+item.mcpe:beer_bottle.name=ขวดเบียร์
+item.mcpe:bottle_water_bleach.name=ขวดน้ำ
+item.mcpe:bottle_water_unpure.name=ขวดน้ำที่ไม่ผ่านการกรอง
+item.mcpe:bottle_water.name=ขวดน้ำ
+item.mcpe:coffee.name=กาแฟ
+item.mcpe:energy_drink.name=เครื่องดื่มชูกำลัง
+item.mcpe:exp_coke.name=EXP โค้ก
+item.mcpe:grape_soda.name=โซดาองุ่น
+item.mcpe:lemonade.name=เลมอนเนด
+item.mcpe:milk_gallon.name=นมหนึ่งแกลลอน
+item.mcpe:popsi_cola.name=โค้ก PoPsi
+item.mcpe:pot_cook_water.name=หม้อใส่น้ำเดือด
+item.mcpe:pot_water.name=หม้อใส่น้ำที่ไม่ผ่านการกรอง
+item.mcpe:red_wine.name=ขวดไวน์แดง
+item.mcpe:vodka.name=วอดก้า
+item.mcpe:whiskey.name=วิสกี้
+
+## ammo
+item.mcpe:ammo_7_62x39mm.name=กล่องกระสุน 7.62x39mm
+item.mcpe:ammo_5_45x39mm.name=กล่องกระสุน 5.45x39mm
+item.mcpe:ammo_5_56x45mm.name=กล่องกระสุน 5.56x45mm
+item.mcpe:ammo_7_62x51mm.name=กล่องกระสุน 7.62x51mm
+item.mcpe:ammo_7_62x54mmr.name=กล่องกระสุน 7.62x54mmR
+item.mcpe:ammo_9x39mm.name=กล่องกระสุน 9x39mm
+item.mcpe:ammo_9x19mm.name=กล่องกระสุน 9x19mm
+item.mcpe:ammo_9x18mm.name=กล่องกระสุน 9x18mm
+item.mcpe:ammo_12gauge.name=กล่องกระสุน 12 เกจ
+item.mcpe:ammo_40mm.name=กล่องกระสุน 40mm
+item.mcpe:ammo_44magnum.name=กล่องกระสุน .44 แมกนั่ม
+item.mcpe:ammo_357magnum.name=กล่องกระสุน .357 แมกนั่ม
+item.mcpe:ammo_45acp.name=กล่องกระสุน .45 ACP
+item.mcpe:ammo_32acp.name=กล่องกระสุน .32 ACP
+
+## grenade
+item.mcpe:frag_grenade.name=ระเบิดมือ
+item.mcpe:smoke_grenade.name=ระเบิดควัน
+item.mcpe:flash_grenade.name=ระเบิดแฟลช
+item.mcpe:c4_explosive.name=ระเบิด C-4
+item.mcpe:pipe_bomb.name=ระเบิดท่อ
+item.mcpe:nerve_grenade.name=ระเบิดก๊าซประสาท
+
+## armor/clothes
+item.mcpe:assault_vest_black.name=เสื้อเกราะสีดำสำหรับโจมตี
+item.mcpe:assault_vest_olive.name=เสื้อเกราะสีเขียวมะกอกสำหรับโจมตี
+item.mcpe:biker_vest.name=เสื้อเกราะนักบิด
+item.mcpe:biker_vest_skull.name=เสื้อเกราะนักบิดลายหัวกะโหลก
+item.mcpe:chest_navy.name=เสื้อเกราะนาวี
+item.mcpe:chest_tan.name=เสื้อเกราะสีเบจ
+item.mcpe:chest_green.name=เสื้อเกราะสีเขียว
+item.mcpe:chest_white.name=เสื้อเกราะสีขาว
+item.mcpe:chest_brown.name=เสื้อเกราะสีน้ำตาล
+item.mcpe:combat_olive.name=เสื้อเกราะต่อสู้สีเขียวมะกอก
+item.mcpe:combat_white.name=เสื้อเกราะต่อสู้สีขาว
+item.mcpe:combat_tan.name=เสื้อเกราะต่อสู้สีเบจ
+item.mcpe:hunting_brown.name=เสื้อเกราะล่าสัตว์สีน้ำตาล
+item.mcpe:hunting_navy.name=เสื้อเกราะล่าสัตว์นาวี
+item.mcpe:plate_vest_gray.name=เสื้อเกราะเกรย์
+item.mcpe:plate_vest_white.name=เสื้อเกราะสีขาว
+item.mcpe:plate_vest_olive.name=เสื้อเกราะสีเขียวมะกอก
+item.mcpe:plate_vest_tan.name=เสื้อเกราะสีเบจ
+item.mcpe:police_vest.name=เสื้อเกราะตำรวจ
+item.mcpe:press_vest.name=เสื้อเกราะนักข่าว
+item.mcpe:reflective_lime.name=เสื้อเกราะสะท้อนแสงสีมะนาว
+item.mcpe:reflective_orange.name=เสื้อเกราะสะท้อนแสงสีส้ม
+item.mcpe:reflective_yellow.name=เสื้อเกราะสะท้อนแสงสีเหลือง
+item.mcpe:stab_vest_gray.name=เสื้อเกราะกันแทงสีเกรย์
+item.mcpe:stab_vest_tan.name=เสื้อเกราะกันแทงสีเบจ
+item.mcpe:stab_vest_white.name=เสื้อเกราะกันแทงสีขาว
+item.mcpe:tactical_vest_black.name=เสื้อเกราะยุทธวิธีสีดำ
+item.mcpe:tactical_vest_white.name=เสื้อเกราะยุทธวิธีสีขาว
+item.mcpe:tactical_vest_tan.name=เสื้อเกราะยุทธวิธีสีเบจ
+item.mcpe:tactical_vest_olive.name=เสื้อเกราะยุทธวิธีสีเขียวมะกอก
+item.mcpe:webbing_brown.name=สายรัดสีน้ำตาล
+item.mcpe:webbing_black.name=สายรัดสีดำ
+item.mcpe:webbing_tan.name=สายรัดสีเบจ
+item.mcpe:webbing_green.name=สายรัดสีเขียว
+item.mcpe:webbing_white.name=สายรัดสีขาว
+
+item.mcpe:army_artic.name=หมวกกันน็อคทหารอาร์กติก
+item.mcpe:army_desert.name=หมวกกันน็อคทหารทะเลทราย
+item.mcpe:army_woodland.name=หมวกกันน็อคทหารป่า
+item.mcpe:assault_helmet_black.name=หมวกกันน็อคสีดำสำหรับโจมตี
+item.mcpe:assault_helmet_olive.name=หมวกกันน็อคสีเขียวมะกอกสำหรับโจมตี
+item.mcpe:balaclava_black.name=หน้ากากบาลาคลาวาสีดำ
+item.mcpe:ballistic_black.name=หมวกกันน็อคกันกระสุนสีดำ
+item.mcpe:ballistic_green.name=หมวกกันน็อคกันกระสุนสีเขียว
+item.mcpe:ballistic_Tan.name=หมวกกันน็อคกันกระสุนสีเบจ
+item.mcpe:ballistic_white.name=หมวกกันน็อคกันกระสุนสีขาว
+item.mcpe:bandana_blue.name=หน้ากากผ้าพันคอสีน้ำเงิน
+item.mcpe:bandana_green.name=หน้ากากผ้าพันคอสีน้ำเงิน
+item.mcpe:bandana_red.name=หน้ากากผ้าพันคอสีแดง
+item.mcpe:beanie_black.name=หมวกบีนี่สีดำ
+item.mcpe:beanie_brown.name=หมวกบีนี่สีน้ำตาล
+item.mcpe:beanie_white.name=หมวกบีนี่สีขาว
+item.mcpe:beanie_olive.name=หมวกบีนี่สีเขียวมะกอก
+item.mcpe:beret_red.name=เบเร่ต์สีแดง
+item.mcpe:beret_green.name=เบเร่ต์สีเขียว
+item.mcpe:beret_blue.name=เบเร่ต์สีน้ำเงิน
+item.mcpe:biker_black.name=หมวกกันน็อคสำหรับนักบิดสีดำ
+item.mcpe:biker_white.name=หมวกกันน็อคสำหรับนักบิดสีขาว
+item.mcpe:biker_yellow.name=หมวกกันน็อคสำหรับนักบิดสีเหลือง
+item.mcpe:biker_red.name=หมวกกันน็อคสำหรับนักบิดสีแดง
+item.mcpe:biker_green.name=หมวกกันน็อคสำหรับนักบิดสีเขียว
+item.mcpe:biker_blue.name=หมวกกันน็อคสำหรับนักบิดสีน้ำเงิน
+item.mcpe:boonie_artic.name=หมวกบูนีลายพรางอาร์กติก
+item.mcpe:boonie_woodland.name=หมวกบูนีลายพรางป่า
+item.mcpe:boonie_desert.name=หมวกบูนีลายพรางทะเลทราย
+item.mcpe:boonie_black.name=หมวกบูนีสีดำ
+item.mcpe:boonie_green.name=หมวกบูนีสีเขียว
+item.mcpe:boonie_white.name=หมวกบูนีสีขาว
+item.mcpe:boonie_tan.name=หมวกบูนีสีเบจ
+item.mcpe:cap_black.name=หมวกสีดำ
+item.mcpe:cap_green.name=หมวกสีเขียว
+item.mcpe:cap_blue.name=หมวกสีน้ำเงิน
+item.mcpe:cap_red.name=หมวกสีแดง
+item.mcpe:clown_wig.name=วิกตลก
+item.mcpe:cowboy_brown.name=หมวกคาวบอยสีน้ำตาล
+item.mcpe:cowboy_black.name=หมวกคาวบอยสีดำ
+item.mcpe:cowboy_white.name=หมวกคาวบอยสีขาว
+item.mcpe:durag_black.name=ดุรากสีดำ
+item.mcpe:durag_brown.name=ดุรากสีน้ำตาล
+item.mcpe:firefighter_hat.name=หมวกนักดับเพลิง
+
+item.mcpe:flat_black.name=หมวกแบนสีดำ
+item.mcpe:flat_brown.name=หมวกแบนสีน้ำตาล
+item.mcpe:gasmask_black.name=หน้ากากกันแก๊สสีดำ
+item.mcpe:gasmask_white.name=หน้ากากกันแก๊สสีขาว
+item.mcpe:gasmask_tactical.name=หน้ากากกันแก๊สยุทธวิธี
+item.mcpe:great_helmet.name=หมวกเกราะครูเสด
+item.mcpe:hard_blue.name=หมวกแข็งสีฟ้า
+item.mcpe:hard_red.name=หมวกแข็งสีแดง
+item.mcpe:hard_yellow.name=หมวกแข็งสีเหลือง
+item.mcpe:hard_white.name=หมวกแข็งสีขาว
+item.mcpe:hard_orange.name=หมวกแข็งสีส้ม
+item.mcpe:headlamp.name=ไฟหน้า
+item.mcpe:hunting_hat.name=หมวกล่าสัตว์
+item.mcpe:maid_bonnet.name=หมวกแม่บ้าน
+item.mcpe:mask_fawkes.name=หน้ากากฟอคส์
+item.mcpe:mask_funni.name=หน้ากากฟันนี่
+item.mcpe:mask_troll.name=หน้ากากท Troll
+item.mcpe:night_goggles.name=แว่นตาเวลากลางคืน
+item.mcpe:peaked_green.name=หมวกปีกเขียว
+item.mcpe:peaked_white.name=หมวกปีกขาว
+item.mcpe:peaked_tan.name=หมวกปีกสีเบจ
+item.mcpe:plague_hat.name=หมวกแพทย์โรคระบาด
+item.mcpe:police_hat.name=หมวกตำรวจ
+item.mcpe:police_riot.name=หมวกกันน็อคตำรวจ
+item.mcpe:respirator_mask.name=หน้ากากป้องกันทางเดินหายใจ
+item.mcpe:shemagh_blue.name=ผ้าคลุมหัวสีฟ้า
+item.mcpe:shemagh_red.name=ผ้าคลุมหัวสีแดง
+item.mcpe:shemagh_tan.name=ผ้าคลุมหัวสีเบจ
+item.mcpe:shemagh_brown.name=ผ้าคลุมหัวสีน้ำตาล
+item.mcpe:shemagh_black.name=ผ้าคลุมหัวสีดำ
+item.mcpe:shemagh_olive.name=ผ้าคลุมหัวสีเขียวมะกอก
+item.mcpe:shemagh_gray.name=ผ้าคลุมหัวสีเทา
+item.mcpe:skimask_black.name=หน้ากากสกีสีดำ
+item.mcpe:spec_helmet.name=หมวกกันน็อคปฏิบัติการพิเศษ
+item.mcpe:tactical_helmet_black.name=หมวกกันน็อคยุทธวิธีสีดำ
+item.mcpe:tactical_helmet_tan.name=หมวกกันน็อคยุทธวิธีสีเบจ
+item.mcpe:tactical_helmet_white.name=หมวกกันน็อคยุทธวิธีสีขาว
+item.mcpe:tactical_helmet_olive.name=หมวกกันน็อคยุทธวิธีสีเขียวมะกอก
+item.mcpe:ushanka.name=หมวกยูชังก้า
+item.mcpe:un_helmet.name=หมวกกันน็อคสหประชาชาติ
+item.mcpe:welder_mask.name=หน้ากากช่างเชื่อม
+
+item.mcpe:bdu_artic_bottom.name=กางเกง BDU ลายพรางอาร์กติก
+item.mcpe:bdu_desert_bottom.name=กางเกง BDU ลายพรางทะเลทราย
+item.mcpe:bdu_woodland_bottom.name=กางเกง BDU ลายพรางป่า
+item.mcpe:cargo_black.name=กางเกงขากระบอกสีดำ
+item.mcpe:cargo_brown.name=กางเกงขากระบอกสีน้ำตาล
+item.mcpe:cargo_tan.name=กางเกงขากระบอกสีเบจ
+item.mcpe:cargo_white.name=กางเกงขากระบอกสีขาว
+item.mcpe:cargo_green.name=กางเกงขากระบอกสีเขียว
+item.mcpe:chainmail_bottom.name=กางเกงเกราะโซ่
+item.mcpe:clown_bottom.name=กางเกงตัวตลก
+item.mcpe:firefighter_bottom.name=กางเกงนักดับเพลิง
+item.mcpe:gorka_bottom.name=กางเกงกอร์กา
+item.mcpe:ghillie_drygrass_bottom.name=กางเกงฟางลายพราง
+item.mcpe:ghillie_forest_bottom.name=กางเกงป่าลายพราง
+item.mcpe:ghillie_snow_bottom.name=กางเกงหิมะลายพราง
+item.mcpe:hazmat_white_bottom.name=กางเกงชุดป้องกันสีขาว
+item.mcpe:hazmat_yellow_bottom.name=กางเกงชุดป้องกันสีเหลือง
+item.mcpe:jean_black.name=ยีนส์สีดำ
+item.mcpe:jean_blue.name=ยีนส์สีน้ำเงิน
+item.mcpe:jean_brown.name=ยีนส์สีน้ำตาล
+item.mcpe:jean_light.name=ยีนส์สีอ่อน
+item.mcpe:khaki_light.name=กางเกงขากระบอกสีเบจอ่อน
+item.mcpe:maid_bottom.name=กางเกงแม่บ้าน
+item.mcpe:overall_black.name=ชุดทำงานสีดำ
+item.mcpe:overall_brown.name=ชุดทำงานสีน้ำตาล
+item.mcpe:overall_blue.name=ชุดทำงานสีน้ำเงิน
+item.mcpe:paramedic_bottom.name=กางเกงพยาบาล
+item.mcpe:plague_bottom.name=กางเกงหมอระบาด
+item.mcpe:police_special_bottom.name=กางเกงตำรวจหน่วยพิเศษ
+item.mcpe:police_bottom.name=กางเกงตำรวจ
+item.mcpe:prisoner_bottom.name=กางเกงนักโทษ
+item.mcpe:suit_bottom_black.name=กางเกงสูทสีดำ
+item.mcpe:special_bottom.name=กางเกงปฏิบัติการพิเศษ
+item.mcpe:suspender_black.name=กางเกงยีนส์พร้อมสายรัดสีดำ
+item.mcpe:trackpants_black.name=กางเกงกีฬาแบบขากระบอกสีดำ
+item.mcpe:trackpants_blue.name=กางเกงกีฬาแบบขากระบอกสีน้ำเงิน
+item.mcpe:trackpants_red.name=กางเกงกีฬาแบบขากระบอกสีแดง
+
+item.mcpe:bdu_artic_top.name=ชุด BDU ลายพรางอาร์กติก
+item.mcpe:bdu_desert_top.name=ชุด BDU ลายพรางทะเลทราย
+item.mcpe:bdu_woodland_top.name=ชุด BDU ลายพรางป่า
+item.mcpe:chainmail_top.name=เสื้อเกราะโซ่
+item.mcpe:clown_top.name=ชุดตัวตลก
+item.mcpe:crusader_top.name=ชุดนักรบครูเซเดอร์
+item.mcpe:firefighter_top.name=แจ็คเก็ตนักดับเพลิง
+item.mcpe:flannel_red.name=เสื้อเชิ้ตฟลานเนลสีแดง
+
+item.mcpe:flannel_green.name=เสื้อเชิ้ตฟลานเนลสีเขียว
+item.mcpe:flannel_blue.name=เสื้อเชิ้ตฟลานเนลสีน้ำเงิน
+item.mcpe:flannel_white.name=เสื้อเชิ้ตฟลานเนลสีขาว
+item.mcpe:flannel_gray.name=เสื้อเชิ้ตฟลานเนลสีเทา
+item.mcpe:ghillie_drygrass_top.name=ชุดกิลลี่หญ้าแห้ง
+item.mcpe:ghillie_forest_top.name=ชุดกิลลี่ป่า
+item.mcpe:ghillie_snow_top.name=ชุดกิลลี่หิมะ
+item.mcpe:gorka_top.name=ยูนิฟอร์มกอร์กา
+item.mcpe:hawaiian_black.name=เสื้อฮาวายสีดำ
+item.mcpe:hawaiian_red.name=เสื้อฮาวายสีแดง
+item.mcpe:hazmat_white_top.name=ชุดฮาซมาตสีขาว
+item.mcpe:hazmat_yellow_top.name=ชุดฮาซมาตสีเหลือง
+item.mcpe:hero_flannel.name=เสื้อเชิ้ตฟลานเนลฮีโร่
+item.mcpe:hiking_black.name=แจ็คเก็ตเดินป่าสีดำ
+item.mcpe:hiking_blue.name=แจ็คเก็ตเดินป่าสีน้ำเงิน
+item.mcpe:hoodie_black.name=ฮู้ดสีดำ
+item.mcpe:hoodie_blue.name=ฮู้ดสีน้ำเงิน
+item.mcpe:hoodie_green.name=ฮู้ดสีเขียว
+item.mcpe:hoodie_red.name=ฮู้ดสีแดง
+item.mcpe:hoodie_yellow.name=ฮู้ดสีเหลือง
+item.mcpe:hoodie_white.name=ฮู้ดสีขาว
+item.mcpe:leather_black.name=แจ็คเก็ตหนังสีดำ
+item.mcpe:leather_brown.name=แจ็คเก็ตหนังสีน้ำตาล
+item.mcpe:maid_top.name=ชุดแม่บ้าน
+item.mcpe:paramedic_top.name=แจ็คเก็ตหน่วยพยาบาล
+item.mcpe:plague_top.name=เสื้อแพทย์โรคระบาด
+item.mcpe:plaid_red.name=เสื้อเชิ้ตลายตารางสีแดง
+item.mcpe:plaid_blue.name=เสื้อเชิ้ตลายตารางสีน้ำเงิน
+item.mcpe:plaid_olive.name=เสื้อเชิ้ตลายตารางสีมะกอก
+item.mcpe:plaid_white.name=เสื้อเชิ้ตลายตารางสีขาว
+item.mcpe:plaid_gray.name=เสื้อเชิ้ตตารางสีเทา
+item.mcpe:plaid_tan.name=เสื้อเชิ้ตตารางสีเบจ
+item.mcpe:police_special_top.name=แจ็คเก็ตหน่วยเฉพาะกิจตำรวจ
+item.mcpe:police_top.name=ยูนิฟอร์มตำรวจ
+item.mcpe:prisoner_top.name=แจ็คเก็ตนักโทษ
+item.mcpe:puffer_blue.name=แจ็คเก็ตพัฟเฟอร์สีน้ำเงิน
+item.mcpe:puffer_black.name=แจ็คเก็ตพัฟเฟอร์สีดำ
+item.mcpe:special_top.name=ยูนิฟอร์มปฏิบัติการพิเศษ
+item.mcpe:striped_blue.name=เสื้อเชิ้ตลายทางสีน้ำเงิน
+item.mcpe:striped_white.name=เสื้อเชิ้ตลายทางสีขาว
+item.mcpe:stripeds_black.name=เสื้อแขนยาวลายทางสีดำ
+item.mcpe:suede_brown.name=แจ็คเก็ตหนังสีน้ำตาล
+item.mcpe:suit_black.name=ชุดสูทสีดำ
+item.mcpe:sweater_white.name=เสื้อกันหนาวสีขาว
+item.mcpe:sweater_green.name=เสื้อกันหนาวสีเขียว
+item.mcpe:tactical_tan.name=เสื้อกันหนาวทหารสีเบจ
+item.mcpe:tactical_green.name=เสื้อกันหนาวทหารสีเขียว
+item.mcpe:tactical_navy.name=เสื้อกันหนาวทหารสีน้ำเงิน
+item.mcpe:tactical_red.name=เสื้อกันหนาวทหารสีแดง
+item.mcpe:tactical_white.name=เสื้อกันหนาวทหารสีขาว
+item.mcpe:tracksuit_black.name=ชุดออกกำลังกายสีดำ
+item.mcpe:tracksuit_blue.name=ชุดออกกำลังกายสีน้ำเงิน
+item.mcpe:tracksuit_red.name=ชุดออกกำลังกายสีแดง
+item.mcpe:tshirt_black.name=เสื้อยืดสีดำ
+item.mcpe:tshirt_blue.name=เสื้อยืดสีน้ำเงิน
+item.mcpe:tshirt_red.name=เสื้อยืดสีแดง
+item.mcpe:tshirt_green.name=เสื้อยืดสีเขียว
+item.mcpe:tshirt_white.name=เสื้อยืดสีขาว
+item.mcpe:tshirt_yellow.name=เสื้อยืดสีเหลือง
+item.mcpe:varsity_blue.name=แจ็คเก็ตมหาวิทยาลัยสีน้ำเงิน
+item.mcpe:varsity_green.name=แจ็คเก็ตมหาวิทยาลัยสีเขียว
+item.mcpe:varsity_red.name=แจ็คเก็ตมหาวิทยาลัยสีแดง
+item.mcpe:varsity_brown.name=แจ็คเก็ตมหาวิทยาลัยสีน้ำตาล
+
+item.mcpe:improvised_bag.name=กระเป๋าแบบสร้างสรรค์
+item.mcpe:school_blue_backpack.name=กระเป๋าเป้สีฟ้าสำหรับโรงเรียน
+item.mcpe:school_green_backpack.name=กระเป๋าเป้สีเขียวสำหรับโรงเรียน
+item.mcpe:school_red_backpack.name=กระเป๋าเป้สีแดงสำหรับโรงเรียน
+item.mcpe:taloon_yellow_backpack.name=กระเป๋าเป้ทาลูนสีเหลือง
+item.mcpe:taloon_blue_backpack.name=กระเป๋าเป้ทาลูนสีน้ำเงิน
+item.mcpe:taloon_green_backpack.name=กระเป๋าเป้ทาลูนสีเขียว
+item.mcpe:taloon_red_backpack.name=กระเป๋าเป้ทาลูนสีแดง
+
+## loot
+tile.mcpe:civilian_loot.name=กล่องกระดาษ (กล่องของพลเรือน)
+tile.mcpe:construction_loot.name=กล่องเครื่องมือ (กล่องของก่อสร้าง)
+tile.mcpe:firefighter_loot.name=กล่องนักดับเพลิง (กล่องของนักดับเพลิง)
+tile.mcpe:food_loot.name=กล่องอาหาร (กล่องของอาหาร)
+tile.mcpe:medical_loot.name=กล่องชุดปฐมพยาบาล (กล่องทางการแพทย์)
+tile.mcpe:artic_loot.name=กล่องสีขาว (กล่องทหารอาร์กติก)
+tile.mcpe:desert_loot.name=กล่องสีน้ำตาล (กล่องทหารทะเลทราย)
+tile.mcpe:woodland_loot.name=กล่องสีเขียว (กล่องทหารป่าไม้)
+tile.mcpe:medieval_loot.name=กล่องโบราณ (กล่องยุคกลาง)
+tile.mcpe:police_loot.name=กล่องปืน (กล่องของตำรวจ)
+tile.mcpe:rare_loot.name=กล่องส่วนเกิน (กล่องหายาก)
+tile.mcpe:supply_block.name=กล่องอุปกรณ์
+
+## misc
+tile.mcpe:barbed_wires.name=ลวดหนาม
+tile.mcpe:landmine.name=ระเบิดดิน
+tile.mcpe:nail_trap.name=กับดักตะปูปรับปรุง
+tile.mcpe:fumo.name=ตุ๊กตา NZ บนหัวของคุณ
+tile.mcpe:radio.name=วิทยุ
+tile.mcpe:radio_ham.name=วิทยุแฮม
+tile.mcpe:wheat.name=ข้าวสาลี
+tile.mcpe:wood_stake.name=แนวป้องกันเสาไม้
+tile.mcpe:spawner_military.name=สปาวน์เนอร์ทหาร
+tile.mcpe:spawner_civilian.name=สปาวน์เนอร์พลเรือน
+tile.mcpe:spawner_scavenger.name=สปาวน์เนอร์ซากศพ
+tile.mcpe:spawner_marauder.name=สปาวน์เนอร์ผู้ปล้น
+tile.mcpe:server_button.name=ปุ่มเซิร์ฟเวอร์
+tile.mcpe:server_button_delay.name=ปุ่มเซิร์ฟเวอร์หน่วงเวลา
+tile.mcpe:bear_trap_close.name=กับดักหมีปิด
+tile.mcpe:bear_trap_open.name=กับดักหมีเปิด
+
+## barrel
+tile.mcpe:barrel_blue.name=ถังสีน้ำเงิน
+tile.mcpe:barrel_explosive.name=ถังระเบิด
+tile.mcpe:barrel_green.name=ถังสีเขียว
+tile.mcpe:barrel_red.name=ถังสีแดง
+tile.mcpe:barrel_yellow.name=ถังสีเหลือง
+
+## display_rack
+tile.mcpe:display_rack_middle_bottom.name=ชั้นวางด้านล่าง
+tile.mcpe:display_rack_middle_top.name=ชั้นวางด้านบน
+tile.mcpe:display_rack_side_bottom.name=ชั้นวางด้านข้างล่าง
+tile.mcpe:display_rack_side_top.name=ชั้นวางด้านข้างบน
+
+## flag
+tile.mcpe:flag_fvla.name=ธง Fvla
+tile.mcpe:flag_nekoi.name=ธง Neko
+tile.mcpe:flag_vostrovia.name=ธง Vostrovia
+
+## folding_chair
+tile.mcpe:folding_chair_blue.name=เก้าอี้พับสีน้ำเงิน
+tile.mcpe:folding_chair_brown.name=เก้าอี้พับสีน้ำตาล
+tile.mcpe:folding_chair_green.name=เก้าอี้พับสีเขียว
+tile.mcpe:folding_chair_red.name=เก้าอี้พับสีแดง
+
+## hesco
+tile.mcpe:hesco_olive.name=ป้อมกันกระสุนสีเขียวมะกอก
+tile.mcpe:hesco_tan.name=ป้อมกันกระสุนสีน้ำตาล
+tile.mcpe:hesco_white.name=ป้อมกันกระสุนสีขาว
+
+## light
+tile.mcpe:ceiling_light_broken.name=ไฟเพดานที่เสีย
+tile.mcpe:ceiling_light.name=ไฟเพดาน
+tile.mcpe:exit_sign.name=ป้ายทางออก
+tile.mcpe:worklight.name=ไฟทำงาน
+
+## monobloc
+tile.mcpe:monobloc_black.name=เก้าอี้โมโนบล็อคสีดำ
+tile.mcpe:monobloc_blue.name=เก้าอี้โมโนบล็อคสีน้ำเงิน
+tile.mcpe:monobloc_green.name=เก้าอี้โมโนบล็อคสีเขียว
+tile.mcpe:monobloc_red.name=เก้าอี้โมโนบล็อคสีแดง
+tile.mcpe:monobloc_tan.name=เก้าอี้โมโนบล็อคสีน้ำตาล
+tile.mcpe:monobloc_white.name=เก้าอี้โมโนบล็อคสีขาว
+tile.mcpe:monobloc_yellow.name=เก้าอี้โมโนบล็อคสีเหลือง
+
+## office_chair
+tile.mcpe:office_chair_black.name=เก้าอี้สำนักงานสีดำ
+tile.mcpe:office_chair_blue.name=เก้าอี้สำนักงานสีน้ำเงิน
+tile.mcpe:office_chair_brown.name=เก้าอี้สำนักงานสีน้ำตาล
+tile.mcpe:office_chair_green.name=เก้าอี้สำนักงานสีเขียว
+tile.mcpe:office_chair_red.name=เก้าอี้สำนักงานสีแดง
+tile.mcpe:office_chair_white.name=เก้าอี้สำนักงานสีขาว
+
+
+## plastic_table
+tile.mcpe:plastic_black.name=โต๊ะพลาสติกสีดำ
+tile.mcpe:plastic_blue.name=โต๊ะพลาสติกสีน้ำเงิน
+tile.mcpe:plastic_green.name=โต๊ะพลาสติกสีเขียว
+tile.mcpe:plastic_red.name=โต๊ะพลาสติกสีแดง
+tile.mcpe:plastic_tan.name=โต๊ะพลาสติกสีน้ำตาล
+tile.mcpe:plastic_white.name=โต๊ะพลาสติกสีขาว
+tile.mcpe:plastic_yellow.name=โต๊ะพลาสติกสีเหลือง
+
+## road_barrier
+tile.mcpe:barrier_wall.name=กำแพงกีดขวาง
+tile.mcpe:caution_barrier_wall.name=กำแพงกีดขวางเตือนภัย
+tile.mcpe:caution_road_barrier.name=กำแพงกีดขวางถนนเตือนภัย
+tile.mcpe:road_barrier.name=กำแพงกีดขวางถนน
+
+## sandbag
+tile.mcpe:sandbag_corner_olive.name=มุมกระสอบทรายสีเขียวมะกอก
+tile.mcpe:sandbag_corner_tan.name=มุมกระสอบทรายสีน้ำตาล
+tile.mcpe:sandbag_corner_white.name=มุมกระสอบทรายสีขาว
+tile.mcpe:sandbag_olive.name=กระสอบทรายสีเขียวมะกอก
+tile.mcpe:sandbag_tan.name=กระสอบทรายสีน้ำตาล
+tile.mcpe:sandbag_white.name=กระสอบทรายสีขาว
+
+## sign
+tile.mcpe:traffic_becareful.name=ป้ายเตือนระวังการจราจร
+tile.mcpe:traffic_intersection.name=ป้ายทางแยก
+tile.mcpe:traffic_no_entry.name=ป้ายห้ามเข้า
+tile.mcpe:traffic_no_parking.name=ป้ายห้ามจอด
+tile.mcpe:traffic_parking.name=ป้ายจอดรถ
+tile.mcpe:traffic_question.name=ป้ายเครื่องหมายคำถาม
+tile.mcpe:traffic_section_left.name=ป้ายแยกซ้าย
+tile.mcpe:traffic_section_right.name=ป้ายแยกขวา
+tile.mcpe:traffic_stop.name=ป้ายหยุด
+tile.mcpe:traffic_turn_left.name=ป้ายเลี้ยวซ้าย
+tile.mcpe:traffic_turn_right.name=ป้ายเลี้ยวขวา
+tile.mcpe:traffic_rod.name=แท่งจราจร
+
+## street_bench
+tile.mcpe:street_bench_blue.name=ม้านั่งริมถนนสีน้ำเงิน
+tile.mcpe:street_bench_green.name=ม้านั่งริมถนนสีเขียว
+tile.mcpe:street_bench_red.name=ม้านั่งริมถนนสีแดง
+tile.mcpe:street_bench_white.name=ม้านั่งริมถนนสีขาว
+
+## table_cloth
+tile.mcpe:table_cloth_black.name=โต๊ะที่มีผ้าคลุมสีดำ
+tile.mcpe:table_cloth_blue.name=โต๊ะที่มีผ้าคลุมสีน้ำเงิน
+tile.mcpe:table_cloth_green.name=โต๊ะที่มีผ้าคลุมสีเขียว
+tile.mcpe:table_cloth_red.name=โต๊ะที่มีผ้าคลุมสีแดง
+
+## variant
+tile.mcpe:graffiti.name=กราฟฟิตี
+tile.mcpe:metal_rack.name=ชั้นวางโลหะ
+tile.mcpe:papers.name=เอกสาร
+
+## water_pump
+tile.mcpe:water_pump.name=ปั๊มน้ำ
+tile.mcpe:water_pump_emp.name=ปั๊มน้ำว่าง
+
+## more furniture
+tile.mcpe:crowd_fence.name=รั้วกันคนดู
+tile.mcpe:construction_barrier.name=สิ่งกีดขวางการก่อสร้าง
+tile.mcpe:microwave.name=ไมโครเวฟ
+tile.mcpe:monitor.name=จอภาพ
+tile.mcpe:monitor_keyboard.name=จอภาพพร้อมคีย์บอร์ด
+tile.mcpe:reloading_table.name=โต๊ะรีโหลด
+tile.mcpe:sink.name=อ่างล้างจาน
+tile.mcpe:toilet.name=ห้องน้ำ
+tile.mcpe:traffic_cone.name=กรวยจราจร
+tile.mcpe:trash_bin.name=ถังขยะ
+tile.mcpe:trash_can.name=ถังขยะ
+tile.mcpe:tv.name=โทรทัศน์
+tile.mcpe:tv_old.name=โทรทัศน์เก่า
+tile.mcpe:wood_barrier.name=รั้วไม้
+tile.mcpe:wood_chair.name=เก้าอี้ไม้
+tile.mcpe:wood_table.name=โต๊ะไม้
+
+
+## more block
+tile.mcpe:bath_tiles.name=กระเบื้องอาบน้ำ
+tile.mcpe:brick_big.name=อิฐใหญ่
+tile.mcpe:caution_block.name=บล็อกเตือนภัย
+tile.mcpe:corrugated_metal.name=บล็อกโลหะลูกฟูก
+tile.mcpe:corrugated_metal_rusty.name=บล็อกโลหะลูกฟูกสนิม
+tile.mcpe:crate.name=กล่องไม้
+tile.mcpe:farm_block.name=บล็อกฟาร์ม
+tile.mcpe:filing_cabinet.name=ตู้เอกสาร
+tile.mcpe:hazard_block.name=บล็อกอันตราย
+tile.mcpe:military_wall.name=กำแพงทหาร
+tile.mcpe:smooth_stone_brick.name=อิฐหินเรียบ
+tile.mcpe:tiles_bnw.name=กระเบื้องลายตารางสีดำ
+tile.mcpe:tiles_white.name=กระเบื้องสีขาว
+tile.mcpe:trace_plate.name=แผ่นลายนิ้วมือ
+tile.mcpe:washing_machine.name=เครื่องซักผ้า

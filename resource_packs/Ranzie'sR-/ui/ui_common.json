@@ -1,0 +1,36 @@
+{
+  "namespace": "common",
+  
+    "start_screen": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/minecraft_bg/start"
+	},
+    "setwarp_screen": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/minecraft_bg/start8"
+	},
+	
+	"screen_exit_animation_push_alpha": {
+    "anim_type": "alpha",
+    "scale_from_starting_alpha": true,
+    "easing": "linear",
+    "duration": "$transition_time_push",
+    "from": 1.0,
+    "to": 1.0,
+    "play_event": "screen.exit_push",
+    "end_event": "screen.exit_end"
+  },
+
+  "screen_entrance_animation_push_alpha": {
+    "anim_type": "alpha",
+    "scale_from_starting_alpha": true,
+    "easing": "linear",
+    "duration": "$transition_time_push",
+    "from": 1.0,
+    "to": 1.0,
+    "play_event": "screen.entrance_push",
+    "end_event": "screen.entrance_end"
+  }
+}

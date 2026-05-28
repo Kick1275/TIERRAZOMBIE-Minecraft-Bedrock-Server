@@ -1,0 +1,11 @@
+{
+	"format_version": "1.0.0",
+	"mcpe:fuel": {
+		"image": "font/glyph_E1.png",
+		"characters": {
+			"fuel": "\uE100",
+			"fuel_half": "\uE101",
+			"fuel_emp": "\uE102"
+		}
+	}
+}

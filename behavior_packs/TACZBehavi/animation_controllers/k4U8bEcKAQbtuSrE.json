@@ -1,0 +1,102 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.awp": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='awp' && q.is_using_item) || query.get_equipped_item_name=='awp_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s awp 5",
+            "@s[hasitem={item=krep:awp, location=slot.weapon.mainhand}] krep:noreload",
+            "@s awp:normal"
+          ]
+        },
+        "jawir": {
+          "animations": [
+            "awpdelay"
+          ],
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp') && q.all_animations_finished && q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s awp:normal"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "awp.30": "query.get_equipped_item_name=='awp' && query.is_using_item && query.scoreboard('awp') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "awp.31": "query.get_equipped_item_name=='awp' && query.is_using_item && query.scoreboard('awp') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function awp"
+          ]
+        },
+        "awp.31": {
+          "animations": [
+            "awpshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={awp=0}] slot.weapon.mainhand 1 krep:awp_emp 1 0"
+          ]
+        },
+        "awp.30": {
+          "animations": [
+            "awpshoot"
+          ],
+          "transitions": [
+            {
+              "bolt": "query.all_animations_finished && query.get_equipped_item_name=='awp' && q.mark_variant!= 2"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='awp'"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='awp' && q.mark_variant == 2"
+            }
+          ],
+          "on_entry": [
+            "@s krep:awp_fire",
+            "/scoreboard players remove @s[scores={awp=1..6}] awp 1",
+            "/scoreboard players set @s[scores={awp=7..}] awp 6",
+            "/playsound awp.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={awp=0}] slot.weapon.mainhand 1 krep:awp_emp 1 0",
+            "/title @s[scores={awp=0}] actionbar No Ammunition"
+          ]
+        },
+        "bolt": {
+          "animations": [
+            "awpbolt"
+          ],
+          "transitions": [
+            {
+              "jawir": "query.all_animations_finished"
+            },
+            {
+              "jawir": "query.get_equipped_item_name!='awp'"
+            }
+          ],
+          "on_entry": [
+            "@s awp:bolt",
+            "/function awp"
+          ]
+        }
+      }
+    }
+  }
+}

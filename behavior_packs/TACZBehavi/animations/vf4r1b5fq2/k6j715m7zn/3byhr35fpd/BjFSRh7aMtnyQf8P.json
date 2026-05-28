@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.t50.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.0,
+      "timeline": {
+        "1.9": [
+          "/scoreboard players set @s[scores={t50=10..}] t50 9",
+          "/function t50"
+        ],
+        "1.8": [
+          "/function t50reload",
+          "/event entity @s krep:t50_reload"
+        ]
+      }
+    }
+  }
+}

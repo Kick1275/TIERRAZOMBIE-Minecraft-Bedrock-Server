@@ -1,0 +1,63 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.variant_mouth": {
+      "arrays": {
+        "textures": {
+          "Array.mouth": [
+            "Texture.mouth_0",
+            "Texture.mouth_1",
+            "Texture.mouth_2",
+            "Texture.mouth_3",
+            "Texture.mouth_4",
+            "Texture.mouth_5",
+            "Texture.mouth_6",
+            "Texture.mouth_7",
+            "Texture.mouth_8",
+            "Texture.mouth_9",
+            "Texture.mouth_10",
+            "Texture.mouth_11",
+            "Texture.mouth_12",
+            "Texture.mouth_13",
+            "Texture.mouth_14",
+            "Texture.mouth_15",
+            "Texture.mouth_16",
+            "Texture.mouth_17",
+            "Texture.mouth_18",
+            "Texture.mouth_19",
+            "Texture.mouth_20",
+            "Texture.mouth_21",
+            "Texture.mouth_22",
+            "Texture.mouth_23",
+            "Texture.mouth_24",
+            "Texture.mouth_25",
+            "Texture.mouth_26",
+            "Texture.mouth_27"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.mouth[v.mouth]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

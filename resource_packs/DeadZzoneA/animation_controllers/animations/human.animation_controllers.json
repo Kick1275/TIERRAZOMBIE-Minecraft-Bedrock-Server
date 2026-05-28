@@ -1,0 +1,160 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers": {
+		"controller.animation.human_melee.root": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bob": "q.ground_speed < 0.4"
+						},
+						{
+							"move": "q.ground_speed > 0.4"
+						},
+						{
+							"run": "q.ground_speed > 4.2 && q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.22
+				},
+				"bob": {
+					"animations": [
+						"bob"
+					],
+					"transitions": [
+						{
+							"default": "q.ground_speed > 0.3"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"move": {
+					"animations": [
+						"move.arms",
+						"move.legs"
+					],
+					"transitions": [
+						{
+							"bob": "q.ground_speed < 0.3"
+						},
+						{
+							"run": "q.ground_speed > 3.75 && q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"run": {
+					"animations": [
+						"run.arms",
+						"run.legs"
+					],
+					"transitions": [
+						{
+							"default": "q.ground_speed < 1.6 || !q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		
+		"controller.animation.human_guns.root": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bob": "q.ground_speed < 0.4"
+						},
+						{
+							"move": "q.ground_speed > 0.4"
+						},
+						{
+							"run": "q.ground_speed > 4.2 && q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.22
+				},
+				"bob": {
+					"animations": [
+						"bob_guns"
+					],
+					"transitions": [
+						{
+							"default": "q.ground_speed > 0.3"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"move": {
+					"animations": [
+						"move.arms_guns",
+						"move.legs"
+					],
+					"transitions": [
+						{
+							"bob": "q.ground_speed < 0.3"
+						},
+						{
+							"run": "q.ground_speed > 3.75 && q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"run": {
+					"animations": [
+						"run.arms_guns",
+						"run.legs"
+					],
+					"transitions": [
+						{
+							"default": "q.ground_speed < 1.6 || !q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		
+		"controller.animation.human.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"hand_attack": "v.has_target && !q.is_item_equipped && v.attack_time >= 0.0"
+						},
+						{
+							"melee_attack": "v.has_target && q.is_item_equipped && v.attack_time >= 0.0"
+						}
+					]
+				},
+				"melee_attack" : {
+					"animations": [
+						"melee_attack"
+					],
+					"transitions" : [
+						{
+							"default" : "!q.is_item_equipped || !v.has_target || variable.attack_time < 0.0"
+						}
+					]
+				},
+				"hand_attack" : {
+					"animations": [
+						"hand_attack"
+					],
+					"transitions" : [
+						{
+							"default" : "q.is_item_equipped || !v.has_target || v.attack_time < 0.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

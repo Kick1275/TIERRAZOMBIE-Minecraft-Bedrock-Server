@@ -1,0 +1,63 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.zombie_death.general" : {
+			"initial_state" : "die",
+			"states" : {
+				"die" : {
+					"on_entry": [ "v.dead = q.property('mcpe:dead');" ],
+					"animations" : [ 
+						{
+							"dead1": "v.dead == 1"
+						},
+						{
+							"dead2": "v.dead == 2"
+						},
+						{
+							"dead3": "v.dead == 3"
+						},
+						{
+							"dead4": "v.dead == 4"
+						},
+						{
+							"dead5": "v.dead == 5"
+						},
+						{
+							"dead6": "v.dead == 6"
+						},
+						{
+							"dead7": "v.dead == 7"
+						},
+						{
+							"dead8": "v.dead == 8"
+						},
+						{
+							"dead9": "v.dead == 9"
+						},
+						{
+							"dead10": "v.dead == 10"
+						},
+						{
+							"dead11": "v.dead == 11"
+						},
+						{
+							"dead12": "v.dead == 12"
+						},
+						{
+							"dead13": "v.dead == 13"
+						},
+						{
+							"dead14": "v.dead == 14"
+						},
+						{
+							"dead15": "v.dead == 15"
+						},
+						{
+							"dead16": "v.dead == 16"
+						}
+					]
+				}
+			}
+		}
+	}
+}

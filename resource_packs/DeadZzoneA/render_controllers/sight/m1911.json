@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.m1911scope": {
+      "textures": [
+        "Texture.m1911_sight"
+      ],
+      "part_visibility": [
+        {
+          "*": "query.mark_variant != 3"
+        }
+      ],
+      "geometry": "geometry.scope",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

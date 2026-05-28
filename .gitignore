@@ -1,0 +1,15 @@
+node_modules/
+.git/
+package-lock.json
+
+*.log
+*.tmp
+
+db/LOCK
+db/LOG*
+
+behavior_packs/**/node_modules/
+resource_packs/**/node_modules/
+
+behavior_packs/**/.git
+resource_packs/**/.git

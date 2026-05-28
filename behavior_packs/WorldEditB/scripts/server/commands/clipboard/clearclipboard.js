@@ -1,0 +1,1 @@
+import{registerCommand as r}from"../register_commands.js";const i={name:"clearclipboard",permission:"worldedit.clipboard.clear",description:"commands.wedit:clearclipboard.description"};r(i,function(o){return o.clipboard=void 0,"commands.wedit:clearclipboard.explain"});

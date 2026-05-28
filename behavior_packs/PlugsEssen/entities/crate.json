@@ -1,0 +1,53 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "plugs:crate",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {},
+    "components": {
+      "minecraft:type_family": {
+        "family": ["crate", "inanimate"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.875,
+        "height": 0.875
+      },
+      "minecraft:custom_hit_test": {
+        "hitboxes": [
+          {
+            "width": 0.875,
+            "height": 0.875,
+            "pivot": [0, 0.4375, 0]
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": false
+      }
+    },
+    "events": {}
+  }
+}

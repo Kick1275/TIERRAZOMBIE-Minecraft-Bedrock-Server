@@ -1,0 +1,83 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.thirst_bar": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.thirst_icons"
+			],
+			"geometry": "geometry.thirst_bar",
+			"on_fire_color": {},
+			"is_hurt_color": {},
+			"part_visibility": [
+				{
+					"1": "q.scoreboard('thirst') == 20"
+				},
+				{
+					"2": "q.scoreboard('thirst') == 19"
+				},
+				{
+					"3": "q.scoreboard('thirst') == 18"
+				},
+				{
+					"4": "q.scoreboard('thirst') == 17"
+				},
+				{
+					"5": "q.scoreboard('thirst') == 16"
+				},
+				{
+					"6": "q.scoreboard('thirst') == 15"
+				},
+				{
+					"7": "q.scoreboard('thirst') == 14"
+				},
+				{
+					"8": "q.scoreboard('thirst') == 13"
+				},
+				{
+					"9": "q.scoreboard('thirst') == 12"
+				},
+				{
+					"10": "q.scoreboard('thirst') == 11"
+				},
+				{
+					"11": "q.scoreboard('thirst') == 10"
+				},
+				{
+					"12": "q.scoreboard('thirst') == 9"
+				},
+				{
+					"13": "q.scoreboard('thirst') == 8"
+				},
+				{
+					"14": "q.scoreboard('thirst') == 7"
+				},
+				{
+					"15": "q.scoreboard('thirst') == 6"
+				},
+				{
+					"16": "q.scoreboard('thirst') == 5"
+				},
+				{
+					"17": "q.scoreboard('thirst') == 4"
+				},
+				{
+					"18": "q.scoreboard('thirst') == 3"
+				},
+				{
+					"19": "q.scoreboard('thirst') == 2"
+				},
+				{
+					"20": "q.scoreboard('thirst') == 1"
+				},
+				{
+					"21": "q.scoreboard('thirst') == 0"
+				}
+			]
+		}
+	}
+}

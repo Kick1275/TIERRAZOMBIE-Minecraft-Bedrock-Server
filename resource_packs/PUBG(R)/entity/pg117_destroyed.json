@@ -1,0 +1,33 @@
+//bridge-file-version: #10
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:pg117_destroyed",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/destroyed_vehicles/pg117_destroyed"
+			},
+			"geometry": {
+				"default": "geometry.pg117"
+			},
+			"scripts": {
+				"animate": [
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"engine_smoke": "controller.animation.pg117destroyed.smoke"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"particle_effects": {
+				"flame": "pubg:engine_fire",
+				"engine": "pubg:engine_smoke_black"
+			}
+		}
+	}
+}

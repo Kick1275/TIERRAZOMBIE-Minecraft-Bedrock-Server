@@ -1,0 +1,21 @@
+**Copyright License for DeadZone add-on**
+
+**Copyright (C) 2021-2024, NekoZack, Neko ¡ Project**
+
+This license applies to the *DeadZone add-on* (“the Mod”), including all assets, code, and related content created and published within this project.
+
+### 1. Permissions
+Users are granted permission to:
+- **Play the Mod and Addons**: Users are allowed to download, install, and play the *DeadZone add-on* in both single-player and multiplayer modes.
+- **Use on Servers**: Users are permitted to use the Mod on private or public servers.
+
+### 2. Restrictions
+Users are NOT permitted to:
+- **Redistribute the Mod or Addons**: This license prohibits re-uploading, redistributing, or sharing any part or whole of the *DeadZone add-on*, including on other platforms, websites, or within other mods, without written permission from NekoZack or Neko ¡ Project.
+- **Extract or Use Assets**: Users may not extract, reverse-engineer, or use assets (models, textures, sounds, code, etc.) from the Mod in other projects.
+
+### 3. Modifications
+Users are allowed to create addons compatible with the *DeadZone add-on*, but modifications to the original Mod itself are not permitted. Creating modifications that override or alter the core functionality of the Mod is not allowed unless explicit permission is given by NekoZack or Neko ¡ Project.
+
+### 4. Attribution and Copyright
+The original creators retain all rights to the Mod and all its assets. Any permitted use of the Mod on servers or other platforms must include proper attribution, and all copyright notices must remain intact.

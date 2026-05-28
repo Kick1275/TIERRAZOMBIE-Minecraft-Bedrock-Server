@@ -1,0 +1,73 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dacia.drive": {
+			"loop": true,
+			"animation_length": 0.1667,
+			"bones": {
+				"fronttire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [415, 0, 0]
+					}
+				},
+				"fronttire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [415, 0, 0]
+					}
+				},
+				"backtires": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.1667": [415, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.dacia.turn": {
+			"loop": true,
+			"bones": {
+				"steeringwheel": {
+					"rotation": [0, 0, "Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*-1"]
+				},
+				"fronttire1": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				},
+				"fronttire2": {
+					"rotation": [0, "Math.max(-26, Math.min(26,query.yaw_speed * 0.5))", 0]
+				}
+			}
+		},
+		"animation.dacia.down": {
+			"loop": true,
+			"animation_length": 0.04167,
+			"bones": {
+				"dacia": {
+					"rotation": {
+						"0.0417": {
+							"pre": ["query.vertical_speed * -3", 0, 0],
+							"post": ["query.vertical_speed * -3", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.dacia.up": {
+			"loop": true,
+			"animation_length": 0.04167,
+			"bones": {
+				"dacia": {
+					"rotation": {
+						"0.0417": {
+							"pre": ["query.vertical_speed * -3", 0, 0],
+							"post": ["query.vertical_speed * -3", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

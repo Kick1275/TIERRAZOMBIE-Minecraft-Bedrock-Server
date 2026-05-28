@@ -1,0 +1,63 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "causal:hook",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "runtime_identifier": "minecraft:snowball"
+        },
+        "component_groups":{
+            "despawn":{
+                "minecraft:instant_despawn": {
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.25,
+                "height": 0.25
+            },
+            "minecraft:projectile": {
+                "on_hit": {
+                    "stick_in_ground": {
+                    "shake_time": 0.35
+                    }
+                },
+                "hit_sound": "dig.chain",
+                "power": 5.0,
+                "gravity": 0.05,
+                "uncertainty_base": 1,
+                "uncertainty_multiplier": 0,
+                "anchor": 1,
+                "should_bounce": true,
+                "offset": [ 0, -0.1, 0 ]
+            },
+            "minecraft:physics": {},
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:leashable":{
+                "can_be_cut":false,
+                "hard_distance":1000,
+                "soft_distance":1000,
+                "max_distance":1000,
+                "on_unleash":{"event":"causal:on_unleash","target":"self"}
+            }
+        },
+        "events":{
+            "causal:on_unleash":{
+                "add":{
+                    "component_groups":[
+                        "despawn"
+                    ]
+                },
+                "queue_command": {
+                    "target": "player", 
+                    "command": "playsound lead.break @s ~~~"
+                }
+            }
+        }
+    }
+}

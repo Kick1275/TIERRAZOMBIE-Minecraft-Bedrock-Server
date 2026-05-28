@@ -1,0 +1,137 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.vector": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='vector' && q.is_using_item) || query.get_equipped_item_name=='vector_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s[hasitem={item=krep:vector, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "vector.30": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle') <= 3"
+            },
+            {
+              "vector.30s": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle') >= 4"
+            },
+            {
+              "vector.31": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function vector"
+          ]
+        },
+        "vector.31": {
+          "animations": [
+            "vectorshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={vector=0}] slot.weapon.mainhand 1 krep:vector_emp 1 0"
+          ]
+        },
+        "vector.30": {
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='vector' && !query.is_using_item"
+            },
+            {
+              "setup": "query.scoreboard('vector') == 0"
+            },
+            {
+              "vector.29": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') >= 1 && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "@s krep:vector_fire",
+            "@s krep:vector_range",
+            "/scoreboard players remove @s[scores={vector=1..}] vector 1",
+            "/playsound vector.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={vector=0}] slot.weapon.mainhand 1 krep:vector_emp 1 0",
+            "/title @s[scores={vector=0}] actionbar No Ammunition",
+            "/function vector"
+          ]
+        },
+        "vector.29": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('vector') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='vector' && !query.is_using_item"
+            },
+            {
+              "vector.30": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') >= 1 && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "@s krep:vector_fire",
+            "@s krep:vector_range",
+            "/scoreboard players remove @s[scores={vector=1..}] vector 1",
+            "/playsound vector.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={vector=0}] slot.weapon.mainhand 1 krep:vector_emp 1 0",
+            "/title @s[scores={vector=0}] actionbar No Ammunition",
+            "/function vector"
+          ]
+        },
+        "vector.30s": {
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='vector' && !query.is_using_item"
+            },
+            {
+              "setup": "query.scoreboard('vector') == 0"
+            },
+            {
+              "vector.29s": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') >= 1 && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "@s krep:vector_fire",
+            "@s krep:vector_range",
+            "/scoreboard players remove @s[scores={vector=1..}] vector 1",
+            "/playsound vector.suppress @a[r=15]",
+            "/replaceitem entity @s[scores={vector=0}] slot.weapon.mainhand 1 krep:vector_emp 1 0",
+            "/title @s[scores={vector=0}] actionbar No Ammunition",
+            "/function vector"
+          ]
+        },
+        "vector.29s": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('vector') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='vector' && !query.is_using_item"
+            },
+            {
+              "vector.30s": "query.get_equipped_item_name=='vector' && query.is_using_item && query.scoreboard('vector') >= 1 && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "@s krep:vector_fire",
+            "@s krep:vector_range",
+            "/scoreboard players remove @s[scores={vector=1..}] vector 1",
+            "/playsound vector.suppress @a[r=15]",
+            "/replaceitem entity @s[scores={vector=0}] slot.weapon.mainhand 1 krep:vector_emp 1 0",
+            "/title @s[scores={vector=0}] actionbar No Ammunition",
+            "/function vector"
+          ]
+        }
+      }
+    }
+  }
+}

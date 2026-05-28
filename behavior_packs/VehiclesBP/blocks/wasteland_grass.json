@@ -1,0 +1,15 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:wasteland_grass"
+		},
+		"components": {
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:map_color": "#444a34"
+		}
+	}
+}

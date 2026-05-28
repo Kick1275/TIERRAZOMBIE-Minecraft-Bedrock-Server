@@ -1,0 +1,14 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "af:aluminium_ingot"
+		},
+		"tags": [
+			"blast_furnace",
+			"furnace"
+		],
+		"input": "af:aluminium_ore",
+		"output": "af:aluminium_ingot"
+	}
+}

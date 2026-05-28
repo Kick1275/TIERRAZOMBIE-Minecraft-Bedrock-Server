@@ -1,0 +1,143 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.spb_guide_book.default": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"book": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5417": [0, 0.086, 0],
+						"1.0": [0, 0.1, 0],
+						"1.5417": [0, 0.03755, 0],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5417": [0, 1.36571, 0],
+						"0.9583": [0, 2.44539, 0],
+						"1.0": [0, 2.5, 0],
+						"1.5417": [0, 1.13429, 0],
+						"1.9583": [0, 0.05461, 0],
+						"2.0": [0, 0, 0]
+					}
+				},
+				"left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5417": [0, -1.42918, 0],
+						"1.0": [0, -2.5, 0],
+						"1.5417": [0, -1.06702, 0],
+						"2.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.spb_guide_book.change_page": {
+			"animation_length": 1,
+			"bones": {
+				"papper_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.4583": [0, 164, 0],
+						"0.5": {"pre": [0, 164, 0], "post": [0, 0, 0]}
+					}
+				},
+				"papper_right2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.4583": {"pre": [0, 0, 0], "post": [0, 4.5, 0]},
+						"0.5": {"pre": [0, 4.5, 0], "post": [0, 0, 0]}
+					}
+				},
+				"papper_left2": {
+					"rotation": {
+						"0.4583": [0, 0, 0],
+						"0.5": {"pre": [0, 0, 0], "post": [0, -2, 0]},
+						"1.0": [0, 0, 0]
+					}
+				},
+				"papper_left": {
+					"rotation": {
+						"0.4583": [0, 0, 0],
+						"0.5": {"pre": [0, 0, 0], "post": [0, -162.5, 0]},
+						"1.0": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "change_page"
+				}
+			}
+		},
+		"animation.spb_guide_book.open": {
+			"animation_length": 1,
+			"bones": {
+				"right": {
+					"rotation": {
+						"0.0": [0, 85, 0],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [1, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"left": {
+					"rotation": {
+						"0.0": [0, -87.5, 0],
+						"1.0": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [-1, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"papper_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 17.5, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"papper_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -10, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "book_open"
+				}
+			}
+		},
+		"animation.spb_guide_book.close": {
+			"loop": true,
+			"bones": {
+				"right": {
+					"rotation": [0, 85, 0],
+					"position": [1, 0, 0]
+				},
+				"left": {
+					"rotation": [0, -87.5, 0],
+					"position": [-1, 0, 0]
+				}
+			}
+		},
+		"animation.spb_guide_book.close_sound": {
+			"loop": true,
+			"sound_effects": {
+				"0.0": {
+					"effect": "close_book"
+				}
+			}
+		}
+	}
+}

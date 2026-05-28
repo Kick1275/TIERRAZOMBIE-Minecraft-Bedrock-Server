@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.bullet": {
+      "textures": [
+        "Texture.default"
+      ],
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "light_color_multiplier": 1.5,
+      "ignore_lighting": true
+    }
+  }
+}

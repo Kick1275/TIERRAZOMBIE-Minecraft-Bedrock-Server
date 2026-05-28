@@ -1,0 +1,5 @@
+﻿import{world}from"@minecraft/server";import{PlayerDataManager}from"../Core/index.js";const killListeners=[];export function registerKillListener(e){"function"==typeof e&&killListeners.push(e)}function notifyKillListeners(e,t){for(const i of killListeners)try{i(e,t)}catch(e){}}// kills/deaths son manejados por Core/PlayerDataManager via entityDie
+// KillsDetectionSystem solo mantiene el bus de listeners para compatibilidad con Clans&Teams
+// El Core ya suscribe entityDie y llama increment("kills") / increment("deaths")
+// Aquí solo re-emitimos el evento para plugins que usen registerKillListener
+import{onDataChange,DataEvents}from"../Core/index.js";onDataChange(DataEvents.KILLS,(playerName,newVal,oldVal)=>{const killer=world.getAllPlayers().find(p=>p.name===playerName);if(killer)notifyKillListeners(killer,null)});export default{registerKillListener:registerKillListener};

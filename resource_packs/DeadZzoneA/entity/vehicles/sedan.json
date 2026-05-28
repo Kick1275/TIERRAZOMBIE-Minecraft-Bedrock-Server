@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:sedan",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "variant_0": "textures/entity/vehicles/sedan/sedan1",
+        "variant_1": "textures/entity/vehicles/sedan/sedan2",
+        "variant_2": "textures/entity/vehicles/sedan/sedan3",
+        "variant_3": "textures/entity/vehicles/sedan/sedan4",
+        "variant_4": "textures/entity/vehicles/sedan/sedan5",
+        "variant_5": "textures/entity/vehicles/sedan/sedan6",
+       "variant_6": "textures/entity/vehicles/sedan/sedan7",
+       "variant_7": "textures/entity/vehicles/sedan/sedan8",
+       "variant_8": "textures/entity/vehicles/sedan/sedan9",
+       "variant_9": "textures/entity/vehicles/sedan/sedan10"
+
+      },
+      "geometry": {
+        "default": "geometry.sedan"
+      },
+      "spawn_egg": {
+        "texture": "sedan",
+        "texture_index": 0
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 \u003d (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "animate": [
+          {
+            "move": "query.modified_move_speed"
+          },
+          "steer"
+        ]
+      },
+      "animations": {
+        "move": "animation.cars.move",
+        "steer": "animation.cars.steer"
+      },
+      "render_controllers": [
+        "controller.render.variant_car"
+      ]
+    }
+  }
+}

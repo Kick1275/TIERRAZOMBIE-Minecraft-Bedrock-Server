@@ -1,0 +1,133 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.universal32.first_person": {
+      "geometry": "Geometry.taczuniversal32",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightArm": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || v.evolys"
+        },
+        {
+          "rightSleeve": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || v.evolys"
+        },
+        {
+          "leftArm": "(query.get_equipped_item_name(0, 1) == 'map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)) || v.evolys"
+        },
+        {
+          "leftSleeve": "(query.get_equipped_item_name(0, 1) == 'map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)) || v.evolys"
+        }
+      ]
+    },
+    "controller.render.evolys": {
+      "geometry": "geometry.evolys",
+      "materials": [
+        {
+          "*": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "1": "(q.property('krep:bulletcache')>=8 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=7 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_1": "(q.property('krep:bulletcache')>=8 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=7 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "2": "(q.property('krep:bulletcache')>=7 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=6 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_2": "(q.property('krep:bulletcache')>=7 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=6 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "3": "(q.property('krep:bulletcache')>=6 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=5 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_3": "(q.property('krep:bulletcache')>=6 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=5 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "4": "(q.property('krep:bulletcache')>=5 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=4 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_4": "(q.property('krep:bulletcache')>=5 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=4 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "5": "(q.property('krep:bulletcache')>=4 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=3 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_5": "(q.property('krep:bulletcache')>=4 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=3 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "6": "(q.property('krep:bulletcache')>=3 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=2 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_6": "(q.property('krep:bulletcache')>=3 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=2 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "7": "(q.property('krep:bulletcache')>=2 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=1 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_7": "(q.property('krep:bulletcache')>=2 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=1 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "8": "(q.property('krep:bulletcache')>=1 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=1 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "belt_8": "(q.property('krep:bulletcache')>=1 && q.property('krep:bulletcachemk2')==0) || (q.property('krep:ammoreload')>=1 && q.mark_variant==2 && q.property('krep:bulletcachemk2')==1)"
+        },
+        {
+          "r9": "q.property('krep:ammoreload')>=8"
+        },
+        {
+          "r10": "q.property('krep:ammoreload')>=7"
+        },
+        {
+          "r11": "q.property('krep:ammoreload')>=6"
+        },
+        {
+          "r12": "q.property('krep:ammoreload')>=5"
+        },
+        {
+          "r13": "q.property('krep:ammoreload')>=4"
+        },
+        {
+          "r14": "q.property('krep:ammoreload')>=3"
+        },
+        {
+          "r15": "q.property('krep:ammoreload')>=2"
+        },
+        {
+          "r16": "q.property('krep:ammoreload')>=1"
+        }
+      ],
+      "textures": [
+        "texture.evolys"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

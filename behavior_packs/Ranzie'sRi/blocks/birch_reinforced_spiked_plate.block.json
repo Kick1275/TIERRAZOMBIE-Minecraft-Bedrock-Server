@@ -1,0 +1,129 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ranzie:birch_reinforced_spiked_plate_block",
+			"menu_category": {
+				"category": "construction"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": ["minecraft:cardinal_direction"]
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+        "origin": [
+          -8.0,
+          0.0,
+          -8.0
+        ],
+        "size": [
+          16.0,
+          2.0,
+          16.0
+        ]
+      },
+			"minecraft:selection_box": {
+        "origin": [
+          -8.0,
+          0.0,
+          -8.0
+        ],
+        "size": [
+          16.0,
+          2.0,
+          16.0
+        ]
+      },
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3,
+				"item_specific_speeds": [
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:wooden_tier')"
+						},
+						"destroy_speed": 1.5
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:stone_tier')"
+						},
+						"destroy_speed": 0.75
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:iron_tier')"
+						},
+						"destroy_speed": 0.5
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:golden_tier')"
+						},
+						"destroy_speed": 0.25
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:diamond_tier')"
+						},
+						"destroy_speed": 0.4
+					},
+					{
+						"item": {
+							"tags": "q.all_tags('minecraft:is_axe', 'minecraft:netherite_tier')"
+						},
+						"destroy_speed": 0.35
+					}
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 15
+			},
+			"minecraft:geometry": "geometry.spiked_plate",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "birch_reinforced_spiked_fence",
+					"render_method": "alpha_test",
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:map_color": "#5f4a2b"
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 180, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 0, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 90, 0]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [0, 270, 0]
+					}
+				}
+			}
+		]
+	}
+}

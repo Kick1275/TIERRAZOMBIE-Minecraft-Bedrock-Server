@@ -1,0 +1,1101 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "rt:runa_proteccion",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "ender_crystal"
+    },
+    "component_groups": {
+      "instant_despawn_group": {
+        "minecraft:instant_despawn": {}
+      },
+      "block_sensor_11x11_group": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "in_block",
+                    "subject": "self",
+                    "operator": "not",
+                    "value": "rt:11x11_on_block"
+                  },
+                  {
+                    "test": "has_tag",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": "ready"
+                  },
+                  {
+                    "test": "in_block",
+                    "subject": "self",
+                    "operator": "not",
+                    "value": "rt:11x11_openlist_block"
+                  }
+                ]
+              },
+              "event": "runa_kill2"
+            }
+          ]
+        }
+      },
+      "block_sensor_21x21_group": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "in_block",
+                    "subject": "self",
+                    "operator": "not",
+                    "value": "rt:21x21_on_block"
+                  },
+                  {
+                    "test": "has_tag",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": "ready"
+                  },
+                  {
+                    "test": "in_block",
+                    "subject": "self",
+                    "operator": "not",
+                    "value": "rt:21x21_openlist_block"
+                  }
+                ]
+              },
+              "event": "runa_kill2"
+            }
+          ]
+        }
+      },
+      "block_sensor_31x31_group": {
+        "minecraft:environment_sensor": {
+          "triggers": [
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "in_block",
+                    "subject": "self",
+                    "operator": "not",
+                    "value": "rt:31x31_on_block"
+                  },
+                  {
+                    "test": "has_tag",
+                    "subject": "self",
+                    "operator": "equals",
+                    "value": "ready"
+                  },
+                  {
+                    "test": "in_block",
+                    "subject": "self",
+                    "operator": "not",
+                    "value": "rt:31x31_openlist_block"
+                  }
+                ]
+              },
+              "event": "runa_kill2"
+            }
+          ]
+        }
+      },
+      "variant_11x11_group": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "rt:upgrade_protection"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "11x11_open_event"
+              },
+              "interact_text": "action.interact.protections2"
+            },
+            {
+              "use_item": true,
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "equals",
+                      "subject": "other",
+                      "value": "rt:upgrade_protection"
+                    }
+                  ]
+                },
+                "event": "prepare_11x11_upgrade_event"
+              },
+              "interact_text": "action.interact.protections2"
+            }
+          ]
+        }
+      },
+      "variant_21x21_group": {
+        "minecraft:variant": {
+          "value": 2
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "rt:upgrade_protection"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "21x21_open_event"
+              },
+              "interact_text": "action.interact.protections2"
+            },
+            {
+              "use_item": true,
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "equals",
+                      "subject": "other",
+                      "value": "rt:upgrade_protection"
+                    }
+                  ]
+                },
+                "event": "prepare_21x21_upgrade_event"
+              },
+              "interact_text": "action.interact.protections2"
+            }
+          ]
+        }
+      },
+      "variant_31x31_group": {
+        "minecraft:variant": {
+          "value": 3
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "31x31_open_event"
+              },
+              "interact_text": "action.interact.protections2"
+            }
+          ]
+        }
+      },
+      "variant_11x11_open_group": {
+        "minecraft:variant": {
+          "value": 4
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 5,
+          "time_down_event": {
+            "event": "11x11_close_event"
+          }
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "11x11_close_event"
+              },
+              "interact_text": "action.interact.protections3"
+            },
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "equals",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "join_protection_11x11_event"
+              },
+              "interact_text": "action.interact.protections4"
+            }
+          ]
+        }
+      },
+      "variant_21x21_open_group": {
+        "minecraft:variant": {
+          "value": 4
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 5,
+          "time_down_event": {
+            "event": "21x21_close_event"
+          }
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "21x21_close_event"
+              },
+              "interact_text": "action.interact.protections3"
+            },
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "equals",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "join_protection_21x21_event"
+              },
+              "interact_text": "action.interact.protections4"
+            }
+          ]
+        }
+      },
+      "variant_31x31_open_group": {
+        "minecraft:variant": {
+          "value": 4
+        },
+        "minecraft:timer": {
+          "looping": false,
+          "time": 5,
+          "time_down_event": {
+            "event": "31x31_close_event"
+          }
+        },
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "not",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "31x31_close_event"
+              },
+              "interact_text": "action.interact.protections3"
+            },
+            {
+              "on_interact": {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_tag",
+                      "subject": "other",
+                      "operator": "equals",
+                      "value": "intruso"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "domain": "hand",
+                      "operator": "not",
+                      "subject": "other",
+                      "value": "name_tag"
+                    }
+                  ]
+                },
+                "event": "join_protection_31x31_event"
+              },
+              "interact_text": "action.interact.protections4"
+            }
+          ]
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "11x11"
+        ]
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "event": "instant_despawn_event",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_tag",
+                    "subject": "other",
+                    "operator": "not",
+                    "value": "intruso"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "any_of": [
+                      {
+                        "test": "has_ability",
+                        "subject": "other",
+                        "operator": "equals",
+                        "value": "instabuild"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "value": "wooden_pickaxe"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "value": "stone_pickaxe"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "value": "golden_pickaxe"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "value": "iron_pickaxe"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "value": "diamond_pickaxe"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "domain": "hand",
+                        "value": "netherite_pickaxe"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "deals_damage": false
+          },
+          {
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:environment_sensor": {
+        "triggers": {
+          "filters": {
+            "test": "is_underwater",
+            "operator": "==",
+            "value": true
+          },
+          "event": "instant_despawn_event"
+        }
+      },
+      "minecraft:collision_box": {
+        "width": 1.0,
+        "height": 1.0
+      },
+      "minecraft:health": {
+        "value": 1,
+        "max": 1
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:nameable": {
+        "always_show": true
+      },
+      "minecraft:breathable": {
+        "total_supply": 1,
+        "suffocate_time": 0
+      },
+      "minecraft:physics": {
+        "has_collision": false,
+        "has_gravity": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "death_sensor_group"
+          ]
+        }
+      },
+      "11x11_claim_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "execute as @p at @s run scoreboard players operation @e[type=rt:runa_proteccion,r=5,tag=!noclaim,tag=!claim] claim = @s id",
+                "execute as @p at @s run scoreboard players operation @e[type=rt:runa_proteccion,r=5,tag=!noclaim,tag=!claim] friendid = countid friendid",
+                "execute as @p at @s run scoreboard players operation @s friendid = countid friendid",
+                "scoreboard players add countid friendid 1"
+              ],
+              "target": "self"
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_11x11_group",
+                "block_sensor_11x11_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+                "function proteccion/runa1/test_frontera",
+                "tag @s[tag=!noclaim] add claim",
+                "tag @s[tag=!noclaim] add runa1",
+                "function proteccion/runa1/frontera",
+                "tag @s add ready",
+                "execute as @p at @s run tag @e[type=rt:runa_proteccion,r=5,tag=ready] add set_name"
+              ]
+            }
+          }
+        ]
+      },
+      "21x21_claim_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "execute as @p at @s run scoreboard players operation @e[type=rt:runa_proteccion,r=5,tag=!noclaim,tag=!claim] claim = @s id",
+                "execute as @p at @s run scoreboard players operation @e[type=rt:runa_proteccion,r=5,tag=!noclaim,tag=!claim] friendid = countid friendid",
+                "execute as @p at @s run scoreboard players operation @s friendid = countid friendid",
+                "scoreboard players add countid friendid 1"
+              ],
+              "target": "self"
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_21x21_group",
+                "block_sensor_21x21_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+                "function proteccion/runa2/test_frontera",
+                "tag @s[tag=!noclaim] add claim",
+                "tag @s[tag=!noclaim] add runa2",
+                "function proteccion/runa2/frontera",
+                "tag @s add ready",
+                "execute as @p at @s run tag @e[type=rt:runa_proteccion,r=5,tag=ready] add set_name"
+              ]
+            }
+          }
+        ]
+      },
+      "31x31_claim_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "execute as @p at @s run scoreboard players operation @e[type=rt:runa_proteccion,r=5,tag=!noclaim,tag=!claim] claim = @s id",
+                "execute as @p at @s run scoreboard players operation @e[type=rt:runa_proteccion,r=5,tag=!noclaim,tag=!claim] friendid = countid friendid",
+                "execute as @p at @s run scoreboard players operation @s friendid = countid friendid",
+                "scoreboard players add countid friendid 1"
+              ],
+              "target": "self"
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_31x31_group",
+                "block_sensor_31x31_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+                "function proteccion/runa3/test_frontera",
+                "tag @s[tag=!noclaim] add claim",
+                "tag @s[tag=!noclaim] add runa3",
+                "function proteccion/runa3/frontera",
+                "tag @s add ready",
+                "execute as @p at @s run tag @e[type=rt:runa_proteccion,r=5,tag=ready] add set_name"
+              ]
+            }
+          }
+        ]
+      },
+      "11x11_open_event": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "variant_11x11_open_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playsound random.fizz @a ~~~",
+                "setblock ~~~ rt:11x11_openlist_block"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_11x11_group"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "function proteccion/mensaje4"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "21x21_open_event": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "variant_21x21_open_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playsound random.fizz @a ~~~",
+                "setblock ~~~ rt:21x21_openlist_block"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_21x21_group"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "function proteccion/mensaje4"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "31x31_open_event": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "variant_31x31_open_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playsound random.fizz @a ~~~",
+                "setblock ~~~ rt:31x31_openlist_block"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_31x31_group"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "function proteccion/mensaje4"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "11x11_close_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:11x11_on_block"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_11x11_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_11x11_open_group"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "function proteccion/mensaje5"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "21x21_close_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:21x21_on_block"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_21x21_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_21x21_open_group"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "function proteccion/mensaje5"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "31x31_close_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:31x31_on_block"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_31x31_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_31x31_open_group"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "function proteccion/mensaje5"
+              ],
+              "target": "other"
+            }
+          }
+        ]
+      },
+      "join_protection_11x11_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:11x11_on_block"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players operation @s friendid = @e[type=rt:runa_proteccion,r=5] friendid",
+                "playsound random.levelup @s ~~~ 1 1.5",
+                "particle minecraft:crop_growth_area_emitter ~~~",
+                "function proteccion/mensaje6"
+              ],
+              "target": "other"
+            },
+            "add": {
+              "component_groups": [
+                "variant_11x11_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_11x11_open_group"
+              ]
+            }
+          }
+        ]
+      },
+      "join_protection_21x21_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:21x21_on_block"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players operation @s friendid = @e[type=rt:runa_proteccion,r=5] friendid",
+                "playsound random.levelup @s ~~~ 1 1.5",
+                "particle minecraft:crop_growth_area_emitter ~~~",
+                "function proteccion/mensaje6"
+              ],
+              "target": "other"
+            },
+            "add": {
+              "component_groups": [
+                "variant_21x21_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_21x21_open_group"
+              ]
+            }
+          }
+        ]
+      },
+      "join_protection_31x31_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:31x31_on_block"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players operation @s friendid = @e[type=rt:runa_proteccion,r=5] friendid",
+                "playsound random.levelup @s ~~~ 1 1.5",
+                "particle minecraft:crop_growth_area_emitter ~~~",
+                "function proteccion/mensaje6"
+              ],
+              "target": "other"
+            },
+            "add": {
+              "component_groups": [
+                "variant_31x31_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_31x31_open_group"
+              ]
+            }
+          }
+        ]
+      },
+      "runa_kill2": {
+        "queue_command": {
+          "command": [
+            "function proteccion/remove",
+            "setblock ~~~ air destroy",
+            "event entity @s despawn_event"
+          ]
+        }
+      },
+      "mensaje": {
+        "queue_command": {
+          "command": [
+            "function proteccion/mensaje"
+          ],
+          "target": "other"
+        }
+      },
+      "mensaje3": {
+        "queue_command": {
+          "command": [
+            "function proteccion/mensaje3"
+          ],
+          "target": "other"
+        }
+      },
+      "instant_despawn_event": {
+        "queue_command": {
+          "command": [
+            "function proteccion/remove",
+            "setblock ~~~ air destroy",
+            "event entity @s despawn_event"
+          ]
+        }
+      },
+      "despawn_event": {
+        "add": {
+          "component_groups": [
+            "instant_despawn_group"
+          ]
+        }
+      },
+      "prepare_11x11_upgrade_event": {
+        "queue_command": {
+          "command": [
+            "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+            "tag @s remove ready",
+            "tag @s remove claim",
+            "tag @s remove runa1",
+            "particle rt:upgrade_emerald ~~~",
+            "playsound beacon.power @a ~~~",
+            "playsound random.anvil_break @a ~~~",
+            "event entity @s 11x11_upgrade_event"
+          ]
+        }
+      },
+      "prepare_21x21_upgrade_event": {
+        "queue_command": {
+          "command": [
+            "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+            "tag @s remove ready",
+            "tag @s remove claim",
+            "tag @s remove runa2",
+            "particle rt:upgrade_diamond ~~~",
+            "playsound beacon.power @a ~~~",
+            "playsound random.anvil_break @a ~~~",
+            "event entity @s 21x21_upgrade_event"
+          ]
+        }
+      },
+      "11x11_upgrade_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:21x21_on_block"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_21x21_group",
+                "block_sensor_21x21_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_11x11_group",
+                "block_sensor_11x11_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+                "function proteccion/runa2/test_frontera",
+                "tag @s[tag=!noclaim] add claim",
+                "tag @s[tag=!noclaim] add runa2",
+                "function proteccion/runa2/frontera",
+                "event entity @s ready_sensor_event"
+              ]
+            }
+          }
+        ]
+      },
+      "21x21_upgrade_event": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "setblock ~~~ rt:31x31_on_block"
+              ]
+            }
+          },
+          {
+            "add": {
+              "component_groups": [
+                "variant_31x31_group",
+                "block_sensor_31x31_group"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "variant_21x21_group",
+                "block_sensor_21x21_group"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "execute as @s[tag=!noclaim] at @s run function proteccion/remove",
+                "function proteccion/runa3/test_frontera",
+                "tag @s[tag=!noclaim] add claim",
+                "tag @s[tag=!noclaim] add runa3",
+                "function proteccion/runa3/frontera"
+              ]
+            }
+          }
+        ]
+      },
+      "ready_sensor_event": {
+        "queue_command": {
+          "command": [
+            "tag @s add ready"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "format_version":  "1.10.0",
+    "minecraft:client_entity":  {
+                                    "description":  {
+                                                        "materials":  {
+                                                                          "default":  "entity_alphatest"
+                                                                      },
+                                                        "geometry":  {
+                                                                         "default":  "geometry.rare_box"
+                                                                     },
+                                                        "render_controllers":  [
+                                                                                   "controller.render.default"
+                                                                               ],
+                                                        "identifier":  "mcpe:rare_loot",
+                                                        "textures":  {
+                                                                         "default":  "textures/blocks/loots/rare_box"
+                                                                     }
+                                                    }
+                                }
+}

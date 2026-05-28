@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.mp7.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.7,
+      "timeline": {
+        "2.6": [
+          "/scoreboard players set @s[scores={mp7=42..}] mp7 41",
+          "/function mp7"
+        ],
+        "2.5": [
+          "/function mp7reload",
+          "/event entity @s krep:mp7_reload"
+        ]
+      }
+    }
+  }
+}

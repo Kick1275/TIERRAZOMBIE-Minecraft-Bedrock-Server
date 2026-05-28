@@ -1,0 +1,242 @@
+//bridge-file-version: #26
+{
+	"entity_sounds": {
+		"entities": {
+			"pubg:hardtop": {
+				"volume": 4,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.uaz.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.uaz.hurt",
+						"volume": 2,
+						"pitch": [
+							1,
+							1
+						]
+					},
+					"fall.small": {
+						"sound": "vehicle.fall",
+						"volume": 9,
+						"pitch": 1
+					},
+					"fall.big": {
+						"volume": 9,
+						"sound": "vehicle.fall",
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:opentop": {
+				"volume": 4,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.uaz.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.uaz.hurt",
+						"volume": 2,
+						"pitch": [
+							1,
+							1
+						]
+					},
+					"fall.small": {
+						"sound": "vehicle.fall",
+						"volume": 9,
+						"pitch": 1
+					},
+					"fall.big": {
+						"volume": 9,
+						"sound": "vehicle.fall",
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:softtop": {
+				"volume": 4,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.uaz.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.uaz.hurt",
+						"volume": 2,
+						"pitch": [
+							1,
+							1
+						]
+					},
+					"fall.small": {
+						"sound": "vehicle.fall",
+						"volume": 9,
+						"pitch": 1
+					},
+					"fall.big": {
+						"volume": 9,
+						"sound": "vehicle.fall",
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:pg117": {
+				"volume": 2,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"swim": {
+						"sound": "vehicle.pg117.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.pg117.hurt",
+						"volume": 2,
+						"pitch": 1
+					},
+					"step": {
+						"sound": "vehicle.pg117.drive",
+						"volume": 2,
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:dacia_white": {
+				"volume": 4,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.dacia.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.dacia.hurt",
+						"volume": 2,
+						"pitch": 1
+					},
+					"fall.small": {
+						"sound": "vehicle.fall",
+						"volume": 9,
+						"pitch": 1
+					},
+					"fall.big": {
+						"volume": 9,
+						"sound": "vehicle.fall",
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:dacia_red": {
+				"volume": 2,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.dacia.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.dacia.hurt",
+						"volume": 2,
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:dacia_blue": {
+				"volume": 2,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.dacia.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.dacia.hurt",
+						"volume": 2,
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:dacia_green": {
+				"volume": 2,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.dacia.drive",
+						"volume": 2,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.dacia.hurt",
+						"volume": 2,
+						"pitch": 1
+					}
+				}
+			},
+			"pubg:buggy": {
+				"volume": 4,
+				"pitch": [
+					1,
+					1
+				],
+				"events": {
+					"step": {
+						"sound": "vehicle.buggy.drive",
+						"volume": 4,
+						"pitch": 1
+					},
+					"hurt": {
+						"sound": "vehicle.buggy.hurt",
+						"volume": 2,
+						"pitch": 1
+					},
+					"fall.small": {
+						"sound": "vehicle.fall",
+						"volume": 9,
+						"pitch": 1
+					},
+					"fall.big": {
+						"volume": 9,
+						"sound": "vehicle.fall",
+						"pitch": 1
+					}
+				}
+			}
+		}
+	}
+}

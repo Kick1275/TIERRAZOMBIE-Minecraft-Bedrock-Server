@@ -1,0 +1,45 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.mapdz",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "scope",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{
+							"origin": [-6, 22, 8],
+							"size": [12, 12, 0.1],
+							"pivot": [0, 0.5, 2],
+							"rotation": [-2, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]},
+								"east": {"uv": [0, 0], "uv_size": [0, 0]},
+								"south": {"uv": [8.3125, 14.4375], "uv_size": [1.78125, 1.5625]},
+								"west": {"uv": [0, 0], "uv_size": [0, 0]},
+								"up": {"uv": [0, 0], "uv_size": [0, 0]},
+								"down": {"uv": [0, 0], "uv_size": [0, 0]}
+							}
+						}
+					]
+				},
+				{
+					"name": "muzzle_flash",
+					"parent": "scope",
+					"pivot": [0, 48, 14],
+					"locators": {
+						"muzzle_flash": [0, 27, 11]
+					}
+				}
+			]
+		}
+	]
+}

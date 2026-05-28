@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:sam_turret",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/sam_turret"
+			},
+			"geometry": {
+				"default": "geometry.sam_turret"
+			},
+			"render_controllers": [
+				"controller.render.sam_turret"
+			],
+			"spawn_egg": {
+				"texture": "af_sam_turret_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.c_ram.scale",
+				"target": "controller.animation.c_ram.target",
+				"spin": "animation.sam_turret.spin"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"target"
+				]
+			}
+		}
+	}
+}

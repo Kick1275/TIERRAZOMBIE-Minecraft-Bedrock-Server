@@ -1,0 +1,54 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.nightvision_goggles.toggle": {
+			"initial_state": "goggles_off_transfer",
+			"states": {
+				"goggles_off": {
+					"animations": [
+						"inactive"
+					],
+					"transitions": [
+						{
+							"goggles_off_transfer": "!q.is_sneaking&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"goggles_off_transfer": {
+					"animations": [
+						"inactive"
+					],
+					"transitions": [
+						{
+							"goggles_on": "q.is_sneaking&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"goggles_on": {
+					"animations": [
+						"active"
+					],
+					"transitions": [
+						{
+							"goggles_on_transfer": "!q.is_sneaking&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"goggles_on_transfer": {
+					"animations": [
+						"active"
+					],
+					"transitions": [
+						{
+							"goggles_off": "q.is_sneaking&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		}
+	}
+}

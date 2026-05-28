@@ -1,0 +1,185 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "advanced_waypoints:waypoint",
+      "materials": {
+        "default": "waypoint_icon",
+        "waypoint_letters": "waypoint_letters",
+        "beacon_always_visible": "show_behide_walls_beam",
+        "beacon_visible": "entity_beam",
+        "background": "waypoint_icon_background"
+      },
+      "textures": {
+        "default": "textures/advanced_waypoints/entity/waypoint_icon",
+        "beam": "textures/advanced_waypoints/entity/waypoint_beam",
+        "death_icon": "textures/advanced_waypoints/entity/death_icon",
+        "a_icon": "textures/advanced_waypoints/entity/a_icon",
+        "b_icon": "textures/advanced_waypoints/entity/b_icon",
+        "c_icon": "textures/advanced_waypoints/entity/c_icon",
+        "d_icon": "textures/advanced_waypoints/entity/d_icon",
+        "e_icon": "textures/advanced_waypoints/entity/e_icon",
+        "f_icon": "textures/advanced_waypoints/entity/f_icon",
+        "g_icon": "textures/advanced_waypoints/entity/g_icon",
+        "h_icon": "textures/advanced_waypoints/entity/h_icon",
+        "i_icon": "textures/advanced_waypoints/entity/i_icon",
+        "j_icon": "textures/advanced_waypoints/entity/j_icon",
+        "k_icon": "textures/advanced_waypoints/entity/k_icon",
+        "l_icon": "textures/advanced_waypoints/entity/l_icon",
+        "m_icon": "textures/advanced_waypoints/entity/m_icon",
+        "n_icon": "textures/advanced_waypoints/entity/n_icon",
+        "o_icon": "textures/advanced_waypoints/entity/o_icon",
+        "p_icon": "textures/advanced_waypoints/entity/p_icon",
+        "q_icon": "textures/advanced_waypoints/entity/q_icon",
+        "r_icon": "textures/advanced_waypoints/entity/r_icon",
+        "s_icon": "textures/advanced_waypoints/entity/s_icon",
+        "t_icon": "textures/advanced_waypoints/entity/t_icon",
+        "u_icon": "textures/advanced_waypoints/entity/u_icon",
+        "v_icon": "textures/advanced_waypoints/entity/v_icon",
+        "w_icon": "textures/advanced_waypoints/entity/w_icon",
+        "x_icon": "textures/advanced_waypoints/entity/x_icon",
+        "y_icon": "textures/advanced_waypoints/entity/y_icon",
+        "z_icon": "textures/advanced_waypoints/entity/z_icon",
+        "letters": "textures/advanced_waypoints/entity/letters"
+      },
+      "geometry": {
+        "default": "geometry.waypoint",
+        "dis_1": "geometry.waypoint_dis_1",
+        "dis_2": "geometry.waypoint_dis_2",
+        "dis_3": "geometry.waypoint_dis_3",
+        "dis_4": "geometry.waypoint_dis_4",
+        "dis_5": "geometry.waypoint_dis_5",
+        "dis_6": "geometry.waypoint_dis_6",
+        "dis_7": "geometry.waypoint_dis_7",
+
+        "slot_1": "geometry.waypoint_slot_1",
+        "slot_2": "geometry.waypoint_slot_2",
+        "slot_3": "geometry.waypoint_slot_3",
+        "slot_4": "geometry.waypoint_slot_4",
+        "slot_5": "geometry.waypoint_slot_5",
+        "slot_6": "geometry.waypoint_slot_6",
+        "slot_7": "geometry.waypoint_slot_7",
+        "slot_8": "geometry.waypoint_slot_8",
+        "slot_9": "geometry.waypoint_slot_9",
+        "slot_10": "geometry.waypoint_slot_10",
+        "slot_11": "geometry.waypoint_slot_11",
+        "slot_12": "geometry.waypoint_slot_12",
+        "slot_13": "geometry.waypoint_slot_13"
+      },
+      "animations": {
+        "controller_scale_fov": "controller.animation.advanced_waypoints.waypoint.scale_fov",
+        "controller_beacon": "controller.animation.advanced_waypoints.waypoint.beacon",
+
+        "idle": "animation.advanced_waypoints.waypoint.idle",
+        "scale_fov_seeing": "animation.advanced_waypoints.waypoint.scale_fov_seeing",
+        "scale_fov_stop_see": "animation.advanced_waypoints.waypoint.scale_fov_stop_see",
+        "beacon_enabled": "animation.advanced_waypoints.waypoint.beacon_enabled",
+        "beacon_disabled": "animation.advanced_waypoints.waypoint.beacon_disabled"
+      },
+      "scripts": {
+        "should_update_bones_and_effects_offscreen": true,
+        "scale": "1",
+        "initialize": [
+          "v.dis1 = q.property('advanced_waypoints:distance1');",
+          "v.dis2 = q.property('advanced_waypoints:distance2');",
+          "v.dis3 = q.property('advanced_waypoints:distance3');",
+          "v.dis4 = q.property('advanced_waypoints:distance4');",
+          "v.dis5 = q.property('advanced_waypoints:distance5');",
+          "v.dis6 = q.property('advanced_waypoints:distance6');",
+          "v.dis7 = q.property('advanced_waypoints:distance7');",
+
+          "v.show_plus = v.dis1 == 9 && v.dis2 == 9 && v.dis3 == 9 && v.dis4 == 9 && v.dis5 == 9 && v.dis6 == 9 && v.dis7 == 9;",
+          "v.show_distance = v.dis1 != -1 || v.dis2 != -1 || v.dis3 != -1 || v.dis4 != -1 || v.dis5 != -1 || v.dis6 != -1 || v.dis7 != -1;",
+          "v.offset_distance = 0;",
+          "v.distance_amount = 0;",
+
+          "v.letter1 = q.property('advanced_waypoints:name1');",
+          "v.letter2 = q.property('advanced_waypoints:name2');",
+          "v.letter3 = q.property('advanced_waypoints:name3');",
+          "v.letter4 = q.property('advanced_waypoints:name4');",
+          "v.letter5 = q.property('advanced_waypoints:name5');",
+          "v.letter6 = q.property('advanced_waypoints:name6');",
+          "v.letter7 = q.property('advanced_waypoints:name7');",
+          "v.letter8 = q.property('advanced_waypoints:name8');",
+          "v.letter9 = q.property('advanced_waypoints:name9');",
+          "v.letter10 = q.property('advanced_waypoints:name10');",
+          "v.letter11 = q.property('advanced_waypoints:name11');",
+          "v.letter12 = q.property('advanced_waypoints:name12');",
+          "v.letter13 = q.property('advanced_waypoints:name13');",
+
+          "v.offset_name = v.letter13 != 0 ? 30 : v.letter12 != 0 ? 27.5 : v.letter11 != 0 ? 25 : v.letter10 != 0 ? 22.5 : v.letter9 != 0 ? 20 : v.letter8 != 0 ? 17.5 : v.letter7 != 0 ? 15 : v.letter6 != 0 ? 12.5 : v.letter5 != 0 ? 10 : v.letter4 != 0 ? 7.5 : v.letter3 != 0 ? 5 : v.letter2 != 0 ? 2.5 : 0;",
+          "v.name_amount = v.letter13 != 0 ? 3 : v.letter12 != 0 ? 2 : v.letter11 != 0 ? 1 : v.letter10 != 0 ? 0 : v.letter9 != 0 ? 9 : v.letter8 != 0 ? 8 : v.letter7 != 0 ? 7 : v.letter6 != 0 ? 6 : v.letter5 != 0 ? 5 : v.letter4 != 0 ? 4 : v.letter3 != 0 ? 3 : v.letter2 != 0 ? 2 : v.letter1 != 0 ? 1 : 0;",
+
+          "v.scale_by_distance = 0;",
+          "v.beacon_size = 0;",
+
+          "v.always_visible = q.property('advanced_waypoints:always_visible');",
+          "v.need_look_show_info = v.always_visible == 'config00' || v.always_visible == 'config01';",
+          "v.need_look_show_beam = v.always_visible == 'config00' || v.always_visible == 'config10';",
+          "v.looking = false;",
+          "v.scale_by_fov = 0;"
+        ],
+        "pre_animation": [
+          "v.dis1 = q.property('advanced_waypoints:distance1');",
+          "v.dis2 = q.property('advanced_waypoints:distance2');",
+          "v.dis3 = q.property('advanced_waypoints:distance3');",
+          "v.dis4 = q.property('advanced_waypoints:distance4');",
+          "v.dis5 = q.property('advanced_waypoints:distance5');",
+          "v.dis6 = q.property('advanced_waypoints:distance6');",
+          "v.dis7 = q.property('advanced_waypoints:distance7');",
+
+          "v.show_plus = v.dis1 == 9 && v.dis2 == 9 && v.dis3 == 9 && v.dis4 == 9 && v.dis5 == 9 && v.dis6 == 9 && v.dis7 == 9;",
+          "v.show_distance = v.dis1 != -1 || v.dis2 != -1 || v.dis3 != -1 || v.dis4 != -1 || v.dis5 != -1 || v.dis6 != -1 || v.dis7 != -1;",
+          "v.offset_distance = v.show_plus ? 0 : v.dis7 != -1 ? -5 : v.dis6 != -1 ? -10 : v.dis5 != -1 ? -15 : v.dis4 != -1 ? -20 : v.dis3 != -1 ? -25 : v.dis2 != -1 ? -30 : -35;",
+          "v.distance_amount = v.dis7 != -1 ? 7 : v.dis6 != -1 ? 6 : v.dis5 != -1 ? 5 : v.dis4 != -1 ? 4 : v.dis3 != -1 ? 3 : v.dis2 != -1 ? 2 : v.dis1 != -1 ? 1 : 0;",
+
+          "v.offset_distance_without_name = v.show_plus ? -34.5 : v.dis7 != -1 ? -32 : v.dis6 != -1 ? -29.5 : v.dis5 != -1 ? -27 : v.dis4 != -1 ? -24.5 : v.dis3 != -1 ? -22 : v.dis2 != -1 ? -19.5 : -17;",
+          "v.offset_absolute = v.distance_amount == 0 ? 0 : v.name_amount == 0 ? v.offset_distance_without_name -0.5 : v.offset_distance_without_name +4.5;",
+
+          "v.scale_by_distance = math.clamp((q.distance_from_camera /14 -0.4), 0, 2);", // every 10 blocks is 1 | -0.7 is the distance to waypoint disapper | 2 is (the distance +1) * 10 -2 for the waypoint to stop growing
+          "v.beacon_size = math.clamp((q.distance_from_camera /14 -0.4), 0, 1);",
+
+          "v.rot_camera_y = q.rotation_to_camera(1) +270;",
+          "v.camera_rot_y = q.camera_rotation(1) +180;",
+
+          "v.camera_vertical = q.rotation_to_camera(0) + q.camera_rotation(0);",
+          "v.camera_horizontal = v.rot_camera_y - v.camera_rot_y;",
+          "v.looking_vertical = v.camera_vertical > -5 && v.camera_vertical < 5;",
+          "v.looking_horizontal = (v.camera_horizontal < -85 && v.camera_horizontal > -95) || (v.camera_horizontal > 265 && v.camera_horizontal < 275);",
+
+          "v.looking = v.looking_vertical && v.looking_horizontal;",
+          "v.scale_by_fov = (v.looking ? v.scale_by_distance *2 : 0);"
+        ],
+        "animate": [ "controller_scale_fov", "controller_beacon", "idle" ]
+      },
+      "render_controllers": [
+        {"controller.render.advanced_waypoints.waypoint_icon": "q.is_on_screen" },
+        {"controller.render.advanced_waypoints.waypoint_beam": "q.is_on_screen" },
+        {"controller.render.advanced_waypoints.waypoint_background": "q.is_on_screen" },
+        { "controller.render.advanced_waypoints.waypoint_adds": "q.is_on_screen && v.show_distance" },
+
+        { "controller.render.advanced_waypoints.waypoint_dis_1": "q.is_on_screen && v.dis1 != -1" },
+        { "controller.render.advanced_waypoints.waypoint_dis_2": "q.is_on_screen && v.dis2 != -1" },
+        { "controller.render.advanced_waypoints.waypoint_dis_3": "q.is_on_screen && v.dis3 != -1" },
+        { "controller.render.advanced_waypoints.waypoint_dis_4": "q.is_on_screen && v.dis4 != -1" },
+        { "controller.render.advanced_waypoints.waypoint_dis_5": "q.is_on_screen && v.dis5 != -1" },
+        { "controller.render.advanced_waypoints.waypoint_dis_6": "q.is_on_screen && v.dis6 != -1" },
+        { "controller.render.advanced_waypoints.waypoint_dis_7": "q.is_on_screen && v.dis7 != -1" },
+
+        { "controller.render.advanced_waypoints.waypoint_slot_1": "q.is_on_screen && v.letter1 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_2": "q.is_on_screen && v.letter2 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_3": "q.is_on_screen && v.letter3 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_4": "q.is_on_screen && v.letter4 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_5": "q.is_on_screen && v.letter5 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_6": "q.is_on_screen && v.letter6 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_7": "q.is_on_screen && v.letter7 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_8": "q.is_on_screen && v.letter8 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_9": "q.is_on_screen && v.letter9 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_10": "q.is_on_screen && v.letter10 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_11": "q.is_on_screen && v.letter11 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_12": "q.is_on_screen && v.letter12 != 0" },
+        { "controller.render.advanced_waypoints.waypoint_slot_13": "q.is_on_screen && v.letter13 != 0" }
+      ]
+    }
+  }
+}

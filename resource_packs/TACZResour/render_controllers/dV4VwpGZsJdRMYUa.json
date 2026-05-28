@@ -1,0 +1,33 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.mp7": {
+      "geometry": "geometry.mp7",
+      "materials": [
+        {
+          "*": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        }
+      ],
+      "textures": [
+        "texture.mp7"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

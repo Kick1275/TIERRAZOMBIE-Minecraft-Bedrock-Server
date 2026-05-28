@@ -1,0 +1,6 @@
+scoreboard players add @e[type=rt:runa_proteccion,tag=!inactividad] inactividad 0
+execute if score timer tticks matches 1 as @e[type=rt:runa_proteccion,tag=runa1,tag=!inactividad,scores={inactividad=!5..}] at @s unless entity @e[type=player,x=~-11.175,y=-64,z=~-11.175,dx=21.4,dy=387,dz=21.4] run scoreboard players add @s inactividad 1
+execute if score timer tticks matches 1 as @e[type=rt:runa_proteccion,tag=runa2,tag=!inactividad,scores={inactividad=!5..}] at @s unless entity @e[type=player,x=~-21.175,y=-64,z=~-21.175,dx=41.4,dy=387,dz=41.4] run scoreboard players add @s inactividad 1
+execute if score timer tticks matches 1 as @e[type=rt:runa_proteccion,tag=runa3,tag=!inactividad,scores={inactividad=!5..}] at @s unless entity @e[type=player,x=~-31.175,y=-64,z=~-31.175,dx=61.4,dy=387,dz=61.4] run scoreboard players add @s inactividad 1
+tag @e[type=rt:runa_proteccion,scores={inactividad=5..},tag=!inactividad] add inactividad
+scoreboard players set @e[type=rt:runa_proteccion,scores={inactividad=5..},tag=!inactividad] inactividad 0

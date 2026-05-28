@@ -1,0 +1,1 @@
+import './events/tacz_weapon_detection'

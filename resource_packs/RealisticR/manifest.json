@@ -1,0 +1,36 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Makes the rain more realistic, adds better sound, no rain splash particle, less rain - @Mod MCPE",
+        "name": "Realistic Rain Graphics",
+        "uuid": "46da45b0-a168-4813-9a24-5f41bd7eb45a",
+        "version": [2, 7, 4],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "description": "Makes the rain more realistic, adds better sound, no rain splash particle, less rain - @Mod MCPE",
+            "type": "resources",
+            "uuid": "b86e17f5-8dd0-40ed-b8ea-82575cc4634a",
+            "version": [2, 7, 4]
+        }
+    ],
+    "metadata": {
+        "authors": ["Mod MCPE"],
+        "url": "https://www.curseforge.com/members/mod_mc"
+    },
+    "subpacks": [
+        {
+            "folder_name": "particles_on",
+            "name": "Particles On",
+            "description": "Uses vanilla rain splash particles",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "particles_off",
+            "name": "Particles Off (Default)",
+            "description": "Disables rain splash particles for a cleaner look",
+            "memory_tier": 0
+        }
+    ]
+}

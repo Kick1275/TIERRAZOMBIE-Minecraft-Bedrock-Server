@@ -1,0 +1,102 @@
+{
+    "resource_pack_name": "wedit",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "wedit:copy": {
+            "textures": "textures/items/copy"
+        },
+        "wedit:cut": {
+            "textures": "textures/items/cut"
+        },
+        "wedit:paste": {
+            "textures": "textures/items/paste"
+        },
+        "wedit:undo": {
+            "textures": "textures/items/undo"
+        },
+        "wedit:redo": {
+            "textures": "textures/items/redo"
+        },
+        "wedit:rotate_cw": {
+            "textures": "textures/items/rotate_cw"
+        },
+        "wedit:rotate_ccw": {
+            "textures": "textures/items/rotate_ccw"
+        },
+        "wedit:flip": {
+            "textures": "textures/items/flip"
+        },
+        "wedit:eyedropper": {
+            "textures": "textures/items/eyedropper"
+        },
+        "wedit:maskdropper": {
+            "textures": "textures/items/maskdropper"
+        },
+        "wedit:spawn_glass": {
+            "textures": "textures/items/spawn_glass"
+        },
+        "wedit:selection_hollow": {
+            "textures": "textures/items/selection_hollow"
+        },
+        "wedit:selection_fill": {
+            "textures": "textures/items/selection_fill"
+        },
+        "wedit:selection_outline": {
+            "textures": "textures/items/selection_outline"
+        },
+        "wedit:selection_stack": {
+            "textures": "textures/items/selection_stack"
+        },
+        "wedit:selection_move": {
+            "textures": "textures/items/selection_move"
+        },
+        "wedit:selection_wall": {
+            "textures": "textures/items/selection_wall"
+        },
+        "wedit:draw_line": {
+            "textures": "textures/items/draw_line"
+        },
+        "wedit:draw_curve": {
+            "textures": "textures/items/draw_curve"
+        },
+        "wedit:draw_sphere": {
+            "textures": "textures/items/draw_sphere"
+        },
+        "wedit:draw_cylinder": {
+            "textures": "textures/items/draw_cylinder"
+        },
+        "wedit:draw_pyramid": {
+            "textures": "textures/items/draw_pyramid"
+        },
+        "wedit:draw_loft": {
+            "textures": "textures/items/draw_loft"
+        },
+        "wedit:start_loft_curve": {
+            "textures": "textures/items/start_loft_curve"
+        },
+        "wedit:add_loft_point": {
+            "textures": "textures/items/add_loft_point"
+        },
+        "wedit:remove_loft_point": {
+            "textures": "textures/items/remove_loft_point"
+        },
+        "wedit:clear_loft_points": {
+            "textures": "textures/items/clear_loft_points"
+        },
+        "wedit:fill_loft": {
+            "textures": "textures/items/fill_loft"
+        },
+        "wedit:config": {
+            "textures": "textures/ui/gear"
+        },
+        "wedit:confirm": {
+            "textures": "textures/ui/confirm"
+        },
+        "wedit:cancel": {
+            "textures": "textures/ui/cancel"
+        },
+        "wedit:blank": {
+            "textures": "textures/ui/blank"
+        }
+    }
+}

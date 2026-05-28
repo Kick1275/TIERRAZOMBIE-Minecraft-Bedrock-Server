@@ -1,0 +1,77 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mq9_flight": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"flying": "1"
+						}
+					],
+					"on_entry": [
+						"/function mq9_fly"
+					]
+				},
+				"flying": {
+					"transitions": [
+						{
+							"default": "query.has_rider&&query.modified_move_speed>=0.5"
+						}
+					],
+					"on_entry": [
+						"/function mq9_fly"
+					]
+				}
+			}
+		},
+		"controller.animation.mq9_grounded": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"flying": "!query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 1000000 2 true"
+					]
+				},
+				"flying": {
+					"transitions": [
+						{
+							"default": "query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/effect @s clear"
+					]
+				}
+			}
+		},
+		"controller.animation.mq9_rider": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"flying": "1"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove rider"
+					]
+				},
+				"flying": {
+					"transitions": [
+						{
+							"default": "!query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove rider"
+					]
+				}
+			}
+		}
+	}
+}

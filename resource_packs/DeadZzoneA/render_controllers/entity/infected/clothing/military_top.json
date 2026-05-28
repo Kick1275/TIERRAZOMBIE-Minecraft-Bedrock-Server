@@ -1,0 +1,114 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.military_woodland_top": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.top": [
+						"Texture.woodland_top_0",
+						"Texture.woodland_top_1",
+						"Texture.woodland_top_2",
+						"Texture.woodland_top_3",
+						"Texture.woodland_top_4",
+						"Texture.woodland_top_5",
+						"Texture.woodland_top_6",
+						"Texture.woodland_top_7",
+						"Texture.woodland_top_8",
+						"Texture.woodland_top_9",
+						"Texture.woodland_top_10",
+						"Texture.woodland_top_11",
+						"Texture.woodland_top_12",
+						"Texture.woodland_top_13"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.top[v.top_woodland]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.military_desert_top": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.top": [
+						"Texture.desert_top_0",
+						"Texture.desert_top_1",
+						"Texture.desert_top_2",
+						"Texture.desert_top_3",
+						"Texture.desert_top_4",
+						"Texture.desert_top_5",
+						"Texture.desert_top_6",
+						"Texture.desert_top_7",
+						"Texture.desert_top_8",
+						"Texture.desert_top_9",
+						"Texture.desert_top_10",
+						"Texture.desert_top_11",
+						"Texture.desert_top_12",
+						"Texture.desert_top_13"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.top[v.top_desert]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.military_artic_top": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.top": [
+						"Texture.artic_top_0",
+						"Texture.artic_top_1",
+						"Texture.artic_top_2",
+						"Texture.artic_top_3",
+						"Texture.artic_top_4",
+						"Texture.artic_top_5",
+						"Texture.artic_top_6",
+						"Texture.artic_top_7",
+						"Texture.artic_top_8",
+						"Texture.artic_top_9",
+						"Texture.artic_top_10",
+						"Texture.artic_top_11"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.top[v.top_artic]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

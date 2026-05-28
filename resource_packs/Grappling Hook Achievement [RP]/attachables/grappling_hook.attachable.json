@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "causal:grappling_hook",
+			"render_controllers": ["controller.render.item_default"],
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/attachable/causal.grapple",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.grappling_hook"
+			},
+			"animations": {
+				"first_person_hold": "animation.grappling_hook.first_person_hold",
+				"first_person_shoot": "animation.grappling_hook.first_person_shoot",
+				"first_person_pull": "animation.grappling_hook.first_person_pull",
+				"third_person_hold": "animation.grappling_hook.third_person_hold",
+				"third_person_shoot": "animation.grappling_hook.third_person_shoot"
+			},
+			"scripts": {
+				"initialize": [
+					"v.hide_bone = false;",
+					"v.pull = false;"
+				],
+				"pre_animation": [
+					"q.get_name == (t.player_name ?? '') ? {v.hide_bone = t.hide_bone ?? false;} ? { v.pull = t.pull ?? false;};"
+				],
+				"animate": [
+					{
+						"first_person_hold": "c.is_first_person && !v.hide_bone && !v.pull" 
+					},
+					{
+						"first_person_pull": "c.is_first_person && v.pull"
+					},
+					{
+						"first_person_shoot": "c.is_first_person && v.hide_bone"
+					},
+					{
+						"third_person_hold": "!c.is_first_person && !v.hide_bone"
+					},
+					{
+						"third_person_shoot": "!c.is_first_person && v.hide_bone"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+    "format_version":  "1.10.0",
+    "minecraft:client_entity":  {
+                                    "description":  {
+                                                        "materials":  {
+                                                                          "default":  "entity_alphatest"
+                                                                      },
+                                                        "geometry":  {
+                                                                         "default":  "geometry.military_crate"
+                                                                     },
+                                                        "render_controllers":  [
+                                                                                   "controller.render.default"
+                                                                               ],
+                                                        "identifier":  "mcpe:woodland_loot",
+                                                        "textures":  {
+                                                                         "default":  "textures/blocks/loots/military_crate"
+                                                                     }
+                                                    }
+                                }
+}

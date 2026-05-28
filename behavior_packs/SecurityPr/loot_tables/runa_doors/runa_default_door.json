@@ -1,0 +1,14 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "rt:runa_default_door_item",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

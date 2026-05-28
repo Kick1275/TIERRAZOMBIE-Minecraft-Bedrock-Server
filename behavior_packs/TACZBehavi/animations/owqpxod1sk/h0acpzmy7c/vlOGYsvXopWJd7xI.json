@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.p90.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.7,
+      "timeline": {
+        "2.6": [
+          "/scoreboard players set @s[scores={p90=52..}] p90 51",
+          "/function p90"
+        ],
+        "2.5": [
+          "/function p90reload",
+          "/event entity @s krep:p90_reload"
+        ]
+      }
+    }
+  }
+}

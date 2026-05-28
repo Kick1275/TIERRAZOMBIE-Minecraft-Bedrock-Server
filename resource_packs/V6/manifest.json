@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Medieval Furniture V6.4 Resource Pack §bBy EndXenoc",
+        "name": "§bV6.4 §fMedieval Furniture Resource Pack",
+        "uuid": "cffa7ccf-8e2c-41bf-af34-4e33327c4350",
+		"version": [0,6,4],
+        "min_engine_version": [1,20,0]
+    },
+    "modules": [
+        {
+            "description": "Medieval Furniture V6.4 Resource Pack §bBy EndXenoc",
+            "type": "resources",
+            "uuid": "58e3a97d-06f5-4d3a-83d5-5fc09616079c",
+            "version": [0,6,4]
+        }
+    ],
+	"dependencies": [
+		{
+			"uuid": "62508a94-4e10-4806-9d00-37ae5c73f40f",
+			"version": [0,6,4]
+		}
+	]
+}

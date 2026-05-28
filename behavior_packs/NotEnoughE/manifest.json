@@ -1,0 +1,65 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Euforia",
+			"Danilerts"
+		],
+		"product_type": "addon"
+	},
+	"header": {
+		"name": "Not Enough Emotes",
+		"description": "Have fun!\nBy: EuforiaConR & danilerts",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "8bd3397a-4a43-437b-8bf4-ee5194097ebd",
+		"version": [
+			1,
+			2,
+			3
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "884cf290-b9b8-4795-8e86-b24b479a2e7b",
+			"version": [
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "7ca5d8f2-b437-4933-9bae-bf3b6c128430",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "80283c30-fdf6-40f0-b96b-bf8547a892d8",
+			"version": [
+				1,
+				2,
+				3
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.7.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		}
+	]
+}

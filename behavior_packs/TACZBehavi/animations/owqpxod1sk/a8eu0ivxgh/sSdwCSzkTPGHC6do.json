@@ -1,0 +1,17 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.rpg.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.5,
+      "timeline": {
+        "3.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:rpg 1 0"
+        ],
+        "3.3": [
+          "/clear @s[m=!c] krep:rpgrocket 0 1"
+        ]
+      }
+    }
+  }
+}

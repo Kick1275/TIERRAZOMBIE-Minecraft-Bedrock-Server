@@ -1,0 +1,29 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:jungle_wood_cupboard"
+		},
+		"tags": [
+			"workbench"
+		],
+		"pattern": [
+			"BBB",
+			"AAA",
+			"AAA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:planks",
+				"data": 3
+			},
+			"B": {
+				"item": "medieval:jungle_wood_mslab"
+			}
+		},
+		"result": {
+			"item": "medieval:jungle_wood_cupboard",
+			"count": 1
+		}
+	}
+}

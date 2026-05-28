@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.m107": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='m107' && q.is_using_item) || query.get_equipped_item_name=='m107_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s m107 5",
+            "@s[hasitem={item=krep:m107, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "m107.30": "query.get_equipped_item_name=='m107' && query.is_using_item && query.scoreboard('m107') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "m107.31": "query.get_equipped_item_name=='m107' && query.is_using_item && query.scoreboard('m107') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function m107"
+          ]
+        },
+        "m107.31": {
+          "animations": [
+            "m107shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={m107=0}] slot.weapon.mainhand 1 krep:m107_emp 1 0"
+          ]
+        },
+        "m107.30": {
+          "animations": [
+            "m107shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:m107_fire",
+            "/scoreboard players remove @s[scores={m107=1..6}] m107 1",
+            "/scoreboard players set @s[scores={m107=7..}] m107 6",
+            "/playsound m107.shoot @a[r=120]",
+            "/replaceitem entity @s[scores={m107=0}] slot.weapon.mainhand 1 krep:m107_emp 1 0",
+            "/title @s[scores={m107=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

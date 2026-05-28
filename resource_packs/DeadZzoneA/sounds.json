@@ -1,0 +1,290 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "mcpe:sedan": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "step": {
+            "sound": "mob.vehicle.move",
+            "pitch": 1.0,
+            "volume": 3
+          },
+          "hurt": {
+            "sound": "mob.vehicle.hit",
+            "volume": 0.2,
+            "pitch": [
+              0.6,
+              0.7
+            ]
+          },
+          "death": {
+            "sound": "mob.vehicle.explode",
+            "volume": 10,
+            "pitch": [
+              1
+            ]
+          }
+        }
+      },
+      "mcpe:motor": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "step": {
+            "sound": "mob.motor.move",
+            "pitch": 1.0,
+            "volume": 2
+          },
+          "hurt": {
+            "sound": "mob.vehicle.hit",
+            "volume": 0.2,
+            "pitch": [
+              0.6,
+              0.7
+            ]
+          },
+          "death": {
+            "sound": "mob.vehicle.explode",
+            "volume": 10,
+            "pitch": [
+              1
+            ]
+          }
+        }
+      },
+      "mcpe:humvee": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "step": {
+            "sound": "mob.humvee.move",
+            "pitch": 1.0,
+            "volume": 2
+          },
+          "hurt": {
+            "sound": "mob.vehicle.hit",
+            "volume": 0.2,
+            "pitch": [
+              0.6,
+              0.7
+            ]
+          },
+          "death": {
+            "sound": "mob.vehicle.explode",
+            "volume": 10,
+            "pitch": [
+              1
+            ]
+          }
+        }
+      },
+      "mcpe:civilian": {
+        "volume": 1.0,
+        "pitch": [
+          0.7,
+          1.2
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:hazmat": {
+        "volume": 1.0,
+        "pitch": [
+          0.7,
+          1.2
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:commander": {
+        "volume": 1.0,
+        "pitch": [
+          0.7,
+          1.2
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:military": {
+        "volume": 1.0,
+        "pitch": [
+          0.7,
+          1.2
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:militia": {
+        "volume": 1.0,
+        "pitch": [
+          0.7,
+          1.2
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:screamer": {
+        "volume": 1.0,
+        "pitch": [
+          0.7,
+          1.2
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:marauder": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.1
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:scavenger": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.1
+        ],
+        "events": {
+          "ambient":  {
+            "sound": "",
+            "volume": 1
+          }
+        }
+      },
+      "mcpe:supply_drop": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "hurt": {
+            "sound": "supply.drop",
+            "volume": 2,
+            "pitch": [
+              0.8,
+              1.0
+            ]
+          },
+          "fall.big": {
+            "sound": "supply.drop",
+            "volume": 5,
+            "pitch": [
+              0.8,
+              1.0
+            ]
+          },
+          "fall.small": {
+            "sound": "supply.drop",
+            "volume": 5,
+            "pitch": [
+              0.8,
+              1.0
+            ]
+          },
+          "death": {
+            "sound": "supply.drop",
+            "volume": 2,
+            "pitch": [
+              0.8,
+              1.1
+            ]
+          }
+        }
+      },
+      "mcpe:supply_drop_2": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "hurt": {
+            "sound": "supply.drop",
+            "volume": 2,
+            "pitch": [
+              0.8,
+              1.0
+            ]
+          },
+          "fall.big": {
+            "sound": "supply.drop",
+            "volume": 2,
+            "pitch": [
+              0.8,
+              1.0
+            ]
+          },
+          "fall.small": {
+            "sound": "supply.drop",
+            "volume": 2,
+            "pitch": [
+              0.8,
+              1.0
+            ]
+          },
+          "death": {
+            "sound": "supply.drop",
+            "volume": 2,
+            "pitch": [
+              0.8,
+              1.1
+            ]
+          }
+        }
+      },
+      "mcpe:material_loot": {
+        "volume": 1.0,
+        "pitch": [
+          0.8,
+          1.2
+        ],
+        "events": {
+          "hurt": "loot.grab",
+          "death": "loot.grab"
+        }
+      }
+    }
+  }
+}

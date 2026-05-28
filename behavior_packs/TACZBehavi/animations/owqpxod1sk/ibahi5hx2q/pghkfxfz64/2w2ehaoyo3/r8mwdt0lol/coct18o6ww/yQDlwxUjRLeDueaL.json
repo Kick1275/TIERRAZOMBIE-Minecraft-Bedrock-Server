@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.scarl.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.5,
+      "timeline": {
+        "2.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:scarl 1 0",
+          "/scoreboard players set @s[scores={scarl=31..}] scarl 30",
+          "/function scarl"
+        ],
+        "2.3": [
+          "/function scarlreload",
+          "/event entity @s krep:scarl_reload"
+        ]
+      }
+    }
+  }
+}

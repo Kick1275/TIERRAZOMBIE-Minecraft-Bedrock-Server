@@ -1,0 +1,58 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "uuid": "ee9ec48e-985b-4b1b-9c78-f533de55fbf7",
+    "version": [7, 0, 0],
+    "min_engine_version": [1, 21, 30]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "5e60ecee-8628-4df7-a9cb-960baeae2c41",
+      "version": [7, 0, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/advanced_waypoints/main.js",
+      "uuid": "86017c99-a768-46cd-a68a-a097d8e9a4b9",
+      "version": [7, 0, 0]
+    }
+  ],
+  "metadata": {
+    "product_type":"addon"
+  },
+  "dependencies": [
+    {
+      "uuid": "94f100b5-6196-463f-9084-4afcc58ff21d",
+      "version": [7, 0, 0]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.14.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.3.0"
+    }
+  ],
+  "subpacks": [
+    {
+      "folder_name": "no_tp",
+      "memory_tier": 2,
+      "name": "No Teleport"
+    },
+    {
+      "folder_name": "free",
+      "memory_tier": 1,
+      "name": "Teleport - No Cost Xp"
+    },
+    {
+      "folder_name": "default",
+      "memory_tier": 0,
+      "name": "Teleport - Cost Xp"
+    }
+  ]
+}

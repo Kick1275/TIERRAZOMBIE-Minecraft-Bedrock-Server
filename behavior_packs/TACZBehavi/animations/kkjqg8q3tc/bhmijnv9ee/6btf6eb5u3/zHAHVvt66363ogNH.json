@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.sks.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.3,
+      "timeline": {
+        "2.1": [
+          "/scoreboard players set @s[scores={sks=12..}] sks 11",
+          "/function sks"
+        ],
+        "2.0": [
+          "/function sksreload",
+          "/event entity @s krep:sks_reload"
+        ]
+      }
+    }
+  }
+}

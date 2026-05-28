@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "cosmetics:backpack_attachable",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/BackPackCosmetico"
+      },
+      "geometry": {
+        "default": "geometry.backpack_attachable"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": ["backpack_anim"]
+      },
+      "animations": {
+        "backpack_anim": "animation.backpack.idle"
+      },
+      "render_controllers": ["controller.render.backpack_attachable"]
+    }
+  }
+}

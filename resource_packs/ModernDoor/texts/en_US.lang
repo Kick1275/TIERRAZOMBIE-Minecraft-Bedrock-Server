@@ -1,0 +1,440 @@
+pack.used_inventory_items=Because you had not enough items in your hand, the rest were deducted from your inventory.
+
+## Translation notes: Modern Doors is the name of the addon, it should not be translated.
+midgameTips.1=You need a Miter Saw to craft doors from Modern Doors.
+midgameTips.2=You can use any kind of wooden planks to craft wooden doors in the Miter Saw.
+midgameTips.3=You can use any kind of glass blocks or panes to craft glass doors in the Miter Saw.
+midgameTips.4=Crouch and interact with a Modern Door to open the locking menu.
+midgameTips.5=Only the person who placed the door can open the locking menu.
+midgameTips.6=Need more keys? You can craft more in the locking menu.
+midgameTips.7=You can change a door’s lock code anytime from the locking menu.
+midgameTips.8=Modern Doors open as double doors by default. You can change this in the locking menu.
+midgameTips.9=Unlocked Modern Doors can be opened using levers, buttons, or pressure plates.
+midgameTips.10=Locked Modern Doors can't be broken, burned, or pushed by pistons. They're safe!
+midgameTips.11=Someone stole your key? Just change the lock code in the locking menu.
+
+
+
+pack.new_store_available=GET FREE ADDONS!
+
+pack.discover_more_addons=Discover more addons at TRMC-ADDONS.COM
+
+pack.modern_doors_text_1=Modern Doors adds all-new doors with locks, unique designs, and Redstone support, with 14 styles per door!
+pack.modern_doors_text_2=Crouch and interact to access the lock menu. Set codes, make keys, and protect your base with unbreakable doors.
+
+pack.modern_furniture_text_1=Modern Furniture adds over 800 pieces to decorate your Minecraft world, including sofas, shelves, lights, paintings, and more!
+pack.modern_furniture_text_2=Craft them using clay in the stonecutter. Simple and clean design that fits perfectly with Minecraft's vanilla look.
+
+pack.locked_chests_text_1=Locked Chests adds over 80 new containers with keys and owner protection for total security.
+pack.locked_chests_text_2=Customize your key's look and label. Without the right key or being the owner, chests stay locked!
+
+pack.sleeping_bags_text_1=Sleeping Bags let you sleep anytime and anywhere, even in the Nether or End!
+pack.sleeping_bags_text_2=Speed up time, set spawn, and use multiplayer-friendly sleep mechanics during adventures.
+
+pack.feudal_furniture_text_1=Feudal Furniture brings 800+ medieval-style items for villages, castles, and dungeons.
+pack.feudal_furniture_text_2=Includes boxes for each wood type and supports features like sitting, lighting fires, and more.
+
+pack.lore_anvil_text_1=With Lore Anvil, you can add colored descriptions and icons to any item or block.
+pack.lore_anvil_text_2=Add lore, symbols, or comments to customize and organize your gear, all done with a custom anvil!
+
+pack.home_electronics_text_1=Home Electronics adds consoles, computers, TVs, and appliances, perfect for modern interiors.
+pack.home_electronics_text_2=Open laptops, play notes on pianos, and decorate with posters, lights, and gaming gear.
+
+pack.pet_furniture_text_1=Pet Furniture adds cat houses, feeders, and animal-friendly decorations for your home and garden.
+pack.pet_furniture_text_2=Includes prefabs and modular cat enclosures, fully compatible with Minecraft 1.21+ and all Add-Ons.
+
+pack.better_beds_text_1=Better Beds adds new beds with time control, spawnpoint options, and sleep in any dimension!
+pack.better_beds_text_2=Supports servers, has animations, and lets you stack beds to create bunk beds automatically.
+
+## Translation notes: Do not translate item we ask to download, they are Addon names and should not be translated.
+## We mean things like Locked Chests, Feudal Furniture, Pet Furniture, Lore Anvil, etc.
+midgameTips.61=Want crops to grow while you sleep? Download Better Beds from §lTRMC-ADDONS.COM
+midgameTips.62=Like electronics? Download Home Electronics from §lTRMC-ADDONS.COM
+midgameTips.63=Want lockable chests? Download Locked Chests from §lTRMC-ADDONS.COM
+midgameTips.64=Into rustic decor? Download Feudal Furniture from §lTRMC-ADDONS.COM
+midgameTips.65=Love animals? Download Pet Furniture from §lTRMC-ADDONS.COM
+midgameTips.66=Are you a decor master? Download Modern Furniture from §lTRMC-ADDONS.COM
+midgameTips.67=Want to add lore to your items? Download Lore Anvil from §lTRMC-ADDONS.COM
+midgameTips.68=Want sleeping bags? Download Sleeping Bags from §lTRMC-ADDONS.COM
+midgameTips.69=Want more addons? Visit §lTRMC-ADDONS.COM§r for all kinds of free content and updates!
+
+tips.creative.1=Want more addons? Visit §lTRMC-ADDONS.COM§r for all kinds of free content and updates!
+tips.creative.2=Into rustic decor? Download Feudal Furniture from §lTRMC-ADDONS.COM
+tips.creative.3=Love animals? Download Pet Furniture from §lTRMC-ADDONS.COM
+tips.creative.4=Are you a decor master? Download Modern Furniture from §lTRMC-ADDONS.COM
+tips.creative.5=Want to add lore to your items? Download Lore Anvil from §lTRMC-ADDONS.COM
+tips.creative.6=Want sleeping bags? Download Sleeping Bags from §lTRMC-ADDONS.COM
+tips.creative.7=Want lockable chests? Download Locked Chests from §lTRMC-ADDONS.COM
+tips.creative.8=Like electronics? Download Home Electronics from §lTRMC-ADDONS.COM
+tips.creative.9=Want crops to grow while you sleep? Download Better Beds from §lTRMC-ADDONS.COM
+
+
+pack.addon_update= Add-On Update Available
+pack.trmc_store= Get Free Add-Ons
+
+pack.new_update_available=NEW UPDATE AVAILABLE!
+
+pack.md_update_text=The 1.4 update for Sleeping Bags adds 6 new sleeping bags! 
+pack.md_update_trmc=To access the update, visit §aTRMC-ADDONS.COM.§r You can also scan the §aQR code§r below to go directly to the website and download the new version of the addon.
+
+pack.md_store_text=Visit §aTRMC-ADDONS.COM.§r for a wide selection of free Add-Ons! Whether you are a decorator and want more furniture, or want to enhance your survival experience with new mechanics, §aTRMC-ADDONS.COM§r has an addon for you! 
+pack.md_store_trmc=You can also scan the §aQR code§r below to go directly to the website.
+
+
+pack.name=§lModern Doors RP
+pack.description=Necessary Resource Pack for the Modern Doors Addon. More addons at TRMC-ADDONS.com
+
+pack.door_settings=Door Settings
+pack.choose_option=Choose an option
+pack.return_simple_redstone=Return to Simple Redstone Detection
+pack.upgrade_redstone=Upgrade Redstone Detection
+pack.return_normal_orientation=Return to Normal Orientation
+pack.invert_door_orientation=Invert Door Orientation
+pack.turn_on_dual_opening=Turn on Dual Opening
+pack.turn_off_dual_opening=Turn off Dual Opening
+pack.confirm_full_redstone=Confirm Full Redstone Activation
+pack.full_redstone_warning=Warning! This door is already capable of detecting redstone signals such as levers, pressure plates and redstone wire. Only use this feature if the current system does not work properly. Be aware that enabling this on many doors may cause lag. Do you want to continue?
+pack.yes=Yes
+pack.no=No
+
+pack.door_menu=Door Menu
+pack.unlock_door=Unlock Door
+pack.lock_door=Lock Door
+pack.lock_settings=Lock Settings
+pack.unlock_mechanisms=Locking Mechanisms
+pack.create_key=Create Key
+pack.change_lock=Change Lock
+pack.use_password=Use Password
+pack.use_key=Use Key
+pack.unlocked_because_you_are_owner=Unlocked because you are the owner
+pack.correct_key=Correct Key
+pack.incorrect_key=Incorrect Key
+pack.password_required=Password Required
+pack.enter_password=Enter Password
+pack.correct_password=Correct Password
+pack.incorrect_password=Incorrect Password
+pack.use_key_message=Please use the key to unlock
+pack.door_locked_not_owner=Door is locked, and you are not the owner
+pack.door_locked=The door is locked
+pack.door_opened=The door is open
+pack.door_closed=The door is closed
+pack.key_code_too_long=Key code is too long. Maximum 20 characters allowed
+pack.key_already_in_use=This key code is already in use by other player, a new one has been generated
+pack.key_created=Key Created
+pack.key_updated=Key Updated
+pack.adjacent_door_key_applied=Key applied to adjacent door
+pack.adjacent_door_different_owner=Adjacent door has a different owner
+pack.enter_key_name=Enter Key Name
+pack.enter_key_description=Enter Key Description
+pack.number_of_keys=Number of Keys
+pack.password_settings=Password Settings
+pack.password_saved=Password Saved
+pack.door_unlocked=Door Unlocked
+pack.first_time_locking=First Time Locking Options
+pack.owner_not_affected=Owner Not Affected by Lock
+pack.set_lock_create_keys=Allow Door Access with Keys
+pack.submit=Submit
+pack.door_state_open=Door is open
+pack.door_state_close=Door is closed
+pack.open_pair_false=No adjacent paired block
+pack.disable_options=Locking Mechanisms
+pack.locked_because_you_are_owner=Door Locked
+pack.locked_door_opened_because_you_are_owner=Locked Door opened because you are the owner
+pack.door_you_are_not_owner=You can't access the Lock menu if you are not the owner of the door
+pack.door_with_no_owner=This Door has no owner and can't be locked, you can only lock doors you placed after the Locks update
+
+pack.tutorial_prompt_title=Tutorial
+pack.tutorial_prompt_body=Would you like to follow a tutorial on all the options to lock and manage doors?
+pack.follow_tutorial=Follow the Tutorial
+pack.skip_tutorial=Skip the Tutorial
+
+pack.cant_destroy_player_not_owner=You can't destroy a locked door
+
+pack.key_and_lock_settings=Key and Lock Settings
+pack.use_auto_generated_uuid=Use Auto-Generated Key Code
+pack.enter_key_code=Enter Custom Key Code (effective only if above toggle is off)
+pack.enter_key_code_short=Enter Custom Key Code
+
+pack.options_saved=Options saved
+pack.choose_unlock_method=Door locked. Choose unlock method
+
+pack.select_key_type=Select Key Type
+pack.key_type_gold=Gold Key
+pack.key_type_iron=Iron Key
+pack.key_type_copper=Copper Key
+pack.key_type_oxidized_copper=Oxidized Copper Key
+
+item.md:copper_key=MD: Copper Key
+item.md:gold_key=MD: Gold Key
+item.md:iron_key=MD: Iron Key
+item.md:oxidized_key=MD: Oxidized Key
+
+
+tile.md:door_box.name=MD: Door Box
+item.md:screwdriver=MD: Screwdriver
+
+item.md:miter_saw_note=Use the Miter Saw to craft Modern Doors
+
+tile.md:miter_saw.name=MD: Miter Saw
+tile.md:miter_saw.form_name=Miter Saw
+pack.select_door_type=Select a door type:
+pack.menu_canceled=You canceled the menu.
+
+pack.no_item_selected=You must have a stack of items selected to craft the door.
+pack.invalid_material=This block has no use in the Miter Saw
+pack.stack_used_up=The stack in your hand has been completely used up.
+pack.select_quantity=How many?
+
+pack.door_type_suffix= Doors
+pack.door_cost_prefix=Cost: 
+pack.door_cost_suffix= items)
+pack.required_items_count=Not enough items. You need
+pack.current_items_count=You have: 
+pack.items_remaining_prefix=Items remaining: 
+pack.wood.invalid_material_message=You must hold some type of wood planks in your hand.
+pack.iron_ingot.invalid_material_message=You must hold iron ingots in your hand.
+pack.gold_ingot.invalid_material_message=You must hold gold ingots in your hand.
+pack.copper_ingot.invalid_material_message=You must hold copper ingots in your hand.
+pack.glass_block.invalid_material_message=You must hold any type of glass in your hand.
+pack.wood.name=wood planks
+pack.iron_ingot.name=iron ingots
+pack.copper_ingot.name=copper ingots
+pack.gold_ingot.name=gold ingots
+pack.glass_block.name=glass blocks
+
+
+pack.glass.name=Framed
+pack.screen.name=Screen
+pack.barred.name=Slatted
+pack.sturdy.name=Sturdy
+pack.sturdy_windowed.name=Sturdy Windowed
+pack.full_glass.name=Pane Glass
+pack.jail.name=Jail
+pack.long_hinge.name=Long Hinge
+pack.timber.name=Timber
+pack.multi_panel.name=Multi Panel
+pack.twin_glass.name=Twin Glass
+pack.oak.name=Oak
+pack.birch.name=Birch
+pack.acacia.name=Acacia
+pack.spruce.name=Spruce
+pack.dark_oak.name=Dark Oak
+pack.jungle.name=Jungle
+pack.crimson.name=Crimson
+pack.warped.name=Warped
+pack.mangrove.name=Mangrove
+pack.cherry.name=Cherry
+pack.bamboo.name=Bamboo
+
+pack.transparent.name=Transparent
+pack.red.name=Red
+pack.orange.name=Orange
+pack.yellow.name=Yellow
+pack.lime.name=Lime
+pack.green.name=Green
+pack.cyan.name=Cyan
+pack.light_blue.name=Light Blue
+pack.blue.name=Blue
+pack.magenta.name=Magenta
+pack.purple.name=Purple
+pack.pink.name=Pink
+pack.white.name=White
+pack.silver.name=Silver
+pack.gray.name=Gray
+pack.black.name=Black
+pack.brown.name=Brown
+pack.tinted.name=Tinted
+
+pack.iron.name=Iron
+pack.gray_iron.name=Gray Iron
+pack.dark_iron.name=Dark Iron
+pack.gold.name=Gold
+pack.new_copper.name=Copper
+pack.exposed_copper.name=Exposed Copper
+pack.weathered_copper.name=Weathered Copper
+pack.oxidized_copper.name=Oxidized Copper
+
+
+tile.md:preview_single_oak_glass_door.name=MD: Oak Framed Glass Door
+tile.md:preview_single_birch_glass_door.name=MD: Birch Framed Glass Door
+tile.md:preview_single_acacia_glass_door.name=MD: Acacia Framed Glass Door
+tile.md:preview_single_spruce_glass_door.name=MD: Spruce Framed Glass Door
+tile.md:preview_single_dark_oak_glass_door.name=MD: Dark Oak Framed Glass Door
+tile.md:preview_single_jungle_glass_door.name=MD: Jungle Framed Glass Door
+tile.md:preview_single_crimson_glass_door.name=MD: Crimson Framed Glass Door
+tile.md:preview_single_warped_glass_door.name=MD: Warped Framed Glass Door
+tile.md:preview_single_mangrove_glass_door.name=MD: Mangrove Framed Glass Door
+tile.md:preview_single_cherry_glass_door.name=MD: Cherry Framed Glass Door
+tile.md:preview_single_bamboo_glass_door.name=MD: Bamboo Framed Glass Door
+tile.md:preview_single_iron_glass_door.name=MD: Iron Framed Glass Door
+tile.md:preview_single_dark_iron_glass_door.name=MD: Dark Iron Framed Glass Door
+
+tile.md:preview_single_oak_screen_door.name=MD: Oak Screen Door
+tile.md:preview_single_birch_screen_door.name=MD: Birch Screen Door
+tile.md:preview_single_acacia_screen_door.name=MD: Acacia Screen Door
+tile.md:preview_single_spruce_screen_door.name=MD: Spruce Screen Door
+tile.md:preview_single_dark_oak_screen_door.name=MD: Dark Oak Screen Door
+tile.md:preview_single_jungle_screen_door.name=MD: Jungle Screen Door
+tile.md:preview_single_crimson_screen_door.name=MD: Crimson Screen Door
+tile.md:preview_single_warped_screen_door.name=MD: Warped Screen Door
+tile.md:preview_single_mangrove_screen_door.name=MD: Mangrove Screen Door
+tile.md:preview_single_cherry_screen_door.name=MD: Cherry Screen Door
+tile.md:preview_single_bamboo_screen_door.name=MD: Bamboo Screen Door
+tile.md:preview_single_iron_screen_door.name=MD: Iron Screen Door
+tile.md:preview_single_dark_iron_screen_door.name=MD: Dark Iron Screen Door
+
+tile.md:preview_single_oak_barred_door.name=MD: Oak Slatted Door
+tile.md:preview_single_birch_barred_door.name=MD: Birch Slatted Door
+tile.md:preview_single_acacia_barred_door.name=MD: Acacia Slatted Door
+tile.md:preview_single_spruce_barred_door.name=MD: Spruce Slatted Door
+tile.md:preview_single_dark_oak_barred_door.name=MD: Dark Oak Slatted Door
+tile.md:preview_single_jungle_barred_door.name=MD: Jungle Slatted Door
+tile.md:preview_single_crimson_barred_door.name=MD: Crimson Slatted Door
+tile.md:preview_single_warped_barred_door.name=MD: Warped Slatted Door
+tile.md:preview_single_mangrove_barred_door.name=MD: Mangrove Slatted Door
+tile.md:preview_single_cherry_barred_door.name=MD: Cherry Slatted Door
+tile.md:preview_single_bamboo_barred_door.name=MD: Bamboo Slatted Door
+tile.md:preview_single_iron_barred_door.name=MD: Iron Slatted Door
+tile.md:preview_single_dark_iron_barred_door.name=MD: Dark Iron Slatted Door
+
+tile.md:preview_single_oak_sturdy_windowed_door.name=MD: Oak Sturdy Windowed Door
+tile.md:preview_single_birch_sturdy_windowed_door.name=MD: Birch Sturdy Windowed Door
+tile.md:preview_single_acacia_sturdy_windowed_door.name=MD: Acacia Sturdy Windowed Door
+tile.md:preview_single_spruce_sturdy_windowed_door.name=MD: Spruce Sturdy Windowed Door
+tile.md:preview_single_dark_oak_sturdy_windowed_door.name=MD: Dark Oak Sturdy Windowed Door
+tile.md:preview_single_jungle_sturdy_windowed_door.name=MD: Jungle Sturdy Windowed Door
+tile.md:preview_single_crimson_sturdy_windowed_door.name=MD: Crimson Sturdy Windowed Door
+tile.md:preview_single_warped_sturdy_windowed_door.name=MD: Warped Sturdy Windowed Door
+tile.md:preview_single_mangrove_sturdy_windowed_door.name=MD: Mangrove Sturdy Windowed Door
+tile.md:preview_single_cherry_sturdy_windowed_door.name=MD: Cherry Sturdy Windowed Door
+tile.md:preview_single_bamboo_sturdy_windowed_door.name=MD: Bamboo Sturdy Windowed Door
+tile.md:preview_single_iron_sturdy_windowed_door.name=MD: Iron Sturdy Windowed Door
+tile.md:preview_single_dark_iron_sturdy_windowed_door.name=MD: Dark Iron Sturdy Windowed Door
+
+tile.md:preview_single_oak_sturdy_door.name=MD: Oak Sturdy Door
+tile.md:preview_single_birch_sturdy_door.name=MD: Birch Sturdy Door
+tile.md:preview_single_acacia_sturdy_door.name=MD: Acacia Sturdy Door
+tile.md:preview_single_spruce_sturdy_door.name=MD: Spruce Sturdy Door
+tile.md:preview_single_dark_oak_sturdy_door.name=MD: Dark Oak Sturdy Door
+tile.md:preview_single_jungle_sturdy_door.name=MD: Jungle Sturdy Door
+tile.md:preview_single_crimson_sturdy_door.name=MD: Crimson Sturdy Door
+tile.md:preview_single_warped_sturdy_door.name=MD: Warped Sturdy Door
+tile.md:preview_single_mangrove_sturdy_door.name=MD: Mangrove Sturdy Door
+tile.md:preview_single_cherry_sturdy_door.name=MD: Cherry Sturdy Door
+tile.md:preview_single_bamboo_sturdy_door.name=MD: Bamboo Sturdy Door
+tile.md:preview_single_iron_sturdy_door.name=MD: Iron Sturdy Door
+tile.md:preview_single_dark_iron_sturdy_door.name=MD: Dark Iron Sturdy Door
+
+tile.md:preview_single_transparent_full_glass_door.name=MD: Transparent Glass Pane Door
+tile.md:preview_single_tinted_full_glass_door.name=MD: Tinted Glass Pane Door
+tile.md:preview_single_silver_full_glass_door.name=MD: Light Gray Glass Pane Door
+tile.md:preview_single_white_full_glass_door.name=MD: White Glass Pane Door
+tile.md:preview_single_gray_full_glass_door.name=MD: Gray Glass Pane Door
+tile.md:preview_single_black_full_glass_door.name=MD: Black Glass Pane Door
+tile.md:preview_single_brown_full_glass_door.name=MD: Brown Glass Pane Door
+tile.md:preview_single_red_full_glass_door.name=MD: Red Glass Pane Door
+tile.md:preview_single_orange_full_glass_door.name=MD: Orange Glass Pane Door
+tile.md:preview_single_yellow_full_glass_door.name=MD: Yellow Glass Pane Door
+tile.md:preview_single_lime_full_glass_door.name=MD: Lime Glass Pane Door
+tile.md:preview_single_green_full_glass_door.name=MD: Green Glass Pane Door
+tile.md:preview_single_cyan_full_glass_door.name=MD: Cyan Glass Pane Door
+tile.md:preview_single_light_blue_full_glass_door.name=MD: Light Blue Glass Pane Door
+tile.md:preview_single_blue_full_glass_door.name=MD: Blue Glass Pane Door
+tile.md:preview_single_purple_full_glass_door.name=MD: Purple Glass Pane Door
+tile.md:preview_single_magenta_full_glass_door.name=MD: Magenta Glass Pane Door
+tile.md:preview_single_pink_full_glass_door.name=MD: Pink Glass Pane Door
+
+tile.md:preview_single_iron_jail_door.name=MD: Iron Jail Door
+tile.md:preview_single_dark_iron_jail_door.name=MD: Dark Iron Jail Door
+tile.md:preview_single_new_copper_jail_door.name=MD: Copper Jail Door
+tile.md:preview_single_exposed_copper_jail_door.name=MD: Exposed Copper Jail Door
+tile.md:preview_single_weathered_copper_jail_door.name=MD: Weathered Copper Jail Door
+tile.md:preview_single_oxidized_copper_jail_door.name=MD: Oxidized Copper Jail Door
+tile.md:preview_single_gold_jail_door.name=MD: Gold Jail Door
+tile.md:preview_single_gray_iron_jail_door.name=MD: Gray Iron Jail Door
+
+tile.md:preview_single_oak_long_hinge_door.name=MD: Oak Long Hinge Door
+tile.md:preview_single_birch_long_hinge_door.name=MD: Birch Long Hinge Door
+tile.md:preview_single_acacia_long_hinge_door.name=MD: Acacia Long Hinge Door
+tile.md:preview_single_spruce_long_hinge_door.name=MD: Spruce Long Hinge Door
+tile.md:preview_single_dark_oak_long_hinge_door.name=MD: Dark Oak Long Hinge Door
+tile.md:preview_single_jungle_long_hinge_door.name=MD: Jungle Long Hinge Door
+tile.md:preview_single_crimson_long_hinge_door.name=MD: Crimson Long Hinge Door
+tile.md:preview_single_warped_long_hinge_door.name=MD: Warped Long Hinge Door
+tile.md:preview_single_mangrove_long_hinge_door.name=MD: Mangrove Long Hinge Door
+tile.md:preview_single_cherry_long_hinge_door.name=MD: Cherry Long Hinge Door
+tile.md:preview_single_bamboo_long_hinge_door.name=MD: Bamboo Long Hinge Door
+tile.md:preview_single_iron_long_hinge_door.name=MD: Iron Long Hinge Door
+tile.md:preview_single_dark_iron_long_hinge_door.name=MD: Dark Iron Long Hinge Door
+
+tile.md:preview_single_oak_timber_door.name=MD: Oak Timber Door
+tile.md:preview_single_birch_timber_door.name=MD: Birch Timber Door
+tile.md:preview_single_acacia_timber_door.name=MD: Acacia Timber Door
+tile.md:preview_single_spruce_timber_door.name=MD: Spruce Timber Door
+tile.md:preview_single_dark_oak_timber_door.name=MD: Dark Oak Timber Door
+tile.md:preview_single_jungle_timber_door.name=MD: Jungle Timber Door
+tile.md:preview_single_crimson_timber_door.name=MD: Crimson Timber Door
+tile.md:preview_single_warped_timber_door.name=MD: Warped Timber Door
+tile.md:preview_single_mangrove_timber_door.name=MD: Mangrove Timber Door
+tile.md:preview_single_cherry_timber_door.name=MD: Cherry Timber Door
+tile.md:preview_single_bamboo_timber_door.name=MD: Bamboo Timber Door
+tile.md:preview_single_iron_timber_door.name=MD: White Timber Door
+tile.md:preview_single_dark_iron_timber_door.name=MD: Dark Timber Door
+
+tile.md:preview_single_oak_multi_panel_door.name=MD: Oak Multi Panel Door
+tile.md:preview_single_birch_multi_panel_door.name=MD: Birch Multi Panel Door
+tile.md:preview_single_acacia_multi_panel_door.name=MD: Acacia Multi Panel Door
+tile.md:preview_single_spruce_multi_panel_door.name=MD: Spruce Multi Panel Door
+tile.md:preview_single_dark_oak_multi_panel_door.name=MD: Dark Oak Multi Panel Door
+tile.md:preview_single_jungle_multi_panel_door.name=MD: Jungle Multi Panel Door
+tile.md:preview_single_crimson_multi_panel_door.name=MD: Crimson Multi Panel Door
+tile.md:preview_single_warped_multi_panel_door.name=MD: Warped Multi Panel Door
+tile.md:preview_single_mangrove_multi_panel_door.name=MD: Mangrove Multi Panel Door
+tile.md:preview_single_cherry_multi_panel_door.name=MD: Cherry Multi Panel Door
+tile.md:preview_single_bamboo_multi_panel_door.name=MD: Bamboo Multi Panel Door
+tile.md:preview_single_iron_multi_panel_door.name=MD: White Multi Panel Door
+tile.md:preview_single_dark_iron_multi_panel_door.name=MD: Dark Multi Panel Door
+
+tile.md:preview_single_oak_twin_glass_door.name=MD: Oak Twin Glass Door
+tile.md:preview_single_birch_twin_glass_door.name=MD: Birch Twin Glass Door
+tile.md:preview_single_acacia_twin_glass_door.name=MD: Acacia Twin Glass Door
+tile.md:preview_single_spruce_twin_glass_door.name=MD: Spruce Twin Glass Door
+tile.md:preview_single_dark_oak_twin_glass_door.name=MD: Dark Oak Twin Glass Door
+tile.md:preview_single_jungle_twin_glass_door.name=MD: Jungle Twin Glass Door
+tile.md:preview_single_crimson_twin_glass_door.name=MD: Crimson Twin Glass Door
+tile.md:preview_single_warped_twin_glass_door.name=MD: Warped Twin Glass Door
+tile.md:preview_single_mangrove_twin_glass_door.name=MD: Mangrove Twin Glass Door
+tile.md:preview_single_cherry_twin_glass_door.name=MD: Cherry Twin Glass Door
+tile.md:preview_single_bamboo_twin_glass_door.name=MD: Bamboo Twin Glass Door
+tile.md:preview_single_iron_twin_glass_door.name=MD: White Twin Glass Door
+tile.md:preview_single_dark_iron_twin_glass_door.name=MD: Dark Twin Glass Door
+
+pack.japanese.name=Japanese
+tile.md:preview_single_oak_japanese_door.name=MD: Oak Japanese Door
+tile.md:preview_single_birch_japanese_door.name=MD: Birch Japanese Door
+tile.md:preview_single_acacia_japanese_door.name=MD: Acacia Japanese Door
+tile.md:preview_single_spruce_japanese_door.name=MD: Spruce Japanese Door
+tile.md:preview_single_dark_oak_japanese_door.name=MD: Dark Oak Japanese Door
+tile.md:preview_single_jungle_japanese_door.name=MD: Jungle Japanese Door
+tile.md:preview_single_crimson_japanese_door.name=MD: Crimson Japanese Door
+tile.md:preview_single_warped_japanese_door.name=MD: Warped Japanese Door
+tile.md:preview_single_mangrove_japanese_door.name=MD: Mangrove Japanese Door
+tile.md:preview_single_cherry_japanese_door.name=MD: Cherry Japanese Door
+tile.md:preview_single_bamboo_japanese_door.name=MD: Bamboo Japanese Door
+tile.md:preview_single_iron_japanese_door.name=MD: White Japanese Door
+tile.md:preview_single_dark_iron_japanese_door.name=MD: Dark Japanese Door
+
+pack.ventilation.name=Ventilation
+tile.md:preview_single_oak_ventilation_door.name=MD: Oak Ventilation Door
+tile.md:preview_single_birch_ventilation_door.name=MD: Birch Ventilation Door
+tile.md:preview_single_acacia_ventilation_door.name=MD: Acacia Ventilation Door
+tile.md:preview_single_spruce_ventilation_door.name=MD: Spruce Ventilation Door
+tile.md:preview_single_dark_oak_ventilation_door.name=MD: Dark Oak Ventilation Door
+tile.md:preview_single_jungle_ventilation_door.name=MD: Jungle Ventilation Door
+tile.md:preview_single_crimson_ventilation_door.name=MD: Crimson Ventilation Door
+tile.md:preview_single_warped_ventilation_door.name=MD: Warped Ventilation Door
+tile.md:preview_single_mangrove_ventilation_door.name=MD: Mangrove Ventilation Door
+tile.md:preview_single_cherry_ventilation_door.name=MD: Cherry Ventilation Door
+tile.md:preview_single_bamboo_ventilation_door.name=MD: Bamboo Ventilation Door
+tile.md:preview_single_iron_ventilation_door.name=MD: White Ventilation Door
+tile.md:preview_single_dark_iron_ventilation_door.name=MD: Dark Ventilation Door

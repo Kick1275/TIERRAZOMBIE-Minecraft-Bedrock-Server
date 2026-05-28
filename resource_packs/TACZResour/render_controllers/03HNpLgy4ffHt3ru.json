@@ -1,0 +1,57 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.deagleg": {
+      "geometry": "geometry.deagleg",
+      "materials": [
+        {
+          "*": "material.guns"
+        },
+        {
+          "laserbeam_1": "material.glow"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "laser_1": "q.property('krep:laser') == 1"
+        },
+        {
+          "laserbeam_1": "q.property('krep:laser') == 1"
+        },
+        {
+          "muzzle_1": "q.property('krep:muzzle') == 1"
+        },
+        {
+          "magazine1": "q.property('krep:magazine') == 0"
+        },
+        {
+          "magazine3": "q.property('krep:magazine') == 0"
+        },
+        {
+          "mag_extended": "q.property('krep:magazine') >= 1"
+        },
+        {
+          "mag_extended2": "q.property('krep:magazine') >= 1"
+        }
+      ],
+      "textures": [
+        "texture.deagleg"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

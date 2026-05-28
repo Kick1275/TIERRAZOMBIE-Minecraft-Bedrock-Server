@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.mk14.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.7,
+      "timeline": {
+        "2.6": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:mk14 1 0",
+          "/scoreboard players set @s[scores={mk14=21..}] mk14 20",
+          "/function mk14"
+        ],
+        "2.3": [
+          "/function mk14reload",
+          "/event entity @s krep:mk14_reload"
+        ]
+      }
+    }
+  }
+}

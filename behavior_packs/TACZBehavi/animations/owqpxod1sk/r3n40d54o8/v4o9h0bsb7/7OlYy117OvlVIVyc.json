@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.qbz191.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.35,
+      "timeline": {
+        "2.2": [
+          "/function qbz191",
+          "/scoreboard players set @s[scores={qbz191=32..}] qbz191 31"
+        ],
+        "2.1": [
+          "/function qbz191reload",
+          "/event entity @s krep:qbz191_reload"
+        ]
+      }
+    }
+  }
+}

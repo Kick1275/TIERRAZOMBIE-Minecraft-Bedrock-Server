@@ -1,0 +1,86 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.military_woodland_bottom": {
+			"arrays": {
+				"textures": {
+					"Array.bottom": [
+						"Texture.woodland_bottom_0",
+						"Texture.woodland_bottom_1",
+						"Texture.woodland_bottom_2",
+						"Texture.woodland_bottom_3",
+						"Texture.woodland_bottom_4",
+						"Texture.woodland_bottom_5",
+						"Texture.woodland_bottom_6",
+						"Texture.woodland_bottom_7",
+						"Texture.woodland_bottom_8",
+						"Texture.woodland_bottom_9"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.bottom[v.bottom_woodland]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.military_desert_bottom": {
+			"arrays": {
+				"textures": {
+					"Array.bottom": [
+						"Texture.desert_bottom_0",
+						"Texture.desert_bottom_1",
+						"Texture.desert_bottom_2",
+						"Texture.desert_bottom_3",
+						"Texture.desert_bottom_4",
+						"Texture.desert_bottom_5",
+						"Texture.desert_bottom_6",
+						"Texture.desert_bottom_7",
+						"Texture.desert_bottom_8",
+						"Texture.desert_bottom_9"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.bottom[v.bottom_desert]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.military_artic_bottom": {
+			"arrays": {
+				"textures": {
+					"Array.bottom": [
+						"Texture.artic_bottom_0",
+						"Texture.artic_bottom_1",
+						"Texture.artic_bottom_2",
+						"Texture.artic_bottom_3",
+						"Texture.artic_bottom_4",
+						"Texture.artic_bottom_5",
+						"Texture.artic_bottom_6",
+						"Texture.artic_bottom_7",
+						"Texture.artic_bottom_8",
+						"Texture.artic_bottom_9"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.bottom[v.bottom_artic]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

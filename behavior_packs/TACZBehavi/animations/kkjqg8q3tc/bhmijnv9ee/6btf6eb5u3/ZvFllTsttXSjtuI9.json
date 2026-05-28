@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.uzi.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.1,
+      "timeline": {
+        "2.0": [
+          "/scoreboard players set @s[scores={uzi=21..}] uzi 20",
+          "/function uzi"
+        ],
+        "1.9": [
+          "/function uzireload",
+          "/event entity @s krep:uzi_reload"
+        ]
+      }
+    }
+  }
+}

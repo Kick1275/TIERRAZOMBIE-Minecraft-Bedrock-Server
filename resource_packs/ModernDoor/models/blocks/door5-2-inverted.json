@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.door5-2-inverted",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 0, -8],
+							"size": [16, 16, 2],
+							"uv": {
+								"north": {"uv": [16, 0], "uv_size": [-16, 16]},
+								"east": {"uv": [20, 0], "uv_size": [2, 16]},
+								"south": {"uv": [0, 0], "uv_size": [16, 16]},
+								"west": {"uv": [17, 0], "uv_size": [2, 16]},
+								"up": {"uv": [0, 33], "uv_size": [16, 2]},
+								"down": {"uv": [0, 40], "uv_size": [16, -2]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,172 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mp7": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='mp7' && q.is_using_item) || query.get_equipped_item_name=='mp7_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s mp7 40",
+            "@s[hasitem={item=krep:mp7, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "mp7.30": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "mp7.31": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function mp7"
+          ]
+        },
+        "mp7.31": {
+          "animations": [
+            "mp7shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={mp7=0}] slot.weapon.mainhand 1 krep:mp7_emp 1 0"
+          ]
+        },
+        "mp7.30": {
+          "animations": [
+            "mp7shoot"
+          ],
+          "transitions": [
+            {
+              "delay.30": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('mp7') == 0"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mp7_fire",
+            "/function mp7",
+            "/execute as @s[scores={mp7sound=0}] run playsound mp7.shoot @a[r=30]",
+            "/scoreboard players set @s[scores={mp7=42..}] mp7 41",
+            "/scoreboard players remove @s[scores={mp7=1..41}] mp7 1",
+            "/replaceitem entity @s[scores={mp7=0}] slot.weapon.mainhand 1 krep:mp7_emp 1 0",
+            "/title @s[scores={mp7=0}] actionbar No Ammunition"
+          ]
+        },
+        "delay.30": {
+          "animations": [
+            "mp7shoot"
+          ],
+          "transitions": [
+            {
+              "mp7.29": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('mp7') == 0"
+            }
+          ]
+        },
+        "mp7.29": {
+          "transitions": [
+            {
+              "mp7.30": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "query.scoreboard('mp7') == 0"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mp7_fire",
+            "/function mp7",
+            "/execute as @s[scores={mp7sound=0}] run playsound mp7.shoot @a[r=30]",
+            "/scoreboard players set @s[scores={mp7=42..}] mp7 41",
+            "/scoreboard players remove @s[scores={mp7=1..41}] mp7 1",
+            "/replaceitem entity @s[scores={mp7=0}] slot.weapon.mainhand 1 krep:mp7_emp 1 0",
+            "/title @s[scores={mp7=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    },
+    "controller.animation.mp7.sound": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='mp7') || query.get_equipped_item_name=='mp7_emp'"
+            }
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "shoot": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') >= 1 && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "/stopsound @a[r=15] mp7.suppressloop",
+            "/stopsound @a[r=30] mp7.shootloop",
+            "/scoreboard players set @s mp7sound 0"
+            
+          ]
+        },
+        "shoot": {
+          "animations": [
+            {
+             "g36shootsound": "query.get_equipped_item_name=='mp7' && q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s mp7sound 0"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('mp7') == 0 || !q.is_using_item || q.mark_variant == 2"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp7'"
+            },
+            {
+              "full": "query.get_equipped_item_name=='mp7' && query.is_using_item && query.scoreboard('mp7') >= 1 && q.mark_variant != 2 && query.all_animations_finished"
+            }
+          ]
+        },
+        "full": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('mp7') == 0"
+            },
+            {
+              "setup": "q.mark_variant == 2"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp7'"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp7' && !query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "/playsound mp7.shootloop @a[r=30]",
+            "/scoreboard players set @s mp7sound 1"
+          ],
+          "on_exit": [
+            "/playsound mp7.shoot @a[r=30]",
+            "/scoreboard players set @s mp7sound 0",
+            "/stopsound @a[r=30] mp7.shootloop"
+          ]
+        }
+      }
+    }
+  }
+}

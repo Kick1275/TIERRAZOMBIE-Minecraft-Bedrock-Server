@@ -1,0 +1,1639 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"af:artillery": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"step": "artillery.move",
+					"roar": "artillery.fire",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:b2": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:recruiter": {
+				"events": {
+					"milk": "mob.villager.haggle",
+					"ambient": "mob.wanderingtrader.idle",
+					"hurt": "mob.villager.hit",
+					"death": "mob.villager.death",
+					"eat": "random.levelup",
+					"purr": "item.book.page_turn"
+				},
+				"pitch": 0.8,
+				"volume": 1
+			},
+			"af:c_ram": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "machinegun.fire"
+				},
+				"volume": 100,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:ak630": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "machinegun.fire"
+				},
+				"volume": 100,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:mq9": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"purr": "item.book.page_turn",
+					"swoop": "armor.equip_netherite",
+					"milk": "armor.equip_netherite",
+					"flap": "jet.fly_loud",
+					"attack": "mob.blaze.shoot"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:gj2": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"purr": "item.book.page_turn",
+					"swoop": "armor.equip_netherite",
+					"milk": "armor.equip_netherite",
+					"flap": "jet.fly_loud",
+					"attack": "mob.blaze.shoot"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:sam_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "mob.blaze.shoot"
+				},
+				"volume": 100,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:nasams": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "mob.blaze.shoot"
+				},
+				"volume": 100,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:barbed_wire": {
+				"events": {
+					"death": "block.sweet_berry_bush.break",
+					"attack": "block.sweet_berry_bush.hurt",
+					"hurt": {
+						"sound": "mob.sheep.shear",
+						"volume": 1,
+						"pitch": [
+							0.8,
+							1.2
+						]
+					}
+				},
+				"volume": 1,
+				"pitch": [
+					0.5,
+					0.7
+				]
+			},
+			"af:antitank_mine": {
+				"events": {
+					"eat": "block.composter.empty",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn"
+				},
+				"volume": 1,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:bullet": {
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": "bullet.pass",
+					"hurt": "bullet.hit",
+					"shoot": "bullet.pass"
+				}
+			},
+			"af:gas_canister": {
+				"volume": 1,
+				"pitch": 1,
+				"events": {
+					"hurt": "mob.irongolem.repair",
+					"death": "mob.irongolem.repair",
+					"purr": "item.book.page_turn",
+					"milk": {
+						"sound": "tile.piston.out",
+						"pitch": 0.5,
+						"volume": 1
+					},
+					"eat": {
+						"sound": "tile.piston.in",
+						"pitch": 0.5,
+						"volume": 1
+					}
+				}
+			},
+			"af:flag_pole": {
+				"volume": 1,
+				"pitch": 1,
+				"events": {
+					"eat": "block.cartography_table.use",
+					"purr": "item.book.page_turn",
+					"death": "mob.chicken.plop",
+					"milk": "crossbow.loading.middle"
+				}
+			},
+			"af:siren_pole": {
+				"volume": 1,
+				"pitch": 1,
+				"events": {
+					"death": "mob.chicken.plop",
+					"purr": "item.book.page_turn"
+				}
+			},
+			"af:turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.break",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 1,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:kamaz65224": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire",
+					"reflect": {
+						"pitch": 1,
+						"sound": "mob.irongolem.repair",
+						"volume": 1
+					},
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m939": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire",
+					"reflect": {
+						"pitch": 1,
+						"sound": "mob.irongolem.repair",
+						"volume": 1
+					},
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:radio_tower": {
+				"volume": 1,
+				"pitch": 1,
+				"events": {
+					"purr": "item.book.page_turn",
+					"death": "mob.chicken.plop"
+				}
+			},
+			"af:m4carbine_bullet": {
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": "bullet.pass",
+					"hurt": "bullet.hit",
+					"shoot": "bullet.pass"
+				}
+			},
+			"af:glock17_bullet": {
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"events": {
+					"ambient": "bullet.pass",
+					"hurt": "bullet.hit",
+					"shoot": "bullet.pass"
+				}
+			},
+			"af:m1a1": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": {
+						"sound": "tank.drive",
+						"pitch": 0.7,
+						"volume": 100
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:m1a1_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:m1a1_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:t90m": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "tank.drive"
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:t90m_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"roar": "artillery.fire",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:t90m_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:bmpt72": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "tank.drive"
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:bmpt72_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "vehicle.mg_fire",
+						"volume": 100,
+						"pitch": 0.5
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:bmpt72_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m1151": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m1151_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m1151_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:btr80": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:btr80_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:btr80_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:type16": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": {
+						"sound": "tank.drive",
+						"pitch": 0.7,
+						"volume": 100
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:type16_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:type16_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m551": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": {
+						"sound": "tank.drive",
+						"pitch": 0.7,
+						"volume": 100
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:m551_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:m551_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:f16": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:f16_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:f4": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:f4_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:mig29": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:mig29_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:f22": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:f22_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:su57": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:su57_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:j20": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:j20_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:mig21": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:mig21_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:f35a": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:f35a_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m114": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					},
+					"flap": "item.spyglass.use"
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:d20": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					},
+					"flap": "item.spyglass.use"
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:t72a": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": {
+						"sound": "tank.drive",
+						"pitch": 0.7,
+						"volume": 100
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:t72a_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "tank.fire",
+						"pitch": 1,
+						"volume": 500
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:t72a_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:eq2050": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:eq2050_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:eq2050_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:m2a2": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "tank.drive"
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:m2a2_turret": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "artillery.hurt",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"roar": {
+						"sound": "vehicle.mg_fire",
+						"volume": 100,
+						"pitch": 0.5
+					}
+				},
+				"volume": 100,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:m2a2_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:mounted_gun": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:bm3": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"purr": "item.book.page_turn",
+					"flap": "item.spyglass.use"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:sgra1": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"shoot": "vehicle.gun_fire",
+					"purr": "item.book.page_turn",
+					"flap": "item.spyglass.use"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:tu160": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					0.7
+				]
+			},
+			"af:tu160_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:ah64": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "ravager.step",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:ah64_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:mi24": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "ravager.step",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": "vehicle.gun_fire"
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:mi24_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:a10": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": {
+						"sound": "vehicle.chaingun_fire",
+						"volume": 100,
+						"pitch": [
+							2,
+							0.5
+						]
+					}
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:a10_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:su25": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "random.explode",
+					"step": "jet.fly_quiet",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"shoot": {
+						"sound": "vehicle.chaingun_fire",
+						"volume": 100,
+						"pitch": [
+							2,
+							0.5
+						]
+					}
+				},
+				"volume": 50,
+				"pitch": [
+					1.2,
+					0.7
+				]
+			},
+			"af:su25_corpse": {
+				"events": {
+					"eat": "mob.irongolem.repair",
+					"hurt": "mob.irongolem.repair",
+					"death": "artillery.hurt",
+					"milk": "armor.equip_netherite",
+					"purr": "item.book.page_turn",
+					"attack": {
+						"sound": "mob.irongolem.repair",
+						"volume": 50,
+						"pitch": [
+							0.5,
+							0.8
+						]
+					},
+					"step": "vehicle.drive",
+					"ambient": "block.campfire.crackle"
+				},
+				"volume": 50,
+				"pitch": [
+					0.8,
+					1
+				]
+			},
+			"af:libernian_soldier": {
+				"events": {
+					"eat": "random.eat",
+					"hurt": "armor.equip_iron",
+					"death": "mob.pillager.death",
+					"purr": "item.book.page_turn",
+					"step": "armor.equip_leather",
+					"shoot": "item.rifle.shoot"
+				},
+				"volume": 10,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			},
+			"af:telslakian_soldier": {
+				"events": {
+					"eat": "random.eat",
+					"hurt": "armor.equip_iron",
+					"death": "mob.pillager.death",
+					"purr": "item.book.page_turn",
+					"step": "armor.equip_leather",
+					"shoot": "item.rifle.shoot"
+				},
+				"volume": 10,
+				"pitch": [
+					0.8,
+					1.2
+				]
+			}
+		}
+	}
+}

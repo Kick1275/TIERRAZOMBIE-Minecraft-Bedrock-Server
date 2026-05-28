@@ -1,0 +1,58 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.plague_hat",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat2",
+					"parent": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.6, "uv": [0, 0]},
+						{"origin": [-7, 30.7, -7], "size": [14, 1, 14], "uv": [0, 16]},
+						{"origin": [-4.5, 31.7, -4.5], "size": [9, 3, 9], "inflate": 0.4, "uv": [0, 34]},
+						{"origin": [-4.5, 31.7, -4.5], "size": [9, 3, 9], "inflate": 0.6, "uv": [28, 31]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 1, "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "hat2",
+					"pivot": [0, 25, -3.8],
+					"rotation": [7.5, 0, 0],
+					"cubes": [
+						{"origin": [-1, 23.6, -8.3], "size": [2, 3, 4], "uv": [52, 23]},
+						{"origin": [0, 23.5, -10.3], "size": [0, 4, 6], "uv": [42, 10]}
+					]
+				}
+			]
+		}
+	]
+}

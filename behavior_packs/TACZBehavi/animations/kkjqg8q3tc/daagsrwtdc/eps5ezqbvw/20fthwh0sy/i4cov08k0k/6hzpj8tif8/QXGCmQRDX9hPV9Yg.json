@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.g17.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 1.9,
+      "timeline": {
+        "1.8": [
+          "/scoreboard players set @s[scores={g17=19..}] g17 18",
+          "/function g17"
+        ],
+        "1.7": [
+          "/function g17reload",
+          "/event entity @s krep:g17_reload"
+        ]
+      }
+    }
+  }
+}

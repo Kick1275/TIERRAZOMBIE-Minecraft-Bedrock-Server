@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:civilian_loot",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/loots/cartoon_box"
+      },
+      "geometry": {
+        "default": "geometry.cartoon_box"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

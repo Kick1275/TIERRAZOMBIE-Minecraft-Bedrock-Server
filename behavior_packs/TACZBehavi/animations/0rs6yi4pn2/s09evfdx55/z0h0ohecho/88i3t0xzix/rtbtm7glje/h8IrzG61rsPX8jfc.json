@@ -1,0 +1,68 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m870.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 5.6333,
+      "timeline": {
+        "1.67": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "1.77": [
+          "/function m870"
+        ],
+        "2.1": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:m870 1 0"
+        ],
+        "2.6": [
+          "/function m870quantity"
+        ],
+        "2.7": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "2.8": [
+          "/function m870"
+        ],
+        "3.3": [
+          "/function m870quantity"
+        ],
+        "3.4": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "3.5": [
+          "/function m870"
+        ],
+        "4.0": [
+          "/function m870quantity"
+        ],
+        "4.1": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "4.2": [
+          "/function m870"
+        ],
+        "4.7": [
+          "/function m870quantity"
+        ],
+        "4.8": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ],
+        "4.9": [
+          "/function m870"
+        ],
+        "5.4": [
+          "/function m870quantity"
+        ],
+        "5.5": [
+          "/clear @s[m=!c,hasitem={item=krep:gauge12,quantity=1..}] krep:gauge12 0 1",
+          "/event entity @s krep:m870_reload"
+        ]
+      }
+    }
+  }
+}

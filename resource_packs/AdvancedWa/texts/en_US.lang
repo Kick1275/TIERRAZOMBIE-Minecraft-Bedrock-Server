@@ -1,0 +1,119 @@
+### Entity
+entity.advanced_waypoints:waypoint.name=Waypoint
+
+### Item
+item.wp:waypoint_item=Waypoint
+
+### UI
+## Main Painel
+advanced_waypoints.ui.config.title=Waypoints
+advanced_waypoints.ui.config.button.teleport=Teleport
+advanced_waypoints.ui.config.button.create=Create Point
+advanced_waypoints.ui.config.button.edit=Edit Point
+advanced_waypoints.ui.edit.visible=Edit Visibility
+advanced_waypoints.ui.config.button.remove=Remove Point
+advanced_waypoints.ui.config.button.options=Options
+
+## Teleport
+advanced_waypoints.ui.tp.title=Teleport to Waypoint
+
+## Create/Edit
+advanced_waypoints.ui.create.title=Create Waypoint
+advanced_waypoints.ui.edit.title=Edit Waypoints
+advanced_waypoints.ui.create.name=Waypoint Name:
+advanced_waypoints.ui.create.nameHold=Put name here
+advanced_waypoints.ui.create.pos=Waypoint Position:
+advanced_waypoints.ui.create.posHold=Example: -7, 61, 43
+advanced_waypoints.ui.create.icon=Waypoint Icon:
+advanced_waypoints.ui.create.icon.default=Default
+advanced_waypoints.ui.create.icon.death=Death
+advanced_waypoints.ui.create.icon.first_letter=First Letter
+advanced_waypoints.ui.create.color=Waypoint Color:
+advanced_waypoints.color.0=§lWhite
+advanced_waypoints.color.1=§l§iLight Gray
+advanced_waypoints.color.2=§l§jGray
+advanced_waypoints.color.3=§l§0Black
+advanced_waypoints.color.4=§l§mBrown
+advanced_waypoints.color.5=§l§cRed
+advanced_waypoints.color.6=§l§6Orange
+advanced_waypoints.color.7=§l§eYellow
+advanced_waypoints.color.8=§l§aLime
+advanced_waypoints.color.9=§l§2Green
+advanced_waypoints.color.10=§l§3Cyan
+advanced_waypoints.color.11=§l§bLight Blue
+advanced_waypoints.color.12=§l§1Blue
+advanced_waypoints.color.13=§l§uPurple
+advanced_waypoints.color.14=§l§5Magenta
+advanced_waypoints.color.15=§l§dPink
+advanced_waypoints.ui.create.sliderR=§cR
+advanced_waypoints.ui.create.sliderG=§aG
+advanced_waypoints.ui.create.sliderB=§sB
+advanced_waypoints.ui.create.visible=Is visible
+advanced_waypoints.ui.create.buttonSave=Save
+
+## Delete
+advanced_waypoints.ui.delete.title=Delete Waypoint
+advanced_waypoints.ui.delete.body=Choose one to delete:
+advanced_waypoints.ui.delete.buttonDelete=Delete
+advanced_waypoints.ui.delete.confirm1=Do you really want to delete "§a%1§r"
+advanced_waypoints.ui.delete.confirm2=~LINEBREAK~at §3%1§r
+advanced_waypoints.ui.yes=Yes
+advanced_waypoints.ui.no=No
+
+## Share
+advanced_waypoints.ui.config.button.share=Share Waypoints
+advanced_waypoints.ui.share.players=Select a Player to recive:
+advanced_waypoints.ui.share.waypoints=Select a Waypoint to share:
+advanced_waypoints.ui.share.confirm.body=Do you want to share the waypoint: "§a%1§r" to §e%2§r?
+
+## Options
+advanced_waypoints.ui.options.title=Options
+advanced_waypoints.ui.options.general.title=General Settings
+advanced_waypoints.ui.options.general.toggle.showName=Show Name
+advanced_waypoints.ui.options.general.toggle.showDistance=Show Distance
+advanced_waypoints.ui.options.general.toggle.alwaysShowInfo=Always Show: Info
+advanced_waypoints.ui.options.general.toggle.alwaysShowBeam=Always Show: Beam
+advanced_waypoints.ui.options.general.toggle.showPos=Show Position
+advanced_waypoints.ui.options.general.toggle.reciveSharing=Receive Shares
+advanced_waypoints.ui.options.general.toggle.createDeathPoint=Create Death Point
+advanced_waypoints.ui.options.general.dropdown.deathPointDate=Death Point Date:
+
+advanced_waypoints.ui.options.recover.title=Recover Waypoints
+
+### Warining
+## General
+advanced_waypoints.warn.dontHavePoints=§cYou have no waypoints at this dimension
+
+## Teleport
+advanced_waypoints.warn.insufficientXp=§cYou don't have enough XP!
+
+## Create/Edit
+advanced_waypoints.warn.cancelCreatePoint=§cWaypoint creation cancelled
+advanced_waypoints.warn.invalidName=§cInvalid waypoint name
+advanced_waypoints.warn.invalidPos=§cInvalid waypoint position
+advanced_waypoints.warn.failCreatePoint=§cFailed to create waypoint
+advanced_waypoints.warn.createPoint=Waypoint "§a%1§r" successfully created
+advanced_waypoints.warn.editPoint=Waypoint "§a%1§r" successfully edited
+advanced_waypoints.warn.manyWaypoints=§cYou have too many active Waypoints, for better performance leave the visibility of unnecessary Waypoints turned off.
+
+## Delete
+advanced_waypoints.warn.dontDelete=No Waypoints deleted
+advanced_waypoints.warn.waypointNotFound=§cCouldn't find the Waypoint
+advanced_waypoints.warn.deleted=Waypoints "§a%1§r" deleted
+
+## Share
+advanced_waypoints.warn.noPlayersOnline=§cThere are no players to share.
+advanced_waypoints.warn.dontShared=Unshared Waypoint.
+advanced_waypoints.warn.targetDontAcceptShare=This player doesn't accept shares.
+advanced_waypoints.warn.reciveWaypoint=You recived a Waypoint. "§a%1§r" from §e%2.
+advanced_waypoints.warn.alreadySent=§cYou have already shared this waypoint to this person.
+advanced_waypoints.warn.playerOffline=§cPlayer Offline, Waypoint not sent.
+
+## Settings
+advanced_waypoints.warn.saveOptions=All options have been saved
+advanced_waypoints.warn.cancelOptions=§cChanges Undone
+
+
+
+pack.description=Don't have description
+pack.name=Advanced Waypoints v7 (Texture)

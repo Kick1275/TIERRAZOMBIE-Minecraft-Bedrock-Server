@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.p90.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.0,
+      "timeline": {
+        "2.9": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:p90 1 0",
+          "/scoreboard players set @s[scores={p90=51..}] p90 50",
+          "/function p90"
+        ],
+        "2.8": [
+          "/function p90reload",
+          "/event entity @s krep:p90_reload"
+        ]
+      }
+    }
+  }
+}

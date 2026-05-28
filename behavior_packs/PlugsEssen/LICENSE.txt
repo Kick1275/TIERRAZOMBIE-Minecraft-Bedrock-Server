@@ -1,0 +1,164 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║   ██████╗ ██╗     ██╗   ██╗ ██████╗ ███████╗                            ║
+║   ██╔══██╗██║     ██║   ██║██╔════╝ ██╔════╝                            ║
+║   ██████╔╝██║     ██║   ██║██║  ███╗███████╗                            ║
+║   ██╔═══╝ ██║     ██║   ██║██║   ██║╚════██║                            ║
+║   ██║     ███████╗╚██████╔╝╚██████╔╝███████║                            ║
+║   ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚══════╝                            ║
+║                                                                           ║
+║   ███████╗███████╗███████╗███████╗███╗   ██╗████████╗██╗ █████╗ ██╗     ║
+║   ██╔════╝██╔════╝██╔════╝██╔════╝████╗  ██║╚══██╔══╝██║██╔══██╗██║     ║
+║   █████╗  ███████╗███████╗█████╗  ██╔██╗ ██║   ██║   ██║███████║██║     ║
+║   ██╔══╝  ╚════██║╚════██║██╔══╝  ██║╚██╗██║   ██║   ██║██╔══██║██║     ║
+║   ███████╗███████║███████║███████╗██║ ╚████║   ██║   ██║██║  ██║███████╗║
+║   ╚══════╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═╝╚══════╝║
+║                                                                           ║
+║                         PREMIUM BETA v0.1.0                               ║
+║                    LICENCIA DE USO Y DISTRIBUCIÓN                         ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════════
+                            TÉRMINOS DE LICENCIA
+═══════════════════════════════════════════════════════════════════════════
+
+© 2024 PlugsEssentials. Todos los derechos reservados.
+
+Este complemento (addon) para Minecraft Bedrock Edition está protegido por 
+leyes de propiedad intelectual y derechos de autor.
+
+───────────────────────────────────────────────────────────────────────────
+1. PROHIBICIONES ESTRICTAS
+───────────────────────────────────────────────────────────────────────────
+
+❌ DISTRIBUCIÓN NO AUTORIZADA
+   • Está PROHIBIDA la redistribución de este addon sin autorización expresa
+   • No se permite subir este archivo a sitios de terceros
+   • No se permite compartir el archivo directamente entre usuarios
+   • La violación de esta cláusula puede resultar en acciones legales
+
+❌ REVENTA Y COMERCIALIZACIÓN
+   • Está PROHIBIDA la venta o reventa de este addon
+   • No se permite cobrar por el acceso a este complemento
+   • No se permite incluir en paquetes de pago sin autorización
+
+❌ FALSIFICACIÓN DE AUTORÍA
+   • Está PROHIBIDO atribuirse la autoría de este addon
+   • No se permite eliminar o modificar los créditos originales
+   • No se permite presentar este trabajo como propio
+
+❌ MODIFICACIÓN Y REDISTRIBUCIÓN
+   • Está PROHIBIDA la modificación del código fuente para redistribución
+   • No se permite descompilar, hacer ingeniería inversa o extraer código
+   • No se permite crear versiones derivadas sin autorización
+
+❌ EXPLOTACIÓN INDEBIDA DEL ADDON
+   • Está PROHIBIDO vender el addon como producto independiente
+   • No se permite cobrar por la descarga o instalación del addon
+
+───────────────────────────────────────────────────────────────────────────
+2. USOS PERMITIDOS
+───────────────────────────────────────────────────────────────────────────
+
+✅ CREACIÓN DE CONTENIDO
+   • Puedes crear videos, streams, tutoriales usando este addon
+   • REQUISITO: Debes incluir enlaces a las páginas oficiales de descarga
+   • REQUISITO: Debes dar crédito apropiado al creador original
+
+✅ USO PERSONAL
+   • Puedes usar este addon en tu mundo personal de Minecraft
+   • Puedes usar en servidores privados no comerciales
+   • Puedes compartir tu experiencia en redes sociales
+
+✅ SERVIDORES COMERCIALES
+   • Puedes usar este addon en servidores comerciales y generar ingresos
+   • Puedes monetizar tu servidor que utilice este addon
+   • Puedes ofrecer rangos, ventajas o contenido premium en tu servidor
+   • REQUISITO: No puedes vender el addon en sí, solo usarlo en tu servidor
+   • REQUISITO: Debes proporcionar enlaces oficiales si compartes información del addon
+
+───────────────────────────────────────────────────────────────────────────
+3. ENLACES OFICIALES DE DESCARGA
+───────────────────────────────────────────────────────────────────────────
+
+Al crear contenido o compartir información sobre este addon, DEBES incluir
+los siguientes enlaces oficiales:
+
+📌 Sitio Web Oficial: https://plugsite.onrender.com
+📌 Discord Oficial: https://discord.gg/qczNKZKVam
+📌 YouTube: https://www.youtube.com/@Luisovky
+📌 Página de Descarga: https://plugsite.onrender.com
+
+───────────────────────────────────────────────────────────────────────────
+4. CONSECUENCIAS LEGALES
+───────────────────────────────────────────────────────────────────────────
+
+⚖️ La violación de estos términos puede resultar en:
+   • Acciones legales por infracción de derechos de autor
+   • Reclamaciones por daños y perjuicios
+   • Solicitudes de cese y desistimiento (DMCA)
+   • Reportes a plataformas de distribución (YouTube, Discord, etc.)
+   • Bloqueo permanente del acceso a futuras actualizaciones
+
+───────────────────────────────────────────────────────────────────────────
+5. GARANTÍA Y RESPONSABILIDAD
+───────────────────────────────────────────────────────────────────────────
+
+⚠️ DESCARGO DE RESPONSABILIDAD:
+   • Este addon se proporciona "TAL CUAL" sin garantías de ningún tipo
+   • El autor no se hace responsable de daños a mundos o datos
+   • Se recomienda hacer copias de seguridad antes de usar
+   • El uso es bajo tu propio riesgo
+
+───────────────────────────────────────────────────────────────────────────
+6. ACTUALIZACIONES Y SOPORTE
+───────────────────────────────────────────────────────────────────────────
+
+📢 CANALES OFICIALES DE SOPORTE:
+   • Soporte técnico solo a través de canales oficiales
+   • Las actualizaciones se distribuyen únicamente por canales oficiales
+   • No se garantiza soporte para versiones no oficiales
+
+───────────────────────────────────────────────────────────────────────────
+7. DETECCIÓN DE COPIAS ILEGALES
+───────────────────────────────────────────────────────────────────────────
+
+🔍 Este addon contiene:
+   • Marcas de agua digitales en el código
+   • Sistemas de verificación de autenticidad
+   • Identificadores únicos de distribución
+
+Las copias no autorizadas pueden ser rastreadas y reportadas.
+
+───────────────────────────────────────────────────────────────────────────
+8. CONTACTO Y REPORTES
+───────────────────────────────────────────────────────────────────────────
+
+📧 Para reportar distribución ilegal o solicitar permisos especiales:
+   Email: luiseliassanchez337@gmail.com
+   Discord: https://discord.gg/qczNKZKVam
+
+───────────────────────────────────────────────────────────────────────────
+9. ACEPTACIÓN DE TÉRMINOS
+───────────────────────────────────────────────────────────────────────────
+
+Al usar, instalar o distribuir este addon, aceptas automáticamente todos
+los términos y condiciones establecidos en esta licencia.
+
+El desconocimiento de estos términos NO exime de responsabilidad legal.
+
+═══════════════════════════════════════════════════════════════════════════
+
+                    ¡GRACIAS POR RESPETAR NUESTRO TRABAJO!
+                    
+         Si disfrutas este addon, apóyanos compartiéndolo legalmente
+              y dirigiendo a otros a nuestros canales oficiales.
+
+═══════════════════════════════════════════════════════════════════════════
+
+Versión de Licencia: 1.0
+Fecha de Emisión: 2024
+Última Actualización: 2024
+
+═══════════════════════════════════════════════════════════════════════════

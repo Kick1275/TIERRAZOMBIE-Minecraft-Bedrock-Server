@@ -1,0 +1,38 @@
+{
+	"resource_pack_name": "SPB",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"11x11_on_block": {
+			"textures": [
+				"textures/blocks/11x11_on_block"
+			]
+		},
+		"11x11_openlist_block": {
+			"textures": [
+				"textures/blocks/openlist_block"
+			]
+		},
+		"21x21_on_block": {
+			"textures": [
+				"textures/blocks/21x21_on_block"
+			]
+		},
+		"21x21_openlist_block": {
+			"textures": [
+				"textures/blocks/openlist_block"
+			]
+		},
+		"31x31_on_block": {
+			"textures": [
+				"textures/blocks/31x31_on_block"
+			]
+		},
+		"31x31_openlist_block": {
+			"textures": [
+				"textures/blocks/openlist_block"
+			]
+		}
+	}
+}

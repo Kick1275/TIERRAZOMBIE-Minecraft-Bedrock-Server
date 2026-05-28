@@ -1,0 +1,109 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.type81.reload": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "trigger.reload": "query.get_equipped_item_name=='type81_emp' && variable.attack_time == 0.0 && q.is_using_item"
+            },
+            {
+              "trigger.tac": "(query.get_equipped_item_name=='type81' && variable.attack_time > 0.0f && query.scoreboard('type81') <= 29) || (query.get_equipped_item_name=='type81' && q.mark_variant == 2)"
+            }
+          ]
+        },
+        "trigger.tac": {
+          "on_entry": [
+            "/function type81quantity",
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='type81' && q.property('krep:ammoreload') == 0"
+            },
+            {
+              "reload.tac": "query.get_equipped_item_name=='type81' && q.property('krep:ammoreload') >= 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='type81'"
+            }
+          ]
+        },
+        "trigger.reload": {
+          "on_entry": [
+            "/function type81quantity",
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='type81_emp' && q.property('krep:ammoreload') == 0"
+            },
+            {
+              "reload": "query.get_equipped_item_name=='type81_emp' && q.property('krep:ammoreload') >= 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='type81'"
+            }
+          ]
+        },
+        "reload": {
+          "animations": [
+            {
+              "type81reload": "query.get_equipped_item_name('main_hand')=='type81_emp' || query.get_equipped_item_name('main_hand')=='type81'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reload"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name!='type81_emp'"
+            },
+            {
+              "reloadfinish": "query.all_animations_finished"
+            }
+          ]
+        },
+        "reload.tac": {
+          "animations": [
+            {
+              "type81reloadtac": "query.get_equipped_item_name('main_hand')=='type81_emp' || query.get_equipped_item_name('main_hand')=='type81'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reloadtac"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name!='type81'"
+            },
+            {
+              "reloadfinish": "query.all_animations_finished"
+            }
+          ]
+        },
+        "reloadfinish": {
+          "on_entry": [
+            "/function type81"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='type81' || query.get_equipped_item_name=='type81_emp'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

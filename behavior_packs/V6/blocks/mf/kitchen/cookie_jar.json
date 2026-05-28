@@ -1,0 +1,45 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:block": {
+		"description": {
+			"identifier": "medieval:cookie_jar_0",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.cookieJar",
+				"is_hidden_in_commands": false
+			},
+			"states": {
+				"medieval:quantity": [0,1,2,3,4,5,6,7,8,9,10,11,12]
+			}
+		},
+		"components": {
+			"tag:medieval_furniture": {},
+			"minecraft:geometry": {
+				"identifier": "geometry.m.cookie_jar",
+				"bone_visibility": {
+					"jar": true,
+					"cookie": "q.block_state('medieval:quantity') >= 1",
+					"cookie2": "q.block_state('medieval:quantity') >= 2",
+					"cookie3": "q.block_state('medieval:quantity') >= 3",
+					"cookie4": "q.block_state('medieval:quantity') >= 4",
+					"cookie5": "q.block_state('medieval:quantity') >= 5",
+					"cookie6": "q.block_state('medieval:quantity') >= 6",
+					"cookie7": "q.block_state('medieval:quantity') >= 7",
+					"cookie8": "q.block_state('medieval:quantity') >= 8",
+					"cookie9": "q.block_state('medieval:quantity') >= 9",
+					"cookie10": "q.block_state('medieval:quantity') >= 10",
+					"cookie11": "q.block_state('medieval:quantity') >= 11",
+					"cookie12": "q.block_state('medieval:quantity') == 12"
+				}
+			},
+			"minecraft:material_instances": {"*": {"texture": "m.cookie_jar","render_method": "alpha_test","ambient_occlusion": false},"cookie": {"texture": "m.cookie","render_method": "alpha_test","ambient_occlusion": false}},
+			"minecraft:collision_box": {"origin": [-6,0.0,-6],"size": [12,16,12]},
+			"minecraft:selection_box": {"origin": [-6,0.0,-6],"size": [12,16,12]},
+			"minecraft:light_dampening": 0.0,
+			"minecraft:destructible_by_explosion": {"explosion_resistance": 3.0},
+			"minecraft:destructible_by_mining": {"seconds_to_destroy": 0.8},
+			"minecraft:custom_components": ["mf:cookie_jar"],
+			"minecraft:map_color": "#24abab"
+		}
+	}
+}

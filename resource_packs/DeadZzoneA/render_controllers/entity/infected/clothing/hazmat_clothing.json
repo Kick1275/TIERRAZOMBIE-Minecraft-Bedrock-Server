@@ -1,0 +1,59 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.hazmat_clothing": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.clothing": [
+						"Texture.hazmat_0",
+						"Texture.hazmat_1",
+						"Texture.hazmat_2",
+						"Texture.hazmat_3",
+						"Texture.hazmat_4",
+						"Texture.hazmat_5"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.clothing[v.clothing]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.hazmat_clothing_boss": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.top": [
+						"Texture.hazmat_boss_0",
+						"Texture.hazmat_boss_1"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.top[v.clothing_boss]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

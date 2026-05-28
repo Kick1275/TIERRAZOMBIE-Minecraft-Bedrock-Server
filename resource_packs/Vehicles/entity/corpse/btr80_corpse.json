@@ -1,0 +1,60 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:btr80_corpse",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"libernia": "textures/entity/vehicle_corpse",
+				"telslakia": "textures/entity/vehicle_corpse2"
+			},
+			"geometry": {
+				"default": "geometry.btr80"
+			},
+			"render_controllers": [
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_m1151_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.type16.move",
+				"turn": "animation.type16.turn",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.type16.brake",
+				"scale": "animation.btr80.scale",
+				"rotations": "animation.vehicle.rotations",
+				"corpse1": "animation.tank.corpse1",
+				"corpse2": "animation.tank.corpse2",
+				"corpse3": "animation.tank.corpse3",
+				"is_body": "animation.tank.is_body"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"drive",
+					"rotations",
+					"turn",
+					{
+						"corpse1": "query.mark_variant==1"
+					},
+					{
+						"corpse2": "query.mark_variant==2"
+					},
+					{
+						"corpse3": "query.mark_variant==3"
+					},
+					{
+						"is_body": "query.mark_variant==4"
+					}
+				]
+			},
+			"particle_effects": {
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

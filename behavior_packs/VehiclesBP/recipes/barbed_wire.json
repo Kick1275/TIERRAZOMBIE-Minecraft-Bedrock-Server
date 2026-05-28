@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:barbed_wire"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"U": {
+				"item": "iron_nugget"
+			},
+			"N": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"pattern": [
+			"NUN",
+			"UNU",
+			"NUN"
+		],
+		"result": {
+			"item": "af:barbed_wire_spawn_egg",
+			"count": 3
+		}
+	}
+}

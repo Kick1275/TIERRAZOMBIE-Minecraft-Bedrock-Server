@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "cosmetics:backpack",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/BackPackCosmetico"
+      },
+      "geometry": {
+        "default": "geometry.backpack_cosmetico"
+      },
+      "animations": {
+        "move": "animation.backpack.idle"
+      },
+      "scripts": {
+        "animate": ["move"]
+      },
+      "render_controllers": ["controller.render.backpack"]
+    }
+  }
+}

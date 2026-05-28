@@ -1,0 +1,56 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.cd_player.general": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"open": "q.is_ignited"
+						},
+						{
+							"close": "!q.is_ignited"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"open": {
+					"animations": [
+						"open"
+					],
+					"transitions": [
+						{
+							"close": "!q.is_powered&&!q.is_ignited"
+						},
+						{
+							"enter": "q.is_powered"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"enter": {
+					"animations": [
+						"enter"
+					],
+					"transitions": [
+						{
+							"close": "query.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"close": {
+					"animations": [
+						"close"
+					],
+					"transitions": [
+						{
+							"open": "q.is_ignited"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		}
+	}
+}

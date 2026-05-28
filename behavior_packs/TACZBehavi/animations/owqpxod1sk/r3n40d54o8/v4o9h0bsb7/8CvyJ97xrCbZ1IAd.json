@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m4a1.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.5,
+      "timeline": {
+        "2.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:m4a1 1 0",
+          "/scoreboard players set @s[scores={m4a1=31..}] m4a1 30",
+          "/function m4a1"
+        ],
+        "2.3": [
+          "/function m4a1reload",
+          "/event entity @s krep:m4a1_reload"
+        ]
+      }
+    }
+  }
+}

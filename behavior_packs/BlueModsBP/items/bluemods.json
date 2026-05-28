@@ -1,0 +1,8 @@
+//░███░░██░░██░░█░████░██░░██░░████░░████░░░███░
+//░█░░█░█░░░░█░░█░█░░░░██░░██░█░░░█░░█░░░█░█░░█░
+//░███░░█░░░░█░░█░███░░██░░██░█░░░░█░█░░░█░██░░░
+//░█░░█░█░░░░█░░█░█░░░░█░██░█░█░░░░█░█░░░█░░░█░░
+//░█░░█░█░░█░█░░█░█░░█░█░██░█░█░░░█░░█░░░█░█░░█░
+//░███░░████░███░░████░█░█░░█░░███░░░████░░███░░
+// https://dsc.gg/bluemods
+{"format_version":"1.21.60","minecraft:item":{"description":{"identifier":"bluemods:itemui","menu_category":{"category":"equipment"}},"components":{"minecraft:icon":"book_portfolio","minecraft:display_name":{"value":"§bBlueMods §7| §aMenu"},"minecraft:max_stack_size":1,"minecraft:allow_off_hand":true,"minecraft:glint":true}}}

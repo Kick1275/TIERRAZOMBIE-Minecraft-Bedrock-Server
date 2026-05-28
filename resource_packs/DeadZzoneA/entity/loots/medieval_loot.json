@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:medieval_loot",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/loots/old_chest"
+      },
+      "geometry": {
+        "default": "geometry.old_chest"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

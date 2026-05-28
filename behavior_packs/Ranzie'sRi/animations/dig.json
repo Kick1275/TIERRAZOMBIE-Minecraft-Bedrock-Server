@@ -1,0 +1,30 @@
+{
+    "animations": {
+        "animation.dig": {
+            "animation_length": 1.0,
+            "loop": true,
+            "timeline": {
+                //dig cobblestone 
+                "0.11": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone run execute at @s run replaceitem entity @s slot.weapon.mainhand 0 iron_pickaxe",
+                "0.21": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone run execute at @s run playanimation @s animation.zombie.attack_bare_hand f 0.2",
+                "0.31": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone run execute at @s run setblock ~ ~-1 ~ air destroy",
+                
+                //dig stone
+                "0.61": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ stone run execute at @s run replaceitem entity @s slot.weapon.mainhand 0 iron_pickaxe",
+                "0.71": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ stone run execute at @s run playanimation @s animation.zombie.attack_bare_hand f 0.2",
+                "0.81": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ stone run execute at @s run setblock ~ ~-1 ~ air destroy",
+                
+                //dig dirt
+                "0.12": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ dirt run execute at @s run replaceitem entity @s slot.weapon.mainhand 0 iron_shovel",
+                "0.22": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ dirt run execute at @s run playanimation @s animation.zombie.attack_bare_hand f 0.2",
+                "0.32": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ dirt run execute at @s run setblock ~ ~-1 ~ air destroy",
+                
+                //dig grass_block
+                "0.12": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ grass_block run execute at @s run replaceitem entity @s slot.weapon.mainhand 0 iron_shovel",
+                "0.22": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ grass_block run execute at @s run playanimation @s animation.zombie.attack_bare_hand f 0.2",
+                "0.32": "/execute as @s[rx=90, rxm=45] at @s positioned ~ ~ ~ if block ~ ~-1 ~ grass_block run execute at @s run setblock ~ ~-1 ~ air destroy"
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}  

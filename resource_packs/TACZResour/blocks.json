@@ -1,0 +1,11 @@
+{
+	"krep:gunsmith": {
+		"sound": "stone"
+	},
+	"krep:attachmentblock": {
+		"sound": "stone"
+	},
+	"krep:ammoworkbench": {
+		"sound": "stone"
+	}
+}

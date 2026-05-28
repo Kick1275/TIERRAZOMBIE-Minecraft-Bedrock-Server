@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.af_items.default": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		},
+		"controller.render.af_items.enchanted": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "variable.is_enchanted?material.enchanted:material.default"
+				}
+			],
+			"textures": [
+				"texture.default",
+				"texture.enchanted"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

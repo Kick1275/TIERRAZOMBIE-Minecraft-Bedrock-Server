@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:m114"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:steel_ingot"
+			},
+			"I": {
+				"item": "af:libernia_id"
+			},
+			"T": {
+				"item": "af:titanium_ingot"
+			}
+		},
+		"pattern": [
+			"IRR",
+			"RT "
+		],
+		"result": {
+			"item": "af:m114_spawn_egg",
+			"count": 1
+		}
+	}
+}

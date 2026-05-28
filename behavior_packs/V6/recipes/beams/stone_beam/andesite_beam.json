@@ -1,0 +1,25 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:andesite_beam"
+		},
+		"tags": [
+			"workbench"
+		],
+		"pattern": [
+			"###",
+			"#  "
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stone",
+				"data": 5
+			}
+		},
+		"result": {
+			"item": "medieval:andesite_beam",
+			"count": 6
+		}
+	}
+}

@@ -1,0 +1,300 @@
+{
+  "namespace": "chest",
+
+  "chest_label": {
+    "$new_container_title|default": "$container_title",
+    "text": "$new_container_title"
+  },
+
+  "small_chest_grid": {
+    "type": "grid",
+    "size": [ 162, 54 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 3 ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+
+  "slot_8_grid": {
+    "type": "grid",
+    "size": [ 146 , 5 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 8, 1 ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+  "slot_13_grid": {
+    "type": "grid",
+    "size": [ 234 , 25 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 13, 1 ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+  "slot_18_grid": {
+    "type": "grid",
+    "size": [ 162 , 36 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 2 ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+  // player corpse's slot
+  "slot_45_grid": {
+    "type": "grid",
+    "size": [ 162 , 90 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 9, 5 ],
+    "grid_item_template": "chest.chest_grid_item",
+    "collection_name": "container_items"
+  },
+  
+  "small_chest_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 12 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "small_chest_grid@chest.small_chest_grid": {
+          "offset": [ 7, 9 ]
+        }
+      }
+    ]
+  },
+
+  "slot_8_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", 132 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "large_chest_grid@chest.slot_8_grid": {
+          "offset": [ 25, 10 ]
+        }
+      }
+    ]
+  },
+  "slot_13_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", 132 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "large_chest_grid@chest.slot_13_grid": {
+          "offset": [ 8, 10 ]
+        }
+      }
+    ]
+  },
+  "slot_18_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", 168 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "large_chest_grid@chest.slot_18_grid": {
+          "offset": [ 17, 10 ]
+        }
+      }
+    ]
+  },
+  
+  "slot_45_panel_top_half": {
+    "type": "panel",
+    "size": [ "100%", 168 ],
+    "offset": [ 0, 11 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "chest_label@chest.chest_label": {} },
+      {
+        "large_chest_grid@chest.slot_45_grid": {
+          "offset": [ 17, 10 ]
+        }
+      }
+    ]
+  },
+
+  "small_root_panel@common.root_panel": {
+    "$chest_panel|default": "chest.small_chest_panel_top_half",
+    "layer": 1,
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {   "selected_item_details_factory@common.selected_item_details_factory": {} },
+      {   "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      { "common_panel@common.common_panel": {} },
+      {
+        "chest_panel": {
+          "type": "panel",
+          "layer": 5,
+          "controls": [
+            {   "small_chest_panel_top_half@$chest_panel": {} },
+            {   "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+            { "hotbar_grid@common.hotbar_grid_template": {} },
+            {   "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
+            { "flying_item_renderer@common.flying_item_renderer": { "layer": 15 } },
+            { "bundle_touch_tooltip@gameplay.bundle_touch_tooltip": {} }
+          ]
+        }
+      },
+      {   "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+      { "gamepad_cursor@common.gamepad_cursor_button": {} }
+    ]
+  },
+
+  
+  // Adjust position Yes, I like to forget it
+  "slot_8_root_panel@small_root_panel": {
+    "size": [ 196, 132 ],
+    "$chest_panel": "chest.slot_8_panel_top_half"
+  },
+  "slot_13_root_panel@small_root_panel": {
+    "size": [ 250, 132 ],
+    "$chest_panel": "chest.slot_13_panel_top_half"
+  },
+  "slot_18_root_panel@small_root_panel": {
+    "size": [ 196, 150 ],
+    "$chest_panel": "chest.slot_18_panel_top_half"
+  },
+  
+  "slot_45_root_panel@small_root_panel": {
+    "size": [ 196, 206 ],
+    "$chest_panel": "chest.slot_45_panel_top_half"
+  },
+  
+  "small_chest_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 11
+        }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {
+          "control_name": "@chest.selected_item_details"
+        }
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {
+          "control_name": "@common.item_lock_notification"
+        }
+      },
+      {
+        "root_panel@$root_panel": {}
+      }
+    ]
+  },
+  "small_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "$root_panel|default": "chest.small_root_panel",
+    "$new_container_title|default": "$container_title",
+    "$container_size|default": 27,
+    "variables": [
+      {
+        "requires": "($new_container_title = 'Improvised Bag')",
+        "$root_panel": "chest.slot_8_root_panel",
+        "$container_size": 8
+      },
+      {
+        "requires": "($new_container_title = 'School Backpack')",
+        "$root_panel": "chest.slot_13_root_panel",
+        "$container_size": 13
+      },
+      {
+        "requires": "($new_container_title = 'Taloon Backpack')",
+        "$root_panel": "chest.slot_18_root_panel",
+        "$container_size": 18
+      },
+      {
+        "requires": "($new_container_title = 'Corpse')",
+        "$root_panel": "chest.slot_45_root_panel",
+        "$container_size": 45
+      },
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.small_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$container_title": "$new_container_title",
+        "$screen_content": "pocket_containers.panel"
+      }
+    ]
+  },
+  
+  "ender_chest_panel@chest.small_chest_panel_vanilla": {
+  },
+
+  "small_chest_panel_vanilla": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 14
+        }
+      },
+      { "selected_item_details_factory@common.selected_item_details_factory": {} },
+      { "item_lock_notification_factory@common.item_lock_notification_factory": {} },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "controls": [
+            { "common_panel@common.common_panel": {} },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "small_chest_panel_top_half@chest.small_chest_panel_top_half": {} },
+                  { "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {} },
+                  { "hotbar_grid@common.hotbar_grid_template": {} },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common.inventory_selected_icon_button": {} },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "ender_chest_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "chest.ender_chest_panel",
+        "$screen_bg_content": "common.screen_background"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "pocket_containers.ender_chest_panel"
+      }
+    ]
+  }
+}

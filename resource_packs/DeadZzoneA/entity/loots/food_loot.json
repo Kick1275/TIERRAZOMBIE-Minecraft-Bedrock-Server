@@ -1,0 +1,18 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:food_loot",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/loots/food_crate"
+      },
+      "geometry": {
+        "default": "geometry.food_crate"
+      },
+      "render_controllers": ["controller.render.default"]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+
+			"sound_effects": {
+				"0.5": {
+					"effect": "bolt.action_back"
+				},
+				"0.7917": {
+					"effect": "bolt.action_forward"
+				}
+			},
+
+			"sound_effects": {
+				"0.4167": {
+					"effect": "pump.action_back"
+				},
+				"0.625": {
+					"effect": "pump.action_forward"
+				}
+			},
+
+			"sound_effects": {
+				"0.3333": {
+					"effect": "lever.action_open"
+				},
+				"0.5": {
+					"effect": "lever.action_close"
+				}
+			},

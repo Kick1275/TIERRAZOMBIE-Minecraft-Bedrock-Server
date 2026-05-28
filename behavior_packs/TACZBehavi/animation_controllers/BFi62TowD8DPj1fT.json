@@ -1,0 +1,86 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sks": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='sks' && q.is_using_item) || query.get_equipped_item_name=='sks_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s sks 10",
+            "@s[hasitem={item=krep:sks, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "sks.30": "query.get_equipped_item_name=='sks' && query.is_using_item && query.scoreboard('sks') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')==0"
+            },
+            {
+              "skss.30": "query.get_equipped_item_name=='sks' && query.is_using_item && query.scoreboard('sks') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')>=1"
+            },
+            {
+              "sks.31": "query.get_equipped_item_name=='sks' && query.is_using_item && query.scoreboard('sks') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function sks"
+          ]
+        },
+        "sks.31": {
+          "animations": [
+            "sksshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={sks=0}] slot.weapon.mainhand 1 krep:sks_emp 1 0"
+          ]
+        },
+        "sks.30": {
+          "animations": [
+            "sksshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:sks_fire",
+            "/scoreboard players remove @s[scores={sks=1..11}] sks 1",
+            "/scoreboard players set @s[scores={sks=12..}] sks 11",
+            "/playsound sks.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={sks=0}] slot.weapon.mainhand 1 krep:sks_emp 1 0",
+            "/title @s[scores={sks=0}] actionbar No Ammunition"
+          ]
+        },
+        "skss.30": {
+          "animations": [
+            "sksshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:sks_fire",
+            "/scoreboard players remove @s[scores={sks=1..11}] sks 1",
+            "/scoreboard players set @s[scores={sks=12..}] sks 11",
+            "/playsound sks.suppress @a[r=15]",
+            "/replaceitem entity @s[scores={sks=0}] slot.weapon.mainhand 1 krep:sks_emp 1 0",
+            "/title @s[scores={sks=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

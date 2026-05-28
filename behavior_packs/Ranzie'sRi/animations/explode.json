@@ -1,0 +1,13 @@
+{
+    "animations": {
+        "animation.explode": {
+            "animation_length": 100,
+            "loop": false,
+            "timeline": {
+"50.0": "/event entity @e[type=creeper,c=1,r=10] minecraft:become_charged",
+                "100.0": "/event entity @e[type=creeper,c=1] minecraft:start_exploding_forced"
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}  

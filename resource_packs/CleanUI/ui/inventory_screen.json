@@ -1,0 +1,68 @@
+{
+  "namespace": "crafting",
+
+  "Fast_craft_icon":{
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui/Fast_craft"
+  },
+
+  "bt_Fast_craft_button@common_buttons.light_content_button":{
+    "size": [ 16, 16 ],
+    "offset": [ 0, 1 ],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right"
+  },
+
+  "Fast_craft_button@crafting.bt_Fast_craft_button": {
+    "$button_content": "crafting.Fast_craft_icon",
+    "property_bag": {
+      "#collection_name": "crafting_output_items",
+      "#collection_index": 0
+    },
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.crafting_output_tertiary",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "crafting_arrow": {
+    "controls": [
+      { "Fast_craft_button@crafting.Fast_craft_button": {} }
+    ]
+  },
+  "crafting_arrow_large": {
+    "controls": [
+      { 
+        "Fast_craft_button@crafting.Fast_craft_button": {
+          "size": [ 22, 22 ],
+          "offset": [ 0, 4 ]
+        } 
+      }
+    ]
+  },
+
+  "no_coalesce_container_slot_button": {
+    "$is_output|default": false,
+    "modifications": [
+      {
+        "array_name": "button_mappings",
+        "operation": "insert_front",
+        "value": [
+          {
+            "ignored": "$is_output",
+            "from_button_id": "button.menu_select",
+            "to_button_id": "$button_auto_place",
+            "mapping_type": "double_pressed"
+          }
+        ]
+      }
+    ]
+  },
+  "output_no_coalesce_container_slot_button": {
+    "$is_output": true
+  }
+}

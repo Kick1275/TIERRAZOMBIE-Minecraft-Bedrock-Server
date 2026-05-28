@@ -1,0 +1,87 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.xp_furniture.queen_bed_left_0",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 2]
+				},
+				{
+					"name": "bed",
+					"parent": "root",
+					"pivot": [0, 0, 2],
+					"cubes": [
+						{
+							"origin": [-2, 16, 4],
+							"size": [10, 4, 4],
+							"inflate": 0.01,
+							"uv": {
+								"north": {"uv": [68, 47], "uv_size": [10, 4], "material_instance": "bed"},
+								"east": {"uv": [64, 47], "uv_size": [4, 4], "material_instance": "bed"},
+								"south": {"uv": [102, 47], "uv_size": [10, 4], "material_instance": "bed"},
+								"up": {"uv": [68, 43], "uv_size": [10, 4], "material_instance": "bed"}
+							}
+						},
+						{
+							"origin": [-6.01, 0, 4],
+							"size": [14, 16, 4],
+							"inflate": 0.01,
+							"uv": {
+								"north": {"uv": [4, 47], "uv_size": [14, 16], "material_instance": "bed"},
+								"east": {"uv": [0, 47], "uv_size": [4, 16], "material_instance": "bed"},
+								"south": {"uv": [50, 47], "uv_size": [14, 16], "material_instance": "bed"},
+								"up": {"uv": [4, 43], "uv_size": [14, 4], "material_instance": "bed"},
+								"down": {"uv": [32, 47], "uv_size": [14, -4]}
+							}
+						},
+						{
+							"origin": [-6, 1, -8],
+							"size": [14, 5, 12],
+							"uv": {
+								"east": {"uv": [0, 38], "uv_size": [12, 5], "material_instance": "bed"},
+								"down": {"uv": [74, 12], "uv_size": [14, -12], "material_instance": "bed"}
+							}
+						}
+					]
+				},
+				{
+					"name": "sheet",
+					"parent": "root",
+					"pivot": [0, 0, 2],
+					"cubes": [
+						{
+							"origin": [-6, 6, -8],
+							"size": [14, 6, 12],
+							"uv": {
+								"east": {"uv": [0, 32], "uv_size": [12, 6], "material_instance": "sheet"},
+								"up": {"uv": [32, 0], "uv_size": [14, 12], "material_instance": "sheet"}
+							}
+						},
+						{
+							"origin": [-2, 16.05746, -4.88136],
+							"size": [10, 4, 8],
+							"pivot": [8.5, 18.5, 8.5],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [64, 63], "uv_size": [10, 4], "material_instance": "sheet"},
+								"east": {"uv": [56, 63], "uv_size": [8, 4], "material_instance": "sheet"},
+								"south": {"uv": [102, 63], "uv_size": [10, 4], "material_instance": "sheet"},
+								"up": {"uv": [64, 55], "uv_size": [10, 8], "material_instance": "sheet"},
+								"down": {"uv": [94, 63], "uv_size": [10, -8], "material_instance": "sheet"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

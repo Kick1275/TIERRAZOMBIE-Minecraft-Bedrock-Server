@@ -1,0 +1,586 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:t90m_turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"af:cooldown_HE": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:HE_loaded",
+						"target": "self"
+					},
+					"time": [
+						5,
+						8
+					]
+				}
+			},
+			"af:cooldown_AP": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:AP_loaded",
+						"target": "self"
+					},
+					"time": [
+						5,
+						8
+					]
+				}
+			},
+			"af:fired": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.25,
+					"duration": 1,
+					"knockback_horizontal_strength": 8,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"test": "is_riding",
+								"subject": "other"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"knockback_range": 5,
+					"knockback_damage": 20,
+					"on_roar_end": {
+						"event": "af:stop_fired",
+						"target": "self"
+					}
+				}
+			},
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"composite",
+						"t90m",
+						"libernia",
+						"turret"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"composite",
+						"t90m",
+						"telslakia",
+						"turret"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"composite",
+					"t90m",
+					"turret"
+				]
+			},
+			"minecraft:health": {
+				"value": 1400
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2.4
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "libernia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "libernia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "telslakia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"cause": "suffocation"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0.8
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "iron_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 50,
+							"subject": "self",
+							"operator": "<="
+						},
+						"event": "af:damaged",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"glass",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"dandelion",
+					"azalea",
+					"flowering_azalea",
+					"azalea_leaves",
+					"azalea_leaves_flowered",
+					"cave_vines",
+					"cave_vines_body_with_berries",
+					"cave_vines_head_with_berries",
+					"small_dripleaf_block",
+					"big_dripleaf",
+					"spore_blossom",
+					"hanging_roots",
+					"mangrove_leaves",
+					"minecraft:acacia_log",
+					"minecraft:birch_log",
+					"minecraft:cherry_log",
+					"minecraft:dark_oak_log",
+					"minecraft:jungle_log",
+					"minecraft:mangrove_log",
+					"minecraft:oak_log",
+					"minecraft:spruce_log"
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:ap_shell"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_AP",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_ap"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:he_shell"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_HE",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_he"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:shot_fired",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "AP_loaded",
+									"subject": "self",
+									"operator": "=="
+								}
+							]
+						},
+						"spawn_entities": [
+							"af:ap_shell<af:m1a1>"
+						],
+						"interact_text": "action.interact.fire_ap"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:shot_fired",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "HE_loaded",
+									"subject": "self",
+									"operator": "=="
+								}
+							]
+						},
+						"spawn_entities": [
+							"af:he_shell<af:m1a1>"
+						],
+						"interact_text": "action.interact.fire_he"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:grenade_smoke"
+										}
+									]
+								}
+							]
+						},
+						"spawn_entities": [
+							"af:thrown_grenade_smoke<af:vehicle>"
+						],
+						"interact_text": "action.interact.fire_smoke",
+						"use_item": true,
+						"cooldown": 3
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "HE_loaded",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "AP_loaded",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "is_riding",
+											"value": true,
+											"subject": "other",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "shoot",
+						"spawn_entities": [
+							"af:bullet<af:m1a1>"
+						],
+						"cooldown": 0.5,
+						"interact_text": "action.interact.shoot_mg"
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:shot_fired": {
+				"queue_command": {
+					"command": [
+						"tag @s remove HE_loaded",
+						"tag @s remove AP_loaded",
+						"tag @s remove loading",
+						"playsound tank.fire_inside @p[r=2]",
+						"playsound tank.fire @a ~ ~ ~ 100 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:fired"
+					]
+				}
+			},
+			"af:stop_fired": {
+				"remove": {
+					"component_groups": [
+						"af:fired"
+					]
+				}
+			},
+			"af:load_AP": {
+				"add": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar AP Shell loading",
+						"tag @s add loading",
+						"playsound tank.load @p[r=2]"
+					]
+				}
+			},
+			"af:AP_loaded": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar AP Shell loaded",
+						"tag @s add AP_loaded",
+						"playsound tank.beep @p[r=2]"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				}
+			},
+			"af:load_HE": {
+				"add": {
+					"component_groups": [
+						"af:cooldown_HE"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar HE Shell loading",
+						"tag @s add loading",
+						"playsound tank.load @p[r=2]"
+					]
+				}
+			},
+			"af:HE_loaded": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar HE Shell loaded",
+						"tag @s add HE_loaded",
+						"playsound tank.beep @p[r=2]"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosion_dust ~ ~ ~",
+						"camera @a[r=5] clear"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ~ ~1 ~"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:radio_tower",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/radio_tower"
+			},
+			"geometry": {
+				"default": "geometry.radio_tower"
+			},
+			"render_controllers": [
+				"controller.render.radio_tower"
+			],
+			"spawn_egg": {
+				"texture": "af_radio_tower_egg",
+				"texture_index": 0
+			}
+		}
+	}
+}

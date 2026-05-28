@@ -1,0 +1,436 @@
+## Translation provided by Discord user Alessio22102007
+
+pack.used_inventory_items=Poiché non avevi abbastanza oggetti in mano, il resto è stato sottratto dal tuo inventario.
+
+midgameTips.1=Hai bisogno di una Troncatrice per creare porte di Modern Doors.
+midgameTips.2=Puoi usare qualsiasi tipo di assi di legno per creare porte di legno con la Troncatrice.
+midgameTips.3=Puoi usare qualsiasi tipo di blocchi o lastre di vetro per creare porte di vetro con la Troncatrice.
+midgameTips.4=Accovacciati e interagisci con una Modern Door per aprire il menu di blocco.
+midgameTips.5=Solo la persona che ha piazzato la porta può aprire il menu di blocco.
+midgameTips.6=Hai bisogno di più chiavi? Puoi crearne altre nel menu di blocco.
+midgameTips.7=Puoi cambiare il codice della serratura in qualsiasi momento dal menu di blocco.
+midgameTips.8=Le Modern Doors si aprono come porte doppie per impostazione predefinita. Puoi cambiarlo dal menu di blocco.
+midgameTips.9=Le Modern Doors sbloccate possono essere aperte con leve, pulsanti o piastre a pressione.
+midgameTips.10=Le Modern Doors bloccate non possono essere rotte, bruciate o spinte dai pistoni. Sono sicure!
+midgameTips.11=Ti hanno rubato la chiave? Basta cambiare il codice nel menu di blocco.
+
+pack.new_store_available=OTTIENI ADDON GRATIS!
+
+pack.discover_more_addons=Scopri altri addon su TRMC-ADDONS.COM
+
+pack.modern_doors_text_1=Modern Doors aggiunge nuove porte con serrature, design unici e supporto Redstone, con 14 stili per ogni porta!
+pack.modern_doors_text_2=Accovacciati e interagisci per accedere al menu di blocco. Imposta codici, crea chiavi e proteggi la tua base con porte indistruttibili.
+
+pack.modern_furniture_text_1=Modern Furniture aggiunge oltre 800 oggetti per decorare il tuo mondo Minecraft, tra cui divani, scaffali, luci, quadri e altro!
+pack.modern_furniture_text_2=Craftali usando l'argilla nel tagliapietre. Design semplice e pulito, perfetto per lo stile vanilla di Minecraft.
+
+pack.locked_chests_text_1=Locked Chests aggiunge oltre 80 nuovi contenitori con chiavi e protezione del proprietario per una sicurezza totale.
+pack.locked_chests_text_2=Personalizza l’aspetto e l’etichetta della tua chiave. Senza la chiave giusta o senza essere il proprietario, i bauli rimarranno chiusi!
+
+pack.sleeping_bags_text_1=Sleeping Bags ti permette di dormire ovunque e in qualsiasi momento, anche nel Nether o nell’End!
+pack.sleeping_bags_text_2=Accelera il tempo, imposta il punto di respawn e usa meccaniche di sonno compatibili con il multigiocatore durante le avventure.
+
+pack.feudal_furniture_text_1=Feudal Furniture porta oltre 800 oggetti in stile medievale per villaggi, castelli e dungeon.
+pack.feudal_furniture_text_2=Include casse per ogni tipo di legno e supporta funzioni come sedersi, accendere fuochi e altro ancora.
+
+pack.lore_anvil_text_1=Con Lore Anvil puoi aggiungere descrizioni colorate e icone a qualsiasi oggetto o blocco.
+pack.lore_anvil_text_2=Aggiungi lore, simboli o commenti per personalizzare e organizzare il tuo equipaggiamento, tutto tramite un'incudine personalizzata!
+
+pack.home_electronics_text_1=Home Electronics aggiunge console, computer, TV e elettrodomestici, perfetti per interni moderni.
+pack.home_electronics_text_2=Apri laptop, suona note sui pianoforti e decora con poster, luci e attrezzatura da gaming.
+
+pack.pet_furniture_text_1=Pet Furniture aggiunge case per gatti, mangiatoie e decorazioni a misura di animale per la casa e il giardino.
+pack.pet_furniture_text_2=Include prefabbricati e recinti modulari per gatti, pienamente compatibili con Minecraft 1.21+ e tutti gli Add-On.
+
+pack.better_beds_text_1=Better Beds aggiunge nuovi letti con controllo del tempo, opzioni di punto di respawn e possibilità di dormire in qualsiasi dimensione!
+pack.better_beds_text_2=Supporta server, ha animazioni e ti permette di impilare i letti per creare letti a castello automaticamente.
+
+midgameTips.61=Vuoi che i raccolti crescano mentre dormi? Scarica Better Beds da §lTRMC-ADDONS.COM
+midgameTips.62=Ti piacciono gli elettronici? Scarica Home Electronics da §lTRMC-ADDONS.COM
+midgameTips.63=Vuoi bauli con lucchetto? Scarica Locked Chests da §lTRMC-ADDONS.COM
+midgameTips.64=Ami l’arredamento rustico? Scarica Feudal Furniture da §lTRMC-ADDONS.COM
+midgameTips.65=Ami gli animali? Scarica Pet Furniture da §lTRMC-ADDONS.COM
+midgameTips.66=Sei un maestro della decorazione? Scarica Modern Furniture da §lTRMC-ADDONS.COM
+midgameTips.67=Vuoi aggiungere lore ai tuoi oggetti? Scarica Lore Anvil da §lTRMC-ADDONS.COM
+midgameTips.68=Vuoi sacchi a pelo? Scarica Sleeping Bags da §lTRMC-ADDONS.COM
+midgameTips.69=Vuoi più addon? Visita §lTRMC-ADDONS.COM§r per contenuti e aggiornamenti gratuiti!
+
+tips.creative.1=Vuoi più addon? Visita §lTRMC-ADDONS.COM§r per contenuti e aggiornamenti gratuiti!
+tips.creative.2=Ami l’arredamento rustico? Scarica Feudal Furniture da §lTRMC-ADDONS.COM
+tips.creative.3=Ami gli animali? Scarica Pet Furniture da §lTRMC-ADDONS.COM
+tips.creative.4=Sei un maestro della decorazione? Scarica Modern Furniture da §lTRMC-ADDONS.COM
+tips.creative.5=Vuoi aggiungere lore ai tuoi oggetti? Scarica Lore Anvil da §lTRMC-ADDONS.COM
+tips.creative.6=Vuoi sacchi a pelo? Scarica Sleeping Bags da §lTRMC-ADDONS.COM
+tips.creative.7=Vuoi bauli con lucchetto? Scarica Locked Chests da §lTRMC-ADDONS.COM
+tips.creative.8=Ti piacciono gli elettronici? Scarica Home Electronics da §lTRMC-ADDONS.COM
+tips.creative.9=Vuoi che i raccolti crescano mentre dormi? Scarica Better Beds da §lTRMC-ADDONS.COM
+
+pack.addon_update= Aggiornamento Add-On Disponibile
+pack.trmc_store= Ottieni Add-On Gratuiti
+
+pack.new_update_available=NUOVO AGGIORNAMENTO DISPONIBILE!
+
+pack.md_update_text=L’aggiornamento 1.4 per Sleeping Bags aggiunge 6 nuovi sacchi a pelo!
+pack.md_update_trmc=Per accedere all’aggiornamento, visita §aTRMC-ADDONS.COM.§r Puoi anche scansionare il §aQR code§r qui sotto per andare direttamente al sito e scaricare la nuova versione dell’addon.
+
+pack.md_store_text=Visita §aTRMC-ADDONS.COM.§r per un’ampia selezione di Add-On gratuiti! Che tu sia un decoratore in cerca di più mobili o voglia migliorare la tua esperienza survival con nuove meccaniche, §aTRMC-ADDONS.COM§r ha un addon per te!
+pack.md_store_trmc=Puoi anche scansionare il §aQR code§r qui sotto per andare direttamente al sito.
+
+
+pack.name=§lModern Doors RP
+pack.description=Pacchetto di Risorse Necessario per la Addon delle Porte Moderne. Altre addon su TRMC-ADDONS.com
+
+pack.door_settings=Impostazioni Porta
+pack.choose_option=Scegli un opzione
+pack.return_simple_redstone=Ritorna al Semplice Rilevamento di Pietrarossa
+pack.upgrade_redstone=Aggiorna Rilevamento Pietrarossa
+pack.return_normal_orientation=Ritorna all'Orientamento Normale
+pack.invert_door_orientation=Inverti l'Orientamento della Porta
+pack.turn_on_dual_opening=Attiva l'Apertura Doppia
+pack.turn_off_dual_opening=Disattiva l'Apertura Doppia
+pack.confirm_full_redstone=Conferma la Piena Attivazione della Pietrarossa
+pack.full_redstone_warning=Attenzione! Questa porta è già in grado di rilevare il segnale di Pietrarossa come la leva, pedana a pressione e la polvere di pietrarossa. Usa questa funzione solamente se il sistema corrente non funziona propriamente. Considera che attivare questo su molte porte potrebbe causare lag. Vuoi continuare?
+pack.yes=Si
+pack.no=No
+
+pack.door_menu=Menù Porta
+pack.unlock_door=Sblocca Porta
+pack.lock_door=Blocca Porta
+pack.lock_settings=Impostazioni Lucchetto
+pack.unlock_mechanisms=Meccanismi del Lucchetto
+pack.create_key=Crea Chiave
+pack.change_lock=Cambia Lucchetto
+pack.use_password=Usa la Password
+pack.use_key=Usa la Chiave
+pack.unlocked_because_you_are_owner=Sbloccata perché sei il proprietario
+pack.correct_key=Chiave Corretta
+pack.incorrect_key=Chiave Sbagliata
+pack.password_required=Password Richiesta
+pack.enter_password=Inserisci la Password
+pack.correct_password=Password Corretta
+pack.incorrect_password=Password Sbagliata
+pack.use_key_message=Per favore usare la chiave per sbloccarla
+pack.door_locked_not_owner=La porta è chiusa a chiave, e non sei il proprietario
+pack.door_locked=La porta è chiusa a chiave
+pack.door_opened=La porta è aperta
+pack.door_closed=La porta è chiusa
+pack.key_code_too_long=Il codice della chiave è troppo lungo. È consentito un massimo di 20 caratteri
+pack.key_already_in_use=Questo codice chiave è già in uso da un altro giocatore, uno nuovo è stato appena generato
+pack.key_created=Chiave Creata
+pack.key_updated=Chiave Aggiornata
+pack.adjacent_door_key_applied=Chiave Applicata alla porta adiacente
+pack.adjacent_door_different_owner=La porta adiacente ha un proprietario diverso
+pack.enter_key_name=Inserisci il Nome della Chiave
+pack.enter_key_description=Inserisci la Descrizione della Chiave
+pack.number_of_keys=Numbero di Chiavi
+pack.password_settings=Impostazioni Password
+pack.password_saved=Password Salvata
+pack.door_unlocked=Porta Sbloccata
+pack.first_time_locking=Primo sguardo sulle Opzioni di Blocco
+pack.owner_not_affected=L'operatore Non è Affetto dal Lucchetto
+pack.set_lock_create_keys=Consenti l'Accesso alle Porte con le Chiavi
+pack.submit=Invia
+pack.door_state_open=Porta aperta
+pack.door_state_close=Porta chiusa
+pack.open_pair_false=No blocchi copiati adiacenti
+pack.disable_options=Meccanismi del Lucchetto
+pack.locked_because_you_are_owner=Porta chiusa a Chiave
+pack.locked_door_opened_because_you_are_owner=Porta chiusa a Chiave aperta perché sei l'operatore
+pack.door_you_are_not_owner=Non puoi accedere al menù lucchetto se non sei il proprietario della porta
+pack.door_with_no_owner=Questa porta non ha proprietari e non può essere chiusa a chiave, Puoi solo usare il lucchetto su porte che hai piazzato dopo l'aggiornamento dei lucchetti
+
+pack.tutorial_prompt_title=Tutorial
+pack.tutorial_prompt_body=Ti piacerebbe seguire un tutorial su tutte le opzioni sul lucchetto e sulla gestione delle porte?
+pack.follow_tutorial=Segui il Tutorial
+pack.skip_tutorial=Salta il Tutorial
+
+pack.cant_destroy_player_not_owner=Non puoi distruggere una porta chiusa a chiave
+
+pack.key_and_lock_settings=Impostazioni sulle Chiavi e Lucchetti
+pack.use_auto_generated_uuid=Usa l'Autogeneratore di Codici per le Chiavi
+pack.enter_key_code=Inserisci un Codice Chiave Personalizzato (efficace solo se l'opzione sopra è disattivata)
+pack.enter_key_code_short=Inserisci un Codice Chiave Personalizzato
+
+pack.options_saved=Opzioni salvate
+pack.choose_unlock_method=Porta bloccata. Scegli un metodo di sblocco
+
+pack.select_key_type=Seleziona il Tipo di Chiave
+pack.key_type_gold=Chiave d'Oro
+pack.key_type_iron=Chiave di Ferro
+pack.key_type_copper=Chiave di Rame
+pack.key_type_oxidized_copper=Chiave di Rame Ossidato
+
+item.md:copper_key=PM: Chiave di Rame
+item.md:gold_key=PM: Chiave d'Oro
+item.md:iron_key=PM: Chiave di Ferro
+item.md:oxidized_key=PM: Chiave di Rame Ossidato
+
+
+tile.md:door_box.name=PM: Scatola della Porta
+item.md:screwdriver=PM: Cacciavite
+tile.md:miter_saw.name=MD: Troncatrice
+tile.md:miter_saw.form_name=Troncatrice
+
+item.md:miter_saw_note=Usa la Troncatrice per creare le porte di Modern Doors
+
+pack.select_door_type=Seleziona un tipo di porta:
+pack.menu_canceled=Hai annullato il menu.
+
+pack.no_item_selected=Devi avere una pila di oggetti selezionata per creare la porta.
+pack.invalid_material=Questo blocco non ha utilizzo nella Troncatrice.
+pack.stack_used_up=La pila nella tua mano è stata completamente consumata.
+pack.select_quantity=Quanti?
+
+pack.door_type_suffix= Porte
+pack.door_cost_prefix=Costo: 
+pack.door_cost_suffix= oggetti)
+pack.required_items_count=Non hai abbastanza oggetti. Ti servono
+pack.current_items_count=Hai: 
+pack.items_remaining_prefix=Oggetti rimasti: 
+pack.wood.invalid_material_message=Devi tenere in mano un tipo di assi di legno.
+pack.gold_ingot.invalid_material_message=Devi avere lingotti d'oro in mano.
+pack.iron_ingot.invalid_material_message=Devi tenere in mano lingotti di ferro.
+pack.copper_ingot.invalid_material_message=Devi tenere in mano lingotti di rame.
+pack.glass_block.invalid_material_message=Devi tenere in mano un tipo di vetro.
+pack.wood.name=assi di legno
+pack.iron_ingot.name=lingotti di ferro
+pack.copper_ingot.name=lingotti di rame
+pack.gold_ingot.name=lingotti d'oro
+pack.glass_block.name=blocchi di vetro
+
+pack.glass.name=Incorniciato
+pack.screen.name=Griglia
+pack.barred.name=Con listelli
+pack.sturdy.name=Robusto
+pack.sturdy_windowed.name=Robusto con finestra
+pack.full_glass.name=Pannello di vetro
+pack.jail.name=Inferriata
+pack.long_hinge.name=Cerniera lunga
+pack.timber.name=Legno
+pack.multi_panel.name=Multi pannello
+pack.twin_glass.name=Doppio vetro
+
+pack.oak.name=Quercia
+pack.birch.name=Betulla
+pack.acacia.name=Acacia
+pack.spruce.name=Abete
+pack.dark_oak.name=Quercia scura
+pack.jungle.name=Giungla
+pack.crimson.name=Cremisi
+pack.warped.name=Distorto
+pack.mangrove.name=Mangrovia
+pack.cherry.name=Ciliegio
+pack.bamboo.name=Bambù
+
+pack.transparent.name=Trasparente
+pack.red.name=Rosso
+pack.orange.name=Arancione
+pack.yellow.name=Giallo
+pack.lime.name=Verde lime
+pack.green.name=Verde
+pack.cyan.name=Ciano
+pack.light_blue.name=Celeste
+pack.blue.name=Blu
+pack.magenta.name=Magenta
+pack.purple.name=Viola
+pack.pink.name=Rosa
+pack.white.name=Bianco
+pack.silver.name=Argento
+pack.gray.name=Grigio
+pack.black.name=Nero
+pack.brown.name=Marrone
+pack.tinted.name=Tinto
+
+pack.iron.name=Ferro
+pack.gray_iron.name=Ferro grigio
+pack.dark_iron.name=Ferro scuro
+pack.gold.name=Oro
+pack.new_copper.name=Rame
+pack.exposed_copper.name=Rame esposto
+pack.weathered_copper.name=Rame invecchiato
+pack.oxidized_copper.name=Rame ossidato
+
+tile.md:preview_single_oak_glass_door.name=PM: Porta con Pannello in Vetro di Quercia
+tile.md:preview_single_birch_glass_door.name=PM: Porta con Pannello in Vetro di Betulla
+tile.md:preview_single_acacia_glass_door.name=PM: Porta con Pannello in Vetro di Acacia
+tile.md:preview_single_spruce_glass_door.name=PM: Porta con Pannello in Vetro di Abete
+tile.md:preview_single_dark_oak_glass_door.name=PM: Porta con Pannello in Vetro in Rovere
+tile.md:preview_single_jungle_glass_door.name=PM: Porta con Pannello in Vetro della Giungla
+tile.md:preview_single_crimson_glass_door.name=PM: Porta con Pannello in Vetro Cremisi
+tile.md:preview_single_warped_glass_door.name=PM: Porta con Pannello in Vetro Deformata
+tile.md:preview_single_mangrove_glass_door.name=PM: Porta con Pannello in Vetro di Mangrovia
+tile.md:preview_single_cherry_glass_door.name=PM: Porta con Pannello in Vetro di Ciliegio
+tile.md:preview_single_bamboo_glass_door.name=PM: Porta con Pannello in Vetro di Bambù
+tile.md:preview_single_iron_glass_door.name=PM: Porta con Pannello in Vetro di Ferro
+tile.md:preview_single_dark_iron_glass_door.name=PM: Porta con Pannello in Vetro di Ferro Scuro
+
+tile.md:preview_single_oak_screen_door.name=PM: Porta con Retina di Quercia 
+tile.md:preview_single_birch_screen_door.name=PM: Porta con Retina di Betulla 
+tile.md:preview_single_acacia_screen_door.name=PM: Porta con Retina di Acacia 
+tile.md:preview_single_spruce_screen_door.name=PM: Porta con Retina di Abete
+tile.md:preview_single_dark_oak_screen_door.name=PM: Porta con Retina in Rovere
+tile.md:preview_single_jungle_screen_door.name=PM: Porta con Retina della Giungla
+tile.md:preview_single_crimson_screen_door.name=PM: Porta con Retina Cremisi
+tile.md:preview_single_warped_screen_door.name=PM: Porta con Retina Deformata
+tile.md:preview_single_mangrove_screen_door.name=PM: Porta con Retina di Mangrovia
+tile.md:preview_single_cherry_screen_door.name=PM: Porta con Retina di Ciliegio
+tile.md:preview_single_bamboo_screen_door.name=PM: Porta con Retina di Bambù
+tile.md:preview_single_iron_screen_door.name=PM: Porta con Retina di Ferro
+tile.md:preview_single_dark_iron_screen_door.name=PM: Porta con Retina di Ferro Scuro
+
+tile.md:preview_single_oak_barred_door.name=PM: Porta a Doghe di Quercia
+tile.md:preview_single_birch_barred_door.name=PM: Porta a Doghe di Betulla
+tile.md:preview_single_acacia_barred_door.name=PM: Porta a Doghe di Acacia 
+tile.md:preview_single_spruce_barred_door.name=PM: Porta a Doghe di Abete 
+tile.md:preview_single_dark_oak_barred_door.name=PM: Porta a Doghe in Rovere 
+tile.md:preview_single_jungle_barred_door.name=PM: Porta a Doghe della Giungla 
+tile.md:preview_single_crimson_barred_door.name=PM: Porta a Doghe Cremisi 
+tile.md:preview_single_warped_barred_door.name=PM: Porta a Doghe Deformata 
+tile.md:preview_single_mangrove_barred_door.name=PM: Porta a Doghe di Mangrovia 
+tile.md:preview_single_cherry_barred_door.name=PM: Porta a Doghe di Ciliegio 
+tile.md:preview_single_bamboo_barred_door.name=PM: Porta a Doghe di Bambù 
+tile.md:preview_single_iron_barred_door.name=PM: Porta a Doghe di Ferro 
+tile.md:preview_single_dark_iron_barred_door.name=PM: Porta a Doghe di Ferro Scuro 
+
+tile.md:preview_single_oak_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Quercia
+tile.md:preview_single_birch_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Betulla
+tile.md:preview_single_acacia_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Acacia
+tile.md:preview_single_spruce_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Abete
+tile.md:preview_single_dark_oak_sturdy_windowed_door.name=PM: Porta Robusta Finestrata in Rovere
+tile.md:preview_single_jungle_sturdy_windowed_door.name=PM: Porta Robusta Finestrata della Giungla
+tile.md:preview_single_crimson_sturdy_windowed_door.name=PM: Porta Robusta Finestrata Cremisi
+tile.md:preview_single_warped_sturdy_windowed_door.name=PM: Porta Robusta Finestrata Deformata
+tile.md:preview_single_mangrove_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Mangrovia
+tile.md:preview_single_cherry_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Ciliegio
+tile.md:preview_single_bamboo_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Bambù
+tile.md:preview_single_iron_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Ferro
+tile.md:preview_single_dark_iron_sturdy_windowed_door.name=PM: Porta Robusta Finestrata di Ferro Scuro
+
+tile.md:preview_single_oak_sturdy_door.name=PM: Porta Robusta di Quercia
+tile.md:preview_single_birch_sturdy_door.name=PM: Porta Robusta di Betulla
+tile.md:preview_single_acacia_sturdy_door.name=PM: Porta Robusta di Acacia
+tile.md:preview_single_spruce_sturdy_door.name=PM: Porta Robusta di Abete
+tile.md:preview_single_dark_oak_sturdy_door.name=PM: Porta Robusta in Rovere
+tile.md:preview_single_jungle_sturdy_door.name=PM: Porta Robusta della Giungla
+tile.md:preview_single_crimson_sturdy_door.name=PM: Porta Robusta Cremisi
+tile.md:preview_single_warped_sturdy_door.name=PM: Porta Robusta Deformata
+tile.md:preview_single_mangrove_sturdy_door.name=PM: Porta Robusta di Mangrovia
+tile.md:preview_single_cherry_sturdy_door.name=PM: Porta Robusta di Ciliegio
+tile.md:preview_single_bamboo_sturdy_door.name=PM: Porta Robusta di Bambù
+tile.md:preview_single_iron_sturdy_door.name=PM: Porta Robusta di Ferro
+tile.md:preview_single_dark_iron_sturdy_door.name=PM: Porta Robusta di Ferro Scuro
+
+tile.md:preview_single_transparent_full_glass_door.name=PM: Porta a Lastra di Vetro Trasparente
+tile.md:preview_single_tinted_full_glass_door.name=PM: Porta a Lastra di Vetro Opaco
+tile.md:preview_single_silver_full_glass_door.name=PM: Porta a Lastra di Vetro Grigio Chiaro
+tile.md:preview_single_white_full_glass_door.name=PM: Porta a Lastra di Vetro Bianco
+tile.md:preview_single_gray_full_glass_door.name=PM: Porta a Lastra di Vetro Grigio
+tile.md:preview_single_black_full_glass_door.name=PM: Porta a Lastra di Vetro Nero
+tile.md:preview_single_brown_full_glass_door.name=PM: Porta a Lastra di Vetro Marrone
+tile.md:preview_single_red_full_glass_door.name=PM: Porta a Lastra di Vetro Rosso
+tile.md:preview_single_orange_full_glass_door.name=PM: Porta a Lastra di Vetro Arancione
+tile.md:preview_single_yellow_full_glass_door.name=PM: Porta a Lastra di Vetro Giallo
+tile.md:preview_single_lime_full_glass_door.name=PM: Porta a Lastra di Vetro Lime
+tile.md:preview_single_green_full_glass_door.name=PM: Porta a Lastra di Vetro Verde
+tile.md:preview_single_cyan_full_glass_door.name=PM: Porta a Lastra di Vetro Ciao
+tile.md:preview_single_light_blue_full_glass_door.name=PM: Porta a Lastra di Vetro Azzurro
+tile.md:preview_single_blue_full_glass_door.name=PM: Porta a Lastra di Vetro Blu
+tile.md:preview_single_purple_full_glass_door.name=PM: Porta a Lastra di Vetro Viola
+tile.md:preview_single_magenta_full_glass_door.name=PM: Porta a Lastra di Vetro Magenta
+tile.md:preview_single_pink_full_glass_door.name=PM: Porta a Lastra di Vetro Rosa
+
+tile.md:preview_single_iron_jail_door.name=PM: Porta della Cella in Ferro
+tile.md:preview_single_dark_iron_jail_door.name=PM: Porta della Cella in Ferro Scuro
+tile.md:preview_single_new_copper_jail_door.name=PM: Porta della Cella in Rame
+tile.md:preview_single_exposed_copper_jail_door.name=PM: Porta della Cella in Rame Scoperto
+tile.md:preview_single_weathered_copper_jail_door.name=PM: Porta della Cella in Rame Corroso
+tile.md:preview_single_oxidized_copper_jail_door.name=PM: Porta della Cella in Rame Ossidato
+tile.md:preview_single_gold_jail_door.name=PM: Porta della Cella d'Oro
+tile.md:preview_single_gray_iron_jail_door.name=PM: Porta della Cella in Ferro Grigio
+
+tile.md:preview_single_oak_long_hinge_door.name=PM: Porta con Lunga Cerniera di Quercia
+tile.md:preview_single_birch_long_hinge_door.name=PM: Porta con Lunga Cerniera di Betulla
+tile.md:preview_single_acacia_long_hinge_door.name=PM: Porta con Lunga Cerniera di Acacia
+tile.md:preview_single_spruce_long_hinge_door.name=PM: Porta con Lunga Cerniera di Abete
+tile.md:preview_single_dark_oak_long_hinge_door.name=PM: Porta con Lunga Cerniera in Rovere
+tile.md:preview_single_jungle_long_hinge_door.name=PM: Porta con Lunga Cerniera della Giungla
+tile.md:preview_single_crimson_long_hinge_door.name=PM: Porta con Lunga Cerniera Cremesi
+tile.md:preview_single_warped_long_hinge_door.name=PM: Porta con Lunga Cerniera Deformata
+tile.md:preview_single_mangrove_long_hinge_door.name=PM: Porta con Lunga Cerniera di Mangrovia
+tile.md:preview_single_cherry_long_hinge_door.name=PM: Porta con Lunga Cerniera di Ciliegio
+tile.md:preview_single_bamboo_long_hinge_door.name=PM: Porta con Lunga Cerniera di Bambù
+tile.md:preview_single_iron_long_hinge_door.name=PM: Porta con Lunga Cerniera di Ferro
+tile.md:preview_single_dark_iron_long_hinge_door.name=PM: Porta con Lunga Cerniera di Ferro Scuro
+
+tile.md:preview_single_oak_timber_door.name=PM: Porta Rivestita di legno di Quercia
+tile.md:preview_single_birch_timber_door.name=PM: Porta Rivestita di legno di Betulla
+tile.md:preview_single_acacia_timber_door.name=PM: Porta Rivestita di legno di Acacia
+tile.md:preview_single_spruce_timber_door.name=PM: Porta Rivestita di legno di Abete
+tile.md:preview_single_dark_oak_timber_door.name=PM: Porta Rivestita di legno in Rovere
+tile.md:preview_single_jungle_timber_door.name=PM: Porta Rivestita di legno della Giungla
+tile.md:preview_single_crimson_timber_door.name=PM: Porta Rivestita di legno Cremisi
+tile.md:preview_single_warped_timber_door.name=PM: Porta Rivestita di legno Deformata
+tile.md:preview_single_mangrove_timber_door.name=PM: Porta Rivestita di legno di Mangrovia
+tile.md:preview_single_cherry_timber_door.name=PM: Porta Rivestita di legno di Ciliegio
+tile.md:preview_single_bamboo_timber_door.name=PM: Porta Rivestita di legno di Bambù
+tile.md:preview_single_iron_timber_door.name=PM: Porta Rivestita di legno Bianco
+tile.md:preview_single_dark_iron_timber_door.name=PM: Porta Rivestita di legno Nero
+
+tile.md:preview_single_oak_multi_panel_door.name=PM: Porta con Multipannello di Quercia
+tile.md:preview_single_birch_multi_panel_door.name=PM: Porta con Multipannello di Betulla
+tile.md:preview_single_acacia_multi_panel_door.name=PM: Porta con Multipannello di Acacia
+tile.md:preview_single_spruce_multi_panel_door.name=PM: Porta con Multipannello di Abete
+tile.md:preview_single_dark_oak_multi_panel_door.name=PM: Porta con Multipannello in Rovere
+tile.md:preview_single_jungle_multi_panel_door.name=PM: Porta con Multipannello della Giungla
+tile.md:preview_single_crimson_multi_panel_door.name=PM: Porta con Multipannello Cremisi
+tile.md:preview_single_warped_multi_panel_door.name=PM: Porta con Multipannello Deformata
+tile.md:preview_single_mangrove_multi_panel_door.name=PM: Porta con Multipannello di Mangrovia
+tile.md:preview_single_cherry_multi_panel_door.name=PM: Porta con Multipannello di Ciliegio
+tile.md:preview_single_bamboo_multi_panel_door.name=PM: Porta con Multipannello di Bambù
+tile.md:preview_single_iron_multi_panel_door.name=PM: Porta con Multipannello Bianca
+tile.md:preview_single_dark_iron_multi_panel_door.name=PM: Porta con Multipannello Nera
+
+tile.md:preview_single_oak_twin_glass_door.name=MD: Porta in Rovere con Vetro Doppio
+tile.md:preview_single_birch_twin_glass_door.name=MD: Porta in Betulla con Vetro Doppio
+tile.md:preview_single_acacia_twin_glass_door.name=MD: Porta in Acacia con Vetro Doppio
+tile.md:preview_single_spruce_twin_glass_door.name=MD: Porta in Abete con Vetro Doppio
+tile.md:preview_single_dark_oak_twin_glass_door.name=MD: Porta in Rovere Scuro con Vetro Doppio
+tile.md:preview_single_jungle_twin_glass_door.name=MD: Porta in Legno della Giungla con Vetro Doppio
+tile.md:preview_single_crimson_twin_glass_door.name=MD: Porta Cremisi con Vetro Doppio
+tile.md:preview_single_warped_twin_glass_door.name=MD: Porta Distorta con Vetro Doppio
+tile.md:preview_single_mangrove_twin_glass_door.name=MD: Porta in Mangrovia con Vetro Doppio
+tile.md:preview_single_cherry_twin_glass_door.name=MD: Porta in Ciliegio con Vetro Doppio
+tile.md:preview_single_bamboo_twin_glass_door.name=MD: Porta in Bambù con Vetro Doppio
+tile.md:preview_single_iron_twin_glass_door.name=MD: Porta Bianca con Vetro Doppio
+tile.md:preview_single_dark_iron_twin_glass_door.name=MD: Porta Scura con Vetro Doppio
+
+pack.japanese.name=Giapponese
+
+tile.md:preview_single_oak_japanese_door.name=MD: Porta Giapponese di Quercia
+tile.md:preview_single_birch_japanese_door.name=MD: Porta Giapponese di Betulla
+tile.md:preview_single_acacia_japanese_door.name=MD: Porta Giapponese di Acacia
+tile.md:preview_single_spruce_japanese_door.name=MD: Porta Giapponese di Abete
+tile.md:preview_single_dark_oak_japanese_door.name=MD: Porta Giapponese di Quercia Scura
+tile.md:preview_single_jungle_japanese_door.name=MD: Porta Giapponese di Giungla
+tile.md:preview_single_crimson_japanese_door.name=MD: Porta Giapponese Cremisi
+tile.md:preview_single_warped_japanese_door.name=MD: Porta Giapponese Deformata
+tile.md:preview_single_mangrove_japanese_door.name=MD: Porta Giapponese di Mangrovia
+tile.md:preview_single_cherry_japanese_door.name=MD: Porta Giapponese di Ciliegio
+tile.md:preview_single_bamboo_japanese_door.name=MD: Porta Giapponese di Bambù
+tile.md:preview_single_iron_japanese_door.name=MD: Porta Giapponese Bianca
+tile.md:preview_single_dark_iron_japanese_door.name=MD: Porta Giapponese Scura
+
+pack.ventilation.name=Ventilazione
+tile.md:preview_single_oak_ventilation_door.name=MD: Porta di Quercia Ventilata
+tile.md:preview_single_birch_ventilation_door.name=MD: Porta di Betulla Ventilata
+tile.md:preview_single_acacia_ventilation_door.name=MD: Porta di Acacia Ventilata
+tile.md:preview_single_spruce_ventilation_door.name=MD: Porta di Abete Ventilata
+tile.md:preview_single_dark_oak_ventilation_door.name=MD: Porta di Quercia Scura Ventilata
+tile.md:preview_single_jungle_ventilation_door.name=MD: Porta della Giungla Ventilata
+tile.md:preview_single_crimson_ventilation_door.name=MD: Porta Cremisi Ventilata
+tile.md:preview_single_warped_ventilation_door.name=MD: Porta Distorta Ventilata
+tile.md:preview_single_mangrove_ventilation_door.name=MD: Porta di Mangrovia Ventilata
+tile.md:preview_single_cherry_ventilation_door.name=MD: Porta di Ciliegio Ventilata
+tile.md:preview_single_bamboo_ventilation_door.name=MD: Porta di Bambù Ventilata
+tile.md:preview_single_iron_ventilation_door.name=MD: Porta Bianca Ventilata
+tile.md:preview_single_dark_iron_ventilation_door.name=MD: Porta Scura Ventilata

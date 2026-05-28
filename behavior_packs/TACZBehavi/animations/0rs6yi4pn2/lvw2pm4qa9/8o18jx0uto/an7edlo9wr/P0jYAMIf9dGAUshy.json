@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.cp.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.2,
+      "timeline": {
+        "3.1": [
+          "/scoreboard players set @s[scores={cp=7..}] cp 6",
+          "/function cp"
+        ],
+        "2.9": [
+          "/function cpreload",
+          "/event entity @s krep:cp_reload"
+        ]
+      }
+    }
+  }
+}

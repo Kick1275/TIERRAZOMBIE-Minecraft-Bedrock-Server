@@ -1,0 +1,97 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.g18": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='g18' && q.is_using_item) || query.get_equipped_item_name=='g18_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s g18 17",
+            "@s[hasitem={item=krep:g18, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "g18.30": "query.get_equipped_item_name=='g18' && query.is_using_item && query.scoreboard('g18') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "g18.31": "query.get_equipped_item_name=='g18' && query.is_using_item && query.scoreboard('g18') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function g18"
+          ]
+        },
+        "g18.31": {
+          "animations": [
+            "g18shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={g18=0}] slot.weapon.mainhand 1 krep:g18_emp 1 0"
+          ]
+        },
+        "g18.30": {
+          "animations": [
+            "g18shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            },
+            {
+              "setup": "q.scoreboard('g18')==0"
+            },
+            {
+              "g18.29": "q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:g18_fire",
+            "/scoreboard players remove @s[scores={g18=1..18}] g18 1",
+            "/scoreboard players set @s[scores={g18=19..}] g18 18",
+            "/playsound g17.shoot @a[r=30]",
+            "/function g18",
+            "/replaceitem entity @s[scores={g18=0}] slot.weapon.mainhand 1 krep:g18_emp 1 0",
+            "/title @s[scores={g18=0}] actionbar No Ammunition"
+          ]
+        },
+        "g18.29": {
+          "animations": [
+            "g18shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            },
+            {
+              "setup": "q.scoreboard('g18')==0"
+            },
+            {
+              "g18.30": "q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:g18_fire",
+            "/function g18",
+            "/scoreboard players remove @s[scores={g18=1..18}] g18 1",
+            "/scoreboard players set @s[scores={g18=19..}] g18 18",
+            "/playsound g17.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={g18=0}] slot.weapon.mainhand 1 krep:g18_emp 1 0",
+            "/title @s[scores={g18=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

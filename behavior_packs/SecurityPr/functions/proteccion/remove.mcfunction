@@ -1,0 +1,32 @@
+execute as @s[tag=!noclaim] at @s run fill ~-11 -63 ~-10 ~-11 319 ~11 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-10 -64 ~-9 ~-11 -64 ~11 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~11 -63 ~10 ~11 319 ~-11 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~10 -64 ~9 ~11 -64 ~-11 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~-10 -63 ~11 ~11 319 ~11 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-9 -64 ~10 ~11 -64 ~11 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~-11 -63 ~-11 ~10 319 ~-11 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-11 -64 ~-11 ~9 -64 ~-10 bedrock [] replace deny []
+
+execute as @s[tag=!noclaim,tag=runa1] at @s run fill ~-11 -63 ~-11 ~11 -63 ~11 bedrock [] replace barrier []
+
+execute as @s[tag=!noclaim] at @s run fill ~-21 -63 ~-21 ~-21 319 ~21 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-20 -64 ~-19 ~-21 -64 ~21 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~21 -63 ~21 ~21 319 ~-21 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~20 -64 ~19 ~21 -64 ~-21 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~-21 -63 ~21 ~21 319 ~21 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-19 -64 ~20 ~21 -64 ~21 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~-21 -63 ~-21 ~21 319 ~-21 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-21 -64 ~-21 ~19 -64 ~-20 bedrock [] replace deny []
+
+execute as @s[tag=!noclaim,tag=runa2] at @s run fill ~-21 -63 ~-21 ~21 -63 ~21 bedrock [] replace barrier []
+
+execute as @s[tag=!noclaim] at @s run fill ~-31 -63 ~-31 ~-31 319 ~31 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-30 -64 ~-29 ~-31 -64 ~31 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~31 -63 ~31 ~31 319 ~-31 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~30 -64 ~29 ~31 -64 ~-31 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~-31 -63 ~31 ~31 319 ~31 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-29 -64 ~30 ~31 -64 ~31 bedrock [] replace deny []
+execute as @s[tag=!noclaim] at @s run fill ~-31 -63 ~-31 ~31 319 ~-31 air [] replace structure_void []
+execute as @e[tag=!noclaim] at @s run fill ~-31 -64 ~-31 ~29 -64 ~-30 bedrock [] replace deny []
+
+execute as @s[tag=!noclaim,tag=runa3] at @s run fill ~-31 -63 ~-31 ~31 -63 ~31 bedrock [] replace barrier []

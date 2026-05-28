@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:he_shell"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"T": {
+				"item": "af:charged_tnt"
+			},
+			"F": {
+				"item": "minecraft:flint_and_steel"
+			}
+		},
+		"pattern": [
+			"RRR",
+			"RTF",
+			"RRR"
+		],
+		"result": {
+			"item": "af:he_shell",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,1765 @@
+{
+  "resource_pack_name": "deadzone addon",
+  "texture_name": "atlas.items",
+  "texture_data": {
+        "config": {
+            "textures": "textures/ui/gear"
+        },
+        "waypoint_extraccion": {
+            "textures": "textures/advanced_waypoints/items/waypoint_item"
+        },
+    "deagle": {
+      "textures": "textures/items/guns/pistol/deagle"
+    },
+    "deagle_emp": {
+      "textures": "textures/items/empty/deagle_emp"
+    },
+    "izh43": {
+      "textures": "textures/items/guns/sg/izh43"
+    },
+    "izh43_emp": {
+      "textures": "textures/items/empty/izh43_emp"
+    },
+    "ak47": {
+      "textures": "textures/items/guns/ar/ak47"
+    },
+    "ak47_emp": {
+      "textures": "textures/items/empty/ak47_emp"
+    },
+    "baseball_bat": {
+      "textures": "textures/items/melee/baseball_bat"
+    },
+    "combat_knife": {
+      "textures": "textures/items/melee/combat_knife"
+    },
+    "fireman_axe": {
+      "textures": "textures/items/melee/fireman_axe"
+    },
+    "first_aid": {
+      "textures": "textures/items/medic/first_aid"
+    },
+    "m1911": {
+      "textures": "textures/items/guns/pistol/m1911"
+    },
+    "m1911_emp": {
+      "textures": "textures/items/empty/m1911_emp"
+    },
+    "garand": {
+      "textures": "textures/items/guns/rifle/garand"
+    },
+    "garand_emp": {
+      "textures": "textures/items/empty/garand_emp"
+    },
+    "famas": {
+      "textures": "textures/items/guns/ar/famas"
+    },
+    "famas_emp": {
+      "textures": "textures/items/empty/famas_emp"
+    },
+    "m1897": {
+      "textures": "textures/items/guns/sg/m1897"
+    },
+    "m1897_emp": {
+      "textures": "textures/items/empty/m1897_emp"
+    },
+    "cz527": {
+      "textures": "textures/items/guns/sniper/cz527"
+    },
+    "cz527_emp": {
+      "textures": "textures/items/empty/cz527_emp"
+    },
+    "metal_bat": {
+      "textures": "textures/items/melee/metal_bat"
+    },
+    "hunting_knife": {
+      "textures": "textures/items/melee/hunting_knife"
+    },
+    "sledgehammer": {
+      "textures": "textures/items/melee/sledgehammer"
+    },
+    "ump45": {
+      "textures": "textures/items/guns/smg/ump45"
+    },
+    "ump45_emp": {
+      "textures": "textures/items/empty/ump45_emp"
+    },
+    "canned_bacon": {
+      "textures": "textures/items/food/canned_bacon"
+    },
+    "canned_tuna": {
+      "textures": "textures/items/food/canned_tuna"
+    },
+    "canned_beans": {
+      "textures": "textures/items/food/canned_beans"
+    },
+    "canned_corned": {
+      "textures": "textures/items/food/canned_corned"
+    },
+    "canned_sardine": {
+      "textures": "textures/items/food/canned_sardine"
+    },
+    "canned_spaghetti": {
+      "textures": "textures/items/food/canned_spaghetti"
+    },
+    "barbedwire_bat": {
+      "textures": "textures/items/melee/barbedwire_bat"
+    },
+    "cleaver_knife": {
+      "textures": "textures/items/melee/cleaver_knife"
+    },
+    "crowbar": {
+      "textures": "textures/items/melee/crowbar"
+    },
+    "farm_sickle": {
+      "textures": "textures/items/melee/farm_sickle"
+    },
+    "golf_club": {
+      "textures": "textures/items/melee/golf_club"
+    },
+    "machete": {
+      "textures": "textures/items/melee/machete"
+    },
+    "katana": {
+      "textures": "textures/items/melee/katana"
+    },
+    "hatchet": {
+      "textures": "textures/items/melee/hatchet"
+    },
+    "nailed_bat": {
+      "textures": "textures/items/melee/nailed_bat"
+    },
+    "pipe_wrench": {
+      "textures": "textures/items/melee/pipe_wrench"
+    },
+    "lead_pipe": {
+      "textures": "textures/items/melee/lead_pipe"
+    },
+    "police_baton": {
+      "textures": "textures/items/melee/police_baton"
+    },
+    "bottle_water": {
+      "textures": "textures/items/drink/bottle_water"
+    },
+    "exp_coke": {
+      "textures": "textures/items/drink/exp_coke"
+    },
+    "armor_loot": {
+      "textures": "textures/items/loot/armor_loot"
+    },
+    "lemonade": {
+      "textures": "textures/items/drink/lemonade"
+    },
+    "coffee": {
+      "textures": "textures/items/drink/coffee"
+    },
+    "weapon_loot": {
+      "textures": "textures/items/loot/weapon_loot"
+    },
+    "gun_loot": {
+      "textures": "textures/items/loot/gun_loot"
+    },
+    "kukri_machete": {
+      "textures": "textures/items/melee/kukri_machete"
+    },
+    "m4a1": {
+      "textures": "textures/items/guns/ar/m4a1"
+    },
+    "m4a1_emp": {
+      "textures": "textures/items/empty/m4a1_emp"
+    },
+    "rpk": {
+      "textures": "textures/items/guns/lmg/rpk"
+    },
+    "rpk_emp": {
+      "textures": "textures/items/empty/rpk_emp"
+    },
+    "python": {
+      "textures": "textures/items/guns/pistol/python"
+    },
+    "python_emp": {
+      "textures": "textures/items/empty/python_emp"
+    },
+    "m1014": {
+      "textures": "textures/items/guns/sg/m1014"
+    },
+    "m1014_emp": {
+      "textures": "textures/items/empty/m1014_emp"
+    },
+    "m79": {
+      "textures": "textures/items/guns/launcher/m79"
+    },
+    "m79_emp": {
+      "textures": "textures/items/empty/m79_emp"
+    },
+    "kitchen_knife": {
+      "textures": "textures/items/melee/kitchen_knife"
+    },
+    "bandage": {
+      "textures": "textures/items/medic/bandage"
+    },
+    "tactical_helmet_tan": {
+      "textures": "textures/items/armor/tactical_helmet_tan"
+    },
+    "tactical_helmet_black": {
+      "textures": "textures/items/armor/tactical_helmet_black"
+    },
+    "tactical_vest_black": {
+      "textures": "textures/items/armor/tactical_vest_black"
+    },
+    "plate_vest_gray": {
+      "textures": "textures/items/armor/plate_vest_gray"
+    },
+    "plate_vest_white": {
+      "textures": "textures/items/armor/plate_vest_white"
+    },
+    "un_helmet": {
+      "textures": "textures/items/armor/un_helmet"
+    },
+    "glock17": {
+      "textures": "textures/items/guns/pistol/glock17"
+    },
+    "glock17_emp": {
+      "textures": "textures/items/empty/glock17_emp"
+    },
+    "assault_helmet_black": {
+      "textures": "textures/items/armor/assault_helmet_black"
+    },
+    "hammer": {
+      "textures": "textures/items/melee/hammer"
+    },
+    "engineer_shovel": {
+      "textures": "textures/items/melee/engineer_shovel"
+    },
+    "m1928": {
+      "textures": "textures/items/guns/smg/m1928"
+    },
+    "m1928_emp": {
+      "textures": "textures/items/empty/m1928_emp"
+    },
+    "aks74u": {
+      "textures": "textures/items/guns/ar/aks74u"
+    },
+    "aks74u_emp": {
+      "textures": "textures/items/empty/aks74u_emp"
+    },
+    "l96a1": {
+      "textures": "textures/items/guns/sniper/l96a1"
+    },
+    "l96a1_emp": {
+      "textures": "textures/items/empty/l96a1_emp"
+    },
+    "mp5": {
+      "textures": "textures/items/guns/smg/mp5"
+    },
+    "mp5_emp": {
+      "textures": "textures/items/empty/mp5_emp"
+    },
+    "blood_bag": {
+      "textures": "textures/items/medic/blood_bag"
+    },
+    "blood_bag_a": {
+      "textures": "textures/items/medic/blood_bag"
+    },
+    "blood_bag_b": {
+      "textures": "textures/items/medic/blood_bag"
+    },
+    "blood_bag_o": {
+      "textures": "textures/items/medic/blood_bag"
+    },
+    "blood_test_kit": {
+      "textures": "textures/items/medic/blood_test"
+    },
+    "blood_bag_emp": {
+      "textures": "textures/items/medic/blood_bag_emp"
+    },
+    "painkiller": {
+      "textures": "textures/items/medic/painkiller"
+    },
+    "miner_pickaxe": {
+      "textures": "textures/items/melee/miner_pickaxe"
+    },
+    "frying_pan": {
+      "textures": "textures/items/melee/frying_pan"
+    },
+    "mre": {
+      "textures": "textures/items/food/mre"
+    },
+    "ss1": {
+      "textures": "textures/items/guns/ar/ss1"
+    },
+    "ss1_emp": {
+      "textures": "textures/items/empty/ss1_emp"
+    },
+    "golok_machete": {
+      "textures": "textures/items/melee/golok_machete"
+    },
+    "wrench": {
+      "textures": "textures/items/melee/wrench"
+    },
+    "wiskey": {
+      "textures": "textures/items/drink/wiskey"
+    },
+    "energy_drink": {
+      "textures": "textures/items/drink/energy_drink"
+    },
+    "pear": {
+      "textures": [
+        "textures/items/food/garden/pear"
+      ]
+    },
+    "m14": {
+      "textures": "textures/items/guns/rifle/m14"
+    },
+    "m14_emp": {
+      "textures": "textures/items/empty/m14_emp"
+    },
+    "alcohol_emp": {
+      "textures": "textures/items/misc/alcohol_emp"
+    },
+    "antidote": {
+      "textures": "textures/items/medic/antidote"
+    },
+    "canned_bacon_open": {
+      "textures": "textures/items/food/open/canned_bacon_open"
+    },
+    "canned_spaghetti_open": {
+      "textures": "textures/items/food/open/canned_spaghetti_open"
+    },
+    "canned_tuna_open": {
+      "textures": "textures/items/food/open/canned_tuna_open"
+    },
+    "canned_beans_open": {
+      "textures": "textures/items/food/open/canned_beans_open"
+    },
+    "canned_corned_open": {
+      "textures": "textures/items/food/open/canned_corned_open"
+    },
+    "canned_sardine_open": {
+      "textures": "textures/items/food/open/canned_sardine_open"
+    },
+    "rice": {
+      "textures": [
+        "textures/items/food/rice"
+      ]
+    },
+    "canned_ration": {
+      "textures": "textures/items/food/canned_ration"
+    },
+    "canned_ration_open": {
+      "textures": "textures/items/food/open/canned_ration_open"
+    },
+    "bleach": {
+      "textures": "textures/items/misc/bleach"
+    },
+    "s686": {
+      "textures": "textures/items/guns/sg/s686"
+    },
+    "s686_emp": {
+      "textures": "textures/items/empty/s686_emp"
+    },
+    "bottle_antidote": {
+      "textures": "textures/items/medic/bottle_antidote"
+    },
+    "syringe": {
+      "textures": "textures/items/misc/syringe"
+    },
+    "sedan": {
+      "textures": "textures/spawn_egg/sedan"
+    },
+    "motor": {
+      "textures": "textures/spawn_egg/motor"
+    },
+    "humvee": {
+      "textures": "textures/spawn_egg/humvee"
+    },
+    "human_marauder": {
+      "textures": "textures/spawn_egg/human_marauder"
+    },
+    "human_survivor": {
+      "textures": "textures/spawn_egg/human_survivor"
+    },
+    "riot_helmet": {
+      "textures": "textures/items/armor/riot_helmet"
+    },
+    "press_vest": {
+      "textures": "textures/items/armor/press_vest"
+    },
+    "rpg": {
+      "textures": "textures/items/guns/gl/rpg"
+    },
+    "rpg_emp": {
+      "textures": "textures/items/empty/rpg_emp"
+    },
+    "diamond_soul": {
+      "textures": "textures/items/guns/pistol/diamond_soul"
+    },
+    "diamond_soul_emp": {
+      "textures": "textures/items/empty/diamond_soul_emp"
+    },
+    "lsat": {
+      "textures": "textures/items/guns/lmg/lsat"
+    },
+    "lsat_emp": {
+      "textures": "textures/items/empty/lsat_emp"
+    },
+    "beer_bottle": {
+      "textures": "textures/items/drink/beer_bottle"
+    },
+    "nail": {
+      "textures": "textures/items/misc/nail"
+    },
+    "barbed_wire": {
+      "textures": "textures/items/misc/barbed_wire"
+    },
+    "sabre_sword": {
+      "textures": "textures/items/melee/sabre_sword"
+    },
+    "frag_grenade": {
+      "textures": "textures/items/grenade/frag_grenade"
+    },
+    "molotov": {
+      "textures": "textures/items/grenade/molotov"
+    },
+    "gasmask_white": {
+      "textures": "textures/items/armor/gasmask_white"
+    },
+    "gasmask_black": {
+      "textures": "textures/items/armor/gasmask_black"
+    },
+    "gasmask_tactical": {
+      "textures": "textures/items/armor/gasmask_tactical"
+    },
+    "pipe_bomb": {
+      "textures": "textures/items/grenade/pipe_bomb"
+    },
+    "night_goggles": {
+      "textures": "textures/items/armor/night_goggles"
+    },
+    "cowboy_brown": {
+      "textures": "textures/items/armor/cowboy_brown"
+    },
+    "cowboy_black": {
+      "textures": "textures/items/armor/cowboy_black"
+    },
+    "cowboy_white": {
+      "textures": "textures/items/armor/cowboy_white"
+    },
+    "skimask_black": {
+      "textures": "textures/items/armor/skimask_black"
+    },
+    "football_red": {
+      "textures": "textures/items/armor/football_red"
+    },
+    "mask_funni": {
+      "textures": "textures/items/armor/mask_funni"
+    },
+    "canned_stew": {
+      "textures": "textures/items/food/canned_stew"
+    },
+    "canned_stew_open": {
+      "textures": "textures/items/food/open/canned_stew_open"
+    },
+    "meat_jerky": {
+      "textures": "textures/items/food/meat_jerky"
+    },
+    "duct_tape": {
+      "textures": "textures/items/misc/duct_tape"
+    },
+    "balaclava_black": {
+      "textures": "textures/items/armor/balaclava_black"
+    },
+    "clown_wig": {
+      "textures": "textures/items/armor/clown_wig"
+    },
+    "biker_red": {
+      "textures": "textures/items/armor/biker_red"
+    },
+    "biker_yellow": {
+      "textures": "textures/items/armor/biker_yellow"
+    },
+    "biker_blue": {
+      "textures": "textures/items/armor/biker_blue"
+    },
+    "biker_white": {
+      "textures": "textures/items/armor/biker_white"
+    },
+    "hard_yellow": {
+      "textures": "textures/items/armor/hard_yellow"
+    },
+    "hard_blue": {
+      "textures": "textures/items/armor/hard_blue"
+    },
+    "hard_red": {
+      "textures": "textures/items/armor/hard_red"
+    },
+    "hard_orange": {
+      "textures": "textures/items/armor/hard_orange"
+    },
+    "hard_white": {
+      "textures": "textures/items/armor/hard_white"
+    },
+    "plate_vest_tan": {
+      "textures": "textures/items/armor/plate_vest_tan"
+    },
+    "plate_vest_olive": {
+      "textures": "textures/items/armor/plate_vest_olive"
+    },
+    "stab_vest_gray": {
+      "textures": "textures/items/armor/stab_vest_gray"
+    },
+    "police_riot": {
+      "textures": "textures/items/armor/police_riot"
+    },
+    "welder_mask": {
+      "textures": "textures/items/armor/welder_mask"
+    },
+    "army_woodland": {
+      "textures": "textures/items/armor/army_woodland"
+    },
+    "beret_red": {
+      "textures": "textures/items/armor/beret_red"
+    },
+    "police_vest": {
+      "textures": "textures/items/armor/police_vest"
+    },
+    "ballistic_green": {
+      "textures": "textures/items/armor/ballistic_green"
+    },
+    "ballistic_black": {
+      "textures": "textures/items/armor/ballistic_black"
+    },
+    "ballistic_tan": {
+      "textures": "textures/items/armor/ballistic_tan"
+    },
+    "svd": {
+      "textures": "textures/items/guns/sniper/svd"
+    },
+    "svd_emp": {
+      "textures": "textures/items/empty/svd_emp"
+    },
+    "scrap_metal": {
+      "textures": "textures/items/misc/scrap_metal"
+    },
+    "police_hat": {
+      "textures": "textures/items/armor/police_hat"
+    },
+    "canned_peaches": {
+      "textures": "textures/items/food/canned_peaches"
+    },
+    "canned_peaches_open": {
+      "textures": "textures/items/food/open/canned_peaches_open"
+    },
+    "popsi_cola": {
+      "textures": "textures/items/drink/popsi_cola"
+    },
+    "splint": {
+      "textures": "textures/items/medic/splint"
+    },
+    "bdu_woodland_bottom": {
+      "textures": "textures/items/clothing/lower/bdu_woodland_bottom"
+    },
+    "bdu_woodland_top": {
+      "textures": "textures/items/clothing/top/bdu_woodland_top"
+    },
+    "bdu_desert_bottom": {
+      "textures": "textures/items/clothing/lower/bdu_desert_bottom"
+    },
+    "bdu_desert_top": {
+      "textures": "textures/items/clothing/top/bdu_desert_top"
+    },
+    "bdu_urban_bottom": {
+      "textures": "textures/items/clothing/lower/bdu_urban_bottom"
+    },
+    "bdu_urban_top": {
+      "textures": "textures/items/clothing/top/bdu_urban_top"
+    },
+    "jean_blue": {
+      "textures": "textures/items/clothing/lower/jean_blue"
+    },
+    "jean_brown": {
+      "textures": "textures/items/clothing/lower/jean_brown"
+    },
+    "flannel_red": {
+      "textures": "textures/items/clothing/top/flannel_red"
+    },
+    "flannel_white": {
+      "textures": "textures/items/clothing/top/flannel_white"
+    },
+    "flannel_green": {
+      "textures": "textures/items/clothing/top/flannel_green"
+    },
+    "flannel_blue": {
+      "textures": "textures/items/clothing/top/flannel_blue"
+    },
+    "cargo_tan": {
+      "textures": "textures/items/clothing/lower/cargo_tan"
+    },
+    "tactical_tan": {
+      "textures": "textures/items/clothing/top/tactical_tan"
+    },
+    "tactical_red": {
+      "textures": "textures/items/clothing/top/tactical_red"
+    },
+    "tactical_white": {
+      "textures": "textures/items/clothing/top/tactical_white"
+    },
+    "tactical_green": {
+      "textures": "textures/items/clothing/top/tactical_green"
+    },
+    "pancasila_bottom": {
+      "textures": "textures/items/clothing/lower/pancasila_bottom"
+    },
+    "pancasila_top": {
+      "textures": "textures/items/clothing/top/pancasila_top"
+    },
+    "pcivilian_black": {
+      "textures": "textures/items/clothing/lower/pcivilian_black"
+    },
+    "police_bottom": {
+      "textures": "textures/items/clothing/lower/police_bottom"
+    },
+    "police_top": {
+      "textures": "textures/items/clothing/top/police_top"
+    },
+    "sherif_bottom": {
+      "textures": "textures/items/clothing/lower/sherif_bottom"
+    },
+    "sherif_top": {
+      "textures": "textures/items/clothing/top/sherif_top"
+    },
+    "trackpants_black": {
+      "textures": "textures/items/clothing/lower/trackpants_black"
+    },
+    "tracksuit_black": {
+      "textures": "textures/items/clothing/top/tracksuit_black"
+    },
+    "paramedic_bottom": {
+      "textures": "textures/items/clothing/lower/paramedic_bottom"
+    },
+    "paramedic_top": {
+      "textures": "textures/items/clothing/top/paramedic_top"
+    },
+    "sweater_green": {
+      "textures": "textures/items/clothing/top/sweater_green"
+    },
+    "canned_fruit_open": {
+      "textures": "textures/items/food/open/canned_fruit_open"
+    },
+    "canned_fruit": {
+      "textures": "textures/items/food/canned_fruit"
+    },
+    "grape_soda": {
+      "textures": "textures/items/drink/grape_soda"
+    },
+    "canned_tomato": {
+      "textures": "textures/items/food/canned_tomato"
+    },
+    "canned_tomato_open": {
+      "textures": "textures/items/food/open/canned_tomato_open"
+    },
+    "strawberry_jam": {
+      "textures": "textures/items/food/strawberry_jam"
+    },
+    "chocolate_bar": {
+      "textures": "textures/items/food/chocolate_bar"
+    },
+    "orange_soda": {
+      "textures": "textures/items/drink/orange_soda"
+    },
+    "whiskey": {
+      "textures": "textures/items/drink/whiskey"
+    },
+    "hazmat_yellow_bottom": {
+      "textures": "textures/items/clothing/lower/hazmat_yellow_bottom"
+    },
+    "hazmat_yellow_top": {
+      "textures": "textures/items/clothing/top/hazmat_yellow_top"
+    },
+    "hazmat_white_bottom": {
+      "textures": "textures/items/clothing/lower/hazmat_white_bottom"
+    },
+    "hazmat_white_top": {
+      "textures": "textures/items/clothing/top/hazmat_white_top"
+    },
+    "police_special_bottom": {
+      "textures": "textures/items/clothing/lower/police_special_bottom"
+    },
+    "police_special_top": {
+      "textures": "textures/items/clothing/top/police_special_top"
+    },
+    "clown_bottom": {
+      "textures": "textures/items/clothing/lower/clown_bottom"
+    },
+    "clown_top": {
+      "textures": "textures/items/clothing/top/clown_top"
+    },
+    "special_bottom": {
+      "textures": "textures/items/clothing/lower/special_bottom"
+    },
+    "special_top": {
+      "textures": "textures/items/clothing/top/special_top"
+    },
+    "gorka_bottom": {
+      "textures": "textures/items/clothing/lower/gorka_bottom"
+    },
+    "gorka_top": {
+      "textures": "textures/items/clothing/top/gorka_top"
+    },
+    "prisoner_bottom": {
+      "textures": "textures/items/clothing/lower/prisoner_bottom"
+    },
+    "prisoner_top": {
+      "textures": "textures/items/clothing/top/prisoner_top"
+    },
+    "pcivilian_brown": {
+      "textures": "textures/items/clothing/lower/pcivilian_brown"
+    },
+    "plaid_red": {
+      "textures": "textures/items/clothing/top/plaid_red"
+    },
+    "plaid_tan": {
+      "textures": "textures/items/clothing/top/plaid_tan"
+    },
+    "plaid_olive": {
+      "textures": "textures/items/clothing/top/plaid_olive"
+    },
+    "plaid_gray": {
+      "textures": "textures/items/clothing/top/plaid_gray"
+    },
+    "plaid_white": {
+      "textures": "textures/items/clothing/top/plaid_white"
+    },
+    "leather_black": {
+      "textures": "textures/items/clothing/top/leather_black"
+    },
+    "leather_brown": {
+      "textures": "textures/items/clothing/top/leather_brown"
+    },
+    "kopassus_top": {
+      "textures": "textures/items/clothing/top/kopassus_top"
+    },
+    "kopassus_bottom": {
+      "textures": "textures/items/clothing/lower/kopassus_bottom"
+    },
+    "un_vest": {
+      "textures": "textures/items/armor/un_vest"
+    },
+    "firefighter_bottom": {
+      "textures": "textures/items/clothing/lower/firefighter_bottom"
+    },
+    "firefighter_top": {
+      "textures": "textures/items/clothing/top/firefighter_top"
+    },
+    "cargo_brown": {
+      "textures": "textures/items/clothing/lower/cargo_brown"
+    },
+    "adrenaline": {
+      "textures": "textures/items/medic/adrenaline"
+    },
+    "bottle_adrenaline": {
+      "textures": "textures/items/medic/bottle_adrenaline"
+    },
+    "durag_black": {
+      "textures": "textures/items/armor/durag_black"
+    },
+    "varsity_red": {
+      "textures": "textures/items/clothing/top/varsity_red"
+    },
+    "varsity_green": {
+      "textures": "textures/items/clothing/top/varsity_green"
+    },
+    "varsity_brown": {
+      "textures": "textures/items/clothing/top/varsity_brown"
+    },
+    "bread": {
+      "textures": "textures/items/food/bread"
+    },
+    "moldy_bread": {
+      "textures": "textures/items/rotten/moldy_bread"
+    },
+    "rotten_pear": {
+      "textures": "textures/items/rotten/rotten_pear"
+    },
+    "tactical_sandwich": {
+      "textures": "textures/items/food/tactical_sandwich"
+    },
+    "tactical_shovel": {
+      "textures": "textures/items/melee/tactical_shovel"
+    },
+    "rags": {
+      "textures": "textures/items/medic/rags"
+    },
+    "ghillie_forest_bottom": {
+      "textures": "textures/items/clothing/lower/ghillie_forest_bottom"
+    },
+    "ghillie_forest_top": {
+      "textures": "textures/items/clothing/top/ghillie_forest_top"
+    },
+    "ghillie_snow_bottom": {
+      "textures": "textures/items/clothing/lower/ghillie_snow_bottom"
+    },
+    "ghillie_snow_top": {
+      "textures": "textures/items/clothing/top/ghillie_snow_top"
+    },
+    "splitting_axe": {
+      "textures": "textures/items/melee/splitting_axe"
+    },
+    "screwdriver": {
+      "textures": "textures/items/melee/screwdriver"
+    },
+    "pitchfork": {
+      "textures": "textures/items/melee/pitchfork"
+    },
+    "tire_iron": {
+      "textures": "textures/items/melee/tire_iron"
+    },
+    "plaid_blue": {
+      "textures": "textures/items/clothing/top/plaid_blue"
+    },
+    "hoodie_red": {
+      "textures": "textures/items/clothing/top/hoodie_red"
+    },
+    "hoodie_blue": {
+      "textures": "textures/items/clothing/top/hoodie_blue"
+    },
+    "hoodie_yellow": {
+      "textures": "textures/items/clothing/top/hoodie_yellow"
+    },
+    "hoodie_white": {
+      "textures": "textures/items/clothing/top/hoodie_white"
+    },
+    "hoodie_green": {
+      "textures": "textures/items/clothing/top/hoodie_green"
+    },
+    "sweater_white": {
+      "textures": "textures/items/clothing/top/sweater_white"
+    },
+    "khaki_light": {
+      "textures": "textures/items/clothing/lower/khaki_light"
+    },
+    "mask_fawkes": {
+      "textures": "textures/items/armor/mask_fawkes"
+    },
+    "spec_helmet": {
+      "textures": "textures/items/armor/spec_helmet"
+    },
+    "7_62x39mm": {
+      "textures": "textures/items/ammo/7_62x39mm"
+    },
+    "5_56x45mm": {
+      "textures": "textures/items/ammo/5_56x45mm"
+    },
+    "45acp": {
+      "textures": "textures/items/ammo/45acp"
+    },
+    "12gauge": {
+      "textures": "textures/items/ammo/12gauge"
+    },
+    "357magnum": {
+      "textures": "textures/items/ammo/357magnum"
+    },
+    "5_45x39mm": {
+      "textures": "textures/items/ammo/5_45x39mm"
+    },
+    "9x19mm": {
+      "textures": "textures/items/ammo/9x19mm"
+    },
+    "7_62x51mm": {
+      "textures": "textures/items/ammo/7_62x51mm"
+    },
+    "hunting_hat": {
+      "textures": "textures/items/armor/hunting_hat"
+    },
+    "beanie_black": {
+      "textures": "textures/items/armor/beanie_black"
+    },
+    "beanie_white": {
+      "textures": "textures/items/armor/beanie_white"
+    },
+    "beanie_brown": {
+      "textures": "textures/items/armor/beanie_brown"
+    },
+    "beanie_olive": {
+      "textures": "textures/items/armor/beanie_olive"
+    },
+    "biker_black": {
+      "textures": "textures/items/armor/biker_black"
+    },
+    "biker_brown": {
+      "textures": "textures/items/armor/biker_brown"
+    },
+    "tactical_vest_olive": {
+      "textures": "textures/items/armor/tactical_vest_olive"
+    },
+    "durag_brown": {
+      "textures": "textures/items/armor/durag_brown"
+    },
+    "formal_white": {
+      "textures": "textures/items/clothing/top/formal_white"
+    },
+    "puffer_blue": {
+      "textures": "textures/items/clothing/top/puffer_blue"
+    },
+    "suspender_black": {
+      "textures": "textures/items/clothing/lower/suspender_black"
+    },
+    "sleeve_blue": {
+      "textures": "textures/items/clothing/top/sleeve_blue"
+    },
+    "sleeve_yellow": {
+      "textures": "textures/items/clothing/top/sleeve_yellow"
+    },
+    "sleeve_white": {
+      "textures": "textures/items/clothing/top/sleeve_white"
+    },
+    "varsity_blue": {
+      "textures": "textures/items/clothing/top/varsity_blue"
+    },
+    "reflective_lime": {
+      "textures": "textures/items/armor/reflective_lime"
+    },
+    "reflective_yellow": {
+      "textures": "textures/items/armor/reflective_yellow"
+    },
+    "un_helmet": {
+      "textures": "textures/items/armor/un_helmet"
+    },
+    "combat_olive": {
+      "textures": "textures/items/armor/combat_olive"
+    },
+    "combat_tan": {
+      "textures": "textures/items/armor/combat_tan"
+    },
+    "combat_white": {
+      "textures": "textures/items/armor/combat_white"
+    },
+    "hoodie_black": {
+      "textures": "textures/items/clothing/top/hoodie_black"
+    },
+    "puffer_black": {
+      "textures": "textures/items/clothing/top/puffer_black"
+    },
+    "striped_white": {
+      "textures": "textures/items/clothing/top/striped_white"
+    },
+    "striped_blue": {
+      "textures": "textures/items/clothing/top/striped_blue"
+    },
+    "overall_blue": {
+      "textures": "textures/items/clothing/lower/overall_blue"
+    },
+    "jean_light": {
+      "textures": "textures/items/clothing/lower/jean_light"
+    },
+    "pcivilian_red": {
+      "textures": "textures/items/clothing/lower/pcivilian_red"
+    },
+    "cargo_white": {
+      "textures": "textures/items/clothing/lower/cargo_white"
+    },
+    "stripeds_black": {
+      "textures": "textures/items/clothing/top/stripeds_black"
+    },
+    "assault_vest_black": {
+      "textures": "textures/items/armor/assault_vest_black"
+    },
+    "boonie_green": {
+      "textures": "textures/items/armor/boonie_green"
+    },
+    "boonie_tan": {
+      "textures": "textures/items/armor/boonie_tan"
+    },
+    "boonie_white": {
+      "textures": "textures/items/armor/boonie_white"
+    },
+    "boonie_tan": {
+      "textures": "textures/items/armor/boonie_tan"
+    },
+    "boonie_black": {
+      "textures": "textures/items/armor/boonie_black"
+    },
+    "boonie_woodland": {
+      "textures": "textures/items/armor/boonie_woodland"
+    },
+    "reflective_orange": {
+      "textures": "textures/items/armor/reflective_orange"
+    },
+    "army_desert": {
+      "textures": "textures/items/armor/army_desert"
+    },
+    "tactical_helmet_olive": {
+      "textures": "textures/items/armor/tactical_helmet_olive"
+    },
+    "tactical_helmet_white": {
+      "textures": "textures/items/armor/tactical_helmet_white"
+    },
+    "cargo_green": {
+      "textures": "textures/items/clothing/lower/cargo_green"
+    },
+    "jean_black": {
+      "textures": "textures/items/clothing/lower/jean_black"
+    },
+    "trackpants_blue": {
+      "textures": "textures/items/clothing/lower/trackpants_blue"
+    },
+    "tracksuit_blue": {
+      "textures": "textures/items/clothing/top/tracksuit_blue"
+    },
+    "trackpants_red": {
+      "textures": "textures/items/clothing/lower/trackpants_red"
+    },
+    "tracksuit_red": {
+      "textures": "textures/items/clothing/top/tracksuit_red"
+    },
+    "tactical_navy": {
+      "textures": "textures/items/clothing/top/tactical_navy"
+    },
+    "l2a3": {
+      "textures": "textures/items/guns/smg/l2a3"
+    },
+    "l2a3_emp": {
+      "textures": "textures/items/empty/l2a3_emp"
+    },
+    "improvised_bag": {
+      "textures": "textures/items/backpack/improvised_bag"
+    },
+    "school_blue": {
+      "textures": [
+        "textures/items/backpack/school_blue",
+        "textures/items/backpack/school_blue_open",
+        "textures/items/backpack/school_blue_open_back",
+        "textures/items/backpack/school_blue_open_front"
+      ]
+    },
+    "school_green": {
+      "textures": [
+        "textures/items/backpack/school_green",
+        "textures/items/backpack/school_green_open",
+        "textures/items/backpack/school_green_open_back",
+        "textures/items/backpack/school_green_open_front"
+      ]
+    },
+    "school_red": {
+      "textures": [
+        "textures/items/backpack/school_red",
+        "textures/items/backpack/school_red_open",
+        "textures/items/backpack/school_red_open_back",
+        "textures/items/backpack/school_red_open_front"
+      ]
+    },
+    "taloon_yellow": {
+      "textures": [
+        "textures/items/backpack/taloon_yellow",
+        "textures/items/backpack/taloon_yellow_open",
+        "textures/items/backpack/taloon_yellow_open_back",
+        "textures/items/backpack/taloon_yellow_open_front"
+      ]
+    },
+    "taloon_blue": {
+      "textures": [
+        "textures/items/backpack/taloon_blue",
+        "textures/items/backpack/taloon_blue_open",
+        "textures/items/backpack/taloon_blue_open_back",
+        "textures/items/backpack/taloon_blue_open_front"
+      ]
+    },
+    "taloon_green": {
+      "textures": [
+        "textures/items/backpack/taloon_green",
+        "textures/items/backpack/taloon_green_open",
+        "textures/items/backpack/taloon_green_open_back",
+        "textures/items/backpack/taloon_green_open_front"
+      ]
+    },
+    "taloon_red": {
+      "textures": [
+        "textures/items/backpack/taloon_red",
+        "textures/items/backpack/taloon_red_open",
+        "textures/items/backpack/taloon_red_open_back",
+        "textures/items/backpack/taloon_red_open_front"
+      ]
+    },
+    "flannel_gray": {
+      "textures": "textures/items/clothing/top/flannel_gray"
+    },
+    "hiking_blue": {
+      "textures": "textures/items/clothing/top/hiking_blue"
+    },
+    "hiking_black": {
+      "textures": "textures/items/clothing/top/hiking_black"
+    },
+    "cap_black": {
+      "textures": "textures/items/armor/cap_black"
+    },
+    "cap_red": {
+      "textures": "textures/items/armor/cap_red"
+    },
+    "cap_green": {
+      "textures": "textures/items/armor/cap_green"
+    },
+    "fal": {
+      "textures": "textures/items/guns/ar/fal"
+    },
+    "fal_emp": {
+      "textures": "textures/items/empty/fal_emp"
+    },
+    "hawaiian_red": {
+      "textures": "textures/items/clothing/top/hawaiian_red"
+    },
+    "sleeve_black": {
+      "textures": "textures/items/clothing/top/sleeve_black"
+    },
+    "overall_brown": {
+      "textures": "textures/items/clothing/lower/overall_brown"
+    },
+    "overall_black": {
+      "textures": "textures/items/clothing/lower/overall_black"
+    },
+    "slack_black": {
+      "textures": "textures/items/clothing/lower/slack_black"
+    },
+    "suit_top_black": {
+      "textures": "textures/items/clothing/top/suit_top_black"
+    },
+    "9x39mm": {
+      "textures": "textures/items/ammo/9x39mm"
+    },
+    "fumo_hat": {
+      "textures": "textures/items/armor/fumo_hat"
+    },
+    "mask_troll": {
+      "textures": "textures/items/armor/mask_troll"
+    },
+    "respirator_mask": {
+      "textures": "textures/items/armor/respirator_mask"
+    },
+    "firefighter_hat": {
+      "textures": "textures/items/armor/firefighter_hat"
+    },
+    "cargo_black": {
+      "textures": "textures/items/clothing/lower/cargo_black"
+    },
+    "bdu_artic_bottom": {
+      "textures": "textures/items/clothing/lower/bdu_artic_bottom"
+    },
+    "bdu_artic_top": {
+      "textures": "textures/items/clothing/top/bdu_artic_top"
+    },
+    "army_artic": {
+      "textures": "textures/items/armor/army_artic"
+    },
+    "army_urban": {
+      "textures": "textures/items/armor/army_urban"
+    },
+    "beret_green": {
+      "textures": "textures/items/armor/beret_green"
+    },
+    "beret_blue": {
+      "textures": "textures/items/armor/beret_blue"
+    },
+    "canned_chili": {
+      "textures": "textures/items/food/canned_chili"
+    },
+    "canned_chili_open": {
+      "textures": "textures/items/food/open/canned_chili_open"
+    },
+    "zucchini": {
+      "textures": "textures/items/food/garden/zucchini"
+    },
+    "cucumber": {
+      "textures": "textures/items/food/garden/cucumber"
+    },
+    "canned_macncheese": {
+      "textures": "textures/items/food/canned_macncheese"
+    },
+    "canned_macncheese_open": {
+      "textures": "textures/items/food/open/canned_macncheese_open"
+    },
+    "bottle_morphine": {
+      "textures": "textures/items/medic/bottle_morphine"
+    },
+    "morphine": {
+      "textures": "textures/items/medic/morphine"
+    },
+    "bandage_military": {
+      "textures": "textures/items/medic/bandage_military"
+    },
+    "stab_vest_tan": {
+      "textures": "textures/items/armor/stab_vest_tan"
+    },
+    "stab_vest_white": {
+      "textures": "textures/items/armor/stab_vest_white"
+    },
+    "tactical_vest_white": {
+      "textures": "textures/items/armor/tactical_vest_white"
+    },
+    "hunting_brown": {
+      "textures": "textures/items/armor/hunting_brown"
+    },
+    "ballistic_white": {
+      "textures": "textures/items/armor/ballistic_white"
+    },
+    "assault_helmet_olive": {
+      "textures": "textures/items/armor/assault_helmet_olive"
+    },
+    "cap_blue": {
+      "textures": "textures/items/armor/cap_blue"
+    },
+    "m1894c": {
+      "textures": "textures/items/guns/rifle/m1894c"
+    },
+    "m1894c_emp": {
+      "textures": "textures/items/empty/m1894c_emp"
+    },
+    "bandana_red": {
+      "textures": "textures/items/armor/bandana_red"
+    },
+    "anaconda": {
+      "textures": "textures/items/guns/pistol/anaconda"
+    },
+    "anaconda_emp": {
+      "textures": "textures/items/empty/anaconda_emp"
+    },
+    "shemagh_red": {
+      "textures": "textures/items/armor/shemagh_red"
+    },
+    "44magnum": {
+      "textures": "textures/items/ammo/44magnum"
+    },
+    "webbing_black": {
+      "textures": "textures/items/armor/webbing_black"
+    },
+    "suede_brown": {
+      "textures": "textures/items/clothing/top/suede_brown"
+    },
+    "maid_top": {
+      "textures": "textures/items/clothing/top/maid_top"
+    },
+    "maid_bottom": {
+      "textures": "textures/items/clothing/lower/maid_bottom"
+    },
+    "webbing_green": {
+      "textures": "textures/items/armor/webbing_green"
+    },
+    "webbing_white": {
+      "textures": "textures/items/armor/webbing_white"
+    },
+    "webbing_brown": {
+      "textures": "textures/items/armor/webbing_brown"
+    },
+    "webbing_tan": {
+      "textures": "textures/items/armor/webbing_tan"
+    },
+    "maid_bonnet": {
+      "textures": "textures/items/armor/maid_bonnet"
+    },
+    "flat_brown": {
+      "textures": "textures/items/armor/flat_brown"
+    },
+    "flat_black": {
+      "textures": "textures/items/armor/flat_black"
+    },
+    "assault_vest_olive": {
+      "textures": "textures/items/armor/assault_vest_olive"
+    },
+    "plague_hat": {
+      "textures": "textures/items/armor/plague_hat"
+    },
+    "hunting_navy": {
+      "textures": "textures/items/armor/hunting_navy"
+    },
+    "hawaiian_black": {
+      "textures": "textures/items/clothing/top/hawaiian_black"
+    },
+    "plague_top": {
+      "textures": "textures/items/clothing/top/plague_top"
+    },
+    "plague_bottom": {
+      "textures": "textures/items/clothing/lower/plague_bottom"
+    },
+    "ushanka": {
+      "textures": "textures/items/armor/ushanka"
+    },
+    "wooden_plank": {
+      "textures": "textures/items/melee/wooden_plank"
+    },
+    "nailed_plank": {
+      "textures": "textures/items/melee/nailed_plank"
+    },
+    "ice_pick": {
+      "textures": "textures/items/melee/ice_pick"
+    },
+    "ice_hockey": {
+      "textures": "textures/items/melee/ice_hockey"
+    },
+    "rolling_pin": {
+      "textures": "textures/items/melee/rolling_pin"
+    },
+    "canned_chicken": {
+      "textures": "textures/items/food/canned_chicken"
+    },
+    "canned_chicken_open": {
+      "textures": "textures/items/food/open/canned_chicken_open"
+    },
+    "canned_beef_stew": {
+      "textures": "textures/items/food/canned_beef_stew"
+    },
+    "canned_beef_stew_open": {
+      "textures": "textures/items/food/open/canned_beef_stew_open"
+    },
+    "canned_ham": {
+      "textures": "textures/items/food/canned_ham"
+    },
+    "canned_ham_open": {
+      "textures": "textures/items/food/open/canned_ham_open"
+    },
+    "tomato": {
+      "textures": "textures/items/food/garden/tomato"
+    },
+    "apple_green": {
+      "textures": "textures/items/food/garden/apple_green"
+    },
+    "banana": {
+      "textures": "textures/items/food/garden/banana"
+    },
+    "chip_potato": {
+      "textures": "textures/items/food/chip_potato"
+    },
+    "chip_tortilla": {
+      "textures": "textures/items/food/chip_tortilla"
+    },
+    "creeper_crunch": {
+      "textures": "textures/items/food/creeper_crunch"
+    },
+    "vodka": {
+      "textures": "textures/items/drink/vodka"
+    },
+    "red_wine": {
+      "textures": "textures/items/drink/red_wine"
+    },
+    "milk_gallon": {
+      "textures": "textures/items/drink/milk_gallon"
+    },
+    "exp_coke_bottle": {
+      "textures": "textures/items/drink/exp_coke_bottle"
+    },
+    "popsi_cola_bottle": {
+      "textures": "textures/items/drink/popsi_cola_bottle"
+    },
+    "tactical_axe": {
+      "textures": "textures/items/melee/tactical_axe"
+    },
+    "snow_shovel": {
+      "textures": "textures/items/melee/snow_shovel"
+    },
+    "stamina_boost": {
+      "textures": "textures/items/medic/stamina_boost"
+    },
+    "alcoholic_tinture": {
+      "textures": "textures/items/medic/alcoholic_tinture"
+    },
+    "rags_sterilized": {
+      "textures": "textures/items/medic/rags_sterilized"
+    },
+    "bandage_sterilized": {
+      "textures": "textures/items/medic/bandage_sterilized"
+    },
+    "ak74": {
+      "textures": "textures/items/guns/ar/ak74"
+    },
+    "ak74_emp": {
+      "textures": "textures/items/empty/ak74_emp"
+    },
+    "tshirt_white": {
+      "textures": "textures/items/clothing/top/tshirt_white"
+    },
+    "biker_vest": {
+      "textures": "textures/items/armor/biker_vest"
+    },
+    "biker_vest_skull": {
+      "textures": "textures/items/armor/biker_vest_skull"
+    },
+    "7_62x54mmr": {
+      "textures": "textures/items/ammo/7_62x54mmr"
+    },
+    "40mm": {
+      "textures": "textures/items/ammo/40mm"
+    },
+    "walkie_talkie": {
+      "textures": "textures/items/misc/walkie_talkie"
+    },
+    "landmines": {
+      "textures": "textures/items/misc/landmine"
+    },
+    "wire_cutter": {
+      "textures": "textures/items/misc/wire_cutter"
+    },
+    "radios": {
+      "textures": "textures/items/misc/radio"
+    },
+    "ham_radios": {
+      "textures": "textures/items/misc/ham_radio"
+    },
+    "random_paper": {
+      "textures": "textures/items/misc/random_paper"
+    },
+    "bear_traps": {
+      "textures": "textures/items/misc/bear_trap"
+    },
+    "flashlight": {
+      "textures": "textures/items/misc/flashlight"
+    },
+    "boonie_desert": {
+      "textures": "textures/items/armor/boonie_desert"
+    },
+    "boonie_artic": {
+      "textures": "textures/items/armor/boonie_artic"
+    },
+    "ghillie_drygrass_bottom": {
+      "textures": "textures/items/clothing/lower/ghillie_drygrass_bottom"
+    },
+    "ghillie_drygrass_top": {
+      "textures": "textures/items/clothing/top/ghillie_drygrass_top"
+    },
+    "infected_woodland": {
+      "textures": "textures/spawn_egg/infected_woodland"
+    },
+    "sks": {
+      "textures": "textures/items/guns/rifle/sks"
+    },
+    "sks_emp": {
+      "textures": "textures/items/empty/sks_emp"
+    },
+    "makarov": {
+      "textures": "textures/items/guns/pistol/makarov"
+    },
+    "makarov_emp": {
+      "textures": "textures/items/empty/makarov_emp"
+    },
+    "makarov_pb": {
+      "textures": "textures/items/guns/pistol/makarov_pb"
+    },
+    "makarov_pb_emp": {
+      "textures": "textures/items/empty/makarov_pb_emp"
+    },
+    "9x18mm": {
+      "textures": "textures/items/ammo/9x18mm"
+    },
+    "mosin": {
+      "textures": "textures/items/guns/rifle/mosin"
+    },
+    "mosin_emp": {
+      "textures": "textures/items/empty/mosin_emp"
+    },
+    "lockpick": {
+      "textures": "textures/items/misc/lockpick"
+    },
+    "vz65": {
+      "textures": "textures/items/guns/smg/vz65"
+    },
+    "vz65_emp": {
+      "textures": "textures/items/empty/vz65_emp"
+    },
+    "m16a1": {
+      "textures": "textures/items/guns/ar/m16a1"
+    },
+    "m16a1_emp": {
+      "textures": "textures/items/empty/m16a1_emp"
+    },
+    "wooden_barricade": {
+      "textures": "textures/items/misc/wooden_barricade"
+    },
+    "infected_marauder": {
+      "textures": "textures/spawn_egg/infected_marauder"
+    },
+    "infected_survivor": {
+      "textures": "textures/spawn_egg/infected_survivor"
+    },
+    "infected_civilian": {
+      "textures": "textures/spawn_egg/infected_civilian"
+    },
+    "infected_screamer": {
+      "textures": "textures/spawn_egg/infected_screamer"
+    },
+    "infected_woodland": {
+      "textures": "textures/spawn_egg/infected_woodland"
+    },
+    "infected_desert": {
+      "textures": "textures/spawn_egg/infected_desert"
+    },
+    "infected_artic": {
+      "textures": "textures/spawn_egg/infected_artic"
+    },
+    "infected_commander_woodland": {
+      "textures": "textures/spawn_egg/infected_commander_woodland"
+    },
+    "infected_commander_desert": {
+      "textures": "textures/spawn_egg/infected_commander_desert"
+    },
+    "infected_commander_artic": {
+      "textures": "textures/spawn_egg/infected_commander_artic"
+    },
+    "infected_militia": {
+      "textures": "textures/spawn_egg/infected_militia"
+    },
+    "infected_hazmat": {
+      "textures": "textures/spawn_egg/infected_hazmat"
+    },
+    "rags_dirty": {
+      "textures": "textures/items/medic/rags_dirty"
+    },
+    "water_purification": {
+      "textures": "textures/items/medic/water_purification"
+    },
+    "bottle_water_unpure": {
+      "textures": "textures/items/drink/bottle_water_unpure"
+    },
+    "bottle_water_emp": {
+      "textures": "textures/items/drink/bottle_water_emp"
+    },
+    "raw_player": {
+      "textures": "textures/items/food/meat/raw_player"
+    },
+    "cooked_player": {
+      "textures": "textures/items/food/meat/cooked_player"
+    },
+    "cooking_pot": {
+      "textures": "textures/items/misc/cooking_pot"
+    },
+    "remote": {
+      "textures": "textures/items/misc/remote"
+    },
+    "funi_vest": {
+      "textures": "textures/items/armor/funi_vest"
+    },
+    "stun_grenade": {
+      "textures": "textures/items/grenade/stun_grenade"
+    },
+    "hero_flannel": {
+      "textures": "textures/items/clothing/top/hero_flannel"
+    },
+    "c4_explosive": {
+      "textures": "textures/items/grenade/c4_explosive"
+    },
+    "c4_detonator": {
+      "textures": "textures/items/grenade/c4_detonator"
+    },
+    "shemagh_blue": {
+      "textures": "textures/items/armor/shemagh_blue"
+    },
+    "shemagh_tan": {
+      "textures": "textures/items/armor/shemagh_tan"
+    },
+    "shemagh_olive": {
+      "textures": "textures/items/armor/shemagh_olive"
+    },
+    "shemagh_gray": {
+      "textures": "textures/items/armor/shemagh_gray"
+    },
+    "shemagh_brown": {
+      "textures": "textures/items/armor/shemagh_brown"
+    },
+    "bandana_blue": {
+      "textures": "textures/items/armor/bandana_blue"
+    },
+    "bandana_green": {
+      "textures": "textures/items/armor/bandana_green"
+    },
+    "chest_brown": {
+      "textures": "textures/items/armor/chest_brown"
+    },
+    "chest_navy": {
+      "textures": "textures/items/armor/chest_navy"
+    },
+    "chest_white": {
+      "textures": "textures/items/armor/chest_white"
+    },
+    "chest_tan": {
+      "textures": "textures/items/armor/chest_tan"
+    },
+    "chest_green": {
+      "textures": "textures/items/armor/chest_green"
+    },
+    "tshirt_black": {
+      "textures": "textures/items/clothing/top/tshirt_black"
+    },
+    "tshirt_red": {
+      "textures": "textures/items/clothing/top/tshirt_red"
+    },
+    "tshirt_blue": {
+      "textures": "textures/items/clothing/top/tshirt_blue"
+    },
+    "tshirt_green": {
+      "textures": "textures/items/clothing/top/tshirt_green"
+    },
+    "tshirt_yellow": {
+      "textures": "textures/items/clothing/top/tshirt_yellow"
+    },
+    "m870": {
+      "textures": "textures/items/guns/sg/m870"
+    },
+    "m870_emp": {
+      "textures": "textures/items/empty/m870_emp"
+    },
+    "can_opener": {
+      "textures": "textures/items/misc/can_opener"
+    },
+    "spray_can": {
+      "textures": "textures/items/misc/spray_can"
+    },
+    "headlamp": {
+      "textures": "textures/items/armor/headlamp"
+    },
+    "tactical_vest_tan": {
+      "textures": "textures/items/armor/tactical_vest_tan"
+    },
+    "asval": {
+      "textures": "textures/items/guns/ar/asval"
+    },
+    "asval_emp": {
+      "textures": "textures/items/empty/asval_emp"
+    },
+    "peaked_green": {
+      "textures": "textures/items/armor/peaked_green"
+    },
+    "peaked_tan": {
+      "textures": "textures/items/armor/peaked_tan"
+    },
+    "peaked_white": {
+      "textures": "textures/items/armor/peaked_white"
+    },
+    "nerve_grenade": {
+      "textures": "textures/items/grenade/nerve_grenade"
+    },
+    "smoke_grenade": {
+      "textures": "textures/items/grenade/smoke_grenade"
+    },
+    "knight_sword": {
+      "textures": "textures/items/melee/knight_sword"
+    },
+    "flanged_mace": {
+      "textures": "textures/items/melee/flanged_mace"
+    },
+    "great_helmet": {
+      "textures": "textures/items/armor/great_helmet"
+    },
+    "chainmail_top": {
+      "textures": "textures/items/clothing/top/chainmail_top"
+    },
+    "crusader_top": {
+      "textures": "textures/items/clothing/top/crusader_top"
+    },
+    "chainmail_bottom": {
+      "textures": "textures/items/clothing/lower/chainmail_bottom"
+    },
+    "hacksaw": {
+      "textures": "textures/items/melee/hacksaw"
+    },
+    "sawoff_pipe": {
+      "textures": "textures/items/misc/sawoff_pipe"
+    },
+    "nail_box": {
+      "textures": "textures/items/misc/nail_box"
+    },
+    "fvla_flags": {
+      "textures": "textures/items/misc/flag/fvla_flag"
+    },
+    "vostrovia_flags": {
+      "textures": "textures/items/misc/flag/vostrovia_flag"
+    },
+    "nekoi_flags": {
+      "textures": "textures/items/misc/flag/nekoi_flag"
+    },
+    "deadzone_map": {
+      "textures": "textures/items/misc/deadzone_map"
+    },
+    "copper_nugget": {
+      "textures": "textures/items/misc/copper_nugget"
+    },
+    "bullet_5_45x39mm": {
+      "textures": "textures/items/bullet/bullet_5_45x39mm"
+    },
+    "bullet_5_45x39mm_emp": {
+      "textures": "textures/items/bullet/bullet_5_45x39mm_emp"
+    },
+    "bullet_5_56x45mm": {
+      "textures": "textures/items/bullet/bullet_5_56x45mm"
+    },
+    "bullet_5_56x45mm_emp": {
+      "textures": "textures/items/bullet/bullet_5_56x45mm_emp"
+    },
+    "bullet_7_62x39mm": {
+      "textures": "textures/items/bullet/bullet_7_62x39mm"
+    },
+    "bullet_7_62x39mm_emp": {
+      "textures": "textures/items/bullet/bullet_7_62x39mm_emp"
+    },
+    "bullet_7_62x51mm": {
+      "textures": "textures/items/bullet/bullet_7_62x51mm"
+    },
+    "bullet_7_62x51mm_emp": {
+      "textures": "textures/items/bullet/bullet_7_62x51mm_emp"
+    },
+    "bullet_7_62x54mmr": {
+      "textures": "textures/items/bullet/bullet_7_62x54mmr"
+    },
+    "bullet_7_62x54mmr_emp": {
+      "textures": "textures/items/bullet/bullet_7_62x54mmr_emp"
+    },
+    "bullet_9x18mm": {
+      "textures": "textures/items/bullet/bullet_9x18mm"
+    },
+    "bullet_9x18mm_emp": {
+      "textures": "textures/items/bullet/bullet_9x18mm_emp"
+    },
+    "bullet_9x19mm": {
+      "textures": "textures/items/bullet/bullet_9x19mm"
+    },
+    "bullet_9x19mm_emp": {
+      "textures": "textures/items/bullet/bullet_9x19mm_emp"
+    },
+    "bullet_9x39mm": {
+      "textures": "textures/items/bullet/bullet_9x39mm"
+    },
+    "bullet_9x39mm_emp": {
+      "textures": "textures/items/bullet/bullet_9x39mm_emp"
+    },
+    
+    "bullet_12gauge": {
+      "textures": "textures/items/bullet/bullet_12gauge"
+    },
+    "bullet_12gauge_emp": {
+      "textures": "textures/items/bullet/bullet_12gauge_emp"
+    },
+    "bullet_40mm": {
+      "textures": "textures/items/bullet/bullet_40mm"
+    },
+    "bullet_44magnum": {
+      "textures": "textures/items/bullet/bullet_44magnum"
+    },
+    "bullet_44magnum_emp": {
+      "textures": "textures/items/bullet/bullet_44magnum_emp"
+    },
+    "bullet_45acp": {
+      "textures": "textures/items/bullet/bullet_45acp"
+    },
+    "bullet_45acp_emp": {
+      "textures": "textures/items/bullet/bullet_45acp_emp"
+    },
+    "bullet_357magnum": {
+      "textures": "textures/items/bullet/bullet_357magnum"
+    },
+    "bullet_357magnum_emp": {
+      "textures": "textures/items/bullet/bullet_357magnum_emp"
+    },
+    "plastic_explosive": {
+      "textures": "textures/items/misc/plastic_explosive"
+    },
+    "electric_scrap": {
+      "textures": "textures/items/misc/electric_scrap"
+    },
+    "vending_popsi_icon": {
+      "textures": "textures/items/misc/vending_popsi_icon"
+    }
+  }
+}

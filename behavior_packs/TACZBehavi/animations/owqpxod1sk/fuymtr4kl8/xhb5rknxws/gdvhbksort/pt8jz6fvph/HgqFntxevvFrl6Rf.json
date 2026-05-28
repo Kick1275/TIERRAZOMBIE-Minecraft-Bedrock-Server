@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.deagleg.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.43,
+      "timeline": {
+        "2.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:deagleg 1 0",
+          "/scoreboard players set @s[scores={deagleg=10..}] deagleg 9",
+          "/function deagleg"
+        ],
+        "2.38": [
+          "/function deaglegreload",
+          "/event entity @s krep:deagleg_reload"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.hud_bar",
+				"texture_width": 80,
+				"texture_height": 9,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "hud",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "thirst",
+					"parent": "hud",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-18.5, -0.5, 0],
+							"size": [40, 5, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [80, 9]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

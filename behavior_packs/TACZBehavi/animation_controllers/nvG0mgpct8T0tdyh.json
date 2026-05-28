@@ -1,0 +1,109 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mk14.reload": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "trigger.reload": "query.get_equipped_item_name=='mk14_emp' && variable.attack_time == 0.0 && q.is_using_item"
+            },
+            {
+              "trigger.tac": "(query.get_equipped_item_name=='mk14' && variable.attack_time > 0.0f && query.scoreboard('mk14') <= 19) || (query.get_equipped_item_name=='mk14' && q.mark_variant == 2)"
+            }
+          ]
+        },
+        "trigger.tac": {
+          "on_entry": [
+            "/function mk14quantity",
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='mk14' && q.property('krep:ammoreload') == 0"
+            },
+            {
+              "reload.tac": "query.get_equipped_item_name=='mk14' && q.property('krep:ammoreload') >= 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mk14'"
+            }
+          ]
+        },
+        "trigger.reload": {
+          "on_entry": [
+            "/function mk14quantity",
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='mk14_emp' && q.property('krep:ammoreload') == 0"
+            },
+            {
+              "reload": "query.get_equipped_item_name=='mk14_emp' && q.property('krep:ammoreload') >= 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mk14'"
+            }
+          ]
+        },
+        "reload": {
+          "animations": [
+            {
+              "mk14reload": "query.get_equipped_item_name('main_hand')=='mk14_emp' || query.get_equipped_item_name('main_hand')=='mk14'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reload"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name!='mk14_emp'"
+            },
+            {
+              "reloadfinish": "query.all_animations_finished"
+            }
+          ]
+        },
+        "reload.tac": {
+          "animations": [
+            {
+              "mk14reloadtac": "query.get_equipped_item_name('main_hand')=='mk14_emp' || query.get_equipped_item_name('main_hand')=='mk14'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reloadtac"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name!='mk14'"
+            },
+            {
+              "reloadfinish": "query.all_animations_finished"
+            }
+          ]
+        },
+        "reloadfinish": {
+          "on_entry": [
+            "/function mk14"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='mk14' || query.get_equipped_item_name=='mk14_emp'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

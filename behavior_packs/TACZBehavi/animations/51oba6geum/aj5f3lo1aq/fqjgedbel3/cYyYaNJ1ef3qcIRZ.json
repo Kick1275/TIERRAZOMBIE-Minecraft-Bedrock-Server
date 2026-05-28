@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.uzi.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.0,
+      "timeline": {
+        "2.9": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:uzi 1 0",
+          "/scoreboard players set @s[scores={uzi=21..}] uzi 20",
+          "/function uzi"
+        ],
+        "2.8": [
+          "/function uzireload",
+          "/event entity @s krep:uzi_reload"
+        ]
+      }
+    }
+  }
+}

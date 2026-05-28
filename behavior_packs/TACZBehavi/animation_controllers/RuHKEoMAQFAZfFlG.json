@@ -1,0 +1,314 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.akm": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='akm' && q.is_using_item) || query.get_equipped_item_name=='akm_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s akm 30",
+            "@s[hasitem={item=krep:akm, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "akm.30": "query.get_equipped_item_name=='akm' && query.is_using_item && query.scoreboard('akm') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')<=3"
+            },
+            {
+              "suppress.30": "query.get_equipped_item_name=='akm' && query.is_using_item && query.scoreboard('akm') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')>=4"
+            },
+            {
+              "akm.31": "query.get_equipped_item_name=='akm' && query.is_using_item && query.scoreboard('akm') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function akm"
+          ]
+        },
+        "akm.31": {
+          "animations": [
+            "akmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={akm=0}] slot.weapon.mainhand 1 krep:akm_emp 1 0"
+          ]
+        },
+        "akm.30": {
+          "animations": [
+            "akmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:akm_fire",
+            "/scoreboard players set @s[scores={akm=32..}] akm 31",
+            "/scoreboard players remove @s[scores={akm=1..31}] akm 1",
+            "/playsound akm.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={akm=0}] slot.weapon.mainhand 1 krep:akm_emp 1 0",
+            "/title @s[scores={akm=0}] actionbar No Ammunition"
+          ]
+        },
+        "suppress.30": {
+          "animations": [
+            "akmshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:akm_fire",
+            "/scoreboard players set @s[scores={akm=32..}] akm 31",
+            "/scoreboard players remove @s[scores={akm=1..31}] akm 1",
+            "/playsound akm.suppress @a[r=20]",
+            "/replaceitem entity @s[scores={akm=0}] slot.weapon.mainhand 1 krep:akm_emp 1 0",
+            "/title @s[scores={akm=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    },
+    "controller.animation.akm.inspect": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "q.all_animations_finished"
+            }
+          ],
+          "animations": [
+            "inspectdelay"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='akm' && variable.attack_time > 0.0f && query.scoreboard('akm') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m4a1' && variable.attack_time > 0.0f && query.scoreboard('m4a1') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='hk416' && variable.attack_time > 0.0f && query.scoreboard('hk416') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m1911' && variable.attack_time > 0.0f && query.scoreboard('m1911') >= 7 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='saiga12' && variable.attack_time > 0.0f && query.scoreboard('saiga12') >= 5 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='g3' && variable.attack_time > 0.0f && query.scoreboard('g3') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='fal' && variable.attack_time > 0.0f && query.scoreboard('fal') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='mk14' && variable.attack_time > 0.0f && query.scoreboard('mk14') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='mk14_emp' && variable.attack_time > 0.0f && query.scoreboard('mk14') == 0 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='g17' && variable.attack_time > 0.0f && query.scoreboard('g17') >= 17 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='g18' && variable.attack_time > 0.0f && query.scoreboard('g18') >= 17 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m1014' && variable.attack_time > 0.0f && query.scoreboard('m1014') >= 7 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m1014_emp' && variable.attack_time > 0.0f && query.scoreboard('m1014_emp') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='cp' && variable.attack_time > 0.0f && query.scoreboard('cp') >= 6 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='cp_emp' && variable.attack_time > 0.0f && query.scoreboard('cp') == 0 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='p320' && variable.attack_time > 0.0f && query.scoreboard('p320') >= 12 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='p320_emp' && variable.attack_time > 0.0f && query.scoreboard('p320') == 0 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='t50' && variable.attack_time > 0.0f && query.scoreboard('t50') >= 8 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='t50_emp' && variable.attack_time > 0.0f && query.scoreboard('t50') == 0 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='ump' && variable.attack_time > 0.0f && query.scoreboard('ump') >= 25 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='ump_emp' && variable.attack_time > 0.0f && query.scoreboard('ump') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='uzi' && variable.attack_time > 0.0f && query.scoreboard('uzi') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='db' && variable.attack_time > 0.0f && query.scoreboard('db') >= 2 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='aa12' && variable.attack_time > 0.0f && query.scoreboard('aa12') >= 10 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m16' && variable.attack_time > 0.0f && query.scoreboard('m16') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='g36' && variable.attack_time > 0.0f && query.scoreboard('g36') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m16a1' && variable.attack_time > 0.0f && query.scoreboard('m16a1') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='evolys' && variable.attack_time > 0.0f && query.scoreboard('evolys') >= 75 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='evolys_emp' && variable.attack_time > 0.0f && query.scoreboard('evolys') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m249' && variable.attack_time > 0.0f && query.scoreboard('m249') >= 100 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m249_emp' && variable.attack_time > 0.0f && query.scoreboard('m249') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='qbz95' && variable.attack_time > 0.0f && query.scoreboard('qbz95') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='qbz191' && variable.attack_time > 0.0f && query.scoreboard('qbz191') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='type81' && variable.attack_time > 0.0f && query.scoreboard('type81') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect.emp": "(query.get_equipped_item_name=='qbz95_emp' && variable.attack_time > 0.0f && query.scoreboard('qbz95') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect.emp": "(query.get_equipped_item_name=='qbz191_emp' && variable.attack_time > 0.0f && query.scoreboard('qbz191') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect.emp": "(query.get_equipped_item_name=='type81_emp' && variable.attack_time > 0.0f && query.scoreboard('type81') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='sks' && variable.attack_time > 0.0f && query.scoreboard('sks') >= 10 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect.emp": "(query.get_equipped_item_name=='sks_emp' && variable.attack_time > 0.0f && query.scoreboard('sks') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='b93' && variable.attack_time > 0.0f && query.scoreboard('b93') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect.emp": "(query.get_equipped_item_name=='b93_emp' && variable.attack_time > 0.0f && query.scoreboard('b93') == 0 && q.mark_variant != 1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='vector' && variable.attack_time > 0.0f && query.scoreboard('vector') >= 20 && q.mark_variant != 2) && q.property('krep:magazine')==0"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='vector' && variable.attack_time > 0.0f && query.scoreboard('vector') >= 30 && q.mark_variant != 2) && q.property('krep:magazine')==1"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='vector' && variable.attack_time > 0.0f && query.scoreboard('vector') >= 40 && q.mark_variant != 2) && q.property('krep:magazine')==2"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='vector' && variable.attack_time > 0.0f && query.scoreboard('vector') >= 50 && q.mark_variant != 2) && q.property('krep:magazine')==3"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='awp' && variable.attack_time > 0.0f && query.scoreboard('awp') >= 5 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='deagle' && variable.attack_time > 0.0f && query.scoreboard('deagle') >= 7 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='deagleg' && variable.attack_time > 0.0f && query.scoreboard('deagleg') >= 9 && q.mark_variant != 2 && q.property('krep:magazine')==0)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='deagleg' && variable.attack_time > 0.0f && query.scoreboard('deagleg') >= 12 && q.mark_variant != 2 && q.property('krep:magazine')==1)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='deagleg' && variable.attack_time > 0.0f && query.scoreboard('deagleg') >= 15 && q.mark_variant != 2 && q.property('krep:magazine')==2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='deagleg' && variable.attack_time > 0.0f && query.scoreboard('deagleg') >= 17 && q.mark_variant != 2 && q.property('krep:magazine')==3)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='mp5' && variable.attack_time > 0.0f && query.scoreboard('mp5') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='p90' && variable.attack_time > 0.0f && query.scoreboard('p90') >= 50 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='m870' && variable.attack_time > 0.0f && query.scoreboard('m870') >= 5 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='rpg' && variable.attack_time > 0.0f && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='scarh' && variable.attack_time > 0.0f && query.scoreboard('scarh') >= 20 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='scarl' && variable.attack_time > 0.0f && query.scoreboard('scarl') >= 30 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='mp7' && variable.attack_time > 0.0f && query.scoreboard('mp7') >= 40 && q.mark_variant != 2)"
+            },
+            {
+              "trigger.inspect": "(query.get_equipped_item_name=='minigun' && variable.attack_time > 0.0f)"
+            }
+          ]
+        },
+        "trigger.inspect": {
+          "animations": [
+            "akmshoot"
+          ],
+          "on_entry": [
+            "@s krep:inspect"
+          ],
+          "on_exit": [
+            "@s krep:noinspect"
+          ],
+          "transitions": [
+            {
+              "setup": "query.is_using_item || q.all_animations_finished || q.mark_variant == 2"
+            }
+          ]
+        },
+        "trigger.inspect.emp": {
+          "animations": [
+            "akmshoot"
+          ],
+          "on_entry": [
+            "@s krep:inspect"
+          ],
+          "on_exit": [
+            "@s krep:noinspect"
+          ],
+          "transitions": [
+            {
+              "setup": "query.is_using_item || q.all_animations_finished || q.mark_variant == 1"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

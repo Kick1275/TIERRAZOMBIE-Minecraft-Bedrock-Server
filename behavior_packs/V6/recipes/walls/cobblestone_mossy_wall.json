@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:cobblestone_mossy_walls"
+		},
+		"tags": [ "workbench" ],
+		"pattern": [
+			"#",
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:mossy_cobblestone",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "medieval:cobblestone_mossy_walls",
+			"count": 12
+		}
+	}
+}

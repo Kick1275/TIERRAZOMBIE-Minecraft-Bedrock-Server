@@ -1,0 +1,64 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"product_type": "addon",
+		"authors": [
+			"Carchi77"
+		]
+	},
+	"header": {
+		"name": "§l§c[BP] §rRealistic Food 1.0.4",
+		"description": "By @carchi77 ~curseforge",
+		"min_engine_version": [
+			1,
+			21,
+			100
+		],
+		"uuid": "38214536-5228-49cf-93c8-2416a7c09f55",
+		"version": [
+			1,
+			0,
+			5
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "40963582-ad50-4e5f-8be1-8a9bf522f8ed",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "b03b0283-7d8c-474c-b7f2-ce62b644710f",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "b4b5fb72-7ef7-4640-8e11-2d5ebd424290",
+			"version": [
+				1,
+				0,
+				5
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.1.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		}
+	]
+}

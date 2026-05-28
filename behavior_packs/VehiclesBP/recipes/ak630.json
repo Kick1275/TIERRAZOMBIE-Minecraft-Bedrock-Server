@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:ak630"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:steel_ingot"
+			},
+			"I": {
+				"item": "af:telslakia_id"
+			},
+			"T": {
+				"item": "af:titanium_ingot"
+			},
+			"O": {
+				"item": "minecraft:observer"
+			},
+			"D": {
+				"item": "minecraft:dispenser"
+			}
+		},
+		"pattern": [
+			"ROR",
+			"RID",
+			"TTT"
+		],
+		"result": {
+			"item": "af:ak630_spawn_egg",
+			"count": 1
+		}
+	}
+}

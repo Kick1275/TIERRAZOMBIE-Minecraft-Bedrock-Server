@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:autopilot"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "minecraft:redstone"
+			},
+			"N": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"pattern": [
+			"N N",
+			" R ",
+			"N N"
+		],
+		"result": {
+			"item": "af:autopilot",
+			"count": 1
+		}
+	}
+}

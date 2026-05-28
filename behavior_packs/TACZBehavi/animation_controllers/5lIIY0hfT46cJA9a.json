@@ -1,0 +1,112 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.evolys.reload": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "on_entry": [
+            "@s krep:noreload",
+            "@s evolys:reset"
+          ],
+          "transitions": [
+            {
+              "trigger.reload": "query.get_equipped_item_name=='evolys_emp' && variable.attack_time == 0.0 && q.is_using_item"
+            },
+            {
+              "trigger.tac": "(query.get_equipped_item_name=='evolys' && variable.attack_time > 0.0f && query.scoreboard('evolys') <= 74) || (query.get_equipped_item_name=='evolys' && q.mark_variant == 2)"
+            }
+          ]
+        },
+        "trigger.tac": {
+          "on_entry": [
+            "/function evolysquantity",
+            "@s krep:noreload",
+            "@s evolys:reset"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='evolys' && q.property('krep:ammoreload') == 0"
+            },
+            {
+              "reload.tac": "query.get_equipped_item_name=='evolys' && q.property('krep:ammoreload') >= 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='evolys'"
+            }
+          ]
+        },
+        "trigger.reload": {
+          "on_entry": [
+            "/function evolysquantity",
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='evolys_emp' && q.property('krep:ammoreload') == 0"
+            },
+            {
+              "reload": "query.get_equipped_item_name=='evolys_emp' && q.property('krep:ammoreload') >= 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='evolys'"
+            }
+          ]
+        },
+        "reload": {
+          "animations": [
+            {
+              "evolysreload": "query.get_equipped_item_name('main_hand')=='evolys_emp' || query.get_equipped_item_name('main_hand')=='evolys'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reload"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name!='evolys_emp'"
+            },
+            {
+              "reloadfinish": "query.all_animations_finished"
+            }
+          ]
+        },
+        "reload.tac": {
+          "animations": [
+            {
+              "evolysreloadtac": "query.get_equipped_item_name('main_hand')=='evolys_emp' || query.get_equipped_item_name('main_hand')=='evolys'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reloadtac"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name!='evolys'"
+            },
+            {
+              "reloadfinish": "query.all_animations_finished"
+            }
+          ]
+        },
+        "reloadfinish": {
+          "on_entry": [
+            "/function evolys",
+            "@s evolys:reset"
+          ],
+          "transitions": [
+            {
+              "setup": "query.get_equipped_item_name=='evolys' || query.get_equipped_item_name=='evolys_emp'"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

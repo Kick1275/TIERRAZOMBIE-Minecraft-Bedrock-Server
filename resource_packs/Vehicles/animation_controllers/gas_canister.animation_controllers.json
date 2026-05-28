@@ -1,0 +1,33 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.gas_canister.opening": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"active": "q.is_ignited"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"active": {
+					"animations": [
+						"open"
+					],
+					"particle_effects": [
+						{
+							"effect": ""
+						}
+					],
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		}
+	}
+}

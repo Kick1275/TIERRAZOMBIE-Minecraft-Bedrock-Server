@@ -1,0 +1,641 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:artillery",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"artillery"
+				]
+			},
+			"minecraft:health": {
+				"value": 100,
+				"max": 100
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 60,
+					"max_dropped_ticks": 20,
+					"use_motion_prediction_hints": true
+				},
+				"conditional_values": [
+					{
+						"max_optimized_distance": 0,
+						"max_dropped_ticks": 0,
+						"use_motion_prediction_hints": true,
+						"conditional_values": [
+							{
+								"test": "is_moving",
+								"subject": "self",
+								"operator": "==",
+								"value": true
+							}
+						]
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:scale": {
+				"value": 1.5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0.8
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "iron_ingot",
+						"heal_amount": 25
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:leashable": {
+				"soft_distance": 5,
+				"hard_distance": 10,
+				"max_distance": 30,
+				"can_be_stolen": false,
+				"on_leash": {
+					"event": "af:leashed",
+					"target": "self"
+				},
+				"on_unleash": {
+					"event": "af:unleashed",
+					"target": "self"
+				}
+			},
+			"minecraft:movement.basic": {
+				"max_turn": 16
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			}
+		},
+		"component_groups": {
+			"af:follow": {
+				"minecraft:navigation.walk": {
+					"avoid_damage_blocks": false,
+					"avoid_water": true,
+					"can_path_from_air": true
+				},
+				"minecraft:behavior.look_at_player": {
+					"priority": 0,
+					"look_distance": 16,
+					"probability": 1
+				},
+				"minecraft:follow_range": {
+					"value": 64
+				},
+				"minecraft:jump.static": {},
+				"minecraft:movement": {
+					"value": 0.2
+				}
+			},
+			"libernia": {
+				"minecraft:type_family": {
+					"family": [
+						"libernia",
+						"vehicle",
+						"artillery"
+					]
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"telslakia": {
+				"minecraft:type_family": {
+					"family": [
+						"telslakia",
+						"vehicle",
+						"artillery"
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"up": {},
+			"af:shoot_ready(up)": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"target": "self",
+								"event": "af:shot_fired(up)"
+							},
+							"spawn_entities": [
+								"af:ap_shell<af:angled_up>"
+							],
+							"interact_text": "action.interact.fire_artillery"
+						}
+					]
+				},
+				"minecraft:is_charged": {}
+			},
+			"af:cooldown(up)": {
+				"minecraft:timer": {
+					"time": 3,
+					"time_down_event": {
+						"event": "af:barrel_emptied(up)",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.1,
+					"duration": 3,
+					"knockback_vertical_strength": 2,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							}
+						]
+					},
+					"knockback_range": 5,
+					"knockback_damage": 0
+				}
+			},
+			"af:barrel_empty(up)": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:ap_shell"
+										}
+									]
+								},
+								"event": "af:ready_shoot(up)",
+								"target": "self"
+							},
+							"use_item": true,
+							"play_sounds": "milk",
+							"interact_text": "action.interact.load_artillery"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:wrench"
+										}
+									]
+								},
+								"event": "af:angled_down",
+								"target": "self"
+							},
+							"use_item": false,
+							"play_sounds": "step",
+							"interact_text": "action.interact.adjust_artillery",
+							"cooldown": 3
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:manual"
+										}
+									]
+								},
+								"event": "af:manual",
+								"target": "self"
+							},
+							"play_sounds": "purr",
+							"interact_text": "action.interact.use"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:telslakia_id"
+										}
+									]
+								},
+								"event": "af:join_telslakia",
+								"target": "self"
+							},
+							"play_sounds": "eat",
+							"interact_text": "action.interact.use"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:libernia_id"
+										}
+									]
+								},
+								"event": "af:join_libernia",
+								"target": "self"
+							},
+							"play_sounds": "eat",
+							"interact_text": "action.interact.use"
+						}
+					]
+				},
+				"minecraft:is_ignited": {}
+			},
+			"down": {},
+			"af:shoot_ready": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"target": "self",
+								"event": "af:shot_fired"
+							},
+							"spawn_entities": [
+								"af:ap_shell<af:angled_down>"
+							],
+							"interact_text": "action.interact.fire_artillery"
+						}
+					]
+				},
+				"minecraft:is_charged": {}
+			},
+			"af:cooldown": {
+				"minecraft:timer": {
+					"time": 3,
+					"time_down_event": {
+						"event": "af:barrel_emptied",
+						"target": "self"
+					}
+				},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.1,
+					"duration": 3,
+					"knockback_horizontal_strength": 2,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							}
+						]
+					},
+					"knockback_range": 5,
+					"knockback_damage": 0
+				}
+			},
+			"af:barrel_empty": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:ap_shell"
+										}
+									]
+								},
+								"event": "af:ready_shoot",
+								"target": "self"
+							},
+							"use_item": true,
+							"play_sounds": "milk",
+							"interact_text": "action.interact.load_artillery"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:wrench"
+										}
+									]
+								},
+								"event": "af:angled_up",
+								"target": "self"
+							},
+							"use_item": false,
+							"play_sounds": "step",
+							"interact_text": "action.interact.adjust_artillery",
+							"cooldown": 3
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:manual"
+										}
+									]
+								},
+								"event": "af:manual",
+								"target": "self"
+							},
+							"play_sounds": "purr",
+							"interact_text": "action.interact.use"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:telslakia_id"
+										}
+									]
+								},
+								"event": "af:join_telslakia",
+								"target": "self"
+							},
+							"play_sounds": "eat",
+							"interact_text": "action.interact.use"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:libernia_id"
+										}
+									]
+								},
+								"event": "af:join_libernia",
+								"target": "self"
+							},
+							"play_sounds": "eat",
+							"interact_text": "action.interact.use"
+						}
+					]
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"af:barrel_empty(up)",
+						"telslakia"
+					]
+				}
+			},
+			"af:leashed": {
+				"add": {
+					"component_groups": [
+						"af:follow"
+					]
+				}
+			},
+			"af:unleashed": {
+				"remove": {
+					"component_groups": [
+						"af:follow"
+					]
+				}
+			},
+			"af:angled_up": {
+				"add": {
+					"component_groups": [
+						"af:barrel_empty(up)"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:barrel_empty"
+					]
+				}
+			},
+			"af:angled_down": {
+				"add": {
+					"component_groups": [
+						"af:barrel_empty"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:barrel_empty(up)"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar can be loaded with Anti-Tank Shells, adjust angle with Wrench."
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"down": {},
+			"af:barrel_emptied": {
+				"remove": {
+					"component_groups": [
+						"af:cooldown"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:barrel_empty"
+					]
+				}
+			},
+			"af:shot_fired": {
+				"add": {
+					"component_groups": [
+						"af:cooldown"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:shoot_ready"
+					]
+				},
+				"queue_command": {
+					"command": "camerashake add @a[r=16] 1 1"
+				}
+			},
+			"af:ready_shoot": {
+				"add": {
+					"component_groups": [
+						"af:shoot_ready"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown"
+					]
+				}
+			},
+			"up": {},
+			"af:barrel_emptied(up)": {
+				"remove": {
+					"component_groups": [
+						"af:cooldown(up)"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:barrel_empty(up)"
+					]
+				}
+			},
+			"af:shot_fired(up)": {
+				"add": {
+					"component_groups": [
+						"af:cooldown(up)"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:shoot_ready(up)"
+					]
+				},
+				"queue_command": {
+					"command": "camerashake add @a[r=16] 1 1"
+				}
+			},
+			"af:ready_shoot(up)": {
+				"add": {
+					"component_groups": [
+						"af:shoot_ready(up)"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown(up)"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function vehicle_explosion"
+					]
+				}
+			}
+		}
+	}
+}

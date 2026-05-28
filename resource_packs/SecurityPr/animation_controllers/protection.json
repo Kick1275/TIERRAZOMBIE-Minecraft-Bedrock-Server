@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.cancel_death_animaton": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cancel_animation": "!q.is_alive"
+						}
+					]
+				},
+				"cancel_animation": {
+					"animations": ["cancel_death_animaton"],
+					"transitions": [
+						{
+							"default": "q.is_alive && q.all_animations_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.turret_objective": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"objective_animation": "variable.is_objective && query.is_alive"
+						}
+					]
+				},
+				"objective_animation": {
+					"animations": ["objective_turret"],
+					"transitions": [
+						{
+							"default": "!variable.is_objective && query.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

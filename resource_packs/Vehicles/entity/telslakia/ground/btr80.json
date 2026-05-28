@@ -1,0 +1,55 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:btr80",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/btr80/btr80",
+				"libernia": "textures/entity/btr80/btr80_libernia",
+				"telslakia": "textures/entity/btr80/btr80_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.btr80"
+			},
+			"render_controllers": [
+				"controller.render.btr80",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_btr80_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.type16.move",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.type16.brake",
+				"scale": "animation.btr80.scale",
+				"look": "animation.btr80.look_at_target",
+				"rotations": "animation.vehicle.rotations",
+				"turn": "animation.type16.turn",
+				"fire": "animation.tank.fire",
+				"shoot": "controller.animation.tank.fire",
+				"is_body": "animation.tank.is_body",
+				"is_turret": "animation.tank.is_turret"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"drive",
+					"look",
+					"rotations",
+					"turn",
+					"shoot",
+					"is_body"
+				]
+			},
+			"particle_effects": {
+				"dust": "af:vehicle_dust",
+				"dust2": "af:vehicle_water"
+			}
+		}
+	}
+}

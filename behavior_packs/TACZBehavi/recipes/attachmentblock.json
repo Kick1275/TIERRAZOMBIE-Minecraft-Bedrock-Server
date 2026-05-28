@@ -1,0 +1,36 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "krep:attachmentblock"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+    "GCG",
+    "G G",
+    "IBI"
+  ],
+    "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "minecraft:redstone_torch"
+    },
+    "B": {
+      "item": "minecraft:chest"
+    }
+  },
+    "result": [
+      {
+        "item": "krep:attachmentblock",
+        "count": 1
+      }
+    ]
+  }
+}

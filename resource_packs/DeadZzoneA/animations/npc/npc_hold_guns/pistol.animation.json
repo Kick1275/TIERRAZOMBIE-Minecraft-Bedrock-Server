@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pistol.sprint_npc": {
+			"override_previous_animation": true,
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, 0]
+				},
+				"waist": {
+					"rotation": [10, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-122.50329, 44.72537, -11.1293],
+					"position": [-2, -2, -3]
+				},
+				"rightArm": {
+					"rotation": [-123.60693, -12.45167, 5.12076],
+					"position": [0, -3, 0]
+				},
+				"guns": {
+					"rotation": [-123.60693, -12.45167, 5.12076],
+					"position": [0.56, -3.68, 0.3],
+					"scale": 1
+				}
+			}
+		},
+		"animation.pistol.hold_npc": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, 0]
+				},
+				"waist": {
+					"rotation": [0.4, 22.5, 0]
+				},
+				"leftArm": {
+					"rotation": [-79.64753, 24.71888, 38.29191],
+					"position": [-2, -2, -1]
+				},
+				"rightArm": {
+					"rotation": [-98.04919, -22.35885, 10.03377],
+					"position": [0.56, -0.68, -0.7]
+				},
+				"guns": {
+					"rotation": [-93.04919, -22.35885, 10.03377],
+					"position": [1.56, 0.32, -1.7],
+					"scale": [1, 0.8, 0.8]
+				}
+			}
+		}
+	}
+}

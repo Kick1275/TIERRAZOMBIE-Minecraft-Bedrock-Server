@@ -1,0 +1,64 @@
+
+{
+  "format_version": "1.21.0",
+  "wired_fence_block": {
+		"sound": "wood"
+	},
+	"wired_wall_block": {
+		"sound": "wood"
+	},
+	"cheval_fence": {
+		"sound": "wood"
+	},
+  "oak_upgraded_spiked_fence_block": { "sound": "wood" },
+  "birch_upgraded_spiked_fence_block": { "sound": "wood" },
+  "acacia_upgraded_spiked_fence_block": { "sound": "wood" },
+  "jungle_upgraded_spiked_fence_block": { "sound": "wood" },
+  "spruce_upgraded_spiked_fence_block": { "sound": "wood" },
+  "dark_oak_upgraded_spiked_fence_block": { "sound": "wood" },
+  "mangrove_upgraded_spiked_fence_block": { "sound": "wood" },
+  "cherry_upgraded_spiked_fence_block": { "sound": "wood" },
+  "warped_upgraded_spiked_fence_block": { "sound": "wood" },
+  "crimson_upgraded_spiked_fence_block": { "sound": "wood" },
+  "bamboo_upgraded_spiked_fence_block": { "sound": "wood" },
+  "pale_upgraded_spiked_fence_block": { "sound": "wood" },
+
+  "oak_reinforced_spiked_fence_block": { "sound": "wood" },
+  "birch_reinforced_spiked_fence_block": { "sound": "wood" },
+  "acacia_reinforced_spiked_fence_block": { "sound": "wood" },
+  "jungle_reinforced_spiked_fence_block": { "sound": "wood" },
+  "spruce_reinforced_spiked_fence_block": { "sound": "wood" },
+  "dark_oak_reinforced_spiked_fence_block": { "sound": "wood" },
+  "mangrove_reinforced_spiked_fence_block": { "sound": "wood" },
+  "cherry_reinforced_spiked_fence_block": { "sound": "wood" },
+  "warped_reinforced_spiked_fence_block": { "sound": "wood" },
+  "crimson_reinforced_spiked_fence_block": { "sound": "wood" },
+  "bamboo_reinforced_spiked_fence_block": { "sound": "wood" },
+  "pale_reinforced_spiked_fence_block": { "sound": "wood" },
+
+  "oak_spiked_plate_block": { "sound": "wood" },
+  "birch_spiked_plate_block": { "sound": "wood" },
+  "acacia_spiked_plate_block": { "sound": "wood" },
+  "jungle_spiked_plate_block": { "sound": "wood" },
+  "spruce_spiked_plate_block": { "sound": "wood" },
+  "dark_oak_spiked_plate_block": { "sound": "wood" },
+  "mangrove_spiked_plate_block": { "sound": "wood" },
+  "cherry_spiked_plate_block": { "sound": "wood" },
+  "warped_spiked_plate_block": { "sound": "wood" },
+  "crimson_spiked_plate_block": { "sound": "wood" },
+  "bamboo_spiked_plate_block": { "sound": "wood" },
+  "pale_spiked_plate_block": { "sound": "wood" },
+
+  "oak_reinforced_spiked_plate_block": { "sound": "wood" },
+  "birch_reinforced_spiked_plate_block": { "sound": "wood" },
+  "acacia_reinforced_spiked_plate_block": { "sound": "wood" },
+  "jungle_reinforced_spiked_plate_block": { "sound": "wood" },
+  "spruce_reinforced_spiked_plate_block": { "sound": "wood" },
+  "dark_oak_reinforced_spiked_plate_block": { "sound": "wood" },
+  "mangrove_reinforced_spiked_plate_block": { "sound": "wood" },
+  "cherry_reinforced_spiked_plate_block": { "sound": "wood" },
+  "warped_reinforced_spiked_plate_block": { "sound": "wood" },
+  "crimson_reinforced_spiked_plate_block": { "sound": "wood" },
+  "bamboo_reinforced_spiked_plate_block": { "sound": "wood" },
+  "pale_reinforced_spiked_plate_block": { "sound": "wood" }
+}

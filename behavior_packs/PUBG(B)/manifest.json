@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "PUBG(B)",
+		"description": "Addon by redHoodie.",
+		"uuid": "32cbe602-6172-474c-943b-4bd1634bc696",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			13,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "6109189c-c0c8-4845-bec7-291b910565c2",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"version": [
+				1,
+				0,
+				0
+			],
+			"uuid": "7672bed7-4e54-434f-b726-410bc78d1f57"
+		}
+	],
+	"metadata": {
+		"generated_with": {
+			"bridge": [
+				"1.8.4"
+			]
+		}
+	}
+}

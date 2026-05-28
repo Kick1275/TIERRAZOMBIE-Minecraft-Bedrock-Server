@@ -1,0 +1,304 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:bm3",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"spread": {
+				"minecraft:shooter": {
+					"def": "af:bullet<af:turret>"
+				}
+			},
+			"precise": {
+				"minecraft:shooter": {
+					"def": "af:bullet<af:turret_p>"
+				},
+				"minecraft:is_ignited": {}
+			}
+		},
+		"components": {
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"within_radius": 64,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "libernia"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								},
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"none_of": [
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"value": "telslakia",
+													"operator": "=="
+												},
+												{
+													"test": "is_family",
+													"subject": "other",
+													"value": "telslakia",
+													"operator": "=="
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						"must_see": true,
+						"max_dist": 64
+					}
+				],
+				"reselect_targets": true,
+				"must_see": true
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:manual",
+									"domain": "hand"
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "purr"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:wrench",
+										"operator": "==",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"subject": "self",
+										"operator": "=="
+									}
+								]
+							},
+							"event": "af:spread",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.adjust_artillery"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:wrench",
+										"operator": "==",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:precise",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.adjust_artillery"
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1120
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1
+			},
+			"minecraft:type_family": {
+				"family": [
+					"telslakia",
+					"inanimate",
+					"sentry"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia"
+										}
+									]
+								}
+							]
+						},
+						"deals_damage": false
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": true
+			},
+			"minecraft:movement.generic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_path_from_air": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/bm3.json"
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 2,
+				"attack_interval": 2,
+				"attack_radius": 64,
+				"burst_shots": 12,
+				"burst_interval": 0.1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "minecraft:iron_ingot",
+						"heal_amount": 15
+					}
+				]
+			},
+			"minecraft:behavior.random_look_around": {
+				"look_time": [
+					0,
+					2
+				],
+				"priority": 9,
+				"look_distance": 32
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar will drop itself on death.",
+						"summon af:sentry_base"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"spread"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ~ ~ ~",
+						"kill @e[r=1,c=1,type=af:sentry_base]"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar use wrench to change 'mode', won't attack Telslakians."
+					]
+				}
+			},
+			"af:precise": {
+				"add": {
+					"component_groups": [
+						"precise"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"spread"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar MODE: \"PRECISE\""
+					]
+				}
+			},
+			"af:spread": {
+				"add": {
+					"component_groups": [
+						"spread"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"precise"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar MODE: \"SPREAD\""
+					]
+				}
+			}
+		}
+	}
+}

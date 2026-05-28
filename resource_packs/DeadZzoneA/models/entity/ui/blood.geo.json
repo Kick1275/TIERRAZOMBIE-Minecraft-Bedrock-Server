@@ -1,0 +1,68 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.blood_bar",
+				"texture_width": 97,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "blood",
+					"parent": "head",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "1",
+					"parent": "blood",
+					"pivot": [0, 17, 0],
+					"cubes": [
+						{
+							"origin": [-2.5, -0.5, 0],
+							"size": [5, 5, 0],
+							"uv": {
+								"north": {"uv": [42, 1], "uv_size": [14, 14]}
+							}
+						}
+					]
+				},
+				{
+					"name": "2",
+					"parent": "blood",
+					"pivot": [0, 17, 0],
+					"cubes": [
+						{
+							"origin": [-2.5, -0.5, 0],
+							"size": [5, 5, 0],
+							"uv": {
+								"north": {"uv": [42, 17], "uv_size": [14, 14]}
+							}
+						}
+					]
+				},
+				{
+					"name": "3",
+					"parent": "blood",
+					"pivot": [0, 17, 0],
+					"cubes": [
+						{
+							"origin": [-2.5, -0.5, 0],
+							"size": [5, 5, 0],
+							"uv": {
+								"north": {"uv": [42, 33], "uv_size": [14, 14]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

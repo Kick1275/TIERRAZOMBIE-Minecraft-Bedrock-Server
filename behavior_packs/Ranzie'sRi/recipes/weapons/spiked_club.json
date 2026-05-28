@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "spiked_club"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "CA",
+      "#AC",
+      "#B"
+    ],
+    "key": {
+      "A": { "item": "minecraft:log" },
+      "B": { "item": "minecraft:stick", "data": 0 },
+      "C": { "item": "minecraft:iron_ingot", "data": 0 }
+    },
+    "result": {
+      "item": "ranzie:spiked_club",
+      "count": 1
+    }
+  }
+}

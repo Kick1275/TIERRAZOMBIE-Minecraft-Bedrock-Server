@@ -1,0 +1,56 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:artillery",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/artillery/artillery",
+				"libernia": "textures/entity/artillery/artillery_libernia",
+				"telslakia": "textures/entity/artillery/artillery_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.artillery"
+			},
+			"render_controllers": [
+				"controller.render.artillery",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_artillery_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"facing_up": "animation.artillery.facing_up",
+				"shoot": "animation.artillery.shoot",
+				"ready": "animation.artillery.ready",
+				"move": "animation.artillery.move",
+				"particle": "controller.animation.artillery_particle",
+				"adjust": "controller.animation.artillery.adjust"
+			},
+			"scripts": {
+				"animate": [
+					"adjust",
+					{
+						"ready": "query.is_powered"
+					},
+					{
+						"move": "query.modified_move_speed"
+					},
+					{
+						"shoot": "query.is_roaring"
+					},
+					{
+						"particle": "query.is_roaring"
+					}
+				]
+			},
+			"particle_effects": {
+				"smoke": "af:artillery_smoke",
+				"flash": "af:artillery_flash"
+			}
+		}
+	}
+}

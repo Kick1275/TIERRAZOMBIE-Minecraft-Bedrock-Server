@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:mounted_gun",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/armor/m4carbine"
+			},
+			"geometry": {
+				"default": "geometry.mounted_gun"
+			},
+			"render_controllers": [
+				"controller.render.mounted_gun"
+			],
+			"spawn_egg": {
+				"texture": "af_mounted_gun_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"lookat": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"lookat"
+				]
+			}
+		}
+	}
+}

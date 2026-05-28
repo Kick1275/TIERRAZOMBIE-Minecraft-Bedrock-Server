@@ -1,0 +1,18 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pg117.seat": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-64.6624, 9.0548, -4.2617],
+					"position": [0, 0, -1]
+				},
+				"rightArm": {
+					"rotation": [-64.6624, -9.0548, 4.2617],
+					"position": [0, 0, -1]
+				}
+			}
+		}
+	}
+}

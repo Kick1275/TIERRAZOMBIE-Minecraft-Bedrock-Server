@@ -1,0 +1,51 @@
+[Commands][error]-enum name: <EntityType> | Keywords in commands need to be lower case. 'abt:chestC' was not registered.
+
+[Commands][error]-enum name: <EntityTypeSelector> | Keywords in commands need to be lower case. 'abt:chestC' was not registered.
+
+[Scripting][warning]-Component 'block:interact' was not registered in script but used on a block
+
+[Scripting][warning]-9cl9ikz6ji6dasdasd-minecraft:stone,10: minecraft:diamod,2
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][warning]-Script reload did not re-register 'block:interact' custom block component
+
+[Scripting][warning]-pdq2dxjsbicasaasas-minecraft:stone,29: diamond,6
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][warning]-mkoxyvg6okhasasdadasd-minecraft:stone,29: diamond,6
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][warning]-qr397drg448aasdsas-minecraft:stone,29: diamond,6
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][error]-Plugin [§aAdvanced Mission System - 1.0.0] - [index.js] ran with error: [SyntaxError: expecting ','    at ui/missionUi.js:190
+]
+
+[Scripting][warning]-adqyf85nc7isassasa-minecraft:stone,29: diamond,6
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][warning]-a8acnnon33dqasas-minecraft:stone,29: minecraft:diamond,6
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][warning]-dneu7vi8bycssasa-minecraft:stone,29: minecraft:diamond,6
+
+[Scripting][warning]-Error: Objective  not found
+
+[Scripting][error]-Unhandled promise rejection: TypeError: cannot read property '3' of undefined
+
+[Scripting][warning]-nlyea5jte1jasass-minecraft:stone,29: minecraft:diamond,6
+
+[Scripting][warning]-v150fjo50vaqwwqqw-minecraft:stone,29: minecraft:diamond,6
+
+[Scripting][warning]-ngccfx8tbfpasasasas:$vstone,29: $vdiamond,6
+
+[Scripting][warning]-null
+
+[Scripting][warning]-
+

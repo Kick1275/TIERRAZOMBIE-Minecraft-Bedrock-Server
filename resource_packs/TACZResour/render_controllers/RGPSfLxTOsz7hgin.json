@@ -1,0 +1,85 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.universal27.first_person": {
+      "geometry": "Geometry.taczuniversal27",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightArm": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || v.t50"
+        },
+        {
+          "rightSleeve": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || v.t50"
+        },
+        {
+          "leftArm": "(query.get_equipped_item_name(0, 1) == 'map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)) || v.t50"
+        },
+        {
+          "leftSleeve": "(query.get_equipped_item_name(0, 1) == 'map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)) || v.t50"
+        }
+      ]
+    },
+    "controller.render.t50": {
+      "geometry": "geometry.t50",
+      "materials": [
+        {
+          "*": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "magazine1": true
+        },
+        {
+          "magazine2": false
+        },
+        {
+          "magazine3": false
+        },
+        {
+          "magazine4": false
+        },
+        {
+          "magazine5": false
+        },
+        {
+          "magazine6": true
+        },
+        {
+          "magazine7": false
+        },
+        {
+          "magazine8": false
+        }
+      ],
+      "textures": [
+        "texture.t50"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

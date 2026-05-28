@@ -1,0 +1,89 @@
+DeadZ Credits 2021-2023
+
+-Thanks for ID9999 "StarWars addon & npc addon" Owner (3D firearm and More)
+
+-Thanks For Gabriel Aplok "Project Walker & Aplok guns" Owner (Fog setting and more)
+
+-Thanks For Klep/Krep "INWA & IndoAR" Owner (Scope Ui and more)
+
+-Thanks For Markkuh "QuarantineZone & tissou Zombie pack" Owner (npc and more)
+
+-Thanks For AzozGamer936 "Actual Guns & absolute guns" owner (new gun system, Thirst UI and more)
+
+-Thanks For mj105 (Permission to copy Flashlight Function)
+
+without them this addon won't be released
+
+
+All Image and code stuff is Copyright, so don't take it, steal it, or other that without MY permission
+note: make your own bitch
+
+Want to give suggestions?, ideas? and others? You can join the official DeadZone
+
+Discord: https://discord.gg/9H9EcnvMra
+
+
+Project was created 8/12/2021 | 8 December 2021
+
+published Release 1.2 24/2/2023 | 24 February 2023
+
+MCPEDL Release 1.3.4 7/9/2023 | 7 September 2023
+
+Update Release 1.4 |
+
+
+#
+DeadZone 1.4
+
+ADD:
+-add 8 guns
+-add detailful ammo + 
+-Add stamina
+-add 8 food
+-add 3 drink
+-Add Supply drop
+-add walkie talkie (Use for Call supply drop)
+-Add 30 Clothings (Pants +7, Shirt +23)
+-Add 34 Accessories (chest +12, head +23)
+-add 5 melee
+-add 13 decorations
+-Add 2D item for blocks
+-add hit sound
+-add sterilized Rag (new mechanism to Heal Infectious)
+-add Reload animation to Merauders
+-add Two variant of Military infected
+-add Militia infected (Miniboss)
+-add Tundra and desert Fog
+-add 13 structure
+
+Update:
+-Remake all loot block texture
+-replace adrenaline and morphine to auto injector
+-Update Loot_table
+-Updating Vehicle, Retexture sedan and motorcycle
+-Remake Tracksuit texture
+-Update sandbag to 3D
+-update secret item
+-update infected chase (which mean when they see the target there running)
+-update all item that with command event
+-better rare loots
+-update the hesco block to normal Layered Block
+-update infected comes at gun sounds
+-update shotgun animation
+-update the rare loot to lockable loot (Make sure u hsve lockpick to open it
+
+
+Remove:
+-Remove Military bandage
+-remove morphine bottle, adrenaline bottle, antidote bottle
+-Remove syringe
+-remove Some food:
+  -canned stew
+  -canned mac-n-cheese
+-remove riot helmet
+
+Fix:
+-Fix the burndown infected civilian male
+-add garand PING sound
+-fix secret item
+-fix the Gun jams, Again.. and again..

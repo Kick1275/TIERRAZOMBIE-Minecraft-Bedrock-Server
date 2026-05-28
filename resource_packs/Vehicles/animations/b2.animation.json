@@ -1,0 +1,44 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.b2.scale": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": 9.7
+				}
+			}
+		},
+		"animation.b2.fly": {
+			"loop": true,
+			"bones": {
+				"gear0": {
+					"rotation": [
+						0,
+						0,
+						90
+					]
+				},
+				"frontgear": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						1
+					]
+				},
+				"gear1": {
+					"rotation": [
+						0,
+						0,
+						-90
+					]
+				}
+			}
+		}
+	}
+}

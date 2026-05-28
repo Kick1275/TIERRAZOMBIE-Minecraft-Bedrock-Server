@@ -1,0 +1,134 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.aks74u.person": {
+      "initial_state": "draw",
+      "states": {
+        "draw": {
+          "animations": [
+           {
+            "guns.draw": "variable.all_aks74u"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_aks74u && query.any_animation_finished"
+            },
+            {
+              "draw": "!variable.all_aks74u"
+            }
+          ]
+        },
+        "holding": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.hold": "variable.all_aks74u"
+            }
+          ],
+          "transitions": [
+            {
+              "sprint": "variable.all_aks74u && query.is_sprinting && !q.is_in_water"
+            },
+            {
+              "aim": "variable.all_aks74u && query.is_sneaking"
+            },
+            {
+              "back": "variable.all_aks74u && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.aks74u_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_aks74u"
+            }
+          ]
+        },
+        "sprint": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.sprint": "variable.all_aks74u"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_aks74u && !query.is_sprinting"
+            },
+            {
+              "back": "variable.all_aks74u && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.aks74u_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_aks74u"
+            }
+          ]
+        },
+        "back": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.back": "variable.all_aks74u"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_aks74u && !query.is_swimming"
+            },
+            {
+             "sprint": "variable.all_aks74u && query.is_sprinting && !query.is_in_water"
+            },
+            {
+              "reload": "variable.aks74u_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_aks74u"
+            }
+          ]
+        },
+        "aim": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "guns.aim": "variable.all_aks74u"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_aks74u && !query.is_sneaking"
+            },
+            {
+              "reload": "variable.aks74u_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_aks74u"
+            }
+          ]
+        },
+        "reload": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "ak.reload_full": "variable.all_aks74u"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_aks74u && query.all_animations_finished"
+            },
+            {
+              "draw": "!variable.all_aks74u"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+
+{
+    "format_version": "1.8.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "mcpe:welder_mask",
+            "materials": {
+                "default": "armor",
+                "enchanted": "armor_enchanted"
+            },
+            "textures": {
+                "default": "textures/armor/welder_mask",
+                "enchanted": "textures/misc/enchanted_item_glint"
+            },
+            "geometry": {
+                "default": "geometry.hat2"
+            },
+            "scripts": {
+		 "parent_setup": "variable.chest_layer_visible = 0.0;"
+            },
+            "render_controllers": [ "controller.render.armor" ]
+        }
+    }
+}

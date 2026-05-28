@@ -1,0 +1,20 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "f16",
+				"npc_name": "F-16 \"Viper\"",
+				"text": "§lEquippable Items:§r§f \n§rHoming Missile,  \n§rFlare,  \n§rGeneral-purpose Bomb.",
+				"buttons": [
+					{
+						"name": "Attach",
+						"commands": [
+							"/say hi"
+						]
+					}
+				]
+			}
+		]
+	}
+}

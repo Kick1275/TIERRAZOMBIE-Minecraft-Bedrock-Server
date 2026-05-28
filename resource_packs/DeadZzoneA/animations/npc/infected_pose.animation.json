@@ -1,0 +1,148 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.infected.head0": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [0, 0, 15]
+				}
+			}
+		},
+		"animation.infected.head1": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [0, 0, -12.5]
+				}
+			}
+		},
+		"animation.infected.head2": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [5, 0, -2.5]
+				}
+			}
+		},
+		"animation.infected.head3": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [-7.49587, -1.73885, 4.99587]
+				}
+			}
+		},
+		"animation.infected.head4": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [12.91656, -3.0109, -4.93165]
+				}
+			}
+		},
+		"animation.infected.head5": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [-6.58873, -2.70962, -0.25989]
+				}
+			}
+		},
+		"animation.infected.head6": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [18.69011, -11.69232, -13.56916]
+				}
+			}
+		},
+		"animation.infected.head7": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [14.39746, -4.24149, 16.70416]
+				}
+			}
+		},
+		"animation.infected.head8": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [4.25837, 14.147, 17.78387]
+				}
+			}
+		},
+		"animation.infected.head9": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [2.57729, -12.91973, -7.47641]
+				}
+			}
+		},
+		"animation.infected.bodypose0": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [-7.47178, -0.65182, -4.95744]
+				}
+			}
+		},
+		"animation.infected.bodypose1": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [5.38708, 7.35122, 8.13972]
+				},
+				"leftArm": {
+					"rotation": [0, 0, -10]
+				}
+			}
+		},
+		"animation.infected.bodypose2": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [2.50721, -1.24282, -12.45295]
+				},
+				"rightArm": {
+					"rotation": [0, 0, 15]
+				}
+			}
+		},
+		"animation.infected.bodypose3": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [11.93205, -1.45536, 0.29248]
+				},
+				"rightArm": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		},
+		"animation.infected.bodypose4": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [7.17168, -9.37664, -5.62094]
+				},
+				"rightArm": {
+					"rotation": [0, 0, 7.5]
+				}
+			}
+		},
+		"animation.infected.bodypose5": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [14.46063, 9.03115, 11.09167]
+				},
+				"leftArm": {
+					"rotation": [0, 0, -10]
+				}
+			}
+		}
+	}
+}

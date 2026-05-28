@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.backpack.move": {
+      "loop": true,
+      "bones": {
+        "waist": {
+          "rotation": ["query.body_y_rotation - query.target_y_rotation", 0, 0]
+        },
+        "body": {
+          "rotation": [0, "query.body_y_rotation", 0]
+        }
+      }
+    },
+    "animation.backpack.look": {
+      "loop": true,
+      "bones": {
+        "body": {
+          "rotation": [0, "query.body_y_rotation", 0]
+        }
+      }
+    }
+  }
+}

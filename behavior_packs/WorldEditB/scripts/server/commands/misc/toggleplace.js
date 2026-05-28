@@ -1,0 +1,1 @@
+import{registerCommand as e}from"../register_commands.js";import{RawText as t}from"library/Minecraft.js";const n={name:"toggleplace",description:"commands.wedit:toggleplace.description"};e(n,function(o){return o.togglePlacementPosition(),t.translate("commands.wedit:toggleplace.complete")});

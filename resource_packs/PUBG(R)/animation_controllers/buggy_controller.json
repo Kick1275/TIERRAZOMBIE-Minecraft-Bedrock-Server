@@ -1,0 +1,72 @@
+//bridge-file-version: #183
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.buggy.terrain": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"down": "[(query.ground_speed >= 4.75)]"
+						},
+						{
+							"up": "[(query.ground_speed < 4.75)]"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.buggy.driving": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"smoke": "query.is_moving"
+						}
+					]
+				},
+				"smoke": {
+					"transitions": [
+						{
+							"default": "!query.is_moving"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "smoke",
+							"locator": "exhaust"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.buggy.fatal": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fatal": "query.health <= 25"
+						}
+					]
+				},
+				"fatal": {
+					"transitions": [
+						{
+							"default": "query.health > 25"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "engine",
+							"locator": "engine"
+						},
+						{
+							"effect": "flame",
+							"locator": "engine"
+						}
+					]
+				}
+			}
+		}
+	}
+}

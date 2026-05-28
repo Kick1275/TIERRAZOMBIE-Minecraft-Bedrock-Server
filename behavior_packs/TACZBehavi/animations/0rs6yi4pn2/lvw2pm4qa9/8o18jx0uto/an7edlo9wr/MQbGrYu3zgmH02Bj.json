@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.inspectdelay": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 1.0,
+      "timeline": {
+        "0.0": [
+          "@s krep:noinspect"
+        ],
+        "0.2": [
+          "@s krep:noinspect"
+        ],
+        "0.4": [
+          "@s krep:noinspect"
+        ],
+        "0.6": [
+          "@s krep:noinspect"
+        ],
+        "0.8": [
+          "@s krep:noinspect"
+        ],
+        "1.0": [
+          "@s krep:noinspect"
+        ]
+      }
+    }
+  }
+}

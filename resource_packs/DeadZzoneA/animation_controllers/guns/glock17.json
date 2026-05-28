@@ -1,0 +1,146 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.glock17.person": {
+      "initial_state": "draw",
+      "states": {
+        "draw": {
+          "animations": [
+           {
+            "pistol.draw": "variable.glock17"
+            },
+            {
+            "pistol_emp.draw": "variable.glock17_emp"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_glock17 && query.any_animation_finished"
+            },
+            {
+              "draw": "!variable.all_glock17"
+            }
+          ]
+        },
+        "holding": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "pistol.hold": "variable.glock17"
+            },
+           {
+            "pistol_emp.hold": "variable.glock17_emp"
+            }
+          ],
+          "transitions": [
+            {
+              "sprint": "variable.all_glock17 && query.is_sprinting && !q.is_in_water"
+            },
+            {
+              "aim": "variable.all_glock17 && query.is_sneaking"
+            },
+            {
+              "waist": "variable.all_glock17 && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.glock17_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_glock17"
+            }
+          ]
+        },
+        "sprint": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "pistol.sprint": "variable.glock17"
+            },
+           {
+            "pistol_emp.sprint": "variable.glock17_emp"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_glock17 && !query.is_sprinting"
+            },
+            {
+              "waist": "variable.all_glock17 && query.is_swimming && query.is_in_water"
+            },
+            {
+              "reload": "variable.glock17_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_glock17"
+            }
+          ]
+        },
+        "waist": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "pistol.waist": "variable.all_glock17"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_glock17 && !query.is_swimming"
+            },
+            {
+             "sprint": "variable.all_glock17 && query.is_sprinting && !query.is_in_water"
+            },
+            {
+              "reload": "variable.glock17_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_glock17"
+            }
+          ]
+        },
+        "aim": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "pistol.aim": "variable.glock17"
+            },
+           {
+            "pistol_emp.aim": "variable.glock17_emp"
+            }
+          ],
+          "transitions": [
+            {
+             "holding": "variable.all_glock17 && !query.is_sneaking"
+            },
+            {
+              "reload": "variable.glock17_emp && query.mark_variant == 1"
+            },
+            {
+              "draw": "!variable.all_glock17"
+            }
+          ]
+        },
+        "reload": {
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true,
+          "animations": [
+           {
+            "pistol.reload_full": "variable.all_glock17"
+            }
+          ],
+          "transitions": [
+            {
+              "holding": "variable.all_glock17 && query.all_animations_finished"
+            },
+            {
+              "draw": "!variable.all_glock17"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

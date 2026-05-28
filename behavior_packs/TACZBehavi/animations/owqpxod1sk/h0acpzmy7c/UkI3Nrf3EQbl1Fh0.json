@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.minigun.loop": {
+      "loop": true,
+      "animation_length": 0.1,
+      "timeline": {
+        "0.0": [
+          "/scoreboard players remove @s[scores={minigunoverheat=1..}] minigunoverheat 1",
+          "/function minigun"
+        ]
+      }
+    }
+  }
+}

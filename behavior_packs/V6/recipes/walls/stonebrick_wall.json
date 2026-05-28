@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:stonebrick_wall"
+		},
+		"tags": [ "workbench" ],
+		"pattern": [
+			"#",
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:stonebrick",
+				"data": 0
+			}
+		},
+		"result": {
+			"item": "medieval:stonebrick_wall",
+			"count": 12
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.door4_preview",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [2.1, 0.1, -8],
+							"size": [9.6, 18.2, 2],
+							"pivot": [7, 0, 0],
+							"rotation": [0, 90, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 32]},
+								"east": {"uv": [0, 0], "uv_size": [3, 32]},
+								"south": {"uv": [16, 0], "uv_size": [-16, 32]},
+								"west": {"uv": [0, 0], "uv_size": [3, 32]},
+								"up": {"uv": [0, 0], "uv_size": [16, 3]},
+								"down": {"uv": [0, 32], "uv_size": [16, -3]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

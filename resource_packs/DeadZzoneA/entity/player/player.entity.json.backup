@@ -1,0 +1,1144 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "materials": {
+        "default": "villager_v2",
+        "masked": "villager_v2_masked",
+        "cape": "entity_alphatest",
+        "animated": "player_animated",
+        "spectator": "player_spectator",
+        "render": "entity_alphablend",
+        "night_vision": "night_vision"
+      },
+      "textures": {
+        "default": "textures/entity/steve",
+        "cape": "textures/entity/cape_invisible",
+
+        "ss1": "textures/entity/guns/ss1",
+        "ak47": "textures/entity/guns/ak47",
+        "python": "textures/entity/guns/python",
+        "izh43": "textures/entity/guns/izh43",
+        "rpk": "textures/entity/guns/rpk",
+        "fal": "textures/entity/guns/fal",
+        "aks74u": "textures/entity/guns/aks74u",
+        "glock17": "textures/entity/guns/glock17",
+        "mp5": "textures/entity/guns/mp5",
+        "m1014": "textures/items/guns/sg/m1014",
+        "garand": "textures/items/guns/rifle/garand",
+        "l96a1": "textures/entity/guns/l96a1",
+        "cz527": "textures/entity/guns/cz527",
+        "svd": "textures/entity/guns/svd",
+        "famas": "textures/entity/guns/famas",
+        "m4a1": "textures/entity/guns/m4a1",
+        "m14": "textures/entity/guns/m14",
+        "m1897": "textures/entity/guns/m1897",
+        "m1911": "textures/entity/guns/m1911",
+        "ump45": "textures/entity/guns/ump45",
+        "l2a3": "textures/entity/guns/l2a3",
+        "anaconda": "textures/entity/guns/anaconda",
+        "anaconda_sight": "textures/scope/anaconda_sight",
+        "python_sight": "textures/scope/python_sight",
+        "izh43_sight": "textures/scope/izh43_sight",
+        "ak47_sight": "textures/scope/ak47_sight",
+        "ss1_sight": "textures/scope/ss1_sight",
+        "m1014_sight": "textures/scope/m1014_sight",
+        "glock17_sight": "textures/scope/glock17_sight",
+        "fal_sight": "textures/scope/fal_sight",
+        "hunting_scope": "textures/scope/hunting_scope",
+        "pso_scope": "textures/scope/pso_scope",
+        "rpk_sight": "textures/scope/rpk_sight",
+        "pu_scope": "textures/scope/pu_scope",
+        "garand_sight": "textures/scope/garand_sight",
+        "m4a1_sight": "textures/scope/m4a1_sight",
+        "m1911_sight": "textures/scope/m1911_sight",
+        "m14_sight": "textures/scope/m14_sight",
+        "m1897_sight": "textures/scope/m1897_sight",
+        "mp5_sight": "textures/scope/mp5_sight",
+        "aks74u_sight": "textures/scope/aks74u_sight",
+        "l2a3_sight": "textures/scope/l2a3_sight",
+        "famas_sight": "textures/scope/famas_sight",
+        "ump45_sight": "textures/scope/ump45_sight",
+        "night_goggle": "textures/scope/night_goggle",
+        "bdu_desert": "textures/clothes/bdu_desert",
+        "police_special": "textures/clothes/police_special",
+        "bdu_urban": "textures/clothes/bdu_urban",
+        "bdu_woodland": "textures/clothes/bdu_woodland",
+        "chainmail": "textures/clothes/chainmails",
+        "crusader": "textures/clothes/crusader",
+        "clown": "textures/clothes/clown",
+        "firefighter": "textures/clothes/firefighter",
+        "plaid_blue": "textures/clothes/plaid_blue",
+        "flannel_green": "textures/clothes/flannel_green",
+        "flannel_red": "textures/clothes/flannel_red",
+        "flannel_white": "textures/clothes/flannel_white",
+        "flannel_blue": "textures/clothes/flannel_blue",
+        "formal_white": "textures/clothes/formal_white",
+        "ghillie_forest": "textures/clothes/ghillie_forest",
+        "ghillie_snow": "textures/clothes/ghillie_snow",
+        "gorka": "textures/clothes/gorka",
+        "hazmat_yellow": "textures/clothes/hazmat_yellow",
+        "hazmat_white": "textures/clothes/hazmat_white",
+        "hoodie_black": "textures/clothes/hoodie_black",
+        "hoodie_red": "textures/clothes/hoodie_red",
+        "hoodie_blue": "textures/clothes/hoodie_blue",
+        "hoodie_green": "textures/clothes/hoodie_green",
+        "hoodie_yellow": "textures/clothes/hoodie_yellow",
+        "hoodie_white": "textures/clothes/hoodie_white",
+        "leather_brown": "textures/clothes/leather_brown",
+        "leather_black": "textures/clothes/leather_black",
+        "pancasila": "textures/clothes/pancasila",
+        "paramedic": "textures/clothes/paramedic",
+        "plaid_tan": "textures/clothes/plaid_tan",
+        "plaid_red": "textures/clothes/plaid_red",
+        "plaid_white": "textures/clothes/plaid_white",
+        "plaid_gray": "textures/clothes/plaid_gray",
+        "plaid_olive": "textures/clothes/plaid_olive",
+        "police": "textures/clothes/police_uniform",
+        "prisoner": "textures/clothes/prisoner",
+        "puffer_black": "textures/clothes/puffer_black",
+        "puffer_blue": "textures/clothes/puffer_blue",
+        "sherif": "textures/clothes/sherif_uniform",
+        "sleeve_blue": "textures/clothes/sleeve_blue",
+        "sleeve_white": "textures/clothes/sleeve_white",
+        "sleeve_yellow": "textures/clothes/sleeve_yellow",
+        "special": "textures/clothes/special_uniform",
+        "striped_blue": "textures/clothes/striped_blue",
+        "striped_white": "textures/clothes/striped_white",
+        "sweater_green": "textures/clothes/sweater_green",
+        "sweater_white": "textures/clothes/sweater_white",
+        "tactical_green": "textures/clothes/tactical_green",
+        "tactical_tan": "textures/clothes/tactical_tan",
+        "tactical_red": "textures/clothes/tactical_red",
+        "tactical_white": "textures/clothes/tactical_white",
+        "tracksuit_black": "textures/clothes/tracksuit_black",
+        "varsity_blue": "textures/clothes/varsity_blue",
+        "varsity_red": "textures/clothes/varsity_red",
+        "stripeds_black": "textures/clothes/stripeds_black",
+        "tracksuit_blue": "textures/clothes/tracksuit_blue",
+        "tracksuit_red": "textures/clothes/tracksuit_red",
+        "tactical_navy": "textures/clothes/tactical_navy",
+        "flannel_gray": "textures/clothes/flannel_gray",
+        "hiking_blue": "textures/clothes/hiking_blue",
+        "hiking_black": "textures/clothes/hiking_black",
+        "hawaiian_red": "textures/clothes/hawaiian_red",
+        "hawaiian_black": "textures/clothes/hawaiian_black",
+        "sleeve_black": "textures/clothes/sleeve_black",
+        "suede_brown": "textures/clothes/suede_brown",
+        "suit_black": "textures/clothes/suit_black",
+        "varsity_brown": "textures/clothes/varsity_brown",
+        "varsity_green": "textures/clothes/varsity_green",
+        "plague_doctor": "textures/clothes/plague_doctor",
+        "maid_top": "textures/clothes/maid_top",
+        "kopassus": "textures/clothes/kopassus",
+        "bdu_artic": "textures/clothes/bdu_artic",
+        "ghillie_drygrass": "textures/clothes/ghillie_drygrass",
+        "tshirt_white": "textures/clothes/tshirt_white",
+        "m1894c": "textures/entity/guns/m1894c",
+        "m1894c_sight": "textures/scope/m1894c_sight",
+        "ak74": "textures/entity/guns/ak74",
+        "m79": "textures/entity/guns/m79",
+        "m79_sight": "textures/scope/m79_sight",
+        "sks": "textures/items/guns/rifle/sks",
+        "sks_sight": "textures/scope/sks_sight",
+        "makarov": "textures/entity/guns/makarov",
+        "makarov_pb": "textures/entity/guns/makarov_pb",
+        "makarov_sight": "textures/scope/makarov_sight",
+        "mosin": "textures/items/guns/rifle/mosin",
+        "vz65": "textures/entity/guns/vz65",
+        "vz65_sight": "textures/scope/vz65_sight",
+        "m16a1": "textures/entity/guns/m16a1",
+        "hero_flannel": "textures/clothes/hero_flannel",
+        "tshirt_black": "textures/clothes/tshirt_black",
+        "tshirt_yellow": "textures/clothes/tshirt_yellow",
+        "tshirt_red": "textures/clothes/tshirt_red",
+        "tshirt_blue": "textures/clothes/tshirt_blue",
+        "tshirt_green": "textures/clothes/tshirt_green",
+        "m870": "textures/entity/guns/m870",
+        "m870_sight": "textures/scope/m870_sight",
+        "asval": "textures/entity/guns/asval",
+        "crosshair": "textures/crosshair/crosshair",
+        "crosshair_black": "textures/crosshair/color/black",
+        "crosshair_blue": "textures/crosshair/color/blue",
+        "crosshair_gray": "textures/crosshair/color/gray",
+        "crosshair_orange": "textures/crosshair/color/orange",
+        "crosshair_pink": "textures/crosshair/color/pink",
+        "crosshair_red": "textures/crosshair/color/red",
+        "crosshair_yellow": "textures/crosshair/color/yellow",
+        "deadzone": "textures/picture/deadzone"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.custom",
+        "slim": "geometry.humanoid.custom",
+        "cape": "geometry.cape",
+        "ss1": "geometry.ss1",
+        "ak47": "geometry.ak47",
+        "python": "geometry.python",
+        "izh43": "geometry.izh43",
+        "fal": "geometry.fal",
+        "rpk": "geometry.rpk",
+        "mp5": "geometry.mp5",
+        "glock17": "geometry.glock17",
+        "aks74u": "geometry.aks74u",
+        "m1014": "geometry.m1014",
+        "garand": "geometry.garand",
+        "l96a1": "geometry.l96a1",
+        "cz527": "geometry.cz527",
+        "famas": "geometry.famas",
+        "m4a1": "geometry.m4a1",
+        "m14": "geometry.m14",
+        "m1897": "geometry.m1897",
+        "m1911": "geometry.m1911",
+        "ump45": "geometry.ump45",
+        "svd": "geometry.svd",
+        "l2a3": "geometry.l2a3",
+        "scope": "geometry.scope",
+        "night_goggle": "geometry.night_goggle",
+        "clothes": "geometry.clothes_top",
+        "clothes_2": "geometry.clothes_2_top",
+        "clothes_hood": "geometry.clothes_hood",
+        "ghillie": "geometry.ghillie_top",
+        "maid": "geometry.maid",
+        "m1894c": "geometry.m1894c",
+        "anaconda": "geometry.anaconda",
+        "ak74": "geometry.ak74",
+        "m79": "geometry.m79",
+        "sks": "geometry.sks",
+        "makarov": "geometry.makarov",
+        "makarov_pb": "geometry.makarov_pb",
+        "mosin": "geometry.mosin",
+        "vz65": "geometry.vz61",
+        "m16a1": "geometry.m16a1",
+        "m870": "geometry.m870",
+        "asval": "geometry.asval",
+        "nz_setup": "geometry.ear_tail",
+        "mapdz": "geometry.mapdz",
+        "crosshair": "geometry.crosshair"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "initialize": [
+          "v.is_holding_right = 0.0;",
+          "v.is_blinking = 0.0;",
+          "v.last_blink_time = 0.0;",
+          "v.hand_bob = 0.0;"
+        ],
+        "pre_animation": [
+          "v.reload = q.property('mcpe:reload');",
+          "v.crosshair_color = q.property('mcpe:crosshair_color');",
+          "v.helmet_layer_visible = 1.0;",
+          "v.leg_layer_visible = 1.0;",
+          "v.boot_layer_visible = 1.0;",
+          "v.chest_layer_visible = 1.0;",
+          "v.attack_body_rot_y = Math.sin(360*Math.sqrt(v.attack_time)) * 5.0;",
+          "v.tcos0 = (math.cos(q.modified_distance_moved * 38.17) * q.modified_move_speed / v.gliding_speed_value) * 57.3;",
+          "v.first_person_rotation_factor = math.sin((1 - v.attack_time) * 180.0);",
+          "v.hand_bob = q.life_time < 0.01 ? 0.0 : v.hand_bob + ((q.is_on_ground && q.is_alive ? math.clamp(math.sqrt(math.pow(q.position_delta(0), 2.0) + math.pow(q.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - v.hand_bob) * 0.02;",
+          "v.map_angle = math.clamp(1 - v.player_x_rotation / 45.1, 0.0, 1.0);",
+          "v.item_use_normalized = q.main_hand_item_use_duration / q.main_hand_item_max_duration;",
+          "v.guns = q.equipped_item_any_tag('slot.weapon.mainhand', 'guns');",
+          "v.empty_guns = q.equipped_item_any_tag('slot.weapon.mainhand', 'empty_guns');",
+          "v.all_ss1 =  q.get_equipped_item_name('main_hand') == 'ss1' || q.get_equipped_item_name('main_hand') == 'ss1_emp';",
+          "v.ss1 = q.get_equipped_item_name('main_hand') == 'ss1';",
+          "v.ss1_emp = q.get_equipped_item_name('main_hand') == 'ss1_emp';",
+          "v.all_ak47 = q.get_equipped_item_name('main_hand') == 'ak47' || q.get_equipped_item_name('main_hand') == 'ak47_emp';",
+          "v.ak47 = q.get_equipped_item_name('main_hand') == 'ak47';",
+          "v.ak47_emp = q.get_equipped_item_name('main_hand') == 'ak47_emp';",
+          "v.all_python = q.get_equipped_item_name('main_hand') == 'python' || q.get_equipped_item_name('main_hand') == 'python_emp';",
+          "v.python = q.get_equipped_item_name('main_hand') == 'python';",
+          "v.python_emp = q.get_equipped_item_name('main_hand') == 'python_emp';",
+          "v.all_izh43 = q.get_equipped_item_name('main_hand') == 'izh43' || q.get_equipped_item_name('main_hand') == 'izh43_emp';",
+          "v.izh43 = q.get_equipped_item_name('main_hand') == 'izh43';",
+          "v.izh43_emp = q.get_equipped_item_name('main_hand') == 'izh43_emp';",
+          "v.all_rpk = q.get_equipped_item_name('main_hand') == 'rpk' || q.get_equipped_item_name('main_hand') == 'rpk_emp';",
+          "v.rpk = q.get_equipped_item_name('main_hand') == 'rpk';",
+          "v.rpk_emp = q.get_equipped_item_name('main_hand') == 'rpk_emp';",
+          "v.all_fal = q.get_equipped_item_name('main_hand') == 'fal' || q.get_equipped_item_name('main_hand') == 'fal_emp';",
+          "v.fal = q.get_equipped_item_name('main_hand') == 'fal';",
+          "v.fal_emp = q.get_equipped_item_name('main_hand') == 'fal_emp';",
+          "v.all_aks74u = q.get_equipped_item_name('main_hand') == 'aks74u' || q.get_equipped_item_name('main_hand') == 'aks74u_emp';",
+          "v.aks74u = q.get_equipped_item_name('main_hand') == 'aks74u';",
+          "v.aks74u_emp = q.get_equipped_item_name('main_hand') == 'aks74u_emp';",
+          "v.all_glock17 = q.get_equipped_item_name('main_hand') == 'glock17' || q.get_equipped_item_name('main_hand') == 'glock17_emp';",
+          "v.glock17 = q.get_equipped_item_name('main_hand') == 'glock17';",
+          "v.glock17_emp = q.get_equipped_item_name('main_hand') == 'glock17_emp';",
+          "v.all_mp5 = q.get_equipped_item_name('main_hand') == 'mp5' || q.get_equipped_item_name('main_hand') == 'mp5_emp';",
+          "v.mp5 = q.get_equipped_item_name('main_hand') == 'mp5';",
+          "v.mp5_emp = q.get_equipped_item_name('main_hand') == 'mp5_emp';",
+          "v.all_m1014 = q.get_equipped_item_name('main_hand') == 'm1014' || q.get_equipped_item_name('main_hand') == 'm1014_emp';",
+          "v.m1014 = q.get_equipped_item_name('main_hand') == 'm1014';",
+          "v.m1014_emp = q.get_equipped_item_name('main_hand') == 'm1014_emp';",
+          "v.all_garand = q.get_equipped_item_name('main_hand') == 'garand' || q.get_equipped_item_name('main_hand') == 'garand_emp';",
+          "v.garand = q.get_equipped_item_name('main_hand') == 'garand';",
+          "v.garand_emp = q.get_equipped_item_name('main_hand') == 'garand_emp';",
+          "v.all_l96a1 = q.get_equipped_item_name('main_hand') == 'l96a1' || q.get_equipped_item_name('main_hand') == 'l96a1_emp';",
+          "v.l96a1 = q.get_equipped_item_name('main_hand') == 'l96a1';",
+          "v.l96a1_emp = q.get_equipped_item_name('main_hand') == 'l96a1_emp';",
+          "v.all_famas = q.get_equipped_item_name('main_hand') == 'famas' || q.get_equipped_item_name('main_hand') == 'famas_emp';",
+          "v.famas = q.get_equipped_item_name('main_hand') == 'famas';",
+          "v.famas_emp = q.get_equipped_item_name('main_hand') == 'famas_emp';",
+          "v.all_m4a1 = q.get_equipped_item_name('main_hand') == 'm4a1' || q.get_equipped_item_name('main_hand') == 'm4a1_emp';",
+          "v.m4a1 = q.get_equipped_item_name('main_hand') == 'm4a1';",
+          "v.m4a1_emp = q.get_equipped_item_name('main_hand') == 'm4a1_emp';",
+          "v.all_m14 = q.get_equipped_item_name('main_hand') == 'm14' || q.get_equipped_item_name('main_hand') == 'm14_emp';",
+          "v.m14 = q.get_equipped_item_name('main_hand') == 'm14';",
+          "v.m14_emp = q.get_equipped_item_name('main_hand') == 'm14_emp';",
+          "v.all_m1897 = q.get_equipped_item_name('main_hand') == 'm1897' || q.get_equipped_item_name('main_hand') == 'm1897_emp';",
+          "v.m1897 = q.get_equipped_item_name('main_hand') == 'm1897';",
+          "v.m1897_emp = q.get_equipped_item_name('main_hand') == 'm1897_emp';",
+          "v.all_m1911 = q.get_equipped_item_name('main_hand') == 'm1911' || q.get_equipped_item_name('main_hand') == 'm1911_emp';",
+          "v.m1911 = q.get_equipped_item_name('main_hand') == 'm1911';",
+          "v.m1911_emp = q.get_equipped_item_name('main_hand') == 'm1911_emp';",
+          "v.all_ump45 = q.get_equipped_item_name('main_hand') == 'ump45' || q.get_equipped_item_name('main_hand') == 'ump45_emp';",
+          "v.ump45 = q.get_equipped_item_name('main_hand') == 'ump45';",
+          "v.ump45_emp = q.get_equipped_item_name('main_hand') == 'ump45_emp';",
+          "v.all_cz527 = q.get_equipped_item_name('main_hand') == 'cz527' || q.get_equipped_item_name('main_hand') == 'cz527_emp';",
+          "v.cz527 = q.get_equipped_item_name('main_hand') == 'cz527';",
+          "v.cz527_emp = q.get_equipped_item_name('main_hand') == 'cz527_emp';",
+          "v.all_svd = q.get_equipped_item_name('main_hand') == 'svd' || q.get_equipped_item_name('main_hand') == 'svd_emp';",
+          "v.svd = q.get_equipped_item_name('main_hand') == 'svd';",
+          "v.svd_emp = q.get_equipped_item_name('main_hand') == 'svd_emp';",
+          "v.all_l2a3 = q.get_equipped_item_name('main_hand') == 'l2a3' || q.get_equipped_item_name('main_hand') == 'l2a3_emp';",
+          "v.l2a3 = q.get_equipped_item_name('main_hand') == 'l2a3';",
+          "v.l2a3_emp = q.get_equipped_item_name('main_hand') == 'l2a3_emp';",
+          "v.all_ak74 = q.get_equipped_item_name('main_hand') == 'ak74' || q.get_equipped_item_name('main_hand') == 'ak74_emp';",
+          "v.ak74 = q.get_equipped_item_name('main_hand') == 'ak74';",
+          "v.ak74_emp = q.get_equipped_item_name('main_hand') == 'ak74_emp';",
+          "v.all_sks = q.get_equipped_item_name('main_hand') == 'sks' || q.get_equipped_item_name('main_hand') == 'sks_emp';",
+          "v.sks = q.get_equipped_item_name('main_hand') == 'sks';",
+          "v.sks_emp = q.get_equipped_item_name('main_hand') == 'sks_emp';",
+          "v.all_m79 = q.get_equipped_item_name('main_hand') == 'm79' || q.get_equipped_item_name('main_hand') == 'm79_emp';",
+          "v.m79 = q.get_equipped_item_name('main_hand') == 'm79';",
+          "v.m79_emp = q.get_equipped_item_name('main_hand') == 'm79_emp';",
+          "v.all_makarov = q.get_equipped_item_name('main_hand') == 'makarov' || q.get_equipped_item_name('main_hand') == 'makarov_emp';",
+          "v.makarov = q.get_equipped_item_name('main_hand') == 'makarov';",
+          "v.makarov_emp = q.get_equipped_item_name('main_hand') == 'makarov_emp';",
+          "v.all_makarov_pb = q.get_equipped_item_name('main_hand') == 'makarov_pb' || q.get_equipped_item_name('main_hand') == 'makarov_pb_emp';",
+          "v.makarov_pb = q.get_equipped_item_name('main_hand') == 'makarov_pb';",
+          "v.makarov_pb_emp = q.get_equipped_item_name('main_hand') == 'makarov_pb_emp';",
+          "v.all_mosin = q.get_equipped_item_name('main_hand') == 'mosin' || q.get_equipped_item_name('main_hand') == 'mosin_emp';",
+          "v.mosin = q.get_equipped_item_name('main_hand') == 'mosin';",
+          "v.mosin_emp = q.get_equipped_item_name('main_hand') == 'mosin_emp';",
+          "v.all_asval = q.get_equipped_item_name('main_hand') == 'asval' || q.get_equipped_item_name('main_hand') == 'asval_emp';",
+          "v.asval = q.get_equipped_item_name('main_hand') == 'asval';",
+          "v.asval_emp = q.get_equipped_item_name('main_hand') == 'asval_emp';",
+          "v.all_m870 = q.get_equipped_item_name('main_hand') == 'm870' || q.get_equipped_item_name('main_hand') == 'm870_emp';",
+          "v.m870 = q.get_equipped_item_name('main_hand') == 'm870';",
+          "v.m870_emp = q.get_equipped_item_name('main_hand') == 'm870_emp';",
+          "v.night_goggle = q.equipped_item_any_tag('slot.armor.head','night_vision');",
+          "v.bdu_desert = q.equipped_item_any_tag('slot.armor.legs', 'bdu_desert');",
+          "v.police_special = q.equipped_item_any_tag('slot.armor.legs', 'police_special');",
+          "v.bdu_urban = q.equipped_item_any_tag('slot.armor.legs', 'bdu_urban');",
+          "v.bdu_woodland = q.equipped_item_any_tag('slot.armor.legs', 'bdu_woodland');",
+          "v.clown = q.equipped_item_any_tag('slot.armor.legs', 'clown');",
+          "v.chainmail = q.equipped_item_any_tag('slot.armor.legs', 'chainmail');",
+          "v.crusader = q.equipped_item_any_tag('slot.armor.legs', 'crusader');",
+          "v.firefighter = q.equipped_item_any_tag('slot.armor.legs', 'firefighter');",
+          "v.flannel_green = q.equipped_item_any_tag('slot.armor.legs', 'flannel_green');",
+          "v.flannel_red = q.equipped_item_any_tag('slot.armor.legs', 'flannel_red');",
+          "v.flannel_white = q.equipped_item_any_tag('slot.armor.legs', 'flannel_white');",
+          "v.formal_white = q.equipped_item_any_tag('slot.armor.legs', 'formal_white');",
+          "v.ghillie_forest = q.equipped_item_any_tag('slot.armor.legs', 'ghillie_forest');",
+          "v.gorka = q.equipped_item_any_tag('slot.armor.legs', 'gorka');",
+          "v.hazmat_yellow = q.equipped_item_any_tag('slot.armor.legs', 'hazmat_yellow');",
+          "v.hoodie_black = q.equipped_item_any_tag('slot.armor.legs', 'hoodie_black');",
+          "v.hoodie_red = q.equipped_item_any_tag('slot.armor.legs', 'hoodie_red');",
+          "v.leather_black = q.equipped_item_any_tag('slot.armor.legs', 'leather_black');",
+          "v.pancasila = q.equipped_item_any_tag('slot.armor.legs', 'pancasila');",
+          "v.paramedic = q.equipped_item_any_tag('slot.armor.legs', 'paramedic');",
+          "v.plaid_blue = q.equipped_item_any_tag('slot.armor.legs', 'plaid_blue');",
+          "v.plaid_tan = q.equipped_item_any_tag('slot.armor.legs', 'plaid_tan');",
+          "v.plaid_red = q.equipped_item_any_tag('slot.armor.legs', 'plaid_red');",
+          "v.police = q.equipped_item_any_tag('slot.armor.legs', 'police');",
+          "v.prisoner = q.equipped_item_any_tag('slot.armor.legs', 'prisoner');",
+          "v.puffer_black = q.equipped_item_any_tag('slot.armor.legs', 'puffer_black');",
+          "v.puffer_blue = q.equipped_item_any_tag('slot.armor.legs', 'puffer_blue');",
+          "v.sherif = q.equipped_item_any_tag('slot.armor.legs', 'sherif');",
+          "v.sleeve_blue = q.equipped_item_any_tag('slot.armor.legs', 'sleeve_blue');",
+          "v.sleeve_white = q.equipped_item_any_tag('slot.armor.legs', 'sleeve_white');",
+          "v.sleeve_yellow = q.equipped_item_any_tag('slot.armor.legs', 'sleeve_yellow');",
+          "v.special = q.equipped_item_any_tag('slot.armor.legs', 'special');",
+          "v.striped_blue = q.equipped_item_any_tag('slot.armor.legs', 'striped_blue');",
+          "v.striped_white = q.equipped_item_any_tag('slot.armor.legs', 'striped_white');",
+          "v.sweater_green = q.equipped_item_any_tag('slot.armor.legs', 'sweater_green');",
+          "v.sweater_white = q.equipped_item_any_tag('slot.armor.legs', 'sweater_white');",
+          "v.tactical_green = q.equipped_item_any_tag('slot.armor.legs', 'tactical_green');",
+          "v.tactical_tan = q.equipped_item_any_tag('slot.armor.legs', 'tactical_tan');",
+          "v.tracksuit_black = q.equipped_item_any_tag('slot.armor.legs', 'tracksuit_black');",
+          "v.varsity_blue = q.equipped_item_any_tag('slot.armor.legs', 'varsity_blue');",
+          "v.varsity_red = q.equipped_item_any_tag('slot.armor.legs', 'varsity_red');",
+          "v.stripeds_black = q.equipped_item_any_tag('slot.armor.legs', 'stripeds_black');",
+          "v.tracksuit_blue = q.equipped_item_any_tag('slot.armor.legs', 'tracksuit_blue');",
+          "v.tactical_navy = q.equipped_item_any_tag('slot.armor.legs', 'tactical_navy');",
+          "v.flannel_gray = q.equipped_item_any_tag('slot.armor.legs', 'flannel_gray');",
+          "v.hiking_blue = q.equipped_item_any_tag('slot.armor.legs', 'hiking_blue');",
+          "v.sleeve_black = q.equipped_item_any_tag('slot.armor.legs', 'sleeve_black');",
+          "v.hawaiian_red = q.equipped_item_any_tag('slot.armor.legs', 'hawaiian_red');",
+          "v.suit_black = q.equipped_item_any_tag('slot.armor.legs', 'suit_black');",
+          "v.bdu_artic = q.equipped_item_any_tag('slot.armor.legs', 'bdu_artic');",
+          "v.flannel_blue = q.equipped_item_any_tag('slot.armor.legs', 'flannel_blue');",
+          "v.ghillie_snow = q.equipped_item_any_tag('slot.armor.legs', 'ghillie_snow');",
+          "v.hazmat_white = q.equipped_item_any_tag('slot.armor.legs', 'hazmat_white');",
+          "v.hiking_black = q.equipped_item_any_tag('slot.armor.legs','hiking_black');",
+          "v.hoodie_blue = q.equipped_item_any_tag('slot.armor.legs', 'hoodie_blue');",
+          "v.hoodie_green = q.equipped_item_any_tag('slot.armor.legs', 'hoodie_green');",
+          "v.hoodie_yellow = q.equipped_item_any_tag('slot.armor.legs', 'hoodie_yellow');",
+          "v.hoodie_white = q.equipped_item_any_tag('slot.armor.legs', 'hoodie_white');",
+          "v.leather_brown = q.equipped_item_any_tag('slot.armor.legs', 'leather_brown');",
+          "v.kopassus = q.equipped_item_any_tag('slot.armor.legs', 'kopassus');",
+          "v.plaid_gray = q.equipped_item_any_tag('slot.armor.legs', 'plaid_gray');",
+          "v.plaid_olive = q.equipped_item_any_tag('slot.armor.legs', 'plaid_olive');",
+          "v.plaid_white = q.equipped_item_any_tag('slot.armor.legs', 'plaid_white');",
+          "v.tactical_red = q.equipped_item_any_tag('slot.armor.legs', 'tactical_red');",
+          "v.tactical_white = q.equipped_item_any_tag('slot.armor.legs', 'tactical_white');",
+          "v.tracksuit_red = q.equipped_item_any_tag('slot.armor.legs', 'tracksuit_red');",
+          "v.varsity_brown = q.equipped_item_any_tag('slot.armor.legs', 'varsity_brown');",
+          "v.varsity_green = q.equipped_item_any_tag('slot.armor.legs', 'varsity_green');",
+          "v.suede_brown = q.equipped_item_any_tag('slot.armor.legs', 'suede_brown');",
+          "v.maid = q.equipped_item_any_tag('slot.armor.legs', 'maid');",
+          "v.plague_doctor = q.equipped_item_any_tag('slot.armor.legs', 'plague_doctor');",
+          "v.hawaiian_black = q.equipped_item_any_tag('slot.armor.legs', 'hawaiian_black');",
+          "v.tshirt_white = q.equipped_item_any_tag('slot.armor.legs', 'tshirt_white');",
+          "v.all_m1894c = q.get_equipped_item_name('main_hand') == 'm1894c' || q.get_equipped_item_name('main_hand') == 'm1894c_emp';",
+          "v.m1894c = q.get_equipped_item_name('main_hand') == 'm1894c';",
+          "v.m1894c_emp = q.get_equipped_item_name('main_hand') == 'm1894c_emp';",
+          "v.all_anaconda = q.get_equipped_item_name('main_hand') == 'anaconda' || q.get_equipped_item_name('main_hand') == 'anaconda_emp';",
+          "v.anaconda = q.get_equipped_item_name('main_hand') == 'anaconda';",
+          "v.anaconda_emp = q.get_equipped_item_name('main_hand') == 'anaconda_emp';",
+          "v.ghillie_drygrass = q.equipped_item_any_tag('slot.armor.legs', 'ghillie_drygrass');",
+          "v.all_vz65 = q.get_equipped_item_name('main_hand') == 'vz65' || q.get_equipped_item_name('main_hand') == 'vz65_emp';",
+          "v.vz65 = q.get_equipped_item_name('main_hand') == 'vz65';",
+          "v.vz65_emp = q.get_equipped_item_name('main_hand') == 'vz65_emp';",
+          "v.all_m16a1 = q.get_equipped_item_name('main_hand') == 'm16a1' || q.get_equipped_item_name('main_hand') == 'm16a1_emp';",
+          "v.m16a1 = q.get_equipped_item_name('main_hand') == 'm16a1';",
+          "v.m16a1_emp = q.get_equipped_item_name('main_hand') == 'm16a1_emp';",
+          "v.hero_flannel = q.equipped_item_any_tag('slot.armor.legs', 'hero_flannel');",
+          "v.tshirt_black = q.equipped_item_any_tag('slot.armor.legs', 'tshirt_black');",
+          "v.tshirt_red = q.equipped_item_any_tag('slot.armor.legs', 'tshirt_red');",
+          "v.tshirt_blue = q.equipped_item_any_tag('slot.armor.legs', 'tshirt_blue');",
+          "v.tshirt_yellow = q.equipped_item_any_tag('slot.armor.legs', 'tshirt_yellow');",
+          "v.tshirt_green = q.equipped_item_any_tag('slot.armor.legs', 'tshirt_green');",
+          "v.pistol = q.equipped_item_any_tag('slot.weapon.mainhand', 'pistol');",
+          "v.rifle = q.equipped_item_any_tag('slot.weapon.mainhand', 'rifle');",
+          "v.shotgun = q.equipped_item_any_tag('slot.weapon.mainhand', 'shotgun');",
+          "v.sniper = q.equipped_item_any_tag('slot.weapon.mainhand', 'sniper');",
+          "v.launcher = q.equipped_item_any_tag('slot.weapon.mainhand', 'launcher');"
+        ],
+        "animate": [
+          "root",
+          "hud_controller",
+          "ak47_person",
+          "sks_person",
+          "glock17_person",
+          "m1911_person",
+          "ss1_person",
+          "m4a1_person",
+          "m16a1_person",
+          "makarov_person",
+          "makarov_pb_person",
+          "m14_person",
+          "ak74_person",
+          "aks74u_person",
+          "rpk_person",
+          "svd_person",
+          "izh43_person",
+          "ump45_person",
+          "mp5_person",
+          "anaconda_person",
+          "python_person",
+          "garand_person",
+          "fal_person",
+          "famas_person",
+          "l2a3_person",
+          "vz65_person",
+          "cz527_person",
+          "l96a1_person",
+          "m79_person",
+          "mosin_person",
+          "m870_person",
+          "m1897_person",
+          "m1014_person",
+          "asval_person",
+          "m1894c_person"
+        ]
+      },
+      "sound_effects": {
+        "draw.sound": "gun.draw",
+        "lever.action_close": "lever.close",
+        "lever.action_open": "lever.open",
+        "pump.action_forward": "pump.forward",
+        "pump.action_back": "pump.back",
+        "bolt.action_forward": "bolt.forward",
+        "bolt.action_back": "bolt.back"
+      },
+      "particle_effects": {
+        "muzzle.flash": "mcpe:muzzle",
+        "muzzle.smoke": "mcpe:muzzle_smoke"
+      },
+      "animations": {
+        "root": "controller.animation.player.root",
+        "base_controller": "controller.animation.player.base",
+        "hudplayer": "controller.animation.player.hudplayer",
+        "humanoid_base_pose": "animation.humanoid.base_pose",
+        "look_at_target": "controller.animation.humanoid.look_at_target",
+        "look_at_target_ui": "animation.player.look_at_target.ui",
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "look_at_target_inverted": "animation.player.look_at_target.inverted",
+        "cape": "animation.player.cape",
+        "move.arms": "animation.player.move.arms",
+        "move.legs": "animation.player.move.legs",
+        "swimming": "animation.player.swim",
+        "swimming.legs": "animation.player.swim.legs",
+        "riding.arms": "animation.player.riding.arms",
+        "riding.legs": "animation.player.riding.legs",
+        "holding": "animation.player.holding",
+        "brandish_spear": "animation.humanoid.brandish_spear",
+        "holding_spyglass": "animation.humanoid.holding_spyglass",
+        "charging": "animation.humanoid.charging",
+        "attack.positions": "animation.player.attack.positions",
+        "attack.rotations": "animation.player.attack.rotations",
+        "sneaking": "animation.player.sneaking",
+        "bob": "animation.player.bob",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "bow_and_arrow": "animation.humanoid.bow_and_arrow",
+        "use_item_progress": "animation.humanoid.use_item_progress",
+        "skeleton_attack": "animation.skeleton.attack",
+        "sleeping": "animation.player.sleeping",
+        "first_person_base_pose": "animation.player.first_person.base_pose",
+        "first_person_empty_hand": "animation.player.first_person.empty_hand",
+        "first_person_swap_item": "animation.player.first_person.swap_item",
+        "first_person_shield_block": "animation.player.first_person.shield_block",
+        "first_person_attack_controller": "controller.animation.player.first_person_attack",
+        "first_person_attack_rotation": "animation.player.first_person.attack_rotation",
+        "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",
+        "first_person_walk": "animation.player.first_person.walk",
+        "first_person_map_controller": "controller.animation.player.first_person_map",
+        "first_person_map_hold": "animation.player.first_person.map_hold",
+        "first_person_map_hold_attack": "animation.player.first_person.map_hold_attack",
+        "first_person_map_hold_off_hand": "animation.player.first_person.map_hold_off_hand",
+        "first_person_map_hold_main_hand": "animation.player.first_person.map_hold_main_hand",
+        "first_person_crossbow_equipped": "animation.player.first_person.crossbow_equipped",
+        "third_person_crossbow_equipped": "animation.player.crossbow_equipped",
+        "third_person_bow_equipped": "animation.player.bow_equipped",
+        "crossbow_hold": "animation.player.crossbow_hold",
+        "crossbow_controller": "controller.animation.player.crossbow",
+        "shield_block_main_hand": "animation.player.shield_block_main_hand",
+        "shield_block_off_hand": "animation.player.shield_block_off_hand",
+        "blink": "controller.animation.persona.blink",
+        "tooting_goat_horn": "animation.humanoid.tooting_goat_horn",
+        "holding_brush": "animation.humanoid.holding_brush",
+        "brushing": "animation.humanoid.brushing",
+        "sprinting": "animation.player.sprinting",
+        "guns.hold": "animation.guns.hold",
+        "guns.aim": "animation.guns.aim",
+        "guns.sprint": "animation.guns.sprint",
+        "guns.draw": "animation.guns.draw",
+        "guns.back": "animation.guns.back",
+        "pistol.hold": "animation.pistol.hold",
+        "pistol.aim": "animation.pistol.aim",
+        "pistol.sprint": "animation.pistol.sprint",
+        "pistol.draw": "animation.pistol.draw",
+        "pistol.waist": "animation.pistol.waist",
+        "pistol_emp.hold": "animation.pistol_emp.hold",
+        "pistol_emp.aim": "animation.pistol_emp.aim",
+        "pistol_emp.sprint": "animation.pistol_emp.sprint",
+        "pistol_emp.draw": "animation.pistol_emp.draw",
+        "ak.reload_full": "animation.ak.reload_full",
+        "ak2.reload_full": "animation.ak2.reload_full",
+        "ak.reload_manual": "animation.ak.reload_manual",
+        "pistol.reload_full": "animation.pistol.reload_full",
+        "pistol.reload_manual": "animation.pistol.reload_manual",
+        "ar.reload_full": "animation.ar.reload_full",
+        "ar2.reload_full": "animation.ar2.reload_full",
+        "ar.reload_manual": "animation.ar.reload_manual",
+        "slap.reload_full": "animation.slap.reload_full",
+        "slap.reload_manual": "animation.slap.reload_manual",
+        "break.reload": "animation.break.reload",
+        "clips.reload": "animation.clips.reload",
+        "revolver.reload": "animation.revolver.reload",
+        "left_rack.reload_full": "animation.left_rack.reload_full",
+        "left_rack.reload_manual": "animation.left_rack.reload_manual",
+        "back_mag.reload_full": "animation.back_mag.reload_full",
+        "side.reload_full": "animation.side.reload_full",
+        "sub_pistol.reload_full": "animation.sub_pistol.reload_full",
+        "bolt.reload_full": "animation.bolt.reload_full",
+        "grenade.reload": "animation.grenade.reload",
+        "bolt_clip.reload_full": "animation.bolt_clip.reload_full",
+        "pump_7.reload": "animation.pump_7.reload",
+        "pump_8.reload": "animation.pump_8.reload",
+        "auto_7.reload": "animation.auto_7.reload",
+        "lever.reload": "animation.lever.reload",
+        "ak47.shoots": "animation.ak47.shoots",
+        "ak47.shoot_aim": "animation.ak47.shoot_aim",
+        "asval.shoots": "animation.asval.shoots",
+        "asval.shoot_aim": "animation.asval.shoot_aim",
+        "l2a3.shoots": "animation.l2a3.shoots",
+        "l2a3.shoot_aim": "animation.l2a3.shoot_aim",
+        "ss1.shoots": "animation.ss1.shoots",
+        "ss1.shoot_aim": "animation.ss1.shoot_aim",
+        "sks.shoots": "animation.sks.shoots",
+        "sks.shoot_aim": "animation.sks.shoot_aim",
+        "m1911.shoots": "animation.m1911.shoots",
+        "m1911.shoot_aim": "animation.m1911.shoot_aim",
+        "glock17.shoots": "animation.glock17.shoots",
+        "glock17.shoot_aim": "animation.glock17.shoot_aim",
+        "m16a1.shoots": "animation.m16a1.shoots",
+        "m16a1.shoot_aim": "animation.m16a1.shoot_aim",
+        "m4a1.shoots": "animation.m4a1.shoots",
+        "m4a1.shoot_aim": "animation.m4a1.shoot_aim",
+        "ak74.shoots": "animation.ak74.shoots",
+        "ak74.shoot_aim": "animation.ak74.shoot_aim",
+        "aks74u.shoots": "animation.aks74u.shoots",
+        "aks74u.shoot_aim": "animation.aks74u.shoot_aim",
+        "m14.shoots": "animation.m14.shoots",
+        "m14.shoot_aim": "animation.m14.shoot_aim",
+        "rpk.shoots": "animation.rpk.shoots",
+        "rpk.shoot_aim": "animation.rpk.shoot_aim",
+        "svd.shoots": "animation.svd.shoots",
+        "svd.shoot_aim": "animation.svd.shoot_aim",
+        "makarov.shoots": "animation.makarov.shoots",
+        "makarov.shoot_aim": "animation.makarov.shoot_aim",
+        "makarov_pb.shoots": "animation.makarov_pb.shoots",
+        "makarov_pb.shoot_aim": "animation.makarov_pb.shoot_aim",
+        "izh43.shoots": "animation.izh43.shoots",
+        "izh43.shoot_aim": "animation.izh43.shoot_aim",
+        "ump45.shoots": "animation.ump45.shoots",
+        "ump45.shoot_aim": "animation.ump45.shoot_aim",
+        "mp5.shoots": "animation.mp5.shoots",
+        "mp5.shoot_aim": "animation.mp5.shoot_aim",
+        "anaconda.shoots": "animation.anaconda.shoots",
+        "anaconda.shoot_aim": "animation.anaconda.shoot_aim",
+        "python.shoots": "animation.python.shoots",
+        "python.shoot_aim": "animation.python.shoot_aim",
+        "garand.shoots": "animation.garand.shoots",
+        "garand.shoot_aim": "animation.garand.shoot_aim",
+        "fal.shoots": "animation.fal.shoots",
+        "fal.shoot_aim": "animation.fal.shoot_aim",
+        "famas.shoots": "animation.famas.shoots",
+        "famas.shoot_aim": "animation.famas.shoot_aim",
+        "vz65.shoots": "animation.vz65.shoots",
+        "vz65.shoot_aim": "animation.vz65.shoot_aim",
+        "cz527.shoots": "animation.cz527.shoots",
+        "mosin.shoots": "animation.mosin.shoots",
+        "l96a1.shoots": "animation.l96a1.shoots",
+
+        "m79.shoots": "animation.m79.shoots",
+        "m79.shoot_aim": "animation.m79.shoot_aim",
+        "m870.shoots": "animation.m870.shoots",
+        "m1897.shoots": "animation.m1897.shoots",
+        "m1014.shoots": "animation.m1014.shoots",
+        "m1014.shoot_aim": "animation.m1014.shoot_aim",
+        "m1894c.shoots": "animation.m1894c.shoots",
+        "ss1_person": "controller.animation.ss1.person",
+        "python_person": "controller.animation.python.person",
+        "ak47_person": "controller.animation.ak47.person",
+        "izh43_person": "controller.animation.izh43.person",
+        "rpk_person": "controller.animation.rpk.person",
+        "aks74u_person": "controller.animation.aks74u.person",
+        "glock17_person": "controller.animation.glock17.person",
+        "fal_person": "controller.animation.fal.person",
+        "mp5_person": "controller.animation.mp5.person",
+        "m1014_person": "controller.animation.m1014.person",
+        "garand_person": "controller.animation.garand.person",
+        "cz527_person": "controller.animation.cz527.person",
+        "famas_person": "controller.animation.famas.person",
+        "m4a1_person": "controller.animation.m4a1.person",
+        "m14_person": "controller.animation.m14.person",
+        "m1897_person": "controller.animation.m1897.person",
+        "m1911_person": "controller.animation.m1911.person",
+        "ump45_person": "controller.animation.ump45.person",
+        "l96a1_person": "controller.animation.l96a1.person",
+        "svd_person": "controller.animation.svd.person",
+        "l2a3_person": "controller.animation.l2a3.person",
+        "m1894c_person": "controller.animation.m1894c.person",
+        "anaconda_person": "controller.animation.anaconda.person",
+        "ak74_person": "controller.animation.ak74.person",
+        "m79_person": "controller.animation.m79.person",
+        "sks_person": "controller.animation.sks.person",
+        "makarov_person": "controller.animation.makarov.person",
+        "makarov_pb_person": "controller.animation.makarov_pb.person",
+        "mosin_person": "controller.animation.mosin.person",
+        "vz65_person": "controller.animation.vz65.person",
+        "m16a1_person": "controller.animation.m16a1.person",
+        "m870_person": "controller.animation.m870.person",
+        "asval_person": "controller.animation.asval.person",
+        "hud_controller": "controller.animation.hud",
+        "crosshair": "animation.crosshair",
+        "hud_sneaking": "animation.hud_sneaking",
+        "hud_swimming": "animation.hud_position2",
+        "hud_crawling": "animation.hud_position2"
+      },
+      "render_controllers": [
+        {
+          "controller.render.player.first_person_spectator": "v.is_first_person && q.is_spectator"
+        },
+        {
+          "controller.render.player.third_person_spectator": "!v.is_first_person && !v.map_face_icon && q.is_spectator"
+        },
+        {
+          "controller.render.player.first_person": "v.is_first_person && !q.is_spectator"
+        },
+        {
+          "controller.render.player.third_person": "!v.is_first_person && !v.map_face_icon && !q.is_spectator"
+        },
+        {
+          "controller.render.player.map": "v.map_face_icon"
+        },
+        {
+          "controller.render.bdu_desert": "v.bdu_desert && v.is_first_person"
+        },
+        {
+          "controller.render.police_special": "v.police_special && v.is_first_person"
+        },
+        {
+          "controller.render.bdu_urban": "v.bdu_urban && v.is_first_person"
+        },
+        {
+          "controller.render.bdu_woodland": "v.bdu_woodland && v.is_first_person"
+        },
+        {
+          "controller.render.clown": "v.clown && v.is_first_person"
+        },
+        {
+          "controller.render.chainmail": "v.chainmail && v.is_first_person"
+        },
+        {
+          "controller.render.crusader": "v.crusader && v.is_first_person"
+        },
+        {
+          "controller.render.firefighter": "v.firefighter && v.is_first_person"
+        },
+        {
+          "controller.render.flannel_green": "v.flannel_green && v.is_first_person"
+        },
+        {
+          "controller.render.flannel_red": "v.flannel_red && v.is_first_person"
+        },
+        {
+          "controller.render.flannel_white": "v.flannel_white && v.is_first_person"
+        },
+        {
+          "controller.render.formal_white": "v.formal_white && v.is_first_person"
+        },
+        {
+          "controller.render.ghillie_forest": "v.ghillie_forest && v.is_first_person"
+        },
+        {
+          "controller.render.gorka": "v.gorka && v.is_first_person"
+        },
+        {
+          "controller.render.hazmat_yellow": "v.hazmat_yellow && v.is_first_person"
+        },
+        {
+          "controller.render.hoodie_black": "v.hoodie_black && v.is_first_person"
+        },
+        {
+          "controller.render.hoodie_red": "v.hoodie_red && v.is_first_person"
+        },
+        {
+          "controller.render.leather_black": "v.leather_black && v.is_first_person"
+        },
+        {
+          "controller.render.pancasila": "v.pancasila && v.is_first_person"
+        },
+        {
+          "controller.render.paramedic": "v.paramedic && v.is_first_person"
+        },
+        {
+          "controller.render.plaid_blue": "v.plaid_blue && v.is_first_person"
+        },
+        {
+          "controller.render.plaid_red": "v.plaid_red && v.is_first_person"
+        },
+        {
+          "controller.render.plaid_tan": "v.plaid_tan && v.is_first_person"
+        },
+        {
+          "controller.render.police": "v.police && v.is_first_person"
+        },
+        {
+          "controller.render.prisoner": "v.prisoner && v.is_first_person"
+        },
+        {
+          "controller.render.puffer_black": "v.puffer_black && v.is_first_person"
+        },
+        {
+          "controller.render.puffer_blue": "v.puffer_blue && v.is_first_person"
+        },
+        {
+          "controller.render.sherif": "v.sherif && v.is_first_person"
+        },
+        {
+          "controller.render.sleeve_blue": "v.sleeve_blue && v.is_first_person"
+        },
+        {
+          "controller.render.sleeve_white": "v.sleeve_white && v.is_first_person"
+        },
+        {
+          "controller.render.sleeve_yellow": "v.sleeve_yellow && v.is_first_person"
+        },
+        {
+          "controller.render.special": "v.special && v.is_first_person"
+        },
+        {
+          "controller.render.striped_blue": "v.striped_blue && v.is_first_person"
+        },
+        {
+          "controller.render.striped_white": "v.striped_white && v.is_first_person"
+        },
+        {
+          "controller.render.sweater_green": "v.sweater_green && v.is_first_person"
+        },
+        {
+          "controller.render.sweater_white": "v.sweater_white && v.is_first_person"
+        },
+        {
+          "controller.render.tactical_green": "v.tactical_green && v.is_first_person"
+        },
+        {
+          "controller.render.tactical_tan": "v.tactical_tan && v.is_first_person"
+        },
+        {
+          "controller.render.tracksuit_black": "v.tracksuit_black && v.is_first_person"
+        },
+        {
+          "controller.render.varsity_blue": "v.varsity_blue && v.is_first_person"
+        },
+        {
+          "controller.render.varsity_red": "v.varsity_red && v.is_first_person"
+        },
+        {
+          "controller.render.stripeds_black": "v.stripeds_black && v.is_first_person"
+        },
+        {
+          "controller.render.tracksuit_blue": "v.tracksuit_blue && v.is_first_person"
+        },
+        {
+          "controller.render.tactical_navy": "v.tactical_navy && v.is_first_person"
+        },
+        {
+          "controller.render.flannel_gray": "v.flannel_gray && v.is_first_person"
+        },
+        {
+          "controller.render.hiking_blue": "v.hiking_blue && v.is_first_person"
+        },
+        {
+          "controller.render.sleeve_black": "v.sleeve_black && v.is_first_person"
+        },
+        {
+          "controller.render.hawaiian_red": "v.hawaiian_red && v.is_first_person"
+        },
+        {
+          "controller.render.hawaiian_black": "v.hawaiian_black && v.is_first_person"
+        },
+        {
+          "controller.render.suit_black": "v.suit_black && v.is_first_person"
+        },
+        {
+          "controller.render.bdu_artic": "v.bdu_artic && v.is_first_person"
+        },
+        {
+          "controller.render.flannel_blue": "v.flannel_blue && v.is_first_person"
+        },
+        {
+          "controller.render.ghillie_snow": "v.ghillie_snow && v.is_first_person"
+        },
+        {
+          "controller.render.hazmat_white": "v.hazmat_white && v.is_first_person"
+        },
+        {
+          "controller.render.hiking_black": "v.hiking_black && v.is_first_person"
+        },
+        {
+          "controller.render.hoodie_blue": "v.hoodie_blue && v.is_first_person"
+        },
+        {
+          "controller.render.hoodie_green": "v.hoodie_green && v.is_first_person"
+        },
+        {
+          "controller.render.hoodie_yellow": "v.hoodie_yellow && v.is_first_person"
+        },
+        {
+          "controller.render.hoodie_white": "v.hoodie_white && v.is_first_person"
+        },
+        {
+          "controller.render.leather_brown": "v.leather_brown && v.is_first_person"
+        },
+        {
+          "controller.render.kopassus": "v.kopassus && v.is_first_person"
+        },
+        {
+          "controller.render.plaid_gray": "v.plaid_gray && v.is_first_person"
+        },
+        {
+          "controller.render.plaid_white": "v.plaid_white && v.is_first_person"
+        },
+        {
+          "controller.render.plaid_olive": "v.plaid_olive && v.is_first_person"
+        },
+        {
+          "controller.render.tactical_red": "v.tactical_red && v.is_first_person"
+        },
+        {
+          "controller.render.tactical_white": "v.tactical_white && v.is_first_person"
+        },
+        {
+          "controller.render.tracksuit_red": "v.tracksuit_red && v.is_first_person"
+        },
+        {
+          "controller.render.varsity_green": "v.varsity_green && v.is_first_person"
+        },
+        {
+          "controller.render.varsity_brown": "v.varsity_brown && v.is_first_person"
+        },
+        {
+          "controller.render.suede_brown": "v.suede_brown && v.is_first_person"
+        },
+        {
+          "controller.render.plague_doctor": "v.plague_doctor && v.is_first_person"
+        },
+        {
+          "controller.render.maid": "v.maid && v.is_first_person"
+        },
+        {
+          "controller.render.tshirt_white": "v.tshirt_white && v.is_first_person"
+        },
+        {
+          "controller.render.hero_flannel": "v.hero_flannel && v.is_first_person"
+        },
+        {
+          "controller.render.tshirt_black": "v.tshirt_black && v.is_first_person"
+        },
+        {
+          "controller.render.tshirt_blue": "v.tshirt_blue && v.is_first_person"
+        },
+        {
+          "controller.render.tshirt_red": "v.tshirt_red && v.is_first_person"
+        },
+        {
+          "controller.render.tshirt_green": "v.tshirt_green && v.is_first_person"
+        },
+        {
+          "controller.render.tshirt_yellow": "v.tshirt_yellow && v.is_first_person"
+        },
+        {
+          "controller.render.ghillie_drygrass": "v.ghillie_drygrass && v.is_first_person"
+        },
+        {
+          "controller.render.player.ss1": "v.all_ss1"
+        },
+        {
+          "controller.render.player.ak47": "v.all_ak47"
+        },
+        {
+          "controller.render.player.python": "v.all_python"
+        },
+        {
+          "controller.render.player.izh43": "v.all_izh43"
+        },
+        {
+          "controller.render.player.fal": "v.all_fal"
+        },
+        {
+          "controller.render.player.rpk": "v.all_rpk"
+        },
+        {
+          "controller.render.player.mp5": "v.all_mp5"
+        },
+        {
+          "controller.render.player.aks74u": "v.all_aks74u"
+        },
+        {
+          "controller.render.player.glock17": "v.all_glock17"
+        },
+        {
+          "controller.render.player.m1014": "v.all_m1014"
+        },
+        {
+          "controller.render.player.garand": "v.all_garand"
+        },
+        {
+          "controller.render.player.l96a1": "v.all_l96a1"
+        },
+        {
+          "controller.render.player.cz527": "v.all_cz527"
+        },
+        {
+          "controller.render.player.famas": "v.all_famas"
+        },
+        {
+          "controller.render.player.m4a1": "v.all_m4a1"
+        },
+        {
+          "controller.render.player.m14": "v.all_m14"
+        },
+        {
+          "controller.render.player.m1897": "v.all_m1897"
+        },
+        {
+          "controller.render.player.m1911": "v.all_m1911"
+        },
+        {
+          "controller.render.player.ump45": "v.all_ump45"
+        },
+        {
+          "controller.render.player.svd": "v.all_svd"
+        },
+        {
+          "controller.render.player.l2a3": "v.all_l2a3"
+        },
+        {
+          "controller.render.player.m1894c": "v.all_m1894c"
+        },
+        {
+          "controller.render.player.anaconda": "v.all_anaconda"
+        },
+        {
+          "controller.render.player.ak74": "v.all_ak74"
+        },
+        {
+          "controller.render.player.m79": "v.all_m79"
+        },
+        {
+          "controller.render.player.sks": "v.all_sks"
+        },
+        {
+          "controller.render.player.makarov": "v.all_makarov"
+        },
+        {
+          "controller.render.player.makarov_pb": "v.all_makarov_pb"
+        },
+        {
+          "controller.render.player.mosin": "v.all_mosin"
+        },
+        {
+          "controller.render.player.vz65": "v.all_vz65"
+        },
+        {
+          "controller.render.player.m16a1": "v.all_m16a1"
+        },
+        {
+          "controller.render.player.m870": "v.all_m870"
+        },
+        {
+          "controller.render.player.asval": "v.all_asval"
+        },
+        {
+          "controller.render.ss1scope": "v.all_ss1 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.falscope": "v.all_fal && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.ak47scope": "v.all_ak47 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.mp5scope": "v.all_mp5 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.glock17scope": "v.all_glock17 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.pythonscope": "v.all_python && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.izh43scope": "v.all_izh43 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.garandscope": "v.all_garand && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m1014scope": "v.all_m1014 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.cz527scope": "v.all_cz527 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.l96a1scope": "v.all_l96a1 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.rpkscope": "v.all_rpk && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m1911scope": "v.all_m1911 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m4a1scope": "v.all_m4a1 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m14scope": "v.all_m14 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m1897scope": "v.all_m1897 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.aks74uscope": "v.all_aks74u && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.famasscope": "v.all_famas && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.svdscope": "v.all_svd && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.l2a3scope": "v.all_l2a3 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.ump45scope": "v.all_ump45 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.anacondascope": "v.all_anaconda && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m1894cscope": "v.all_m1894c && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.ak74scope": "v.all_ak74 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m79scope": "v.all_m79 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.sksscope": "v.all_sks && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.makarovscope": "v.all_makarov && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.makarov_pbscope": "v.all_makarov_pb && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.mosinscope": "v.all_mosin && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.vz65scope": "v.all_vz65 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m16a1scope": "v.all_m16a1 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.m870scope": "v.all_m870 && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.asvalscope": "v.all_asval && q.mark_variant != 3 && q.is_sneaking && v.is_first_person"
+        },
+        {
+          "controller.render.nz_setup": "query.skin_id == 99 && !v.is_first_person"
+        },
+        {
+          "controller.render.night_goggle": "v.night_goggle && v.is_first_person"
+        },
+        {
+          "controller.render.crosshair": "q.is_in_ui"
+        },
+        {
+          "controller.render.deadzone_map": "q.get_equipped_item_name=='deadzone_map' && v.is_first_person"
+        }
+      ],
+      "enable_attachables": true
+    }
+  }
+}

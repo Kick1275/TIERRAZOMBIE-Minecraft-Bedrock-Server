@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:wired_fence"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "SIS",
+      "SLS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stick"
+      },
+      "I": {
+        "item": "minecraft:iron_bars"
+      },
+      "L": {
+        "tag": "minecraft:logs"
+      }
+    },
+    "result": {
+      "item": "ranzie:wired_fence",
+      "count": 4
+    }
+  }
+}

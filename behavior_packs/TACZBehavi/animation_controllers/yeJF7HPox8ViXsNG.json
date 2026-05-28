@@ -1,0 +1,121 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.minigun": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='minigun' && q.is_using_item) || query.get_equipped_item_name=='minigun_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s[hasitem={item=krep:minigun, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "animations": [
+              {
+            "minigunloop": "query.get_equipped_item_name=='minigun'"
+              }
+          ],
+          "transitions": [
+            {
+              "start": "query.get_equipped_item_name=='minigun' && query.is_using_item && query.scoreboard('win308') >= 1"
+            },
+            {
+              "reload.31": "query.get_equipped_item_name=='minigun_emp'"
+            }
+          ],
+          "on_entry": [
+            "/function minigun"
+          ]
+        },
+        "start": {
+          "animations": [
+            "minigundelay"
+          ],
+          "transitions": [
+            {
+              "minigun.30": "query.get_equipped_item_name=='minigun' && query.is_using_item && q.all_animations_finished && query.scoreboard('win308') >= 1 && q.property('krep:ammoreload') == 1"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='minigun' && (!q.is_using_item || q.property('krep:ammoreload') == 0)"
+            },
+            {
+              "reload.31": "query.get_equipped_item_name=='minigun_emp'"
+            }
+          ],
+          "on_entry": [
+            "/playsound minigun.windup @a[r=15]",
+            "/event entity @s[hasitem=[{item=krep:ammobox,quantity=0},{item=krep:ammoboxc,quantity=0}]] minigunreload0",
+            "/event entity @s[hasitem={item=krep:ammobox,quantity=1..}] minigunreload1",
+            "/event entity @s[hasitem={item=krep:ammoboxc,quantity=1..}] minigunreload1"
+            
+          ]
+        },
+        "reload.31": {
+          "animations": [
+            "minigunoverheat"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished || query.get_equipped_item_name!='minigun_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:reload"
+          ],
+          "on_exit": [
+            "@s krep:noreload"
+          ]
+        },
+        "minigun.30": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('minigunoverheat') == 100 || query.scoreboard('win308') == 0 || !q.is_using_item"
+            },
+            {
+              "minigun.29": "query.get_equipped_item_name=='minigun' && query.is_using_item && query.scoreboard('win308') >= 1"
+            },
+            {
+              "reload.31": "query.get_equipped_item_name=='minigun_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:minigun_fire",
+            "/scoreboard players add @s minigunoverheat 1",
+            "/scoreboard players remove @s[m=!c,scores={win308=1..},hasitem={item=krep:ammoboxc,quantity=0}] win308 1",
+            "/playsound minigun.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={minigunoverheat=100}] slot.weapon.mainhand 1 krep:minigun_emp 1 0",
+            "/title @s[scores={win308=0}] actionbar No Ammunition",
+            "/function minigun"
+          ]
+        },
+        "minigun.29": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('minigunoverheat') == 100 || query.scoreboard('win308') == 0 || !q.is_using_item"
+            },
+            {
+              "minigun.30": "query.get_equipped_item_name=='minigun' && query.is_using_item && query.scoreboard('win308') >= 1"
+            },
+            {
+              "reload.31": "query.get_equipped_item_name=='minigun_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:minigun_fire",
+            "/scoreboard players add @s minigunoverheat 1",
+            "/scoreboard players remove @s[m=!c,scores={win308=1..},hasitem={item=krep:ammoboxc,quantity=0}] win308 1",
+            "/playsound minigun.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={minigunoverheat=100}] slot.weapon.mainhand 1 krep:minigun_emp 1 0",
+            "/title @s[scores={win308=0}] actionbar No Ammunition",
+            "/function minigun"
+          ]
+        }
+      }
+    }
+  }
+}

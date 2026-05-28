@@ -1,0 +1,80 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.zombie.place2": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [ "bridge2" ],
+          "on_entry": [ "/effect @s clear levitation" ],
+          "transitions": [
+            {
+              "holding_cobble": "query.head_x_rotation(0) < -45 && query.scoreboard('place') == 3 && query.has_target"
+            },
+            {
+              "no_target": "!query.has_target || query.scoreboard('place') == 0 || query.scoreboard('place') == 1 || query.scoreboard('place') == 2"
+            }
+          ]
+        },
+        "holding_cobble": {
+          "animations": [ "jump2", "bridge2" ],
+          "transitions": [
+            {
+              "default": "query.head_x_rotation(0) >= -45 && query.scoreboard('place') == 3 && query.has_target"
+            },
+            {
+              "no_target": "!query.has_target || query.scoreboard('place') == 0 || query.scoreboard('place') == 1 || query.scoreboard('place') == 2"
+            }
+          ]
+        },
+        "no_target": {
+          "transitions": [
+            {
+              "default": "query.has_target && query.head_x_rotation(0) >= -45 && query.scoreboard('place') == 3"
+            },
+            {
+              "holding_cobble": "query.has_target && query.head_x_rotation(0) < -45 && query.scoreboard('place') == 3"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.zombie.climb": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "on_entry": [ "/effect @s clear levitation" ],
+          "transitions": [
+            {
+              "holding_cobble": "query.head_x_rotation(0) < -45 && query.scoreboard('place') == 4 && query.has_target"
+            },
+            {
+              "no_target": "!query.has_target || query.scoreboard('place') == 0 || query.scoreboard('place') == 1 || query.scoreboard('place') == 2 || query.scoreboard('place') == 3"
+            }
+          ]
+        },
+        "holding_cobble": {
+          "animations": [ "climb" ],
+          "transitions": [
+            {
+              "default": "query.head_x_rotation(0) >= -45 && query.scoreboard('place') == 4 && query.has_target"
+            },
+            {
+              "no_target": "!query.has_target || query.scoreboard('place') == 0 || query.scoreboard('place') == 1 || query.scoreboard('place') == 2 || query.scoreboard('place') == 3"
+            }
+          ]
+        },
+        "no_target": {
+          "transitions": [
+            {
+              "default": "query.has_target && query.head_x_rotation(0) >= -45 && query.scoreboard('place') == 4"
+            },
+            {
+              "holding_cobble": "query.has_target && query.head_x_rotation(0) < -45 && query.scoreboard('place') == 4"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

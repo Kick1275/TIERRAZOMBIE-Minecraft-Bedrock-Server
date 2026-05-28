@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.70",
+	"minecraft:item": {
+		"description": {
+			"identifier": "efm:rotten_cooked_chicken",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "efm_rotten_cooked_chicken",
+			"minecraft:food": {
+				"can_always_eat": true,
+				"nutrition": 0,
+				"saturation_modifier": 0
+			},
+			"minecraft:use_modifiers": {
+				"movement_modifier": 0.75,
+				"use_duration": 1.5
+			},
+			"minecraft:use_animation": "eat"
+		}
+	}
+}

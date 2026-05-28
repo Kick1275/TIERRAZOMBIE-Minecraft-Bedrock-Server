@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.vending_top",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone2",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, 16, -5],
+							"size": [16, 15, 13],
+							"uv": {
+								"north": {"uv": [13, 13], "uv_size": [16, 15]},
+								"east": {"uv": [0, 13], "uv_size": [13, 15]},
+								"south": {"uv": [42, 13], "uv_size": [16, 15]},
+								"west": {"uv": [29, 13], "uv_size": [13, 15]},
+								"up": {"uv": [13, 0], "uv_size": [16, 13]},
+								"down": {"uv": [0, 64], "uv_size": [16, -13]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

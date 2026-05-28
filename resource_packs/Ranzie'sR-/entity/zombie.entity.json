@@ -1,0 +1,64 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:zombie",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/zombie/zombie",
+        "default1": "textures/entity/zombie/zombie1",
+        "default2": "textures/entity/zombie/zombie2",
+        "default3": "textures/entity/zombie/zombie3",
+        "default4": "textures/entity/zombie/zombie4",
+        "default5": "textures/entity/zombie/zombie5",
+        "default6": "textures/entity/zombie/zombie6",
+        "default7": "textures/entity/zombie/zombie7",
+        "default8": "textures/entity/zombie/zombie8",
+        "default9": "textures/entity/zombie/zombie9",
+        "default10": "textures/entity/zombie/zombie10",
+        "default11": "textures/entity/zombie/zombie11"
+      },
+      "geometry": {
+        "default": "geometry.zombie.v1.8"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg_zombie"
+      },
+      "scripts": {
+  "pre_animation": [
+    "variable.Xvar = (variable.Xvar ?? Math.random(0,12));",
+    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+    "variable.eye_target_x = query.target_y_rotation - this;",
+    "variable.eye_target_y = query.target_x_rotation - this;"
+  ]
+},
+      "animations": {
+        "base": "animation.zombie.v1.8.base",
+        "walking": "animation.zombie.v1.8.walking",
+        "running": "animation.zombie.v1.8.running",
+        "attack_time": "animation.zombie.v1.8.attack_time",
+        "attack_walk": "animation.zombie.v1.8.attack_walk",
+        "riding_leg": "animation.zombie.v1.8.riding_leg",
+        "riding_arms": "animation.zombie.v1.8.riding_arms",
+        "riding_has_target": "animation.zombie.v1.8.riding_has_target",
+        "baby": "animation.zombie.v1.8.baby",
+        "death": "animation.zombie.v1.8.death",
+        "hurt": "animation.zombie.v1.8.hurt",
+        "hurt2": "animation.zombie.v1.8.hurt2",
+        "looking": "animation.zombie.v1.8.looking",
+        "arm_control": "animation.zombie.v1.8.arm_control"
+      },
+      "animation_controllers": [
+        { "general": "controller.animation.zombie.v1.8.general" },
+        { "damage": "controller.animation.zombie.v1.8.damage" },
+        { "baby_zombie": "controller.animation.zombie.v1.8.baby_zombie" },
+        { "look_target": "controller.animation.zombie.v1.8.look_target" }
+      ],
+      "render_controllers": [ "controller.render.zombie" ],
+      "enable_attachables": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:mi24",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mi24/mi24",
+				"libernia": "textures/entity/mi24/mi24_libernia",
+				"telslakia": "textures/entity/mi24/mi24_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.mi24"
+			},
+			"render_controllers": [
+				"controller.render.mi24",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_mi24_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.helicopter.scale",
+				"rotations": "animation.helicopter.rotations",
+				"rotor": "animation.helicopter.rotor",
+				"fly": "animation.helicopter.fly",
+				"flying": "controller.animation.helicopter.flying",
+				"shoot": "animation.bmpt72.shoot",
+				"look": "animation.helicopter.look"
+			},
+			"scripts": {
+				"animate": [
+					"flying",
+					"scale",
+					{
+						"shoot": "query.is_roaring"
+					},
+					"look"
+				]
+			},
+			"sound_effects": {
+				"spin": "c_ram.spin"
+			},
+			"particle_effects": {
+				"flash": "af:mg_flash"
+			}
+		}
+	}
+}

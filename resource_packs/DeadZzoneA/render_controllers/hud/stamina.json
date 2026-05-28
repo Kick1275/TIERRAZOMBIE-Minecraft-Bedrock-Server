@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.stamina_bar": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.dz_icons"
+			],
+			"geometry": "geometry.stamina_bar",
+			"on_fire_color": {},
+			"is_hurt_color": {},
+			"part_visibility": [
+				{
+					"1": "q.property('mcpe:stamina_bar') == 20"
+				},
+				{
+					"2": "q.property('mcpe:stamina_bar') == 19"
+				},
+				{
+					"3": "q.property('mcpe:stamina_bar') == 18"
+				}
+			]
+		}
+	}
+}

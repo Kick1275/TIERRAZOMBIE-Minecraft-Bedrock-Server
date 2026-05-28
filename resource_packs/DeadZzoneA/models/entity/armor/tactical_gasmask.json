@@ -1,0 +1,62 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tactical_gasmask",
+				"texture_width": 64,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.8, "uv": [32, 0]},
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.6, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "bone",
+					"parent": "hat",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-2, 24, -7], "size": [4, 3, 3], "pivot": [0, 27, -4], "rotation": [25, 0, 0], "uv": [0, 17]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "hat",
+					"pivot": [3, 24, -6],
+					"rotation": [11.08956, -52.41589, -1.42186],
+					"cubes": [
+						{"origin": [0, 23, -7], "size": [4, 4, 2], "uv": [0, 24]}
+					]
+				}
+			]
+		}
+	]
+}

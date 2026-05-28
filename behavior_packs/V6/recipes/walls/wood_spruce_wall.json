@@ -1,0 +1,24 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:spruce_wood_wall"
+		},
+		"tags": [ "workbench" ],
+		"pattern": [
+			"#",
+			"#",
+			"#"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:log",
+				"data": 1
+			}
+		},
+		"result": {
+			"item": "medieval:spruce_wood_wall",
+			"count": 12
+		}
+	}
+}

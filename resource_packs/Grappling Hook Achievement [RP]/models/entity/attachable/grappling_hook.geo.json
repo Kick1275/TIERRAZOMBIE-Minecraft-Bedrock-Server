@@ -1,0 +1,78 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.grappling_hook",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [0, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)"
+				},
+				{
+					"name": "hook",
+					"parent": "root_item",
+					"pivot": [0, 4.5, -14],
+					"cubes": [
+						{"origin": [-0.7, 3.8, -16.5], "size": [1.4, 1.4, 9], "uv": [0, 0]},
+						{"origin": [-1, 3.5, -15], "size": [2, 2, 2], "uv": [20, 16]},
+						{"origin": [-2.75, 3.95, -15], "size": [1.75, 1, 1], "uv": [18, 28]},
+						{"origin": [-3.425, 3.925, -14.925], "size": [1, 1.05, 3], "pivot": [-2, 3.5, -14], "rotation": [0, -4.5, 0], "uv": [18, 20]},
+						{"origin": [2.425, 3.925, -14.925], "size": [1, 1.05, 3], "pivot": [2, 3.5, -14], "rotation": [0, 4.5, 0], "uv": [18, 20]},
+						{"origin": [1, 3.95, -15], "size": [1.75, 1, 1], "uv": [18, 28]},
+						{"origin": [-0.5, 1.75, -15], "size": [1, 1.75, 1], "uv": [22, 28]},
+						{"origin": [-0.5, 5.5, -15], "size": [1, 1.85, 1], "uv": [26, 28]},
+						{"origin": [-0.5, 7.225, -15.025], "size": [1, 1, 3.1], "pivot": [-1, 6.5, -14], "rotation": [-4.5, 0, 0], "uv": [18, 24]},
+						{"origin": [-0.5, 0.775, -15.025], "size": [1, 1, 3.1], "pivot": [1, 2.5, -14], "rotation": [4.5, 0, 0], "uv": [26, 20]},
+						{"origin": [-1.1, 3.4, -12], "size": [2.2, 2.2, 2], "uv": [26, 24]}
+					],
+					"locators": {
+						"lead": [0, 4.5, -10]
+					}
+				},
+				{
+					"name": "handle",
+					"parent": "root_item",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.2, -1, -0.7], "size": [2.4, 5, 2], "pivot": [0, 0, 0], "rotation": [12.5, 0, 0], "uv": [34, 9]},
+						{"origin": [-1.4, 3.1, -10], "size": [2.8, 2.8, 7], "uv": [0, 20]},
+						{"origin": [-1.9, 3, -5.1], "size": [3.8, 3, 7.9], "uv": [0, 10]},
+						{"origin": [-0.5, 1.6, -3], "size": [1, 2, 1], "pivot": [-0.5, 1.6, -3], "rotation": [20, 0, 0], "uv": [28, 16]}
+					]
+				},
+				{
+					"name": "rope",
+					"parent": "root_item",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, -0.4, -7], "size": [2, 3.4, 2], "uv": [20, 11]}
+					]
+				},
+				{
+					"name": "circle",
+					"parent": "rope",
+					"pivot": [0, 1.5, -6],
+					"cubes": [
+						{"origin": [-2, 0.6, -8], "size": [4, 1.4, 4], "uv": [20, 0]}
+					]
+				},
+				{
+					"name": "extend",
+					"parent": "rope",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, 1, -13], "size": [2, 1, 5], "pivot": [0, 0, -8], "rotation": [-35, 0, 0], "uv": [20, 5]}
+					]
+				}
+			]
+		}
+	]
+}

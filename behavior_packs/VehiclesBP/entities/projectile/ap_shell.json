@@ -1,0 +1,321 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:ap_shell",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 10,
+				"time_down_event": {
+					"event": "minecraft:explode",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"minecraft:explode": {
+				"add": {
+					"component_groups": [
+						"minecraft:exploding"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:explosion_dust ~ ~-1 ~",
+						"playsound tank.hit @p[r=5]"
+					]
+				}
+			},
+			"af:angled_down": {
+				"add": {
+					"component_groups": [
+						"af:down"
+					]
+				}
+			},
+			"af:angled_up": {
+				"add": {
+					"component_groups": [
+						"af:up"
+					]
+				}
+			},
+			"af:m1a1": {
+				"add": {
+					"component_groups": [
+						"af:m1a1"
+					]
+				}
+			},
+			"af:t72a": {
+				"add": {
+					"component_groups": [
+						"af:t72a"
+					]
+				}
+			},
+			"af:m551": {
+				"add": {
+					"component_groups": [
+						"af:m551"
+					]
+				}
+			},
+			"af:m114": {
+				"add": {
+					"component_groups": [
+						"af:m114"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 2,
+					"causes_fire": false,
+					"breaks_blocks": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"af:up": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"on_other_hit": true,
+							"on_entity_hit": true,
+							"num_particles": 5
+						},
+						"impact_damage": {
+							"damage": 150
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode"
+							}
+						}
+					},
+					"power": 1,
+					"gravity": 0.01,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": true,
+					"offset": [
+						0,
+						4.5,
+						3.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": -45
+				}
+			},
+			"af:down": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"on_other_hit": true,
+							"on_entity_hit": true,
+							"num_particles": 5
+						},
+						"impact_damage": {
+							"damage": 100
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode"
+							}
+						}
+					},
+					"power": 1.5,
+					"gravity": 0.001,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": true,
+					"offset": [
+						0,
+						1.5,
+						3.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": -1
+				}
+			},
+			"af:m1a1": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"on_other_hit": true,
+							"on_entity_hit": true,
+							"num_particles": 5
+						},
+						"impact_damage": {
+							"damage": 150
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode"
+							}
+						}
+					},
+					"power": 2,
+					"gravity": 0.005,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": true,
+					"offset": [
+						0.1,
+						2,
+						6
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0
+				}
+			},
+			"af:m551": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"on_other_hit": true,
+							"on_entity_hit": true,
+							"num_particles": 5
+						},
+						"impact_damage": {
+							"damage": 100
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode"
+							}
+						}
+					},
+					"power": 1,
+					"gravity": 0.005,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": true,
+					"offset": [
+						0.1,
+						2,
+						6
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0
+				}
+			},
+			"af:m114": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"on_other_hit": true,
+							"on_entity_hit": true,
+							"num_particles": 5
+						},
+						"impact_damage": {
+							"damage": 500
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode"
+							}
+						}
+					},
+					"power": 3,
+					"gravity": 0.01,
+					"uncertainty_base": 8,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": true,
+					"offset": [
+						0,
+						2,
+						0.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 50,
+					"time_down_event": {
+						"event": "minecraft:explode",
+						"target": "self"
+					}
+				}
+			},
+			"af:t72a": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"on_other_hit": true,
+							"on_entity_hit": true,
+							"num_particles": 5
+						},
+						"impact_damage": {
+							"damage": 125
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "minecraft:explode"
+							}
+						}
+					},
+					"power": 2,
+					"gravity": 0.005,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": true,
+					"offset": [
+						0.1,
+						2,
+						6
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0
+				}
+			}
+		}
+	}
+}

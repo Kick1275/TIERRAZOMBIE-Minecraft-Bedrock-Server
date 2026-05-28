@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.spb_guide_book": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.page1",
+            "Texture.page2",
+            "Texture.page3",
+            "Texture.page4"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+        "Array.skins[query.variant]"
+      ]
+    },
+    "controller.render.turret": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.default",
+            "Texture.objective",
+            "Texture.off"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [
+        "Array.skins[query.variant]"
+      ],
+      "is_hurt_color": {
+				"r": "0.4",
+				"g": "0.4",
+				"b": "0.4",
+        "a": "0.4"
+			}
+    }
+  }
+}

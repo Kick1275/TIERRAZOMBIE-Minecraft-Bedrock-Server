@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.hud": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"crosshair": "!q.is_riding"
+						},
+						{
+							"hud_swimming": "q.is_swimming"
+						},
+						{
+							"hud_crawling": "q.is_crawling"
+						},
+						{
+							"hud_sneaking": "q.is_sneaking"
+						}
+					]
+				}
+			}
+		}
+	}
+}

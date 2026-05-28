@@ -1,0 +1,14 @@
+{
+  "background_gradient": {
+    "type": "image",
+    "size": ["100%", "100%"],
+    "texture": "textures/ui/death",
+    "alpha": "@death.deathBgAlpha0"
+  },
+  "deathBgAlpha0": {
+    "anim_type": "alpha",
+    "from": 0,
+    "to": 1,
+    "duration": 5
+  }
+}

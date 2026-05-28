@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.scraper": {
+			"initial_state": "scraper_inactive",
+			"states": {
+				"scraper_inactive": {
+					"animations": [
+						"scraper_inactive_animation"
+					]
+				}
+			}
+		}
+	}
+}

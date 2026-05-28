@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.g36.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.5,
+      "timeline": {
+        "2.4": [
+          "/scoreboard players set @s[scores={g36=32..}] g36 31",
+          "/function g36"
+        ],
+        "2.3": [
+          "/function g36reload",
+          "/event entity @s krep:g36_reload"
+        ]
+      }
+    }
+  }
+}

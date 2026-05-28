@@ -1,0 +1,136 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:barbed_wire",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:health": {
+				"value": 10
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.7,
+				"cause": "entity_attack",
+				"damage_per_tick": 5,
+				"damage_cooldown": 0.1,
+				"play_attack_sound": true,
+				"entity_filter": {
+					"test": "is_family",
+					"subject": "other",
+					"value": "inanimate",
+					"operator": "!="
+				}
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:physics": {},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"cause": "entity_attack",
+						"on_damage": {
+							"event": "af:damage",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player",
+											"operator": "=="
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"value": "minecraft:shears",
+											"subject": "other",
+											"operator": "!="
+										}
+									]
+								}
+							]
+						},
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0.9,
+				"max": 1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:manual",
+							"target": "self",
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "af:manual"
+								}
+							]
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "purr"
+					}
+				]
+			},
+			"minecraft:mob_effect": {
+				"effect_range": 1,
+				"mob_effect": "slowness",
+				"entity_filter": {
+					"test": "is_family",
+					"subject": "other",
+					"value": "inanimate",
+					"operator": "!="
+				},
+				"effect_time": 5,
+				"cooldown_time": 0
+			}
+		},
+		"events": {
+			"af:damage": {
+				"queue_command": {
+					"command": "damage @p 5 entity_attack entity @s"
+				}
+			},
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"tp @s ~ ~ ~ facing @p"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar Can be destroyed with Shears."
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "af:aluminium_ore_feature"
+		},
+		"count": 16,
+		"replace_rules": [
+			{
+				"places_block": {
+					"name": "af:aluminium_ore",
+					"states": {}
+				},
+				"may_replace": [
+					{
+						"name": "minecraft:stone",
+						"states": {
+							"stone_type": "stone"
+						}
+					},
+					{
+						"name": "minecraft:stone",
+						"states": {
+							"stone_type": "andesite"
+						}
+					},
+					{
+						"name": "minecraft:stone",
+						"states": {
+							"stone_type": "granite"
+						}
+					},
+					{
+						"name": "minecraft:stone",
+						"states": {
+							"stone_type": "diorite"
+						}
+					}
+				]
+			}
+		]
+	}
+}

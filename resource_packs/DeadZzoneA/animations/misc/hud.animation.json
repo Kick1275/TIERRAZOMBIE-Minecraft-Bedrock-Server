@@ -1,0 +1,62 @@
+{
+	"format_version": "1.20.40",
+	"animations": {
+		"animation.crosshair": {
+			"loop": true,
+			"bones": {
+				"crosshair": {
+					"scale": 0.5,
+					"position": [5, 1214, 0]
+				}
+			}
+		},
+		"animation.darker_ui_position": {
+			"loop": true,
+			"bones": {
+				"blood": {
+					"position": [5, 1214, -1]
+				}
+			}
+		},
+		"animation.hud_sneaking": {
+			"loop": true,
+			"bones": {
+				"crosshair": {
+					"position": [0, 0, 0]
+				},
+				"blood": {
+					"position": [0, 1, 0]
+				}
+			}
+		},
+		"animation.hud_position2": {
+			"loop": true,
+			"bones": {
+				"crosshair": {
+					"position": [0, -10, 0]
+				},
+				"blood": {
+					"position": [0, 1, 0]
+				}
+			}
+		},
+		"animation.thirst_bar_position": {
+			"loop": true,
+			"bones": {
+				"thirst": {
+					"scale": 0.54,
+					"position": [-90, 1165, 0]
+				}
+			}
+		},
+		"animation.stamina_bar_position": {
+			"loop": true,
+			"bones": {
+				"stamina": {
+					"scale": [1, 1, 1],
+					"position": [-70, 1158, 0]
+				}
+			}
+		}
+	}
+}

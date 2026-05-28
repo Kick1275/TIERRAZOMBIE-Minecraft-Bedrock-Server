@@ -1,0 +1,15 @@
+{
+    "format_version": "1.21.80",
+    "minecraft:item": {
+        "description": {
+            "identifier": "wedit:spawn_glass"
+        },
+        "components": {
+            "minecraft:icon": {
+                "textures": { "default": "wedit:spawn_glass" }
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:throwable": {}
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.qbz95.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.9,
+      "timeline": {
+        "2.8": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:qbz95 1 0",
+          "/scoreboard players set @s[scores={qbz95=31..}] qbz95 30",
+          "/function qbz95"
+        ],
+        "2.7": [
+          "/function qbz95reload",
+          "/event entity @s krep:qbz95_reload"
+        ]
+      }
+    }
+  }
+}

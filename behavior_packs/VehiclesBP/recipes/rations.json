@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "af:rations"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:sweet_berries",
+				"count": 1
+			},
+			{
+				"item": "minecraft:beetroot_seeds",
+				"count": 1
+			}
+		],
+		"result": {
+			"item": "af:rations",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cars.steer": {
+			"loop": true,
+			"animation_length": 0.96,
+			"bones": {
+				"wheel3": {
+					"rotation": [0, "math.max(-30, math.min(30, query.yaw_speed * 0.5)) * 1", 0]
+				},
+				"wheel2": {
+					"rotation": [0, "math.max(-30, math.min(30, query.yaw_speed * 0.5)) * 1", 0]
+				},
+				"streer_wheel2": {
+					"rotation": ["Math.max(-30, Math.min(30,query.yaw_speed * 0.5))*1", 0, 0]
+				}
+			}
+		},
+		"animation.cars.move": {
+			"loop": true,
+			"animation_length": 0.9167,
+			"bones": {
+				"wheel1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.9167": [360, 0, 0]
+					}
+				},
+				"wheel2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.9167": [360, 0, 0]
+					}
+				},
+				"wheel3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.9167": [360, 0, 0]
+					}
+				},
+				"wheel4": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.9167": [360, 0, 0]
+					}
+				},
+				"sedan": {
+"rotation": ["query.vertical_speed < 7.5 && query.vertical_speed > -7.5 ? -q.vertical_speed : 4.5", 0, 0]
+				}
+			}
+		}
+	}
+}

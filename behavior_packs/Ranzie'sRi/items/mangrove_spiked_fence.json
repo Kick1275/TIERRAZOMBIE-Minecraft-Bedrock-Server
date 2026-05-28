@@ -1,0 +1,20 @@
+{
+	"format_version" : "1.20.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "ranzie:mangrove_spiked_fence",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.fence"
+			}
+		},
+		"components" : {
+			"minecraft:icon" : {
+				"texture" : "mangrove_spiked_fence_item"
+			},
+			"minecraft:block_placer" : {
+				"block" : "ranzie:mangrove_upgraded_spiked_fence_block"
+			}
+		}
+	}
+}

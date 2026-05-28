@@ -1,0 +1,1 @@
+tellraw @s[scores={idresult=0}] {"rawtext":[{"translate":"proteccion.langcode.1"}]}

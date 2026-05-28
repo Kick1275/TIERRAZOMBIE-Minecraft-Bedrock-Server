@@ -1,0 +1,48 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:kamaz65224",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/kamaz65224/kamaz65224",
+				"libernia": "textures/entity/kamaz65224/kamaz65224_libernia",
+				"telslakia": "textures/entity/kamaz65224/kamaz65224_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.kamaz65224"
+			},
+			"render_controllers": [
+				"controller.render.kamaz65224",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_kamaz65224_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.m1151.move",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.tank.brake",
+				"scale": "animation.tank.scale",
+				"look": "animation.tank.look_at_target",
+				"rotations": "animation.vehicle.rotations",
+				"turn": "animation.m1151.turn"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"drive",
+					"look",
+					"rotations",
+					"turn"
+				]
+			},
+			"particle_effects": {
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

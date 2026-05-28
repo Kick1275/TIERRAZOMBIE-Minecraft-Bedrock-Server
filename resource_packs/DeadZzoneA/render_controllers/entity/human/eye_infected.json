@@ -1,0 +1,135 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.male_eyes_infected": {
+      "arrays": {
+        "textures": {
+          "Array.eyes": [
+            "Texture.male_eyes_infected_0",
+            "Texture.male_eyes_infected_1",
+            "Texture.male_eyes_infected_2",
+            "Texture.male_eyes_infected_3",
+            "Texture.male_eyes_infected_4",
+            "Texture.male_eyes_infected_5",
+            "Texture.male_eyes_infected_6",
+            "Texture.male_eyes_infected_7",
+            "Texture.male_eyes_infected_8",
+            "Texture.male_eyes_infected_9",
+            "Texture.male_eyes_infected_10",
+            "Texture.male_eyes_infected_11",
+            "Texture.male_eyes_infected_12",
+            "Texture.male_eyes_infected_13",
+            "Texture.male_eyes_infected_14",
+            "Texture.male_eyes_infected_15",
+            "Texture.male_eyes_infected_16",
+            "Texture.male_eyes_infected_17",
+            "Texture.male_eyes_infected_18",
+            "Texture.male_eyes_infected_19",
+            "Texture.male_eyes_infected_20",
+            "Texture.male_eyes_infected_21",
+            "Texture.male_eyes_infected_22",
+            "Texture.male_eyes_infected_23",
+            "Texture.male_eyes_infected_24",
+            "Texture.male_eyes_infected_25",
+            "Texture.male_eyes_infected_26",
+            "Texture.male_eyes_infected_27",
+            "Texture.male_eyes_infected_28",
+            "Texture.male_eyes_infected_29",
+            "Texture.male_eyes_infected_30",
+            "Texture.male_eyes_infected_31",
+            "Texture.male_eyes_infected_32"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.default"
+        }
+      ],
+      "light_color_multiplier": 0.9,
+      "ignore_lighting": true,
+      "textures": [
+        "Array.eyes[v.male_eyes]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    },
+    "controller.render.female_eyes_infected": {
+      "arrays": {
+        "textures": {
+          "Array.eyes": [
+            "Texture.female_eyes_0",
+            "Texture.female_eyes_1",
+            "Texture.female_eyes_2",
+            "Texture.female_eyes_3",
+            "Texture.female_eyes_4",
+            "Texture.female_eyes_5",
+            "Texture.female_eyes_6",
+            "Texture.female_eyes_7",
+            "Texture.female_eyes_8",
+            "Texture.female_eyes_9",
+            "Texture.female_eyes_10",
+            "Texture.female_eyes_11",
+            "Texture.female_eyes_12",
+            "Texture.female_eyes_13",
+            "Texture.female_eyes_14",
+            "Texture.female_eyes_15",
+            "Texture.female_eyes_16",
+            "Texture.female_eyes_17",
+            "Texture.female_eyes_18",
+            "Texture.female_eyes_19",
+            "Texture.female_eyes_20",
+            "Texture.female_eyes_21",
+            "Texture.female_eyes_22",
+            "Texture.female_eyes_23",
+            "Texture.female_eyes_24",
+            "Texture.female_eyes_25",
+            "Texture.female_eyes_26",
+            "Texture.female_eyes_27",
+            "Texture.female_eyes_28",
+            "Texture.female_eyes_29",
+            "Texture.female_eyes_30",
+            "Texture.female_eyes_31",
+            "Texture.female_eyes_32"
+          ]
+        }
+      },
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+           "*": "Material.default"
+        }
+      ],
+      "light_color_multiplier": 0.9,
+      "ignore_lighting": true,
+      "textures": [
+        "Array.eyes[v.female_eyes]"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

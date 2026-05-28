@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "TACZ Resources v1.0",
+    "description": "Legal license and port of TaCZ, coded by Akang Krep, and MMecha official license application",
+    "uuid": "9d8e7f6a-5b4c-3d2e-1f0a-9b8c7d6e5f4a",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 17, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "3f4e5d6c-7b8a-9012-3456-7890abcdef12",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "4f2a831e-9d12-4c6b-96e5-22a83b9f1a01",
+      "version": [1, 0, 0]
+    }
+  ]
+}

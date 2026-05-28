@@ -1,0 +1,42 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:turret",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/turret/turret",
+				"libernia": "textures/entity/turret/turret_libernia",
+				"telslakia": "textures/entity/turret/turret_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.turret"
+			},
+			"render_controllers": [
+				"controller.render.turret",
+				{
+					"controller.render.faction_emblems": "query.mark_variant==1"
+				}
+			],
+			"spawn_egg": {
+				"texture": "af_turret_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"look": "animation.turret.look",
+				"target": "animation.turret.target",
+				"camera": "animation.turret.camera"
+			},
+			"scripts": {
+				"animate": [
+					"look",
+					{
+						"target": "query.facing_target_to_range_attack"
+					}
+				]
+			}
+		}
+	}
+}

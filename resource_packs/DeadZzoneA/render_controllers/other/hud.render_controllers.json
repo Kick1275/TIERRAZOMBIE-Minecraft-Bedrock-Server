@@ -1,0 +1,14 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.pocket_hud_thirst_bar": {
+      "geometry": "Geometry.thirst",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.icons" ],
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "light_color_multiplier": 1.3,
+      "ignore_lighting":true
+    }
+  }
+}

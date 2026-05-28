@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.mp5.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.3,
+      "timeline": {
+        "3.2": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:mp5 1 0",
+          "/scoreboard players set @s[scores={mp5=31..}] mp5 30",
+          "/function mp5"
+        ],
+        "3.0": [
+          "/function mp5reload",
+          "/event entity @s krep:mp5_reload"
+        ]
+      }
+    }
+  }
+}

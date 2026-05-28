@@ -1,0 +1,51 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.default.fp.walk": {
+			"loop": true,
+			"animation_length": 0.8333,
+			"bones": {
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 7.5],
+						"0.2083": {
+							"pre": [0, 0, 10],
+							"post": [0, 0, 10],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": [0, 0, 7.5],
+						"0.625": {
+							"pre": [0, 0, 5],
+							"post": [0, 0, 5],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8333": [0, 0, 7.5]
+					},
+					"position": {
+						"0.0": [-1, 0, 0],
+						"0.2083": {
+							"pre": [-1.2, -0.2, 0],
+							"post": [-1.2, -0.2, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.4167": [-0.8, 0, 0],
+						"0.625": {
+							"pre": [-0.6, -0.2, 0],
+							"post": [-0.6, -0.2, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"0.8333": [-1, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.walk.delay.2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.45
+		},
+		"animation.walk.delay.1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5
+		}
+	}
+}

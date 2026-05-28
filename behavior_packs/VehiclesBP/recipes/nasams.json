@@ -1,0 +1,34 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:nasams"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:steel_ingot"
+			},
+			"I": {
+				"item": "af:libernia_id"
+			},
+			"T": {
+				"item": "af:titanium_ingot"
+			},
+			"O": {
+				"item": "af:missile_item"
+			}
+		},
+		"pattern": [
+			"ORO",
+			"RIR",
+			"TTT"
+		],
+		"result": {
+			"item": "af:nasams_spawn_egg",
+			"count": 1
+		}
+	}
+}

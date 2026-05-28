@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.qbz95.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.4,
+      "timeline": {
+        "2.3": [
+          "/scoreboard players set @s[scores={qbz95=32..}] qbz95 31",
+          "/function qbz95"
+        ],
+        "2.2": [
+          "/function qbz95reload",
+          "/event entity @s krep:qbz95_reload"
+        ]
+      }
+    }
+  }
+}

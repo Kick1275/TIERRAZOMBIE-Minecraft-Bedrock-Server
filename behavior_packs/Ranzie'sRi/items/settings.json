@@ -1,0 +1,21 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ranzie:settings",
+      "menu_category": {
+        "category": "items",
+        "group": "itemGroup.name.food"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "item.settings.name"
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 9999.6
+      },
+      "minecraft:icon": "settings_icon"
+    }
+  }
+}

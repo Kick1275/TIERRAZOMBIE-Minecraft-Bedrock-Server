@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.scarl.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.1,
+      "timeline": {
+        "2.0": [
+          "/scoreboard players set @s[scores={scarl=32..}] scarl 31",
+          "/function scarl"
+        ],
+        "1.9": [
+          "/function scarlreload",
+          "/event entity @s krep:scarl_reload"
+        ]
+      }
+    }
+  }
+}

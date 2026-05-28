@@ -1,0 +1,199 @@
+{
+  "b_icons": {
+    "bindings": [
+      {
+        "binding_collection_name": "$hotbar_collection_name",
+        "binding_name": "#slot_selected",
+        "binding_name_override": "#visible",
+        "binding_type": "collection"
+      }
+    ],
+    "controls": [
+      {
+        "b1@hud.b_icons_template": {
+          "$icon": "empty",
+          "$gun_id": 2547,
+          "$empty_gun_id": 2547
+        }
+      }
+    ],
+    "type": "panel"
+  },
+  "b_icons_template": {
+    "bindings": [
+      {
+        "binding_collection_name": "$hotbar_collection_name",
+        "binding_condition": "none",
+        "binding_name": "#item_id_aux",
+        "binding_type": "collection"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#item_id_aux = $gun_id) or (#item_id_aux = $empty_gun_id))",
+        "target_property_name": "#visible"
+      }
+    ],
+    "layer": 12,
+    "type": "image",
+    "texture": "('textures/ikon/'+$icon)",
+    "alpha": "@hud.anim_actionbar_text_alpha_out"
+  },
+  "hud_actionbar_text": {
+    "controls": [
+      {
+        "stack": {
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "offset": [
+            -20,
+            76
+          ],
+          "type": "stack_panel",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "icon_wrapper": {
+                "type": "panel",
+                "size": [
+                  21,
+                  21
+                ],
+                "controls": [
+                  {
+                    "sala": {
+                      "$hotbar_collection_name|default": "hotbar_items",
+                      "$slot_control|default": "hud.b_icons",
+                      "collection_name": "$hotbar_collection_name",
+                      "controls": [
+                        {
+                          "slot_0@$slot_control": {
+                            "collection_index": 0
+                          }
+                        },
+                        {
+                          "slot_1@$slot_control": {
+                            "collection_index": 1
+                          }
+                        },
+                        {
+                          "slot_2@$slot_control": {
+                            "collection_index": 2
+                          }
+                        },
+                        {
+                          "slot_3@$slot_control": {
+                            "collection_index": 3
+                          }
+                        },
+                        {
+                          "slot_4@$slot_control": {
+                            "collection_index": 4
+                          }
+                        },
+                        {
+                          "slot_5@$slot_control": {
+                            "collection_index": 5
+                          }
+                        },
+                        {
+                          "slot_6@$slot_control": {
+                            "collection_index": 6
+                          }
+                        },
+                        {
+                          "slot_7@$slot_control": {
+                            "collection_index": 7
+                          }
+                        },
+                        {
+                          "slot_8@$slot_control": {
+                            "collection_index": 8
+                          }
+                        }
+                      ],
+                      "orientation": "vertical",
+                      "size": [
+                        "100%",
+                        "100%"
+                      ],
+                      "type": "stack_panel"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "pad2": {
+                "type": "panel",
+                "size": [
+                  2,
+                  0
+                ]
+              }
+            },
+            {
+              "whiteline": {
+                "type": "image",
+                "texture": "textures/ui/White",
+                "size": [
+                  4,
+                  21
+                ],
+                "alpha": "@hud.anim_actionbar_text_alpha_out"
+              }
+            },
+            {
+              "pad": {
+                "type": "panel",
+                "size": [
+                  2,
+                  0
+                ]
+              }
+            },
+            {
+              "label_wrapper": {
+                "type": "panel",
+                "size": [
+                  78,
+                  21
+                ],
+                "controls": [
+                  {
+                    "actionbar_message": {
+                      "color": "$tool_tip_text",
+                      "localize": false,
+                      "text": "$actionbar_text",
+                      "type": "label",
+                      "alpha": "@hud.anim_actionbar_text_alpha_out",
+                      "font_scale_factor": 1.125,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle",
+                      "offset": [
+                        0,
+                        0.5
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "orientation": "horizontal"
+        }
+      }
+    ],
+    "offset": [
+      0,
+      "50%-68px"
+    ],
+    "size": [
+      "100%",
+      "100%c"
+    ],
+    "type": "panel"
+  }
+}

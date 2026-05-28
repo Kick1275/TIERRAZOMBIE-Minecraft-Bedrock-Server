@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.tabuksr": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='tabuksr' && q.is_using_item) || query.get_equipped_item_name=='tabuksr_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s tabuksr 20",
+            "@s[hasitem={item=krep:tabuksr, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "tabuksr.30": "query.get_equipped_item_name=='tabuksr' && query.is_using_item && query.scoreboard('tabuksr') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "tabuksr.31": "query.get_equipped_item_name=='tabuksr' && query.is_using_item && query.scoreboard('tabuksr') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function tabuksr"
+          ]
+        },
+        "tabuksr.31": {
+          "animations": [
+            "tabuksrshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={tabuksr=0}] slot.weapon.mainhand 1 krep:tabuksr_emp 1 0"
+          ]
+        },
+        "tabuksr.30": {
+          "animations": [
+            "tabuksrshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:tabuksr_fire",
+            "/scoreboard players set @s[scores={tabuksr=22..}] tabuksr 21",
+            "/scoreboard players remove @s[scores={tabuksr=1..21}] tabuksr 1",
+            "/playsound tabuksr.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={tabuksr=0}] slot.weapon.mainhand 1 krep:tabuksr_emp 1 0",
+            "/title @s[scores={tabuksr=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

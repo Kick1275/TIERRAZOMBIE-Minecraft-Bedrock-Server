@@ -1,0 +1,41 @@
+//bridge-file-version: #39
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:dacia_red_destroyed",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/destroyed_vehicles/dacia_red_destroyed"
+			},
+			"geometry": {
+				"default": "geometry.dacia"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"terrain",
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.dacia.drive",
+				"down": "animation.dacia.down",
+				"up": "animation.dacia.up",
+				"terrain": "controller.animation.daciadestroyed.terrain",
+				"engine_smoke": "controller.animation.daciadestroyed.smoke"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"particle_effects": {
+				"flame": "pubg:engine_fire",
+				"engine": "pubg:engine_smoke_black"
+			}
+		}
+	}
+}

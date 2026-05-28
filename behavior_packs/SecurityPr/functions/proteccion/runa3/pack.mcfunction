@@ -1,0 +1,3 @@
+function proteccion/runa3/proteccion
+function proteccion/runa3/propietario
+function proteccion/runa3/fuera_mensaje

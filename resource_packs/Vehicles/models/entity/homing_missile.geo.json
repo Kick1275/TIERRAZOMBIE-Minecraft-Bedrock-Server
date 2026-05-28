@@ -1,0 +1,122 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.homing_missile",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [
+					0,
+					0.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [
+						0,
+						-1,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								-2,
+								-24
+							],
+							"size": [
+								4,
+								4,
+								48
+							],
+							"uv": [
+								26,
+								0
+							]
+						},
+						{
+							"origin": [
+								-1.5,
+								-1.5,
+								-30
+							],
+							"size": [
+								3,
+								3,
+								6
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								0,
+								-7,
+								-23
+							],
+							"size": [
+								0,
+								14,
+								46
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								-45
+							],
+							"uv": [
+								0,
+								6
+							]
+						},
+						{
+							"origin": [
+								-7,
+								0,
+								-23
+							],
+							"size": [
+								14,
+								0,
+								46
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								-45
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					],
+					"locators": {
+						"particle_locator": [
+							0,
+							0,
+							24
+						]
+					}
+				}
+			]
+		}
+	]
+}

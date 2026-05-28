@@ -1,0 +1,2 @@
+titleraw @s[scores={m16a1=1..21}] actionbar {"rawtext":[{"score":{"name":"@s","objective":"m16a1"}},{"text":"/20 \n5.56x45mm"}]}
+titleraw @s[scores={m16a1=0}] actionbar {"rawtext":[{"text":"§cNo Ammunition"},{"text":"\n5.56x45mm"}]}

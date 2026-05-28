@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:ap_shell"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "af:charged_tnt"
+			},
+			"S": {
+				"item": "af:titanium_ingot"
+			}
+		},
+		"pattern": [
+			"RRR",
+			"RNS",
+			"RRR"
+		],
+		"result": {
+			"item": "af:ap_shell",
+			"count": 1
+		}
+	}
+}

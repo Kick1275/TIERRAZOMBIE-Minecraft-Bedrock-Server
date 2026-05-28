@@ -1,0 +1,56 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ranzie:corpse",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "spider"
+      },
+      "textures": {
+        "default": "textures/entity/zombie/zombie",
+        "default1": "textures/entity/zombie/zombie1",
+        "default2": "textures/entity/zombie/zombie2",
+        "default3": "textures/entity/zombie/zombie3",
+        "default4": "textures/entity/zombie/zombie4",
+        "default5": "textures/entity/zombie/zombie5",
+        "default6": "textures/entity/zombie/zombie6",
+        "default7": "textures/entity/zombie/zombie7",
+        "default8": "textures/entity/zombie/zombie8",
+        "default9": "textures/entity/zombie/zombie9",
+        "default10": "textures/entity/zombie/zombie10",
+        "default11": "textures/entity/zombie/zombie11"
+      },
+      "geometry": {
+        "default": "geometry.zombie.v1.8"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg_zombie"
+      },
+      "scripts": {
+  "pre_animation": [
+    "variable.Xvar = (variable.Xvar ?? Math.random(0,12));",
+    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+    "variable.eye_target_x = query.target_y_rotation - this;",
+    "variable.eye_target_y = query.target_x_rotation - this;",
+    "variable.randdeath = Math.random(0,2);"
+  ]
+},
+"animations": {
+"base": "animation.zombie.v1.8.base",
+  "death1": "animation.zombie.v1.8.death",
+  "death2": "animation.zombie.v1.8.death2",
+  "death3": "animation.zombie.v1.8.death3",
+  "death4": "animation.zombie.v1.8.death4",
+  "death5": "animation.zombie.v1.8.death5",
+  "death6": "animation.zombie.v1.8.death6",
+  "death7": "animation.zombie.v1.8.death7"
+},
+      "animation_controllers": [
+        { "corpse": "controller.animation.zombie.v1.8.corpse" }
+      ],
+      "render_controllers": [ "controller.render.zombie" ],
+      "enable_attachables": true
+    }
+  }
+}

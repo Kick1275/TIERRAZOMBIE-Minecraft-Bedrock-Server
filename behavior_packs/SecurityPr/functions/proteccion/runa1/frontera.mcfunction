@@ -1,0 +1,1 @@
+execute as @s[tag=!noclaim] at @s run fill ~-11 -63 ~-11 ~11 -63 ~11 barrier

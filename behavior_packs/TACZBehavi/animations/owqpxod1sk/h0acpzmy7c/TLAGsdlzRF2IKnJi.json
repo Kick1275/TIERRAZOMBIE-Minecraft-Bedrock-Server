@@ -1,0 +1,22 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m249.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 5.9,
+      "timeline": {
+        "5.8": [
+          "/scoreboard players set @s[scores={m249=101..}] m249 100",
+          "/function m249"
+        ],
+        "2.28": [
+          "@s evolys:bulletcache"
+        ],
+        "5.7": [
+          "/function m249reload",
+          "/event entity @s krep:m249_reload"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:weapon_table"
+		},
+		"tags": [
+			"af_weapon",
+			"crafting_table"
+		],
+		"key": {
+			"C": {
+				"item": "minecraft:crafting_table"
+			},
+			"N": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"pattern": [
+			" N ",
+			"NCN"
+		],
+		"result": {
+			"item": "af:weapon_table",
+			"count": 1
+		}
+	}
+}

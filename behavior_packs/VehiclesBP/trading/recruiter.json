@@ -1,0 +1,54 @@
+{
+	"tiers": [
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "minecraft:iron_ingot",
+									"quantity": 1
+								}
+							],
+							"gives": [
+								{
+									"item": "af:manual",
+									"quantity": 1
+								}
+							]
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:iron_ingot",
+									"quantity": 1
+								}
+							],
+							"gives": [
+								{
+									"item": "af:libernia_id",
+									"quantity": 1
+								}
+							]
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:iron_ingot",
+									"quantity": 1
+								}
+							],
+							"gives": [
+								{
+									"item": "af:telslakia_id",
+									"quantity": 1
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

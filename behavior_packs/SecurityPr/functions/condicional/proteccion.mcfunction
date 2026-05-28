@@ -1,0 +1,10 @@
+execute as @a[tag=dueño] at @s run function proteccion/barreras_remove
+execute as @a[tag=intruso] at @s run function proteccion/barreras_remove
+execute as @e[type=rt:runa_proteccion,tag=!noclaim,tag=!notime,tag=!inactividad] at @s run function proteccion/barreras
+execute as @e[type=rt:runa_proteccion,tag=!overworld] at @s run function proteccion/dimension_test_simple
+execute as @e[type=rt:runa_proteccion,tag=noclaim] at @s run function proteccion/test_frontera_denied
+execute as @e[type=rt:runa_proteccion,tag=!noclaim,tag=runa1,tag=!inactividad] at @s run function proteccion/runa1/pack
+execute as @e[type=rt:runa_proteccion,tag=!noclaim,tag=runa2,tag=!inactividad] at @s run function proteccion/runa2/pack
+execute as @e[type=rt:runa_proteccion,tag=!noclaim,tag=runa3,tag=!inactividad] at @s run function proteccion/runa3/pack
+execute as @e[type=rt:runa_proteccion,tag=!inactividad] at @s run function proteccion/anti_mobs
+execute as @e[type=rt:runa_proteccion,tag=claim,tag=!notime,tag=!inactividad] at @s run function proteccion/clock

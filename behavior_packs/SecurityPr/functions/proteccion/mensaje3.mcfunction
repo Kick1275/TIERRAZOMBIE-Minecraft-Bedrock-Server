@@ -1,0 +1,1 @@
+tellraw @s {"rawtext":[{"translate": "proteccion.langcode.9"}]}

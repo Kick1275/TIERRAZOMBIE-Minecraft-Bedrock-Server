@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.backpack_attachable",
+        "texture_width": 32,
+        "texture_height": 32,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 3,
+        "visible_bounds_offset": [0, 1, 0]
+      },
+      "bones": [
+        {
+          "name": "body",
+          "pivot": [0, 24, 0]
+        },
+        {
+          "name": "backpack",
+          "parent": "body",
+          "pivot": [0, 18, 0],
+          "cubes": [
+            {
+              "origin": [-4, 13, 2],
+              "size": [8, 10, 4],
+              "uv": [0, 0]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

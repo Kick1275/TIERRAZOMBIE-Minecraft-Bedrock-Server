@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "af:titanium_ore_feature"
+		},
+		"count": 5,
+		"replace_rules": [
+			{
+				"places_block": {
+					"name": "af:titanium_ore",
+					"states": {}
+				},
+				"may_replace": [
+					{
+						"name": "minecraft:deepslate"
+					}
+				]
+			}
+		]
+	}
+}

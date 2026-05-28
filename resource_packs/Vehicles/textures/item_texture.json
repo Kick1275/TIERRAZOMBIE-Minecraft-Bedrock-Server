@@ -1,0 +1,324 @@
+{
+	"resource_pack_name": "Bean's Armed Forces",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"af_artillery_egg": {
+			"textures": "textures/items/place_artillery"
+		},
+		"af_wrench": {
+			"textures": "textures/items/wrench"
+		},
+		"af_ap_shell": {
+			"textures": "textures/items/ap_shell"
+		},
+		"af_m1a1_egg": {
+			"textures": "textures/items/place_m1a1"
+		},
+		"af_f16_egg": {
+			"textures": "textures/items/place_f16"
+		},
+		"af_missile_item": {
+			"textures": "textures/items/missile_item"
+		},
+		"af_flare": {
+			"textures": "textures/items/flare"
+		},
+		"af_libernia_id": {
+			"textures": "textures/items/libernia_id"
+		},
+		"af_telslakia_id": {
+			"textures": "textures/items/telslakia_id"
+		},
+		"af_manual": {
+			"textures": "textures/items/manual"
+		},
+		"af_call_recruiter": {
+			"textures": "textures/items/call_recruiter"
+		},
+		"af_mq9_egg": {
+			"textures": "textures/items/place_mq9"
+		},
+		"af_mig21_egg": {
+			"textures": "textures/items/place_mig21"
+		},
+		"af_f35a_egg": {
+			"textures": "textures/items/place_f35a"
+		},
+		"af_b2_egg": {
+			"textures": "textures/items/place_b2"
+		},
+		"af_vehicle_gun": {
+			"textures": "textures/items/vehicle_gun"
+		},
+		"af_autopilot": {
+			"textures": "textures/items/autopilot"
+		},
+		"af_he_shell": {
+			"textures": "textures/items/he_shell"
+		},
+		"af_c_ram_egg": {
+			"textures": "textures/items/place_c_ram"
+		},
+		"af_j20_egg": {
+			"textures": "textures/items/place_j20"
+		},
+		"af_m1151_egg": {
+			"textures": "textures/items/place_m1151"
+		},
+		"af_war_table_egg": {
+			"textures": "textures/items/place_war_table"
+		},
+		"af_sam_turret_egg": {
+			"textures": "textures/items/place_sam_turret"
+		},
+		"af_t90m_egg": {
+			"textures": "textures/items/place_t90m"
+		},
+		"af_siren_pole_egg": {
+			"textures": "textures/items/place_siren_pole"
+		},
+		"af_barbed_wire_egg": {
+			"textures": "textures/items/place_barbed_wire"
+		},
+		"af_antitank_mine_egg": {
+			"textures": "textures/items/place_antitank_mine"
+		},
+		"af_communist_manifesto": {
+			"textures": "textures/items/communist_manifesto"
+		},
+		"af_oil_bucket": {
+			"textures": "textures/items/oil_bucket"
+		},
+		"af_refined_oil_bucket": {
+			"textures": "textures/items/refined_oil_bucket"
+		},
+		"af_bunkerbuster_bomb_item": {
+			"textures": "textures/items/bunkerbuster_bomb_item"
+		},
+		"af_generalpurpose_bomb": {
+			"textures": "textures/items/generalpurpose_bomb"
+		},
+		"af_type16_egg": {
+			"textures": "textures/items/place_type16"
+		},
+		"af_charged_tnt": {
+			"textures": "textures/items/charged_tnt"
+		},
+		"af_bmpt72_egg": {
+			"textures": "textures/items/place_bmpt72"
+		},
+		"af_gas_mask": {
+			"textures": "textures/items/gas_mask"
+		},
+		"af_su57_egg": {
+			"textures": "textures/items/place_su57"
+		},
+		"af_jackboots": {
+			"textures": "textures/items/jackboots"
+		},
+		"af_btr80_egg": {
+			"textures": "textures/items/place_btr80"
+		},
+		"af_ah64_egg": {
+			"textures": "textures/items/place_ah64"
+		},
+		"af_hydra_rocket": {
+			"textures": "textures/items/hydra_rocket"
+		},
+		"af_gas_canister_egg": {
+			"textures": "textures/items/place_gas_canister"
+		},
+		"af_mi24_egg": {
+			"textures": "textures/items/place_mi24"
+		},
+		"af_flag_pole_egg": {
+			"textures": "textures/items/place_flag_pole"
+		},
+		"af_turret_egg": {
+			"textures": "textures/items/place_turret"
+		},
+		"af_telslakian_helmet": {
+			"textures": "textures/items/telslakian_helmet"
+		},
+		"af_libernian_helmet": {
+			"textures": "textures/items/libernian_helmet"
+		},
+		"af_kamaz65224_egg": {
+			"textures": "textures/items/place_kamaz65224"
+		},
+		"af_m939_egg": {
+			"textures": "textures/items/place_m939"
+		},
+		"af:handgun": {
+			"textures": "textures/af/items/handgun_default"
+		},
+		"af:handgun_bullet": {
+			"textures": "textures/af/items/handgun_bullet"
+		},
+		"af:shotgun": {
+			"textures": "textures/af/items/shotgun_default"
+		},
+		"af:shotgun_bullet": {
+			"textures": "textures/af/items/shotgun_bullet"
+		},
+		"af_uav_remote": {
+			"textures": "textures/items/uav_remote"
+		},
+		"af_radio_tower_egg": {
+			"textures": "textures/items/place_radio_tower"
+		},
+		"af_glock17": {
+			"textures": "textures/items/glock17"
+		},
+		"af_glock17_bullet": {
+			"textures": "textures/items/glock17_bullet"
+		},
+		"af_m4carbine": {
+			"textures": "textures/items/m4carbine"
+		},
+		"af_m4carbine_bullet": {
+			"textures": "textures/items/m4carbine_bullet"
+		},
+		"af_m24sniper": {
+			"textures": "textures/items/m24sniper"
+		},
+		"af_m24sniper_bullet": {
+			"textures": "textures/items/m24sniper_bullet"
+		},
+		"af_spas12": {
+			"textures": "textures/items/spas12"
+		},
+		"af_spas12_bullet": {
+			"textures": "textures/items/spas12_bullet"
+		},
+		"af_guided_missile": {
+			"textures": "textures/items/guided_missile"
+		},
+		"af_balaclava": {
+			"textures": "textures/items/balaclava"
+		},
+		"af_telslakian_vest": {
+			"textures": "textures/items/telslakian_vest"
+		},
+		"af_libernian_vest": {
+			"textures": "textures/items/libernian_vest"
+		},
+		"af_cd_ewtrtw": {
+			"textures": "textures/items/compact_disc"
+		},
+		"af_m551_egg": {
+			"textures": "textures/items/place_m551"
+		},
+		"af_raw_uranium": {
+			"textures": "textures/items/raw_uranium"
+		},
+		"af_f4_egg": {
+			"textures": "textures/items/place_f4"
+		},
+		"af_nightvision_goggles": {
+			"textures": "textures/items/nightvision_goggles"
+		},
+		"af_libernian_combat_suit": {
+			"textures": "textures/items/libernian_combat_suit_item"
+		},
+		"af_telslakian_combat_suit": {
+			"textures": "textures/items/telslakia_combat_suit_item"
+		},
+		"af_libernian_uniform": {
+			"textures": "textures/items/libernian_uniform_item"
+		},
+		"af_telslakian_uniform": {
+			"textures": "textures/items/telslakian_uniform_item"
+		},
+		"af_mig29_egg": {
+			"textures": "textures/items/place_mig29"
+		},
+		"af_f22_egg": {
+			"textures": "textures/items/place_f22"
+		},
+		"af_cd_player": {
+			"textures": "textures/items/place_cd_player"
+		},
+		"af_grenade_frag": {
+			"textures": "textures/items/grenade_frag"
+		},
+		"af_grenade_stun": {
+			"textures": "textures/items/grenade_stun"
+		},
+		"af_grenade_smoke": {
+			"textures": "textures/items/grenade_smoke"
+		},
+		"af_m114_egg": {
+			"textures": "textures/items/place_m114"
+		},
+		"af_d20_egg": {
+			"textures": "textures/items/place_d20"
+		},
+		"af_t72a_egg": {
+			"textures": "textures/items/place_t72a"
+		},
+		"af_aluminium_ingot": {
+			"textures": "textures/items/aluminium_ingot"
+		},
+		"af_steel_ingot": {
+			"textures": "textures/items/steel_ingot"
+		},
+		"af_titanium_ingot": {
+			"textures": "textures/items/titanium_ingot"
+		},
+		"af_taxpayer_dollar": {
+			"textures": "textures/items/taxpayer_dollar"
+		},
+		"af_gj2_egg": {
+			"textures": "textures/items/place_gj2"
+		},
+		"af_eq2050_egg": {
+			"textures": "textures/items/place_eq2050"
+		},
+		"af_ak630_egg": {
+			"textures": "textures/items/place_ak630"
+		},
+		"af_nasams_egg": {
+			"textures": "textures/items/place_nasams"
+		},
+		"af_m2a2_egg": {
+			"textures": "textures/items/place_m2a2"
+		},
+		"af_throttle": {
+			"textures": "textures/items/throttle"
+		},
+		"af_mounted_gun_egg": {
+			"textures": "textures/items/place_mounted_gun"
+		},
+		"af_bm3_egg": {
+			"textures": "textures/items/place_bm3"
+		},
+		"af_sgra1_egg": {
+			"textures": "textures/items/place_sgra1"
+		},
+		"af_tu160_egg": {
+			"textures": "textures/items/place_tu160"
+		},
+		"af_a10_egg": {
+			"textures": "textures/items/place_a10"
+		},
+		"af_su25_egg": {
+			"textures": "textures/items/place_su25"
+		},
+		"af_libernian_soldier_egg": {
+			"textures": "textures/items/spawn_libernian_soldier"
+		},
+		"af_telslakian_soldier_egg": {
+			"textures": "textures/items/spawn_telslakian_soldier"
+		},
+		"af_rations": {
+			"textures": "textures/items/rations"
+		},
+		"af_kevlar": {
+			"textures": "textures/items/kevlar"
+		},
+		"af_unused_remote": {
+			"textures": "textures/items/unused_remote"
+		}
+	}
+}

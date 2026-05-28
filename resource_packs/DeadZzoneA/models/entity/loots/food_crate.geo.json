@@ -1,0 +1,41 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.food_crate",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-8, 0, -7], "size": [16, 1, 14], "uv": [0, 0]},
+						{"origin": [-8, 1, -7], "size": [16, 4, 1], "uv": [30, 22]},
+						{"origin": [-8, 1, -6], "size": [1, 4, 12], "uv": [15, 21]},
+						{"origin": [7, 1, -6], "size": [1, 4, 12], "uv": [0, 16]},
+						{"origin": [-8, 1, 6], "size": [16, 4, 1], "uv": [30, 16]}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "bone",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [3, 1, -5], "size": [4, 7, 4], "pivot": [5, 0, -3], "rotation": [0, -7.5, 0], "uv": [47, 28]},
+						{"origin": [3, 1, 1], "size": [4, 7, 4], "uv": [17, 38]},
+						{"origin": [-2, 1, -5], "size": [4, 7, 4], "pivot": [0, 0, -3], "rotation": [0, 10, 0], "uv": [47, 0]},
+						{"origin": [-2, 1, 1], "size": [4, 7, 4], "pivot": [0, 0, 3], "rotation": [0, 22.5, 0], "uv": [34, 38]},
+						{"origin": [-7, 1, -5], "size": [4, 7, 4], "uv": [0, 46]},
+						{"origin": [-7, 1, 1], "size": [4, 7, 4], "pivot": [-5, 0, 3], "rotation": [-1.4895, -4.69866, -1.86321], "uv": [0, 34]}
+					]
+				}
+			]
+		}
+	]
+}

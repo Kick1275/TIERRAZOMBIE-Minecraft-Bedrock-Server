@@ -1,0 +1,23 @@
+//bridge-file-version: #1
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.boat.basic": {
+			"states": {
+				"default": {
+					"variables": {
+						"moving_speed": {
+							"input": "query.modified_move_speed"
+						}
+					},
+					"animations": [
+						"turn",
+						{
+							"drive": "variable.moving_speed"
+						}
+					]
+				}
+			}
+		}
+	}
+}

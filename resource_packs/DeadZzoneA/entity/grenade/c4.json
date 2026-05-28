@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "grenade:c4",
+      "materials": {
+        "default": "slime"
+      },
+      "textures": {
+        "default": "textures/entity/grenade/c4"
+      },
+      "geometry": {
+        "default": "geometry.c4"
+      },
+      "render_controllers": [
+        "controller.render.slime"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "a realistic first person perspective experience mod made by OGcrafter",
+    "name": "realistic first person v[1.0.4]",
+    "uuid": "f022e0fb-489b-41f9-8cc4-b0d09c3ebcb9",
+    "version": [
+      1,
+      0,
+      4
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "description": "realistic first person perspective experience mod made by OGcrafter",
+      "type": "resources",
+      "uuid": "62487ace-a09c-4e90-84e5-e872cfa117a5",
+      "version": [
+        1,
+        0,
+        4
+      ],
+      "entry": null,
+      "language": null
+    }
+  ],
+  "dependencies": null
+}

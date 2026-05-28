@@ -1,0 +1,13 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_smithing_transform": {
+    "description": {
+      "identifier": "netherite_bolo"
+    },
+    "tags": ["smithing_table"],
+    "template": "minecraft:netherite_upgrade_smithing_template",
+    "base": "ranzie:diamond_bolo",
+    "addition": "minecraft:netherite_ingot",
+    "result": "ranzie:netherite_bolo"
+  }
+}

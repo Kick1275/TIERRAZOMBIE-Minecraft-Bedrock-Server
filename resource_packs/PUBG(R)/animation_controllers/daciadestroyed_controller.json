@@ -1,0 +1,72 @@
+//bridge-file-version: #182
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.daciadestroyed.terrain": {
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"down": "[(query.ground_speed >= 4.75)]"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.vertical_speed"
+						},
+						{
+							"up": "query.vertical_speed"
+						}
+					],
+					"blend_transition": 3,
+					"blend_via_shortest_path": true
+				},
+				"up": {
+					"animations": [
+						{
+							"up": "[(query.ground_speed < 4.75)]"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.vertical_speed"
+						},
+						{
+							"up": "query.vertical_speed"
+						}
+					],
+					"blend_transition": 3,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.daciadestroyed.smoke": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"alive": "query.is_alive"
+						}
+					]
+				},
+				"alive": {
+					"transitions": [
+						{
+							"default": "!query.is_alive"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "engine",
+							"locator": "engine"
+						},
+						{
+							"effect": "flame",
+							"locator": "engine"
+						}
+					]
+				}
+			}
+		}
+	}
+}

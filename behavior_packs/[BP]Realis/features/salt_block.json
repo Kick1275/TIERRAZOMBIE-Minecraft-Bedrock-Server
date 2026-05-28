@@ -1,0 +1,20 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "efm:salt_block"
+		},
+		"count": 26,
+		"replace_rules": [
+			{
+				"places_block": "efm:salt_block",
+				"may_replace": [
+					"sand",
+					"stone",
+					"dirt",
+					"gravel"
+				]
+			}
+		]
+	}
+}

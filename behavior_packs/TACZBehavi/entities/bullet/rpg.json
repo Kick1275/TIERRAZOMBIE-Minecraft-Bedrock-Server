@@ -1,0 +1,69 @@
+{
+  "format_version": "1.13",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bullet:rpg",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:snowball"
+    },
+    "component_groups": {
+      "krep:explod": {
+        "minecraft:explode": {
+          "fuse_length": 0,
+          "fuse_lit": true,
+          "power": 4,
+          "causes_fire": false,
+          "fire_affected_by_griefing": false,
+          "destroy_affected_by_griefing": false,
+          "breaks_blocks": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.1,
+        "height": 0.1
+      },
+      "minecraft:type_family": {
+        "family": [
+          "bullet"
+        ]
+      },
+      "minecraft:projectile": {
+        "on_hit": {
+          "impact_damage": {
+            "damage": 10,
+            "knockback": false
+          },
+          "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "event": "krep:explod",
+              "target": "self"
+            }
+          }
+        },
+        "power": 3.0,
+        "should_bounce": true,
+        "gravity": 0.0
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "krep:explod": {
+        "queue_command": {
+          "command": [
+            "damage @e[r=5] 10 entity_explosion"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "krep:explod"
+          ]
+        }
+      }
+    }
+  }
+}

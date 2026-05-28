@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m1911.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.4,
+      "timeline": {
+        "2.3": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:m1911 1 0",
+          "/scoreboard players set @s[scores={m1911=8..}] m1911 7",
+          "/function m1911"
+        ],
+        "2.2": [
+          "/function m1911reload",
+          "/event entity @s krep:m1911_reload"
+        ]
+      }
+    }
+  }
+}

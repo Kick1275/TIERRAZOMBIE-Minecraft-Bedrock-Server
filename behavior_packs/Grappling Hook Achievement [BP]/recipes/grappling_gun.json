@@ -1,0 +1,37 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "causal:grappling_hook"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "#A#",
+      " B ",
+      " C "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:iron_ingot"
+      },
+      "A": {
+        "item": "minecraft:iron_block"
+      },
+      "B": {
+        "item": "minecraft:lead"
+      },
+      "C": {
+        "item": "minecraft:piston"
+      }
+    },
+    "result": {
+      "item": "causal:grappling_hook",
+      "count": 1
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    }
+  }
+}

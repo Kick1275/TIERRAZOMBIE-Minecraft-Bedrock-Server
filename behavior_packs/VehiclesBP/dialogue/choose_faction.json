@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "choose_faction",
+				"npc_name": "Arms Dealer",
+				"text": "Choose Arms Dealer's Faction.",
+				"buttons": [
+					{
+						"name": "Libernia",
+						"commands": [
+							"/tag @s add libernia",
+							"title @a[r=5] actionbar now choose it's branch.",
+							"/playsound mob.villager.yes @a ~ ~ ~"
+						]
+					},
+					{
+						"name": "Telslakia",
+						"commands": [
+							"/tag @s add telslakia",
+							"title @a[r=5] actionbar now choose it's branch.",
+							"/playsound mob.villager.yes @a ~ ~ ~"
+						]
+					}
+				],
+				"on_close_commands": [
+					"/playsound mob.villager.no @a ~ ~ ~"
+				]
+			}
+		]
+	}
+}

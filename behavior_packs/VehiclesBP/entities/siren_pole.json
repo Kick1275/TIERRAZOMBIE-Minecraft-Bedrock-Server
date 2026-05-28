@@ -1,0 +1,238 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:siren_pole",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:boat"
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 2
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 8
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:is_stackable": {},
+			"minecraft:loot": {
+				"table": "loot_tables/siren_pole.json"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar Sneak and interact to pick up."
+					]
+				},
+				"add": {
+					"component_groups": [
+						"idle"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"stopsound @a libernia.speaker",
+						"stopsound @a telslakia.speaker"
+					]
+				}
+			},
+			"af:stop": {
+				"remove": {
+					"component_groups": [
+						"audio"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"stopsound @a libernia.speaker",
+						"stopsound @a telslakia.speaker"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"idle"
+					]
+				}
+			},
+			"af:play_telslakia": {
+				"queue_command": {
+					"command": [
+						"playsound telslakia.speaker @a[r=16] ~ ~ ~ 100 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"audio"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"idle"
+					]
+				}
+			},
+			"af:play_libernia": {
+				"queue_command": {
+					"command": [
+						"playsound libernia.speaker @a[r=16] ~ ~ ~ 100 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"audio"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"idle"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar Will play National Themes of the respective ID card you use on it."
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"audio": {
+				"minecraft:timer": {
+					"time": 80,
+					"time_down_event": {
+						"event": "af:stop"
+					}
+				},
+				"minecraft:is_ignited": {},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"event": "af:stop",
+								"target": "self"
+							}
+						}
+					]
+				}
+			},
+			"idle": {
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"add_items": {
+								"table": "loot_tables/siren_pole.json"
+							},
+							"interact_text": "action.interact.war_table",
+							"on_interact": {
+								"event": "af:despawn",
+								"target": "self",
+								"filters": {
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": true
+								}
+							},
+							"play_sounds": "death"
+						},
+						{
+							"interact_text": "action.interact.use",
+							"on_interact": {
+								"event": "af:play_telslakia",
+								"target": "self",
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:telslakia_id"
+											}
+										]
+									}
+								]
+							}
+						},
+						{
+							"interact_text": "action.interact.use",
+							"on_interact": {
+								"event": "af:play_libernia",
+								"target": "self",
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:libernia_id"
+											}
+										]
+									}
+								]
+							}
+						},
+						{
+							"interact_text": "action.interact.use",
+							"on_interact": {
+								"event": "af:manual",
+								"target": "self",
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"subject": "other",
+												"domain": "hand",
+												"value": "af:manual"
+											}
+										]
+									}
+								]
+							},
+							"play_sounds": "purr"
+						}
+					]
+				}
+			}
+		}
+	}
+}

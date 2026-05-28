@@ -1,0 +1,30 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player.downed": {
+            "initial_state": "normal",
+            "states": {
+                "normal": {
+                    "transitions": [
+                        { "downed":   "query.has_tag('downed')" },
+                        { "executing":"query.has_tag('dz_executing')" }
+                    ]
+                },
+                "downed": {
+                    "animations": [ "dz_downed" ],
+                    "transitions": [
+                        { "normal": "!query.has_tag('downed')" }
+                    ],
+                    "blend_transition": 0.1
+                },
+                "executing": {
+                    "animations": [ "dz_execution" ],
+                    "transitions": [
+                        { "normal": "!query.has_tag('dz_executing')" }
+                    ],
+                    "blend_transition": 0.1
+                }
+            }
+        }
+    }
+}

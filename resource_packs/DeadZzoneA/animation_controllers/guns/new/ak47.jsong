@@ -1,0 +1,67 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ak47": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"guns.draw"
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true,
+					"transitions": [
+						{
+							"holding": "q.any_animation_finished"
+						}
+					]
+				},
+				"holding": {
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true,
+					"animations": [
+						"guns.hold"
+					],
+					"transitions": [
+						{
+							"sprint": "q.is_sprinting && !q.is_in_water"
+						},
+						{
+							"reload": "q.mark_variant == 1"
+						}
+					]
+				},
+				"reload": {
+					"animations": [
+						"ak.reload_full"
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true,
+					"transitions": [
+						{
+							"holding": "q.all_animations_finished"
+						},
+						{
+							"sprint": "q.is_sprinting"
+						}
+					]
+				},
+				"sprint": {
+					"animations": [
+						"guns.sprint"
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true,
+					"transitions": [
+						{
+							"holding": "!q.is_sprinting"
+						},
+						{
+							"aim": "q.is_sneaking"
+						}
+					]
+				}
+			}
+		}
+	}
+}

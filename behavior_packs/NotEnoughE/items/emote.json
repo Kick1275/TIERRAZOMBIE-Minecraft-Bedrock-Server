@@ -1,0 +1,15 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "eu:emote",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": "eu_emote",
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

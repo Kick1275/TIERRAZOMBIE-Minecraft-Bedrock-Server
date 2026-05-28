@@ -1,0 +1,22 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "af:oil"
+		},
+		"count": 16,
+		"replace_rules": [
+			{
+				"places_block": "af:oil",
+				"may_replace": [
+					"minecraft:stone",
+					"minecraft:sandstone",
+					"minecraft:hardened_clay",
+					"minecraft:red_terracotta",
+					"minecraft:orange_terracotta",
+					"minecraft:dirt"
+				]
+			}
+		]
+	}
+}

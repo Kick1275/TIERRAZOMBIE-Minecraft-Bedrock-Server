@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.mk14.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.3,
+      "timeline": {
+        "2.25": [
+          "/scoreboard players set @s[scores={mk14=22..}] mk14 21",
+          "/function mk14"
+        ],
+        "2.1": [
+          "/function mk14reload",
+          "/event entity @s krep:mk14_reload"
+        ]
+      }
+    }
+  }
+}

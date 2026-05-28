@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.70",
+	"minecraft:item": {
+		"description": {
+			"identifier": "efm:settings_food",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": "book_enchanted",
+			"minecraft:display_name": {
+				"value": "Better Food Settings"
+			},
+			"efm:interactable": {}
+		}
+	}
+}

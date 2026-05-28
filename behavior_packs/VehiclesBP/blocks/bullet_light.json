@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:bullet_light"
+		},
+		"components": {
+			"minecraft:placement_filter": {
+				"block_filter": [
+					"minecraft:brain_coral_fan"
+				]
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:light_emission": 15,
+			"minecraft:collision_box": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "af_bullet_light",
+					"render_method": "blend",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:geometry": {
+				"identifier": "minecraft:geometry.full_block"
+			}
+		}
+	}
+}

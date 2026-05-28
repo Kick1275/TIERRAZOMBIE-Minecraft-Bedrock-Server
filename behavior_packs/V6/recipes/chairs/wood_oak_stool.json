@@ -1,0 +1,24 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "medieval:wood_oak_stool"
+    },
+	"tags": [ "workbench" ],
+	"pattern": [
+		"ABA"
+	],
+	"key": {
+	  "B": {
+	    "item": "medieval:oak_planks_bench"
+	  },
+		"A": {
+			"item": "medieval:oak_wood_post"
+		}
+    },
+    "result": {
+      "item": "medieval:wood_oak_stool",
+	  "count": 1
+    }
+  }
+}

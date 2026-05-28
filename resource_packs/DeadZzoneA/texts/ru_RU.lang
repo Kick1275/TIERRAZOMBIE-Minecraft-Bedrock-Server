@@ -1,0 +1,721 @@
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## You can translate from here
+## welcome message
+game.message.welcome_dz=Добро пожаловать в Dead§4Z§rone
+game.message.deadzone_1=§eВведите §r§o!avatar§r§e чтобы создать персонажа
+game.message.deadzone_2=§eВведите §r§o!status§r§e чтобы увидеть статистику
+
+## death message
+death.attack.bullet.headshot=%1$s Застрелен(а) в голову %2$s
+death.attack.bullet=%1$s Был(а) застрелен(а) %2$s
+
+## cc
+cc.random_avatar.gui=Рандом
+cc.default_skin.gui=По умолчанию
+cc.skin.gui=Кожа
+cc.hair.gui=Волосы
+cc.eye.gui=Глаза
+cc.gender.gui=Пол
+cc.glove.gui=Перчатки 
+cc.message.default_skin=Использовать скин по умолчанию?
+cc.message.warning=Выберите пол перед тем, как выбирать атрибуты.
+cc.message.warning_eye_first=Вы не можете поставить такие глаза 
+cc.message.warning_eye_second=Вы не можете поставить такие глаза
+
+## status
+statu.player_name=имя
+statu.player_killed=Игрок убил
+statu.infected_killed=Заражённый убил
+statu.time_playing=Время игры
+statu.time_survived=Время выживания 
+statu.distance_walk=Пройдена дистанций
+statu.kill_distance=Убийство на большое расстояние
+
+## action
+action.interact.cut=Расчленить
+action.interact.bury= Закопать тело
+action.hint.exit.mcpe:sedan= Прыжок/красться чтобы вылезти из транспорта
+action.hint.exit.mcpe:humvee= Прыжок/красться чтобы вылезти из транспорта
+action.hint.exit.mcpe:motor= Прыжок/красться чтобы вылезти из транспорта
+
+## game message
+game.message.warning_blood_type=§cВы не знаете вашу группу крови.
+game.message.warning_overdose_first=§cВы передозировы!
+game.message.warning_overdose_second=§cЯ чувствую себя нехорошо...
+game.message.blood_test=§aВаша группа крови -
+game.message.blood_type_first=§aВаша группа крови – O(I)
+game.message.blood_type_second=§aВаша группа крови – A(II)
+game.message.blood_type_third=§aВаша группа крови – B(III)
+game.message.blood_type_fourth=§aВаша группа крови – AB(IV)
+game.message.blood_transfer=§a Переливание крови завершена.
+game.message.bleeding_warning=§cЯ чувствую, как теряю кровь...
+game.message.broken_bone_warning=§cМоя нога сломана...
+game.message.temperature_warning_first=§c Я перегреваюсь.
+game.message.temperature_warning_second=§c Я замерзаю.
+game.message.warning_lockpick=§4Нужна отмычка, чтобы открыть черный ящик!
+game.message.lockpick_broken=§cОтмычка сломалась!
+game.message.lockpick_attempt=§cПопытка открыть не удалась!
+game.message.unsupport_warning=Этот предмет не поддерживается. пожалуйста, нажмите на экран / щелкните правой кнопкой мыши, чтобы вернуть предмет
+game.message.blood_type=Ваша группа крови:
+
+## spawn egg
+item.spawn_egg.entity.mcpe:civilian.name=Яйцо призыва инфицированного гражданского
+item.spawn_egg.entity.mcpe:military.name=Яйцо призыва инфицированного военного
+item.spawn_egg.entity.mcpe:hazmat.name=Яйцо призыва инфицированного в химзащите
+item.spawn_egg.entity.mcpe:militia.name=Яйцо призыва инфицированного ополченца
+item.spawn_egg.entity.mcpe:screamer.name=Яйцо призыва крикуна
+item.spawn_egg.entity.mcpe:commander.name=Яйцо призыва инфицированного командира
+item.spawn_egg.entity.mcpe:sedan.name=Яйцо призыва седана
+item.spawn_egg.entity.mcpe:motor.name=Яйцо призыва мотоцикла
+item.spawn_egg.entity.mcpe:humvee.name=Яйцо призыва хаммера
+
+item.spawn_egg.entity.mcpe:marauder.name=Яйцо призыва группы бандитов
+item.spawn_egg.entity.mcpe:scavenger.name=Яйцо призыва группы диких
+
+## entity
+entity.mcpe:civilian.name=Инфицированный гражданский
+entity.mcpe:military.name=Инфицированный военный
+entity.mcpe:hazmat.name=Инфицированный в химзащите
+entity.mcpe:commander.name=Инфицированный командир
+entity.mcpe:militia.name=Инфицированный ополченец 
+
+entity.mcpe:marauder.name=Бандит
+entity.mcpe:scavenger.name=Дикий
+
+entity.unknown.name=Карманы
+
+## item
+item.mcpe:baseball_bat.name=Бейсбольная бита
+item.mcpe:barbedwire_bat.name=Бита с колючей проволокой 
+item.mcpe:cleaver_knife.name=Кухонный тесак
+item.mcpe:combat_knife.name=Боевой нож
+item.mcpe:crowbar.name=Лом
+item.mcpe:engineer_shovel.name=Лопата
+item.mcpe:fireman_axe.name=Пожарный топор
+item.mcpe:flanged_mace.name=Булава
+item.mcpe:frying_pan.name=Сковорода 
+item.mcpe:golf_club.name=Клюшка для гольфа
+item.mcpe:golok_machete.name=Голок
+item.mcpe:hammer.name=Молоток
+item.mcpe:hatchet.name=Топорик
+item.mcpe:hunting_knife.name=Охотничий нож
+item.mcpe:ice_hockey.name=Хоккейная клюшка
+item.mcpe:ice_pick.name=Ледоруб 
+item.mcpe:katana.name=Катана
+item.mcpe:kitchen_knife.name=Кухонный нож
+item.mcpe:knight_sword.name=Рыцарский меч
+item.mcpe:kukri_machete.name=Кукри
+item.mcpe:lead_pipe.name=Труба
+item.mcpe:machete.name=Мачете 
+item.mcpe:metal_bat.name=Железная бита
+item.mcpe:miner_pickaxe.name=Кирка
+item.mcpe:nailed_bat.name=Шипастая бита
+item.mcpe:nailed_plank.name=Доска с гвоздями 
+item.mcpe:pipe_wrench.name=Трубный ключ
+item.mcpe:pitchfork.name=Вилы
+item.mcpe:police_baton.name=Полицейская дубинка
+item.mcpe:rolling_pin.name=Скалка
+item.mcpe:sabre_sword.name=Сабля
+item.mcpe:screwdriver.name=Отвёртка
+item.mcpe:farm_sickle.name=Серп
+item.mcpe:sledgehammer.name=Кувалда
+item.mcpe:snow_shovel.name=Лопата для снега
+item.mcpe:splitting_axe.name=Колун
+item.mcpe:tactical_axe.name=Тактический топор
+item.mcpe:tactical_shovel.name=Тактическая лопата
+item.mcpe:tire_iron.name=Шиномонтажник
+item.mcpe:wooden_plank.name=Доска
+item.mcpe:wrench.name=Ключ
+item.mcpe:hacksaw.name=Пила
+
+item.mcpe:blood_test_kit.name=Тестер группы крови
+item.mcpe:blood_bag_emp.name=Пустой пакет крови
+item.mcpe:blood_bag_unknown.name=Неизвестный пакет крови
+item.mcpe:blood_bag_type_a.name=Пакет крови группы A(II)
+item.mcpe:blood_bag_type_ab.name=Пакет крови группы AB(IV)
+item.mcpe:blood_bag_type_b.name=Пакет крови группы B(III)
+item.mcpe:blood_bag_type_o.name=Пакет крови группы O(I)
+
+item.mcpe:first_aid.name=Набор первой помощи 
+item.mcpe:bandage.name=Бинт
+item.mcpe:bandage_sterilized.name=Стерильный бинт
+item.mcpe:rags.name=Тряпка
+item.mcpe:rags_dirty.name=Грязная тряпка
+item.mcpe:rags_sterilized.name=Стерильная тряпка 
+item.mcpe:blood_bag.name=Пакет крови
+item.mcpe:painkiller.name=Обезболивающее 
+item.mcpe:adrenaline.name=Адреналин
+item.mcpe:morphine.name=Морфин
+item.mcpe:splint.name=Шина
+item.mcpe:water_purification.name=Таблетки для обеззараживания воды
+item.mcpe:alcoholic_tinture.name=Медицинский спирт
+item.mcpe:antidote.name=Антидот
+
+
+item.mcpe:avatar_custome.name=Кастомизация персонажа
+item.mcpe:barbed_wire.name=Колючая проволка
+item.mcpe:bear_trap.name=Капкан 
+item.mcpe:bleach.name=Отбеливатель 
+item.mcpe:bottle_water_emp.name=Пустая бутылка
+item.mcpe:detonator.name=Детонатор 
+item.mcpe:can_opener.name=Консервный нож
+item.mcpe:duct_tape.name=Изолента 
+item.mcpe:flashlight.name=Фонарик
+item.mcpe:fumo_hat.name=Плюшевый Некозака на твоя голова
+item.mcpe:funi_vest.name=Пояс крипера
+item.mcpe:ham_radios.name=Сломанное радио
+item.mcpe:landmine.name=Мина
+item.mcpe:lockpick.name=Отмычка
+item.mcpe:nail_box.name=Коробка гвоздей
+item.mcpe:nail.name=Гвозди
+item.mcpe:cooking_pot.name=Пустая кастрюля
+item.mcpe:radios.name=Радио
+item.mcpe:Random_paper.name=Бумаги
+item.mcpe:remote.name=Детонатор шахида
+item.mcpe:sawoff_pipe.name=Распиленная трубка
+item.mcpe:spray_can.name=Баллончик с краской
+item.mcpe:walkie_talkie.name=Рация
+item.mcpe:wire_cutter.name=Кусачки
+item.mcpe:wooden_barricade.name=Деревянная баррикада
+item.mcpe:fvla_flags.name=Флаг "FVLA"
+item.mcpe:vostrovia_flags.name=Флаг Республики Востровия
+item.mcpe:nekoi_flags.name=Флаг "N¡P"
+item.mcpe:nails.name=Гвозди
+item.mcpe:plastic_explosive.name=Пластид
+item.mcpe:electric_scrap.name=Электроника
+item.mcpe:vending_popsi_icon.name= Торговый автомат "Попси"
+item.mcpe:vending_exp_icon.name= Торговый автомат "Икспи-кола"
+item.mcpe:vending_sprot_icon.name= Торговый автомат "Шпрот"
+
+item.mcpe:chip_potato.name=Чипсы картофельные 
+item.mcpe:chip_tortilla.name=Чипсы тортилья
+item.mcpe:chocolate_bar.name=Шоколадный батончик 
+item.mcpe:creeper_crunch.name=Кукурузные хлопья
+item.mcpe:meat_jerky.name=Вяленое мясо
+item.mcpe:mre.name=Сухпаёк
+item.mcpe:rice.name=Рис
+item.mcpe:strawberry_jam.name=Клубничный джем
+item.mcpe:tactical_sandwich.name=Сэндвич 
+item.mcpe:apple_green.name=Яблоко
+item.mcpe:banana.name=Банан
+item.mcpe:cucumber.name=Огурец
+item.mcpe:pear.name=Груша
+item.mcpe:tomato.name=Помидор
+item.mcpe:zucchini.name=Цукини 
+item.mcpe:raw_player.name=Сырая человечина
+item.mcpe:cooked_player.name=Жаренная человечина
+
+
+item.mcpe:canned_bacon.name=Консервированный бекон
+item.mcpe:canned_beans.name=Консервированые бобы
+item.mcpe:canned_beef_stew.name=Консервированая тушёнка
+item.mcpe:canned_chicken.name=Консервированая курица
+item.mcpe:canned_chili.name=Консервированые перцы чили
+item.mcpe:canned_corned.name=Консервированная солонина
+item.mcpe:canned_fruit.name=Консервированный фруктовый коктейль
+item.mcpe:canned_ham.name=Консервированная ветчина
+item.mcpe:canned_peaches.name=Консервированная груша
+item.mcpe:canned_ration.name=Консервированный боевой рацион
+item.mcpe:canned_sardine.name=Консервированные сардины
+item.mcpe:canned_spaghetti.name=Консервированные спагетти
+item.mcpe:canned_tomato.name=Консервированный томатный суп
+item.mcpe:canned_tuna.name=Консервированный тунец
+
+
+item.mcpe:canned_bacon_open.name=Открытый консервированный бекон 
+item.mcpe:canned_beans_open.name=Открытые консервированые бобы
+item.mcpe:canned_beef_stew_open.name=Открытая консервированая тушёнка
+item.mcpe:canned_chicken_open.name=Открытая консервированая курица
+item.mcpe:canned_chili_open.name=Открытые консервированые перцы чили
+item.mcpe:canned_corned_open.name=Открытая консервированная солонина
+item.mcpe:canned_fruit_open.name=Открытый консервированный фруктовый коктейль
+item.mcpe:canned_ham_open.name=Открытая консервированная ветчина
+item.mcpe:canned_peaches_open.name=Открытая консервированная груша
+item.mcpe:canned_ration_open.name=Открытый консервированный боевой рацион 
+item.mcpe:canned_sardine_open.name=Открытые консервированные сардины
+item.mcpe:canned_spaghetti_open.name=Открытые консервированные спагетти
+item.mcpe:canned_tomato_open.name=Открытый консервированный томатный суп
+item.mcpe:canned_tuna_open.name=Открытый консервированный тунец
+
+
+item.mcpe:canned_bacon_open_bad.name=Протухший открытый консервированный бекон 
+item.mcpe:canned_beans_open_bad.name=Протухшие открытые консервированые бобы
+item.mcpe:canned_beef_stew_open_bad.name=Протухшая открытая консервированая тушёнка
+item.mcpe:canned_chicken_open_bad.name=Протухшая открытая консервированая курица
+item.mcpe:canned_chili_open_bad.name=Протухшие открытые консервированые перцы чили
+item.mcpe:canned_corned_open_bad.name=Протухшая открытая консервированная солонина
+item.mcpe:canned_fruit_open_bad.name=Протухший открытый консервированный фруктовый коктейль
+item.mcpe:canned_ham_open_bad.name=Протухшая открытая консервированная ветчина
+item.mcpe:canned_peaches_open_bad.name=Протухшая открытая консервированная груша
+item.mcpe:canned_ration_open_bad.name=Протухший открытый консервированный боевой рацион 
+item.mcpe:canned_sardine_open_bad.name=Протухшие открытые консервированные сардины
+item.mcpe:canned_spaghetti_open_bad.name=Протухшие открытые консервированные спагетти
+item.mcpe:canned_tomato_open_bad.name=Протухший открытый консервированный томатный суп
+item.mcpe:canned_tuna_open_bad.name=Протухший открытый консервированный тунец
+
+
+item.mcpe:beer_bottle.name=Пиво
+item.mcpe:bottle_water_bleach.name=Бутылка "воды"
+item.mcpe:bottle_water_unpure.name=Бытулка неочищенной воды
+item.mcpe:bottle_water.name=Бутылка воды
+item.mcpe:coffee.name=Кофе
+item.mcpe:energy_drink.name=Энергетик
+item.mcpe:exp_coke.name=ИксПи кола
+item.mcpe:grape_soda.name=Виноградная газировка 
+item.mcpe:lemonade.name=Лимонад 
+item.mcpe:milk_gallon.name=Галлон молока
+item.mcpe:popsi_cola.name=ПопСи кола
+item.mcpe:pot_cook_water.name=Кастрюля с водой
+item.mcpe:pot_water.name=Кастрюля неочищенной воды
+item.mcpe:red_wine.name=Красное вино
+item.mcpe:vodka.name=Водка
+item.mcpe:whiskey.name=Виски
+
+## ammo
+item.mcpe:ammo_7_62x39mm.name=Патроны 7.62x39мм
+item.mcpe:ammo_5_45x39mm.name=Патроны 5.45x39мм
+item.mcpe:ammo_5_56x45mm.name=Патроны 5.56x45мм
+item.mcpe:ammo_7_62x51mm.name=Патроны 7.62x51мм
+item.mcpe:ammo_7_62x54mmr.name=Патроны 7.62x54ммR
+item.mcpe:ammo_9x39mm.name=Патроны 9x39мм
+item.mcpe:ammo_9x19mm.name=Патроны 9x19мм
+item.mcpe:ammo_9x18mm.name=Патроны 9x18мм
+item.mcpe:ammo_12gauge.name=Патроны 12x70мм
+item.mcpe:ammo_40mm.name=Патрон 40x46мм
+item.mcpe:ammo_44magnum.name=Патроны .44 mag
+item.mcpe:ammo_357magnum.name=Патроны .357 mag
+item.mcpe:ammo_45acp.name=Патроны .45 ACP
+item.mcpe:ammo_32acp.name=Патроны .32 ACP
+
+## grenade
+item.mcpe:frag_grenade.name=Осколочная граната
+item.mcpe:smoke_grenade.name=Дымовая граната
+item.mcpe:flash_grenade.name=Светошумовая граната
+item.mcpe:c4_explosive.name=Взрывчатка C4
+item.mcpe:pipe_bomb.name=Трубчатая бомба
+item.mcpe:nerve_grenade.name=Газовая граната 
+
+## armor/clothes
+item.mcpe:assault_vest_black.name=Чёрный штурмовой жилет
+item.mcpe:assault_vest_olive.name=Оливковый штурмовой жилет
+item.mcpe:biker_vest.name=Байкерский жилет
+item.mcpe:biker_vest_skull.name=Байкерский жилет с черепом
+item.mcpe:chest_navy.name=Морской разгрузочный жилет
+item.mcpe:chest_tan.name=Бежевый разгрузочный жилет 
+item.mcpe:chest_green.name=Зелёный разгрузочный жилет
+item.mcpe:chest_white.name=Белый разгрузочный жилет 
+item.mcpe:chest_brown.name=Коричневый разгрузочный жилет 
+item.mcpe:combat_olive.name=Оливковый боевой жилет
+item.mcpe:combat_white.name=Белый боевой жилет
+item.mcpe:combat_tan.name=Бежевый боевой жилет
+item.mcpe:hunting_brown.name=Коричневый охотничий жилет
+item.mcpe:hunting_navy.name=Морской охотничий жилет
+item.mcpe:plate_vest_gray.name=Серый бронежилет
+item.mcpe:plate_vest_white.name=Белый бронежилет
+item.mcpe:plate_vest_olive.name=Оливковый бронежилет
+item.mcpe:plate_vest_tan.name=Бежевый бронежилет
+item.mcpe:police_vest.name=Бронежилет ОМОН
+item.mcpe:press_vest.name=Бронежилет прессы
+item.mcpe:reflective_lime.name=Лаймовый сигнальный жилет 
+item.mcpe:reflective_orange.name=Оранжевый сигнальный жилет
+item.mcpe:reflective_yellow.name=Жёлтый сигнальный жилет
+item.mcpe:stab_vest_gray.name=Серый противоударный жилет
+item.mcpe:stab_vest_tan.name=Бежевый противоударный жилет
+item.mcpe:stab_vest_white.name=Белый противоударный жилет
+item.mcpe:tactical_vest_black.name=Чёрный тактический жилет
+item.mcpe:tactical_vest_white.name=Белый тактический жилет
+item.mcpe:tactical_vest_tan.name=Бежевый тактический жилет
+item.mcpe:tactical_vest_olive.name=Оливковый тактический жилет
+item.mcpe:webbing_brown.name=Коричневая ременно-плечевая система
+item.mcpe:webbing_black.name=Чёрная ременно-плечевая система
+item.mcpe:webbing_tan.name=Бежевая ременно-плечевая система
+item.mcpe:webbing_green.name=Зелёная ременно-плечевая система
+item.mcpe:webbing_white.name=Белая ременно-плечевая система
+
+
+item.mcpe:army_artic.name=Белый военный шлем
+item.mcpe:army_desert.name=Бежевый военный шлем
+item.mcpe:army_woodland.name=Камуфляжный военный шлем
+item.mcpe:assault_helmet_black.name=Чёрный штурмовой шлем
+item.mcpe:assault_helmet_olive.name=Оливковый штурмовой шлем
+item.mcpe:balaclava_black.name=Лыжная маска
+item.mcpe:ballistic_black.name=Чёрный баллистический шлем
+item.mcpe:ballistic_green.name=Зелёный баллистический шлем
+item.mcpe:ballistic_Tan.name=Бежевый баллистический шлем
+item.mcpe:ballistic_white.name=Белый баллистический шлем
+item.mcpe:bandana_blue.name=Синяя бандана
+item.mcpe:bandana_green.name=Зелёная бандана
+item.mcpe:bandana_red.name=Красная бандана
+item.mcpe:beanie_black.name=Чёрная зимняя шапка
+item.mcpe:beanie_brown.name=Коричневая зимняя шапка
+item.mcpe:beanie_white.name=Белая зимняя шапка
+item.mcpe:beanie_olive.name=Оливковая зимняя шапка
+item.mcpe:beret_red.name=Красный берет
+item.mcpe:beret_green.name=Зелёный берет
+item.mcpe:beret_blue.name=Синий берет
+item.mcpe:biker_black.name=Чёрный мотошлем
+item.mcpe:biker_white.name=Белый мотошлем
+item.mcpe:biker_yellow.name=Жёлтый мотошлем
+item.mcpe:biker_red.name=Красный мотошлем
+item.mcpe:biker_green.name=Зелёный мотошлем
+item.mcpe:biker_blue.name=Синий мотошлем
+item.mcpe:boonie_artic.name=Арктическая панама
+item.mcpe:boonie_woodland.name=Камуфляжная панама
+item.mcpe:boonie_desert.name=Пустынная панама
+item.mcpe:boonie_black.name=Чёрная панама
+item.mcpe:boonie_green.name=Зелёная панама
+item.mcpe:boonie_white.name=Белая панама
+item.mcpe:boonie_tan.name=Бежевая панама
+item.mcpe:cap_black.name=Чёрная кепка
+item.mcpe:cap_green.name=Зелёная кепка
+item.mcpe:cap_blue.name=Синяя кепка
+item.mcpe:cap_red.name=Красная кепка
+item.mcpe:clown_wig.name=Клоунский парик
+item.mcpe:cowboy_brown.name=Коричневая ковбойская шляпа
+item.mcpe:cowboy_black.name=Чёрная ковбойская шляпа
+item.mcpe:cowboy_white.name=Белая ковбойская шляпа
+item.mcpe:durag_black.name=Чёрный дюраг
+item.mcpe:durag_brown.name=Коричневый дюраг
+item.mcpe:firefighter_hat.name=Шлем пожарного
+item.mcpe:flat_black.name=Чёрная кепи
+item.mcpe:flat_brown.name=Коричневая кепи
+item.mcpe:gasmask_black.name=Чёрный противогаз
+item.mcpe:gasmask_white.name=Белый противогаз
+item.mcpe:gasmask_tactical.name=Тактический противогаз
+item.mcpe:great_helm.name=Топфхелм 
+item.mcpe:hard_blue.name=Синяя каска
+item.mcpe:hard_red.name=Красная каска
+item.mcpe:hard_yellow.name=Жёлтая каска
+item.mcpe:hard_white.name=Белая каска
+item.mcpe:hard_orange.name=Оранжевая каска
+item.mcpe:headlamp.name=Налобный фонарь
+item.mcpe:hunting_hat.name=Шапка охотника 
+item.mcpe:maid_bonnet.name=Чепчик горничной
+item.mcpe:mask_fawkes.name=Маска "Анонимус"
+item.mcpe:mask_funni.name=Маска "Ржака"
+item.mcpe:mask_troll.name=Маска "Троллфейс"
+item.mcpe:night_goggles.name=Очки ночного видения
+item.mcpe:peaked_green.name=Зелёная фуражка
+item.mcpe:peaked_white.name=Белая фуражка
+item.mcpe:peaked_tan.name=Бежевая фуражка
+item.mcpe:plague_hat.name=Маска чумного доктора
+item.mcpe:police_hat.name=Фуражка полицейского
+item.mcpe:police_riot.name=Шлем ОМОН
+item.mcpe:respirator_mask.name=Респиратор
+item.mcpe:shemagh_blue.name=Синяя арафатка
+item.mcpe:shemagh_red.name=Красная арафатка
+item.mcpe:shemagh_tan.name=Бежевая арафатка
+item.mcpe:shemagh_brown.name=Коричневая арафатка
+item.mcpe:shemagh_black.name=Чёрная арафатка
+item.mcpe:shemagh_olive.name=Оливковая арафатка
+item.mcpe:shemagh_gray.name=Серая арафатка
+item.mcpe:skimask_black.name=Балаклава 
+item.mcpe:spec_helmet.name=Шлем спецназа
+item.mcpe:tactical_helmet_black.name=Чёрный тактический шлем
+item.mcpe:tactical_helmet_tan.name=Бежевый тактический шлем
+item.mcpe:tactical_helmet_white.name=Белый тактический шлем
+item.mcpe:tactical_helmet_olive.name=Оливковый тактический шлем
+item.mcpe:ushanka.name=Шапка-ушанка
+item.mcpe:un_helmet.name=Шлем миротворца ООН
+item.mcpe:welder_mask.name=Сварочная маска
+
+item.mcpe:bdu_artic_bottom.name=Белые брюки BDU
+item.mcpe:bdu_desert_bottom.name=Бежевые брюки BDU
+item.mcpe:bdu_woodland_bottom.name=Камуфляжные брюки BDU
+item.mcpe:cargo_black.name=Чёрные брюки карго
+item.mcpe:cargo_brown.name=Коричневые брюки карго
+item.mcpe:cargo_tan.name=Бежевые брюки карго
+item.mcpe:cargo_white.name=Белые брюки карго
+item.mcpe:cargo_green.name=Зелёные брюки карго
+item.mcpe:chainmail_bottom.name=Кольчужные штаны
+item.mcpe:clown_bottom.name=Штаны клоуна
+item.mcpe:firefighter_bottom.name=Штаны пожарного
+item.mcpe:ghillie_drygrass_bottom.name=Штаны маскхалата из сухой травы
+item.mcpe:ghillie_forest_bottom.name=Штаны маскхалата лесные
+item.mcpe:ghillie_snow_bottom.name=Штаны маскхалата снежные
+item.mcpe:gorka_bottom.name=Штаны "Горка"
+item.mcpe:hazmat_white_bottom.name=Белые штаны химзащиты
+item.mcpe:hazmat_yellow_bottom.name=Жёлтые штаны химзащиты
+item.mcpe:jean_black.name=Чёрные джинсы
+item.mcpe:jean_blue.name=Синие джинсы
+item.mcpe:jean_brown.name=Коричневые джинсы
+item.mcpe:jean_light.name=Белые джинсы
+item.mcpe:khaki_light.name=Брюки хаки
+item.mcpe:maid_bottom.name=Юбка горничной
+item.mcpe:overall_black.name=Чёрный комбинезон
+item.mcpe:overall_brown.name=Коричневый комбинезон
+item.mcpe:overall_blue.name=Синий комбинезон
+item.mcpe:paramedic_bottom.name=Штаны парамедика
+item.mcpe:plague_bottom.name=Штаны чумного доктора
+item.mcpe:police_special_bottom.name=Штаны ОМОН
+item.mcpe:police_bottom.name=Штаны полицейского
+item.mcpe:prisoner_bottom.name=Штаны заключённого
+item.mcpe:slack_black.name=Чёрные джоггеры
+item.mcpe:special_bottom.name=Штаны спецназа
+item.mcpe:suit_bottom_black.name=Чёрные костюмные брюки
+item.mcpe:suspender_black.name=Чёрные штаны с подтяжками
+item.mcpe:trackpants_black.name=Чёрные спортивные штаны
+item.mcpe:trackpants_blue.name=Синие спортивные штаны
+item.mcpe:trackpants_red.name=Красные спортивные штаны
+
+item.mcpe:bdu_artic_top.name=Белый камуфляж BDU
+item.mcpe:bdu_desert_top.name=Бежевый камуфляж BDU
+item.mcpe:bdu_woodland_top.name=Лесной камуфляж BDU
+item.mcpe:chainmail_top.name=Кольчуга
+item.mcpe:clown_top.name=Костюм клоуна
+item.mcpe:crusader_top.name=Кольчуга крестоносца
+item.mcpe:firefighter_top.name=Униформа пожарного
+item.mcpe:flannel_red.name=Красная фланелевая рубашка
+item.mcpe:flannel_green.name=Зелёная фланелевая рубашка
+item.mcpe:flannel_blue.name=Синяя фланелевая рубашка
+item.mcpe:flannel_white.name=Белая фланелевая рубашка
+item.mcpe:flannel_gray.name=Серая фланелевая рубашка
+item.mcpe:ghillie_drygrass_top.name=Маскхалат из сухой травы
+item.mcpe:ghillie_forest_top.name=Маскхалат лесной
+item.mcpe:ghillie_snow_top.name=Маскхалат снежный
+item.mcpe:gorka_top.name=Куртка "Горка"
+item.mcpe:hawaiian_black.name=Чёрная гавайская рубашка
+item.mcpe:hawaiian_red.name=Красная гавайская рубашка
+item.mcpe:hazmat_white_top.name=Белый химзащитный костюм
+item.mcpe:hazmat_yellow_top.name=Жёлтый химзащитный костюм
+item.mcpe:hero_flannel.name=Рубашка героя
+item.mcpe:hiking_black.name=Чёрная походная куртка
+item.mcpe:hiking_blue.name=Синяя походная куртка
+item.mcpe:hoodie_black.name=Чёрная толстовка
+item.mcpe:hoodie_blue.name=Синяя толстовка
+item.mcpe:hoodie_green.name=Зелёная толстовка
+item.mcpe:hoodie_red.name=Красная толстовка
+item.mcpe:hoodie_yellow.name=Жёлтая толстовка
+item.mcpe:hoodie_white.name=Белая толстовка
+item.mcpe:leather_black.name=Чёрная кожаная куртка
+item.mcpe:leather_brown.name=Коричневая кожаная куртка
+item.mcpe:maid_top.name=Платье горничной
+item.mcpe:paramedic_top.name=Униформа парамедика
+item.mcpe:plague_top.name=Костюм чумного доктора
+item.mcpe:plaid_red.name=Красная клетчатая рубашка
+item.mcpe:plaid_blue.name=Синяя клетчатая рубашка
+item.mcpe:plaid_olive.name=Оливковая клетчатая рубашка
+item.mcpe:plaid_white.name=Белая клетчатая рубашка
+item.mcpe:plaid_gray.name=Серая клетчатая рубашка
+item.mcpe:plaid_tan.name=Бежевая клетчатая рубашка
+item.mcpe:police_special_top.name=Униформа ОМОН
+item.mcpe:police_top.name=Униформа полицейского
+item.mcpe:prisoner_top.name=Роба заключённого
+item.mcpe:puffer_blue.name=Синяя стёганая куртка
+item.mcpe:puffer_black.name=Чёрная стёганая куртка
+item.mcpe:special_top.name=Униформа спецназа
+item.mcpe:striped_blue.name=Синяя полосатая рубашка
+item.mcpe:striped_white.name=Белая полосатая рубашка
+item.mcpe:stripeds_black.name=Чёрная полосатая рубашка
+item.mcpe:suede_brown.name=Коричневая замшевая куртка
+item.mcpe:suit_black.name=Чёрный костюм
+item.mcpe:sweater_white.name=Белый свитер
+item.mcpe:sweater_green.name=Зелёный свитер
+item.mcpe:tactical_tan.name=Бежевый тактический свитер
+item.mcpe:tactical_green.name=Зелёный тактический свитер
+item.mcpe:tactical_navy.name=Морской тактический свитер
+item.mcpe:tactical_red.name=Красный тактический свитер
+item.mcpe:tactical_white.name=Белый тактический свитер
+item.mcpe:tracksuit_black.name=Чёрный спортивный костюм
+item.mcpe:tracksuit_blue.name=Синий спортивный костюм
+item.mcpe:tracksuit_red.name=Красный спортивный костюм
+item.mcpe:tshirt_black.name=Чёрная футболка
+item.mcpe:tshirt_blue.name=Синяя футболка
+item.mcpe:tshirt_red.name=Красная футболка
+item.mcpe:tshirt_green.name=Зелёная футболка
+item.mcpe:tshirt_white.name=Белая футболка
+item.mcpe:tshirt_yellow.name=Жёлтая футболка
+item.mcpe:varsity_blue.name=Синий бомбер
+item.mcpe:varsity_green.name=Зелёный бомбер
+item.mcpe:varsity_red.name=Красный бомбер 
+item.mcpe:varsity_brown.name=Коричневый бомбер
+
+## backpack
+item.mcpe:improvised_bag.name=Самодельный рюкзак 
+item.mcpe:school_blue_backpack.name=Синий школьный портфель 
+item.mcpe:school_green_backpack.name=Зелёный школьный портфель 
+item.mcpe:school_red_backpack.name=Красный школьный портфель 
+item.mcpe:taloon_yellow_backpack.name=Жёлтый рюкзак 
+item.mcpe:taloon_blue_backpack.name=Синий рюкзак 
+item.mcpe:taloon_green_backpack.name=Зелёный рюкзак 
+item.mcpe:taloon_red_backpack.name=Красный рюкзак 
+
+## loot
+tile.mcpe:civilian_loot.name=Картонная коробка 
+tile.mcpe:construction_loot.name=Ящик с инструментами 
+tile.mcpe:firefighter_loot.name=Пожарный шкаф 
+tile.mcpe:food_loot.name=Ящик с едой 
+tile.mcpe:medical_loot.name=Аптечка 
+tile.mcpe:artic_loot.name=Белый военный ящик 
+tile.mcpe:desert_loot.name=Бежевый военный ящик 
+tile.mcpe:woodland_loot.name=Зеленый военный ящик 
+tile.mcpe:medieval_loot.name=Винтажный сундук 
+tile.mcpe:police_loot.name=Оружейный кейс 
+tile.mcpe:rare_loot.name=Чёрный ящик 
+tile.mcpe:supply_block.name=Ящик гуманитарной помощи
+
+## misc
+tile.mcpe:barbed_wires.name=Моток колючей проволоки
+tile.mcpe:landmine.name=Мина
+tile.mcpe:nail_trap.name=Улушенная доска с гвоздями
+tile.mcpe:fumo.name=Плюшевый Некозак на твая голава
+tile.mcpe:radio.name=Радиоприёмник
+tile.mcpe:radio_ham.name=Военный радиоприёмник
+tile.mcpe:wheat.name=Пщеница
+tile.mcpe:wood_stake.name=Баррикада из деревянных кольев
+tile.mcpe:spawner_military.name=Спаунер военных
+tile.mcpe:spawner_civilian.name=Спаунер гражданских
+tile.mcpe:spawner_scavenger.name=Спаунер диких
+tile.mcpe:spawner_marauder.name=Спаунер бандитов
+tile.mcpe:server_button.name=Серверная кнопка
+tile.mcpe:server_button_delay.name=Серверная кнопка на задержке
+tile.mcpe:bear_trap_close.name=Закрытый капкан
+tile.mcpe:bear_trap_open.name=Открытый капкан
+
+## barrel
+tile.mcpe:barrel_blue.name=Синяя бочка
+tile.mcpe:barrel_explosive.name=Взрывоопасная бочка
+tile.mcpe:barrel_green.name=Зелёная бочка
+tile.mcpe:barrel_red.name=Красная бочка
+tile.mcpe:barrel_yellow.name=Жёлтая бочка
+
+## display_rack
+tile.mcpe:display_rack_middle_bottom.name=Торговый стеллаж низ
+tile.mcpe:display_rack_middle_top.name=Тороговый стеллаж верх
+tile.mcpe:display_rack_side_bottom.name=Боковой торговый стеллаж низ
+tile.mcpe:display_rack_side_top.name=Боковой торговый стеллаж верх
+
+## flag
+tile.mcpe:flag_fvla.name=Флаг "FVLA"
+tile.mcpe:flag_nekoi.name=Флаг "N¡P"
+tile.mcpe:flag_vostrovia.name=Флаг Востровии
+
+## folding_chair
+tile.mcpe:folding_chair_blue.name=Синяя раскладушка
+tile.mcpe:folding_chair_brown.name=Коричневая раскладушка
+tile.mcpe:folding_chair_green.name=Зелёная раскладушка
+tile.mcpe:folding_chair_red.name=Красная раскладушка
+
+## hesco
+tile.mcpe:hesco_olive.name=Оливковый Hesco бастион
+tile.mcpe:hesco_tan.name=Бежевый Hesco бастион
+tile.mcpe:hesco_white.name=Белый Hesco бастион
+
+## light
+tile.mcpe:ceiling_light_broken.name=Сломанная потолочная лампа
+tile.mcpe:ceiling_light.name=Потолочная лампа
+tile.mcpe:exit_sign.name=Табличка "Выход"
+tile.mcpe:worklight.name=Строительный прожектор
+
+## monobloc
+tile.mcpe:monobloc_black.name=Чёрный стул-моноблок
+tile.mcpe:monobloc_blue.name=Синий стул-моноблок
+tile.mcpe:monobloc_green.name=Зелёный стул-моноблок
+tile.mcpe:monobloc_red.name=Красный стул-моноблок
+tile.mcpe:monobloc_tan.name=Бежевый стул-моноблок
+tile.mcpe:monobloc_white.name=Белый стул-моноблок
+tile.mcpe:monobloc_yellow.name=Жёлтый стул-моноблок
+
+## office_chair
+tile.mcpe:office_chair_black.name=Чёрный офисный стул
+tile.mcpe:office_chair_blue.name=Синий офисный стул
+tile.mcpe:office_chair_brown.name=Коричневый офисный стул
+tile.mcpe:office_chair_green.name=Зелёный офисный стул
+tile.mcpe:office_chair_red.name=Красный офисный стул
+tile.mcpe:office_chair_white.name=Белый офисный стул
+
+## plastic_table
+tile.mcpe:plastic_black.name=Чёрный пластиковый стол
+tile.mcpe:plastic_blue.name=Синий пластиковый стол
+tile.mcpe:plastic_green.name=Зелёный пластиковый стол
+tile.mcpe:plastic_red.name=Красный пластиковый стол
+tile.mcpe:plastic_tan.name=Бежевый пластиковый стол
+tile.mcpe:plastic_white.name=Белый пластиковый стол
+tile.mcpe:plastic_yellow.name=Жёлтый пластиковый стол
+
+## road_barrier
+tile.mcpe:barrier_wall.name=Дорожная стена
+tile.mcpe:caution_barrier_wall.name=Предупреждающая дорожная стена
+tile.mcpe:caution_road_barrier.name=Предупреждающее дорожное ограждение
+tile.mcpe:road_barrier.name=Дорожное ограждение
+
+## sandbag
+tile.mcpe:sandbag_corner_olive.name=Оливковый мешок с песком под углом
+tile.mcpe:sandbag_corner_tan.name=Бежевый мешок с песком под углом
+tile.mcpe:sandbag_corner_white.name=Белый мешок с песком под углом
+tile.mcpe:sandbag_olive.name=Оливковый мешок с песком
+tile.mcpe:sandbag_tan.name=Бежевый мешок с песком
+tile.mcpe:sandbag_white.name=Белый мешок с песком
+
+## sign
+tile.mcpe:traffic_becareful.name=Знак "Внимание"
+tile.mcpe:traffic_intersection.name=Знак "Примыкание дороги слева и справа"
+tile.mcpe:traffic_no_entry.name=Знак "Кирпич"
+tile.mcpe:traffic_no_parking.name=Знак "Парковка запрещена"
+tile.mcpe:traffic_parking.name=Знак "Парковка"
+tile.mcpe:traffic_question.name=Знак "Вопросительный"
+tile.mcpe:traffic_section_left.name=Знак "Примыкание дороги слева"
+tile.mcpe:traffic_section_right.name=Знак "Примыкание дороги справа"
+tile.mcpe:traffic_stop.name=Знак "Стоп"
+tile.mcpe:traffic_turn_left.name=Знак "Поворот налево"
+tile.mcpe:traffic_turn_right.name=Знак "Поворот направо"
+tile.mcpe:traffic_rod.name=Стойка для дорожных знаков 
+
+## street_bench
+tile.mcpe:street_bench_blue.name=Синяя скамейка 
+tile.mcpe:street_bench_green.name=Зелёная скамейка 
+tile.mcpe:street_bench_red.name=Красная скамейка 
+tile.mcpe:street_bench_white.name=Белая скамейка 
+
+## table_cloth
+tile.mcpe:table_cloth_black.name=Стол с чёрной скатертью
+tile.mcpe:table_cloth_blue.name=Стол с синей скатертью
+tile.mcpe:table_cloth_green.name=Стол с зелёной скатертью
+tile.mcpe:table_cloth_red.name=Стол с красной скатертью
+
+## variant
+tile.mcpe:graffiti.name=Граффити 
+tile.mcpe:metal_rack.name=Стеллаж 
+tile.mcpe:papers.name=Бумаги
+
+## water_pump
+tile.mcpe:water_pump.name=Водоколонка
+tile.mcpe:water_pump_emp.name=Пустая водоколонка 
+
+## more furniture
+tile.mcpe:crowd_fence.name=Переносное ограждение
+tile.mcpe:construction_barrier.name=Техническое ограждение
+tile.mcpe:microwave.name=Микроволновка
+tile.mcpe:monitor.name=Монитор
+tile.mcpe:monitor_keyboard.name=Монитор с клавиатурой
+tile.mcpe:reloading_table.name=Верстак для снаряжения патронов
+tile.mcpe:sink.name=Раковина
+tile.mcpe:toilet.name=Туалет
+tile.mcpe:traffic_cone.name=Дорожный конус
+tile.mcpe:trash_bin.name=Мусорное ведро
+tile.mcpe:trash_can.name=Мусорный бак
+tile.mcpe:tv.name=Телевизор
+tile.mcpe:tv_old.name=Старый телевизор
+tile.mcpe:wood_barrier.name=Деревянное ограждение
+tile.mcpe:wood_chair.name=Деревянный стул
+tile.mcpe:wood_table.name=Деревянный стол
+
+## more block
+tile.mcpe:bath_tiles.name=Блок Керамической плитки
+tile.mcpe:brick_big.name=Блок большого кирпича
+tile.mcpe:caution_block.name=Блок "Осторожно"
+tile.mcpe:corrugated_metal.name=Блок гофрированного металла
+tile.mcpe:corrugated_metal_rusty.name=Блок ржавого гофрированного металла
+tile.mcpe:crate.name=Деревянный ящик
+tile.mcpe:farm_block.name=Пашня
+tile.mcpe:filing_cabinet.name=Офисный шкафчик
+tile.mcpe:hazard_block.name=Блок "опасность"
+tile.mcpe:military_wall.name=Военная стена
+tile.mcpe:smooth_stone_brick.name=Гладкий каменный кирпич
+tile.mcpe:tiles_bnw.name=Блок чёрно-белой плитки
+tile.mcpe:tiles_white.name=Блок белой плитки
+tile.mcpe:trace_plate.name=Блок рифленого металла
+tile.mcpe:washing_machine.name=Стиральная машина 

@@ -1,0 +1,297 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.flag_pole",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 10,
+				"visible_bounds_offset": [
+					0,
+					4,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								2,
+								16
+							],
+							"uv": [
+								10,
+								0
+							]
+						},
+						{
+							"origin": [
+								-1,
+								2,
+								-1
+							],
+							"size": [
+								2,
+								126,
+								2
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "holder",
+					"parent": "body",
+					"pivot": [
+						0,
+						127,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								125,
+								-2
+							],
+							"size": [
+								4,
+								2,
+								4
+							],
+							"uv": [
+								10,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "flag_line",
+					"parent": "holder",
+					"pivot": [
+						3,
+						109,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								2,
+								2,
+								0
+							],
+							"size": [
+								1,
+								107,
+								0
+							],
+							"pivot": [
+								3,
+								109,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								0.5
+							],
+							"uv": [
+								8,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "flag_start",
+					"parent": "holder",
+					"pivot": [
+						2,
+						127,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								2,
+								109,
+								0
+							],
+							"size": [
+								15,
+								18,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										10,
+										18
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"east": {
+									"uv": [
+										10,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"south": {
+									"uv": [
+										113,
+										110
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"west": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"up": {
+									"uv": [
+										10,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "flag_end",
+					"parent": "flag_start",
+					"pivot": [
+						17,
+						127,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								17,
+								109,
+								0
+							],
+							"size": [
+								15,
+								18,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"east": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"south": {
+									"uv": [
+										113,
+										110
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"west": {
+									"uv": [
+										40,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"up": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										40,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.wings.angel",
+        "texture_width": 64,
+        "texture_height": 64
+      },
+      "bones": [
+        {
+          "name": "wings",
+          "parent": "body",
+          "pivot": [0, 22, 2],
+          "cubes": [
+            {
+              "origin": [-12, 14, 2],
+              "size": [12, 16, 1],
+              "uv": [0, 0],
+              "inflate": 0.1
+            },
+            {
+              "origin": [0, 14, 2],
+              "size": [12, 16, 1],
+              "uv": [26, 0],
+              "inflate": 0.1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

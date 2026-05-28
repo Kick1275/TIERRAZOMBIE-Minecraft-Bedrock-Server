@@ -1,0 +1,13 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_smithing_transform": {
+    "description": {
+      "identifier": "netherite_katana"
+    },
+    "tags": ["smithing_table"],
+    "template": "minecraft:netherite_upgrade_smithing_template",
+    "base": "ranzie:diamond_katana",
+    "addition": "minecraft:netherite_ingot",
+    "result": "ranzie:netherite_katana"
+  }
+}

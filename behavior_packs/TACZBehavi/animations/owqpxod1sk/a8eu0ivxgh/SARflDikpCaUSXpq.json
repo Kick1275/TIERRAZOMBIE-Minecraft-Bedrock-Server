@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.b93.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 1.8,
+      "timeline": {
+        "1.7": [
+          "/scoreboard players set @s[scores={b93=22..}] b93 21",
+          "/function b93"
+        ],
+        "1.6": [
+          "/function b93reload",
+          "/event entity @s krep:b93_reload"
+        ]
+      }
+    }
+  }
+}

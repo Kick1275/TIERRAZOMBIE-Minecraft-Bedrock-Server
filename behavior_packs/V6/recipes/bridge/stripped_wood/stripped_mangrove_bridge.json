@@ -1,0 +1,26 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "medieval:stripped_mangrove_bridge"
+		},
+		"tags": [ "workbench" ],
+		"pattern": [
+			"AAA",
+			"BBB"
+		],
+		"key": {
+			"B": {
+				"item": "minecraft:mangrove_planks",
+				"data": 0
+			},
+			"A": {
+				"item": "medieval:stripped_mangrove_post"
+			}
+		},
+		"result": {
+			"item": "medieval:stripped_mangrove_bridge",
+			"count": 2
+		}
+	}
+}

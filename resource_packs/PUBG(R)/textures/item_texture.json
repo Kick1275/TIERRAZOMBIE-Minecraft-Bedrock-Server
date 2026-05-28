@@ -1,0 +1,52 @@
+//bridge-file-version: #3
+{
+	"resource_pack_name": "bridgeRP",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"spawn_uaz_hardtop": {
+			"textures": [
+				"textures/items/spawn_uaz_hardtop"
+			]
+		},
+		"spawn_uaz_softtop": {
+			"textures": [
+				"textures/items/spawn_uaz_softtop"
+			]
+		},
+		"spawn_uaz_opentop": {
+			"textures": [
+				"textures/items/spawn_uaz_opentop"
+			]
+		},
+		"spawn_pg117": {
+			"textures": [
+				"textures/items/spawn_pg117"
+			]
+		},
+		"spawn_dacia_white": {
+			"textures": [
+				"textures/items/spawn_dacia_white"
+			]
+		},
+		"spawn_dacia_red": {
+			"textures": [
+				"textures/items/spawn_dacia_red"
+			]
+		},
+		"spawn_dacia_blue": {
+			"textures": [
+				"textures/items/spawn_dacia_blue"
+			]
+		},
+		"spawn_dacia_green": {
+			"textures": [
+				"textures/items/spawn_dacia_green"
+			]
+		},
+		"spawn_buggy": {
+			"textures": [
+				"textures/items/spawn_buggy"
+			]
+		}
+	}
+}

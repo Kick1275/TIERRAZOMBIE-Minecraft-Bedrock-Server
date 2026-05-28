@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.hk416.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.6,
+      "timeline": {
+        "2.5": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:hk416 1 0",
+          "/scoreboard players set @s[scores={hk416=31..}] hk416 30",
+          "/function hk416"
+        ],
+        "2.4": [
+          "/function hk416reload",
+          "/event entity @s krep:hk416_reload"
+        ]
+      }
+    }
+  }
+}

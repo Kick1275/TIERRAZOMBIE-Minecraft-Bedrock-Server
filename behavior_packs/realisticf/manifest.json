@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "realistic first person v[1.0.4]",
+    "description": "a realistic first person perspective experience mod made by OGcrafter",
+    "uuid": "5f1c0b36-4a97-4b3a-9d1a-8e9e68f0b91c",
+    "version": [1, 0, 4],
+    "min_engine_version": [1, 21, 100]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "a9e1f4a2-7d49-45cf-bff5-2a3a67e0f9c8",
+      "version": [1, 0, 4]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "b8f2e5d3-6c8a-4e7b-9f1d-3a5c78e2f4b6",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.14.0"
+    }
+  ]
+}

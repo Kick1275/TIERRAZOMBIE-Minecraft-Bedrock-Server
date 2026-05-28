@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.cp.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.2,
+      "timeline": {
+        "3.1": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:cp 1 0",
+          "/scoreboard players set @s[scores={cp=7..}] cp 6",
+          "/function cp"
+        ],
+        "2.9": [
+          "/function cpreload",
+          "/event entity @s krep:cp_reload"
+        ]
+      }
+    }
+  }
+}

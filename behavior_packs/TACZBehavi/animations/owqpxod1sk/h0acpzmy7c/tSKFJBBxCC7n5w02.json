@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.deagle.reload.tac": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.0,
+      "timeline": {
+        "1.98": [
+          "/scoreboard players set @s[scores={deagle=9..}] deagle 8",
+          "/function deagle"
+        ],
+        "1.9": [
+          "/function deaglereload",
+          "/event entity @s krep:deagle_reload"
+        ]
+      }
+    }
+  }
+}

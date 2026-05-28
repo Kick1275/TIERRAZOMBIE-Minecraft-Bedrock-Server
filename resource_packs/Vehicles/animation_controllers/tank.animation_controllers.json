@@ -1,0 +1,51 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.tank.drive": {
+			"initial_state": "brake",
+			"states": {
+				"brake": {
+					"animations": [
+						"brake"
+					],
+					"transitions": [
+						{
+							"move": "q.is_moving"
+						}
+					]
+				},
+				"move": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"brake": "!q.is_moving"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.tank.fire": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"active": "query.is_roaring"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"fire"
+					],
+					"transitions": [
+						{
+							"default": "q.any_animation_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

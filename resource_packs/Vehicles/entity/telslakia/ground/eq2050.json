@@ -1,0 +1,51 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:eq2050",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/eq2050/eq2050",
+				"libernia": "textures/entity/eq2050/eq2050_libernia",
+				"telslakia": "textures/entity/eq2050/eq2050_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.eq2050"
+			},
+			"render_controllers": [
+				"controller.render.eq2050",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_eq2050_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.m1151.move",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.tank.brake",
+				"scale": "animation.m1151.scale",
+				"look": "animation.m1151.look_at_target",
+				"rotations": "animation.vehicle.rotations",
+				"turn": "animation.m1151.turn",
+				"is_body": "animation.tank.is_body",
+				"is_turret": "animation.tank.is_turret"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"drive",
+					"look",
+					"rotations",
+					"turn",
+					"is_body"
+				]
+			},
+			"particle_effects": {
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

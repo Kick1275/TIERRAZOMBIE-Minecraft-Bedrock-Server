@@ -1,0 +1,204 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.hk416": {
+      "geometry": "geometry.hk416",
+      "materials": [
+        {
+          "*": "material.guns"
+        },
+        {
+          "laserbeam_1": "material.glow"
+        },
+        {
+          "t2_reticle": "material.glow"
+        },
+        {
+          "coyote_reticle": "material.glow"
+        },
+        {
+          "552_reticle": "material.glow"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "rear_sight": "q.property('krep:hk416scope')=='nothing'"
+        },
+        {
+          "fore_sight": "q.property('krep:hk416scope')=='nothing'"
+        },
+        {
+          "laser_1": "q.property('krep:laser') == 1"
+        },
+        {
+          "laserbeam_1": "q.property('krep:laser') == 1"
+        },
+        {
+          "stock_1": "q.property('krep:stock') == 1"
+        },
+        {
+          "stock_2": "q.property('krep:stock') == 2"
+        },
+        {
+          "stock_3": "q.property('krep:stock') == 3"
+        },
+        {
+          "stock_4": "q.property('krep:stock') == 4"
+        },
+        {
+          "stock_5": "q.property('krep:stock') == 5"
+        },
+        {
+          "stock_6": "q.property('krep:stock') == 6"
+        },
+        {
+          "stock_7": "q.property('krep:stock') == 7"
+        },
+        {
+          "stock_8": "q.property('krep:stock') == 8"
+        },
+        {
+          "grip_1": "q.property('krep:grip') == 1"
+        },
+        {
+          "grip_2": "q.property('krep:grip') == 2"
+        },
+        {
+          "grip_3": "q.property('krep:grip') == 3"
+        },
+        {
+          "grip_4": "q.property('krep:grip') == 4"
+        },
+        {
+          "grip_5": "q.property('krep:grip') == 5"
+        },
+        {
+          "grip_6": "q.property('krep:grip') == 6"
+        },
+        {
+          "grip_7": "q.property('krep:grip') == 7"
+        },
+        {
+          "grip_8": "q.property('krep:grip') == 8"
+        },
+        {
+          "grip_9": "q.property('krep:grip') == 9"
+        },
+        {
+          "grip_10": "q.property('krep:grip') == 10"
+        },
+        {
+          "grip_11": "q.property('krep:grip') == 11"
+        },
+        {
+          "muzzle_0": "q.property('krep:muzzle') == 0"
+        },
+        {
+          "muzzle_1": "q.property('krep:muzzle') == 1"
+        },
+        {
+          "muzzle_2": "q.property('krep:muzzle') == 2"
+        },
+        {
+          "muzzle_3": "q.property('krep:muzzle') == 3"
+        },
+        {
+          "muzzle_4": "q.property('krep:muzzle') == 4"
+        },
+        {
+          "muzzle_5": "q.property('krep:muzzle') == 5"
+        },
+        {
+          "muzzle_6": "q.property('krep:muzzle') == 6"
+        },
+        {
+          "sight": "q.property('krep:hk416scope')=='nothing'"
+        },
+        {
+          "coyote": "q.property('krep:hk416scope')=='coyote'"
+        },
+        {
+          "coyote_reticle": "q.property('krep:hk416scope')=='coyote'"
+        },
+        {
+          "acog": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "acog_lens": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "acog_lens2": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "acog_back": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "acog_reticle": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "acog_scope": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "acog_other": "q.property('krep:hk416scope')=='acog'"
+        },
+        {
+          "t2": "q.property('krep:hk416scope')=='t2'"
+        },
+        {
+          "t2_reticle": "q.property('krep:hk416scope')=='t2'"
+        },
+        {
+          "elcan": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_lens": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_reticle": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_ring": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_ring2": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_body": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_knob": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_part2": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "elcan_part": "q.property('krep:hk416scope')=='elcan'"
+        },
+        {
+          "552": "q.property('krep:hk416scope')=='holo'"
+        },
+        {
+          "552_reticle": "q.property('krep:hk416scope')=='holo'"
+        }
+      ],
+      "textures": [
+        "texture.hk416"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

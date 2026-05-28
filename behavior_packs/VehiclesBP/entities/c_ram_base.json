@@ -1,0 +1,82 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:c_ram_base",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 50
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:on_death": {
+				"event": "af:despawn",
+				"target": "self"
+			},
+			"minecraft:entity_sensor": {
+				"subsensors": [
+					{
+						"maximum_count": 0,
+						"cooldown": 1,
+						"event_filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "c_ram"
+						},
+						"event": "af:despawn"
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:fire_immune": true
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"tp @s ~ ~ ~"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}

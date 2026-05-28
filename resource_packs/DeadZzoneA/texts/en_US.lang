@@ -1,0 +1,842 @@
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## You can translate from here
+## welcome message
+game.message.welcome_dz=Welcome to Dead§4Z§rone
+game.message.deadzone_1=§eType §r§o!avatar§r§e to create an avatar
+game.message.deadzone_2=§eType §r§o!status§r§e to see your progress status
+
+## death message
+death.attack.bullet.headshot=%1$s was shot in the head by %2$s
+death.attack.bullet=%1$s was shot by %2$s
+death.attack.freeze.temperature=%1$s froze to death
+death.attack.freeze.temperature.player=%1$s froze to death whilst fighting %2$s
+death.attack.heat.temperature=%1$s died of heatstroke
+death.attack.heat.temperature.player=%1$s died of heatstroke whilst fighting %2$s
+death.attack.thirst=%1$s died of thirst
+death.attack.bleeding=%1$s bled to death
+death.attack.infection=%1$s succumbed to an infection
+death.attack.blood_loss=%1$s died of blood loss
+death.attack.overdose=%1$s died of drug overdose
+
+## cc
+cc.random_avatar.gui=Random Avatar
+cc.default_skin.gui=Default Skin
+cc.skin.gui=Skin
+cc.hair.gui=Hair
+cc.eye.gui=Eyes
+cc.gender.gui=Gender
+cc.glove.gui=Gloves
+cc.message.default_skin=Are you sure want to use the default skin?.
+cc.message.warning=Please select your gender before selecting any other attributes.
+cc.message.warning_eye_first=Sorry, you can't use female eyes.
+cc.message.warning_eye_second=Sorry, you can't use male eyes.
+
+## config
+config.title=DeadZone Settings
+config.despawn_time=Set Corpse Despawn Time (Minutes)
+config.max_corpse=Set Max Corpse Amount
+config.allow_corpse_creation=Allow Corpse Creation
+config.reset_statu_on_death=Reset Status On Death
+config.hardcore_infected_mode=Enable Hardcore Infected Mode
+
+## horde config
+horde.config.title=Horde Settings
+horde.config.enable_horde=Enable Horde System
+horde.config.spawn_chance=Horde Spawn Chance (Percent)
+horde.config.min_Interval=Horde Min Interval (Minutes)
+horde.config.max_Interval=Horde Max Interval (Minutes)
+horde.config.min_distance=Horde Min Distance (Blocks)
+horde.config.size_group=Horde Size Group (Number of Infected)
+horde.config.civilian_spawn_chance=Civilian Spawn Chance (Percent)
+horde.config.screamer_spawn_chance=Screamer Spawn Chance (Percent)
+
+## statu
+statu.player_name=Name
+statu.player_killed=Player killed
+statu.infected_killed=Infected killed
+statu.time_playing=Time playing
+statu.time_survived=Time survived
+statu.kill_distance=Longest kill distance
+
+## action
+action.interact.cut=Get steak
+action.interact.bury= Bury the corpse
+action.hint.exit.mcpe:sedan= jump/crouch to get out of the vehicle
+action.hint.exit.mcpe:humvee= jump/crouch to get out of the vehicle
+action.hint.exit.mcpe:motor= jump/crouch to get out of the vehicle
+
+## game message
+game.message.blood_test=§aYour blood type is
+game.message.warning_lockpick=§4You need lockpick to open this surplus box.
+game.message.lockpick_broken=§cYour lockpick is broken!
+game.message.lockpick_attempt=§cThe lockpick attempt failed!
+game.message.corpse_despawn_time=Corpse Despawn time set to.
+game.message.reset_statu_on_death=Show Status in Creative Mode.
+game.message.show_statu=Reset Status On Death.
+game.message.warning_blood_type=cYou do not know your blood type yet.
+game.message.warning_overdose_first=§cI'm don't feel good...
+game.message.warning_overdose_second=§cI'm overdosed...
+game.message.blood_type_first=§aYour blood type is A.
+game.message.blood_type_second=§aYour blood type is AB.
+game.message.blood_type_third=§aYour blood type is B.
+game.message.blood_type_fourth=§aYour blood type is O.
+game.message.blood_transfer=Blood transfusion completed.
+game.message.bleeding_warning=§cI'm bleeding.
+game.message.broken_bone_warning=§cI broke my legs.
+game.message.temperature_warning_first=I'm burning.
+game.message.temperature_warning_second=I'm freezing.
+game.message.unsupport_warning=This item is not supported. please click on the screen/right-click to bring the item back
+game.message.blood_type=Your blood type is 
+
+## spawn egg
+item.spawn_egg.entity.mcpe:civilian.name=Spawn Infected Civilian
+item.spawn_egg.entity.mcpe:military.name=Spawn Infected Military
+item.spawn_egg.entity.mcpe:hazmat.name=Spawn Infected Hazmat
+item.spawn_egg.entity.mcpe:militia.name=Spawn Infected Militia Army
+item.spawn_egg.entity.mcpe:screamer.name=Spawn Infected Screamer
+item.spawn_egg.entity.mcpe:commander.name=Spawn Infected Commander
+item.spawn_egg.entity.mcpe:sedan.name=Spawn Sedan
+item.spawn_egg.entity.mcpe:motor.name=Spawn Motorcycle
+item.spawn_egg.entity.mcpe:humvee.name=Spawn Humvee
+
+item.spawn_egg.entity.mcpe:marauder.name=Spawn Marauder survivor group
+item.spawn_egg.entity.mcpe:scavenger.name=Spawn Scavenger survivor group
+
+## entity
+entity.mcpe:civilian.name=Infected Civilian
+entity.mcpe:military.name=Infected Military
+entity.mcpe:hazmat.name=Infected Hazmat
+entity.mcpe:commander.name=Infected Military Commander
+entity.mcpe:militia.name=Infected Militia
+
+entity.mcpe:marauder.name=Marauder
+entity.mcpe:scavenger.name=Scavenger
+
+entity.unknown.name=loot
+
+## item
+item.mcpe:vending_popsi_icon.name=Popsi vending machine
+item.mcpe:vending_exp_icon.name=EXP-coke vending machine
+item.mcpe:vending_sprot_icon.name=Sprot vending machine
+item.mcpe:slack_black.name=Black slack pants
+item.mcpe:plastic_explosive.name=Plastic explosive
+item.mcpe:electric_scrap.name=Electric scrap
+item.mcpe:baseball_bat.name=Baseball bat
+item.mcpe:barbedwire_bat.name=Barbedwire baseball bat
+item.mcpe:cleaver_knife.name=Cleaver knife
+item.mcpe:combat_knife.name=Combat knife
+item.mcpe:crowbar.name=Crowbar
+item.mcpe:engineer_shovel.name=Engineer shovel
+item.mcpe:fireman_axe.name=Fireman axe
+item.mcpe:flanged_mace.name=Flanged mace
+item.mcpe:frying_pan.name=Frying pan
+item.mcpe:golf_club.name=Golf club
+item.mcpe:golok_machete.name=Golok machete
+item.mcpe:hammer.name=Hammer
+item.mcpe:hatchet.name=Hatchet
+item.mcpe:hunting_knife.name=Hunting knife
+item.mcpe:ice_hockey.name=Ice hockey stick
+item.mcpe:ice_pick.name=Ice pick
+item.mcpe:katana.name=Katana sword
+item.mcpe:kitchen_knife.name=Kitchen knife
+item.mcpe:knight_sword.name=Knighty sword
+item.mcpe:kukri_machete.name=Kukri machete
+item.mcpe:lead_pipe.name=Lead pipe
+item.mcpe:machete.name=Machete
+item.mcpe:metal_bat.name=Metal baseball bat
+item.mcpe:miner_pickaxe.name=Miner pickaxe
+item.mcpe:nailed_bat.name=Nailed baseball bat
+item.mcpe:nailed_plank.name=Nailed wooden plank
+item.mcpe:pipe_wrench.name=Pipe wrench
+item.mcpe:pitchfork.name=Pitchfork
+item.mcpe:police_baton.name=Police baton
+item.mcpe:rolling_pin.name=Rolling pin
+item.mcpe:sabre_sword.name=Sabre sword
+item.mcpe:screwdriver.name=Screwdriver
+item.mcpe:farm_sickle.name=Farm sickle
+item.mcpe:sledgehammer.name=Sledgehammer
+item.mcpe:snow_shovel.name=Snow shovel
+item.mcpe:splitting_axe.name=Splitting axe
+item.mcpe:tactical_axe.name=Tactical axe
+item.mcpe:tactical_shovel.name=Tactical shovel
+item.mcpe:tire_iron.name=Tire iron
+item.mcpe:wooden_plank.name=Wooden plank
+item.mcpe:wrench.name=Wrench
+item.mcpe:hacksaw.name=Hacksaw
+
+item.mcpe:blood_test_kit.name=Blood test kit
+item.mcpe:blood_bag_emp.name=Blood bag empty
+item.mcpe:blood_bag_unknown.name=Type unknown blood bag
+item.mcpe:blood_bag_type_a.name=Type A blood bag
+item.mcpe:blood_bag_type_ab.name=Type AB blood bag
+item.mcpe:blood_bag_type_b.name=Type B blood bag
+item.mcpe:blood_bag_type_o.name=Type O blood bag
+
+item.mcpe:first_aid.name=First aid bag
+item.mcpe:bandage.name=Bandage
+item.mcpe:bandage_sterilized.name=Sterilized bandage
+item.mcpe:rags.name=Rags
+item.mcpe:rags_dirty.name=Dirty rag
+item.mcpe:rags_sterilized.name=Sterilized rag
+item.mcpe:blood_bag.name=Blood bag
+item.mcpe:painkiller.name=Painkiller
+item.mcpe:adrenaline.name=Adrenaline auto injector
+item.mcpe:morphine.name=Morphine auto injector
+item.mcpe:splint.name=Splint
+item.mcpe:water_purification.name=Water purification table
+item.mcpe:alcoholic_tinture.name=Alcoholic Tincture
+item.mcpe:antidote.name=Antidote syringe
+
+
+item.mcpe:avatar_custome.name=Character customization
+item.mcpe:barbed_wire.name=Barbedwire coil
+item.mcpe:bear_trap.name=Bear trap
+item.mcpe:bleach.name=Bleach
+item.mcpe:bottle_water_emp.name=Empty water bottle
+item.mcpe:detonator.name=Detonator
+item.mcpe:can_opener.name=Can opener
+item.mcpe:duct_tape.name=Duct tape
+item.mcpe:flashlight.name=Flashlight
+item.mcpe:fumo_hat.name= Da Zaza Fumos
+item.mcpe:funi_vest.name=Funi vest
+item.mcpe:ham_radios.name=HAM radio
+item.mcpe:landmine.name=Landmine
+item.mcpe:lockpick.name=Lockpick
+item.mcpe:nail_box.name=Box of nails
+item.mcpe:nail.name=Nails
+item.mcpe:cooking_pot.name=Empty cooking pot
+item.mcpe:radios.name=Radio
+item.mcpe:Random_paper.name=Random Papers
+item.mcpe:remote.name=Funi vest remote
+item.mcpe:sawoff_pipe.name=Sawed-off lead pipe
+item.mcpe:spray_can.name=Spray can
+item.mcpe:walkie_talkie.name=Walkie talkie
+item.mcpe:wire_cutter.name=Wire cutter
+item.mcpe:wooden_barricade.name=Wooden barricade
+item.mcpe:fvla_flags.name=Free vostrovian legion army flag
+item.mcpe:vostrovia_flags.name=Republic vostrovian flag
+item.mcpe:nekoi_flags.name=Neko ¡ project flag
+item.mcpe:nails.name=Nails
+
+
+item.mcpe:chip_potato.name=Potato chip
+item.mcpe:chip_tortilla.name=Tortilla chip
+item.mcpe:chocolate_bar.name=Chocolate bar
+item.mcpe:creeper_crunch.name=Creeper crunch
+item.mcpe:meat_jerky.name=Beef jerky
+item.mcpe:mre.name=Meal ready-to-eat
+item.mcpe:rice.name=Packet of rice
+item.mcpe:strawberry_jam.name=Strawberry jam
+item.mcpe:tactical_sandwich.name=Tactical sandwich
+item.mcpe:apple_green.name=Green apple
+item.mcpe:banana.name=Banana
+item.mcpe:cucumber.name=Cucumber
+item.mcpe:pear.name=Pear
+item.mcpe:tomato.name=Tomato
+item.mcpe:zucchini.name=Zucchini
+item.mcpe:raw_player.name=Raw player steak
+item.mcpe:cooked_player.name=Cooked player steak
+
+
+item.mcpe:canned_bacon.name=Canned tactical bacon
+item.mcpe:canned_beans.name=Canned baked beans
+item.mcpe:canned_beef_stew.name=Canned beef stew
+item.mcpe:canned_chicken.name=Canned chicken
+item.mcpe:canned_chili.name=Canned chili
+item.mcpe:canned_corned.name=Canned Corned beef
+item.mcpe:canned_fruit.name=Canned fruit cocktail
+item.mcpe:canned_ham.name=Canned ham
+item.mcpe:canned_peaches.name=Canned sweet peaches
+item.mcpe:canned_ration.name=Canned Field rations
+item.mcpe:canned_sardine.name=Canned sardine
+item.mcpe:canned_spaghetti.name=Canned spaghetti bolognese
+item.mcpe:canned_tomato.name=Canned tomato soup
+item.mcpe:canned_tuna.name=Canned tuna
+
+
+item.mcpe:canned_bacon_open.name=Open canned tactical bacon
+item.mcpe:canned_beans_open.name=Open canned baked beans
+item.mcpe:canned_beef_stew_open.name=Open canned beef stew
+item.mcpe:canned_chicken_open.name=Open canned chicken
+item.mcpe:canned_chili_open.name=Open canned chili
+item.mcpe:canned_corned_open.name=Open canned Corned beef
+item.mcpe:canned_fruit_open.name=Open canned fruit cocktail
+item.mcpe:canned_ham_open.name=Open canned ham
+item.mcpe:canned_peaches_open.name=Open canned sweet peaches
+item.mcpe:canned_ration_open.name=Open canned Field rations
+item.mcpe:canned_sardine_open.name=Open canned sardine
+item.mcpe:canned_spaghetti_open.name=Open canned spaghetti bolognese
+item.mcpe:canned_tomato_open.name=Open canned tomato soup
+item.mcpe:canned_tuna_open.name=Open canned tuna
+
+
+item.mcpe:canned_bacon_open_bad.name=Bad quality open canned tactical bacon
+item.mcpe:canned_beans_open_bad.name=Bad quality open canned baked beans
+item.mcpe:canned_beef_stew_open_bad.name=Bad quality open canned beef stew
+item.mcpe:canned_chicken_open_bad.name=Bad quality open canned chicken
+item.mcpe:canned_chili_open_bad.name=Bad quality open canned chili
+item.mcpe:canned_corned_open_bad.name=Bad quality open canned Corned beef
+item.mcpe:canned_fruit_open_bad.name=Bad quality open canned fruit cocktail
+item.mcpe:canned_ham_open_bad.name=Bad quality open canned ham
+item.mcpe:canned_peaches_open_bad.name=Bad quality open canned sweet peaches
+item.mcpe:canned_ration_open_bad.name=Bad quality open canned Field rations
+item.mcpe:canned_sardine_open_bad.name=Bad quality open canned sardine
+item.mcpe:canned_spaghetti_open_bad.name=Bad quality open canned spaghetti bolognese
+item.mcpe:canned_tomato_open_bad.name=Bad quality open canned tomato soup
+item.mcpe:canned_tuna_open_bad.name=Bad quality open canned tuna
+
+
+item.mcpe:beer_bottle.name=Beer bottle
+item.mcpe:bottle_water_bleach.name=Bottled water
+item.mcpe:bottle_water_unpure.name=Unrefined bottled water
+item.mcpe:bottle_water.name=Bottled water
+item.mcpe:coffee.name=Coffee
+item.mcpe:energy_drink.name=Energy drink
+item.mcpe:exp_coke.name=EXP coke
+item.mcpe:grape_soda.name=Grape soda
+item.mcpe:lemonade.name=Lemonade
+item.mcpe:milk_gallon.name=Gallon milk
+item.mcpe:popsi_cola.name=PoPsi cola
+item.mcpe:pot_cook_water.name=Pot of boiling water
+item.mcpe:pot_water.name=Pot of unrefined water 
+item.mcpe:red_wine.name=Red wine bottle
+item.mcpe:vodka.name=Vodka
+item.mcpe:whiskey.name=Whiskey
+
+## ammo
+item.mcpe:ammo_7_62x39mm.name=Ammo box 7.62x39mm
+item.mcpe:ammo_5_45x39mm.name=Ammo box 5.45x39mm
+item.mcpe:ammo_5_56x45mm.name=Ammo box 5.56x45mm
+item.mcpe:ammo_7_62x51mm.name=Ammo box 7.62x51mm
+item.mcpe:ammo_7_62x54mmr.name=Ammo box 7.62x54mmR
+item.mcpe:ammo_9x39mm.name=Ammo box 9x39mm
+item.mcpe:ammo_9x19mm.name=Ammo box 9x19mm
+item.mcpe:ammo_9x18mm.name=Ammo box 9x18mm
+item.mcpe:ammo_12gauge.name=Ammo box 12 gauge
+item.mcpe:ammo_40mm.name=Ammo box 40mm
+item.mcpe:ammo_44magnum.name=Ammo box .44 magnum
+item.mcpe:ammo_357magnum.name=Ammo box .357 magnum
+item.mcpe:ammo_45acp.name=Ammo box .45 ACP
+item.mcpe:ammo_32acp.name=Ammo box .32 ACP
+
+## grenade
+item.mcpe:frag_grenade.name=Frag grenade
+item.mcpe:smoke_grenade.name=Smoke grenade
+item.mcpe:flash_grenade.name=Flash grenade
+item.mcpe:c4_explosive.name=C-4 explosive
+item.mcpe:pipe_bomb.name=Pipe bomb
+item.mcpe:nerve_grenade.name=Nerve gas grenade
+
+## armor/clothes
+item.mcpe:assault_vest_black.name=Black assault vest
+item.mcpe:assault_vest_olive.name=Olive assault vest
+item.mcpe:biker_vest.name=Biker vest
+item.mcpe:biker_vest_skull.name=Skull biker vest
+item.mcpe:chest_navy.name=Navy chest rig
+item.mcpe:chest_tan.name=Tan chest rig
+item.mcpe:chest_green.name=Green chest rig
+item.mcpe:chest_white.name=White chest rig
+item.mcpe:chest_brown.name=Brown chest rig
+item.mcpe:combat_olive.name=Olive combat vest
+item.mcpe:combat_white.name=White combat vest
+item.mcpe:combat_tan.name=Tan combat vest
+item.mcpe:hunting_brown.name=Brown hunting vest
+item.mcpe:hunting_navy.name=Navy hunting vest
+item.mcpe:plate_vest_gray.name=Gray plate vest
+item.mcpe:plate_vest_white.name=White plate vest
+item.mcpe:plate_vest_olive.name=Olive plate vest
+item.mcpe:plate_vest_tan.name=Tan plate vest
+item.mcpe:police_vest.name=Police vest
+item.mcpe:press_vest.name=Press vest
+item.mcpe:reflective_lime.name=Lime reflective vest
+item.mcpe:reflective_orange.name=Orange reflective vest
+item.mcpe:reflective_yellow.name=Yellow reflective vest
+item.mcpe:stab_vest_gray.name=Gray stab vest
+item.mcpe:stab_vest_tan.name=Tan stab vest
+item.mcpe:stab_vest_white.name=White stab vest
+item.mcpe:tactical_vest_black.name=Black tactical vest
+item.mcpe:tactical_vest_white.name=White tactical vest
+item.mcpe:tactical_vest_tan.name=Tan tactical vest
+item.mcpe:tactical_vest_olive.name=Olive tactical vest
+item.mcpe:webbing_brown.name=Brown webbing
+item.mcpe:webbing_black.name=Black webbing
+item.mcpe:webbing_tan.name=Tan webbing
+item.mcpe:webbing_green.name=Green webbing
+item.mcpe:webbing_white.name=White webbing
+
+
+item.mcpe:army_artic.name=Artic army helmet
+item.mcpe:army_desert.name=Desert army helmet
+item.mcpe:army_woodland.name=Woodland army helmet
+item.mcpe:assault_helmet_black.name=Black assault helmet
+item.mcpe:assault_helmet_olive.name=Olive assault helmet
+item.mcpe:balaclava_black.name=Black balaclava mask
+item.mcpe:ballistic_black.name=Black ballistic helmet
+item.mcpe:ballistic_green.name=Green ballistic helmet
+item.mcpe:ballistic_Tan.name=Tan ballistic helmet
+item.mcpe:ballistic_white.name=White ballistic helmet
+item.mcpe:bandana_blue.name=Blue bandana mask
+item.mcpe:bandana_green.name=Green bandana mask
+item.mcpe:bandana_red.name=Red bandana mask
+item.mcpe:beanie_black.name=Black beanie
+item.mcpe:beanie_brown.name=Brown Beanie
+item.mcpe:beanie_white.name=White beanie 
+item.mcpe:beanie_olive.name=Olive beanie
+item.mcpe:beret_red.name=Red beret
+item.mcpe:beret_green.name=Green beret
+item.mcpe:beret_blue.name=Blue beret
+item.mcpe:biker_black.name=Black biker helmet
+item.mcpe:biker_white.name=White biker helmet
+item.mcpe:biker_yellow.name=Yellow biker helmet
+item.mcpe:biker_red.name=Red biker helmet
+item.mcpe:biker_green.name=Green biker helmet
+item.mcpe:biker_blue.name=Blue biker helmet
+item.mcpe:boonie_artic.name=Artic camo boonie hat
+item.mcpe:boonie_woodland.name=Woodland camo boonie hat
+item.mcpe:boonie_desert.name=Desert camo boonie hat
+item.mcpe:boonie_black.name=Black boonie hat
+item.mcpe:boonie_green.name=Green boonie hat
+item.mcpe:boonie_white.name=White boonie hat
+item.mcpe:boonie_tan.name=Tan boonie hat
+item.mcpe:cap_black.name=Black cap
+item.mcpe:cap_green.name=Green cap
+item.mcpe:cap_blue.name=Blue cap
+item.mcpe:cap_red.name=Red cap
+item.mcpe:clown_wig.name=Clown wig
+item.mcpe:cowboy_brown.name=Brown cowboy hat
+item.mcpe:cowboy_black.name=Black cowboy hat
+item.mcpe:cowboy_white.name=White cowboy hat
+item.mcpe:durag_black.name=Black durag
+item.mcpe:durag_brown.name=Brown durag
+item.mcpe:firefighter_hat.name=Firefighter hat
+item.mcpe:flat_black.name=Black flat cap
+item.mcpe:flat_brown.name=Brown flat cap
+item.mcpe:gasmask_black.name=Black gasmask
+item.mcpe:gasmask_white.name=White gasmask
+item.mcpe:gasmask_tactical.name=Tactical gasmask
+item.mcpe:great_helmet.name=Great helmet
+item.mcpe:hard_blue.name=Blue hard hat
+item.mcpe:hard_red.name=Red hard hat
+item.mcpe:hard_yellow.name=Yellow hard hat
+item.mcpe:hard_white.name=White hard hat
+item.mcpe:hard_orange.name=Orange hard hat
+item.mcpe:headlamp.name=Headlamp
+item.mcpe:hunting_hat.name=Hunting hat
+item.mcpe:maid_bonnet.name=Maid bonnet
+item.mcpe:mask_fawkes.name=Fawkes face mask
+item.mcpe:mask_funni.name=Funni face mask
+item.mcpe:mask_troll.name=Troll face mask
+item.mcpe:night_goggles.name=Night goggles
+item.mcpe:peaked_green.name=Green peaked cap
+item.mcpe:peaked_white.name=White peaked cap
+item.mcpe:peaked_tan.name=Tan peaked cap
+item.mcpe:plague_hat.name=Plague doctor hat
+item.mcpe:police_hat.name=Police hat
+item.mcpe:police_riot.name=Police riot helmet
+item.mcpe:respirator_mask.name=Respiratory gasmask
+item.mcpe:shemagh_blue.name=Blue shemagh
+item.mcpe:shemagh_red.name=Red shemagh
+item.mcpe:shemagh_tan.name=Tan shemagh
+item.mcpe:shemagh_brown.name=Brown shemagh
+item.mcpe:shemagh_black.name=Black shemagh
+item.mcpe:shemagh_olive.name=Olive shemagh
+item.mcpe:shemagh_gray.name=Gray shemagh
+item.mcpe:skimask_black.name=Black ski mask
+item.mcpe:spec_helmet.name=Special operation helmet
+item.mcpe:tactical_helmet_black.name=Black tactical helmet
+item.mcpe:tactical_helmet_tan.name=Tan tactical helmet
+item.mcpe:tactical_helmet_white.name=White tactical helmet
+item.mcpe:tactical_helmet_olive.name=Olive tactical helmet
+item.mcpe:ushanka.name=Ushanka
+item.mcpe:un_helmet.name=UN helmet
+item.mcpe:welder_mask.name=Welder mask
+
+item.mcpe:bdu_artic_bottom.name=Artic BDU pants
+item.mcpe:bdu_desert_bottom.name=Desert BDU pants
+item.mcpe:bdu_woodland_bottom.name=Woodland BDU pants
+item.mcpe:cargo_black.name=Black cargo pants
+item.mcpe:cargo_brown.name=Brown cargo pants
+item.mcpe:cargo_tan.name=Tan cargo pants
+item.mcpe:cargo_white.name=White cargo pants
+item.mcpe:cargo_green.name=Green cargo pants
+item.mcpe:chainmail_bottom.name=Chainmail pants
+item.mcpe:clown_bottom.name=Clown pants
+item.mcpe:firefighter_bottom.name=Firefighter pants
+item.mcpe:ghillie_drygrass_bottom.name=Drygrass ghillie pants
+item.mcpe:ghillie_forest_bottom.name=Forest ghillie pants
+item.mcpe:ghillie_snow_bottom.name=Snow ghillie pants
+item.mcpe:ggorka_bottom.name=Gorka pants
+item.mcpe:hazmat_white_bottom.name=White hazmat pants
+item.mcpe:hazmat_yellow_bottom.name=Yellow hazmat pants
+item.mcpe:jean_black.name=Black jeans
+item.mcpe:jean_blue.name=Blue jeans
+item.mcpe:jean_brown.name=Brown jeans
+item.mcpe:jean_light.name=Light jeans
+item.mcpe:khaki_light.name=Light khaki pants
+item.mcpe:maid_bottom.name=Maid bottoms
+item.mcpe:overall_black.name=Black overalls
+item.mcpe:overall_brown.name=Brown overalls
+item.mcpe:overall_blue.name=Blue overalls
+item.mcpe:paramedic_bottom.name=Paramedic pants
+item.mcpe:plague_bottom.name=Plague doctor bottoms
+item.mcpe:police_special_bottom.name=Police special force pants
+item.mcpe:police_bottom.name=Police pants
+item.mcpe:prisoner_bottom.name=prisoner pants
+item.mcpe:suit_bottom_black.name=Black suit pants
+item.mcpe:special_bottom.name=Special operation pants
+item.mcpe:suspender_black.name=Black suspender slack
+item.mcpe:trackpants_black.name=Black trackpants
+item.mcpe:trackpants_blue.name=Blue trackpants
+item.mcpe:trackpants_red.name=Red trackpants
+item.mcpe:berezka_desert_bottom.name=Desert berezka pants
+item.mcpe:berezka_forest_bottom.name=Forest berezka pants
+item.mcpe:berezka_tundra_bottom.name=Tundra berezka pants
+item.mcpe:desert_camo_bottom.name=Desert camo pants
+item.mcpe:tundra_camo_bottom.name=Tundra camo pants
+item.mcpe:woodland_camo_bottom.name=Woodland camo pants
+item.mcpe:field_butan_desert_bottom.name=Desert field butan pants
+item.mcpe:field_forest_desert_bottom.name=Forest field butan pants
+item.mcpe:field_tan_bottom.name=Tan field pants
+item.mcpe:field_olive_bottom.name=Olive field pants
+item.mcpe:hunting_autumn_bottom.name=Autumn hunting pants
+item.mcpe:hunting_spring_bottom.name=Spring hunting pants
+item.mcpe:hunting_winter_bottom.name=Winter hunting pants
+item.mcpe:paramedic_blue_bottom.name=Blue paramedic pants
+item.mcpe:paramedic_green_bottom.name=Green paramedic pants
+item.mcpe:paramedic_red_bottom.name=Red paramedic pants
+item.mcpe:trackpants_yellow.name=Yellow trackpants
+item.mcpe:trackpants_green.name=Green trackpants
+item.mcpe:trackpants_cyan.name=Cyan trackpants
+item.mcpe:cargo_gray.name=Gray cargo pants
+item.mcpe:firefighter_black_bottom.name=Black firefighter pants
+item.mcpe:firefighter_tan_bottom.name=Tan firefighter pants
+item.mcpe:hazmat_gray_bottom.name=Gray hazmat pants
+item.mcpe:jean_gray.name=Gray jeans
+item.mcpe:jean_green.name=Green jeans
+item.mcpe:jean_red.name=Red jeans
+item.mcpe:jean_khaki.name=Khaki jeans
+item.mcpe:overall_gray.name=Gray overall pants
+item.mcpe:overall_green.name=Green overall pants
+item.mcpe:overall_khaki.name=khaki overall pants
+item.mcpe:slack_blue.name=Blue slack pants
+item.mcpe:slack_brown.name=Brown slack pants
+item.mcpe:slack_gray.name=Gray slack pants
+item.mcpe:slack_tan.name=Tan slack pants
+
+
+item.mcpe:bdu_artic_top.name=Artic camo BDU
+item.mcpe:bdu_desert_top.name=Desert camo BDU
+item.mcpe:bdu_woodland_top.name=Woodland camo BDU
+item.mcpe:chainmail_top.name=Chainmail top
+item.mcpe:clown_top.name=Clown suit
+item.mcpe:crusader_top.name=Crusaders top
+item.mcpe:firefighter_top.name=Firefighter jacket
+item.mcpe:flannel_red.name=Red flannel shirt
+item.mcpe:flannel_green.name=Green flannel shirt
+item.mcpe:flannel_blue.name=Blue flannel shirt
+item.mcpe:flannel_white.name=White flannel shirt
+item.mcpe:flannel_gray.name=Gray flannel shirt
+item.mcpe:ghillie_drygrass_top.name=Dry grass ghillie suit
+item.mcpe:ghillie_forest_top.name=Forest ghillie suit
+item.mcpe:ghillie_snow_top.name=Snow ghillie suit
+item.mcpe:gorka_top.name=Gorka uniform
+item.mcpe:hawaiian_black.name=Black hawaiian shirt
+item.mcpe:hawaiian_red.name=Red hawaiian shirt
+item.mcpe:hazmat_white_top.name=White hazmat suit
+item.mcpe:hazmat_yellow_top.name=Yellow hazmat suit
+item.mcpe:hero_flannel.name=Hero flannel shirt
+item.mcpe:hiking_black.name=Black hiking jacket
+item.mcpe:hiking_blue.name=Blue hiking jacket
+item.mcpe:hoodie_black.name=Black hoodie
+item.mcpe:hoodie_blue.name=Blue hoodie
+item.mcpe:hoodie_green.name=Green hoodie
+item.mcpe:hoodie_red.name=Red hoodie
+item.mcpe:hoodie_yellow.name=Yellow hoodie
+item.mcpe:hoodie_white.name=White hoodie
+item.mcpe:leather_black.name=Black leather jacket
+item.mcpe:leather_brown.name=Brown leather jacket
+item.mcpe:maid_top.name=Maid dress
+item.mcpe:paramedic_top.name=Paramedic jacket
+item.mcpe:plague_top.name=Plague doctor upper
+item.mcpe:plaid_red.name=Red plaid shirt
+item.mcpe:plaid_blue.name=Blue plaid shirt
+item.mcpe:plaid_olive.name=Olive plaid shirt
+item.mcpe:plaid_white.name=White plaid shirt
+item.mcpe:plaid_gray.name=Gray plaid shirt
+item.mcpe:plaid_tan.name=Tan plaid shirt
+item.mcpe:police_special_top.name=Police special force jacket
+item.mcpe:police_top.name=Police uniform
+item.mcpe:prisoner_top.name=Prisoner jacket
+item.mcpe:puffer_blue.name=Blue puffer jacket
+item.mcpe:puffer_black.name=Black puffer jacket
+item.mcpe:special_top.name=Special operation uniform
+item.mcpe:striped_blue.name=Blue striped bottom-up shirt
+item.mcpe:striped_white.name=White striped bottom-up shirt
+item.mcpe:stripeds_black.name=Black striped longsleeve shirt
+item.mcpe:suede_brown.name=Brown suede jacket
+item.mcpe:suit_black.name=Black suit
+item.mcpe:sweater_white.name=White sweater
+item.mcpe:sweater_green.name=Green sweater
+item.mcpe:tactical_tan.name=Tan tactical sweater
+item.mcpe:tactical_green.name=Green tactical sweater
+item.mcpe:tactical_navy.name=Navy tactical sweater
+item.mcpe:tactical_red.name=Red tactical sweater
+item.mcpe:tactical_white.name=White tactical sweater
+item.mcpe:tracksuit_black.name=Black tracksuit
+item.mcpe:tracksuit_blue.name=Blue tracksuit
+item.mcpe:tracksuit_red.name=Red tracksuit
+item.mcpe:tshirt_black.name=Black t-shirt
+item.mcpe:tshirt_blue.name=Blue t-shirt
+item.mcpe:tshirt_red.name=Red t-shirt
+item.mcpe:tshirt_green.name=Green t-shirt
+item.mcpe:tshirt_white.name=White t-shirt
+item.mcpe:tshirt_yellow.name=Yellow t-shirt
+item.mcpe:varsity_blue.name=Blue varsity jacket
+item.mcpe:varsity_green.name=Green varsity jacket
+item.mcpe:varsity_red.name=Red varsity jacket
+item.mcpe:varsity_brown.name=Brown varsity jacket
+item.mcpe:berezka_desert_top.name=Desert berezka uniform
+item.mcpe:berezka_forest_top.name=Forest berezka uniform
+item.mcpe:berezka_tundra_top.name=Tundra berezka uniform
+item.mcpe:bottom_up_purple.name=Purple bottom-up shirt
+item.mcpe:bottom_up_green.name=Green bottom-up shirt
+item.mcpe:bottom_up_blue.name=Blue bottom-up shirt
+item.mcpe:bottom_up_white.name=White bottom-up shirt
+item.mcpe:desert_camo_top.name=Desert camo uniform
+item.mcpe:tundra_camo_top.name=Tundra camo uniform
+item.mcpe:woodland_camo_top.name=Woodland camo uniform
+item.mcpe:field_butan_desert_top.name=Desert field butan uniform
+item.mcpe:field_forest_top.name=Forest field butan uniform
+item.mcpe:field_tan_top.name=Tan field uniform
+item.mcpe:field_olive_top.name=Olive field uniform
+item.mcpe:firefighter_black_top.name=Black firefighter jacket
+item.mcpe:firefighter_tan_top.name=Tan firefighter jacket
+item.mcpe:flannel_cyan.name=Cyan flannel shirt
+item.mcpe:flannel_black.name=Black flannel shirt
+item.mcpe:hazmat_gray_top.name=Gray hazmat suit
+item.mcpe:hiking_green.name=Green hiking jacket
+item.mcpe:hiking_red.name=Red hiking jacket
+item.mcpe:hunting_autumn_top.name=Autumn hunting jacket
+item.mcpe:hunting_spring_top.name=Spring hunting jacket
+item.mcpe:hunting_winter_top.name=Winter hunting jacket
+item.mcpe:lab_coat.name=Lab coat
+item.mcpe:paramedic_blue_top.name=Blue paramedic jacket
+item.mcpe:paramedic_green_top.name=Green paramedic jacket
+item.mcpe:paramedic_red_top.name=Red paramedic jacket
+item.mcpe:puffer_purple.name=Purple puffer jacket
+item.mcpe:puffer_yellow.name=Yellow puffer jacket
+item.mcpe:puffer_gray.name=Gray puffer jacket
+item.mcpe:striped_sleeve_black.name=Black striped longsleeve shirt
+item.mcpe:striped_sleeve_black.name=Blue striped longsleeve shirt
+item.mcpe:striped_tan.name=Tan striped bottom-up shirt
+item.mcpe:suede_black.name=Black suede jacket
+item.mcpe:suit_blue.name=Blue suit
+item.mcpe:suit_brown.name=Brown suit
+item.mcpe:suit_gray.name=Gray suit
+item.mcpe:suit_tan.name=Tan suit
+item.mcpe:sweater_black.name=Black sweater
+item.mcpe:sweater_cyan.name=Cyan sweater
+item.mcpe:sweater_brown.name=Brown sweater
+item.mcpe:sweater_red.name=Red sweater
+item.mcpe:tactical_olive.name=Olive tactical sweater
+item.mcpe:tactical_gray.name=Gray tactical sweater
+item.mcpe:tracksuit_yellow.name=Yellow tracksuit
+item.mcpe:tracksuit_green.name=Green tracksuit
+item.mcpe:tracksuit_cyan.name=Cyan tracksuit
+item.mcpe:tropical_black.name=Black tropical shirt
+item.mcpe:tropical_red.name=Red tropical shirt
+item.mcpe:tropical_blue.name=Blue tropical shirt
+item.mcpe:tshirt_cyan.name=Cyan t-shirt
+item.mcpe:varsity_black.name=Black varsity jacket
+item.mcpe:trench_coat.name=Trench coat
+
+## backpack
+item.mcpe:improvised_bag.name=Improvised bag
+item.mcpe:school_blue_backpack.name=Blue school backpack
+item.mcpe:school_green_backpack.name=Green school backpack
+item.mcpe:school_red_backpack.name=Red school backpack
+item.mcpe:taloon_yellow_backpack.name=Yellow taloon backpack
+item.mcpe:taloon_blue_backpack.name=Blue taloon backpack
+item.mcpe:taloon_green_backpack.name=Green taloon backpack
+item.mcpe:taloon_red_backpack.name=Red taloon backpack
+
+## loot
+tile.mcpe:civilian_loot.name=Cardboard box (Civilian lootbox)
+tile.mcpe:construction_loot.name=Toolbox (Construction lootbox)
+tile.mcpe:firefighter_loot.name=Fireman box (Firefighter lootbox)
+tile.mcpe:food_loot.name=Food crate (Food lootbox)
+tile.mcpe:medical_loot.name=Medkit box (Medical lootbox)
+tile.mcpe:artic_loot.name=White case (Military artic lootbox)
+tile.mcpe:desert_loot.name=Tan case (Military desert lootbox)
+tile.mcpe:woodland_loot.name=Green case (Military woodland lootbox)
+tile.mcpe:medieval_loot.name=Vintage chest (Medival lootbox)
+tile.mcpe:police_loot.name=Gun case (Police lootbox) 
+tile.mcpe:rare_loot.name=Surplus box (Rare lootbox)
+tile.mcpe:supply_block.name=Supply box
+
+## misc
+tile.mcpe:barbed_wires.name=Barbedwired coil
+tile.mcpe:landmine.name=Landmine
+tile.mcpe:nail_trap.name=Improved nails trap
+tile.mcpe:fumo.name=NZ plushie on yo head
+tile.mcpe:radio.name=Radio
+tile.mcpe:radio_ham.name=Ham radio
+tile.mcpe:wheat.name=Wheat
+tile.mcpe:wood_stake.name=Wood stake barrier
+tile.mcpe:spawner_military.name=Spawner military
+tile.mcpe:spawner_civilian.name=Spawner Civilian
+tile.mcpe:spawner_scavenger.name=Spawner Scavenger
+tile.mcpe:spawner_marauder.name=Spawner Marauder
+tile.mcpe:server_button.name=Server button
+tile.mcpe:server_button_delay.name=Server button delay
+tile.mcpe:bear_trap_close.name=Bear traps closed
+tile.mcpe:bear_trap_open.name=Bear traps opend
+
+## barrel
+tile.mcpe:barrel_blue.name=Blue barrel
+tile.mcpe:barrel_explosive.name=Explosive barrel
+tile.mcpe:barrel_green.name=Green barrel
+tile.mcpe:barrel_red.name=Red barrel
+tile.mcpe:barrel_yellow.name=Yellow barrel
+
+## display_rack
+tile.mcpe:display_rack_middle_bottom.name=Display rack bottom
+tile.mcpe:display_rack_middle_top.name=Display rack top
+tile.mcpe:display_rack_side_bottom.name=Display rack side bottom
+tile.mcpe:display_rack_side_top.name=Display rack side top
+
+## flag
+tile.mcpe:flag_fvla.name=Fvla flag
+tile.mcpe:flag_nekoi.name=Neko flag
+tile.mcpe:flag_vostrovia.name=Vostrovia flag
+
+## folding_chair
+tile.mcpe:folding_chair_blue.name=Blue folding chair
+tile.mcpe:folding_chair_brown.name=Brown folding chair
+tile.mcpe:folding_chair_green.name=Green folding chair
+tile.mcpe:folding_chair_red.name=Red folding chair
+
+## hesco
+tile.mcpe:hesco_olive.name=Olive hesco bastion
+tile.mcpe:hesco_tan.name=Tan hesco bastion
+tile.mcpe:hesco_white.name=White hesco bastion
+
+## light
+tile.mcpe:ceiling_light_broken.name=Broken ceiling light
+tile.mcpe:ceiling_light.name=Ceiling light
+tile.mcpe:exit_sign.name=Exit sign
+tile.mcpe:worklight.name=Worklight
+
+## monobloc
+tile.mcpe:monobloc_black.name=Black monobloc chair
+tile.mcpe:monobloc_blue.name=Blue monobloc chair
+tile.mcpe:monobloc_green.name=Green monobloc chair
+tile.mcpe:monobloc_red.name=Red monobloc chair
+tile.mcpe:monobloc_tan.name=Tan monobloc chair
+tile.mcpe:monobloc_white.name=White monobloc chair
+tile.mcpe:monobloc_yellow.name=Yellow monobloc chair
+
+## office_chair
+tile.mcpe:office_chair_black.name=Black office chair
+tile.mcpe:office_chair_blue.name=Blue office chair
+tile.mcpe:office_chair_brown.name=Brown office chair
+tile.mcpe:office_chair_green.name=Green office chair
+tile.mcpe:office_chair_red.name=Red office chair
+tile.mcpe:office_chair_white.name=White office chair
+
+## plastic_table
+tile.mcpe:plastic_black.name=Black plastic table
+tile.mcpe:plastic_blue.name=Blue plastic table
+tile.mcpe:plastic_green.name=Green plastic table
+tile.mcpe:plastic_red.name=Red plastic table
+tile.mcpe:plastic_tan.name=Tan plastic table
+tile.mcpe:plastic_white.name=White plastic table
+tile.mcpe:plastic_yellow.name=Yellow plastic table
+
+## road_barrier
+tile.mcpe:barrier_wall.name=Wall barrier
+tile.mcpe:caution_barrier_wall.name=Caution wall barrier
+tile.mcpe:caution_road_barrier.name=Caution road barrier
+tile.mcpe:road_barrier.name=Road barrier
+
+## sandbag
+tile.mcpe:sandbag_corner_olive.name=Olive sandbag corner
+tile.mcpe:sandbag_corner_tan.name=Tan sandbag corner
+tile.mcpe:sandbag_corner_white.name=White sandbag corner
+tile.mcpe:sandbag_olive.name=Olive sandbag
+tile.mcpe:sandbag_tan.name=Tan sandbag
+tile.mcpe:sandbag_white.name=White sandbag
+
+## sign
+tile.mcpe:traffic_becareful.name=Be careful traffic sign
+tile.mcpe:traffic_intersection.name=Intersection traffic sign
+tile.mcpe:traffic_no_entry.name=No entry traffic sign
+tile.mcpe:traffic_no_parking.name=No parking traffic sign
+tile.mcpe:traffic_parking.name=Parking traffic sign
+tile.mcpe:traffic_question.name=Question mark traffic sign
+tile.mcpe:traffic_section_left.name=Left section traffic sign
+tile.mcpe:traffic_section_right.name=Right section traffic sign
+tile.mcpe:traffic_stop.name=Stop traffic sign
+tile.mcpe:traffic_turn_left.name=Left turn traffic sign
+tile.mcpe:traffic_turn_right.name=Right turn traffic sign
+tile.mcpe:traffic_rod.name=Traffic rod
+
+## street_bench
+tile.mcpe:street_bench_blue.name=Blue street bench
+tile.mcpe:street_bench_green.name=Green street bench
+tile.mcpe:street_bench_red.name=Red street bench
+tile.mcpe:street_bench_white.name=White street bench
+
+## table_cloth
+tile.mcpe:table_cloth_black.name=Table with black cloth
+tile.mcpe:table_cloth_blue.name=Table with blue cloth
+tile.mcpe:table_cloth_green.name=Table with green cloth
+tile.mcpe:table_cloth_red.name=Table with red cloth
+
+## variant
+tile.mcpe:graffiti.name=Graffiti
+tile.mcpe:metal_rack.name=Metal rack
+tile.mcpe:papers.name=Papers
+
+## water_pump
+tile.mcpe:water_pump.name=Water pump
+tile.mcpe:water_pump_emp.name=Water pump empty
+
+## more furniture
+tile.mcpe:crowd_fence.name=Crowd fence
+tile.mcpe:construction_barrier.name=Construction barrier
+tile.mcpe:microwave.name=Microwave
+tile.mcpe:monitor.name=Monitor
+tile.mcpe:monitor_keyboard.name=Monitor with keyboard
+tile.mcpe:reloading_table.name=Reloading table
+tile.mcpe:sink.name=Sink
+tile.mcpe:toilet.name=Toilet
+tile.mcpe:traffic_cone.name=Traffic cone
+tile.mcpe:trash_bin.name=Trash bin
+tile.mcpe:trash_can.name=Trash can
+tile.mcpe:tv.name=Television
+tile.mcpe:tv_old.name=Old television
+tile.mcpe:wood_barrier.name=Wooden plank barrier
+tile.mcpe:wood_chair.name=Wooden chair
+tile.mcpe:wood_table.name=Wooden table
+
+## more block
+tile.mcpe:bath_tiles.name=Bath tiles
+tile.mcpe:brick_big.name=Big brick
+tile.mcpe:caution_block.name=Caution block
+tile.mcpe:corrugated_metal.name=Corrugated metal block
+tile.mcpe:corrugated_metal_rusty.name=Rusted corrugated metal block
+tile.mcpe:crate.name=Crate box
+tile.mcpe:farm_block.name=Farm block
+tile.mcpe:filing_cabinet.name=Filling cabinet
+tile.mcpe:hazard_block.name=Hazard block
+tile.mcpe:military_wall.name=Military wall
+tile.mcpe:smooth_stone_brick.name=Smooth stone brick
+tile.mcpe:tiles_bnw.name=Black checker tiles
+tile.mcpe:tiles_white.name=White tiles
+tile.mcpe:trace_plate.name=Trace plate
+tile.mcpe:washing_machine.name=Washing machine
+action.interact.extraction_machine=Extract

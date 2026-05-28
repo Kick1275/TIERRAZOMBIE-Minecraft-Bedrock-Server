@@ -1,0 +1,21 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pick_up_covered",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "pick_up",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.change_page": {
+            "timeline": {
+                "0.5": ["/event entity @s change_page_event"]
+            },
+            "animation_length":1,
+            "loop": false
+        }
+    }
+}

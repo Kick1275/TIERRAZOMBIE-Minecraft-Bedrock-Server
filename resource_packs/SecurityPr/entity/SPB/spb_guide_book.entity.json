@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "rt:spb_guide_book",
+      "materials": {
+        "default": "snow_golem"
+      },
+      "textures": {
+        "page1": "textures/spb_guide_book/spb_guide_book_page1",
+        "page2": "textures/spb_guide_book/spb_guide_book_page2",
+        "page3": "textures/spb_guide_book/spb_guide_book_page3",
+        "page4": "textures/spb_guide_book/spb_guide_book_page4"
+      },
+      "geometry": {
+        "default": "geometry.spb_guide_book"
+      },
+      "scripts": {
+        "scale": "3",
+        "animate": [
+          "face_player",
+          "default_controller",
+          "page_controller"
+        ]
+      },
+      "animations": {
+        "face_player": "animation.spb_face_player",
+        "close_animation": "animation.spb_guide_book.close",
+        "open_animation": "animation.spb_guide_book.open",
+        "change_page_animation": "animation.spb_guide_book.change_page",
+        "default_animation": "animation.spb_guide_book.default",
+        "close_sound_animation": "animation.spb_guide_book.close_sound",
+        "default_controller": "controller.animation.spb_guide_book",
+        "page_controller": "controller.animation.spb_guide_book_pages"
+      },
+      "render_controllers": [
+        "controller.render.spb_guide_book"
+      ],
+      "sound_effects": {
+        "change_page": "sonidos.spb_guide.book.change_pages",
+        "book_open": "sonidos.spb_guide.book.open",
+        "close_book": "sonidos.spb_guide.book.close"
+      },
+      "particle_effects": {
+        "digging": "minecraft:warden_dig"
+      },
+      "spawn_egg": {
+				"texture": "spb_guide_book",
+				"texture_index": 0
+			}
+    }
+  }
+}

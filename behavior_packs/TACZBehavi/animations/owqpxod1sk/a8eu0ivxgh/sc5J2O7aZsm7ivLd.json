@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.scarh.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.8,
+      "timeline": {
+        "2.7": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:scarh 1 0",
+          "/scoreboard players set @s[scores={scarh=21..}] scarh 20",
+          "/function scarh"
+        ],
+        "2.6": [
+          "/function scarhreload",
+          "/event entity @s krep:scarh_reload"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.db": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='db' && q.is_using_item) || query.get_equipped_item_name=='db_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s db 2",
+            "@s[hasitem={item=krep:db, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "db.30": "query.get_equipped_item_name=='db' && query.is_using_item && query.scoreboard('db') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "db.31": "query.get_equipped_item_name=='db' && query.is_using_item && query.scoreboard('db') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function db"
+          ]
+        },
+        "db.31": {
+          "animations": [
+            "dbshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={db=0}] slot.weapon.mainhand 1 krep:db_emp 1 0"
+          ]
+        },
+        "db.30": {
+          "animations": [
+            "dbshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:db_fire",
+            "/scoreboard players set @s[scores={db=3..}] db 2",
+            "/scoreboard players remove @s[scores={db=1..}] db 1",
+            "/playsound db.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={db=0}] slot.weapon.mainhand 1 krep:db_emp 1 0",
+            "/title @s[scores={db=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.awp.shoot": {
+      "loop": false,
+      "animation_length": 0.25,
+      "timeline": {}
+    }
+  }
+}

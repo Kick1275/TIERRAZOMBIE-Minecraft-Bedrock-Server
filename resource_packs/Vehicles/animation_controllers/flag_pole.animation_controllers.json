@@ -1,0 +1,32 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.flag_pole.change": {
+			"initial_state": "up",
+			"states": {
+				"up": {
+					"animations": [
+						"flow"
+					],
+					"transitions": [
+						{
+							"down": "q.is_ignited"
+						}
+					],
+					"blend_transition": 2
+				},
+				"down": {
+					"animations": [
+						"down"
+					],
+					"transitions": [
+						{
+							"up": "!q.is_ignited"
+						}
+					],
+					"blend_transition": 2
+				}
+			}
+		}
+	}
+}

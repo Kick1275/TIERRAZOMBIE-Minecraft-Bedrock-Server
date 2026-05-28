@@ -1,0 +1,17 @@
+clear @s[m=!c,scores={deagleg=16},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 1
+clear @s[m=!c,scores={deagleg=15},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 2
+clear @s[m=!c,scores={deagleg=14},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 3
+clear @s[m=!c,scores={deagleg=13},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 4
+clear @s[m=!c,scores={deagleg=12},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 5
+clear @s[m=!c,scores={deagleg=11},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 6
+clear @s[m=!c,scores={deagleg=10},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 7
+clear @s[m=!c,scores={deagleg=9},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 8
+clear @s[m=!c,scores={deagleg=8},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 9
+clear @s[m=!c,scores={deagleg=7},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 10
+clear @s[m=!c,scores={deagleg=6},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 11
+clear @s[m=!c,scores={deagleg=5},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 12
+clear @s[m=!c,scores={deagleg=4},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 13
+clear @s[m=!c,scores={deagleg=3},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 14
+clear @s[m=!c,scores={deagleg=2},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 15
+clear @s[m=!c,scores={deagleg=1},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 16
+clear @s[m=!c,scores={deagleg=0},hasitem={item=krep:ammoboxc,quantity=0}] krep:mag357 0 17

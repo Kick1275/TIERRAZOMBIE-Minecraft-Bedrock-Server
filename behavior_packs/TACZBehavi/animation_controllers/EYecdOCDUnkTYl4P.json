@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.rpg": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='rpg' && q.is_using_item) || query.get_equipped_item_name=='rpg_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s[hasitem={item=krep:rpg, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "rpg.30": "query.get_equipped_item_name=='rpg' && query.is_using_item && q.is_sneaking"
+            }
+          ],
+          "on_entry": [
+            "/function rpg"
+          ]
+        },
+        "rpg.31": {
+          "animations": [
+            "rpgshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s slot.weapon.mainhand 1 krep:rpg_emp 1 0"
+          ]
+        },
+        "rpg.30": {
+          "animations": [
+            "rpgshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:rpg_fire",
+            "/playsound rpg.shoot @a[r=30]",
+            "/replaceitem entity @s slot.weapon.mainhand 1 krep:rpg_emp 1 0",
+            "/title @s actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

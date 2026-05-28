@@ -1,0 +1,110 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:war_table",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:boat"
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 2
+			},
+			"minecraft:collision_box": {
+				"width": 4,
+				"height": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 4,
+						"height": 1,
+						"pivot": [
+							2,
+							0.5,
+							0
+						]
+					},
+					{
+						"width": 4,
+						"height": 1,
+						"pivot": [
+							-2,
+							0.5,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:is_stackable": {},
+			"minecraft:loot": {
+				"table": "loot_tables/war_table.json"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:interact": {
+				"interactions": {
+					"add_items": {
+						"table": "loot_tables/war_table.json"
+					},
+					"interact_text": "action.interact.war_table",
+					"on_interact": {
+						"event": "af:despawn",
+						"target": "self",
+						"filters": {
+							"test": "is_sneaking",
+							"subject": "other",
+							"value": true
+						}
+					},
+					"cooldown": 1
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"tp @e[c=1] ~0.5 ~ ~0.5 facing @p",
+						"title @p actionbar Sneak and interact to pick up."
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		}
+	}
+}

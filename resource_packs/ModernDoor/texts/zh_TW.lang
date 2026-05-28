@@ -1,0 +1,441 @@
+## If you think this translation needs improving feel free to say so in the Discord, translation provided by ChatGPT
+
+pack.used_inventory_items=由于你手上的物品不足，剩余部分已从你的库存中扣除。
+
+midgameTips.1=你需要一台斜切锯来制作Modern Doors的门。
+midgameTips.2=你可以使用任何种类的木板在斜切锯中制作木门。
+midgameTips.3=你可以使用任何种类的玻璃块或玻璃板在斜切锯中制作玻璃门。
+midgameTips.4=蹲下并与Modern Door互动以打开锁定菜单。
+midgameTips.5=只有放置门的人可以打开锁定菜单。
+midgameTips.6=需要更多钥匙？你可以在锁定菜单中制作。
+midgameTips.7=你可以随时在锁定菜单中更改门锁密码。
+midgameTips.8=Modern Doors默认作为双开门打开。你可以在锁定菜单中更改此设置。
+midgameTips.9=未上锁的Modern Doors可以通过拉杆、按钮或压力板打开。
+midgameTips.10=上锁的Modern Doors不能被破坏、燃烧或被活塞推动。它们很安全！
+midgameTips.11=有人偷了你的钥匙？只需在锁定菜单中更改密码即可。
+
+pack.new_store_available=获取免费附加组件
+
+
+pack.discover_more_addons=访问 TRMC-ADDONS.COM 发现更多附加包
+
+pack.modern_doors_text_1=Modern Doors 增加了全新门类，带锁功能、独特设计及红石支持，每种门有 14 个样式！
+pack.modern_doors_text_2=蹲下并互动可打开锁定菜单。设置密码、制作钥匙、用坚不可摧的门保护你的基地。
+
+pack.modern_furniture_text_1=Modern Furniture 添加了超过 800 件装饰家具，包括沙发、书架、灯具、画作等！
+pack.modern_furniture_text_2=使用粘土在切石机中制作。简洁清新的设计完美契合 Minecraft 的原版风格。
+
+pack.locked_chests_text_1=Locked Chests 添加了 80 多种带钥匙和所有者保护的新型容器，确保物品安全。
+pack.locked_chests_text_2=自定义钥匙的外观和标签。没有正确的钥匙或不是所有者，箱子将保持锁定状态！
+
+pack.sleeping_bags_text_1=Sleeping Bags 让你在任何地方、任何时间都能睡觉，甚至在地狱或末地也可以！
+pack.sleeping_bags_text_2=加速时间、设置重生点，并在多人冒险中使用更友好的睡眠机制。
+
+pack.feudal_furniture_text_1=Feudal Furniture 带来 800+ 中世纪风格家具，适合村庄、城堡与地牢的布置。
+pack.feudal_furniture_text_2=包含每种木材类型的箱子，支持坐下、点火等多种功能。
+
+pack.lore_anvil_text_1=使用 Lore Anvil，可为任意物品或方块添加彩色描述和图标。
+pack.lore_anvil_text_2=添加背景故事、符号或注释，使用专属铁砧自定义和整理你的装备。
+
+pack.home_electronics_text_1=Home Electronics 添加了游戏机、电脑、电视和家电，非常适合现代家居装饰。
+pack.home_electronics_text_2=可打开笔记本电脑、在钢琴上演奏音符，并用海报、灯光和游戏装备进行装饰。
+
+pack.pet_furniture_text_1=Pet Furniture 添加了猫窝、喂食器等适合宠物的装饰，适用于家中或花园。
+pack.pet_furniture_text_2=包含预制结构和模块化猫舍，完全兼容 Minecraft 1.21+ 及所有附加包。
+
+pack.better_beds_text_1=Better Beds 增加了具有时间控制、重生点设置功能的新床铺，可在任何维度使用！
+pack.better_beds_text_2=支持服务器使用，带有动画，并可堆叠床铺自动创建双层床。
+
+midgameTips.61=想在睡觉时也能让作物生长？请从 §lTRMC-ADDONS.COM 下载 Better Beds
+midgameTips.62=喜欢电子产品？请从 §lTRMC-ADDONS.COM 下载 Home Electronics
+midgameTips.63=想要可上锁的箱子？请从 §lTRMC-ADDONS.COM 下载 Locked Chests
+midgameTips.64=喜欢乡村风格的装饰？请从 §lTRMC-ADDONS.COM 下载 Feudal Furniture
+midgameTips.65=喜欢动物？请从 §lTRMC-ADDONS.COM 下载 Pet Furniture
+midgameTips.66=你是装饰大师吗？请从 §lTRMC-ADDONS.COM 下载 Modern Furniture
+midgameTips.67=想为物品添加背景故事？请从 §lTRMC-ADDONS.COM 下载 Lore Anvil
+midgameTips.68=想要 sleeping bags？请从 §lTRMC-ADDONS.COM 下载 Sleeping Bags
+midgameTips.69=想要更多插件？请访问 §lTRMC-ADDONS.COM§r，获取各种免费内容和更新！
+tips.creative.1=想要更多插件？请访问 §lTRMC-ADDONS.COM§r，获取各种免费内容和更新！
+
+tips.creative.2=喜欢乡村风格的装饰？请从 §lTRMC-ADDONS.COM 下载 Feudal Furniture
+tips.creative.3=喜欢动物？请从 §lTRMC-ADDONS.COM 下载 Pet Furniture
+tips.creative.4=你是装饰大师吗？请从 §lTRMC-ADDONS.COM 下载 Modern Furniture
+tips.creative.5=想为物品添加背景故事？请从 §lTRMC-ADDONS.COM 下载 Lore Anvil
+tips.creative.6=想要 sleeping bags？请从 §lTRMC-ADDONS.COM 下载 Sleeping Bags
+tips.creative.7=想要可上锁的箱子？请从 §lTRMC-ADDONS.COM 下载 Locked Chests
+tips.creative.8=喜欢电子产品？请从 §lTRMC-ADDONS.COM 下载 Home Electronics
+tips.creative.9=想在睡觉时也能让作物生长？请从 §lTRMC-ADDONS.COM 下载 Better Beds
+
+pack.addon_update= 有可用的 Add-On 更新
+pack.trmc_store= 免费获取 Add-Ons
+
+pack.new_update_available=有新更新！
+
+pack.md_update_text=Sleeping Bags 的 1.4 版本增加了 6 个全新的 sleeping bags！
+pack.md_update_trmc=访问 §aTRMC-ADDONS.COM§r 获取更新。你也可以扫描下方的 §a二维码§r 直接前往网站下载新版本附加包。
+
+pack.md_store_text=访问 §aTRMC-ADDONS.COM§r，获取大量免费的 Add-Ons！无论你是想要更多家具的装饰玩家，还是希望增强生存玩法的新机制爱好者，§aTRMC-ADDONS.COM§r 都有适合你的附加包！
+pack.md_store_trmc=你也可以扫描下方的 §a二维码§r 直接访问网站。
+
+
+pack.name=§l现代门 RP
+pack.description=必要的资源包用于现代门插件。更多插件请访问 TRMC-ADDONS.com
+
+pack.door_settings=门设置
+pack.choose_option=选择一个选项
+pack.return_simple_redstone=返回简单红石检测
+pack.upgrade_redstone=升级红石检测
+pack.return_normal_orientation=返回正常方向
+pack.invert_door_orientation=反转门的方向
+pack.turn_on_dual_opening=开启双重开启
+pack.turn_off_dual_opening=关闭双重开启
+pack.confirm_full_redstone=确认完全红石激活
+pack.full_redstone_warning=pack.full_redstone_warning=警告！这扇门已经能够检测到附近的红石信号，如拉杆、按钮、压力板和绊线。仅在需要使用红石线时使用此功能。请注意，在许多门上启用此功能可能会导致延迟。你想继续吗？
+pack.yes=是
+pack.no=否
+
+pack.door_menu=门菜单
+pack.unlock_door=解锁门
+pack.lock_door=锁门
+pack.lock_settings=锁定设置
+pack.unlock_mechanisms=锁定机制
+pack.create_key=创建钥匙
+pack.change_lock=更改锁
+pack.use_password=使用密码
+pack.use_key=使用钥匙
+pack.unlocked_because_you_are_owner=已解锁，因为你是所有者
+pack.correct_key=正确的钥匙
+pack.incorrect_key=错误的钥匙
+pack.password_required=需要密码
+pack.enter_password=输入密码
+pack.correct_password=正确的密码
+pack.incorrect_password=错误的密码
+pack.use_key_message=请使用钥匙解锁
+pack.door_locked_not_owner=门已锁定，你不是所有者
+pack.door_locked=门已锁定
+pack.door_opened=门已打开
+pack.door_closed=门已关闭
+pack.key_code_too_long=钥匙代码太长。最多允许20个字符
+pack.key_already_in_use=此钥匙代码已被其他玩家使用，已生成新代码
+pack.key_created=钥匙已创建
+pack.key_updated=钥匙已更新
+pack.adjacent_door_key_applied=钥匙已应用于相邻的门
+pack.adjacent_door_different_owner=相邻的门有不同的所有者
+pack.enter_key_name=输入钥匙名称
+pack.enter_key_description=输入钥匙描述
+pack.number_of_keys=钥匙数量
+pack.password_settings=密码设置
+pack.password_saved=密码已保存
+pack.door_unlocked=门已解锁
+pack.first_time_locking=首次锁定选项
+pack.owner_not_affected=所有者不受锁定影响
+pack.set_lock_create_keys=允许使用钥匙打开门
+pack.submit=提交
+pack.door_state_open=门是打开的
+pack.door_state_close=门是关闭的
+pack.open_pair_false=没有相邻的配对方块
+pack.disable_options=锁定机制
+pack.locked_because_you_are_owner=门已锁定
+pack.locked_door_opened_because_you_are_owner=门已锁定，但因为你是所有者，门已打开
+pack.door_you_are_not_owner=你不是门的所有者，无法访问锁定菜单
+pack.door_with_no_owner=此门没有所有者，无法锁定。你只能锁定在锁更新后放置的门
+
+pack.tutorial_prompt_title=教程
+pack.tutorial_prompt_body=你想要跟随关于锁定和管理门的所有选项的教程吗？
+pack.follow_tutorial=跟随教程
+pack.skip_tutorial=跳过教程
+
+pack.cant_destroy_player_not_owner=你不能破坏已锁定的门
+
+pack.key_and_lock_settings=钥匙和锁定设置
+pack.use_auto_generated_uuid=使用自动生成的钥匙代码
+pack.enter_key_code=输入自定义钥匙代码（仅当上面的切换关闭时有效）
+pack.enter_key_code_short=输入自定义钥匙代码
+
+pack.options_saved=选项已保存
+pack.choose_unlock_method=门已锁定。选择解锁方法
+
+pack.select_key_type=选择钥匙类型
+pack.key_type_gold=金钥匙
+pack.key_type_iron=铁钥匙
+pack.key_type_copper=铜钥匙
+pack.key_type_oxidized_copper=氧化铜钥匙
+
+item.md:copper_key=MD: 铜钥匙
+item.md:gold_key=MD: 金钥匙
+item.md:iron_key=MD: 铁钥匙
+item.md:oxidized_key=MD: 氧化铜钥匙
+
+
+tile.md:door_box.name=MD: 门盒
+
+item.md:screwdriver=MD: 螺丝刀
+
+tile.md:miter_saw.name=MD: 斜切锯
+tile.md:miter_saw.form_name=斜切锯
+
+pack.select_door_type=选择一种门类型:
+item.md:miter_saw_note=使用斜切锯制作Modern Doors的门
+
+pack.menu_canceled=你取消了菜单。
+
+pack.no_item_selected=你必须选择一堆物品来制作门。
+pack.invalid_material=此方块在斜切锯中无用途。
+pack.stack_used_up=你手中的物品堆已被完全用完。
+pack.select_quantity=数量是多少？
+
+pack.door_type_suffix= 门
+pack.door_cost_prefix=成本: 
+pack.door_cost_suffix= 项)
+pack.required_items_count=物品不足。你需要
+pack.current_items_count=你有: 
+pack.items_remaining_prefix=剩余物品: 
+pack.wood.invalid_material_message=你必须手持一些木板。
+pack.gold_ingot.invalid_material_message=你必须手持金锭。
+pack.iron_ingot.invalid_material_message=你必须手持铁锭。
+pack.copper_ingot.invalid_material_message=你必须手持铜锭。
+pack.glass_block.invalid_material_message=你必须手持某种玻璃。
+pack.wood.name=木板
+pack.iron_ingot.name=铁锭
+pack.copper_ingot.name=铜锭
+pack.gold_ingot.name=金锭
+pack.glass_block.name=玻璃块
+
+pack.glass.name=镶框
+pack.screen.name=屏风
+pack.barred.name=格栅
+pack.sturdy.name=坚固
+pack.sturdy_windowed.name=带窗坚固
+pack.full_glass.name=玻璃面板
+pack.jail.name=监狱
+pack.long_hinge.name=长铰链
+pack.timber.name=木材
+pack.multi_panel.name=多面板
+pack.twin_glass.name=双层玻璃
+
+pack.oak.name=橡木
+pack.birch.name=白桦木
+pack.acacia.name=金合欢
+pack.spruce.name=云杉
+pack.dark_oak.name=深色橡木
+pack.jungle.name=丛林木
+pack.crimson.name=绯红
+pack.warped.name=扭曲
+pack.mangrove.name=红树
+pack.cherry.name=樱桃木
+pack.bamboo.name=竹子
+
+pack.transparent.name=透明
+pack.red.name=红色
+pack.orange.name=橙色
+pack.yellow.name=黄色
+pack.lime.name=青柠绿
+pack.green.name=绿色
+pack.cyan.name=青色
+pack.light_blue.name=淡蓝色
+pack.blue.name=蓝色
+pack.magenta.name=品红
+pack.purple.name=紫色
+pack.pink.name=粉色
+pack.white.name=白色
+pack.silver.name=银色
+pack.gray.name=灰色
+pack.black.name=黑色
+pack.brown.name=棕色
+pack.tinted.name=有色
+
+pack.iron.name=铁
+pack.gray_iron.name=灰色铁
+pack.dark_iron.name=深色铁
+pack.gold.name=金
+pack.new_copper.name=铜
+pack.exposed_copper.name=暴露的铜
+pack.weathered_copper.name=风化铜
+pack.oxidized_copper.name=氧化铜
+
+
+tile.md:preview_single_oak_glass_door.name=MD: 橡木框架玻璃门
+tile.md:preview_single_birch_glass_door.name=MD: 桦木框架玻璃门
+tile.md:preview_single_acacia_glass_door.name=MD: 金合欢木框架玻璃门
+tile.md:preview_single_spruce_glass_door.name=MD: 云杉框架玻璃门
+tile.md:preview_single_dark_oak_glass_door.name=MD: 深色橡木框架玻璃门
+tile.md:preview_single_jungle_glass_door.name=MD: 丛林木框架玻璃门
+tile.md:preview_single_crimson_glass_door.name=MD: 绯红木框架玻璃门
+tile.md:preview_single_warped_glass_door.name=MD: 扭曲木框架玻璃门
+tile.md:preview_single_mangrove_glass_door.name=MD: 红树木框架玻璃门
+tile.md:preview_single_cherry_glass_door.name=MD: 樱桃木框架玻璃门
+tile.md:preview_single_bamboo_glass_door.name=MD: 竹子框架玻璃门
+tile.md:preview_single_iron_glass_door.name=MD: 铁框架玻璃门
+tile.md:preview_single_dark_iron_glass_door.name=MD: 深色铁框架玻璃门
+
+tile.md:preview_single_oak_screen_door.name=MD: 橡木纱门
+tile.md:preview_single_birch_screen_door.name=MD: 桦木纱门
+tile.md:preview_single_acacia_screen_door.name=MD: 金合欢木纱门
+tile.md:preview_single_spruce_screen_door.name=MD: 云杉纱门
+tile.md:preview_single_dark_oak_screen_door.name=MD: 深色橡木纱门
+tile.md:preview_single_jungle_screen_door.name=MD: 丛林木纱门
+tile.md:preview_single_crimson_screen_door.name=MD: 绯红木纱门
+tile.md:preview_single_warped_screen_door.name=MD: 扭曲木纱门
+tile.md:preview_single_mangrove_screen_door.name=MD: 红树木纱门
+tile.md:preview_single_cherry_screen_door.name=MD: 樱桃木纱门
+tile.md:preview_single_bamboo_screen_door.name=MD: 竹子纱门
+tile.md:preview_single_iron_screen_door.name=MD: 铁纱门
+tile.md:preview_single_dark_iron_screen_door.name=MD: 深色铁纱门
+
+tile.md:preview_single_oak_barred_door.name=MD: 橡木百叶门
+tile.md:preview_single_birch_barred_door.name=MD: 桦木百叶门
+tile.md:preview_single_acacia_barred_door.name=MD: 金合欢木百叶门
+tile.md:preview_single_spruce_barred_door.name=MD: 云杉百叶门
+tile.md:preview_single_dark_oak_barred_door.name=MD: 深色橡木百叶门
+tile.md:preview_single_jungle_barred_door.name=MD: 丛林木百叶门
+tile.md:preview_single_crimson_barred_door.name=MD: 绯红木百叶门
+tile.md:preview_single_warped_barred_door.name=MD: 扭曲木百叶门
+tile.md:preview_single_mangrove_barred_door.name=MD: 红树木百叶门
+tile.md:preview_single_cherry_barred_door.name=MD: 樱桃木百叶门
+tile.md:preview_single_bamboo_barred_door.name=MD: 竹子百叶门
+tile.md:preview_single_iron_barred_door.name=MD: 铁百叶门
+tile.md:preview_single_dark_iron_barred_door.name=MD: 深色铁百叶门
+
+tile.md:preview_single_oak_sturdy_windowed_door.name=MD: 橡木坚固带窗门
+tile.md:preview_single_birch_sturdy_windowed_door.name=MD: 桦木坚固带窗门
+tile.md:preview_single_acacia_sturdy_windowed_door.name=MD: 金合欢木坚固带窗门
+tile.md:preview_single_spruce_sturdy_windowed_door.name=MD: 云杉木坚固带窗门
+tile.md:preview_single_dark_oak_sturdy_windowed_door.name=MD: 黑橡木坚固带窗门
+tile.md:preview_single_jungle_sturdy_windowed_door.name=MD: 丛林木坚固带窗门
+tile.md:preview_single_crimson_sturdy_windowed_door.name=MD: 绯红木坚固带窗门
+tile.md:preview_single_warped_sturdy_windowed_door.name=MD: 扭曲木坚固带窗门
+tile.md:preview_single_mangrove_sturdy_windowed_door.name=MD: 红树木坚固带窗门
+tile.md:preview_single_cherry_sturdy_windowed_door.name=MD: 樱桃木坚固带窗门
+tile.md:preview_single_bamboo_sturdy_windowed_door.name=MD: 竹子坚固带窗门
+tile.md:preview_single_iron_sturdy_windowed_door.name=MD: 铁坚固带窗门
+tile.md:preview_single_dark_iron_sturdy_windowed_door.name=MD: 暗铁坚固带窗门
+
+tile.md:preview_single_oak_sturdy_door.name=MD: 橡木坚固门
+tile.md:preview_single_birch_sturdy_door.name=MD: 桦木坚固门
+tile.md:preview_single_acacia_sturdy_door.name=MD: 金合欢木坚固门
+tile.md:preview_single_spruce_sturdy_door.name=MD: 云杉木坚固门
+tile.md:preview_single_dark_oak_sturdy_door.name=MD: 黑橡木坚固门
+tile.md:preview_single_jungle_sturdy_door.name=MD: 丛林木坚固门
+tile.md:preview_single_crimson_sturdy_door.name=MD: 绯红木坚固门
+tile.md:preview_single_warped_sturdy_door.name=MD: 扭曲木坚固门
+tile.md:preview_single_mangrove_sturdy_door.name=MD: 红树木坚固门
+tile.md:preview_single_cherry_sturdy_door.name=MD: 樱桃木坚固门
+tile.md:preview_single_bamboo_sturdy_door.name=MD: 竹子坚固门
+tile.md:preview_single_iron_sturdy_door.name=MD: 铁坚固门
+tile.md:preview_single_dark_iron_sturdy_door.name=MD: 暗铁坚固门
+
+
+tile.md:preview_single_transparent_full_glass_door.name=MD: 透明玻璃门
+tile.md:preview_single_tinted_full_glass_door.name=MD: 有色玻璃门
+tile.md:preview_single_silver_full_glass_door.name=MD: 银色玻璃门
+tile.md:preview_single_white_full_glass_door.name=MD: 白色玻璃门
+tile.md:preview_single_gray_full_glass_door.name=MD: 灰色玻璃门
+tile.md:preview_single_black_full_glass_door.name=MD: 黑色玻璃门
+tile.md:preview_single_brown_full_glass_door.name=MD: 棕色玻璃门
+tile.md:preview_single_red_full_glass_door.name=MD: 红色玻璃门
+tile.md:preview_single_orange_full_glass_door.name=MD: 橙色玻璃门
+tile.md:preview_single_yellow_full_glass_door.name=MD: 黄色玻璃门
+tile.md:preview_single_lime_full_glass_door.name=MD: 酸橙色玻璃门
+tile.md:preview_single_green_full_glass_door.name=MD: 绿色玻璃门
+tile.md:preview_single_cyan_full_glass_door.name=MD: 青色玻璃门
+tile.md:preview_single_light_blue_full_glass_door.name=MD: 浅蓝色玻璃门
+tile.md:preview_single_blue_full_glass_door.name=MD: 蓝色玻璃门
+tile.md:preview_single_purple_full_glass_door.name=MD: 紫色玻璃门
+tile.md:preview_single_magenta_full_glass_door.name=MD: 品红色玻璃门
+tile.md:preview_single_pink_full_glass_door.name=MD: 粉红色玻璃门
+
+tile.md:preview_single_iron_jail_door.name=MD: 铁监狱门
+tile.md:preview_single_dark_iron_jail_door.name=MD: 暗铁监狱门
+tile.md:preview_single_new_copper_jail_door.name=MD: 铜监狱门
+tile.md:preview_single_exposed_copper_jail_door.name=MD: 裸露铜监狱门
+tile.md:preview_single_weathered_copper_jail_door.name=MD: 风化铜监狱门
+tile.md:preview_single_oxidized_copper_jail_door.name=MD: 氧化铜监狱门
+tile.md:preview_single_gold_jail_door.name=MD: 金监狱门
+tile.md:preview_single_gray_iron_jail_door.name=MD: 灰色铁监狱门
+
+tile.md:preview_single_oak_long_hinge_door.name=MD: 橡木长铰链门
+tile.md:preview_single_birch_long_hinge_door.name=MD: 桦木长铰链门
+tile.md:preview_single_acacia_long_hinge_door.name=MD: 金合欢木长铰链门
+tile.md:preview_single_spruce_long_hinge_door.name=MD: 云杉木长铰链门
+tile.md:preview_single_dark_oak_long_hinge_door.name=MD: 黑橡木长铰链门
+tile.md:preview_single_jungle_long_hinge_door.name=MD: 丛林木长铰链门
+tile.md:preview_single_crimson_long_hinge_door.name=MD: 绯红木长铰链门
+tile.md:preview_single_warped_long_hinge_door.name=MD: 扭曲木长铰链门
+tile.md:preview_single_mangrove_long_hinge_door.name=MD: 红树木长铰链门
+tile.md:preview_single_cherry_long_hinge_door.name=MD: 樱桃木长铰链门
+tile.md:preview_single_bamboo_long_hinge_door.name=MD: 竹子长铰链门
+tile.md:preview_single_iron_long_hinge_door.name=MD: 铁长铰链门
+tile.md:preview_single_dark_iron_long_hinge_door.name=MD: 黑铁长铰链门
+
+tile.md:preview_single_oak_timber_door.name=MD: 橡木木板门
+tile.md:preview_single_birch_timber_door.name=MD: 桦木木板门
+tile.md:preview_single_acacia_timber_door.name=MD: 金合欢木板门
+tile.md:preview_single_spruce_timber_door.name=MD: 云杉木板门
+tile.md:preview_single_dark_oak_timber_door.name=MD: 黑橡木木板门
+tile.md:preview_single_jungle_timber_door.name=MD: 丛林木木板门
+tile.md:preview_single_crimson_timber_door.name=MD: 绯红木木板门
+tile.md:preview_single_warped_timber_door.name=MD: 扭曲木木板门
+tile.md:preview_single_mangrove_timber_door.name=MD: 红树木木板门
+tile.md:preview_single_cherry_timber_door.name=MD: 樱桃木木板门
+tile.md:preview_single_bamboo_timber_door.name=MD: 竹子木板门
+tile.md:preview_single_iron_timber_door.name=MD: 白色木板门
+tile.md:preview_single_dark_iron_timber_door.name=MD: 暗色木板门
+
+tile.md:preview_single_oak_multi_panel_door.name=MD: 橡木多面板门
+tile.md:preview_single_birch_multi_panel_door.name=MD: 桦木多面板门
+tile.md:preview_single_acacia_multi_panel_door.name=MD: 相思木多面板门
+tile.md:preview_single_spruce_multi_panel_door.name=MD: 云杉多面板门
+tile.md:preview_single_dark_oak_multi_panel_door.name=MD: 深色橡木多面板门
+tile.md:preview_single_jungle_multi_panel_door.name=MD: 丛林多面板门
+tile.md:preview_single_crimson_multi_panel_door.name=MD: 绯红多面板门
+tile.md:preview_single_warped_multi_panel_door.name=MD: 畸变多面板门
+tile.md:preview_single_mangrove_multi_panel_door.name=MD: 红树多面板门
+tile.md:preview_single_cherry_multi_panel_door.name=MD: 樱桃木多面板门
+tile.md:preview_single_bamboo_multi_panel_door.name=MD: 竹子多面板门
+tile.md:preview_single_iron_multi_panel_door.name=MD: 白色多面板门
+tile.md:preview_single_dark_iron_multi_panel_door.name=MD: 深色多面板门
+
+tile.md:preview_single_oak_twin_glass_door.name=MD: 橡木双玻璃门
+tile.md:preview_single_birch_twin_glass_door.name=MD: 桦木双玻璃门
+tile.md:preview_single_acacia_twin_glass_door.name=MD: 金合欢木双玻璃门
+tile.md:preview_single_spruce_twin_glass_door.name=MD: 云杉木双玻璃门
+tile.md:preview_single_dark_oak_twin_glass_door.name=MD: 深色橡木双玻璃门
+tile.md:preview_single_jungle_twin_glass_door.name=MD: 丛林木双玻璃门
+tile.md:preview_single_crimson_twin_glass_door.name=MD: 绯红木双玻璃门
+tile.md:preview_single_warped_twin_glass_door.name=MD: 扭曲木双玻璃门
+tile.md:preview_single_mangrove_twin_glass_door.name=MD: 红树林木双玻璃门
+tile.md:preview_single_cherry_twin_glass_door.name=MD: 樱桃木双玻璃门
+tile.md:preview_single_bamboo_twin_glass_door.name=MD: 竹子双玻璃门
+tile.md:preview_single_iron_twin_glass_door.name=MD: 白色铁双玻璃门
+tile.md:preview_single_dark_iron_twin_glass_door.name=MD: 深色铁双玻璃门
+
+pack.japanese.name=日式 (Rìshì)
+
+tile.md:preview_single_oak_japanese_door.name=MD: 橡木和风门
+tile.md:preview_single_birch_japanese_door.name=MD: 桦木和风门
+tile.md:preview_single_acacia_japanese_door.name=MD: 金合欢木和风门
+tile.md:preview_single_spruce_japanese_door.name=MD: 云杉木和风门
+tile.md:preview_single_dark_oak_japanese_door.name=MD: 深色橡木和风门
+tile.md:preview_single_jungle_japanese_door.name=MD: 丛林木和风门
+tile.md:preview_single_crimson_japanese_door.name=MD: 绯红木和风门
+tile.md:preview_single_warped_japanese_door.name=MD: 畸变木和风门
+tile.md:preview_single_mangrove_japanese_door.name=MD: 红树林日式门
+tile.md:preview_single_cherry_japanese_door.name=MD: 樱花日式门
+tile.md:preview_single_bamboo_japanese_door.name=MD: 竹子日式门
+tile.md:preview_single_iron_japanese_door.name=MD: 白色日式门
+tile.md:preview_single_dark_iron_japanese_door.name=MD: 深色日式门
+
+pack.ventilation.name=通风
+tile.md:preview_single_oak_ventilation_door.name=MD：橡木通风门
+tile.md:preview_single_birch_ventilation_door.name=MD：白桦木通风门
+tile.md:preview_single_acacia_ventilation_door.name=MD：金合欢木通风门
+tile.md:preview_single_spruce_ventilation_door.name=MD：云杉木通风门
+tile.md:preview_single_dark_oak_ventilation_door.name=MD：深色橡木通风门
+tile.md:preview_single_jungle_ventilation_door.name=MD：丛林木通风门
+tile.md:preview_single_crimson_ventilation_door.name=MD：绯红通风门
+tile.md:preview_single_warped_ventilation_door.name=MD：诡异通风门
+tile.md:preview_single_mangrove_ventilation_door.name=MD：红树林通风门
+tile.md:preview_single_cherry_ventilation_door.name=MD：樱花木通风门
+tile.md:preview_single_bamboo_ventilation_door.name=MD：竹子通风门
+tile.md:preview_single_iron_ventilation_door.name=MD：白色通风门
+tile.md:preview_single_dark_iron_ventilation_door.name=MD：黑色通风门

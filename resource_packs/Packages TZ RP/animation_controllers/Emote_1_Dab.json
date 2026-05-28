@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.custom_emote": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"play": "0"
+						}
+					]
+				},
+				"play": {
+					"animations": [
+						"animation.TZ.E1Dab"
+					],
+					"on_entry": [
+						"/say Playing custom emote!"
+					],
+					"transitions": [
+						{
+							"default": "0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

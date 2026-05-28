@@ -1,0 +1,73 @@
+{
+  "block_sounds": {},
+  "entity_sounds": {
+    "defaults": {},
+    "entities": {
+      "rt:runa_proteccion": {
+        "volume": 1.5,
+        "pitch": [
+          1.0
+        ],
+        "events": {
+          "death": "dig.stone"
+        }
+      },
+      "rt:11x11": {
+        "volume": 1.5,
+        "pitch": [
+          1.0
+        ],
+        "events": {
+          "death": "dig.stones"
+        }
+      },
+      "rt:21x21": {
+        "volume": 1.5,
+        "pitch": [
+          1.0
+        ],
+        "events": {
+          "death": "dig.stones"
+        }
+      },
+      "rt:31x31": {
+        "volume": 1.5,
+        "pitch": [
+          1.0
+        ],
+        "events": {
+          "death": "dig.stones"
+        }
+      },
+      "rt:turret": {
+        "volume": 1.5,
+        "pitch": [
+          1.0
+        ],
+        "events": {
+          "death": "trial_spawner.break",
+          "hurt": "break.heavy_core"
+        }
+      },
+      "rt:protection_trader": {
+        "events": {
+          "ambient": "mob.wanderingtrader.idle",
+          "death": "mob.wanderingtrader.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": "mob.wanderingtrader.drink_potion",
+          "drink.milk": "mob.wanderingtrader.drink_milk",
+          "haggle": "mob.wanderingtrader.haggle",
+          "haggle.no": "mob.wanderingtrader.no",
+          "haggle.yes": "mob.wanderingtrader.yes",
+          "hurt": "mob.wanderingtrader.hurt",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [
+          0.80,
+          1.20
+        ],
+        "volume": 1.0
+      }
+    }
+  }
+}

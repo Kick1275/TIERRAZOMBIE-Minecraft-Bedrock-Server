@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.item.gun.wield": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": ["variable.rot_x", "variable.rot_y", "variable.rot_z"],
+					"position": ["variable.pos_x", "variable.pos_y", "variable.pos_z"],
+					"scale": "variable.size"
+				}
+			}
+		},
+		"animation.item.weapon.wield": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": ["variable.rot_x", "variable.rot_y", "variable.rot_z"],
+					"position": ["variable.pos_x", "variable.pos_y", "variable.pos_z"],
+					"scale": "variable.size"
+				}
+			}
+		}
+	}
+}

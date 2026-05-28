@@ -1,0 +1,46 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Euforia",
+			"Danilerts"
+		],
+		"product_type": "addon"
+	},
+	"header": {
+		"name": "Not Enough Emotes",
+		"description": "Have fun!\nBy: EuforiaConR & danilerts",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "80283c30-fdf6-40f0-b96b-bf8547a892d8",
+		"version": [
+			1,
+			2,
+			3
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "a222ceb6-ff47-4d3b-b175-ab1c9bacb788",
+			"version": [
+				1,
+				2,
+				3
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "8bd3397a-4a43-437b-8bf4-ee5194097ebd",
+			"version": [
+				1,
+				2,
+				3
+			]
+		}
+	]
+}

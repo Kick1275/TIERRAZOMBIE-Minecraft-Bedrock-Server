@@ -1,0 +1,41 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "mcpe:bdu_artic_top",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/items/clothing/top/bdu_artic_top",
+                "item": "textures/items/clothing/top/bdu_artic_top",
+                "clothes": "textures/clothes/bdu_artic"
+            },
+            "geometry": {
+                "default": "geometry.item_armor",
+                "clothes": "geometry.clothes_top"
+            },
+            "animations": {
+            	"first_person_hold": "animation.item_size.first_person_hold"
+            },
+            "scripts": {
+            	"animate": [
+            		{
+            			"first_person_hold": "c.is_first_person"
+            		}
+            	]
+            },
+            "render_controllers": [
+            	{
+            		"controller.render.item_first": "c.is_first_person && q.get_equipped_item_name('main_hand') == 'bdu_artic_top'"
+            	},
+            	{
+            		"controller.render.item_third": "!c.is_first_person && q.get_equipped_item_name('main_hand') == 'bdu_artic_top'"
+            	},
+            	{
+            		"controller.render.clothes": "q.equipped_item_any_tag('slot.armor.legs','bdu_artic_top') && q.get_equipped_item_name('main_hand') != 'bdu_artic_top'"
+            	}
+           ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.awp.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.7,
+      "timeline": {
+        "3.6": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:awp 1 0",
+          "/scoreboard players set @s[scores={awp=6..}] awp 5",
+          "/function awp"
+        ],
+        "3.5": [
+          "/function awpreload",
+          "/event entity @s krep:awp_reload"
+        ]
+      }
+    }
+  }
+}

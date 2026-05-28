@@ -1,0 +1,48 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.g17": {
+      "geometry": "geometry.g17",
+      "materials": [
+        {
+          "*": "material.guns"
+        },
+        {
+          "laserbeam_1": "material.glow"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "muzzle_1": "q.property('krep:muzzle') == 1"
+        },
+        {
+          "muzzle_2": "q.property('krep:muzzle') == 2"
+        },
+        {
+          "laser_1": "q.property('krep:laser') == 1"
+        },
+        {
+          "laserbeam_1": "q.property('krep:laser') == 1"
+        }
+      ],
+      "textures": [
+        "texture.g17"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

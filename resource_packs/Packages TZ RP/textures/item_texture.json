@@ -1,0 +1,33 @@
+{
+	"resource_pack_name": "Packages TZ",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"tz_habilidad_specops": {
+			"textures": "textures/items/TzHabilidad3SpecOps_Item"
+		},
+		"tz_habilidad_militar": {
+			"textures": "textures/items/TzHabilidad2Militar_Item"
+		},
+		"tz_habilidad_marcenario": {
+			"textures": "textures/items/TzHabilidad1Mercenario_Item"
+		},
+		"tz_ui_de_emotes": {
+			"textures": "textures/items/E_UI"
+		},
+		"tz_radio_voz": {
+			"textures": "textures/items/radioVoice"
+		},
+		"tz_telefono_iu": {
+			"textures": "textures/items/image"
+		},
+		"tz_radio_vc": {
+			"textures": "textures/items/radio_vc"
+		},
+		"tz_radio_musica": {
+			"textures": "textures/items/R_Musica"
+		},
+		"tz_unknowskill": {
+			"textures": "textures/items/HabilidadUnknow"
+		}
+	}
+}

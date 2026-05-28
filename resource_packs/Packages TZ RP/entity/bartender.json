@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tz:bartender",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/bartender"
+			},
+			"geometry": {
+				"default": "geometry.bartender"
+			},
+			"render_controllers": [
+				"controller.render.bartender"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"NPC.Inactivo": "animation.npc.foodshop.new",
+				"Controlador": "controller.animation.NpcFoodShop"
+			},
+			"scripts": {
+				"animate": [
+					"Controlador"
+				]
+			}
+		}
+	}
+}

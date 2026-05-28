@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.akm.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.0,
+      "timeline": {
+        "2.9": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:akm 1 0",
+          "/scoreboard players set @s[scores={akm=31..}] akm 30",
+          "/function akm"
+        ],
+        "2.8": [
+          "/function akmreload",
+          "/event entity @s krep:akm_reload"
+        ]
+      }
+    }
+  }
+}

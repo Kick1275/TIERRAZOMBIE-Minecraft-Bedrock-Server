@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dacia.seat": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [-13.5, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-66.9662, 2.0326, -1.4765],
+					"position": [-2, -0.2, 0]
+				},
+				"head": {
+					"rotation": [13, 0, 0]
+				},
+				"rightArm": {
+					"rotation": [-66.9662, -2.0326, 1.4765],
+					"position": [2, -0.2, 0]
+				}
+			}
+		}
+	}
+}

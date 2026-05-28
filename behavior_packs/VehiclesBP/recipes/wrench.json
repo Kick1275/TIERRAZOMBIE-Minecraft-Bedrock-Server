@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:wrench"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"U": {
+				"item": "iron_nugget"
+			},
+			"N": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"pattern": [
+			"UNU",
+			" N ",
+			"UNU"
+		],
+		"result": {
+			"item": "af:wrench",
+			"count": 1
+		}
+	}
+}

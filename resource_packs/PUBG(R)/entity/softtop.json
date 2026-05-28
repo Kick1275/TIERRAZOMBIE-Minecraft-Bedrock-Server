@@ -1,0 +1,50 @@
+//bridge-file-version: #12
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:softtop",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/uaz_softtop"
+			},
+			"geometry": {
+				"default": "geometry.softtop"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"turn",
+					"terrain",
+					"engine_smoke",
+					"smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.uaz.drive",
+				"turn": "animation.uaz.turn",
+				"down": "animation.uaz.down",
+				"up": "animation.uaz.up",
+				"terrain": "controller.animation.uaz.terrain",
+				"engine_smoke": "controller.animation.uaz.fatal",
+				"smoke": "controller.animation.uaz.driving"
+			},
+			"spawn_egg": {
+				"texture": "spawn_uaz_softtop",
+				"texture_index": 0
+			},
+			"particle_effects": {
+				"smoke": "pubg:smoke",
+				"engine": "pubg:engine_smoke",
+				"flame": "pubg:engine_fire"
+			}
+		}
+	}
+}

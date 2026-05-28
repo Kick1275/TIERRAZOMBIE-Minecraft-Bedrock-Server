@@ -1,0 +1,10 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.g36.shootsound": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 0.4,
+      "timeline": {}
+    }
+  }
+}

@@ -1,0 +1,526 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:m551",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"not_moving": {
+				"minecraft:body_rotation_blocked": {}
+			},
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"m551",
+						"libernia"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"m551",
+						"telslakia"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"m551"
+				]
+			},
+			"minecraft:health": {
+				"value": 1100
+			},
+			"minecraft:collision_box": {
+				"width": 2.82,
+				"height": 2.11
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "libernia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "libernia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "telslakia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_component",
+											"subject": "other",
+											"value": "minecraft:projectile",
+											"operator": "=="
+										},
+										{
+											"test": "has_component",
+											"subject": "other",
+											"value": "minecraft:ambient_sound_interval",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					}
+				]
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"interact_text": "action.interact.mount",
+				"family_types": [
+					"player"
+				],
+				"seats": {
+					"min_rider_count": 0,
+					"max_rider_count": 1,
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"controlling_seat": 0,
+				"rider_can_interact": false
+			},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:variable_max_auto_step": {
+				"base_value": 1,
+				"controlled_value": 1.5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "iron_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 50,
+							"subject": "self",
+							"operator": "<="
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": true
+						},
+						"event": "af:camerashake",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": false
+						},
+						"event": "af:not_moving",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						"event": "af:player_invis",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "!="
+						},
+						"event": "af:clear_camera",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.1,
+				"cause": "fly_into_wall",
+				"damage_per_tick": 10,
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						{
+							"test": "is_riding",
+							"subject": "other",
+							"value": true,
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "vehicle",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "inanimate",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_moving",
+							"subject": "self",
+							"value": true,
+							"operator": "=="
+						}
+					]
+				},
+				"play_attack_sound": true,
+				"damage_cooldown": 1
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"glass",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"dandelion",
+					"azalea",
+					"flowering_azalea",
+					"azalea_leaves",
+					"azalea_leaves_flowered",
+					"cave_vines",
+					"cave_vines_body_with_berries",
+					"cave_vines_head_with_berries",
+					"small_dripleaf_block",
+					"big_dripleaf",
+					"spore_blossom",
+					"hanging_roots",
+					"mangrove_leaves"
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					}
+				]
+			},
+			"minecraft:underwater_movement": {
+				"value": 0.05
+			},
+			"minecraft:behavior.rise_to_liquid_level": {
+				"priority": 0,
+				"liquid_y_offset": -1,
+				"rise_delta": 0.025,
+				"sink_delta": 0.025
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"summon af:m551_turret"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"queue_command": {
+					"command": [
+						"event entity @e[family=turret,r=1,c=1] af:join_telslakia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"queue_command": {
+					"command": [
+						"event entity @e[family=turret,r=1,c=1] af:join_libernia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar uses AP/HE Shells, and Guided Missiles."
+					]
+				}
+			},
+			"af:camerashake": {
+				"queue_command": {
+					"command": [
+						"camerashake add @p[r=16] 0.1 0.1 positional"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"not_moving"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosion_dust ~ ~ ~",
+						"camera @a[r=5] clear",
+						"kill @e[family=turret,r=1,c=1]",
+						"summon af:m551_corpse ~ ~ ~ ~ ~"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ~ ~1 ~"
+					]
+				}
+			},
+			"af:not_moving": {
+				"add": {
+					"component_groups": [
+						"not_moving"
+					]
+				}
+			},
+			"af:player_invis": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider",
+						"execute as @s run execute rotated as @p[r=1,c=1] run execute positioned as @p run camera @p set minecraft:free ease 0.2 in_out_circ pos ^ ^4 ^-7 facing @p",
+						"execute as @e[family=turret,r=2,c=1] at @s rotated as @p[r=2,c=1] run tp @s ~ ~ ~ ~ ~",
+						"effect @p[r=3] resistance 1 10 true",
+						"effect @p[r=3] water_breathing 1 10 true",
+						"effect @p[r=3] fire_resistance 1 10 true",
+						"playsound tank.drive @a ~ ~ ~ 0.2 0.8"
+					]
+				}
+			},
+			"af:clear_camera": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=2] clear"
+					]
+				}
+			}
+		}
+	}
+}

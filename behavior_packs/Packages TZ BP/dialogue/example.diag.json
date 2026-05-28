@@ -1,0 +1,21 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "Food_Shop",
+                "npc_name": "Vendedor de Comida",
+                "text": "A si que quieres hablar eh?... Dime de que te gustaria hablar",
+                "buttons": [
+                    {
+                        "name": "Tienes alguna Mision Para mi?",
+                        "commands": [
+                            "/effect @s levitation"
+                        ]
+                    }
+                ]
+            }
+
+        ]
+    }   
+}

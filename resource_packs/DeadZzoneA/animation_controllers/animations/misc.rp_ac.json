@@ -1,0 +1,56 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.rotate": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.target_yaw = q.body_y_rotation;"
+					],
+					"on_exit": [
+						"v.target_yaw = q.body_y_rotation;"
+					],
+					"transitions": [
+						{
+							"rotate_right": "v.body_rot > 0"
+						},
+						{
+							"rotate_left": "v.body_rot < 0"
+						}
+					]
+				},
+				"rotate_right": {
+					"animations": [
+						{
+							"rotate_right": "math.max(1.2 - q.modified_move_speed * 4, 0)"
+						}
+					],
+					"transitions": [
+						{
+							"default": "q.any_animation_finished"
+						},
+						{
+							"rotate_left": "variable.body_rot < 0"
+						}
+					]
+				},
+				"rotate_left": {
+					"animations": [
+						{
+							"rotate_left": "math.max(1.2 - q.modified_move_speed * 4, 0)"
+						}
+					],
+					"transitions": [
+						{
+							"default": "q.any_animation_finished"
+						},
+						{
+							"rotate_right": "variable.body_rot > 0"
+						}
+					]
+				}
+			}
+		}
+	}
+}
+						

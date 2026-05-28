@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.g3.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.5,
+      "timeline": {
+        "3.4": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:g3 1 0",
+          "/scoreboard players set @s[scores={g3=21..}] g3 20",
+          "/function g3"
+        ],
+        "3.3": [
+          "/function g3reload",
+          "/event entity @s krep:g3_reload"
+        ]
+      }
+    }
+  }
+}

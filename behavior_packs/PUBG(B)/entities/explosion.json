@@ -1,0 +1,50 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "pubg:explosion",
+			"is_summonable": true,
+			"is_spawnable": false
+		},
+		"component_groups": {
+			"pubg:explosion": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 5,
+					"causes_fire": false,
+					"breaks_blocks": false
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:explode": {
+				"fuse_length": 0,
+				"fuse_lit": true,
+				"power": 5,
+				"causes_fire": false,
+				"breaks_blocks": false
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"pubg:explosion"
+					]
+				}
+			}
+		}
+	}
+}

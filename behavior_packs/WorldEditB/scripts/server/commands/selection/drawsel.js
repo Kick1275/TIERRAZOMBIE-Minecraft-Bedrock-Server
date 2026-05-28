@@ -1,0 +1,1 @@
+import{RawText as e}from"library/Minecraft.js";import{registerCommand as r}from"../register_commands.js";const a={name:"drawsel",permission:"worldedit.drawsel",description:"commands.wedit:drawsel.description"};r(a,function(d){return d.drawOutlines=!d.drawOutlines,e.translate(d.drawOutlines?"commands.wedit:drawsel.enabled":"commands.wedit:drawsel.disabled")});

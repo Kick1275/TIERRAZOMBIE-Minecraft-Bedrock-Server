@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Kick1275."
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.44"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"min_engine_version": [
+			1,
+			21,
+			60
+		],
+		"uuid": "61f8c993-aa38-4171-bf0c-04c28ab460e5",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "4519f494-cb31-438f-86ba-89c710247ba2",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "9dbe4366-3d89-4938-a423-12e84c7890e5",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

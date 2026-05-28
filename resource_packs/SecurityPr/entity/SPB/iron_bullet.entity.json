@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "rt:iron_bullet",
+      "animations": {
+        "iron_bullet": "animation.iron_bullet.particles"
+      },
+      "particle_effects": {
+        "lr_iron_bullet_particle": "rt:iron_bullet"
+      },
+      "scripts": {
+        "animate": [
+          "iron_bullet"
+        ],
+        "should_update_effects_offscreen": "1.0"
+      }
+    }
+  }
+}

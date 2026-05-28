@@ -1,0 +1,39 @@
+//bridge-file-version: #7
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:pg117",
+			"materials": {
+				"default": "entity_emissive_alpha"
+			},
+			"textures": {
+				"default": "textures/entity/boat_pg117"
+			},
+			"geometry": {
+				"default": "geometry.pg117"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"turn",
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.pg117.drive",
+				"turn": "animation.pg117.turn",
+				"engine_smoke": "controller.animation.pg117.fatal"
+			},
+			"spawn_egg": {
+				"texture": "spawn_pg117",
+				"texture_index": 0
+			}
+		}
+	}
+}

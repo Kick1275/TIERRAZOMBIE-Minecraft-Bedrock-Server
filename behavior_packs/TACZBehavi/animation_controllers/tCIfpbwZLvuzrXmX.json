@@ -1,0 +1,66 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.m1014": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='m1014' && q.is_using_item) || query.get_equipped_item_name=='m1014_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s m1014 7",
+            "/replaceitem entity @s[scores={m1014=1..}] slot.weapon.mainhand 1 krep:m1014 1 0",
+            "@s[hasitem={item=krep:m1014, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "m1014.30": "query.get_equipped_item_name=='m1014' && query.is_using_item && query.scoreboard('m1014') >= 1 && q.mark_variant != 2 && q.mark_variant != 1"
+            },
+            {
+              "m1014.31": "query.get_equipped_item_name=='m1014' && query.is_using_item && query.scoreboard('m1014') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function m1014"
+          ]
+        },
+        "m1014.31": {
+          "animations": [
+            "m1014shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={m1014=0}] slot.weapon.mainhand 1 krep:m1014_emp 1 0"
+          ]
+        },
+        "m1014.30": {
+          "animations": [
+            "m1014shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:m1014_fire",
+            "/scoreboard players remove @s[scores={m1014=1..8}] m1014 1",
+            "/scoreboard players set @s[scores={m1014=9..}] m1014 8",
+            "/playsound m1014.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={m1014=0}] slot.weapon.mainhand 1 krep:m1014_emp 1 0",
+            "/title @s[scores={m1014=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

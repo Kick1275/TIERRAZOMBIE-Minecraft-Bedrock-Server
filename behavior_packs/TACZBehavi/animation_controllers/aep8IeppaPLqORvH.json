@@ -1,0 +1,131 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.car15.1": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='car15' && q.is_using_item) || query.get_equipped_item_name=='car15_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s car15 30",
+            "@s[hasitem={item=krep:car15, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "car15.30": "(query.get_equipped_item_name=='car15' && query.is_using_item && query.scoreboard('car15') >= 1 && q.mark_variant == 0 && q.property('krep:car15kit') != 1) || (query.get_equipped_item_name=='car15' && query.is_using_item && query.scoreboard('car15') >= 1 && q.mark_variant == 0 && q.property('krep:car15kit') == 1 && !q.is_sneaking)"
+            },
+            {
+              "car15.31": "query.get_equipped_item_name=='car15' && query.is_using_item && query.scoreboard('car15') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function car15"
+          ]
+        },
+        "car15.31": {
+          "animations": [
+            "car15shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={car15=0}] slot.weapon.mainhand 1 krep:car15_emp 1 0"
+          ]
+        },
+        "car15.30": {
+          "animations": [
+            "car15shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:car15_fire",
+            "/scoreboard players set @s[scores={car15=32..}] car15 31",
+            "/scoreboard players remove @s[scores={car15=1..31}] car15 1",
+            "/playsound car15.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={car15=0}] slot.weapon.mainhand 1 krep:car15_emp 1 0",
+            "/title @s[scores={car15=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    },
+    "controller.animation.car15.2": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "car15.30": "query.get_equipped_item_name=='car15' && query.is_using_item && q.property('krep:car15kit') == 1 && q.is_sneaking && q.mark_variant == 0"
+            }
+          ],
+          "on_entry": [
+            "@s car15:glstandby"
+          ]
+        },
+        "car15.30": {
+          "animations": [
+            "car15glshoot"
+          ],
+          "transitions": [
+            {
+              "empty": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:car15_glfire",
+            "@s car15:glempty",
+            "/playsound car15.glshoot @a[r=30]"
+          ]
+        },
+        "empty": {
+          "animations": [
+            "car15glshoot"
+          ],
+          "transitions": [
+            {
+              "reload": "query.get_equipped_item_name=='car15' && query.all_animations_finished && q.is_using_item && q.is_sneaking && q.mark_variant != 2"
+            }
+          ],
+          "on_entry": [
+            "@s car15:glempty"
+          ]
+        },
+        "reload": {
+          "animations": [
+            "car15glreload"
+          ],
+          "transitions": [
+            {
+              "penentuan": "query.all_animations_finished || (query.get_equipped_item_name!='car15') || q.mark_variant != 3"
+            }
+          ],
+          "on_entry": [
+            "@s krep:glreload"
+          ]
+        },
+        "penentuan": {
+          "transitions": [
+            {
+              "setup": "q.property('krep:car15glreload') == 0"
+            },
+            {
+              "empty": "q.property('krep:car15glreload') == 1"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

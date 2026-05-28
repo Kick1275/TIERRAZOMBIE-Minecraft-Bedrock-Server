@@ -1,0 +1,14 @@
+{
+    "values": [
+        "condicional/server", //SI
+        "condicional/proteccion", //SI
+        
+        "proteccion/timer_survival", //NO
+        "proteccion/ttimer", //NO
+
+        "proteccion/inactividad", //NO
+        
+        "timer/timer", //NO
+        "spb_kit"
+    ]
+  }

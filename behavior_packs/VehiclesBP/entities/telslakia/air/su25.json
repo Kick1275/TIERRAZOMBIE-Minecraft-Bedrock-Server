@@ -1,0 +1,819 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:su25",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"flight": "controller.animation.common_flight",
+				"grounded": "controller.animation.common_grounded",
+				"rider": "controller.animation.common_rider"
+			},
+			"scripts": {
+				"animate": [
+					"flight",
+					"grounded",
+					"rider"
+				]
+			}
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:type_family": {
+					"family": [
+						"libernia",
+						"vehicle",
+						"aerial",
+						"strike"
+					]
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"telslakia": {
+				"minecraft:type_family": {
+					"family": [
+						"telslakia",
+						"vehicle",
+						"aerial",
+						"strike"
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"on_ground": {
+				"minecraft:movement": {
+					"value": 0.4
+				}
+			},
+			"in_air": {
+				"minecraft:movement": {
+					"value": 0.7
+				}
+			},
+			"shoot": {
+				"minecraft:timer": {
+					"time": 0.1,
+					"looping": true,
+					"time_down_event": {
+						"event": "af:spawn_bullet"
+					}
+				}
+			},
+			"bullet": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"num_to_spawn": 1,
+						"spawn_entity": "af:bullet<af:a10>",
+						"should_leash": false,
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"single_use": true,
+						"spawn_sound": "shoot",
+						"spawn_event": "af:a10"
+					}
+				},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.05,
+					"duration": 0.05,
+					"knockback_horizontal_strength": 2,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"test": "is_riding",
+								"subject": "other"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"knockback_range": 2,
+					"knockback_damage": 2,
+					"on_roar_end": {
+						"event": "af:stop_bullet",
+						"target": "self"
+					},
+					"cooldown_time": 0.1
+				}
+			},
+			"engine": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"target": "self",
+						"event": "af:engine_sound",
+						"filters": [
+							{
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									}
+								]
+							}
+						]
+					},
+					"looping": true,
+					"time": [
+						0.5,
+						0.5
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"neutral",
+					"vehicle",
+					"aerial",
+					"strike"
+				]
+			},
+			"minecraft:health": {
+				"value": 1252,
+				"max": 1252
+			},
+			"minecraft:collision_box": {
+				"width": 5,
+				"height": 5
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"interact_text": "action.interact.mount",
+				"seats": [
+					{
+						"position": [
+							0,
+							1,
+							0
+						],
+						"min_rider_count": 0,
+						"max_rider_count": 1,
+						"lock_rider_rotation": 15
+					}
+				],
+				"family_types": [
+					"player"
+				],
+				"controlling_seat": 0,
+				"rider_can_interact": true
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 60,
+					"max_dropped_ticks": 20,
+					"use_motion_prediction_hints": true
+				},
+				"conditional_values": [
+					{
+						"max_optimized_distance": 0,
+						"max_dropped_ticks": 0,
+						"use_motion_prediction_hints": true,
+						"conditional_values": [
+							{
+								"test": "is_moving",
+								"subject": "self",
+								"operator": "==",
+								"value": true
+							}
+						]
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "iron_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:input_ground_controlled": {},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "rider_count",
+							"value": 1,
+							"subject": "self"
+						},
+						"event": "af:run_camera",
+						"target": "self"
+					},
+					{
+						"event": "af:on_ground",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "rider_count",
+									"subject": "self",
+									"value": 1
+								},
+								{
+									"test": "on_ground",
+									"subject": "self",
+									"value": true
+								}
+							]
+						}
+					},
+					{
+						"event": "af:in_air",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "rider_count",
+									"subject": "self",
+									"value": 1
+								},
+								{
+									"test": "on_ground",
+									"subject": "self",
+									"value": false
+								}
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"value": 0,
+							"subject": "self"
+						},
+						"event": "af:clear_camera",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:movement.generic": {
+				"max_turn": 0
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:generalpurpose_bomb"
+									},
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_bombs",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:bomb_dropped",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery",
+						"spawn_entities": [
+							"af:generalpurpose_bomb"
+						]
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:missile_item"
+									},
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "is_family",
+										"subject": "self",
+										"value": "libernia"
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_missiles",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:missile_fired",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery",
+						"spawn_entities": [
+							"af:homing_missile<af:join_libernia>"
+						]
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:missile_item"
+									},
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "is_family",
+										"subject": "self",
+										"value": "telslakia"
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_missiles",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:missile_fired",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery",
+						"spawn_entities": [
+							"af:homing_missile<af:join_telslakia>"
+						]
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:flare"
+									}
+								]
+							},
+							"event": "af:flare_deploy",
+							"target": "self"
+						},
+						"use_item": true,
+						"spawn_entities": [
+							"af:flare_entity"
+						],
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									}
+								]
+							},
+							"event": "af:shoot_mg",
+							"target": "self"
+						},
+						"play_sounds": "milk",
+						"interact_text": "action.interact.shoot_mg",
+						"cooldown": 10
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": true
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "libernia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "libernia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "telslakia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_component",
+											"subject": "other",
+											"value": "minecraft:projectile",
+											"operator": "=="
+										},
+										{
+											"test": "has_component",
+											"subject": "other",
+											"value": "minecraft:ambient_sound_interval",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					}
+				]
+			},
+			"minecraft:fire_immune": true
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"telslakia",
+						"engine"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar uses: Flare, Homing Missile, General-purpose Bomb."
+					]
+				}
+			},
+			"af:flare_deploy": {
+				"queue_command": {
+					"command": [
+						"playsound jet.flare @p[r=5]"
+					]
+				}
+			},
+			"af:run_camera": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider",
+						"execute as @s run execute rotated as @p[r=5] run execute positioned as @p run camera @p set minecraft:free ease 0.2 in_out_circ pos ^ ^ ^-10 facing @p"
+					]
+				}
+			},
+			"af:in_air": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function autopilot"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"on_ground"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"in_air"
+					]
+				}
+			},
+			"af:on_ground": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function autopilot"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"on_ground"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"in_air"
+					]
+				}
+			},
+			"af:clear_camera": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=2] clear"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=5] clear",
+						"summon af:su25_corpse ~ ~ ~ ~ ~",
+						"execute as @s at @s[rx=90,rxm=40] run function vehicle_explosion"
+					]
+				}
+			},
+			"af:engine_sound": {
+				"queue_command": {
+					"command": [
+						"playsound jet.fly @a  ~ ~ ~ 100 1"
+					]
+				}
+			},
+			"af:missile_fired": {
+				"queue_command": {
+					"command": [
+						"scoreboard players add @s MissileAmmo 1",
+						"execute as @s if score @s MissileAmmo matches 1 run title @p[r=5] actionbar (1/2) Missiles",
+						"execute as @s if score @s MissileAmmo matches 2 run tag @s add no_missiles"
+					]
+				}
+			},
+			"af:bomb_dropped": {
+				"queue_command": {
+					"command": [
+						"scoreboard players add @s BombAmmo 1",
+						"execute as @s if score @s BombAmmo matches 1 run title @p[r=5] actionbar (11/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 2 run title @p[r=5] actionbar (10/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 3 run title @p[r=5] actionbar (9/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 4 run title @p[r=5] actionbar (8/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 5 run title @p[r=5] actionbar (7/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 6 run title @p[r=5] actionbar (6/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 7 run title @p[r=5] actionbar (5/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 8 run title @p[r=5] actionbar (4/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 9 run title @p[r=5] actionbar (3/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 10 run title @p[r=5] actionbar (2/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 11 run title @p[r=5] actionbar (1/12) Bombs",
+						"execute as @s if score @s BombAmmo matches 12 run tag @s add no_bombs"
+					]
+				}
+			},
+			"af:shoot_mg": {
+				"add": {
+					"component_groups": [
+						"shoot"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"scoreboard players set @s ChainAmmo 0"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"engine"
+					]
+				}
+			},
+			"af:stop_mg": {
+				"remove": {
+					"component_groups": [
+						"shoot"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"engine"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p[r=16] actionbar gun cooling (10s).",
+						"playsound vehicle.brt @a ~ ~ ~ 101 1"
+					]
+				}
+			},
+			"af:spawn_bullet": {
+				"queue_command": {
+					"command": [
+						"camerashake add @a[r=16] 0.1 0.1 positional",
+						"scoreboard players add @s ChainAmmo 1",
+						"execute as @s if score @s ChainAmmo matches 20 run event entity @s af:stop_mg",
+						"particle af:ground_ash ^ ^ ^1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"bullet"
+					]
+				}
+			},
+			"af:stop_bullet": {
+				"remove": {
+					"component_groups": [
+						"bullet"
+					]
+				}
+			}
+		}
+	}
+}

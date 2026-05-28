@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.saiga12": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='saiga12' && q.is_using_item) || query.get_equipped_item_name=='saiga12_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s saiga12 5",
+            "@s[hasitem={item=krep:saiga12, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "saiga12.30": "query.get_equipped_item_name=='saiga12' && query.is_using_item && query.scoreboard('saiga12') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "saiga12.31": "query.get_equipped_item_name=='saiga12' && query.is_using_item && query.scoreboard('saiga12') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function saiga12"
+          ]
+        },
+        "saiga12.31": {
+          "animations": [
+            "saiga12shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={saiga12=0}] slot.weapon.mainhand 1 krep:saiga12_emp 1 0"
+          ]
+        },
+        "saiga12.30": {
+          "animations": [
+            "saiga12shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:saiga12_fire",
+            "/scoreboard players set @s[scores={saiga12=7..}] saiga12 6",
+            "/scoreboard players remove @s[scores={saiga12=1..}] saiga12 1",
+            "/playsound saiga12.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={saiga12=0}] slot.weapon.mainhand 1 krep:saiga12_emp 1 0",
+            "/title @s[scores={saiga12=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

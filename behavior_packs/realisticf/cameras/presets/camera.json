@@ -1,0 +1,9 @@
+{ 
+ "format_version": "1.21.100",  
+ "minecraft:camera_preset": {  
+   "identifier": "custom:fpp",  
+   "inherit_from": "minecraft:follow_orbit",  
+   "entity_offset":  [0.0, 0.0, 0.26],  
+  "radius": 0.1  
+  } 
+}

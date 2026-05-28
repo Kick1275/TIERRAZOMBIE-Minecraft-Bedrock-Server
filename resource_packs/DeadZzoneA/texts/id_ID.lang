@@ -1,0 +1,740 @@
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## You can translate from here
+## welec message
+game.message.welcome_dz=Selamat Datang di Dead§4Z§rone
+game.message.deadzone_1=§eKetik §r§o!avatar§r§e untuk membuat avatar
+game.message.deadzone_2=§eKetik §r§o!status§r§e untuk melihat status progres 
+
+## death message
+death.attack.bullet.headshot=%1$s tertembak di kepala oleh %2$s
+death.attack.bullet=%1$s tertembak oleh %2$s
+death.attack.freeze.temperature=%1$s mati kedinginan
+death.attack.heat.temperature=%1$s mati kepanasan
+death.attack.thirst=%1$s mati kehausan
+death.attack.bleeding=%1$s pendarahan hingga mati
+death.attack.infection=%1$s terinfeksi
+death.attack.blood_loss=%1$s mati kekurangan darah
+
+## cc
+cc.random_avatar.gui=Avatar Acak
+cc.default_skin.gui=Default Skin
+cc.skin.gui=Kulit
+cc.hair.gui=Rambut
+cc.eye.gui=Mata
+cc.gender.gui=Gender
+cc.glove.gui=Sarung Tangan
+cc.message.default_skin=Apa kamu ingin menggunakan default skin?
+cc.message.warning=Silakan pilih gender Anda sebelum memilih atribut lainnya
+cc.message.warning_eye_first=Maaf, kamu tidak bisa memakai mata perempuan
+cc.message.warning_eye_second=Maaf, kamu tidak bisa memakai mata laki-laki
+
+## config
+config.title=Pengaturan DeadZone
+config.despawn_time=Atur Waktu Penghilangan Mayat (Menit)
+config.max_corpse=Atur Pengukuran Jumlah Mayat
+config.allow_corpse_creation=Izinkan pembuatan mayat
+config.reset_statu_on_death=Atur Ulang Status Ketika Mati
+config.hardcore_infected_mode=Aktifkan Mode Infected Hardcore
+
+## horde config
+horde.config.title=Pengaturan Horde
+horde.config.enable_horde=Aktifkan Horde System
+horde.config.spawn_chance=Persentase Kemunculan Horde (Persen)
+horde.config.min_Interval=Interval Minimum Horde (Menit)
+horde.config.max_Interval=Interval Maksimal Horde (Menit)
+horde.config.min_distance=Jarak Horde (Blocks)
+horde.config.size_group=Ukuran Grup Horde (Jumlah Terinfeksi)
+horde.config.civilian_spawn_chance=Persentase Kemunculan Penduduk (Percent)
+horde.config.screamer_spawn_chance=Persentase Kemunculan Screamer (Percent)
+
+## status
+statu.player_name=Nama
+statu.player_killed=Pemain yang terbunuh
+statu.infected_killed=Infected yang terbunuh
+statu.time_playing=Waktu bermain
+statu.time_survived=Waktu bertahan hidup
+statu.kill_distance=Jarak pembunuhan terjauh
+
+## action
+action.interact.cut=Dapatkan steak
+action.interact.bury=Kuburkan mayat
+action.hint.exit.mcpe:sedan=lompat/jongkok untuk keluar dari kendaraan
+action.hint.exit.mcpe:humvee=lompat/jongkok untuk keluar dari kendaraan
+action.hint.exit.mcpe:motor=lompat/jongkok untuk keluar dari kendaraan
+
+## game message
+game.message.warning_blood_type=§aku belum mengetahui golongan darahku.
+game.message.warning_overdose_first=§cAku merasa tidak enak...
+game.message.warning_overdose_second=§cAku terkena overdosis...
+game.message.blood_type_first=§aGolongan darahmu adalah A
+game.message.blood_type_second=§aGolongan darahmu adalah AB
+game.message.blood_type_third=§agGlongan darahmu adalah B
+game.message.blood_type_fourth=§aGolongan darahmu adalah O
+game.message.blood_transfer=Transfusi darah telah selesai
+game.message.bleeding_warning=§cAku berdarah..
+game.message.broken_bone_warning=§cKakiku patah..
+game.message.temperature_warning_first=Aku kepanasan
+game.message.temperature_warning_second=Aku kedinginan
+game.message.warning_lockpick=§4Kamu membutuhkan kunci gembok untuk membuka surplus blok
+game.message.lockpick_broken=§cKunci gembok mu sudah rusak!
+game.message.lockpick_attempt=§cKunci gembok gagal terbuka!
+game.message.unsupport_warning=Item ini tidak didukung. Silakan klik pada layar/klik kanan untuk mengembalikan item
+game.message.blood_type=Golongan darah Anda adalah
+
+## spawn egg
+item.spawn_egg.entity.mcpe:civilian.name=Kemunculan Warga yang Terinfeksi
+item.spawn_egg.entity.mcpe:military.name=Kemunculan Militer yang Terinfeksi
+item.spawn_egg.entity.mcpe:hazmat.name=Kemunculan Hazmat yang Terinfeksi
+item.spawn_egg.entity.mcpe:militia.name=Kemunculan militant yang Terinfeksi
+item.spawn_egg.entity.mcpe:screamer.name=Kemunculan Penjerit yang Terinfeksi
+item.spawn_egg.entity.mcpe:commander.name=Kemunculan Komandan yang Terinfeksi
+item.spawn_egg.entity.mcpe:sedan.name=Kemunculan Sedan
+item.spawn_egg.entity.mcpe:motor.name=Kemunculan Sepeda Motor
+item.spawn_egg.entity.mcpe:humvee.name=Kemunculan Humvee
+
+item.spawn_egg.entity.mcpe:marauder.name=Kemunculan Merauder
+item.spawn_egg.entity.mcpe:scavenger_.name=Kemunculan Scavenger
+
+## entity
+entity.mcpe:civilian.name=Warga yang Terinfeksi
+entity.mcpe:military.name=Militer yang Terinfeksi
+entity.mcpe:hazmat.name=Hazmat yang Terinfeksi
+entity.mcpe:commander.name=Komandan yang Terinfeksi
+entity.mcpe:militia.name=Militant yang Terinfeksi
+
+entity.mcpe:marauder.name=Marauder
+entity.mcpe:scavenger.name=Scavenger
+
+entity.unknown.name=Jarahan
+
+## item
+item.mcpe:vending_popsi_icon.name=Popsi mesin penjual otomatis
+item.mcpe:vending_exp_icon.name=EXP-coke mesin penjual otomatis 
+item.mcpe:vending_sprot_icon.name=Sprot mesin penjual otomatis
+item.mcpe:baseball_bat.name=Tongkat baseball
+item.mcpe:barbedwire_bat.name=Tongkat baseball berkawat
+item.mcpe:cleaver_knife.name=Pisau cleaver
+item.mcpe:combat_knife.name=Pisau tempur
+item.mcpe:crowbar.name=Linggis
+item.mcpe:engineer_shovel.name=Sekop insinyur
+item.mcpe:fireman_axe.name=Kapak pemadam kebakaran 
+item.mcpe:flanged_mace.name=Gada bergelang
+item.mcpe:frying_pan.name=Panci penggoreng
+item.mcpe:golf_club.name=Tongkat golf
+item.mcpe:golok_machete.name=Golok
+item.mcpe:hammer.name=Palu
+item.mcpe:hatchet.name=Kapak kecil
+item.mcpe:hunting_knife.name=Pisau berburu
+item.mcpe:ice_hockey.name=Tongkat es hoki
+item.mcpe:ice_pick.name=Pemecah es
+item.mcpe:katana.name=Katana
+item.mcpe:kitchen_knife.name=Pisau dapur
+item.mcpe:knight_sword.name=Pedang kesatria
+item.mcpe:kukri_machete.name=Parang kukri
+item.mcpe:lead_pipe.name=Pipa timah
+item.mcpe:machete.name=Parang
+item.mcpe:metal_bat.name=Tongkat baseball besi
+item.mcpe:miner_pickaxe.name=Beliung penambang
+item.mcpe:nailed_bat.name=Tongkat baseball berpaku
+item.mcpe:nailed_plank.name=Papan dengan paku
+item.mcpe:pipe_wrench.name=Kunci pipa
+item.mcpe:pitchfork.name=Garpu rumput
+item.mcpe:police_baton.name=Tongkat polisi
+item.mcpe:rolling_pin.name=Alat penggilas adonan
+item.mcpe:sabre_sword.name=Pedang sabre
+item.mcpe:screwdriver.name=Obeng
+item.mcpe:farm_sickle.name=Sabit sawah
+item.mcpe:sledgehammer.name=Palu godam
+item.mcpe:snow_shovel.name=Sekop salju
+item.mcpe:splitting_axe.name=Kapak pembelah
+item.mcpe:tactical_axe.name=Kapak taktis
+item.mcpe:tactical_shovel.name=Sekop taktis
+item.mcpe:tire_iron.name=Kunci roda
+item.mcpe:wooden_plank.name=Papan kayu
+item.mcpe:wrench.name=Kunci inggris 
+item.mcpe:hacksaw.name=Gergaji besi
+
+item.mcpe:blood_test_kit.name=Alat tes darah
+item.mcpe:blood_bag_emp.name=Kantong darah kosong
+item.mcpe:blood_bag_unknown.name=Kantung darah Tipe yang tidak Diketahui 
+item.mcpe:blood_bag_type_a.name=Kantung darah Tipe A
+item.mcpe:blood_bag_type_ab.name=Kantung darah Tipe AB
+item.mcpe:blood_bag_type_b.name=Kantung darah Tipe B
+item.mcpe:blood_bag_type_o.name=Kantung darah Tipe O
+
+item.mcpe:first_aid.name=Tas P3K
+item.mcpe:bandage.name=Perban
+item.mcpe:bandage_sterilized.name=Perban yang disterilkan
+item.mcpe:rags.name=Kain
+item.mcpe:rags_dirty.name=Kain Kotor
+item.mcpe:rags_sterilized.name=Kain yang disterilkan
+item.mcpe:painkiller.name=Obat Pereda Sakit
+item.mcpe:adrenaline.name=Injektor Adrenalin Otomatis
+item.mcpe:morphine.name=Injektor Morfin Otomatis
+item.mcpe:splint.name=Bidai
+item.mcpe:water_purification.name=Tablet Pemurnian Air
+item.mcpe:alcoholic_tinture.name=Larutan Alkohol
+item.mcpe:antidote.name=Suntikan Antidote
+
+
+item.mcpe:avatar_custome.name=Kostumisasi Karakter
+item.mcpe:barbed_wire.name=Kawat Berduri
+item.mcpe:bear_trap.name=Perangkap Beruang
+item.mcpe:bleach.name=Pemutih
+item.mcpe:bottle_water_emp.name=Botol air Kosong
+item.mcpe:detonator.name=Pemicu Peledak
+item.mcpe:can_opener.name=Pembuka Kaleng
+item.mcpe:duct_tape.name=Lakban
+item.mcpe:flashlight.name=Senter
+item.mcpe:fumo_hat.name= Da zaza Fumos Aseli
+item.mcpe:funi_vest.name=Rompi lawak
+item.mcpe:ham_radios.name=Radio HAM
+item.mcpe:landmine.name=Ranjau
+item.mcpe:lockpick.name=Lockpick
+item.mcpe:nail_box.name=Kotak paku
+item.mcpe:nail.name=Paku
+item.mcpe:cooking_pot.name=Panci masak Kosong
+item.mcpe:radios.name=Radio
+item.mcpe:Random_paper.name=Kertas acak
+item.mcpe:remote.name=Remote Rompi lawak
+item.mcpe:sawoff_pipe.name=Pipa timah yang Digergaji
+item.mcpe:spray_can.name=Kaleng semprot
+item.mcpe:walkie_talkie.name=Walkie talkie
+item.mcpe:wire_cutter.name=Alat pemotong kawat
+item.mcpe:wooden_barricade.name=Barikade papan kayu
+item.mcpe:fvla_flags.name=Bendera Tentara Legiun Vostrovia Merdeka (FVLA)
+item.mcpe:vostrovia_flags.name=Bendera republik Vostrovia
+item.mcpe:nekoi_flags.name=Bendera proyek Neko ¡
+item.mcpe:nails.name=Paku
+
+
+item.mcpe:chip_potato.name=Keripik kentang
+item.mcpe:chip_tortilla.name=Keripik tortilla
+item.mcpe:chocolate_bar.name=Cokelat batangan
+item.mcpe:creeper_crunch.name=Creeper crunch
+item.mcpe:meat_jerky.name=Daging kering
+item.mcpe:mre.name=Ransum siap makan
+item.mcpe:rice.name=Karung beras
+item.mcpe:strawberry_jam.name=Selai stroberi 
+item.mcpe:tactical_sandwich.name=Roti taktis
+item.mcpe:apple_green.name=Apel hijau
+item.mcpe:banana.name=Pisang
+item.mcpe:cucumber.name=Timun
+item.mcpe:pear.name=Pir
+item.mcpe:tomato.name=Tomat
+item.mcpe:zucchini.name=Timun jepang
+item.mcpe:raw_player.name=Daging player mentah
+item.mcpe:cooked_player.name=Daging Player masak
+
+
+item.mcpe:canned_bacon.name=Daging babi taktis Kalengan
+item.mcpe:canned_beans.name=Kacang panggang Kalengan
+item.mcpe:canned_beef_stew.name=Sup daging sapi Kalengan
+item.mcpe:canned_chicken.name=Daging ayam Kalengan
+item.mcpe:canned_chili.name=Chili Kalengan
+item.mcpe:canned_corned.name=Daging kornet Kalengan
+item.mcpe:canned_fruit.name=Koktail buah Kalengan
+item.mcpe:canned_ham.name=ham kalengan
+item.mcpe:canned_peaches.name=Buah persik manis Kalengan
+item.mcpe:canned_ration.name=Ransum lapangan Kalengan
+item.mcpe:canned_sardine.name=Sarden Kalengan
+item.mcpe:canned_spaghetti.name=Spagheti bolognese Kalengan
+item.mcpe:canned_tomato.name=Sup tomat Kalengan
+item.mcpe:canned_tuna.name=Tuna kalengan
+
+
+item.mcpe:canned_bacon_open.name=Buka Daging Babi Taktis Kalengan
+item.mcpe:canned_beans_open.name=Buka Kacang panggang Kalengan
+item.mcpe:canned_beef_stew_open.name=Buka Sup daging sapi Kalengan
+item.mcpe:canned_chicken_open.name=Buka Daging ayam Kalengan
+item.mcpe:canned_chili_open.name=Buka Cabai Kalengan
+item.mcpe:canned_corned_open.name=Buka Daging kornet Kalengan
+item.mcpe:canned_fruit_open.name=Buka Koktail buah Kalengan
+item.mcpe:canned_ham_open.name=Buka Ham Kalengan
+item.mcpe:canned_peaches_open.name=Buka Buah persik manis Kalengan
+item.mcpe:canned_ration_open.name=Buka Ransum lapangan Kalengan
+item.mcpe:canned_sardine_open.name=Buka sarden Kalengan
+item.mcpe:canned_spaghetti_open.name=Buka Spagheti bolognese Kalengan
+item.mcpe:canned_tomato_open.name=Buka Sup tomat Kalengan
+item.mcpe:canned_tuna_open.name=Buka Tuna Kalengan
+
+
+item.mcpe:canned_bacon_open_bad.name=Buka Daging babi taktis Kalengan kualitas Buruk
+item.mcpe:canned_beans_open_bad.name=Buka Kacang panggang Kalengan kualitas Buruk
+item.mcpe:canned_beef_stew_open_bad.name=Buka Sup daging sapi Kalengan kualitas Buruk
+item.mcpe:canned_chicken_open_bad.name=Buka Daging ayam Kalengan kualitas Buruk
+item.mcpe:canned_chili_open_bad.name=Buka Cabai Kalengan Kualitas Buruk
+item.mcpe:canned_corned_open_bad.name=Buka Daging kornet Kalengan Kualitas Buruk
+item.mcpe:canned_fruit_open_bad.name=Buka Koktail buah Kalengan Kualitas Buruk
+item.mcpe:canned_ham_open_bad.name=Buka Ham Kalengan Kualitas Buruk
+item.mcpe:canned_peaches_open_bad.name=Buka Buah persik manis Kalengan Kualitas Buruk
+item.mcpe:canned_ration_open_bad.name=Buka Ransum lapangan Kalengan Kualitas Buruk
+item.mcpe:canned_sardine_open_bad.name=Buka Sarden Kalengan Kualitas Buruk
+item.mcpe:canned_spaghetti_open_bad.name=Buka Spagheti bolognese Kalengan Kualitas Buruk
+item.mcpe:canned_tomato_open_bad.name=Buka Sup tomat Kalengan Kualitas Buruk
+item.mcpe:canned_tuna_open_bad.name=Buka tuna Kalengan Kualitas Buruk
+
+
+item.mcpe:beer_bottle.name=Botol bir
+item.mcpe:bottle_water_bleach.name=Botol air
+item.mcpe:bottle_water_unpure.name=Botol air tidak murni
+item.mcpe:bottle_water.name=Botol air
+item.mcpe:coffee.name=Kopi
+item.mcpe:energy_drink.name=Minuman berenergi
+item.mcpe:exp_coke.name=EXP coke
+item.mcpe:grape_soda.name=Soda anggur
+item.mcpe:lemonade.name=Lemonade
+item.mcpe:milk_gallon.name=Susu gallon
+item.mcpe:popsi_cola.name=PoPsi cola
+item.mcpe:pot_cook_water.name=Pot air matang
+item.mcpe:pot_water.name=Pot air tidak matang
+item.mcpe:red_wine.name=Anggur merah
+item.mcpe:vodka.name=Vodka
+item.mcpe:whiskey.name=Whiskey
+
+## ammo
+item.mcpe:ammo_7_62x39mm.name=Kotak amunisi 7.62x39mm
+item.mcpe:ammo_5_45x39mm.name=Kotak amunisi 5.45x39mm
+item.mcpe:ammo_5_56x45mm.name=Kotak amunisi 5.56x45mm
+item.mcpe:ammo_7_62x51mm.name=Kotak amunisi 7.62x51mm
+item.mcpe:ammo_7_62x54mmr.name=Kotak amunisi 7.62x54mmR
+item.mcpe:ammo_9x39mm.name=Kotak amunisi 9x39mm
+item.mcpe:ammo_9x19mm.name=Kotak amunisi 9x19mm
+item.mcpe:ammo_9x18mm.name=Kotak amunisi 9x18mm
+item.mcpe:ammo_12gauge.name=Kotak amunisi 12 gauge
+item.mcpe:ammo_40mm.name=Kotak amunisi 40mm
+item.mcpe:ammo_44magnum.name=Kotak amunisi .44 magnum
+item.mcpe:ammo_357magnum.name=Kotak amunisi .357 magnum
+item.mcpe:ammo_45acp.name=Kotak amunisi .45 ACP
+item.mcpe:ammo_32acp.name=Kotak amunisi .32 ACP
+
+## grenade
+item.mcpe:frag_grenade.name=Granat frag
+item.mcpe:smoke_grenade.name=Granat asap
+item.mcpe:flash_grenade.name=Granat flash
+item.mcpe:c4_explosive.name=Peledak C-4
+item.mcpe:pipe_bomb.name=Bom pipa
+item.mcpe:nerve_grenade.name=Granat asap beracun
+
+## armor/clothes
+item.mcpe:assault_vest_black.name=Rompi penyerang hitam
+item.mcpe:assault_vest_olive.name=Rompi penyerang hijau
+item.mcpe:biker_vest.name=Rompi pengendara motor
+item.mcpe:biker_vest_skull.name=Rompi tengkorak pengendara motor
+item.mcpe:chest_navy.name=Rig dada navy
+item.mcpe:chest_tan.name=Rig dada tan
+item.mcpe:chest_green.name=Rig dada hijau
+item.mcpe:chest_white.name=Rig dada putih
+item.mcpe:chest_brown.name=Rig dada coklat
+item.mcpe:combat_olive.name=Rompi tempur hijau
+item.mcpe:combat_white.name=Rompi tempur putih
+item.mcpe:combat_tan.name=Rompi tempur tan
+item.mcpe:hunting_brown.name=Rompi berburu coklat
+item.mcpe:hunting_navy.name=Rompi berburu Angkatan Laut 
+item.mcpe:plate_vest_gray.name=Rompi piring abu-abu
+item.mcpe:plate_vest_white.name=Rompi piring putih
+item.mcpe:plate_vest_olive.name=Rompi piring hijau
+item.mcpe:plate_vest_tan.name=Rompi piring coklat pucat
+item.mcpe:police_vest.name=Rompi polisi
+item.mcpe:press_vest.name=Rompi wartawan
+item.mcpe:reflective_lime.name=Rompi refleksi hijau
+item.mcpe:reflective_orange.name=Rompi refleksi oren
+item.mcpe:reflective_yellow.name=Rompi refleksi kuning
+item.mcpe:stab_vest_gray.name=Rompi tusuk abu-abu
+item.mcpe:stab_vest_tan.name=Rompi tusuk tan
+item.mcpe:stab_vest_white.name=Rompi tusuk putih
+item.mcpe:tactical_vest_black.name=Rompi taktis hitam
+item.mcpe:tactical_vest_white.name=Rompi taktis putih
+item.mcpe:tactical_vest_tan.name=Rompi taktis tan
+item.mcpe:tactical_vest_olive.name=Rompi taktis hijau
+item.mcpe:webbing_brown.name=Rompi anyaman coklat
+item.mcpe:webbing_black.name=Rompi anyaman hitam
+item.mcpe:webbing_tan.name=Rompi anyaman tan
+item.mcpe:webbing_green.name=Rompi anyaman hijau
+item.mcpe:webbing_white.name=Rompi anyaman putih
+
+
+item.mcpe:army_artic.name=Helm pasukan artik
+item.mcpe:army_desert.name=Helm pasukan gurun
+item.mcpe:army_woodland.name=Helm pasukan hutan
+item.mcpe:assault_helmet_black.name=Helm penyerang hitam
+item.mcpe:assault_helmet_olive.name=Helm penyerang hijau
+item.mcpe:balaclava_black.name=Masker balaclava hitam
+item.mcpe:ballistic_black.name=Helm balistik hitam
+item.mcpe:ballistic_green.name=Helm balistik hijau
+item.mcpe:ballistic_Tan.name=Helm balistik tan
+item.mcpe:ballistic_white.name=Helm balistik putih
+item.mcpe:bandana_blue.name=Masker bandana biru
+item.mcpe:bandana_green.name=Masker bandana hijau
+item.mcpe:bandana_red.name=Masker bandana merah
+item.mcpe:beanie_black.name=Beanie hitam
+item.mcpe:beanie_brown.name=Beanie coklat
+item.mcpe:beanie_white.name=Beanie putih
+item.mcpe:beanie_olive.name=Beanie hijau
+item.mcpe:beret_red.name=Baret merah
+item.mcpe:beret_green.name=Baret hijau
+item.mcpe:beret_blue.name=Baret biru
+item.mcpe:biker_black.name=Helm motor hitam
+item.mcpe:biker_white.name=Helm motor putih
+item.mcpe:biker_yellow.name=Helm motor kuning
+item.mcpe:biker_red.name=Helm motor merah
+item.mcpe:biker_green.name=Helm motor hijau
+item.mcpe:biker_blue.name=Helm motor biru
+item.mcpe:boonie_artic.name=Topi boonie camo artik
+item.mcpe:boonie_woodland.name=Topi boonie camo hutan
+item.mcpe:boonie_desert.name=Topi boonie camo gurun
+item.mcpe:boonie_black.name=Topi boonie hitam
+item.mcpe:boonie_green.name=Topi boonie hijau
+item.mcpe:boonie_white.name=Topi boonie putih
+item.mcpe:boonie_tan.name=Topi boonie coklat pucat
+item.mcpe:cap_black.name=Topi hitam
+item.mcpe:cap_green.name=Topi hijau
+item.mcpe:cap_blue.name=Topi biru
+item.mcpe:cap_red.name=Topi merah
+item.mcpe:clown_wig.name=Wig badut
+item.mcpe:cowboy_brown.name=Topi cowboy coklat
+item.mcpe:cowboy_black.name=Topi cowboy hitam
+item.mcpe:cowboy_white.name=Topi cowboy putih
+item.mcpe:durag_black.name=Durag hitam
+item.mcpe:durag_brown.name=Durag coklat
+item.mcpe:firefighter_hat.name=Topi pemadam kebakaran
+item.mcpe:flat_black.name=Topi pet hitam
+item.mcpe:flat_brown.name=Topi pet coklat
+item.mcpe:gasmask_black.name=Masker gas hitam
+item.mcpe:gasmask_white.name=Masker gas putih
+item.mcpe:gasmask_tactical.name=Masker gas taktis
+item.mcpe:great_helmet.name=helm Templar
+item.mcpe:hard_blue.name=Topi keras biru
+item.mcpe:hard_red.name=Topi keras merah
+item.mcpe:hard_yellow.name=Topi keras kuning
+item.mcpe:hard_white.name=Topi keras putih
+item.mcpe:hard_orange.name=Topi keras oranye
+item.mcpe:headlamp.name=Lampu kepala
+item.mcpe:hunting_hat.name=Topi berburu
+item.mcpe:maid_bonnet.name=topi pembantu
+item.mcpe:mask_fawkes.name=Topeng fawkes
+item.mcpe:mask_funni.name=Topeng lawak
+item.mcpe:mask_troll.name=Topeng troll
+item.mcpe:night_goggles.name=Teropong visi malam
+item.mcpe:peaked_green.name=Topi dinas hijau
+item.mcpe:peaked_white.name=topi dinas putih
+item.mcpe:peaked_tan.name=topi dinas tan
+item.mcpe:plague_hat.name=Topi dokter wabah
+item.mcpe:police_hat.name=Topi polisi
+item.mcpe:police_riot.name=helm anti huru hara polisi
+item.mcpe:respirator_mask.name=masker pernafasan
+item.mcpe:shemagh_blue.name=Shemagh biru
+item.mcpe:shemagh_red.name=Shemagh merah
+item.mcpe:shemagh_tan.name=Shemagh tan
+item.mcpe:shemagh_brown.name=Shemagh coklat
+item.mcpe:shemagh_black.name=Shemagh hitam
+item.mcpe:shemagh_olive.name=Shemagh hijau
+item.mcpe:shemagh_gray.name=Shemagh abu-abu
+item.mcpe:skimask_black.name=Topeng ski hitam
+item.mcpe:spec_helmet.name=Helm operasi khusus
+item.mcpe:tactical_helmet_black.name=Helm taktis hitam
+item.mcpe:tactical_helmet_tan.name=Helm taktis tan
+item.mcpe:tactical_helmet_white.name=Helm taktis white
+item.mcpe:tactical_helmet_olive.name=Helm taktis hijau
+item.mcpe:ushanka.name=Ushanka
+item.mcpe:un_helmet.name=helm PBB
+item.mcpe:welder_mask.name=topeng tukang las
+
+item.mcpe:bdu_artic_bottom.name=Celana BDU arktik
+item.mcpe:bdu_desert_bottom.name=Celana BDU gurun
+item.mcpe:bdu_woodland_bottom.name=Celana BDU hutan
+item.mcpe:cargo_black.name=Celana kargo hitam
+item.mcpe:cargo_brown.name=Celana kargo brown
+item.mcpe:cargo_tan.name=Celana kargo tan
+item.mcpe:cargo_white.name=Celana kargo putih
+item.mcpe:cargo_green.name=Celana kargo hijsu
+item.mcpe:chainmail_bottom.name=Celana chainmail
+item.mcpe:clown_bottom.name=Celana badut
+item.mcpe:firefighter_bottom.name=Celana pemadam kebakaran
+item.mcpe:ghillie_drygrass_bottom.name=Celana ghillie rumput kering
+item.mcpe:ghillie_forest_bottom.name=Celana ghillie hutan
+item.mcpe:ghillie_snow_bottom.name=Celana ghillie salju
+item.mcpe:hazmat_white_bottom.name=Celana hazmat putih
+item.mcpe:hazmat_yellow_bottom.name=Celana hazmat kuning
+item.mcpe:jean_black.name=Jeans hitam
+item.mcpe:jean_blue.name=Jeans biru
+item.mcpe:jean_brown.name=Jeans coklat
+item.mcpe:jean_light.name=Jeans terang
+item.mcpe:khaki_light.name=Celana khaki tersng
+item.mcpe:maid_bottom.name=Bawahan pembantu
+item.mcpe:overall_black.name=Celana terusan hitam
+item.mcpe:overall_brown.name=Celana terusan coklat
+item.mcpe:overall_blue.name=Celana terusan biru
+item.mcpe:paramedic_bottom.name=Celana paramedis
+item.mcpe:plague_bottom.name=Bawahan dokter wabah
+item.mcpe:police_special_bottom.name=Celana pasukan khusus polisi
+item.mcpe:police_bottom.name=Celana polisi
+item.mcpe:prisoner_bottom.name=Celana tahanan
+item.mcpe:suit_bottom_black.name=Celana setelan hitam
+item.mcpe:special_bottom.name=Celana operasi spesial
+item.mcpe:suspender_black.name=Celana suspender hitam
+item.mcpe:trackpants_black.name=Celana olahraga hitam
+item.mcpe:trackpants_blue.name=Celana olahraga biru
+item.mcpe:trackpants_red.name=Celana olahraga merah
+
+item.mcpe:bdu_artic_top.name=Seragam arktik BDU
+item.mcpe:bdu_desert_top.name=Seragam gurun BDU
+item.mcpe:bdu_woodland_top.name=Seragam woodland BDU
+item.mcpe:chainmail_top.name=Atasan Chainmail
+item.mcpe:clown_top.name=Setelan badut
+item.mcpe:crusader_top.name=Atasan Tentara Salib
+item.mcpe:firefighter_top.name=Jaket pemadam kebapakran
+item.mcpe:flannel_red.name=Kemeja flanel merah
+item.mcpe:flannel_green.name=Kemeja flanel hijau
+item.mcpe:flannel_blue.name=Kemeja flanel biru
+item.mcpe:flannel_white.name=Kemeja flanel putih
+item.mcpe:flannel_gray.name=Kemeja flanel abu-abu
+item.mcpe:ghillie_drygrass_top.name=Jubah ghillie rumput kering
+item.mcpe:ghillie_forest_top.name=Jubah ghillie hutan
+item.mcpe:ghillie_snow_top.name=Jubah ghillie salju
+item.mcpe:gorka_top.name=Seragam Gorka
+item.mcpe:hawaiian_black.name=Kemeja hawaii hitam
+item.mcpe:hawaiian_red.name=Kemeja hawaii merah
+item.mcpe:hazmat_white_top.name=Baju hazmat putih
+item.mcpe:hazmat_yellow_top.name=Baju hazmat suit
+item.mcpe:hero_flannel.name=Kemeja flanel pahlawan
+item.mcpe:hiking_black.name=Jaket hiking hitam
+item.mcpe:hiking_blue.name=Jaket hiking biru
+item.mcpe:hoodie_black.name=hoodie hitam
+item.mcpe:hoodie_blue.name=Hoodie biru
+item.mcpe:hoodie_green.name=Hoodie hijau
+item.mcpe:hoodie_red.name=Hoodie mersh
+item.mcpe:hoodie_yellow.name=Hoodie kuning
+item.mcpe:hoodie_white.name=Hoodie putih
+item.mcpe:leather_black.name=Jaket kulit hitam
+item.mcpe:leather_brown.name=Jaket kulit coklat
+item.mcpe:maid_top.name=Gaun pelayan
+item.mcpe:paramedic_top.name=Jaket paramedis
+item.mcpe:plague_top.name=Atasan dokter wabah
+item.mcpe:plaid_red.name=Kemeja kotak-kotak merah
+item.mcpe:plaid_blue.name=Kemeja kotak-kotak biru
+item.mcpe:plaid_olive.name=Kemeja kotak-kotak hijau
+item.mcpe:plaid_white.name=Kemeja kotak-kotak putih
+item.mcpe:plaid_gray.name=Kemeja kotak-kotak abu-abu
+item.mcpe:plaid_tan.name=Kemeja kotak-kotak tan
+item.mcpe:police_special_top.name=Jaket pasukan khusus polisi
+item.mcpe:police_top.name=Seragam polisi
+item.mcpe:prisoner_top.name=Jaket tahanan
+item.mcpe:puffer_blue.name=Jaket puffer biru
+item.mcpe:puffer_black.name=Jaket puffer hitam
+item.mcpe:special_top.name=Seragam operasi khusus
+item.mcpe:striped_blue.name=Kemeja kancing bergaris biru
+item.mcpe:striped_white.name=Kemeja kancing bergaris putih
+item.mcpe:stripeds_black.name=baju lengan panjang bergaris hitam
+item.mcpe:suede_brown.name=Jaket suede coklat
+item.mcpe:suit_black.name=Jas hitam
+item.mcpe:sweater_white.name=Sweter putih
+item.mcpe:sweater_green.name=Sweter hijau
+item.mcpe:tactical_tan.name=Sweter taktis tan
+item.mcpe:tactical_green.name=Sweter taktis hijau
+item.mcpe:tactical_navy.name=Sweter taktis angkatan laut
+item.mcpe:tactical_red.name=Sweter taktis merah
+item.mcpe:tactical_white.name=Sweater taktis putih
+item.mcpe:tracksuit_black.name=Baju olahraga hitam
+item.mcpe:tracksuit_blue.name=Baju olahraga biru
+item.mcpe:tracksuit_red.name=Baju olahraga merah
+item.mcpe:tshirt_black.name=kaos hitam
+item.mcpe:tshirt_blue.name=kaos biru
+item.mcpe:tshirt_red.name=kaos merah
+item.mcpe:tshirt_green.name=kaos hijau
+item.mcpe:tshirt_white.name=kaos putih
+item.mcpe:tshirt_yellow.name=kaos kuning
+item.mcpe:varsity_blue.name=Jaket varsity biru
+item.mcpe:varsity_green.name=Jaket varsity hijau
+item.mcpe:varsity_red.name=Jaket varsity merah
+item.mcpe:varsity_brown.name=Jaket varsity coklat
+
+## backpack
+item.mcpe:improvised_bag.name=Tas improvisasi
+item.mcpe:school_blue_backpack.name=Ransel sekolah biru
+item.mcpe:school_green_backpack.name=Ransel sekolah hijau
+item.mcpe:school_red_backpack.name=Ransel sekolah berwarna merah
+item.mcpe:taloon_yellow_backpack.name=Ransel taloon kuning
+item.mcpe:taloon_blue_backpack.name=Ransel taloon biru
+item.mcpe:taloon_green_backpack.name=Ransel taloon hijau
+item.mcpe:taloon_red_backpack.name=Ransel taloon merah
+
+## loot
+tile.mcpe:civilian_loot.name=Kotak kardus (Kotak jarahan warga)
+tile.mcpe:construction_loot.name=Kotak peralatan (Kotak jarahan kontruksi)
+tile.mcpe:firefighter_loot.name=Kotak pemadam (Kotak jarahan pemadam kebakaran)
+tile.mcpe:food_loot.name=Peti makanan (Kotak jarahan makanan)
+tile.mcpe:medical_loot.name=Kotak medis (Kotak jarahan medis)
+tile.mcpe:artic_loot.name=Kotak putih (Kotak jarahan militer artik)
+tile.mcpe:desert_loot.name=Kotak tan (Kotak jarahan militer gurun)
+tile.mcpe:woodland_loot.name=Kotak hijau (Kotak jarahan militer hutan)
+tile.mcpe:medieval_loot.name=Kotak antik (Kotak jarahan medival)
+tile.mcpe:police_loot.name=Kotak senjata (Kotak jarahan polisi) 
+tile.mcpe:rare_loot.name=Kotak surplus (Kotak jarahan langka)
+tile.mcpe:supply_block.name=Kotak suplai
+
+## misc
+tile.mcpe:barbed_wires.name=Kumparan kawat berduri
+tile.mcpe:landmine.name=Ranjau
+tile.mcpe:nail_trap.name=Perangkap paku diimprovisasi
+tile.mcpe:fumo.name=NZ plushie di kepala lu aseli
+tile.mcpe:radio.name=Radio
+tile.mcpe:radio_ham.name=Radio HAM
+tile.mcpe:wheat.name=Gandum
+tile.mcpe:wood_stake.name=Penghalang pancang kayu
+tile.mcpe:spawner_military.name=Pemuncul Militer
+tile.mcpe:spawner_civilian.name=Pemuncul Warga
+tile.mcpe:spawner_scavenger.name=Pemuncul Scavenger
+tile.mcpe:spawner_marauder.name=Pemuncul Marauder
+tile.mcpe:server_button.name=Tombol server
+tile.mcpe:server_button_delay.name=Penundaan Tombol server
+tile.mcpe:bear_trap_close.name=Perangkap beruang tertutup
+tile.mcpe:bear_trap_open.name=Perangkap beruang terbuka
+
+## barrel
+tile.mcpe:barrel_blue.name=Barel biru
+tile.mcpe:barrel_explosive.name=Barel peledak
+tile.mcpe:barrel_green.name=Barel hijau
+tile.mcpe:barrel_red.name=Barel merah
+tile.mcpe:barrel_yellow.name=Barel kuning
+
+## display_rack
+tile.mcpe:display_rack_middle_bottom.name=Rak display paling bawah
+tile.mcpe:display_rack_middle_top.name=Rak display bagian atas
+tile.mcpe:display_rack_side_bottom.name=Rak display sisi bawah
+tile.mcpe:display_rack_side_top.name=Rak display sisi atas
+
+## flag
+tile.mcpe:flag_fvla.name=Bendera FVLA
+tile.mcpe:flag_nekoi.name=Bendera Neko
+tile.mcpe:flag_vostrovia.name=Bendera Vostrovia
+
+## folding_chair
+tile.mcpe:folding_chair_blue.name=Kursi lipat biru
+tile.mcpe:folding_chair_brown.name=Kursi lipat coklat
+tile.mcpe:folding_chair_green.name=Kursi lipat hijau
+tile.mcpe:folding_chair_red.name=Kursi lipat merah
+
+## hesco
+tile.mcpe:hesco_olive.name=benteng Hesco hijau
+tile.mcpe:hesco_tan.name=Benteng hesco tan
+tile.mcpe:hesco_white.name=Benteng hesco putih
+
+## light
+tile.mcpe:ceiling_light_broken.name=Lampu langit-langit rusak
+tile.mcpe:ceiling_light.name=Lampu langit-langit
+tile.mcpe:exit_sign.name=Tanda Keluar
+tile.mcpe:worklight.name=lampu kerja
+
+## monobloc
+tile.mcpe:monobloc_black.name=Kursi monoblok hitam
+tile.mcpe:monobloc_blue.name=Kursi monoblok biru
+tile.mcpe:monobloc_green.name=Kursi monoblok hijau
+tile.mcpe:monobloc_red.name=Kursi monoblok merah
+tile.mcpe:monobloc_tan.name=Kursi monoblok coklat pucat
+tile.mcpe:monobloc_white.name=Kursi monoblok putih
+tile.mcpe:monobloc_yellow.name=Kursi monoblok kuning
+
+## office_chair
+tile.mcpe:office_chair_black.name=Kursi kantor hitam
+tile.mcpe:office_chair_blue.name=Kursi kantor biru
+tile.mcpe:office_chair_brown.name=Kursi kantor coklat
+tile.mcpe:office_chair_green.name=Kursi kantor hijau
+tile.mcpe:office_chair_red.name=Kursi kantor merah
+tile.mcpe:office_chair_white.name=Kursi kantor putih
+
+## plastic_table
+tile.mcpe:plastic_black.name=Meja plastik hitam
+tile.mcpe:plastic_blue.name=Meja plastik biru
+tile.mcpe:plastic_green.name=Meja plastik hijau
+tile.mcpe:plastic_red.name=Meja plastik merah
+tile.mcpe:plastic_tan.name=Meja plastik coklat pucat
+tile.mcpe:plastic_white.name=Meja plastik putih
+tile.mcpe:plastic_yellow.name=Meja plastik kuning
+
+## road_barrier
+tile.mcpe:barrier_wall.name=Dinding penghalang
+tile.mcpe:caution_barrier_wall.name=Dinding penghalang hati-hati
+tile.mcpe:caution_road_barrier.name=Penghalang jalan peringatan
+tile.mcpe:road_barrier.name=Penghalang jalan
+
+## sandbag
+tile.mcpe:sandbag_corner_olive.name=Karung pasir hijau samping
+tile.mcpe:sandbag_corner_tan.name=Karung pasir coklat pucat samping
+tile.mcpe:sandbag_corner_white.name=Karung pasir putih samping
+tile.mcpe:sandbag_olive.name=Karung pasir hijau
+tile.mcpe:sandbag_tan.name=Karung pasir coklat pucat
+tile.mcpe:sandbag_white.name=Karung pasir putih 
+
+## sign
+tile.mcpe:traffic_becareful.name=Rambu lalu lintas tanda Hati-hati
+tile.mcpe:traffic_intersection.name=Rambu lalu lintas tanda persimpangan
+tile.mcpe:traffic_no_entry.name=Rambu lalu lintas tanda dilarang masuk
+tile.mcpe:traffic_no_parking.name=Rambu lalu lintas tanda dilarang Parkir
+tile.mcpe:traffic_parking.name=Rambu lalu lintas tanda parkir
+tile.mcpe:traffic_question.name=Rambu lalu lintas ???
+tile.mcpe:traffic_section_left.name=Rambu lalu lintas tanda bagian kiri
+tile.mcpe:traffic_section_right.name=Rambu lalu lintas bagian kanan
+tile.mcpe:traffic_stop.name=Rambu lalu lintas tanda berhenti
+tile.mcpe:traffic_turn_left.name=Rambu lalu lintas belok kiri
+tile.mcpe:traffic_turn_right.name=Rambu lalu lintas belok kanan
+tile.mcpe:traffic_rod.name=Batang lalu lintas
+
+## street_bench
+tile.mcpe:street_bench_blue.name=Bangku jalanan biru
+tile.mcpe:street_bench_green.name=Bangku jalanan hijau
+tile.mcpe:street_bench_red.name=Bangku jalanan merah
+tile.mcpe:street_bench_white.name=Bangku jalanan berwarna putih
+
+## table_cloth
+tile.mcpe:table_cloth_black.name=Meja dengan taplak hitam
+tile.mcpe:table_cloth_blue.name=Meja dengan taplak biru
+tile.mcpe:table_cloth_green.name=Meja dengan taplak hijau
+tile.mcpe:table_cloth_red.name=Meja dengan taplak merah
+
+## variant
+tile.mcpe:graffiti.name=Graffiti
+tile.mcpe:metal_rack.name=Rak besi
+tile.mcpe:papers.name=Kertas
+
+## water_pump
+tile.mcpe:water_pump.name=Pompa air
+tile.mcpe:water_pump_emp.name=Pompa air kosong
+
+## more furniture
+tile.mcpe:crowd_fence.name=Pagar kerumunan
+tile.mcpe:construction_barrier.name=Penghalang konstruksi
+tile.mcpe:microwave.name=Microwave
+tile.mcpe:monitor.name=Monitor
+tile.mcpe:monitor_keyboard.name=Monitor dengan keyboard
+tile.mcpe:reloading_table.name=Meja reloading
+tile.mcpe:sink.name=Wastafel
+tile.mcpe:toilet.name=Toilet
+tile.mcpe:traffic_cone.name=Kerucut lalu lintas
+tile.mcpe:trash_bin.name=Tempat sampah
+tile.mcpe:trash_can.name=Tong sampah
+tile.mcpe:tv.name=Televisi
+tile.mcpe:tv_old.name=Televisi tua
+tile.mcpe:wood_barrier.name=Penghalang papan kayu
+tile.mcpe:wood_chair.name=Kursi kayu
+tile.mcpe:wood_table.name=Meja kayu
+
+## more block
+tile.mcpe:bath_tiles.name=Ubin kamar mandi
+tile.mcpe:brick_big.name=Block bata besar
+tile.mcpe:caution_block.name=Blok peringatan
+tile.mcpe:corrugated_metal.name=Blok logam bergelombang
+tile.mcpe:corrugated_metal_rusty.name=Blok logam bergelombang berkarat
+tile.mcpe:crate.name=blok peti
+tile.mcpe:farm_block.name=Blok pertanian
+tile.mcpe:filing_cabinet.name=Lemari arsip
+tile.mcpe:hazard_block.name=Blok hazard
+tile.mcpe:military_wall.name=Dinding militer
+tile.mcpe:smooth_stone_brick.name=Batu bata halus
+tile.mcpe:tiles_bnw.name=Ubin kotak-kotak hitam
+tile.mcpe:tiles_white.name=Ubin putih
+tile.mcpe:trace_plate.name=Blok pelat jejak
+tile.mcpe:washing_machine.name=Mesin cuci

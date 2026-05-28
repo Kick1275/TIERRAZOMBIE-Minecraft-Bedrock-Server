@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "ranzie:spawner",
+			"population_control": "monster"
+		},
+		"conditions": [{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+          "min": 8,
+          "max": 15,
+          "adjust_for_weather": true
+        },
+
+        "minecraft:difficulty_filter": {
+          "min": "easy",
+          "max": "hard"
+        },
+
+        "minecraft:weight": {
+          "default": 10
+        },
+
+        "minecraft:density_limit": {
+          "surface": 3
+        },
+"minecraft:spawns_on_block_filter": ["sand", "grass_block", "dirt", "coarse_dirt", "podzol"],
+        "minecraft:herd": {
+          "min_size": 1,
+          "max_size": 2
+        }
+			}
+		]
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.deagle.shoot": {
+      "loop": false,
+      "animation_length": 0.2,
+      "timeline": {}
+    }
+  }
+}

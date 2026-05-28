@@ -1,0 +1,34 @@
+//bridge-file-version: #188
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pg117destroyed.smoke": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"alive": "query.is_alive"
+						}
+					]
+				},
+				"alive": {
+					"transitions": [
+						{
+							"default": "!query.is_alive"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "engine",
+							"locator": "smoke"
+						},
+						{
+							"effect": "flame",
+							"locator": "smoke"
+						}
+					]
+				}
+			}
+		}
+	}
+}

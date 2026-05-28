@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dz:extraction_machine",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/extraction_machine"
+      },
+      "geometry": {
+        "default": "geometry.ExtraccionPc"
+      },
+      "render_controllers": [
+        "controller.render.extraction_machine"
+      ],
+      "enable_attachables": false
+    }
+  }
+}

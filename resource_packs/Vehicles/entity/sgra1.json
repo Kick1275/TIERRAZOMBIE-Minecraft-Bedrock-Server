@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:sgra1",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/sgra1"
+			},
+			"geometry": {
+				"default": "geometry.sgra1"
+			},
+			"render_controllers": [
+				"controller.render.sgra1"
+			],
+			"spawn_egg": {
+				"texture": "af_sgra1_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"look": "animation.sentry.look"
+			},
+			"scripts": {
+				"animate": [
+					"look"
+				]
+			}
+		}
+	}
+}

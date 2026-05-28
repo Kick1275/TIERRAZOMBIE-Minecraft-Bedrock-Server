@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.t50": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='t50' && q.is_using_item) || query.get_equipped_item_name=='t50_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s t50 8",
+            "@s[hasitem={item=krep:t50, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "t50.30": "query.get_equipped_item_name=='t50' && query.is_using_item && query.scoreboard('t50') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "t50.31": "query.get_equipped_item_name=='t50' && query.is_using_item && query.scoreboard('t50') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function t50"
+          ]
+        },
+        "t50.31": {
+          "animations": [
+            "t50shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={t50=0}] slot.weapon.mainhand 1 krep:t50_emp 1 0"
+          ]
+        },
+        "t50.30": {
+          "animations": [
+            "t50shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:t50_fire",
+            "/scoreboard players remove @s[scores={t50=1..9}] t50 1",
+            "/scoreboard players set @s[scores={t50=10..}] t50 9",
+            "/playsound t50.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={t50=0}] slot.weapon.mainhand 1 krep:t50_emp 1 0",
+            "/title @s[scores={t50=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.cp": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='cp' && q.is_using_item) || query.get_equipped_item_name=='cp_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s cp 6",
+            "@s[hasitem={item=krep:cp, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "cp.30": "query.get_equipped_item_name=='cp' && query.is_using_item && query.scoreboard('cp') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "cp.31": "query.get_equipped_item_name=='cp' && query.is_using_item && query.scoreboard('cp') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function cp"
+          ]
+        },
+        "cp.31": {
+          "animations": [
+            "cpshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={cp=0}] slot.weapon.mainhand 1 krep:cp_emp 1 0"
+          ]
+        },
+        "cp.30": {
+          "animations": [
+            "cpshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:cp_fire",
+            "/scoreboard players remove @s[scores={cp=1..7}] cp 1",
+            "/scoreboard players set @s[scores={cp=7..}] cp 6",
+            "/playsound cp.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={cp=0}] slot.weapon.mainhand 1 krep:cp_emp 1 0",
+            "/title @s[scores={cp=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

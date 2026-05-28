@@ -1,0 +1,744 @@
+## fr — traduit par Capitaine_steeve78 
+## en — Translated by Captain_steeve78
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## You can translate from here
+## welcome message
+game.message.welcome_dz=Bienvenue sur Dead§4Z§rone
+game.message.deadzone_1=§eTapez §r§o!avatar§e pour créer ou réinitialiser votre avatar
+game.message.deadzone_2= §eTapez §r§o!statut§e pour voir votre statut de progression
+
+## death message
+death.attack.bullet.head=%1$s a été abattu dans la tête par %2$s
+death.attack.bullet=%1$s a été abattu par %2$s
+
+## cc
+cc.random_avatar.gui=Avatar aléatoire 
+cc.default_skin.gui=Skin par défaut 
+cc.skin.gui=Skin
+cc.hair.gui= Cheveux
+cc.eye.gui= Yeux
+cc.gender.gui=genre
+cc.glove.gui= Gants
+cc.message.default_skin= Êtes-vous sûr de vouloir utiliser le skin par défaut ?
+cc.message.warning= Veuillez sélectionner votre genre avant de sélectionner d'autres attributs
+cc.message.warning_eye_first=Désolé, vous ne pouvez pas utiliser les yeux féminins
+cc.message.warning_eye_second=Désolé, vous ne pouvez pas utiliser les yeux masculins
+
+## config
+config.title=Paramètres DeadZone
+config.despawn_time=Définir Temps de Disparition des Corps (Minutes)
+config.max_corpse=Définir Nombre de Corps Maximum
+config.allow_corpse_creation=Autoriser la Création de Corps
+config.reset_statu_on_death=Réinitialise le Status à la Mort
+config.hardcore_infected_mode=Activer le Mode Infecté Hardcore
+
+## horde config
+horde.config.title=Paramètres de Horde
+horde.config.enable_horde=Activer le Système de Horde
+horde.config.spawn_chance=Chance d'Apparition de Horde (Pourcentage)
+horde.config.min_Interval=Intervalle Min de Horde (Minutes)
+horde.config.max_Interval=Intervalle Max de Horde (Minutes)
+horde.config.min_distance=Distance Min de Horde (Blocs)
+horde.config.size_group=Taille de la Horde (Nombre d'Infecté)
+horde.config.civilian_spawn_chance=Chance d'Apparition de Civil (Pourcentage)
+horde.config.screamer_spawn_chance=Chance d'Apparition d'Hurleur (Pourcentage)
+
+## status
+statu.player_name=Nom
+statu.player_killed=Joueur tué
+statu.infected_killed=Infecté tué
+statu.time_playing=Temps de jeu
+statu.time_survived=Le temps a survécu
+statu.kill_distance=La plus longue distance de mise à mort
+
+## action
+action.interact.cut= Obtenir du steak
+action.interact.bury= enterrer le cadavre
+action.hint.exit.mcpe:sedan= Sauter/s'accroupir pour sortir du véhicule
+action.hint.exit.mcpe:humvee= Sauter/s'accroupir pour sortir du véhicule
+action.hint.exit.mcpe:motor= Sauter/s'accroupir pour sortir du véhicule
+
+## game message
+game.message.blood_test=§a Votre groupe sanguin est
+game.message.corpse_despawn_time= L'heure de disparition du cadavre est réglée sur
+game.message.reset_statu_on_death=Afficher l'état en mode créatif
+game.message.show_statu=Réinitialiser Le Statut En Cas De Décès
+game.message.warning_blood_type=§cVous ne connaissez pas encore votre groupe sanguin.
+game.message.warning_overdose_first=§cJe ne me sens pas bien...
+game.message.warning_overdose_second=§cJe suis en sur doses...
+game.message.blood_type_first=§aVotre groupe sanguin est A.
+game.message.blood_type_second=§aVotre groupe sanguin est AB.
+game.message.blood_type_third=§aVotre groupe sanguin est B.
+game.message.blood_type_fourth=§aVotre groupe sanguin est O.
+game.message.blood_transfer=Transfusion de sang terminée.
+game.message.bleeding_warning=§cJe saigne.
+game.message.broken_bone_warning=§c Ma jambe est cassée.
+game.message.temperature_warning_first=Je brûle.
+game.message.temperature_warning_second=Je suis en train de geler.
+game.message.warning_lockpick=§4Vous avez besoin d'un crochet pour ouvrir cette boîte excédentaire.
+game.message.lockpick_broken=§cVotre crochet est cassé !
+game.message.lockpick_attempt=§c La tentative de crochetage a échoué !
+game.message.unsupport_warning=Cet article n'est pas pris en charge. Veuillez cliquer sur l'écran/clic droit pour ramener l'article
+game.message.blood_type=Votre groupe sanguin est
+
+## spawn egg
+item.spawn_egg.entity.mcpe:civilian.name=Oeuf d’apparition de civil Infecté
+item.spawn_egg.entity.mcpe:military.name=Oeuf d’apparition de Militaire infecté
+item.spawn_egg.entity.mcpe:hazmat.name=Oeuf d’apparition de Hazmat infecté
+item.spawn_egg.entity.mcpe:militia.name=Oeuf d’apparition d’Armée de la milice infectée
+item.spawn_egg.entity.mcpe:screamer.name=Oeuf d’apparition de Screamer infecté
+item.spawn_egg.entity.mcpe:commander.name=Oeuf d’apparition de Commandant infecté
+item.spawn_egg.entity.mcpe:sedan.name=Oeuf d’apparition de Berline
+item.spawn_egg.entity.mcpe:motor.name=Oeuf d’apparition de Moto
+item.spawn_egg.entity.mcpe:humvee.name=Oeuf d’apparition de Humvee
+
+item.spawn_egg.entity.mcpe:marauder.name=Oeuf d’apparition de Groupe de survivants de maraudeurs
+item.spawn_egg.entity.mcpe:scavenger.name=Oeuf d’apparition de Groupe de survivants Scavenger
+
+## entity
+entity.mcpe:civilian.name=Civil Infecté
+entity.mcpe:military.name=Militaire infecté
+entity.mcpe:hazmat.name=Hazmat infecté
+entity.mcpe:commander.name=Commandant militaire infecté
+entity.mcpe:militia.name=Milice infectée
+
+entity.mcpe:marauder.name=Marauder
+entity.mcpe:scavenger.name=Scavenger
+
+entity.unknown.name=Butin
+
+## item
+item.mcpe:vending_popsi_icon.name=Distributeur automatique de Popsi
+item.mcpe:vending_exp_icon.name=Distributeur automatique de EXP-coke
+item.mcpe:vending_sprot_icon.name=Distributeur automatique Sprot 
+item.mcpe:slack_black.name=Pantalon mou noir
+item.mcpe:plastic_explosive.name=Plastique explosif 
+item.mcpe:electric_scrap.name=Ferraille électrique
+item.mcpe:baseball_bat.name=Batte de baseball
+item.mcpe:barbedwire_bat.name=Batte de baseball barbelé
+item.mcpe:cleaver_knife.name=Couteau à découper
+item.mcpe:combat_knife.name=Couteau de combat
+item.mcpe:crowbar.name=Pied de biche
+item.mcpe:engineer_shovel.name=Pelle d'ingénieur
+item.mcpe:fireman_axe.name=Hache de pompier
+item.mcpe:flanged_mace.name=Masse à bride
+item.mcpe:frying_pan.name=Poêle
+item.mcpe:golf_club.name=Club de golf
+item.mcpe:golok_machete.name=Machette Golok
+item.mcpe:hammer.name=Marteau
+item.mcpe:hatchet.name=Hachette
+item.mcpe:hunting_knife.name=Couteau de chasse
+item.mcpe:ice_hockey.name=Bâton de hockey sur glace
+item.mcpe:ice_pick.name=Pic à glace
+item.mcpe:katana.name=Katana
+item.mcpe:kitchen_knife.name=Couteau de cuisine
+item.mcpe:knight_sword.name=Épée de chevalier
+item.mcpe:kukri_machete.name=Machette Kukri
+item.mcpe:lead_pipe.name=Tuyau de plomb
+item.mcpe:machete.name=Machette
+item.mcpe:metal_bat.name=Batte de baseball en métal
+item.mcpe:miner_pickaxe.name=Pioche de mineur
+item.mcpe:nailed_bat.name=Batte de baseball clouée
+item.mcpe:nailed_plank.name=Planche de bois clouée
+item.mcpe:pipe_wrench.name=Clé à tuyau
+item.mcpe:pitchfork.name=Fourche
+item.mcpe:police_baton.name=matraque 
+item.mcpe:rolling_pin.name=Rouleau à pâtisserie
+item.mcpe:sabre_sword.name=sabre
+item.mcpe:screwdriver.name=Tournevis
+item.mcpe:farm_sickle.name=Faucille
+item.mcpe:sledgehammer.name=Masse
+item.mcpe:snow_shovel.name=Pelle à neige
+item.mcpe:splitting_axe.name=Hache de fente
+item.mcpe:tactical_axe.name=Hache tactique
+item.mcpe:tactical_shovel.name=Pelle tactique
+item.mcpe:tire_iron.name=Démonte-pneu
+item.mcpe:wooden_plank.name=Planche de bois
+item.mcpe:wrench.name=clé
+item.mcpe:hacksaw.name=Scie à métaux
+
+item.mcpe:blood_test_kit.name=Kit de test sanguin
+item.mcpe:blood_bag_emp.name=Sac de sang vide
+item.mcpe:blood_bag_unknown.name=Type de sac sanguin inconnu
+item.mcpe:blood_bag_type_a.name=Sac de sang de type A
+item.mcpe:blood_bag_type_ab.name=Sac de sang de type AB
+item.mcpe:blood_bag_type_b.name=Sac de sang de type B
+item.mcpe:blood_bag_type_o.name=Sac de sang de type O
+
+item.mcpe:first_aid.name=Sac de premiers soins
+item.mcpe:bandage.name=Bandage
+item.mcpe:bandage_sterilized.name=Bandage stérilisé
+item.mcpe:rags.name=Chiffons
+item.mcpe:rags_dirty.name=Chiffon sale
+item.mcpe:rags_sterilized.name=Chiffon stérilisé
+item.mcpe:blood_bag.name=Sac de sang
+item.mcpe:painkiller.name=Analgésique
+item.mcpe:adrenaline.name=Injecteur automatique d'adrénaline
+item.mcpe:morphine.name=Injecteur automatique de morphine
+item.mcpe:splint.name=Attelle
+item.mcpe:water_purification.name=Tablette de purification de l'eau
+item.mcpe:alcoholic_tinture.name=Teinture alcoolique
+item.mcpe:antidote.name=Seringue d'antidote
+
+
+item.mcpe:avatar_custome.name=Personnalisation du caractère
+item.mcpe:barbed_wire.name=Bobine de barbelé
+item.mcpe:bear_trap.name=Piège à ours
+item.mcpe:bleach.name=Eau de javel
+item.mcpe:bottle_water_emp.name=Bouteille d'eau vide
+item.mcpe:detonator.name=Détonateur
+item.mcpe:can_opener.name=Ouvre-boîte
+item.mcpe:duct_tape.name=Ruban adhésif
+item.mcpe:flashlight.name=Lampe de poche
+item.mcpe:fumo_hat.name= Da Zaza Fumos
+item.mcpe:funi_vest.name=Gilet drôle
+item.mcpe:ham_radios.name=Radio HAM
+item.mcpe:landmine.name=Mine terrestre
+item.mcpe:lockpick.name=Crocheteur
+item.mcpe:nail_box.name=Boîte à clous
+item.mcpe:nail.name=Clous
+item.mcpe:cooking_pot.name=Pot de cuisson vide
+item.mcpe:radios.name=Radio
+item.mcpe:Random_paper.name=Papiers aléatoires
+item.mcpe:remote.name=vest télécommande drôle 
+item.mcpe:sawoff_pipe.name=Tuyau de plomb scié
+item.mcpe:spray_can.name=bombe de peinture 
+item.mcpe:walkie_talkie.name=Talkie walkie
+item.mcpe:wire_cutter.name=Coupe-fil
+item.mcpe:wooden_barricade.name=Barricade en bois
+item.mcpe:fvla_flags.name=Drapeau de l'armée de la Légion Vostrovienne gratuit
+item.mcpe:vostrovia_flags.name=Drapeau de la République Vostrovienne
+item.mcpe:nekoi_flags.name= Neko ¡ drapeau du projet
+item.mcpe:nails.name=Clous
+
+
+item.mcpe:chip_potato.name=Chips de patates
+item.mcpe:chip_tortilla.name=Tortillas
+item.mcpe:chocolate_bar.name=Barre de chocolat
+item.mcpe:creeper_crunch.name=Céréale creeper
+item.mcpe:meat_jerky.name=Bœuf saccadé
+item.mcpe:mre.name=Repas prêt-à-manger
+item.mcpe:rice.name=Paquet de riz
+item.mcpe:strawberry_jam.name=Confiture de fraises
+item.mcpe:tactical_sandwich.name=Sandwich tactique
+item.mcpe:apple_green.name=Pomme verte
+item.mcpe:banana.name=Banane
+item.mcpe:cucumber.name=Concombre
+item.mcpe:pear.name=Poire
+item.mcpe:tomato.name=Tomate
+item.mcpe:zucchini.name=Courgette
+item.mcpe:raw_player.name=Steak de joueur cru
+item.mcpe:cooked_player.name=Steak de joueur cuit
+
+
+item.mcpe:canned_bacon.name=Bacon tactique en conserve
+item.mcpe:canned_beans.name=Haricots cuits au four en conserve
+item.mcpe:canned_beef_stew.name=Ragoût de bœuf en conserve
+item.mcpe:canned_chicken.name=Poulet en conserve
+item.mcpe:canned_chili.name=Chili en conserve
+item.mcpe:canned_corned.name=Bœuf salé en conserve
+item.mcpe:canned_fruit.name=Cocktail de fruits en conserve
+item.mcpe:canned_ham.name=Jambon en conserve
+item.mcpe:canned_peaches.name=Pêches en conserve
+item.mcpe:canned_ration.name=Rations en conserve
+item.mcpe:canned_sardine.name=Sardine en conserve
+item.mcpe:canned_spaghetti.name=Pâtes à la bolognaise en conserve
+item.mcpe:canned_tomato.name=Soupe aux tomates en conserve
+item.mcpe:canned_tuna.name=Thon en conserve
+
+
+item.mcpe:canned_bacon_open.name=Bacon tactique en conserve ouvert
+item.mcpe:canned_beans_open.name=Haricots cuits en conserve ouverts
+item.mcpe:canned_beef_stew_open.name=Ragoût de bœuf en conserve ouvert
+item.mcpe:canned_chicken_open.name=Poulet ouvert en conserve
+item.mcpe:canned_chili_open.name=Chili en conserve ouvert
+item.mcpe:canned_corned_open.name=Bœuf salé en conserve ouvert
+item.mcpe:canned_fruit_open.name=Cocktail de fruits en conserve ouvert 
+item.mcpe:canned_ham_open.name=Jambon en conserve ouvert
+item.mcpe:canned_peaches_open.name=Pêches en conserve ouvertes
+item.mcpe:canned_ration_open.name=Rations en conserve ouvertes
+item.mcpe:canned_sardine_open.name=Sardine en conserve ouverte
+item.mcpe:canned_spaghetti_open.name=pâtes à bolognaise en conserve ouverte
+item.mcpe:canned_tomato_open.name=Soupe aux tomates en conserve ouverte 
+item.mcpe:canned_tuna_open.name=Thon en conserve ouvert
+
+
+item.mcpe:canned_bacon_open_bad.name=Bacon tactique en conserve ouvert de mauvaise qualité
+item.mcpe:canned_beans_open_bad.name=Haricots cuits en conserve ouverts de mauvaise qualité
+item.mcpe:canned_beef_stew_open_bad.name=Ragoût de bœuf en conserve ouvert de mauvaise qualité
+item.mcpe:canned_chicken_open_bad.name=Poulet en conserve ouvert de mauvaise qualité
+item.mcpe:canned_chili_open_bad.name=Chili en conserve ouvert de mauvaise qualité
+item.mcpe:canned_corned_open_bad.name=Bœuf salé en conserve ouvert de mauvaise qualité
+item.mcpe:canned_fruit_open_bad.name=Cocktail de fruits en conserve ouvert de mauvaise qualité
+item.mcpe:canned_ham_open_bad.name=Jambon en conserve ouvert de mauvaise qualité
+item.mcpe:canned_peaches_open_bad.name=Pêches en conserve ouvertes de mauvaise qualité
+item.mcpe:canned_ration_open_bad.name=Rations en conserve ouvertes de mauvaise qualité
+item.mcpe:canned_sardine_open_bad.name=Sardine en conserve ouverte de mauvaise qualité
+item.mcpe:canned_spaghetti_open_bad.name=Pâtes bolognaise en conserve ouverte de mauvaise qualité
+item.mcpe:canned_tomato_open_bad.name=Soupe de tomates en conserve ouverte de mauvaise qualité
+item.mcpe:canned_tuna_open_bad.name=Thon en conserve ouvert de mauvaise qualité
+
+
+item.mcpe:beer_bottle.name=Bouteille de bière
+item.mcpe:bottle_water_bleach.name=Bouteille d’eau
+item.mcpe:bottle_water_unpure.name=Bouteille d’eau impure
+item.mcpe:bottle_water.name=bouteille d’eau
+item.mcpe:coffee.name=Café
+item.mcpe:energy_drink.name=Boisson énergisante
+item.mcpe:exp_coke.name=Coca-Cola EXP
+item.mcpe:grape_soda.name=Soda au raisin
+item.mcpe:lemonade.name=Limonade
+item.mcpe:milk_gallon.name=Gallon de lait
+item.mcpe:popsi_cola.name=Cola PoPsi
+item.mcpe:pot_cook_water.name=Pot d'eau bouillante
+item.mcpe:pot_water.name=Pot d'eau impure
+item.mcpe:red_wine.name= Bouteille de vin rouge
+item.mcpe:vodka.name= Vodka
+item.mcpe:whiskey.name= Whisky
+
+## ammo
+item.mcpe:ammo_7_62x39mm.name= Boîte de munitions 7.62x39mm
+item.mcpe:ammo_5_45x39mm.name= Boîte de munitions 5.45x39mm
+item.mcpe:ammo_5_56x45mm.name= Boîte de munitions 5.56x45mm
+item.mcpe:ammo_7_62x51mm.name= Boîte de munitions 7.62x51mm
+item.mcpe:ammo_7_62x54mmr.name= Boîte de munitions 7.62x54mmR
+item.mcpe:ammo_9x39mm.name= Boîte de munitions 9x39mm
+item.mcpe:ammo_9x19mm.name= Boîte de munitions 9x19mm
+item.mcpe:ammo_9x18mm.name= Boîte de munitions 9x18mm
+item.mcpe:ammo_12gauge.name= Boîte de munitions 12 gauge
+item.mcpe:ammo_40mm.name= Boîte de munitions 40mm
+item.mcpe:ammo_44magnum.name= Boîte de munitions .44 magnum
+item.mcpe:ammo_357magnum.name= Boîte de munitions .357 magnum
+item.mcpe:ammo_45acp.name= Boîte de munitions .45 ACP
+item.mcpe:ammo_32acp.name= Boîte de munitions .32 ACP
+
+## grenade
+item.mcpe:frag_grenade.name=Grenade à fragmentation 
+item.mcpe:smoke_grenade.name=Fumigène
+item.mcpe:flash_grenade.name=Grenade éclair
+item.mcpe:c4_explosive.name=C-4
+item.mcpe:pipe_bomb.name=Bombe à tuyaux
+item.mcpe:nerve_grenade.name=Grenade à gaz nerveux
+
+## armor/clothes
+item.mcpe:assault_vest_black.name=Gilet d'assaut noir
+item.mcpe:assault_vest_olive.name=Gilet d'assaut vert
+item.mcpe:biker_vest.name=Gilet de motard
+item.mcpe:biker_vest_skull.name=Gilet de motard crâne
+item.mcpe:chest_navy.name=Rig de poitrine marine
+item.mcpe:chest_tan.name=Trailé de poitrine de beige
+item.mcpe:chest_green.name=Rig poitrine verte
+item.mcpe:chest_white.name=Rig poitrine blanche
+item.mcpe:chest_brown.name=Rig de poitrine marron
+item.mcpe:combat_olive.name=Gilet de combat vert
+item.mcpe:combat_white.name=Gilet de combat blanc
+item.mcpe:combat_tan.name=Gilet de combat beige
+item.mcpe:hunting_brown.name=Gilet de chasse marron
+item.mcpe:hunting_navy.name=Gilet de chasse de la marine
+item.mcpe:plate_vest_gray.name=Gilet à plaque grise
+item.mcpe:plate_vest_white.name=Gilet à plaque blanche
+item.mcpe:plate_vest_olive.name=Gilet à plaque verte
+item.mcpe:plate_vest_tan.name=Gilet à plaque beige
+item.mcpe:police_vest.name=Gilet de police
+item.mcpe:press_vest.name=Gilet de presse
+item.mcpe:reflective_lime.name=Gilet réfléchissant vert
+item.mcpe:reflective_orange.name=Gilet réfléchissant orange
+item.mcpe:reflective_yellow.name=Gilet réfléchissant jaune
+item.mcpe:stab_vest_gray.name=Gilet de poignard gris
+item.mcpe:stab_vest_tan.name=Gilet de poignard beige
+item.mcpe:stab_vest_white.name=Gilet de poignard Blanche 
+item.mcpe:tactical_vest_black.name=Gilet tactique noir
+item.mcpe:tactical_vest_white.name=Gilet tactique blanc
+item.mcpe:tactical_vest_tan.name=Gilet tactique beige
+item.mcpe:tactical_vest_olive.name=Gilet tactique vert
+item.mcpe:webbing_brown.name=Sangle marron
+item.mcpe:webbing_black.name=Sangle noire
+item.mcpe:webbing_tan.name=Sangle beige
+item.mcpe:webbing_green.name=Sangle verte
+item.mcpe:webbing_white.name=Sangle blanche
+
+
+item.mcpe:army_artic.name=Casque de l'armée arctique
+item.mcpe:army_desert.name=Casque de l'armée du désert
+item.mcpe:army_woodland.name=Casque de l'armée forestière
+item.mcpe:assault_helmet_black.name=Casque d'assaut noir
+item.mcpe:assault_helmet_olive.name=Casque d'assaut vert
+item.mcpe:balaclava_black.name=Masque de balaclave noir
+item.mcpe:ballistic_black.name=Casque balistique noire
+item.mcpe:ballistic_green.name=Casque balistique vert
+item.mcpe:ballistic_Tan.name=Casque balistique beige
+item.mcpe:ballistic_white.name=Casque balistique blanc
+item.mcpe:bandana_blue.name=Bandana bleu
+item.mcpe:bandana_green.name=Bandana vert
+item.mcpe:bandana_red.name=Bandana rouge
+item.mcpe:beanie_black.name=Bonnet noir
+item.mcpe:beanie_brown.name=Bonnet marron
+item.mcpe:beanie_white.name=Bonnet blanc 
+item.mcpe:beanie_olive.name=Bonnet vert
+item.mcpe:beret_red.name=Béret rouge
+item.mcpe:beret_green.name=Béret vert
+item.mcpe:beret_blue.name=Béret bleu
+item.mcpe:biker_black.name=Casque de motard noir
+item.mcpe:biker_white.name=Casque de motard blanc
+item.mcpe:biker_yellow.name=Casque de motard jaune
+item.mcpe:biker_red.name=Casque de motard rouge
+item.mcpe:biker_green.name=Casque de motard vert
+item.mcpe:biker_blue.name=Casque de motard bleu
+item.mcpe:boonie_artic.name=Chapeau boogie camouflage arctique
+item.mcpe:boonie_woodland.name=Chapeau de boonie camouflage de la forêt 
+item.mcpe:boonie_desert.name=Chapeau boonie en camouflage du désert
+item.mcpe:boonie_black.name=Chapeau boonie noire
+item.mcpe:boonie_green.name=Chapeau boonie vert
+item.mcpe:boonie_white.name=Chapeau boonie blanc
+item.mcpe:boonie_tan.name=Chapeau boonie beige
+item.mcpe:cap_black.name=Casquette noire
+item.mcpe:cap_green.name=Casquette verte
+item.mcpe:cap_blue.name=Casquette bleu
+item.mcpe:cap_red.name=Casquette rouge
+item.mcpe:clown_wig.name=Perruque de clown
+item.mcpe:cowboy_brown.name=Chapeau de cow-boy marron
+item.mcpe:cowboy_black.name=Chapeau de cow-boy noir
+item.mcpe:cowboy_white.name=Chapeau de cow-boy blanc
+item.mcpe:durag_black.name=Durag noire
+item.mcpe:durag_brown.name=Durag marron
+item.mcpe:firefighter_hat.name=Casque de pompier
+item.mcpe:flat_black.name=Casquette plate noire
+item.mcpe:flat_brown.name=Casquette plate marron
+item.mcpe:gasmask_black.name=Masque à gaz noire
+item.mcpe:gasmask_white.name=Masque à gaz blanc
+item.mcpe:gasmask_tactical.name=Masque à gaz tactique
+item.mcpe:great_helm.name=Grande barre
+item.mcpe:hard_blue.name=Chapeau de fort bleu
+item.mcpe:hard_red.name=Chapeau de fort rouge
+item.mcpe:hard_yellow.name=Chapeau de fort jaune
+item.mcpe:hard_white.name=Chapeau de fort blanc
+item.mcpe:hard_orange.name=Chapeau de fort orange
+item.mcpe:headlamp.name=Lampe frontales 
+item.mcpe:hunting_hat.name=Chapeau de chasse
+item.mcpe:maid_bonnet.name=Bonnet de chambre
+item.mcpe:mask_fawkes.name=Masque facial Fawkes
+item.mcpe:mask_funni.name=Masque facial Drôle
+item.mcpe:mask_troll.name=Masque facial Troll
+item.mcpe:night_goggles.name=Lunettes de nuit
+item.mcpe:peaked_green.name=Casquette verte à pic
+item.mcpe:peaked_white.name=Casquette blanche à pic
+item.mcpe:peaked_tan.name=Casquette à pic beige
+item.mcpe:plague_hat.name=Chapeau de médecin de la peste
+item.mcpe:police_hat.name=Chapeau de police
+item.mcpe:police_riot.name=Casque anti-émeute de la police
+item.mcpe:respirator_mask.name=Masque à gaz respiratoire
+item.mcpe:shemagh_blue.name=Shemagh bleu
+item.mcpe:shemagh_red.name=Shemagh rouge
+item.mcpe:shemagh_tan.name=Shemagh beige
+item.mcpe:shemagh_brown.name=Shemagh marron
+item.mcpe:shemagh_black.name=Shemagh noire
+item.mcpe:shemagh_olive.name=Shemagh vert
+item.mcpe:shemagh_gray.name=Shemagh gris
+item.mcpe:skimask_black.name=Masque de ski noir
+item.mcpe:spec_helmet.name=Casque d'opération spéciale
+item.mcpe:tactical_helmet_black.name=Casque tactique noir
+item.mcpe:tactical_helmet_tan.name=Casque tactique beige
+item.mcpe:tactical_helmet_white.name=Casque tactique blanc
+item.mcpe:tactical_helmet_olive.name=Casque tactique vert
+item.mcpe:ushanka.name=Ushanka
+item.mcpe:un_helmet.name=Casque de l'ONU
+item.mcpe:welder_mask.name=Masque de soudeur
+
+item.mcpe:bdu_artic_bottom.name=Pantalon de artique BDU
+item.mcpe:bdu_desert_bottom.name=Pantalon du desert BDU
+item.mcpe:bdu_woodland_bottom.name=Pantalon de forêt BDU
+item.mcpe:cargo_black.name=Pantalon cargo noir
+item.mcpe:cargo_brown.name=Pantalon cargo marron
+item.mcpe:cargo_tan.name=Pantalon cargo beige
+item.mcpe:cargo_white.name=Pantalon cargo blanc
+item.mcpe:cargo_green.name=Pantalon cargo vert
+item.mcpe:chainmail_bottom.name=Pantalon en maillé
+item.mcpe:clown_bottom.name=Pantalon de clown
+item.mcpe:firefighter_bottom.name=Pantalon de pompier
+item.mcpe:ghillie_drygrass_bottom.name=Pantalon ghillie à herbes sèches
+item.mcpe:ghillie_forest_bottom.name=Pantalon ghillie de la forêt
+item.mcpe:ghillie_snow_bottom.name=Pantalon Snow ghillie
+item.mcpe:hazmat_white_bottom.name=Pantalon blanc pour matières dangereuses
+item.mcpe:hazmat_yellow_bottom.name=Pantalon jaune pour matières dangereuses
+item.mcpe:jean_black.name=Jean noir
+item.mcpe:jean_blue.name=Jean bleu
+item.mcpe:jean_brown.name=Jean marron
+item.mcpe:jean_light.name=Jean léger
+item.mcpe:khaki_light.name=Pantalon kaki léger
+item.mcpe:maid_bottom.name=Bas de chambre
+item.mcpe:overall_black.name=Salopette noire
+item.mcpe:overall_brown.name=Salopette marron
+item.mcpe:overall_blue.name=Salopette bleue
+item.mcpe:paramedic_bottom.name=Pantalon paramédical
+item.mcpe:plague_bottom.name=Bas de médecin de la peste
+item.mcpe:police_special_bottom.name=Pantalon des forces spéciales de la police
+item.mcpe:police_bottom.name=Pantalon de police
+item.mcpe:prisoner_bottom.name=Pantalon de prisonnier
+item.mcpe:suit_bottom_black.name=Pantalon de costume noir
+item.mcpe:special_bottom.name=Pantalon d'opération spéciale
+item.mcpe:suspender_black.name=Bretelles noires
+item.mcpe:trackpants_black.name=Pantalon de survêtement noir
+item.mcpe:trackpants_blue.name=Pantalon de survêtement bleu
+item.mcpe:trackpants_red.name=Pantalon de survêtement rouge
+
+item.mcpe:bdu_artic_top.name=Camouflage arctique BDU
+item.mcpe:bdu_desert_top.name=Désert camouflage BDU
+item.mcpe:bdu_woodland_top.name=Woodland camouflage BDU
+item.mcpe:chainmail_top.name=Dessus de maille
+item.mcpe:clown_top.name=Costume de clown
+item.mcpe:crusader_top.name=Top des croisés
+item.mcpe:firefighter_top.name=Veste de pompier
+item.mcpe:flannel_red.name=Chemise en flanelle rouge
+item.mcpe:flannel_green.name=Chemise en flanelle verte
+item.mcpe:flannel_blue.name=Chemise en flanelle bleue
+item.mcpe:flannel_white.name=Chemise en flanelle blanche
+item.mcpe:flannel_gray.name=Chemise en flanelle grise
+item.mcpe:ghillie_drygrass_top.name=Costume de ghillie d'herbe sèche
+item.mcpe:ghillie_forest_top.name=Costume de ghillie de la forêt
+item.mcpe:ghillie_snow_top.name=Costume de neige ghillie
+item.mcpe:gorka_top.name=Uniforme Gorka
+item.mcpe:hawaiian_black.name=Chemise hawaïenne noire
+item.mcpe:hawaiian_red.name=Chemise hawaïenne rouge
+item.mcpe:hazmat_white_top.name=Combinaison blanche pour matières dangereuses
+item.mcpe:hazmat_yellow_top.name=Combinaison hazmat jaune
+item.mcpe:hero_flannel.name=Chemise en flanelle Hero
+item.mcpe:hiking_black.name=Veste de randonnée noire
+item.mcpe:hiking_blue.name=Veste de randonnée bleue
+item.mcpe:hoodie_black.name=Sweat à capuche noir
+item.mcpe:hoodie_blue.name=Sweat à capuche bleu
+item.mcpe:hoodie_green.name=Sweat à capuche vert
+item.mcpe:hoodie_red.name=Sweat à capuche rouge
+item.mcpe:hoodie_yellow.name=Sweat à capuche jaune
+item.mcpe:hoodie_white.name=Sweat à capuche blanc
+item.mcpe:leather_black.name=Veste en cuir noir
+item.mcpe:leather_brown.name=Veste en cuir marron
+item.mcpe:maid_top.name=Robe de chambre
+item.mcpe:paramedic_top.name=Veste paramédicale
+item.mcpe:plague_top.name=Médecin de la peste
+item.mcpe:plaid_red.name=Chemise à carreaux rouge
+item.mcpe:plaid_blue.name=Chemise à carreaux bleue
+item.mcpe:plaid_olive.name=Chemise à carreaux verte
+item.mcpe:plaid_white.name=Chemise à carreaux blanche
+item.mcpe:plaid_gray.name=Chemise à carreaux grise
+item.mcpe:plaid_tan.name=Chemise à carreaux beige
+item.mcpe:police_special_top.name=Veste des forces spéciales de la police
+item.mcpe:police_top.name=Uniforme de police
+item.mcpe:prisoner_top.name=Veste de prisonnier
+item.mcpe:puffer_blue.name=Doudoune bleue
+item.mcpe:puffer_black.name=Doudoune noire
+item.mcpe:special_top.name=Uniforme d'opération spéciale
+item.mcpe:striped_blue.name=Chemise bas vers le haut à rayures bleues
+item.mcpe:striped_white.name=Chemise basse rayée blanche
+item.mcpe:stripeds_black.name=Chemise à manches longues rayée noire
+item.mcpe:suede_brown.name=Veste en daim marron
+item.mcpe:suit_black.name=Pull noir 
+item.mcpe:sweater_white.name=Pull blanc
+item.mcpe:sweater_green.name=Pull vert
+item.mcpe:tactical_tan.name=Pull tactique beige 
+item.mcpe:tactical_green.name=Pull tactique vert
+item.mcpe:tactical_navy.name=Pull tactique marine
+item.mcpe:tactical_red.name=Pull tactique rouge
+item.mcpe:tactical_white.name=Pull tactique blanc
+item.mcpe:tracksuit_black.name=Survêtement bleu
+item.mcpe:tracksuit_blue.name=Survêtement bleu
+item.mcpe:tracksuit_red.name=Survêtement rouge
+item.mcpe:tshirt_black.name=T-shirt noire
+item.mcpe:tshirt_blue.name=T-shirt bleu
+item.mcpe:tshirt_red.name=T-shirt rouge
+item.mcpe:tshirt_green.name=T-shirt vert
+item.mcpe:tshirt_white.name=T-shirt blanc
+item.mcpe:tshirt_yellow.name=T-shirt jaune
+item.mcpe:varsity_blue.name=Veste universitaire bleu
+item.mcpe:varsity_green.name=Veste universitaire verte
+item.mcpe:varsity_red.name=Veste universitaire rouge
+item.mcpe:varsity_brown.name=Veste universitaire marron
+
+## backpack
+item.mcpe:improvised_bag.name=Sac improvisé
+item.mcpe:school_blue_backpack.name=Sac à dos scolaire bleu
+item.mcpe:school_green_backpack.name=Sac à dos scolaire vert
+item.mcpe:school_red_backpack.name=Sac à dos scolaire rouge
+item.mcpe:taloon_yellow_backpack.name=Sac à dos jaune
+item.mcpe:taloon_blue_backpack.name=Sac à dos à talon bleu
+item.mcpe:taloon_green_backpack.name=Sac à dos vert
+item.mcpe:taloon_red_backpack.name=Sac à dos à rouge
+
+## loot
+tile.mcpe:civilian_loot.name=Boîte en carton (boîte à butin civile)
+tile.mcpe:construction_loot.name=Boîte à outils (boîte à butin de construction)
+tile.mcpe:firefighter_loot.name=Boîte de pompier (boîte à butin de pompier)
+tile.mcpe:food_loot.name=Caisse de nourriture (boîte à nourriture)
+tile.mcpe:medical_loot.name=Boîte médicale (boîte à butin médicale)
+tile.mcpe:artic_loot.name=Étui blanc (butin militaire en arctique)
+tile.mcpe:desert_loot.name=boite marron (butin militaire du désert)
+tile.mcpe:woodland_loot.name=Étui vert (burin de militaire de la forêt)
+tile.mcpe:medieval_loot.name=Coffre vintage (boîte à butin médivale)
+tile.mcpe:police_loot.name=Étui à armes à feu (boîte à butin de la police)
+tile.mcpe:rare_loot.name=Boîte excédentaire (boîte de butin rare)
+tile.mcpe:supply_block.name=Boîte d'approvisionnement
+
+## misc
+tile.mcpe:barbed_wires.name=Bobine de barbelée
+tile.mcpe:landmine.name=Mine terrestre
+tile.mcpe:nail_trap.name=Piége à clous amélioré
+tile.mcpe:fumo.name=Peluche néo-zélandaise sur votre tête
+tile.mcpe:radio.name=Radio
+tile.mcpe:radio_ham.name=Radio amateur
+tile.mcpe:wheat.name=Blé
+tile.mcpe:wood_stake.name=Barrière de pieu en bois
+tile.mcpe:spawner_military.name=Spawner militaire
+tile.mcpe:spawner_civilian.name=Spawner Civil
+tile.mcpe:spawner_scavenger.name=Spawner Scavenger
+tile.mcpe:spawner_marauder.name=Spawner Marauder
+tile.mcpe:server_button.name=Bouton serveur
+tile.mcpe:server_button_delay.name=Délai du bouton du serveur
+tile.mcpe:bear_trap_close.name=Pièges à ours fermé
+tile.mcpe:bear_trap_open.name=Pièges à ours ouvert
+
+## barrel
+tile.mcpe:barrel_blue.name=Baril bleu
+tile.mcpe:barrel_explosive.name=Baril explosif
+tile.mcpe:barrel_green.name=Baril vert
+tile.mcpe:barrel_red.name=Baril rouge
+tile.mcpe:barrel_yellow.name=Baril jaune
+
+## display_rack
+tile.mcpe:display_rack_middle_bottom.name=Fond du présentoir
+tile.mcpe:display_rack_middle_top.name=Haut du présentoir
+tile.mcpe:display_rack_side_bottom.name=Fond latéral du présentoir
+tile.mcpe:display_rack_side_top.name=Haut du côté du présentoir
+
+## flag
+tile.mcpe:flag_fvla.name=Drapeau Fvla
+tile.mcpe:flag_nekoi.name=Drapeau Neko
+tile.mcpe:flag_vostrovia.name=Drapeau Vostrovia
+
+## folding_chair
+tile.mcpe:folding_chair_blue.name=Chaise pliante bleue
+tile.mcpe:folding_chair_brown.name=Chaise pliante marron
+tile.mcpe:folding_chair_green.name=Chaise pliante verte
+tile.mcpe:folding_chair_red.name=Chaise pliante rouge
+
+## hesco
+tile.mcpe:hesco_olive.name=Bastion d'hesco vert
+tile.mcpe:hesco_tan.name=Bastion d'hesco beige
+tile.mcpe:hesco_white.name=Bastion d'hesco blanc
+
+## light
+tile.mcpe:ceiling_light_broken.name=Plafonnier cassé
+tile.mcpe:ceiling_light.name=Plafonnier
+tile.mcpe:exit_sign.name=Panneau de sortie de secours 
+tile.mcpe:worklight.name=Lampe de travail
+
+## monobloc
+tile.mcpe:monobloc_black.name=Chaise monobloc noire
+tile.mcpe:monobloc_blue.name=Chaise monobloc bleue
+tile.mcpe:monobloc_green.name=Chaise monobloc verte
+tile.mcpe:monobloc_red.name=Red monobloc chair
+tile.mcpe:monobloc_tan.name=Chaise monobloc beige
+tile.mcpe:monobloc_white.name=Chaise monobloc blanche
+tile.mcpe:monobloc_yellow.name=Chaise monobloc jaune
+
+## office_chair
+tile.mcpe:office_chair_black.name=Chaise de bureau noire
+tile.mcpe:office_chair_blue.name=Chaise de bureau bleue
+tile.mcpe:office_chair_brown.name=Chaise de bureau marron
+tile.mcpe:office_chair_green.name=Chaise de bureau verte
+tile.mcpe:office_chair_red.name=Chaise de bureau rouge
+tile.mcpe:office_chair_white.name=Chaise de bureau blanche
+
+## plastic_table
+tile.mcpe:plastic_black.name=Table en plastique noir
+tile.mcpe:plastic_blue.name=Table en plastique bleu
+tile.mcpe:plastic_green.name=Table en plastique vert
+tile.mcpe:plastic_red.name=Table en plastique rouge
+tile.mcpe:plastic_tan.name=Table en plastique beige
+tile.mcpe:plastic_white.name=Table en plastique blanc
+tile.mcpe:plastic_yellow.name=Table en plastique jaune
+
+## road_barrier
+tile.mcpe:barrier_wall.name=Barrière murale
+tile.mcpe:caution_barrier_wall.name=Barrière murale de prudence
+tile.mcpe:caution_road_barrier.name=Barrière routière de prudence 
+tile.mcpe:road_barrier.name=Barrière routière
+
+## sandbag
+tile.mcpe:sandbag_corner_olive.name=Coin de sac de sable vert
+tile.mcpe:sandbag_corner_tan.name=Coin de sac de sable beige
+tile.mcpe:sandbag_corner_white.name=Coin de sac de sable blanc
+tile.mcpe:sandbag_olive.name=Sac de sable vert
+tile.mcpe:sandbag_tan.name=Sac de sable beige
+tile.mcpe:sandbag_white.name=Sac de sable blanc
+
+## sign
+tile.mcpe:traffic_becareful.name=Panneaux de signalisation de danger
+tile.mcpe:traffic_intersection.name=Panneau de signalisation d'intersection
+tile.mcpe:traffic_no_entry.name=Panneau de signalisation d'entrée interdite 
+tile.mcpe:traffic_no_parking.name=Panneau de signalisation sans stationnement
+tile.mcpe:traffic_parking.name=Panneau de signalisation de stationnement
+tile.mcpe:traffic_question.name=Panneau de signalisation du point d'interrogation
+tile.mcpe:traffic_section_left.name=Panneau de signalisation de la section gauche
+tile.mcpe:traffic_section_right.name=Panneau de signalisation de la section droite
+tile.mcpe:traffic_stop.name=Panneau d'arrêt de la circulation
+tile.mcpe:traffic_turn_left.name=Panneau de signalisation de virage à gauche
+tile.mcpe:traffic_turn_right.name=Panneau de signalisation de virage à droite
+tile.mcpe:traffic_rod.name=Tige de circulation
+
+## street_bench
+tile.mcpe:street_bench_blue.name=Banc de rue bleu
+tile.mcpe:street_bench_green.name=Banc de rue vert
+tile.mcpe:street_bench_red.name=Banc de rue rouge
+tile.mcpe:street_bench_white.name=Banc de rue blanc
+
+## table_cloth
+tile.mcpe:table_cloth_black.name=Table avec tissu noire
+tile.mcpe:table_cloth_blue.name=Table avec tissu bleue
+tile.mcpe:table_cloth_green.name=Table avec tissu vert 
+tile.mcpe:table_cloth_red.name=Table avec tissu rouge
+
+## variant
+tile.mcpe:graffiti.name=Graffiti
+tile.mcpe:metal_rack.name=Support métallique
+tile.mcpe:papers.name=Papiers
+
+## water_pump
+tile.mcpe:water_pump.name=Pompe à eau
+tile.mcpe:water_pump_emp.name=Pompe à eau vide
+
+## more furniture
+tile.mcpe:crowd_fence.name=Clôture de foule
+tile.mcpe:construction_barrier.name=Barrière de construction
+tile.mcpe:microwave.name=Micro-ondes
+tile.mcpe:monitor.name=Moniteur
+tile.mcpe:monitor_keyboard.name=Moniteur avec clavier
+tile.mcpe:reloading_table.name=Table de rechargement
+tile.mcpe:sink.name=Évier
+tile.mcpe:toilet.name=Toilettes
+tile.mcpe:traffic_cone.name=Cône de circulation
+tile.mcpe:trash_bin.name=Poubelle
+tile.mcpe:trash_can.name=Poubelle
+tile.mcpe:tv.name=Télévision
+tile.mcpe:tv_old.name=Vieille télévision
+tile.mcpe:wood_barrier.name=Barrière en planches de bois
+tile.mcpe:wood_chair.name=Chaise en bois
+tile.mcpe:wood_table.name=Table en bois
+
+## more block
+tile.mcpe:bath_tiles.name=Carreaux de bain
+tile.mcpe:brick_big.name=Grande brique
+tile.mcpe:caution_block.name=Bloc d'avertissement
+tile.mcpe:corrugated_metal.name=Bloc métallique ondulé
+tile.mcpe:corrugated_metal_rusty.name=Bloc métallique ondulé rouillé
+tile.mcpe:crate.name=Boîte à caisses
+tile.mcpe:farm_block.name=Bloc de ferme
+tile.mcpe:filing_cabinet.name=Armoire de remplissage
+tile.mcpe:hazard_block.name=Bloc de danger
+tile.mcpe:military_wall.name=Mur militaire
+tile.mcpe:smooth_stone_brick.name=Brique de pierre lisse
+tile.mcpe:tiles_bnw.name=Carreaux de contrôle noirs
+tile.mcpe:tiles_white.name=Tuiles blanches
+tile.mcpe:trace_plate.name=Plaque de trace
+tile.mcpe:washing_machine.name=Machine à laver 

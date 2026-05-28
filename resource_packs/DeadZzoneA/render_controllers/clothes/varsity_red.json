@@ -1,0 +1,65 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.varsity_red": {
+      "geometry": "Geometry.clothes",
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": false 
+        },
+        {
+          "head": "!variable.is_first_person"
+		},
+	    {
+		  "hat": "!variable.is_first_person"
+		},
+		{
+		  "body": "!variable.is_first_person"
+		},
+		{
+		  "jacket": "!variable.is_first_person"
+		},
+		{
+		  "leftLeg": "!variable.is_first_person"
+		},
+		{
+		  "leftPants": "!variable.is_first_person"
+		},
+		{
+		  "rightLeg": "!variable.is_first_person"
+		},
+		{
+		  "rightPants": "!variable.is_first_person"
+		},
+		{
+		  "rightArm": "!variable.is_first_person || variable.is_first_person && query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || variable.guns"
+		},
+		{
+		  "rightClothes": "!variable.is_first_person || variable.is_first_person && query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || variable.guns"
+		},
+		{
+		  "rightSleeve": "!variable.is_first_person || variable.is_first_person && query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || variable.guns"
+		},
+		{
+		  "leftClothes": "!variable.is_first_person || variable.is_first_person && query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || (variable.guns)"
+		},
+		{
+		  "leftArm": "!variable.is_first_person || variable.is_first_person && query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || (variable.guns)"
+		},
+		{
+		  "leftSleeve": "!variable.is_first_person || variable.is_first_person && query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || (variable.guns)"
+        }
+      ],
+      "textures": [
+        "Texture.varsity_red"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "krep:g18",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/nothing",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.itemscale"
+      },
+      "animations": {
+        "hold": "animation.itemscale"
+      },
+      "scripts": {
+        "animate": [
+          "hold"
+        ]
+      },
+      "render_controllers": [ "controller.render.itemscale" ]
+    }
+  }
+}

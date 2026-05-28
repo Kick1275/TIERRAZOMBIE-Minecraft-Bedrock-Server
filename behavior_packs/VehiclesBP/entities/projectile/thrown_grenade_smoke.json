@@ -1,0 +1,173 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:thrown_grenade_smoke",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": 5,
+						"knockback": true,
+						"destroy_on_hit": false
+					},
+					"particle_on_hit": {
+						"particle_type": "smoke",
+						"num_particles": 6,
+						"on_entity_hit": true,
+						"on_other_hit": true
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					}
+				},
+				"anchor": 1,
+				"power": 1.5,
+				"gravity": 0.1,
+				"angle_offset": 0,
+				"offset": [
+					0,
+					-0.1,
+					0
+				],
+				"should_bounce": true
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:environment_sensor": {
+				"triggers": {
+					"filters": {
+						"test": "has_component",
+						"subject": "self",
+						"value": "minecraft:is_ignited",
+						"operator": "=="
+					},
+					"event": "af:smoke",
+					"target": "self"
+				}
+			}
+		},
+		"component_groups": {
+			"exploding": {
+				"minecraft:timer": {
+					"looping": false,
+					"time_down_event": {
+						"event": "af:explode"
+					},
+					"time": [
+						1,
+						2
+					]
+				}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"explode": {
+				"minecraft:timer": {
+					"time": [
+						8,
+						10
+					],
+					"time_down_event": {
+						"event": "af:stop_exploding",
+						"target": "self"
+					}
+				},
+				"minecraft:is_ignited": {}
+			},
+			"vehicle": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"damage": 5,
+							"knockback": true,
+							"destroy_on_hit": false
+						},
+						"particle_on_hit": {
+							"particle_type": "smoke",
+							"num_particles": 6,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						}
+					},
+					"anchor": 1,
+					"power": 1.3,
+					"gravity": 0.1,
+					"angle_offset": -45,
+					"offset": [
+						0,
+						2,
+						0
+					],
+					"should_bounce": true
+				}
+			}
+		},
+		"events": {
+			"af:explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:explosion_dust ~ ~ ~ ",
+						"playsound grenade.pop @a ~ ~ ~ 5 1",
+						"playsound grenade.pop @a ~ ~ ~ 5 10"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"exploding"
+					]
+				}
+			},
+			"af:stop_exploding": {
+				"remove": {
+					"component_groups": [
+						"explode"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:smoke": {
+				"queue_command": {
+					"command": [
+						"particle af:smoke_grenade ~ ~1 ~ "
+					]
+				}
+			},
+			"af:vehicle": {
+				"add": {
+					"component_groups": [
+						"vehicle",
+						"exploding"
+					]
+				}
+			}
+		}
+	}
+}

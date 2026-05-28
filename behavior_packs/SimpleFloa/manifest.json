@@ -1,0 +1,32 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Simple Floating Texts & Scoreboards v2.1.0",
+        "description": "Made by DeathSinger4221",
+        "version": [ 2, 1, 0 ],
+        "min_engine_version": [ 1, 20, 80 ],
+        "uuid": "59084303-b84b-4127-a6f0-57a75514ddca"
+    },
+    "modules": [
+        {
+            "type": "data",
+            "version": [ 1, 0, 0 ],
+            "uuid": "1938013e-52e3-4ad0-a6a6-5eb5df1c42e7"
+        },
+        {
+            "type": "script",
+            "version": [ 1, 0, 0 ],
+            "language": "javascript",
+            "entry": "scripts/index.js",
+            "uuid": "aea0df37-eb49-4031-835e-a80c14bc9ba3"
+        }
+    ],
+    "dependencies": [
+        { "module_name": "@minecraft/server", "version": "1.10.0" },
+        { "module_name": "@minecraft/server-ui", "version": "1.1.0" }
+    ],
+    "metadata": {
+        "authors": [ "DeathSinger4221" ],
+        "url": "https://discord.gg/bs66cpWkqf"
+    }
+}

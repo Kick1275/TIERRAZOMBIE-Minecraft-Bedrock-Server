@@ -1,0 +1,47 @@
+{
+  "sonidos.spb_guide.book.open": {
+    "category": "hostile",
+    "max_distance": 10,
+    "min_distance" : null,
+    "sounds": [
+      {
+        "is3D": true,
+        "name": "sounds/spb_sounds/book_open",
+        "volume": 1,
+        "weight": 10,
+        "load_on_low_memory": true,
+        "stream": true
+      }
+    ]
+  },
+  "sonidos.spb_guide.book.close": {
+    "category": "hostile",
+    "max_distance": 15,
+    "min_distance" : null,
+    "sounds": [
+      {
+        "is3D": true,
+        "name": "sounds/spb_sounds/close_book",
+        "volume": 1,
+        "weight": 10,
+        "load_on_low_memory": true,
+        "stream": true
+      }
+    ]
+  },
+  "sonidos.spb_guide.book.change_pages": {
+    "category": "hostile",
+    "max_distance": 10,
+    "min_distance" : null,
+    "sounds": [
+      {
+        "is3D": true,
+        "name": "sounds/spb_sounds/change_page",
+        "volume": 1,
+        "weight": 10,
+        "load_on_low_memory": true,
+        "stream": true
+      }
+    ]
+  }
+}

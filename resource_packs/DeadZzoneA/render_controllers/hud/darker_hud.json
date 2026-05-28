@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.darker_ui": {
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.darker_ui"
+			],
+			"geometry": "geometry.darker_ui",
+			"on_fire_color": {},
+			"is_hurt_color": {},
+			"part_visibility": [
+				{
+					"1": "q.property('mcpe:darken_ui') == 0"
+				},
+				{
+					"2": "q.property('mcpe:darken_ui') == 1"
+				},
+				{
+					"3": "q.property('mcpe:darken_ui') == 2"
+				},
+				{
+					"4": "q.property('mcpe:darken_ui') == 3"
+				}
+			]
+		}
+	}
+}

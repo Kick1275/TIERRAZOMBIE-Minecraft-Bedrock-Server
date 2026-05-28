@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ranzie:reinforced_bamboo_spiked"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:obsidian",
+        "data": 0
+      },
+      {
+        "item": "ranzie:bamboo_spiked_fence",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "ranzie:bamboo_reinforced_spiked_fence",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

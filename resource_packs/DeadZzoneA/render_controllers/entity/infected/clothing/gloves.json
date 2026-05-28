@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.gloves": {
+			"arrays": {
+				"geometries": {
+					"Array.geos": [
+						"Geometry.default",
+						"Geometry.slim"
+					]
+				},
+				"textures": {
+					"Array.gloves": [
+						"Texture.gloves_0",
+						"Texture.gloves_1",
+						"Texture.gloves_2",
+						"Texture.gloves_3"
+					]
+				}
+			},
+			"geometry": "Array.geos[v.gender == 'female']",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [ "Array.gloves[v.gloves]" ],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

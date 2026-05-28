@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.sks.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.1,
+      "timeline": {
+        "3.0": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:sks 1 0",
+          "/scoreboard players set @s[scores={sks=11..}] sks 10",
+          "/function sks"
+        ],
+        "2.9": [
+          "/function sksreload",
+          "/event entity @s krep:sks_reload"
+        ]
+      }
+    }
+  }
+}

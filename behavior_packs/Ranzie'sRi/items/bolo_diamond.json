@@ -1,0 +1,57 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ranzie:diamond_bolo",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.sword"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "Diamond Bolo"
+      },
+      "minecraft:damage": 8,
+      "minecraft:durability": {
+        "max_durability": 1561
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {"block": "minecraft:wood", "speed": 8},
+          {"block": "minecraft:log", "speed": 8},
+          {"block": "minecraft:log2", "speed": 8},
+          {"block": "minecraft:mangrove_log", "speed": 8},
+          {"block": "minecraft:warped_stem", "speed": 8},
+          {"block": "minecraft:crimson_stem", "speed": 8},
+          {"block": "minecraft:pale_oak_log", "speed": 8},
+          {"block": "minecraft:cherry_log", "speed": 8},
+          {"block": "minecraft:planks", "speed": 8}
+        ]
+      },
+      "minecraft:enchantable": {
+        "value": 18,
+        "slot": "sword"
+      },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": ["minecraft:diamond"],
+            "repair_amount": "500"
+          }
+        ]
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:tags": {
+        "tags": [
+          "minecraft:is_sword", "minecraft:is_axe",
+          "minecraft:transformable_items"
+        ]
+      },
+      "minecraft:icon": "bolo_diamond"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.tzshop": {
+			"initial_state": "tzshop_inactive",
+			"states": {
+				"tzshop_inactive": {
+					"animations": [
+						"tzshop_inactive"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:antitank_mine"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "af:charged_tnt"
+			},
+			"P": {
+				"item": "minecraft:heavy_weighted_pressure_plate"
+			},
+			"T": {
+				"item": "af:titanium_ingot"
+			}
+		},
+		"pattern": [
+			"RPR",
+			"RNR",
+			"TTT"
+		],
+		"result": {
+			"item": "af:antitank_mine_spawn_egg",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "mcpe:barbedwire_bat",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/items/melee/barbedwire_bat"
+            },
+            "geometry": {
+                "default": "geometry.item_size"
+            },
+            "animations": {
+            	"first_person_hold": "animation.item_size.first_person_hold",
+            	"third_person_hold": "animation.item_size.third_person_hold",
+          	  "wield": "animation.player.first_person.attack_rotation_item"
+            },
+            "scripts": {
+            	"animate": [
+            		{
+            			"first_person_hold": "c.is_first_person"
+            		},
+            		{
+            			"third_person_hold": "!c.is_first_person"
+            		}
+            	]
+            },
+            "render_controllers": [
+            	"controller.render.default"
+           ]
+        }
+    }
+}

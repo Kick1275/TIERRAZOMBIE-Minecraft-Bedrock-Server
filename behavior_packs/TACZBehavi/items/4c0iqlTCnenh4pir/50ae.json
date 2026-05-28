@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "krep:ae50",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:stacked_by_data": true,
+      "minecraft:max_stack_size": 64,
+      "minecraft:icon": {
+        "texture": "50ae"
+      },
+      "minecraft:display_name": {
+        "value": ".50 Action Express"
+      },
+      "minecraft:can_destroy_in_creative": false,
+      "minecraft:creative_category": {
+        "parent": "equipment"
+      }
+    }
+  }
+}

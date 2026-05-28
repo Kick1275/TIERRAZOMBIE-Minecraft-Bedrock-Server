@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.riding.arms": {
+			"loop": true,
+			"bones": {
+				"rightLeg": {
+					"rotation": [-90, 5, 0],
+					"position": [0, 0, 1]
+				},
+				"leftLeg": {
+					"rotation": [-90, -5, 0],
+					"position": [0, 0, 1]
+				},
+				"waist": {
+					"position": [0, 0, 1.1]
+				}
+			}
+		},
+		"animation.player.riding.legs": {
+			"loop": true
+		},
+		"animation.player.riding.arms.zombie": {
+			"loop": true
+		}
+	}
+}

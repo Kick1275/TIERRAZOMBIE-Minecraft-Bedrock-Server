@@ -1,0 +1,623 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:cd_player",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:collision_box": {
+				"width": 0.4,
+				"height": 0.4
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "suffocation",
+					"deals_damage": false
+				}
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "af:manual",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "!=",
+										"subject": "self"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:open",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "!=",
+										"subject": "self"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "==",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:exit",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_tag",
+										"value": "cd_holder",
+										"operator": "!=",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "af:close",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_c",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:c",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_cd",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:cd",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_ewtrtw",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:ewtrtw",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_fmttm",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:fmttm",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_hc",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:hc",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_swm",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:swm",
+							"target": "self"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_component",
+										"value": "minecraft:is_ignited",
+										"operator": "==",
+										"subject": "self"
+									},
+									{
+										"test": "has_equipment",
+										"value": "af:cd_tmwstw",
+										"operator": "==",
+										"subject": "other",
+										"domain": "hand"
+									},
+									{
+										"test": "has_component",
+										"value": "minecraft:is_charged",
+										"operator": "!=",
+										"subject": "self"
+									}
+								]
+							},
+							"event": "af:tmwstw",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:on_death": {
+				"event": "af:exit",
+				"target": "self"
+			}
+		},
+		"component_groups": {
+			"opened": {
+				"minecraft:is_ignited": {}
+			},
+			"c": {
+				"minecraft:timer": {
+					"time": 132.6,
+					"time_down_event": {
+						"event": "af:c",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			},
+			"cd": {
+				"minecraft:timer": {
+					"time": 202.2,
+					"time_down_event": {
+						"event": "af:cd",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			},
+			"ewtrtw": {
+				"minecraft:timer": {
+					"time": 246.6,
+					"time_down_event": {
+						"event": "af:ewtrtw",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			},
+			"fmttm": {
+				"minecraft:timer": {
+					"time": 136.2,
+					"time_down_event": {
+						"event": "af:fmttm",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			},
+			"hc": {
+				"minecraft:timer": {
+					"time": 363,
+					"time_down_event": {
+						"event": "af:hc",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			},
+			"swm": {
+				"minecraft:timer": {
+					"time": 270,
+					"time_down_event": {
+						"event": "af:swm",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			},
+			"tmwstw": {
+				"minecraft:timer": {
+					"time": 325.8,
+					"time_down_event": {
+						"event": "af:tmwstw",
+						"target": "self"
+					}
+				},
+				"minecraft:is_charged": {}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"tp @s ~ ~ ~ facing @p"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"opened"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar open with empty hand, can play CDs."
+					]
+				}
+			},
+			"af:close": {
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:open": {
+				"add": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:exit": {
+				"add": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"c",
+						"cd",
+						"ewtrtw",
+						"fmttm",
+						"hc",
+						"swm",
+						"tmwstw"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound random.click @a ~ ~ ~",
+						"stopsound @a cd.c",
+						"stopsound @a cd.cd",
+						"stopsound @a cd.ewtrtw",
+						"stopsound @a cd.fmttm",
+						"stopsound @a cd.hc",
+						"stopsound @a cd.swm",
+						"stopsound @a cd.tmwstw"
+					]
+				}
+			},
+			"af:c": {
+				"add": {
+					"component_groups": [
+						"c"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.c @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: Molchat Doma - the vessel (boris rizhiy)",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:cd": {
+				"add": {
+					"component_groups": [
+						"cd"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.cd @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: The Mamas & the Papas - california dreamin",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:ewtrtw": {
+				"add": {
+					"component_groups": [
+						"ewtrtw"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.ewtrtw @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: Tears for Fears - everybody wants to rule the world",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:fmttm": {
+				"add": {
+					"component_groups": [
+						"fmttm"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.fmttm @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: Frank Sinatra - fly me to the moon",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:hc": {
+				"add": {
+					"component_groups": [
+						"hc"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.hc @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: Eagles - hotel california",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:swm": {
+				"add": {
+					"component_groups": [
+						"swm"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.swm @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: Miki Matsubara - stay with me",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			},
+			"af:tmwstw": {
+				"add": {
+					"component_groups": [
+						"tmwstw"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound cd.tmwstw @a ~ ~ ~",
+						"title @a[r=5] actionbar §dNow Playing: Midge Ure - the man who sold the world",
+						"playsound random.click @a ~ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

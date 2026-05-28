@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.motor.steer": {
+			"loop": true,
+			"animation_length": 0.96,
+			"bones": {
+				"root": {
+					"rotation": [0, 0, "math.max(-15, math.min(12, query.yaw_speed * 0.5)) * 1"]
+				},
+				"stang": {
+					"rotation": [0, "math.max(-30, math.min(30, query.yaw_speed * 0.5)) * 1", 0]
+				}
+			}
+		},
+		"animation.motor.move": {
+			"loop": true,
+			"animation_length": 0.95833,
+			"bones": {
+				"wheel1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.9583": [360, 0, 0]
+					}
+				},
+				"wheel2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.9583": [360, 0, 0]
+					}
+				},
+				"bone": {
+					"rotation": ["query.vertical_speed < 10.5 && query.vertical_speed > -10.5 ? -q.vertical_speed : 5.5", 0, 0]
+				}
+			}
+		}
+	}
+}

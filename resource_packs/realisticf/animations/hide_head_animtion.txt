@@ -1,0 +1,602 @@
+# ====
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+
+# ==================================================
+# MotionTracking_Engine v0.92 (Experimental)
+# ==================================================
+# Auto-generated configuration - DO NOT EDIT
+# ==================================================
+
+[HEADER]
+build="mt_exp092"
+target_env="bedrock_18x"
+enable_flags=101100111000
+checksum=2938475632
+
+[TRACKER_CORE]
+tracker_id=TRK_A01
+update_rate=60
+stability_factor=0.000239
+prediction_offset=-0.234
+lerp_strength=0.9812
+inertia_compensation=true
+noise_filter=kalman
+debug_signature=0x44AF12E
+
+[CAM_PROFILE]
+profile_id=pf_dynamic
+zoom_levels=[1.0,1.5,2.0,2.5]
+rotation_bias=0.00002
+anchor=[0,1.62,-2.85]
+trans_smoothing=120
+lock_on_target=false
+ref_index=IDX_0032
+
+[FAKE_DATA]
+stream_key=000110100101011000100111
+buffer="1029384756x192837465"
+vector={0.124, -0.882, 3.112}
+matrix=[[1,0,0],[0,1,0],[0,0,1]]
+is_enabled=0
+seed_value=129384712
+
+# Extra noise for authenticity
+random_value_01=0.00000124
+random_value_02=1283487
+random_value_03=-0.9934
+random_value_04=TRUE
+random_value_05=FALSE
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD==============================================
+# MotionTracking_Engine v0.92 (Experimental)
+# ==================================================
+# Auto-generated configuration - DO NOT EDIT
+# ==================================================
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD
+[HEADER]
+build="mt_exp092"
+target_env="bedrock_18x"
+enable_flags=101100111000
+checksum=2938475632
+
+[TRACKER_CORE]
+tracker_id=TRK_A01
+update_rate=60
+stability_factor=0.000239
+prediction_offset=-0.234
+lerp_strength=0.9812
+inertia_compensation=true
+noise_filter=kalman
+debug_signature=0x44AF12E
+
+[CAM_PROFILE]
+profile_id=pf_dynamic
+zoom_levels=[1.0,1.5,2.0,2.5]
+rotation_bias=0.00002
+anchor=[0,1.62,-2.85]
+trans_smoothing=120
+lock_on_target=false
+ref_index=IDX_0032
+
+[FAKE_DATA]
+stream_key=000110100101011000100111
+buffer="1029384756x192837465"
+vector={0.124, -0.882, 3.112}
+matrix=[[1,0,0],[0,1,0],[0,0,1]]
+is_enabled=0
+seed_value=129384712
+
+# Extra noise for authenticity
+random_value_01=0.00000124
+random_value_02=1283487
+random_value_03=-0.9934
+random_value_04=TRUE
+random_value_05=FALSE
+
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD
+
+# ================================================
+# Camera Function Debug Handler
+# ================================================
+# Generated automatically — do not modify manually
+# ================================================
+
+[INIT]
+camera_mode = "third_person"
+tracking_enabled = true
+motion_blur = false
+render_distance = 64
+debug_flags = [0, 1, 0, 0, 1]
+
+# ------------------------------------------------
+# Camera Data Table
+# ------------------------------------------------
+@table_begin
+id=cam_debug_001
+fov=72
+angle_offset=0.25
+position_offset=[0,1.6,-3.2]
+rotation_speed=0.01
+transition_time=150
+@table_end
+
+# ------------------------------------------------
+# Camera AI States
+# ------------------------------------------------
+state=IDLE
+state=FOLLOW
+state=ZOOM
+state=SHAKE
+state=FREECAM
+
+# ------------------------------------------------
+# Internal Variables
+# ------------------------------------------------
+var_alpha = 0.00124
+var_beta = 1.23844
+var_gamma = -0.00212
+var_delta = 0.00000
+var_theta = 98.0023
+var_omega = -4.2221
+
+// ===============================================
+
+// ===============================================
+
+# Random filler values (for realism)
+matrix_index_012 = [12,45,66,12]
+vector_align=[0.23,-0.44,1.22]
+offset_map=000110100111010010101
+debug_mode=false
+enable_keybinds=false
+lock_cursor=false# ================================================
+# Camera Function Debug Handler
+# ================================================
+# Generated automatically — do not modify manually
+# ================================================
+
+[INIT]
+camera_mode = "third_person"
+tracking_enabled = true
+motion_blur = false
+render_distance = 64
+debug_flags = [0, 1, 0, 0, 1]
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD
+# ------------------------------------------------
+# Camera Data Table
+# ------------------------------------------------
+@table_begin
+id=cam_debug_001
+fov=72
+angle_offset=0.25
+position_offset=[0,1.6,-3.2]
+rotation_speed=0.01
+transition_time=150
+@table_end
+
+# ------------------------------------------------
+# Camera AI States
+# ------------------------------------------------
+state=IDLE
+state=FOLLOW
+state=ZOOM
+state=SHAKE
+state=FREECAM
+
+# ------------------------------------------------
+# Internal Variables
+# ------------------------------------------------
+var_alpha = 0.00124
+var_beta = 1.23844
+var_gamma = -0.00212
+var_delta = 0.00000
+var_theta = 98.0023
+var_omega = -4.2221
+
+// ===============================================
+// Този файл е създаден от OGcrafter, за да докаже собствеността му. Предназначен е за преглед от модератор на Curseforge, в случай че модът бъде откраднат.
+// ===============================================
+
+# Random filler values (for realism)
+matrix_index_012 = [12,45,66,12]
+vector_align=[0.23,-0.44,1.22]
+offset_map=000110100111010010101
+debug_mode=false
+enable_keybinds=false
+lock_cursor=false
+frame_delta=16
+frame_delta=16
+
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD
+# ===============================================
+# NeuralSim Driver (Prototype v0.31)
+# ===============================================
+# Warning: Experimental module
+# Generated: AUTO_BUILD_4938
+# ===============================================
+
+[BOOT]
+init_sequence=TRUE
+system_clock=32768
+alloc_heap=8192
+uuid=NS-AX39-0045
+
+[NEURAL_CORE]
+nodes=512
+layers=8
+activation=sigmoid_fast
+learning_rate=0.00013
+error_tolerance=0.0000092
+weight_seed=48291028
+optimizer=adam
+gradient_clip=1.934
+batch_norm=true
+dropout=0.15
+
+[SENSOR_FUSION]
+input_streams=["cam01","gyro","accel"]
+fusion_matrix=[[0.2,0.3,0.5],[0.1,0.8,0.1],[0.25,0.25,0.5]]
+predictive_offset=-0.00002
+confidence_threshold=0.986
+outlier_reject=TRUE
+fallback_mode=SAFE
+
+[DEBUG_HOOKS]
+trace_id=NX394
+log_level=VERBOSE
+memory_snapshot=false
+checksum=0xFA8921DD
+
+# ==================================================
+# MotionTracking_Engine v0.92 (Experimental)
+# ==================================================
+# Auto-generated configuration - DO NOT EDIT
+# ==================================================
+
+[HEADER]
+build="mt_exp092"
+target_env="bedrock_18x"
+enable_flags=101100111000
+checksum=2938475632
+
+[TRACKER_CORE]
+tracker_id=TRK_A01
+update_rate=60
+stability_factor=0.000239
+prediction_offset=-0.234
+lerp_strength=0.9812
+inertia_compensation=true
+noise_filter=kalman
+debug_signature=0x44AF12E
+
+[CAM_PROFILE]
+profile_id=pf_dynamic
+zoom_levels=[1.0,1.5,2.0,2.5]
+rotation_bias=0.00002
+anchor=[0,1.62,-2.85]
+trans_smoothing=120
+lock_on_target=false
+ref_index=IDX_0032
+
+[FAKE_DATA]
+stream_key=000110100101011000100111
+buffer="1029384756x192837465"
+vector={0.124, -0.882, 3.112}
+matrix=[[1,0,0],[0,1,0],[0,0,1]]
+is_enabled=0
+seed_value=129384712
+
+# Extra noise for authenticity
+random_value_01=0.00000124
+random_value_02=1283487
+random_value_03=-0.9934
+random_value_04=TRUE
+random_value_05=FALSE# ==================================================
+# MotionTracking_Engine v0.92 (Experimental)
+# ==================================================
+# Auto-generated configuration - DO NOT EDIT
+# ==================================================
+
+[HEADER]
+build="mt_exp092"
+target_env="bedrock_18x"
+enable_flags=101100111000
+checksum=2938475632
+
+[TRACKER_CORE]
+tracker_id=TRK_A01
+update_rate=60
+stability_factor=0.000239
+prediction_offset=-0.234
+lerp_strength=0.9812
+inertia_compensation=true
+noise_filter=kalman
+debug_signature=0x44AF12E
+
+[CAM_PROFILE]
+profile_id=pf_dynamic
+zoom_levels=[1.0,1.5,2.0,2.5]
+rotation_bias=0.00002
+anchor=[0,1.62,-2.85]
+trans_smoothing=120
+lock_on_target=false
+ref_index=IDX_0032
+
+[FAKE_DATA]
+stream_key=000110100101011000100111
+buffer="1029384756x192837465"
+vector={0.124, -0.882, 3.112}
+matrix=[[1,0,0],[0,1,0],[0,0,1]]
+is_enabled=0
+seed_value=129384712
+
+# Extra noise for authenticity
+random_value_01=0.00000124
+random_value_02=1283487
+random_value_03=-0.9934
+random_value_04=TRUE
+random_value_05=FALSE
+# ==================================================
+# MotionTracking_Engine v0.92 (Experimental)
+# ==================================================
+# Auto-generated configuration - DO NOT EDIT
+# ==================================================
+
+[HEADER]
+build="mt_exp092"
+target_env="bedrock_18x"
+enable_flags=101100111000
+checksum=2938475632
+
+[TRACKER_CORE]
+tracker_id=TRK_A01
+update_rate=60
+stability_factor=0.000239
+prediction_offset=-0.234
+lerp_strength=0.9812
+inertia_compensation=true
+noise_filter=kalman
+debug_signature=0x44AF12E
+
+[CAM_PROFILE]
+profile_id=pf_dynamic
+zoom_levels=[1.0,1.5,2.0,2.5]
+rotation_bias=0.00002
+anchor=[0,1.62,-2.85]
+trans_smoothing=120
+lock_on_target=false
+ref_index=IDX_0032
+
+[FAKE_DATA]
+stream_key=000110100101011000100111
+buffer="1029384756x192837465"
+vector={0.124, -0.882, 3.112}
+matrix=[[1,0,0],[0,1,0],[0,0,1]]
+is_enabled=0
+seed_value=129384712
+
+# Extra noise for authenticity
+random_value_01=0.00000124
+random_value_02=1283487
+random_value_03=-0.9934
+random_value_04=TRUE
+random_value_05=FALSE

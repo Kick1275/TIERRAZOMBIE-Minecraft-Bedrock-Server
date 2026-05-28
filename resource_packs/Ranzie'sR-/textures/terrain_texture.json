@@ -1,0 +1,98 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"wired_fence": {
+			"textures": "textures/blocks/wired_fence.png"
+		},
+		"cheval_fence": {
+			"textures": "textures/blocks/cheval_fence.png"
+		},
+		"spiked_fence": {
+			"textures": "textures/blocks/spiked_fence.png"
+		},
+		"chain_fence": {
+			"textures": "textures/blocks/chain_fence.png"
+		},
+		"oak_spiked_fence": {
+			"textures": "textures/blocks/oak_spiked_fence.png"
+		},
+		"dark_oak_spiked_fence": {
+			"textures": "textures/blocks/dark_oak_spiked_fence.png"
+		},
+		"cherry_spiked_fence": {
+			"textures": "textures/blocks/cherry_spiked_fence.png"
+		},
+		"mangrove_spiked_fence": {
+			"textures": "textures/blocks/mangrove_spiked_fence.png"
+		},
+		"spruce_spiked_fence": {
+			"textures": "textures/blocks/spruce_spiked_fence.png"
+		},
+		"birch_spiked_fence": {
+			"textures": "textures/blocks/birch_spiked_fence.png"
+		},
+		"acacia_spiked_fence": {
+			"textures": "textures/blocks/acacia_spiked_fence.png"
+		},
+		"jungle_spiked_fence": {
+			"textures": "textures/blocks/jungle_spiked_fence.png"
+		},
+		"pale_spiked_fence": {
+			"textures": "textures/blocks/pale_spiked_fence.png"
+		},
+		"bamboo_spiked_fence": {
+			"textures": "textures/blocks/bamboo_spiked_fence.png"
+		},
+		"warped_spiked_fence": {
+			"textures": "textures/blocks/warped_spiked_fence.png"
+		},
+		"crimson_spiked_fence": {
+			"textures": "textures/blocks/crimson_spiked_fence.png"
+		},
+		"oak_reinforced_spiked_fence": {
+			"textures": "textures/blocks/oak_reinforced_spiked_fence.png"
+		},
+		"dark_oak_reinforced_spiked_fence": {
+			"textures": "textures/blocks/dark_oak_reinforced_spiked_fence.png"
+		},
+		"cherry_reinforced_spiked_fence": {
+			"textures": "textures/blocks/cherry_reinforced_spiked_fence.png"
+		},
+		"mangrove_reinforced_spiked_fence": {
+			"textures": "textures/blocks/mangrove_reinforced_spiked_fence.png"
+		},
+		"spruce_reinforced_spiked_fence": {
+			"textures": "textures/blocks/spruce_reinforced_spiked_fence.png"
+		},
+		"birch_reinforced_spiked_fence": {
+			"textures": "textures/blocks/birch_reinforced_spiked_fence.png"
+		},
+		"acacia_reinforced_spiked_fence": {
+			"textures": "textures/blocks/acacia_reinforced_spiked_fence.png"
+		},
+		"jungle_reinforced_spiked_fence": {
+			"textures": "textures/blocks/jungle_reinforced_spiked_fence.png"
+		},
+		"pale_reinforced_spiked_fence": {
+			"textures": "textures/blocks/pale_reinforced_spiked_fence.png"
+		},
+		"bamboo_reinforced_spiked_fence": {
+			"textures": "textures/blocks/bamboo_reinforced_spiked_fence.png"
+		},
+		"warped_reinforced_spiked_fence": {
+			"textures": "textures/blocks/warped_reinforced_spiked_fence.png"
+		},
+		"crimson_reinforced_spiked_fence": {
+			"textures": "textures/blocks/crimson_reinforced_spiked_fence.png"
+		},
+		"iron_spiked_fence": {
+			"textures": "textures/blocks/iron_spiked_fence.png"
+		},
+		"iron_reinforced_spiked_fence": {
+			"textures": "textures/blocks/iron_reinforced_spiked_fence.png"
+		}
+	}
+}

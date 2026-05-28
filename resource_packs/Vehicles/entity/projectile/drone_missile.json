@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:drone_missile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/homing missile"
+			},
+			"geometry": {
+				"default": "geometry.homing_missile"
+			},
+			"render_controllers": [
+				"controller.render.homing_missile"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"move": "animation.common.look_at_target",
+				"particle": "controller.animation.particle"
+			},
+			"scripts": {
+				"animate": [
+					"particle",
+					"move"
+				]
+			},
+			"particle_effects": {
+				"particle": "af:missile_smoke"
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.doctor": {
+			"initial_state": "doctor_inactive",
+			"states": {
+				"doctor_inactive": {
+					"animations": [
+						"doctor_inactive"
+					]
+				}
+			}
+		}
+	}
+}

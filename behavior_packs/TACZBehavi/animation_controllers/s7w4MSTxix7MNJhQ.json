@@ -1,0 +1,196 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mp5": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='mp5' && q.is_using_item) || query.get_equipped_item_name=='mp5_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s mp5 30",
+            "@s[hasitem={item=krep:mp5, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "mp5.30": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle') <= 3"
+            },
+            {
+              "mp5.30s": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle') >= 4"
+            },
+            {
+              "mp5.31": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function mp5"
+          ]
+        },
+        "mp5.31": {
+          "animations": [
+            "mp5shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={mp5=0}] slot.weapon.mainhand 1 krep:mp5_emp 1 0"
+          ]
+        },
+        "mp5.30": {
+          "animations": [
+            "mp5shoot"
+          ],
+          "transitions": [
+            {
+              "delay.30": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('mp5') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp5' && !q.is_using_item"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp5'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mp5_fire",
+            "/function mp5",
+            "/scoreboard players set @s[scores={mp5=32..}] mp5 31",
+            "/scoreboard players remove @s[scores={mp5=1..31}] mp5 1",
+            "/playsound mp5.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={mp5=0}] slot.weapon.mainhand 1 krep:mp5_emp 1 0",
+            "/title @s[scores={mp5=0}] actionbar No Ammunition"
+          ]
+        },
+        "delay.30": {
+          "animations": [
+            "mp5shoot"
+          ],
+          "transitions": [
+            {
+              "mp5.29": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('mp5') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp5' && !q.is_using_item"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp5'"
+            }
+          ]
+        },
+        "mp5.29": {
+          "transitions": [
+            {
+              "mp5.30": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "query.scoreboard('mp5') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp5' && !q.is_using_item"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp5'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mp5_fire",
+            "/function mp5",
+            "/scoreboard players set @s[scores={mp5=32..}] mp5 31",
+            "/scoreboard players remove @s[scores={mp5=1..31}] mp5 1",
+            "/playsound mp5.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={mp5=0}] slot.weapon.mainhand 1 krep:mp5_emp 1 0",
+            "/title @s[scores={mp5=0}] actionbar No Ammunition"
+          ]
+        },
+        "mp5.30s": {
+          "animations": [
+            "mp5shoot"
+          ],
+          "transitions": [
+            {
+              "delay.30s": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('mp5') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp5' && !q.is_using_item"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp5'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mp5_fire",
+            "/function mp5",
+            "/scriptevent krep_mp5_recoil",
+            "/scoreboard players set @s[scores={mp5=32..}] mp5 31",
+            "/scoreboard players remove @s[scores={mp5=1..31}] mp5 1",
+            "/playsound mp5.suppress @a[r=30]",
+            "/replaceitem entity @s[scores={mp5=0}] slot.weapon.mainhand 1 krep:mp5_emp 1 0",
+            "/title @s[scores={mp5=0}] actionbar No Ammunition"
+          ]
+        },
+        "delay.30s": {
+          "animations": [
+            "mp5shoot"
+          ],
+          "transitions": [
+            {
+              "mp5.29s": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            },
+            {
+              "setup": "query.scoreboard('mp5') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp5' && !q.is_using_item"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp5'"
+            }
+          ]
+        },
+        "mp5.29s": {
+          "transitions": [
+            {
+              "mp5.30s": "query.get_equipped_item_name=='mp5' && query.is_using_item && query.scoreboard('mp5') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "query.scoreboard('mp5') == 0"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='mp5' && !q.is_using_item"
+            },
+            {
+              "setup": "query.get_equipped_item_name!='mp5'"
+            }
+          ],
+          "on_entry": [
+            "@s krep:mp5_fire",
+            "/function mp5",
+            "/scriptevent krep_mp5_recoil",
+            "/scoreboard players set @s[scores={mp5=32..}] mp5 31",
+            "/scoreboard players remove @s[scores={mp5=1..31}] mp5 1",
+            "/playsound mp5.suppress @a[r=15]",
+            "/replaceitem entity @s[scores={mp5=0}] slot.weapon.mainhand 1 krep:mp5_emp 1 0",
+            "/title @s[scores={mp5=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.buggy.seat": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-67.43742, 7.3875, -2.68849]
+				},
+				"rightArm": {
+					"rotation": [-67.3012, -7.38751, 1.52804]
+				}
+			}
+		}
+	}
+}

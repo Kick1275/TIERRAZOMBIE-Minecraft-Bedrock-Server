@@ -1,0 +1,21 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "eyes:entity_emissive_alpha": {
+      "depthFunc": "LessEqual"
+    },
+    "night_vision:entity_beam_additive": {
+      "blendSrc": "DestColor",
+      "blendDst": "SourceColor",
+      "+defines": [
+        "USE_EMISSIVE"
+      ],
+      "+states": [
+        "Blending",
+        "DisableCulling",
+        "DisableDepthWrite",
+        "DisableAlphaWrite"
+      ]
+    }
+  }
+}

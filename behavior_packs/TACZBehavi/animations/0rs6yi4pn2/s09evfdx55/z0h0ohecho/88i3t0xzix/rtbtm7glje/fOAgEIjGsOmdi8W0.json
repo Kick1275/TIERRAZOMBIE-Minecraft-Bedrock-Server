@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.g17.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.2,
+      "timeline": {
+        "2.1": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:g17 1 0",
+          "/scoreboard players set @s[scores={g17=18..}] g17 17",
+          "/function g17"
+        ],
+        "2.0": [
+          "/function g17reload",
+          "/event entity @s krep:g17_reload"
+        ]
+      }
+    }
+  }
+}

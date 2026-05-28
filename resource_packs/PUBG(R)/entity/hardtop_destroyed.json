@@ -1,0 +1,41 @@
+//bridge-file-version: #33
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "pubg:hardtop_destroyed",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/destroyed_vehicles/uaz_hardtop_destroyed"
+			},
+			"geometry": {
+				"default": "geometry.hardtop"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"drive": "query.modified_move_speed"
+					},
+					"terrain",
+					"engine_smoke"
+				]
+			},
+			"animations": {
+				"drive": "animation.uaz.drive",
+				"down": "animation.uaz.down",
+				"up": "animation.uaz.up",
+				"terrain": "controller.animation.uazdestroyed.terrain",
+				"engine_smoke": "controller.animation.uazdestroyed.smoke"
+			},
+			"render_controllers": [
+				"controller.render.vehicles"
+			],
+			"particle_effects": {
+				"flame": "pubg:engine_fire",
+				"engine": "pubg:engine_smoke_black"
+			}
+		}
+	}
+}

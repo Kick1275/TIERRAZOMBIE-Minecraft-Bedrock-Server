@@ -1,0 +1,39 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Medieval Furniture V6.4 Behavior Pack 1.21.20+ §bBy EndXenoc",
+		"name": "§bV6.4 §fMedieval Furniture Behavior Pack",
+		"uuid": "62508a94-4e10-4806-9d00-37ae5c73f40f",
+		"version": [0,6,4],
+		"min_engine_version": [1,21,20]
+	},
+	"modules": [
+		{
+			"description": "data",
+			"type": "data",
+			"uuid": "6a4c0c92-8c02-46a7-979c-585f0b8b9c00",
+			"version": [0,6,4]
+		},
+		{
+			"language": "javascript",
+			"type": "script",
+			"uuid": "67d5a4e4-c27d-4882-800a-51cf2f9c8683",
+			"version": [0,6,4],
+			"entry": "scripts/main.js"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "cffa7ccf-8e2c-41bf-af34-4e33327c4350",
+			"version": [0,6,4]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.13.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.2.0"
+		}
+	]
+}

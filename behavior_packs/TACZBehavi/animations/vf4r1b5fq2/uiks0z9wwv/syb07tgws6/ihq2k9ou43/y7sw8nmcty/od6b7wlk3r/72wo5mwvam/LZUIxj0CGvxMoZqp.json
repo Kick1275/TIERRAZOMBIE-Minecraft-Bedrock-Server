@@ -1,0 +1,19 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.deagleg.reload.tac2": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.2,
+      "timeline": {
+        "2.0": [
+          "/scoreboard players set @s[scores={deagleg=17..}] deagleg 16",
+          "/function deagleg"
+        ],
+        "1.9": [
+          "/function deaglegreload2",
+          "/event entity @s krep:deagleg_reload"
+        ]
+      }
+    }
+  }
+}

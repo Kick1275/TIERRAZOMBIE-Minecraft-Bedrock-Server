@@ -1,0 +1,83 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.buggy.drive": {
+			"loop": true,
+			"animation_length": 0.16,
+			"bones": {
+				"fronttire1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [-360, 0, 0]
+					}
+				},
+				"fronttire2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [-360, 0, 0]
+					}
+				},
+				"backtires": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.16": [-360, 0, 0]
+					}
+				},
+				"pointer2": {
+					"rotation": {
+						"0.0": [0, 0, -187.5],
+						"0.04": [0, 0, -180],
+						"0.08": [0, 0, -185]
+					}
+				},
+				"pointer1": {
+					"rotation": {
+						"0.0": [0, 0, -187.5],
+						"0.04": [0, 0, -180],
+						"0.08": [0, 0, -185]
+					}
+				}
+			}
+		},
+		"animation.buggy.turn": {
+			"loop": true,
+			"bones": {
+				"steering_wheel": {
+					"rotation": [0, 0, "Math.max(-25, Math.min(25,query.yaw_speed * 0.5))*-1"]
+				},
+				"fronttire1": {
+					"rotation": [0, "Math.max(-20, Math.min(20,query.yaw_speed * 0.5))", 0]
+				},
+				"fronttire2": {
+					"rotation": [0, "Math.max(-20, Math.min(20,query.yaw_speed * 0.5))", 0]
+				}
+			}
+		},
+		"animation.buggy.down": {
+			"loop": true,
+			"bones": {
+				"buggy": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * -4", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.buggy.up": {
+			"loop": true,
+			"bones": {
+				"buggy": {
+					"rotation": {
+						"0.0": {
+							"post": ["query.vertical_speed * 4", 0, 0],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		}
+	}
+}

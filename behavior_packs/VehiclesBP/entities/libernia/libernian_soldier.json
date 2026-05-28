@@ -1,0 +1,662 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:libernian_soldier",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?(query.is_baby?12:5)+(math.die_roll(query.equipment_count,1,3)):0"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"libernian_soldier",
+					"libernia",
+					"soldier",
+					"player"
+				]
+			},
+			"minecraft:health": {
+				"value": 1120,
+				"max": 1120
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.25
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": false,
+				"avoid_water": true
+			},
+			"minecraft:nameable": {},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"test": "is_family",
+									"value": "libernian_soldier",
+									"subject": "other"
+								}
+							]
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"test": "is_family",
+									"value": "vehicle",
+									"subject": "other"
+								}
+							]
+						},
+						"damage_multiplier": 10,
+						"deals_damage": true
+					},
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"test": "is_family",
+									"value": "sentry",
+									"subject": "other"
+								}
+							]
+						},
+						"damage_multiplier": 10,
+						"deals_damage": true
+					}
+				]
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"must_see": true,
+				"reselect_targets": true,
+				"within_radius": 32,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								},
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"any_of": [
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"value": "telslakia"
+												},
+												{
+													"test": "is_family",
+													"subject": "other",
+													"value": "telslakia"
+												}
+											]
+										}
+									]
+								},
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "vehicle"
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia"
+										},
+										{
+											"test": "rider_count",
+											"subject": "other",
+											"value": 1,
+											"operator": ">="
+										}
+									]
+								}
+							]
+						},
+						"max_dist": 32,
+						"reevaluate_description": true
+					}
+				]
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 9,
+				"look_distance": 8
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 10
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:on_target_escape": {
+				"event": "minecraft:on_calm",
+				"target": "self"
+			},
+			"minecraft:leashable": {
+				"soft_distance": 5,
+				"hard_distance": 10,
+				"max_distance": 16
+			},
+			"minecraft:equipment": {
+				"table": "loot_tables/libernian_soldier.json"
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "free_roam"
+									},
+									{
+										"test": "is_sneaking",
+										"subject": "other",
+										"operator": "!="
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:rations",
+										"operator": "!="
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "minecraft:lead",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:guard_post",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.edit"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "guard_post"
+									},
+									{
+										"test": "is_sneaking",
+										"subject": "other",
+										"operator": "!="
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:rations",
+										"operator": "!="
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "minecraft:lead",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:patrol_area",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.edit"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "patrol_area"
+									},
+									{
+										"test": "is_sneaking",
+										"subject": "other",
+										"operator": "!="
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:rations",
+										"operator": "!="
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "minecraft:lead",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:free_roam",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.edit"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0.5,
+				"max": 1
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:rations",
+						"heal_amount": 5
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"broadcast_anger": true,
+					"broadcast_range": 32,
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					},
+					"broadcast_targets": [
+						"libernian_soldier"
+					],
+					"angry_sound": "mad",
+					"sound_interval": {
+						"range_min": 3,
+						"range_max": 5
+					}
+				}
+			},
+			"calm": {
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				}
+			},
+			"cover": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.5,
+					"time_down_event": {
+						"event": "af:stop_cover",
+						"target": "self"
+					}
+				},
+				"minecraft:is_ignited": {}
+			},
+			"patrol_area": {
+				"minecraft:behavior.random_stroll": {
+					"priority": 8,
+					"speed_multiplier": 1
+				},
+				"minecraft:home": {
+					"restriction_radius": 32
+				},
+				"minecraft:behavior.move_towards_home_restriction": {
+					"priority": 5,
+					"speed_multiplier": 1.5
+				},
+				"minecraft:behavior.tempt": {
+					"priority": 7,
+					"items": [
+						"af:rations"
+					],
+					"can_tempt_vertically": true,
+					"speed_multiplier": 1.5,
+					"within_radius": 16
+				}
+			},
+			"free_roam": {
+				"minecraft:behavior.random_stroll": {
+					"priority": 8,
+					"speed_multiplier": 1
+				},
+				"minecraft:behavior.tempt": {
+					"priority": 7,
+					"items": [
+						"af:rations"
+					],
+					"can_tempt_vertically": true,
+					"speed_multiplier": 1.5,
+					"within_radius": 16
+				}
+			},
+			"guard_post": {
+				"minecraft:home": {
+					"restriction_radius": 8
+				},
+				"minecraft:behavior.go_home": {
+					"goal_radius": 0.5,
+					"priority": 6
+				},
+				"minecraft:behavior.move_towards_home_restriction": {
+					"priority": 5,
+					"speed_multiplier": 1.5
+				}
+			},
+			"throw_smoke": {
+				"minecraft:behavior.ranged_attack": {
+					"priority": 4,
+					"attack_interval_min": 4,
+					"attack_interval_max": 8,
+					"attack_radius": 32,
+					"speed_multiplier": 1.5,
+					"attack_radius_min": 8
+				},
+				"minecraft:shooter": {
+					"def": "af:thrown_grenade_smoke"
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": [
+						10,
+						16
+					],
+					"time_down_event": {
+						"event": "af:stop_throw_smoke",
+						"target": "self"
+					}
+				}
+			},
+			"shoot_default": {
+				"minecraft:behavior.ranged_attack": {
+					"priority": 4,
+					"attack_interval_min": 2,
+					"attack_interval_max": 4,
+					"attack_radius": 32,
+					"burst_shots": 30,
+					"burst_interval": 0.1,
+					"speed_multiplier": 1.5,
+					"attack_radius_min": 3
+				},
+				"minecraft:shooter": {
+					"def": "af:m4carbine_bullet<af:soldier>"
+				}
+			}
+		},
+		"events": {
+			"minecraft:on_calm": {
+				"remove": {
+					"component_groups": [
+						"angry"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"calm"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"weight": 90,
+								"add": {
+									"component_groups": [
+										"angry",
+										"shoot_default"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"calm",
+										"throw_smoke"
+									]
+								}
+							},
+							{
+								"weight": 10,
+								"add": {
+									"component_groups": [
+										"angry",
+										"throw_smoke"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"calm",
+										"shoot_default"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"calm",
+						"free_roam",
+						"shoot_default"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar interact to change behavior.",
+						"tag @s add free_roam"
+					]
+				}
+			},
+			"af:stop_cover": {
+				"remove": {
+					"component_groups": [
+						"cover"
+					]
+				}
+			},
+			"af:start_cover": {
+				"add": {
+					"component_groups": [
+						"cover"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"effect @s slowness 1 255 true"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @a[r=5] actionbar interact to change behavior, can be healed with rations."
+					]
+				}
+			},
+			"af:patrol_area": {
+				"add": {
+					"component_groups": [
+						"patrol_area"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"free_roam",
+						"guard_post"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add patrol_area",
+						"tag @s remove free_roam",
+						"tag @s remove guard_post",
+						"title @a[r=5] actionbar order: Patrol Area"
+					]
+				}
+			},
+			"af:free_roam": {
+				"add": {
+					"component_groups": [
+						"free_roam"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"patrol_area",
+						"guard_post"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add free_roam",
+						"tag @s remove patrol_area",
+						"tag @s remove guard_post",
+						"title @a[r=5] actionbar order: Free Roam"
+					]
+				}
+			},
+			"af:guard_post": {
+				"add": {
+					"component_groups": [
+						"guard_post"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"free_roam",
+						"patrol_area"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add guard_post",
+						"tag @s remove patrol_area",
+						"tag @s remove free_roam",
+						"title @a[r=5] actionbar order: Guard Post"
+					]
+				}
+			},
+			"af:stop_throw_smoke": {
+				"remove": {
+					"component_groups": [
+						"throw_smoke"
+					]
+				}
+			}
+		}
+	}
+}

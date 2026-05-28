@@ -1,0 +1,32 @@
+[
+  {
+    "flipbook_texture": "textures/blocks/11x11_on_block",
+    "atlas_tile": "11x11_on_block",
+    "ticks_per_frame": 5
+  },
+  {
+    "flipbook_texture": "textures/blocks/openlist_block",
+    "atlas_tile": "11x11_openlist_block",
+    "ticks_per_frame": 5
+  },
+  {
+    "flipbook_texture": "textures/blocks/21x21_on_block",
+    "atlas_tile": "21x21_on_block",
+    "ticks_per_frame": 5
+  },
+  {
+    "flipbook_texture": "textures/blocks/openlist_block",
+    "atlas_tile": "21x21_openlist_block",
+    "ticks_per_frame": 5
+  },
+  {
+    "flipbook_texture": "textures/blocks/31x31_on_block",
+    "atlas_tile": "31x31_on_block",
+    "ticks_per_frame": 5
+  },
+  {
+    "flipbook_texture": "textures/blocks/openlist_block",
+    "atlas_tile": "31x31_openlist_block",
+    "ticks_per_frame": 5
+  }
+]

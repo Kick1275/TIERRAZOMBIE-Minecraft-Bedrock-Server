@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.m1a1.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 1.7
+				}
+			}
+		},
+		"animation.m1a1.look_at_target": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						"query.target_x_rotation",
+						"query.target_y_rotation",
+						0
+					],
+					"scale": 1.7
+				},
+				"turret": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						0,
+						"query.target_y_rotation-this",
+						0
+					],
+					"scale": 1.7
+				},
+				"gun": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				},
+				"gun2": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

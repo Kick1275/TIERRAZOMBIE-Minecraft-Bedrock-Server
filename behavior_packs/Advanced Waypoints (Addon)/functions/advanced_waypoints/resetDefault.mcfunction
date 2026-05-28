@@ -1,0 +1,1 @@
+scoreboard objectives remove advanced_waypoints_cost_xp

@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.gas_canister.open": {
+			"loop": true,
+			"bones": {
+				"side0": {
+					"rotation": [
+						100,
+						0,
+						0
+					]
+				},
+				"side1": {
+					"rotation": [
+						0,
+						0,
+						100
+					]
+				},
+				"side2": {
+					"rotation": [
+						-100,
+						0,
+						0
+					]
+				},
+				"side3": {
+					"rotation": [
+						0,
+						0,
+						-100
+					]
+				},
+				"button": {
+					"scale": [
+						1,
+						-1,
+						1
+					]
+				}
+			}
+		}
+	}
+}

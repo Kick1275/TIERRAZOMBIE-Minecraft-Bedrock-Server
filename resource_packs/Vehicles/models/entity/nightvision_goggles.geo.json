@@ -1,0 +1,250 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nightvision_goggles",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [
+					0,
+					1.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "head",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "mask",
+					"parent": "head",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								30,
+								-7
+							],
+							"size": [
+								1,
+								2,
+								3
+							],
+							"uv": [
+								28,
+								26
+							]
+						},
+						{
+							"origin": [
+								-2,
+								30,
+								-7
+							],
+							"size": [
+								1,
+								2,
+								3
+							],
+							"uv": [
+								28,
+								31
+							]
+						},
+						{
+							"origin": [
+								-4,
+								24,
+								-4
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"inflate": 0.25,
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-4,
+								29.8,
+								-4
+							],
+							"size": [
+								8,
+								2,
+								8
+							],
+							"inflate": 0.3,
+							"uv": [
+								0,
+								16
+							]
+						}
+					]
+				},
+				{
+					"name": "goggles",
+					"parent": "mask",
+					"pivot": [
+						0,
+						31,
+						-7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3,
+								29.5,
+								-11
+							],
+							"size": [
+								2,
+								5,
+								2
+							],
+							"uv": [
+								12,
+								26
+							]
+						},
+						{
+							"origin": [
+								-1,
+								30,
+								-10
+							],
+							"size": [
+								2,
+								2,
+								4
+							],
+							"uv": [
+								0,
+								26
+							]
+						},
+						{
+							"origin": [
+								1,
+								29.5,
+								-11
+							],
+							"size": [
+								2,
+								5,
+								2
+							],
+							"uv": [
+								20,
+								26
+							]
+						}
+					]
+				},
+				{
+					"name": "tint",
+					"parent": "head",
+					"pivot": [
+						0,
+						22,
+						-3
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								12,
+								-6
+							],
+							"size": [
+								32,
+								32,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										52,
+										52
+									],
+									"uv_size": [
+										12,
+										12
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										32
+									],
+									"uv_size": [
+										0,
+										32
+									]
+								},
+								"south": {
+									"uv": [
+										0,
+										63
+									],
+									"uv_size": [
+										1,
+										1
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										32
+									],
+									"uv_size": [
+										0,
+										32
+									]
+								},
+								"up": {
+									"uv": [
+										0,
+										32
+									],
+									"uv_size": [
+										32,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										32,
+										32
+									],
+									"uv_size": [
+										32,
+										0
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:cd_player",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "af_cd_player",
+			"minecraft:entity_placer": {
+				"entity": "af:cd_player"
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.clothes": {
+      "geometry": "Geometry.clothes",
+      "is_hurt_color": {},
+      "on_fire_color": {},
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": false 
+        },
+        {
+          "head": "!v.is_first_person"
+		},
+	    {
+		  "hat": "!v.is_first_person"
+		},
+		{
+		  "body": "!v.is_first_person"
+		},
+		{
+		  "jacket": "!v.is_first_person"
+		},
+		{
+		  "leftLeg": "!v.is_first_person"
+		},
+		{
+		  "leftPants": "!v.is_first_person"
+		},
+		{
+		  "rightLeg": "!v.is_first_person"
+		},
+		{
+		  "rightPants": "!v.is_first_person"
+		},
+		{
+		  "rightArm": "!v.is_first_person || v.is_first_person && q.get_equipped_item_name(0, 1) == '' || q.get_equipped_item_name(0, 1) == 'map' || v.guns"
+		},
+		{
+		  "rightClothes": "!v.is_first_person || v.is_first_person && q.get_equipped_item_name(0, 1) == '' || q.get_equipped_item_name(0, 1) == 'map' || v.guns"
+		},
+		{
+		  "rightSleeve": "!v.is_first_person || v.is_first_person && q.get_equipped_item_name(0, 1) == '' || q.get_equipped_item_name(0, 1) == 'map' || v.guns"
+		},
+		{
+		  "leftClothes": "!v.is_first_person || v.is_first_person && q.get_equipped_item_name(0, 1) == '' || q.get_equipped_item_name(0, 1) == 'map' || (v.guns)"
+		},
+		{
+		  "leftArm": "!v.is_first_person || v.is_first_person && q.get_equipped_item_name(0, 1) == '' || q.get_equipped_item_name(0, 1) == 'map' || (v.guns)"
+		},
+		{
+		  "leftSleeve": "!v.is_first_person || v.is_first_person && q.get_equipped_item_name(0, 1) == '' || q.get_equipped_item_name(0, 1) == 'map' || (v.guns)"
+        }
+      ],
+      "textures": [
+        "Texture.clothes"
+      ]
+    }
+  }
+}

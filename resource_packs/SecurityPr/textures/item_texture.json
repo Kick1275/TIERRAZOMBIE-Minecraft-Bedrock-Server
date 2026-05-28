@@ -1,0 +1,24 @@
+{
+   "resource_pack_name": "Security protection blocks",
+   "texture_name": "atlas.items",
+   "texture_data": {
+      "11x11": {
+         "textures": "textures/items/protections/11x11"
+      },
+      "21x21": {
+         "textures": "textures/items/protections/21x21"
+      },
+      "31x31": {
+         "textures": "textures/items/protections/31x31"
+      },
+      "upgrade_protection": {
+         "textures": "textures/items/protections/upgrade_protection"
+      },
+      "spb_guide_book": {
+         "textures": "textures/items/protections/spb_guide_book"
+      },
+      "spb_turret": {
+         "textures": "textures/items/protections/turret"
+      }
+   }
+}

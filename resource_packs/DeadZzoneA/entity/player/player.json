@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:player_corpse",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/dead"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.custom"
+      },
+      "scripts": {
+        "pre_animation": [
+		  "v.tcos0 = (Math.cos(q.modified_distance_moved * 38.17) * q.modified_move_speed / v.gliding_speed_value) * 57.3;"
+        ],
+        "initialize": [
+          "v.dead = q.property('mcpe:dead');"
+        ],
+        "animate": [
+          "dead_g"
+        ]
+      },
+      "animations": {
+        "dead_g": "controller.animation.zombie_death.general",
+        "dead1": "animation.dead1",
+        "dead2": "animation.dead2",
+        "dead3": "animation.dead3",
+        "dead4": "animation.dead4",
+        "dead5": "animation.dead5",
+        "dead6": "animation.dead6",
+        "dead7": "animation.dead7",
+        "dead8": "animation.dead8",
+        "dead9": "animation.dead9",
+        "dead10": "animation.dead10",
+        "dead11": "animation.dead11",
+        "dead12": "animation.dead12",
+        "dead13": "animation.dead13",
+        "dead14": "animation.dead14",
+        "dead15": "animation.dead15",
+        "dead16": "animation.dead16"
+      },
+      "render_controllers": [
+        "controller.render.default"
+      ],
+      "enable_attachables": true
+    }
+  }
+}

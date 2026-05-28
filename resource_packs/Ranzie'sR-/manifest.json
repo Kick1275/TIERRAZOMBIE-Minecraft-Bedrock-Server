@@ -1,0 +1,46 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§4Put this in both §l§eGlobal Resources§r§4 and §s§lWorld Resources Pack!\n§fHuge credits to tissou for the zombie sounds",
+        "name": "§l§aRanzie's §4R-and-S Resources Pack 1.2.0",
+        "uuid": "ada14474-e05b-47f6-9f18-bb70288a990d",
+        "version": [1, 2, 0],
+        "min_engine_version": [ 1, 21, 90 ]
+    },
+    "modules": [
+        {
+            "description": "Copyright 2026 Ranzie",
+            "type": "resources",
+            "uuid": "743f6949-51be-44b6-b326-698009928811",
+            "version": [0, 0, 1]
+        }
+    ],
+    "subpacks": [
+		{
+			"folder_name": "br",
+			"name": "§lDifficulty bar §4Bottom right",
+			"memory_tier": 1
+		},
+		{
+			"folder_name": "b",
+			"name": "§lDifficulty bar §4Bottom",
+			"memory_tier": 2
+		},
+		{
+			"folder_name": "tl",
+			"name": "§lDifficulty bar §4Top left",
+			"memory_tier": 3
+		},
+		{
+			"folder_name": "tr",
+			"name": "§lDifficulty bar §4Top right",
+			"memory_tier": 4
+		},
+		{
+			"folder_name": "t",
+			"name": "§lDifficulty bar §4Top",
+			"memory_tier": 5
+		}
+	],
+	"capabilities" : ["pbr"]
+}

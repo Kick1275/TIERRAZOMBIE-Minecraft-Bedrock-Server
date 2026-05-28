@@ -1,0 +1,129 @@
+// Exclusive code for indoAr, you are prohibited from using, studying, or modifying it without the owner permission
+
+{
+  "format_version": "1.13",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bullet:akm",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:snowball"
+    },
+    "component_groups": {
+      "akm:nsight": {
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:projectile": {
+          "on_hit": {
+            "impact_damage": {
+              "knockback": false
+            },
+            "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "event": "krep:onhit",
+              "target": "self"
+            }
+          },
+          "remove_on_hit": {}
+          },
+          "uncertaintyBase": 7.7,
+          "power": 19.1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "inertia": 1,
+          "liquid_inertia": 0.0001,
+          "should_bounce": true,
+          "gravity": 0.01,
+          "anchor": 1
+        }
+      },
+      "akm:sight": {
+        "minecraft:mark_variant": {
+          "value": 2
+        },
+        "minecraft:projectile": {
+          "on_hit": {
+            "impact_damage": {
+              "knockback": false
+            },
+            "definition_event": {
+            "affect_projectile": true,
+            "event_trigger": {
+              "event": "krep:onhit",
+              "target": "self"
+            }
+          },
+          "remove_on_hit": {}
+          },
+          "uncertaintyBase": 1.4,
+          "power": 19.1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "inertia": 1,
+          "liquid_inertia": 0.0001,
+          "should_bounce": true,
+          "gravity": 0.01,
+          "anchor": 1
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.5,
+        "height": 0.5
+      },
+      "minecraft:tick_world":{
+        "distance_to_players": 128,
+        "radius": 2,
+        "never_despawn": false
+      },
+      "minecraft:type_family": {
+        "family": [
+          "bullet"
+        ]
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "glass",
+          "glass_pane",
+          "stained_glass",
+          "stained_glass_pane",
+          "wheat"
+        ]
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "krep:onhit": {
+        "queue_command": {
+          "command": [
+            "fill ~-1 ~-1 ~-1 ~+1 ~+1 ~+1 air replace glass"
+          ]
+        }
+      },
+      "akm:nsight": {
+        "add": {
+          "component_groups": [
+            "akm:nsight"
+          ]
+        }
+      },
+      "akm:sight": {
+        "add": {
+          "component_groups": [
+            "akm:sight"
+          ]
+        }
+      }
+    }
+  }
+}

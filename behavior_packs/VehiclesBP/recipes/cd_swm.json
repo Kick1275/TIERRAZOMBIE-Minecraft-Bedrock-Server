@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:cd_swm"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:aluminium_ingot"
+			},
+			"D": {
+				"item": "minecraft:lead"
+			}
+		},
+		"pattern": [
+			" N ",
+			"NDN",
+			" N "
+		],
+		"result": {
+			"item": "af:cd_swm",
+			"count": 1
+		}
+	}
+}

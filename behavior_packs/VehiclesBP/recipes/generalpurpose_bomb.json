@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:generalpurpose_bomb"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "minecraft:tnt"
+			},
+			"U": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"URU",
+			"RNR",
+			" R "
+		],
+		"result": {
+			"item": "af:generalpurpose_bomb",
+			"count": 4
+		}
+	}
+}

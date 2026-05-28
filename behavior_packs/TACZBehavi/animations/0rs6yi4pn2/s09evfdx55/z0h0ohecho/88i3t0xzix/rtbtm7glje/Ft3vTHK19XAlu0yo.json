@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.g36.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.1,
+      "timeline": {
+        "2.9": [
+          "/replaceitem entity @s slot.weapon.mainhand 1 krep:g36 1 0",
+          "/scoreboard players set @s[scores={g36=31..}] g36 30",
+          "/function g36"
+        ],
+        "2.8": [
+          "/function g36reload",
+          "/event entity @s krep:g36_reload"
+        ]
+      }
+    }
+  }
+}

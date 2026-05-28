@@ -1,0 +1,54 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:telslakian_soldier",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/telslakian_soldier"
+			},
+			"geometry": {
+				"default": "geometry.libernian_soldier"
+			},
+			"render_controllers": [
+				"controller.render.libernian_soldier"
+			],
+			"spawn_egg": {
+				"texture": "af_telslakian_soldier_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"alert": "animation.soldier.alert",
+				"regroup": "animation.soldier.regroup",
+				"focus": "animation.soldier.focus",
+				"run": "animation.soldier.run",
+				"walk": "animation.soldier.walk",
+				"cover": "animation.soldier.cover",
+				"bob": "animation.humanoid.bob",
+				"look": "animation.common.look_at_target",
+				"hold": "animation.gunman.hold"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"walk": "query.modified_move_speed"
+					},
+					{
+						"run": "query.ground_speed>5"
+					},
+					{
+						"alert": "query.has_target&&!query.is_ignited"
+					},
+					{
+						"hold": "!query.has_target"
+					},
+					"bob",
+					"look"
+				]
+			},
+			"enable_attachables": true
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.variant_humvee": {
+	  "arrays": {
+	    "textures": {
+		  "Array.skins": [
+			"Texture.woodland_1",
+		    "Texture.woodland_2",
+		    "Texture.green_1",
+		    "Texture.green_2",
+		    "Texture.tan_1",
+		    "Texture.tan_2",
+		    "Texture.white_1",
+		    "Texture.white_2",
+		    "Texture.black_1",
+		    "Texture.black_2"
+		  ]
+		}
+	  },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.variant]" ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

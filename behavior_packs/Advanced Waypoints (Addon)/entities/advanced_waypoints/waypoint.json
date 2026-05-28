@@ -1,0 +1,51 @@
+{
+  "format_version": "1.19.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "advanced_waypoints:waypoint",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "advanced_waypoints:always_visible": { "type": "enum", "values": ["config00", "config01", "config11", "config10"], "default": "config00", "client_sync": true },
+        "advanced_waypoints:icon": { "type": "int", "range": [0, 27], "default": 0, "client_sync": true },
+
+        "advanced_waypoints:r": { "type": "int", "range": [0, 255], "default": 0, "client_sync": true },
+        "advanced_waypoints:g": { "type": "int", "range": [0, 255], "default": 0, "client_sync": true },
+        "advanced_waypoints:b": { "type": "int", "range": [0, 255], "default": 0, "client_sync": true },
+
+        "advanced_waypoints:name1": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name2": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name3": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name4": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name5": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name6": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name7": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name8": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name9": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name10": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name11": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name12": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        "advanced_waypoints:name13": { "type": "int", "range": [0, 1114112], "default": 0, "client_sync": true },
+        // i can put more 7 leatters before the limit, but i would need to place more cubes on geometry
+
+        "advanced_waypoints:distance1": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true },
+        "advanced_waypoints:distance2": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true },
+        "advanced_waypoints:distance3": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true },
+        "advanced_waypoints:distance4": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true },
+        "advanced_waypoints:distance5": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true },
+        "advanced_waypoints:distance6": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true },
+        "advanced_waypoints:distance7": { "type": "int", "range": [-1, 9], "default": -1, "client_sync": true }
+      }
+    },
+
+    "components": {
+      "minecraft:type_family": { "family": [ "waypoint" ] },
+      "minecraft:damage_sensor": { "triggers": { "cause": "all", "deals_damage": false } },
+      "minecraft:fire_immune": true,
+      "minecraft:movement": { "value": 0 },
+      "minecraft:collision_box": { "width": 0, "height": 0 },
+      "minecraft:physics": { "has_collision": false, "has_gravity": false }
+    }
+  }
+}

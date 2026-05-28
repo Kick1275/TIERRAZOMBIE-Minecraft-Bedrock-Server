@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:chain_fence"
+    },
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "SIS",
+      "SIS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:stick"
+      },
+      "I": {
+        "item": "minecraft:iron_bars"
+      },
+      "L": {
+        "tag": "minecraft:logs"
+      }
+    },
+    "result": {
+      "item": "ranzie:chain_fence",
+      "count": 5
+    }
+  }
+}

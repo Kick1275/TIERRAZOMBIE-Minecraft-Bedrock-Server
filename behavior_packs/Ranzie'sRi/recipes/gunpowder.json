@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ranzie:gunpowder"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:iron_nugget",
+        "data": 0
+      },
+      {
+        "item": "minecraft:charcoal",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "minecraft:gunpowder",
+      "count": 4,
+      "data": 0
+    }
+  }
+}

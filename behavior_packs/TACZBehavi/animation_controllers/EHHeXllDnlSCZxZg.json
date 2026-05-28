@@ -1,0 +1,248 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.hk416": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='hk416' && q.is_using_item) || query.get_equipped_item_name=='hk416_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s hk416 30",
+            "@s[hasitem={item=krep:hk416, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "hk416.30": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')<=3"
+            },
+            {
+              "hk416.30s": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')>=4"
+            },
+            {
+              "hk416.31": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function hk416",
+            "/scoreboard players set @s hk416sound 0"
+          ]
+        },
+        "hk416.31": {
+          "animations": [
+            "hk416shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0"
+          ]
+        },
+        "hk416.30": {
+          "animations": [
+            "hk416shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "setup": "q.property('krep:muzzle') > 3"
+            },
+            {
+              "delay.30": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2 && query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:hk416_fire",
+            "@s krep:hk416_firegrip",
+            "/playsound hk416.shoot @a[r=30]",
+            "/scoreboard players set @s[scores={hk416=32..}] hk416 31",
+            "/scoreboard players add @s[scores={hk416sound=0}] hk416soundsound 1",
+            "/scoreboard players remove @s[scores={hk416=1..31}] hk416 1",
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0",
+            "/title @s[scores={hk416=0}] actionbar No Ammunition",
+            "/function hk416"
+          ]
+        },
+        "delay.30": {
+          "animations": [
+            "hk416shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "hk416.29": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2 && query.all_animations_finished"
+            },
+            {
+              "setup": "q.property('krep:muzzle') > 3"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='hk416' && !query.is_using_item"
+            }
+          ]
+        },
+        "hk416.29": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "hk416.28": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "q.property('krep:muzzle') > 3"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='hk416' && !query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:hk416_fire",
+            "/scoreboard players add @s[scores={hk416sound=0}] hk416soundsound 1",
+            "/playsound hk416.shoot @a[r=30]",
+            "@s krep:hk416_firegrip",
+            "/scoreboard players set @s[scores={hk416=32..}] hk416 31",
+            "/scoreboard players remove @s[scores={hk416=1..31}] hk416 1",
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0",
+            "/title @s[scores={hk416=0}] actionbar No Ammunition",
+            "/function hk416"
+          ]
+        },
+        "hk416.28": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "hk416.30": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "q.property('krep:muzzle') > 3"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='hk416' && !query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:hk416_fire",
+            "/scoreboard players add @s[scores={hk416sound=0}] hk416soundsound 1",
+            "@s krep:hk416_firegrip",
+            "/playsound hk416.shoot @a[r=30]",
+            "/scoreboard players set @s[scores={hk416=32..}] hk416 31",
+            "/scoreboard players remove @s[scores={hk416=1..31}] hk416 1",
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0",
+            "/title @s[scores={hk416=0}] actionbar No Ammunition",
+            "/function hk416"
+          ]
+        },
+        "hk416.30s": {
+          "animations": [
+            "hk416shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "setup": "q.property('krep:muzzle') < 4"
+            },
+            {
+              "delay.30s": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2 && query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:hk416_fire",
+            "/scoreboard players add @s[scores={hk416sound=0}] hk416soundsound 1",
+            "@s krep:hk416_firegrip",
+            "/playsound hk416.suppress @a[r=15]",
+            "/scoreboard players set @s[scores={hk416=32..}] hk416 31",
+            "/scoreboard players remove @s[scores={hk416=1..31}] hk416 1",
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0",
+            "/title @s[scores={hk416=0}] actionbar No Ammunition",
+            "/function hk416"
+          ]
+        },
+        "delay.30s": {
+          "animations": [
+            "hk416shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "hk416.29s": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2 && query.all_animations_finished"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='hk416' && !query.is_using_item"
+            }
+          ]
+        },
+        "hk416.29s": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "hk416.28s": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "q.property('krep:muzzle') < 4"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='hk416' && !query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:hk416_fire",
+            "/scoreboard players add @s[scores={hk416sound=0}] hk416soundsound 1",
+            "/playsound hk416.suppress @a[r=15]",
+            "@s krep:hk416_firegrip",
+            "/scoreboard players set @s[scores={hk416=32..}] hk416 31",
+            "/scoreboard players remove @s[scores={hk416=1..31}] hk416 1",
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0",
+            "/title @s[scores={hk416=0}] actionbar No Ammunition",
+            "/function hk416"
+          ]
+        },
+        "hk416.28s": {
+          "transitions": [
+            {
+              "setup": "query.scoreboard('hk416') == 0"
+            },
+            {
+              "hk416.30s": "query.get_equipped_item_name=='hk416' && query.is_using_item && query.scoreboard('hk416') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "setup": "q.property('krep:muzzle') < 4"
+            },
+            {
+              "setup": "query.get_equipped_item_name=='hk416' && !query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:hk416_fire",
+            "/scoreboard players add @s[scores={hk416sound=0}] hk416sound 1",
+            "/playsound hk416.suppress @a[r=15]",
+            "@s krep:hk416_firegrip",
+            "/scoreboard players set @s[scores={hk416=32..}] hk416 31",
+            "/scoreboard players remove @s[scores={hk416=1..31}] hk416 1",
+            "/replaceitem entity @s[scores={hk416=0}] slot.weapon.mainhand 1 krep:hk416_emp 1 0",
+            "/title @s[scores={hk416=0}] actionbar No Ammunition",
+            "/function hk416"
+          ]
+        }
+      }
+    }
+  }
+}

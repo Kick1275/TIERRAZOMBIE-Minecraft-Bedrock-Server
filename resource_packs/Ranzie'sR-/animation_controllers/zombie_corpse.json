@@ -1,0 +1,60 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.zombie.v1.8.corpse": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                "animations": [
+                        "base"
+                    ],
+                    "blend_transition": 0.5,
+                    "transitions": [
+    { "death_1": "math.random_integer(0,6) == 0" },
+    { "death_2": "math.random_integer(0,6) == 1" },
+    { "death_3": "math.random_integer(0,6) == 2" },
+    { "death_4": "math.random_integer(0,6) == 3" },
+    { "death_5": "math.random_integer(0,6) == 4" },
+    { "death_6": "math.random_integer(0,6) == 5" },
+    { "death_7": "math.random_integer(0,6) == 6" }
+]
+                },
+                "death_1": {
+                    "animations": [
+                        "death1"
+                    ]
+                },
+                "death_2": {
+                    "animations": [
+                        "death2"
+                    ]
+                },
+                "death_3": {
+                    "animations": [
+                        "death3"
+                    ]
+                },
+                "death_4": {
+                    "animations": [
+                        "death4"
+                    ]
+                },
+                "death_5": {
+                    "animations": [
+                        "death5"
+                    ]
+                },
+                "death_6": {
+                    "animations": [
+                        "death6"
+                    ]
+                },
+                "death_7": {
+                    "animations": [
+                        "death7"
+                    ]
+                }
+            }
+        }
+    }
+}

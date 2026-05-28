@@ -1,0 +1,7 @@
+import{registerCommand as l}from"../register_commands.js";import{createDefaultBrush as p}from"./brush.js";import{assertClipboard as c,assertSelection as u}from"server/modules/assert.js";import{RawText as f,Vector as a}from"library/Minecraft.js";const w={name:"size",description:"commands.wedit:size.description",usage:[{subName:"_brush",permission:"worldedit.brush.options.size",args:[{name:"size",type:"int",range:[1,null]}]},{subName:"_selection",permission:"worldedit.selection.size",args:[{flag:"c"}]}]};l(w,function(e,b,n){if(n.has("_selection")){const t=new f;let o,i;if(n.has("c"))c(e),o=a.from(e.clipboard.getSize()),i=e.clipboard.getVolume(),t.append("translate","commands.wedit:size.offset").with(`${e.clipboardTransform.offset}
+`);else{u(e);const[r,s]=e.selection.points.map(a.from),[m,d]=e.selection.getRange();o=a.sub(d,m).add(1),i=e.selection.getBlockCount(),t.append("translate","commands.wedit:size.type").with(`${e.selection.mode}
+`),t.append("translate","commands.wedit:size.pos1").with(`${r}
+`),t.append("translate","commands.wedit:size.pos2").with(`${s}
+`)}return t.append("translate","commands.wedit:size.size").with(`${o}
+`),t.append("translate","commands.wedit:size.distance").with(`${o.sub(1).length}
+`),t.append("translate","commands.wedit:size.blocks").with(`${i}`),t}else return e.hasToolProperty(null,"brush")||e.bindTool("brush",null,p()),e.setToolProperty(null,"size",n.get("size")),"commands.wedit:brush.size.set"});

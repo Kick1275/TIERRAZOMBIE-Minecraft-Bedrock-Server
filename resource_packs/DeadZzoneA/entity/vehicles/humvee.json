@@ -1,0 +1,49 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "mcpe:humvee",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "woodland_1": "textures/entity/vehicles/humvee/woodland_1",
+        "woodland_2": "textures/entity/vehicles/humvee/woodland_2",
+        "tan_1": "textures/entity/vehicles/humvee/tan_1",
+        "tan_2": "textures/entity/vehicles/humvee/tan_2",
+        "white_1": "textures/entity/vehicles/humvee/white_1",
+        "white_2": "textures/entity/vehicles/humvee/white_2",
+       "black_1": "textures/entity/vehicles/humvee/black_1",
+       "black_2": "textures/entity/vehicles/humvee/black_2",
+       "green_1": "textures/entity/vehicles/humvee/green_1",
+       "green_2": "textures/entity/vehicles/humvee/green_2"
+
+      },
+      "geometry": {
+        "default": "geometry.humvee"
+      },
+      "spawn_egg": {
+        "texture": "humvee",
+        "texture_index": 0
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 \u003d (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "animate": [
+          {
+            "move": "query.modified_move_speed"
+          },
+          "steer"
+        ]
+      },
+      "animations": {
+        "move": "animation.cars.move",
+        "steer": "animation.cars.steer"
+      },
+      "render_controllers": [
+        "controller.render.variant_humvee"
+      ]
+    }
+  }
+}

@@ -1,0 +1,84 @@
+//bridge-file-version: #60
+{
+	"format_version": "1.17.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "pubg:opentop_destroyed",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"destroyed"
+				]
+			},
+			"animations": {
+				"destroyed": "controller.animation.uaz_destroyed"
+			}
+		},
+		"component_groups": {
+			"opentop:destroyed_death": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicles"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 2.4,
+				"height": 2.4
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:push_through": {
+				"value": 0
+			},
+			"minecraft:is_stackable": {},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"filters": {
+					"any_of": [
+						{
+							"subject": "self",
+							"value": "vehicles",
+							"test": "is_family"
+						}
+					]
+				},
+				"target": "self",
+				"event": "opentop:destroyed_death"
+			}
+		},
+		"events": {
+			"opentop:destroyed_death": {
+				"add": {
+					"component_groups": [
+						"opentop:destroyed_death"
+					]
+				}
+			}
+		}
+	}
+}

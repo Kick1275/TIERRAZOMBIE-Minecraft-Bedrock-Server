@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.variant_car": {
+	  "arrays": {
+	    "textures": {
+		  "Array.skins": [
+			    "Texture.variant_0",
+		    "Texture.variant_1",
+		    "Texture.variant_2",
+		    "Texture.variant_3",
+		    "Texture.variant_4",
+		    "Texture.variant_5",
+		    "Texture.variant_6",
+		    "Texture.variant_7",
+		    "Texture.variant_8",
+		    "Texture.variant_9"
+
+		  ]
+		}
+	  },
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Array.skins[query.variant]" ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

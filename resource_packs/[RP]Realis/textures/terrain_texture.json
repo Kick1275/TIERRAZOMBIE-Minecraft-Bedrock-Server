@@ -1,0 +1,13 @@
+{
+	"texture_data": {
+		"efm_salt_deposit": {
+			"textures": "textures/blocks/salt_deposit"
+		},
+		"efm_": {
+			"textures": "textures/blocks/"
+		},
+		"efm_salt_block": {
+			"textures": "textures/blocks/salt_block"
+		}
+	}
+}

@@ -1,0 +1,10 @@
+clear @s[m=!c,scores={sks=9},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 1
+clear @s[m=!c,scores={sks=8},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 2
+clear @s[m=!c,scores={sks=7},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 3
+clear @s[m=!c,scores={sks=6},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 4
+clear @s[m=!c,scores={sks=5},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 5
+clear @s[m=!c,scores={sks=4},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 6
+clear @s[m=!c,scores={sks=3},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 7
+clear @s[m=!c,scores={sks=2},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 8
+clear @s[m=!c,scores={sks=1},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 9
+clear @s[m=!c,scores={sks=0},hasitem={item=krep:ammoboxc,quantity=0}] krep:m43 0 10

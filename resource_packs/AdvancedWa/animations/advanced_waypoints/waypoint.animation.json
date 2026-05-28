@@ -1,0 +1,115 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.advanced_waypoints.waypoint.idle": {
+      "loop": true,
+      "bones": {
+        "all": {
+          "rotation": ["q.rotation_to_camera(0)", "q.rotation_to_camera(1)", 0],
+          "scale": "v.scale_by_distance"
+        },
+        "rotate_beacon": {
+          "rotation": [0, "q.rotation_to_camera(1)", 0]
+        },
+        "beacon": {
+          "rotation": [0, "query.anim_time*90", 0],
+          "scale": "this + v.scale_by_distance"
+        }
+      }
+    },
+    "animation.advanced_waypoints.waypoint.offset": {
+      "loop": true,
+      "animation_length": 1,
+      "bones": {
+        "all": {
+          "position": [0, 16000, 0]
+        },
+        "rotate_beacon": {
+          "position": [0, 16000, 0]
+        }
+      }
+    },
+    "animation.advanced_waypoints.waypoint.scale_fov_seeing": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 0.5,
+      "bones": {
+        "all": {
+          "scale": {
+            "0.0": ["this", "this", "this"],
+            "0.25": [
+              "this + (v.need_look_show_info ? v.scale_by_distance /1.5 : v.scale_by_distance /2)",
+              "this + (v.need_look_show_info ? v.scale_by_distance /1.5 : v.scale_by_distance /2)",
+              "this + (v.need_look_show_info ? v.scale_by_distance /1.5 : v.scale_by_distance /2)"
+            ]
+          }
+        },
+        "name": {
+          "scale": {
+            "0.0": [0, 0, 0],
+            "0.3": ["this", "this", "this"]
+          },
+          "position": {
+            "0.0": [0, 0, 0],
+            "0.3": ["v.offset_name + v.offset_absolute", 0, 0]
+          }
+        },
+        "distance": {
+          "position": ["v.offset_distance", 0, 0]
+        }
+      }
+    },
+    "animation.advanced_waypoints.waypoint.scale_fov_stop_see": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 0.5,
+      "bones": {
+        "all": {
+          "scale": {
+            "0.0": [
+              "this + (v.need_look_show_info ? v.scale_by_distance /1.5 : v.scale_by_distance /2)",
+              "this + (v.need_look_show_info ? v.scale_by_distance /1.5 : v.scale_by_distance /2)",
+              "this + (v.need_look_show_info ? v.scale_by_distance /1.5 : v.scale_by_distance /2)"
+            ],
+            "0.25": ["this", "this", "this"]
+          }
+        },
+        "name": {
+          "scale": {
+            "0.0": ["this", "this", "this"],
+            "0.3": [0, 0, 0]
+          },
+          "position": {
+            "0.0": ["v.offset_name + v.offset_absolute", 0, 0],
+            "0.3": [0, 0, 0]
+          }
+        },
+        "distance": {
+          "position": ["v.offset_distance", 0, 0]
+        }
+      }
+    },
+    "animation.advanced_waypoints.waypoint.beacon_enabled": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 1,
+      "bones": {
+        "beacon": {
+          "scale": {
+            "0.0": ["v.beacon_size", 0, "v.beacon_size"],
+            "0.5": ["v.beacon_size", "this", "v.beacon_size"]
+          }
+        }
+      }
+    },
+    "animation.advanced_waypoints.waypoint.beacon_disabled": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 1,
+      "bones": {
+        "beacon": {
+          "scale": {
+            "0.0": ["v.beacon_size", "this", "v.beacon_size"],
+            "0.25": ["v.beacon_size", 0, "v.beacon_size"]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:libernian_helmet",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/armor/libernian_helmet"
+			},
+			"geometry": {
+				"default": "geometry.libernian_helmet"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.helmet_layer_visible = 0.0;"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.item_first": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.item"
+			]
+		},
+		"controller.render.item_third": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Texture.item"
+			]
+		}
+	}
+}

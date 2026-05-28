@@ -1,0 +1,36 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.m870": {
+      "geometry": "geometry.m870",
+      "materials": [
+        {
+          "*": "material.guns"
+        },
+        {
+          "anpeq15_laser": "material.glow"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        }
+      ],
+      "textures": [
+        "texture.m870"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

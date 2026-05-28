@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§aAdvanced Mission System",
+    "description": "§eCustomizable system to create and manage missions!§r\n§7Developer: §dAlberto35M§r\n§7Team: §bPixelCore Creations",
+    "uuid": "b497bfae-9b17-40d0-afbf-c7fb1f14527b",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      19,
+      70
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "6ed56249-9512-4c58-b54b-68ec5c6258cd",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

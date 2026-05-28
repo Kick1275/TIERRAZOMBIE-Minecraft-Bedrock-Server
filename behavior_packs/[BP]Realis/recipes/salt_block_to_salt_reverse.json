@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.70",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "efm:salt_block_to_salt_reverse"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"x": {
+				"item": "_efm:salt"
+			}
+		},
+		"pattern": [
+			"xx",
+			"xx"
+		],
+		"unlock": {
+			"context": "PlayerInWater"
+		},
+		"priority": 0,
+		"result": {
+			"item": "efm:salt_block"
+		}
+	}
+}

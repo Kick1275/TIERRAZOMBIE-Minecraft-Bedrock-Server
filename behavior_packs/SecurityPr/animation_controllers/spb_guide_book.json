@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.spb_guide_book": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "change_page": "query.is_angry"
+                        }
+                    ]
+                },
+				"change_page": {
+					"animations": ["change_page_animation"],
+                    "transitions": [
+                        {
+                            "default": "query.all_animations_finished"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

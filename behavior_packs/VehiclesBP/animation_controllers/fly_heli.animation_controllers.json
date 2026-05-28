@@ -1,0 +1,77 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.heli_flight": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"flying": "1"
+						}
+					],
+					"on_entry": [
+						"/function heli_fly"
+					]
+				},
+				"flying": {
+					"transitions": [
+						{
+							"default": "query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/function heli_fly"
+					]
+				}
+			}
+		},
+		"controller.animation.heli_grounded": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"flying": "!query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 1000000 100 true"
+					]
+				},
+				"flying": {
+					"transitions": [
+						{
+							"default": "query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/effect @s clear"
+					]
+				}
+			}
+		},
+		"controller.animation.heli_rider": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"flying": "1"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove rider"
+					]
+				},
+				"flying": {
+					"transitions": [
+						{
+							"default": "!query.has_rider"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove rider"
+					]
+				}
+			}
+		}
+	}
+}

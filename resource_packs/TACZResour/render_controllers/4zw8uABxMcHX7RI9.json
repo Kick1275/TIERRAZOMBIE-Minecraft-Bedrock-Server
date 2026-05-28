@@ -1,0 +1,135 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.awp": {
+      "geometry": "geometry.awp",
+      "materials": [
+        {
+          "*": "material.guns"
+        }
+      ],
+      "part_visibility": [
+        {
+          "*": true
+        },
+        {
+          "sight": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "iron_sight": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "frontsight": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "group8": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "sight_illuminated": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "rearsight": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "group7": "q.property('krep:awpscope')=='nothing'"
+        },
+        {
+          "standard_8": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_lens": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_reticle": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_base": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_part": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_mount": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_hide_when_ads": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "standard_8_ring": "q.property('krep:awpscope')=='standard_8'"
+        },
+        {
+          "acog": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "acog_lens": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "acog_lens2": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "acog_back": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "acog_reticle": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "acog_scope": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "acog_other": "q.property('krep:awpscope')=='acog'"
+        },
+        {
+          "elcan": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_lens": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_lens2": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_reticle": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_ring": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_ring2": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_body": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_knob": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_part2": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "elcan_part": "q.property('krep:awpscope')=='elcan'"
+        },
+        {
+          "coyote": "q.property('krep:awpscope')=='coyote'"
+        },
+        {
+          "coyote_reticle": "q.property('krep:awpscope')=='coyote'"
+        }
+      ],
+      "textures": [
+        "texture.awp"
+      ],
+      "is_hurt_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      },
+      "on_fire_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 0.0
+      }
+    }
+  }
+}

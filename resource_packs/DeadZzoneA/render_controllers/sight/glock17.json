@@ -1,0 +1,21 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.glock17scope": {
+      "textures": [
+        "Texture.glock17_sight"
+      ],
+      "part_visibility": [
+        {
+          "*": "query.mark_variant != 3"
+        }
+      ],
+      "geometry": "geometry.scope",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ]
+    }
+  }
+}

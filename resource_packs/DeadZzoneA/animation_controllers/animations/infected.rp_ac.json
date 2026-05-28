@@ -1,0 +1,340 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.infected.root": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"jump": "!q.is_on_ground"
+						},
+						{
+							"idle": "q.ground_speed < 0.4"
+						},
+						{
+							"walk": "q.ground_speed > 0.4"
+						},
+						{
+							"run": "q.ground_speed > 4.2 && q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.22
+				},
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"walk": "q.ground_speed > 0.3"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"walk": {
+					"animations": [
+						"walk"
+					],
+					"transitions": [
+						{
+							"idle": "q.ground_speed < 0.3"
+						},
+						{
+							"run": "q.ground_speed > 3.75 && q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"run": {
+					"animations": [
+						"run"
+					],
+					"transitions": [
+						{
+							"walk": "q.ground_speed < 1.6 || !q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"jump": {
+					"animations": [
+						"jump"
+					],
+					"transitions": [
+						{
+							"walk": "!q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.35,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.infected.spotted": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spotted_male": "v.spotted && v.gender == 'male' && !v.dead"
+						},
+						{
+							"spotted_female": "v.spotted && v.gender == 'female' && !v.dead"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"spotted_male": {
+					"animations": [
+						"spotted_male"
+					],
+					"transitions": [
+						{
+							"default": "!v.spotted"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"spotted_female": {
+					"animations": [
+						"spotted_female"
+					],
+					"transitions": [
+						{
+							"default": "!v.spotted"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.infected.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack1": "q.is_delayed_attacking && v.attack_random == 1"
+						},
+						{
+							"attack2": "q.is_delayed_attacking && v.attack_random == 2"
+						},
+						{
+							"attack3": "q.is_delayed_attacking && v.attack_random == 3"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"attack1": {
+					"animations": [
+						"attack1"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack2": {
+					"animations": [
+						"attack2"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack3": {
+					"animations": [
+						"attack3"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.infected.hurt": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"hurt1": "v.hurt_random == 1"
+						},
+						{
+							"hurt2": "v.hurt_random == 2"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"hurt1": {
+					"animations": [
+						"hurt1"
+					],
+					"transitions": [
+						{
+							"default": "!v.damage_nearby_mobs"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"hurt2": {
+					"animations": [
+						"hurt2"
+					],
+					"transitions": [
+						{
+							"default": "!v.damage_nearby_mobs"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.head_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [ 
+						"v.head_pose = q.property('mcpe:head_pose');" 
+					],
+					"animations": [ 
+						{
+							"head0": "v.head_pose == 0"
+						},
+						{
+							"head1": "v.head_pose == 1"
+						},
+						{
+							"head2": "v.head_pose == 2"
+						},
+						{
+							"head3": "v.head_pose == 3"
+						},
+						{
+							"head4": "v.head_pose == 4"
+						},
+						{
+							"head5": "v.head_pose == 5"
+						},
+						{
+							"head6": "v.head_pose == 6"
+						},
+						{
+							"head7": "v.head_pose == 7"
+						},
+						{
+							"head8": "v.head_pose == 8"
+						},
+						{
+							"head9": "v.head_pose == 9"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.body_pose": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [ 
+						"v.body_pose = q.property('mcpe:body_pose');" 
+					],
+					"animations": [ 
+						{
+							"body0": "v.body_pose == 0"
+						},
+						{
+							"body1": "v.body_pose == 1"
+						},
+						{
+							"body2": "v.body_pose == 2"
+						},
+						{
+							"body3": "v.body_pose == 3"
+						},
+						{
+							"body4": "v.body_pose == 4"
+						},
+						{
+							"body5": "v.body_pose == 5"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.death.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [ 
+						"v.death = q.property('mcpe:death');" 
+					],
+					"animations": [ 
+						{
+							"dead1": "v.death == 1"
+						},
+						{
+							"dead2": "v.death == 2"
+						},
+						{
+							"dead3": "v.death == 3"
+						},
+						{
+							"dead4": "v.death == 4"
+						},
+						{
+							"dead5": "v.death == 5"
+						},
+						{
+							"dead6": "v.death == 6"
+						},
+						{
+							"dead7": "v.death == 7"
+						},
+						{
+							"dead8": "v.death == 8"
+						},
+						{
+							"dead9": "v.death == 9"
+						},
+						{
+							"dead10": "v.death == 10"
+						},
+						{
+							"dead11": "v.death == 11"
+						},
+						{
+							"dead12": "v.death == 12"
+						},
+						{
+							"dead13": "v.death == 13"
+						},
+						{
+							"dead14": "v.death == 14"
+						},
+						{
+							"dead15": "v.death == 15"
+						},
+						{
+							"dead16": "v.death == 16"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

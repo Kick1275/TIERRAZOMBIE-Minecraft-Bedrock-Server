@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.eu.emote.golden_freddy_pose": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"position": [0, -12, 0]
+				},
+				"body": {
+					"position": ["-math.random(-1,1)/2", "math.random(-1,1)/2", "math.random(-1,1)/2"]
+				},
+				"head": {
+					"rotation": [0, 0, -45],
+					"position": ["-math.random(-1,1)/2", "math.random(-1,1)/2", "math.random(-1,1)/2"]
+				},
+				"leftArm": {
+					"rotation": [0, 0, -22.5],
+					"position": ["-math.random(-1,1)/2", "math.random(-1,1)/2", "math.random(-1,1)/2"]
+				},
+				"rightArm": {
+					"rotation": [0, 0, 22.5],
+					"position": ["-math.random(-1,1)/2", "math.random(-1,1)/2", "math.random(-1,1)/2"]
+				},
+				"leftLeg": {
+					"rotation": [-22.5, 0, 0],
+					"position": ["-math.random(-1,1)/2", "-3+math.random(-1,1)/2", "-3+math.random(-1,1)/2"]
+				},
+				"rightLeg": {
+					"rotation": [-22.5, 0, 0],
+					"position": ["-math.random(-1,1)/2", "-3+math.random(-1,1)/2", "-3+math.random(-1,1)/2"]
+				}
+			}
+		}
+	}
+}

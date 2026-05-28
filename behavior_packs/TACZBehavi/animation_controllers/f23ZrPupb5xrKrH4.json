@@ -1,0 +1,104 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.p90": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='p90' && q.is_using_item) || query.get_equipped_item_name=='p90_emp'"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players set @s p90 50",
+            "@s[hasitem={item=krep:p90, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "p90.30": "query.get_equipped_item_name=='p90' && query.is_using_item && query.scoreboard('p90') >= 1 && q.mark_variant != 2"
+            },
+            {
+              "p90.31": "query.get_equipped_item_name=='p90' && query.is_using_item && query.scoreboard('p90') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function p90"
+          ]
+        },
+        "p90.31": {
+          "animations": [
+            "p90shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={p90=0}] slot.weapon.mainhand 1 krep:p90_emp 1 0"
+          ]
+        },
+        "p90.30": {
+          "animations": [
+            "p90shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('p90') == 0"
+            },
+            {
+              "delay.30": "query.get_equipped_item_name=='p90' && query.is_using_item && query.scoreboard('p90') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "@s krep:p90_fire",
+            "/scoreboard players set @s[scores={p90=52..}] p90 51",
+            "/scoreboard players remove @s[scores={p90=1..51}] p90 1",
+            "/playsound p90.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={p90=0}] slot.weapon.mainhand 1 krep:p90_emp 1 0",
+            "/title @s[scores={p90=0}] actionbar No Ammunition",
+            "/function p90"
+          ]
+        },
+        "delay.30": {
+          "animations": [
+            "p90shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('p90') == 0"
+            },
+            {
+              "p90.29": "query.get_equipped_item_name=='p90' && query.is_using_item && query.scoreboard('p90') >= 1 && q.mark_variant != 2 && q.all_animations_finished"
+            }
+          ]
+        },
+        "p90.29": {
+          "animations": [
+            "p90shoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.scoreboard('p90') == 0"
+            },
+            {
+              "p90.30": "query.get_equipped_item_name=='p90' && query.is_using_item && query.scoreboard('p90') >= 1 && q.mark_variant != 2 && q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:p90_fire",
+            "/scoreboard players set @s[scores={p90=52..}] p90 51",
+            "/scoreboard players remove @s[scores={p90=1..51}] p90 1",
+            "/playsound p90.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={p90=0}] slot.weapon.mainhand 1 krep:p90_emp 1 0",
+            "/title @s[scores={p90=0}] actionbar No Ammunition",
+            "/function p90"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.btr80.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 1.55
+				}
+			}
+		},
+		"animation.btr80.look_at_target": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						"query.target_x_rotation",
+						"query.target_y_rotation",
+						0
+					],
+					"scale": 1.55
+				},
+				"turret": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						0,
+						"query.target_y_rotation-this",
+						0
+					],
+					"scale": 1.7
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,85 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.deagleg": {
+      "initial_state": "setup1",
+      "states": {
+        "setup1": {
+          "transitions": [
+            {
+              "setup": "(query.get_equipped_item_name=='deagleg' && q.is_using_item) || query.get_equipped_item_name=='deagleg_emp'"
+            }
+          ],
+          "on_entry": [
+            "@s[hasitem={item=krep:deagleg, location=slot.weapon.mainhand}] krep:noreload"
+          ]
+        },
+        "setup": {
+          "transitions": [
+            {
+              "deagleg.30": "query.get_equipped_item_name=='deagleg' && query.is_using_item && query.scoreboard('deagleg') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')==0"
+            },
+            {
+              "deagleg.30s": "query.get_equipped_item_name=='deagleg' && query.is_using_item && query.scoreboard('deagleg') >= 1 && q.mark_variant != 2 && q.property('krep:muzzle')==1"
+            },
+            {
+              "deagleg.31": "query.get_equipped_item_name=='deagleg' && query.is_using_item && query.scoreboard('deagleg') == 0"
+            }
+          ],
+          "on_entry": [
+            "/function deagleg"
+          ]
+        },
+        "deagleg.31": {
+          "animations": [
+            "deaglegshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ],
+          "on_entry": [
+            "/replaceitem entity @s[scores={deagleg=0}] slot.weapon.mainhand 1 krep:deagleg_emp 1 0"
+          ]
+        },
+        "deagleg.30": {
+          "animations": [
+            "deaglegshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:deagleg_fire",
+            "@s krep:deagleg_range",
+            "/scoreboard players remove @s[scores={deagleg=1..}] deagleg 1",
+            "/playsound deagle.shoot @a[r=30]",
+            "/replaceitem entity @s[scores={deagleg=0}] slot.weapon.mainhand 1 krep:deagleg_emp 1 0",
+            "/title @s[scores={deagleg=0}] actionbar No Ammunition"
+          ]
+        },
+        "deagleg.30s": {
+          "animations": [
+            "deaglegshoot"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished && !q.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "@s krep:deagleg_fire",
+            "@s krep:deagleg_range",
+            "/scoreboard players remove @s[scores={deagleg=1..}] deagleg 1",
+            "/playsound deagle.suppress @a[r=15]",
+            "/replaceitem entity @s[scores={deagleg=0}] slot.weapon.mainhand 1 krep:deagleg_emp 1 0",
+            "/title @s[scores={deagleg=0}] actionbar No Ammunition"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,945 @@
+## Do not translate 
+pack.name=DeadZone
+pack.description=Deadazone addon [RP]
+
+## 您可以从这里翻译
+## 欢迎信息
+game.message.welcome_dz=欢迎来到 §4死区 §a 汉化§r·§e香煎小鹿
+game.message.deadzone_1=§e聊天框输入 §r!avatar §r§e修改皮肤 §r!config §e调整§4死区§e的配置
+game.message.deadzone_2=§e聊天框输入 §r!status §r§e查看您的进度状态 §r!help §e显示§4死区§e所有命令
+
+## 死亡讯息
+death.attack.bullet.headshot=%1$s 头部中枪 %2$s
+death.attack.bullet=%1$s 被枪杀 %2$s
+
+## cc
+§lCHARACTER CREATION§r=§l角色创建
+cc.random_avatar.gui=随机皮肤
+cc.default_skin.gui=默认皮肤
+Exit Menu=退出菜单
+cc.skin.gui=皮肤
+cc.hair.gui=头发
+cc.eye.gui=眼睛
+cc.gender.gui=性别
+cc.glove.gui=手套
+cc.message.default_skin=您确定要使用默认皮肤吗？
+cc.message.warning=在选择任何其他属性之前，请先选择您的性别
+cc.message.warning_eye_first=对不起，您不能使用女性眼睛
+cc.message.warning_eye_second=对不起，你不能用男性的眼睛
+
+## 配置
+config.despawn_time=设定尸体消失时间（分钟）
+config.reset_statu_on_death=死亡时重置状态？
+config.show_statu=在创造模式中显示状态？
+config.allow_corpse=是否保留尸体？（战利品会消失）
+
+DeadZone Settings=§e调整§4死区§e的配置
+Set Corpse Despawn Time=设定尸体消失时间（分钟）
+Advancement List=进度列表
+Back=返回
+Select an advancement to view details:=选择进度以查看详细信息:
+§cCongratulations, you found a developer!=§c恭喜，您找到了开发人员！
+§aCongratulations, you found a developer!=§a恭喜，您找到了开发人员！
+Congratulations, you found a developer!=恭喜，您找到了开发人员！
+Description: §eFound a developer on the server and asked to get an advancement || "No description available."=描述：§e在服务器上找到一名开发人员并要求获取进度 || “没有可用的描述。”
+§cRed flood!=§c红色洪水！
+§aRed flood!=§a红色洪水！
+Red flood!=红色洪水
+Description: §e??? || "No description available."=描述：§e??? || “没有可用的描述。”
+§cHuh, why did you kill the scavenger!?=§c嗯，你为什么要杀那个拾荒者！？
+§aHuh, why did you kill the scavenger!?=§a嗯，你为什么要杀那个拾荒者！？
+Huh, why did you kill the scavenger!?=嗯，你为什么要杀那个拾荒者！？
+Description: §eKill the scavenger || "No description available."=描述：§e杀死拾荒者 || “没有可用的描述。”
+§cWow, you killed the marauder. Great job!=§c哇，你杀了那个强盗，太棒了！
+§aWow, you killed the marauder. Great job!=§a哇，你杀了那个强盗，太棒了！
+Wow, you killed the marauder. Great job!=哇，你杀了那个强盗，太棒了！
+Description: §eKill the marauder || "No description available."=描述：§e杀死强盗 || “没有可用的描述。”
+§cDid you kill the first player?=§c你杀死了一个玩家吗？
+§aDid you kill the first player?=§a你杀死了一个玩家吗？
+Did you kill the first player?=你杀死了一个玩家吗？
+Description: §eFirst player kill || "No description available."=描述：§e第一次击杀玩家 || “没有可用的描述。”
+§cDo you still have any humanity?=§c你还有人性吗？
+§aDo you still have any humanity?=§a你还有人性吗？
+Do you still have any humanity?=你还有人性吗？
+Description: §eEliminate 15 players || "No description available."=描述：§e击杀15名玩家 || “没有可用的描述。”
+§cYou are a bandit, kill the players you found!=§c你是个强盗，你杀了找到的玩家！
+§aYou are a bandit, kill the players you found!=§a你是个强盗，你杀了找到的玩家！
+You are a bandit, kill the players you found!=你是个强盗，你杀了找到的玩家！
+Description: §eEliminate 50 players || "No description available."=描述：§e击杀50名玩家 || “没有可用的描述。”
+§cLost ruins=§c失落的遗迹
+§aLost ruins=§a失落的遗迹
+Lost ruins=失落的遗迹
+§cIt's a great exchange!=§c这是一次很棒的交流！
+§aIt's a great exchange!=§a这是一次很棒的交流！
+It's a great exchange!=这是一次很棒的交流！
+Description: §eTrade with scavenger || "No description available."=描述：§e与拾荒者交易 || “没有可用的描述。”
+§cWhat the hell is this?=§c这是什么鬼？
+§aWhat the hell is this?=§a这是什么鬼？
+What the hell is this?=这是什么鬼？
+Description: §eKill the infected militia, riot or brute || "No description available."=描述：§e杀死被感染的民兵、防爆警察或野蛮人 || “没有可用的描述。”
+§cEliminated the first infected!=§c消灭了第一个感染者！
+§aEliminated the first infected!=§a消灭了第一个感染者！
+Eliminated the first infected!=消灭了第一个感染者！
+Description: §eKill the first infected || "No description available."=描述：§e杀死一个感染者 || “没有可用的描述。”
+§cEliminate 50 infected!=§c消灭50名感染者！
+§aEliminate 50 infected!=§a消灭50名感染者！
+Eliminate 50 infected!=消灭50名感染者！
+Description: §eEliminate 50 infected || "No description available."=描述：§e消灭50个感染者 || “没有可用的描述。”
+§cEliminate 150 infected!=§c消灭150名感染者！
+§aEliminate 150 infected!=§a消灭150名感染者！
+Eliminate 150 infected!=消灭150名感染者！
+Description: §eEliminate 150 infected || "No description available."=描述：§e消灭150个感染者 || “没有可用的描述。”
+§cEliminate 1000 infected!=§c消灭1000名感染者！
+§aEliminate 1000 infected!=§a消灭1000名感染者！
+Eliminate 1000 infected!=消灭1000名感染者！
+Description: §eEliminate 1000 infected || "No description available."=描述：§e消灭1000名感染者 || “没有可用的描述。”
+§cEliminate 1500 infected!=§c消灭1500名感染者！
+§aEliminate 1500 infected!=§a消灭1500名感染者！
+Eliminate 1500 infected!=消灭1500名感染者！
+Description: §eEliminate 1500 infected || "No description available."=描述：§e消灭1500个感染者 || “没有可用的描述。”
+§cEliminate 2000 infected!=§c消灭2000名感染者！
+§aEliminate 2000 infected!=§a消灭2000名感染者！
+Eliminate 2000 infected!=消灭2000名感染者！
+Description: §eEliminate 2000 infected || "No description available."=描述：§e消灭2000个感染者 || “没有可用的描述。”
+
+## 状态
+§lStatistics§r=§l统计数据
+statu.player_name=名字
+statu.player_killed=阵亡次数
+statu.infected_killed=已击杀感染者
+statu.time_playing=游戏时间
+statu.time_survived=幸存的时间
+statu.distance_walk=步行距离
+statu.kill_distance=最长杀戮距离
+CLOSE=关闭
+
+## 行为
+action.interact.cut=获取人肉
+action.interact.bury=埋葬尸体
+action.hint.exit.mcpe:sedan=跳跃/蹲下以离开车辆
+action.hint.exit.mcpe:humvee=跳跃/蹲下以离开车辆
+action.hint.exit.mcpe:motor=跳跃/蹲下以离开车辆
+
+## 游戏消息
+game.message.blood_test=§a您的血型
+game.message.warning_lockpick=§4您需要开锁器才能打开这个上锁的箱子
+game.message.lockpick_broken=§c你的开锁器坏了！
+game.message.lockpick_attempt=§c开锁尝试失败！
+game.message.corpse_despawn_time=尸体消失时间设置为
+game.message.reset_statu_on_death=在创造模式下显示状态
+game.message.show_statu=死亡时重置状态
+game.message.warning_blood_type=§c您的血型为 
+game.message.warning_overdose_first=§c我感觉不太好......
+game.message.warning_overdose_second=§c我服药过量......
+game.message.blood_type_first=§a您的血型为 A
+game.message.blood_type_second=§a您的血型为 AB
+game.message.blood_type_third=§a您的血型为 B
+game.message.blood_type_fourth=§a您的血型为 O
+game.message.blood_transfer=输血完成
+game.message.bleeding_warning=§c我流血了
+game.message.broken_bone_warning=§c我腿断了
+game.message.temperature_warning_first=我着火了
+game.message.temperature_warning_second=我冻僵了
+game.message.unsupport_warning=不支持此项，请点击屏幕/右键单击以恢复项目
+game.message.blood_type=您的血型为
+§4No 7.62x39mm ammo in Inventory!=§4背包中没有 7.62x39 毫米弹药！
+§4No 5.45x39mm ammo in Inventory!=§4背包中没有 5.45x39 毫米弹药！
+§4No .44Magnum ammo in Inventory!=§4背包中没有 .44 大口径弹药！
+§4No 9x39mm ammo in Inventory!=§4背包中没有 9x39 毫米弹药！
+§4No 7.62x51mm ammo in Inventory!=§4背包中没有 7.62x51 毫米弹药！
+§4No 5.56x45mm ammo in Inventory!=§4背包中没有 5.56x45 毫米弹药！
+§4No 9x19mm ammo in Inventory!=§4背包中没有 9x19 毫米弹药！
+§4No 12Gauge ammo in Inventory!=§4背包中没有 12号 口径弹药！
+§4No 40mm ammo in Inventory!=§4背包中没有 40 毫米弹药！
+§4No .357Magnum ammo in Inventory!=§4背包中没有 .357 大口径弹药！
+§4No .45Acp ammo in Inventory!=§4背包中没有 .45 英寸弹药！
+§4No 9x18mm ammo in Inventory!=§4背包中没有 9x18 毫米弹药！
+§4No 7.62x54mmR ammo in Inventory!=§4背包中没有 7.62x54mmR 弹药！
+
+
+## 刷怪蛋
+item.spawn_egg.entity.mcpe:civilian.name=生成受感染的平民
+item.spawn_egg.entity.mcpe:military.name=生成受感染的军人
+item.spawn_egg.entity.mcpe:hazmat.name=生成受感染的防化兵
+item.spawn_egg.entity.mcpe:militia.name=生成受感染的民兵
+item.spawn_egg.entity.mcpe:screamer.name=生成受感染的尖叫者
+item.spawn_egg.entity.mcpe:commander.name=生成受感染的军人小队
+item.spawn_egg.entity.mcpe:sedan.name=生成轿车
+item.spawn_egg.entity.mcpe:motor.name=生成摩托车
+item.spawn_egg.entity.mcpe:humvee.name=生成悍马
+
+item.spawn_egg.entity.mcpe:marauder.name=生成强盗幸存者
+item.spawn_egg.entity.mcpe:scavenger.name=生存拾荒者幸存者
+
+## 实体
+entity.mcpe:civilian.name=受感染的平民
+entity.mcpe:military.name=受感染的军人
+entity.mcpe:hazmat.name=受感染的防化兵
+entity.mcpe:commander.name=受感染的军人
+entity.mcpe:militia.name=受感染的民兵
+
+entity.mcpe:marauder.name=强盗
+entity.mcpe:scavenger.name=拾荒者
+
+entity.unknown.name=战利品
+
+## 物品
+item.mcpe:vending_popsi_icon.name=百事可乐自动售货机
+item.mcpe:vending_exp_icon.name=苦力怕可乐自动售货机
+item.mcpe:vending_sprot_icon.name=运动饮料自动售货机
+item.mcpe:slack_black.name=黑色休闲裤
+item.mcpe:plastic_explosive.name=塑性炸药
+item.mcpe:electric_scrap.name=电气废料
+item.mcpe:baseball_bat.name=棒球棒
+item.mcpe:barbedwire_bat.name=带刺铁丝网棒球棒
+item.mcpe:cleaver_knife.name=切肉刀
+item.mcpe:combat_knife.name=战术刀
+item.mcpe:crowbar.name=撬棍
+item.mcpe:engineer_shovel.name=工程铲
+item.mcpe:fireman_axe.name=消防斧
+item.mcpe:flanged_mace.name=凸缘钉头锤
+item.mcpe:frying_pan.name=煎锅
+item.mcpe:golf_club.name=高尔夫球杆
+item.mcpe:golok_machete.name=砍刀
+item.mcpe:hammer.name=锤子
+item.mcpe:hatchet.name=斧头
+item.mcpe:hunting_knife.name=猎刀
+item.mcpe:ice_hockey.name=冰球杆
+item.mcpe:ice_pick.name=冰镐
+item.mcpe:katana.name=武士刀
+item.mcpe:kitchen_knife.name=菜刀
+item.mcpe:knight_sword.name=骑士之剑
+item.mcpe:kukri_machete.name=尼泊尔砍刀
+item.mcpe:lead_pipe.name=铅管
+item.mcpe:machete.name=弯刀
+item.mcpe:metal_bat.name=金属棒球棍
+item.mcpe:miner_pickaxe.name=十字镐
+item.mcpe:nailed_bat.name=钉刺棒球棍
+item.mcpe:nailed_plank.name=钉刺木板
+item.mcpe:pipe_wrench.name=管钳
+item.mcpe:pitchfork.name=干草叉
+item.mcpe:police_baton.name=警棍
+item.mcpe:rolling_pin.name=擀面杖
+item.mcpe:sabre_sword.name=军剑
+item.mcpe:screwdriver.name=螺丝刀
+item.mcpe:farm_sickle.name=农用镰刀
+item.mcpe:sledgehammer.name=大锤
+item.mcpe:snow_shovel.name=雪铲
+item.mcpe:splitting_axe.name=劈斧
+item.mcpe:tactical_axe.name=战术斧
+item.mcpe:tactical_shovel.name=战术铲
+item.mcpe:tire_iron.name=轮胎扳手
+item.mcpe:wooden_plank.name=木板
+item.mcpe:wrench.name=扳手
+item.mcpe:hacksaw.name=钢锯
+
+item.mcpe:blood_test_kit.name=血液检测试剂盒
+item.mcpe:blood_bag_emp.name=空血袋
+item.mcpe:blood_bag_unknown.name=类型未知血袋
+item.mcpe:blood_bag_type_a.name=A 型血袋
+item.mcpe:blood_bag_type_ab.name=AB 型血袋
+item.mcpe:blood_bag_type_b.name=B 型血袋
+item.mcpe:blood_bag_type_o.name=O 型血袋
+
+item.mcpe:first_aid.name=急救包
+item.mcpe:bandage.name=绷带
+item.mcpe:bandage_sterilized.name=消毒绷带
+item.mcpe:rags.name=碎布
+item.mcpe:rags_dirty.name=脏碎布
+item.mcpe:rags_sterilized.name=消毒碎布
+item.mcpe:blood_bag.name=血袋
+item.mcpe:painkiller.name=止痛药
+item.mcpe:adrenaline.name=肾上腺素自动注射器
+item.mcpe:morphine.name=吗啡自动注射器
+item.mcpe:splint.name=夹板
+item.mcpe:water_purification.name=净水片
+item.mcpe:alcoholic_tinture.name=酒精酊剂
+item.mcpe:antidote.name=解毒剂注射器
+
+
+item.mcpe:avatar_custome.name=角色自定义
+item.mcpe:barbed_wire.name=铁丝网线圈
+item.mcpe:bear_trap.name=捕熊夹
+item.mcpe:bleach.name=漂白剂
+item.mcpe:bottle_water_emp.name=空水瓶
+item.mcpe:detonator.name=C4引爆器
+item.mcpe:can_opener.name=开罐器
+item.mcpe:duct_tape.name=胶带
+item.mcpe:flashlight.name=手电筒
+item.mcpe:fumo_hat.name=玩偶
+item.mcpe:funi_vest.name=滑稽背心
+item.mcpe:ham_radios.name=无线电
+item.mcpe:landmine.name=地雷
+item.mcpe:lockpick.name=开锁器
+item.mcpe:nail_box.name=钉子盒
+item.mcpe:nail.name=钉子
+item.mcpe:cooking_pot.name=空烹饪锅
+item.mcpe:radios.name=收音机
+item.mcpe:Random_paper.name=胡乱的纸
+item.mcpe:remote.name=滑稽遥控器
+item.mcpe:sawoff_pipe.name=锯断的铅管
+item.mcpe:spray_can.name=喷雾罐
+item.mcpe:walkie_talkie.name=对讲机
+item.mcpe:wire_cutter.name=剪线钳
+item.mcpe:wooden_barricade.name=木质封板
+item.mcpe:fvla_flags.name=自由沃斯特罗维亚军团军旗
+item.mcpe:vostrovia_flags.name=沃斯特罗维亚共和国国旗
+item.mcpe:nekoi_flags.name=Neko ¡ 项目旗帜
+item.mcpe:nails.name=钉子
+Fix lost bag=定位丢失的背包（暂译）
+
+item.mcpe:chip_potato.name=薯片
+item.mcpe:chip_tortilla.name=玉米片
+item.mcpe:chocolate_bar.name=巧克力
+item.mcpe:creeper_crunch.name=苦力怕饼干
+item.mcpe:meat_jerky.name=牛肉干
+item.mcpe:mre.name=军用口粮
+item.mcpe:rice.name=一包米
+item.mcpe:strawberry_jam.name=草莓酱
+item.mcpe:tactical_sandwich.name=军用饼干
+item.mcpe:apple_green.name=青苹果
+item.mcpe:banana.name=香蕉
+item.mcpe:cucumber.name=黄瓜
+item.mcpe:pear.name=梨
+item.mcpe:tomato.name=番茄
+item.mcpe:zucchini.name=西葫芦
+item.mcpe:raw_player.name=生的人肉
+item.mcpe:cooked_player.name=熟的人肉
+
+
+item.mcpe:canned_bacon.name=军用培根罐头
+item.mcpe:canned_beans.name=番茄酱烘豆罐头
+item.mcpe:canned_beef_stew.name=炖牛肉罐头
+item.mcpe:canned_chicken.name=鸡肉罐头
+item.mcpe:canned_chili.name=辣椒罐头
+item.mcpe:canned_corned.name=咸牛肉罐头
+item.mcpe:canned_fruit.name=什锦水果罐头
+item.mcpe:canned_ham.name=火腿罐头
+item.mcpe:canned_peaches.name=甜桃罐头
+item.mcpe:canned_ration.name=野战口粮罐头
+item.mcpe:canned_sardine.name=沙丁鱼罐头
+item.mcpe:canned_spaghetti.name=意大利肉酱面罐头
+item.mcpe:canned_tomato.name=番茄汤罐头
+item.mcpe:canned_tuna.name=金枪鱼罐头
+
+
+item.mcpe:canned_bacon_open.name=打开的军用培根罐头
+item.mcpe:canned_beans_open.name=打开的番茄酱烘豆罐头
+item.mcpe:canned_beef_stew_open.name=打开的炖牛肉罐头
+item.mcpe:canned_chicken_open.name=打开的鸡肉罐头
+item.mcpe:canned_chili_open.name=打开的辣椒罐头
+item.mcpe:canned_corned_open.name=打开的咸牛肉罐头
+item.mcpe:canned_fruit_open.name=打开的什锦水果罐头
+item.mcpe:canned_ham_open.name=打开的火腿罐头
+item.mcpe:canned_peaches_open.name=打开的甜桃罐头
+item.mcpe:canned_ration_open.name=打开的野战口粮罐头
+item.mcpe:canned_sardine_open.name=打开的沙丁鱼罐头
+item.mcpe:canned_spaghetti_open.name=打开的意大利肉酱面罐头
+item.mcpe:canned_tomato_open.name=打开的番茄汤罐头
+item.mcpe:canned_tuna_open.name=打开的金枪鱼罐头
+
+
+item.mcpe:canned_bacon_open_bad.name=§c变质的§r打开的军用培根罐头
+item.mcpe:canned_beans_open_bad.name=§c变质的§r打开的番茄酱烘豆罐头
+item.mcpe:canned_beef_stew_open_bad.name=§c变质的§r打开的炖牛肉罐头
+item.mcpe:canned_chicken_open_bad.name=§c变质的§r打开的鸡肉罐头
+item.mcpe:canned_chili_open_bad.name=§c变质的§r打开的辣椒罐头
+item.mcpe:canned_corned_open_bad.name=§c变质的§r打开的咸牛肉罐头
+item.mcpe:canned_fruit_open_bad.name=§c变质的§r打开的什锦水果罐头
+item.mcpe:canned_ham_open_bad.name=§c变质的§r打开的火腿罐头
+item.mcpe:canned_peaches_open_bad.name=§c变质的§r打开的甜桃罐头
+item.mcpe:canned_ration_open_bad.name=§c变质的§r打开的野战口粮罐头
+item.mcpe:canned_sardine_open_bad.name=§c变质的§r打开的沙丁鱼罐头
+item.mcpe:canned_spaghetti_open_bad.name=§c变质的§r打开的意大利肉酱面罐头
+item.mcpe:canned_tomato_open_bad.name=§c变质的§r打开的番茄汤罐头
+item.mcpe:canned_tuna_open_bad.name=§c变质的§r打开的金枪鱼罐头
+
+
+item.mcpe:beer_bottle.name=啤酒
+item.mcpe:bottle_water_bleach.name=瓶装漂白剂
+item.mcpe:bottle_water_unpure.name=不干净的瓶装水
+item.mcpe:bottle_water.name=瓶装水
+item.mcpe:coffee.name=咖啡
+item.mcpe:energy_drink.name=能量饮料
+item.mcpe:exp_coke.name=苦力怕可乐
+item.mcpe:grape_soda.name=葡萄苏打水
+item.mcpe:lemonade.name=柠檬水
+item.mcpe:milk_gallon.name=加仑牛奶
+item.mcpe:popsi_cola.name=百事可乐
+item.mcpe:pot_cook_water.name=一锅开水
+item.mcpe:pot_water.name=一锅未烧开的水
+item.mcpe:red_wine.name=红酒
+item.mcpe:vodka.name=伏特加
+item.mcpe:whiskey.name=威士忌
+
+## 枪械
+AK-47=AK-47自动步枪
+AK-74=AK-74自动步枪
+AKS-74U=AKS-74U短管自动步枪
+Colt Anaconda=柯尔特左轮
+As-Val=巨浪特种突击步枪
+CZ-527=CZ-527栓动步枪
+FN-FAL=FN-FAL自动步枪
+Famas F1=法玛斯 F1自动步枪
+M1 Garand=M1 伽兰德步枪
+Glock-17=格洛克-17手枪
+IZH-43=贝加尔湖IZH-43霰弹枪
+L96-A1=AW-L96-A1狙击步枪
+M-1014=M-1014霰弹枪
+M-14=M-14自动步枪
+M16-A1=M16-A1自动步枪
+M-1894c=温彻斯特M-1894杠杆步枪
+M-1897=温彻斯特M-1897霰弹枪
+M-1911=M-1911手枪
+M4-A1=M4-A1卡宾枪
+M-79 Thumper=M-79榴弹发射器
+Model-870=雷明顿M870式霰弹枪
+Makarov PM=马卡洛夫手枪
+Makarov PB=马卡洛夫PB微声手枪
+Mosin Nagant=莫辛纳甘步枪
+MP-5=MP5冲锋枪
+Colt Python=蟒蛇左轮
+RPK=RPK轻机枪
+SK Simonov=SKS半自动步枪
+Pindad SS-1=Pindad SS-1自动步枪
+L2-A3 Sterling=斯特林冲锋枪
+SV Dragunov=SVD狙击步枪
+UMP-45=UMP45冲锋枪
+VZ-65 skorpion=蝎式冲锋枪
+
+## 弹药
+item.mcpe:ammo_7_62x39mm.name=弹药箱 7.62x39mm
+item.mcpe:ammo_5_45x39mm.name=弹药箱 5.45x39mm
+item.mcpe:ammo_5_56x45mm.name=弹药箱 5.56x45mm
+item.mcpe:ammo_7_62x51mm.name=弹药箱 7.62x51mm
+item.mcpe:ammo_7_62x54mmr.name=弹药箱 7.62x54mmR
+item.mcpe:ammo_9x39mm.name=弹药箱 9x39mm
+item.mcpe:ammo_9x19mm.name=弹药箱 9x19mm
+item.mcpe:ammo_9x18mm.name=弹药箱 9x18mm
+item.mcpe:ammo_12gauge.name=弹药箱 12号
+item.mcpe:ammo_40mm.name=弹药箱 40mm
+item.mcpe:ammo_44magnum.name=弹药箱 .44 大口径
+item.mcpe:ammo_357magnum.name=弹药箱 .357 大口径
+item.mcpe:ammo_45acp.name=弹药箱 .45 英寸
+item.mcpe:ammo_32acp.name=弹药箱 .32 英寸
+
+## 手榴弹
+item.mcpe:frag_grenade.name=破片手榴弹
+item.mcpe:smoke_grenade.name=烟雾弹
+item.mcpe:flash_grenade.name=闪光弹
+item.mcpe:c4_explosive.name=C-4 炸药
+item.mcpe:pipe_bomb.name=土制铁管炸弹
+item.mcpe:nerve_grenade.name=神经毒气手榴弹
+
+## 盔甲/衣服
+item.mcpe:assault_vest_black.name=黑色突击背心
+item.mcpe:assault_vest_olive.name=橄榄绿突击背心
+item.mcpe:biker_vest.name=摩托车手背心
+item.mcpe:biker_vest_skull.name=骷髅头摩托车车背心
+item.mcpe:chest_navy.name=海军蓝弹匣包
+item.mcpe:chest_tan.name=棕褐色弹匣包
+item.mcpe:chest_green.name=绿色弹匣包
+item.mcpe:chest_white.name=白色弹匣包
+item.mcpe:chest_brown.name=棕色弹匣包
+item.mcpe:combat_olive.name=橄榄绿作战背心
+item.mcpe:combat_white.name=白色作战背心
+item.mcpe:combat_tan.name=棕褐色作战背心
+item.mcpe:hunting_brown.name=棕色狩猎背心
+item.mcpe:hunting_navy.name=海军蓝狩猎背心
+item.mcpe:plate_vest_gray.name=灰色防弹衣
+item.mcpe:plate_vest_white.name=白色防弹衣
+item.mcpe:plate_vest_olive.name=橄榄绿防弹衣
+item.mcpe:plate_vest_tan.name=棕褐色防弹衣
+item.mcpe:police_vest.name=警用背心
+item.mcpe:press_vest.name=记者背心
+item.mcpe:reflective_lime.name=灰色反光背心
+item.mcpe:reflective_orange.name=橙色反光背心
+item.mcpe:reflective_yellow.name=黄色反光背心
+item.mcpe:stab_vest_gray.name=灰色防刺背心
+item.mcpe:stab_vest_tan.name=棕褐色防刺背心
+item.mcpe:stab_vest_white.name=白色防刺背心
+item.mcpe:tactical_vest_black.name=黑色战术背心
+item.mcpe:tactical_vest_white.name=白色战术背心
+item.mcpe:tactical_vest_tan.name=棕褐色战术背心
+item.mcpe:tactical_vest_olive.name=橄榄绿战术背心
+item.mcpe:webbing_brown.name=棕色织带
+item.mcpe:webbing_black.name=黑色织带
+item.mcpe:webbing_tan.name=棕褐色织带
+item.mcpe:webbing_green.name=绿色织带
+item.mcpe:webbing_white.name=白色织带
+
+
+item.mcpe:army_artic.name=雪地军用头盔
+item.mcpe:army_desert.name=沙漠军用头盔
+item.mcpe:army_woodland.name=林地军用头盔
+item.mcpe:assault_helmet_black.name=黑色突击头盔
+item.mcpe:assault_helmet_olive.name=橄榄绿突击头盔
+item.mcpe:balaclava_black.name=黑色巴拉克拉瓦面罩
+item.mcpe:ballistic_black.name=黑色防弹头盔
+item.mcpe:ballistic_green.name=绿色防弹头盔
+item.mcpe:ballistic_Tan.name=棕褐色防弹头盔
+item.mcpe:ballistic_white.name=白色防弹头盔
+item.mcpe:bandana_blue.name=蓝色头巾面具
+item.mcpe:bandana_green.name=绿色头巾面膜
+item.mcpe:bandana_red.name=红色头巾面具
+item.mcpe:beanie_black.name=黑色无檐小便帽
+item.mcpe:beanie_brown.name=棕色无檐小便帽
+item.mcpe:beanie_white.name=白色无檐小便帽 
+item.mcpe:beanie_olive.name=橄榄绿无檐小便帽
+item.mcpe:beret_red.name=红色贝雷帽
+item.mcpe:beret_green.name=绿色贝雷帽
+item.mcpe:beret_blue.name=蓝色贝雷帽
+item.mcpe:biker_black.name=黑色摩托车头盔
+item.mcpe:biker_white.name=白色摩托车头盔
+item.mcpe:biker_yellow.name=黄色摩托车头盔
+item.mcpe:biker_red.name=红色摩托车头盔
+item.mcpe:biker_green.name=绿色摩托车头盔
+item.mcpe:biker_blue.name=蓝色摩托车头盔
+item.mcpe:boonie_artic.name=雪地迷彩布琼尼帽
+item.mcpe:boonie_woodland.name=林地迷彩布琼尼帽
+item.mcpe:boonie_desert.name=沙漠迷彩布琼尼帽
+item.mcpe:boonie_black.name=黑色布琼尼帽
+item.mcpe:boonie_green.name=绿色布琼尼帽
+item.mcpe:boonie_white.name=白色布琼尼帽
+item.mcpe:boonie_tan.name=棕褐色布琼尼帽
+item.mcpe:cap_black.name=黑色帽子
+item.mcpe:cap_green.name=绿色帽子
+item.mcpe:cap_blue.name=蓝色帽子
+item.mcpe:cap_red.name=红色帽子
+item.mcpe:clown_wig.name=小丑假发
+item.mcpe:cowboy_brown.name=棕色牛仔帽
+item.mcpe:cowboy_black.name=黑色牛仔帽
+item.mcpe:cowboy_white.name=白色牛仔帽
+item.mcpe:durag_black.name=黑色头巾
+item.mcpe:durag_brown.name=棕色头巾
+item.mcpe:firefighter_hat.name=消防员帽
+item.mcpe:flat_black.name=黑色布帽
+item.mcpe:flat_brown.name=棕色布帽
+item.mcpe:gasmask_black.name=黑色防毒面具
+item.mcpe:gasmask_white.name=白色防毒面具
+item.mcpe:gasmask_tactical.name=军用防毒面具
+item.mcpe:great_helmet.name=十字军头盔
+item.mcpe:hard_blue.name=蓝色安全帽
+item.mcpe:hard_red.name=红色安全帽
+item.mcpe:hard_yellow.name=黄色安全帽
+item.mcpe:hard_white.name=白色安全帽
+item.mcpe:hard_orange.name=橙色安全帽
+item.mcpe:headlamp.name=前照灯
+item.mcpe:hunting_hat.name=狩猎帽
+item.mcpe:maid_bonnet.name=女仆帽
+item.mcpe:mask_fawkes.name=黑客面具
+item.mcpe:mask_funni.name=有趣的面罩
+item.mcpe:mask_troll.name=巨魔面罩
+item.mcpe:night_goggles.name=夜视镜
+item.mcpe:peaked_green.name=绿色尖顶帽
+item.mcpe:peaked_white.name=白色尖顶帽
+item.mcpe:peaked_tan.name=棕褐色尖顶帽
+item.mcpe:plague_hat.name=瘟疫医生帽
+item.mcpe:police_hat.name=警帽
+item.mcpe:police_riot.name=警用防暴头盔
+item.mcpe:respirator_mask.name=防毒面具
+item.mcpe:shemagh_blue.name=蓝色阿拉伯头巾
+item.mcpe:shemagh_red.name=红色阿拉伯头巾
+item.mcpe:shemagh_tan.name=棕褐色阿拉伯头巾
+item.mcpe:shemagh_brown.name=棕色阿拉伯头巾
+item.mcpe:shemagh_black.name=黑色阿拉伯头巾
+item.mcpe:shemagh_olive.name=橄榄绿阿拉伯头巾
+item.mcpe:shemagh_gray.name=灰色阿拉伯头巾
+item.mcpe:skimask_black.name=黑色滑雪面罩
+item.mcpe:spec_helmet.name=特种作战头盔
+item.mcpe:tactical_helmet_black.name=黑色战术头盔
+item.mcpe:tactical_helmet_tan.name=棕褐色战术头盔
+item.mcpe:tactical_helmet_white.name=白色战术头盔
+item.mcpe:tactical_helmet_olive.name=橄榄绿战术头盔
+item.mcpe:ushanka.name=雷锋帽
+item.mcpe:un_helmet.name=联合国头盔
+item.mcpe:welder_mask.name=焊工面罩
+
+item.mcpe:bdu_artic_bottom.name=雪地迷彩长裤
+item.mcpe:bdu_desert_bottom.name=沙漠迷彩长裤
+item.mcpe:bdu_woodland_bottom.name=林地迷彩长裤
+item.mcpe:cargo_black.name=黑色工装裤
+item.mcpe:cargo_brown.name=棕色工装裤
+item.mcpe:cargo_tan.name=棕褐色工装裤
+item.mcpe:cargo_white.name=白色工装裤
+item.mcpe:cargo_green.name=绿色工装裤
+item.mcpe:chainmail_bottom.name=锁子甲裤子
+item.mcpe:clown_bottom.name=小丑裤子
+item.mcpe:firefighter_bottom.name=消防员裤子
+item.mcpe:ghillie_drygrass_bottom.name=干草吉利裤
+item.mcpe:ghillie_forest_bottom.name=森林吉利裤
+item.mcpe:ghillie_snow_bottom.name=雪地吉利裤
+item.mcpe:gorka_bottom.name=郭卡裤子
+item.mcpe:special_bottom.name=特种作战裤
+item.mcpe:hazmat_white_bottom.name=白色防护长裤
+item.mcpe:hazmat_yellow_bottom.name=黄色防护长裤
+item.mcpe:jean_black.name=黑色牛仔裤
+item.mcpe:jean_blue.name=蓝色牛仔裤
+item.mcpe:jean_brown.name=棕色牛仔裤
+item.mcpe:jean_light.name=浅色牛仔裤
+item.mcpe:khaki_light.name=浅卡其色裤子
+item.mcpe:maid_bottom.name=女仆裤
+item.mcpe:overall_black.name=黑色工作服
+item.mcpe:overall_brown.name=棕色工作服
+item.mcpe:overall_blue.name=蓝色工作服
+item.mcpe:paramedic_bottom.name=护理人员裤子
+item.mcpe:plague_bottom.name=瘟疫医生下装
+item.mcpe:police_special_bottom.name=警用特种部队裤
+item.mcpe:police_bottom.name=警裤
+item.mcpe:prisoner_bottom.name=囚犯裤
+item.mcpe:suit_bottom_black.name=黑色西装裤
+item.mcpe:suspender_black.name=黑色吊带裤
+item.mcpe:trackpants_black.name=黑色运动裤
+item.mcpe:trackpants_blue.name=蓝色运动裤
+item.mcpe:trackpants_red.name=红色运动裤
+
+item.mcpe:bdu_artic_top.name=雪地迷彩服
+item.mcpe:bdu_desert_top.name=沙漠迷彩服
+item.mcpe:bdu_woodland_top.name=林地迷彩服
+item.mcpe:chainmail_top.name=锁子甲上衣
+item.mcpe:clown_top.name=小丑服
+item.mcpe:crusader_top.name=十字军上衣
+item.mcpe:firefighter_top.name=消防员夹克
+item.mcpe:flannel_red.name=红色法兰绒衬衫
+item.mcpe:flannel_green.name=绿色法兰绒衬衫
+item.mcpe:flannel_blue.name=蓝色法兰绒衬衫
+item.mcpe:flannel_white.name=白色法兰绒衬衫
+item.mcpe:flannel_gray.name=灰色法兰绒衬衫
+item.mcpe:ghillie_drygrass_top.name=干草吉利服
+item.mcpe:ghillie_forest_top.name=森林吉利服
+item.mcpe:ghillie_snow_top.name=雪地吉利服
+item.mcpe:gorka_top.name=郭卡制服
+item.mcpe:hawaiian_black.name=黑色夏威夷衬衫
+item.mcpe:hawaiian_red.name=红色夏威夷衬衫
+item.mcpe:hazmat_white_top.name=白色防护服
+item.mcpe:hazmat_yellow_top.name=黄色防护服
+item.mcpe:hero_flannel.name=英雄法兰绒衬衫
+item.mcpe:hiking_black.name=黑色登山夹克
+item.mcpe:hiking_blue.name=蓝色登山夹克
+item.mcpe:hoodie_black.name=黑色连帽衫
+item.mcpe:hoodie_blue.name=蓝色连帽衫
+item.mcpe:hoodie_green.name=绿色连帽衫
+item.mcpe:hoodie_red.name=红色连帽衫
+item.mcpe:hoodie_yellow.name=黄色连帽衫
+item.mcpe:hoodie_white.name=白色连帽衫
+item.mcpe:leather_black.name=黑色皮夹克
+item.mcpe:leather_brown.name=棕色皮夹克
+item.mcpe:maid_top.name=女仆礼服
+item.mcpe:paramedic_top.name=救护人员夹克
+item.mcpe:plague_top.name=瘟疫医生上衣
+item.mcpe:plaid_red.name=红色格子衬衫
+item.mcpe:plaid_blue.name=蓝色格子衬衫
+item.mcpe:plaid_olive.name=橄榄绿格子衬衫
+item.mcpe:plaid_white.name=白色格子衬衫
+item.mcpe:plaid_gray.name=灰色格子衬衫
+item.mcpe:plaid_tan.name=棕褐色格子衬衫
+item.mcpe:police_special_top.name=特警部队夹克
+item.mcpe:police_top.name=警服
+item.mcpe:prisoner_top.name=囚服
+item.mcpe:puffer_blue.name=蓝色羽绒外套
+item.mcpe:puffer_black.name=黑色羽绒外套
+item.mcpe:special_top.name=特殊作业制服
+item.mcpe:striped_blue.name=蓝色条纹衬衫（自下而上）
+item.mcpe:striped_white.name=白色条纹衬衫（自下而上）
+item.mcpe:stripeds_black.name=黑色条纹长袖衬衫
+item.mcpe:suede_brown.name=棕色绒面革夹克
+item.mcpe:suit_black.name=黑色西装
+item.mcpe:sweater_white.name=白色毛衣
+item.mcpe:sweater_green.name=绿色毛衣
+item.mcpe:tactical_tan.name=棕褐色战术毛衣
+item.mcpe:tactical_green.name=绿色战术毛衣
+item.mcpe:tactical_navy.name=海军蓝战术毛衣
+item.mcpe:tactical_red.name=红色战术毛衣
+item.mcpe:tactical_white.name=白色战术毛衣
+item.mcpe:tracksuit_black.name=黑色运动服
+item.mcpe:tracksuit_blue.name=蓝色运动服
+item.mcpe:tracksuit_red.name=红色运动服
+item.mcpe:tshirt_black.name=黑色T恤
+item.mcpe:tshirt_blue.name=蓝色T恤
+item.mcpe:tshirt_red.name=红色T恤
+item.mcpe:tshirt_green.name=绿色T恤
+item.mcpe:tshirt_white.name=白色T恤
+item.mcpe:tshirt_yellow.name=黄色T恤
+item.mcpe:varsity_blue.name=蓝色运动夹克
+item.mcpe:varsity_green.name=绿色运动夹克
+item.mcpe:varsity_red.name=红色运动夹克
+item.mcpe:varsity_brown.name=棕色运动夹克
+item.mcpe:berezka_desert_top.name=沙漠berezka制服
+item.mcpe:berezka_forestt_top.name=林地berezka制服
+item.mcpe:berezka_tundra_top.name=雪地berezka制服
+item.mcpe:bottom_up_purple.name=紫色衬衫（自下而上）
+item.mcpe:bottom_up_green.name=绿色衬衫（自下而上）
+item.mcpe:bottom_up_blue.name=蓝色衬衫（自下而上）
+item.mcpe:bottom_up_white.name=白色衬衫（自下而上）
+item.mcpe:desert_camo_top.name=沙漠迷彩制服
+item.mcpe:tundra_camo_top.name=雪地迷彩制服
+item.mcpe:woodland_camo_top.name=林地迷彩制服
+item.mcpe:field_butan_desert_top.name=沙漠野战butan制服
+item.mcpe:field_forest_desert_top.name=林地野战butan制服
+item.mcpe:field_tan_top.name=棕褐色野战制服
+item.mcpe:field_olive_top.name=橄榄色野战制服
+item.mcpe:firefighter_black_top.name=黑色消防夹克
+item.mcpe:firefighter_tan_top.name=棕褐色消防夹克
+item.mcpe:flannel_cyan.name=青色法兰绒衬衫
+item.mcpe:flannel_black.name=黑色法兰绒衬衫
+item.mcpe:hazmat_gray_top.name=灰色防护服
+item.mcpe:hiking_green.name=绿色登山夹克
+item.mcpe:hiking_red.name=红色登山夹克
+item.mcpe:hunting_autumn_top.name=秋季狩猎夹克
+item.mcpe:hunting_spring_top.name=春季狩猎夹克
+item.mcpe:hunting_winter_top.name=冬季狩猎夹克
+item.mcpe:lab_coat.name=实验服
+item.mcpe:paramedic_blue_top.name=蓝色护理员夹克
+item.mcpe:paramedic_green_top.name=绿色护理员夹克
+item.mcpe:paramedic_red_top.name=红色护理员夹克
+item.mcpe:puffer_purple.name=紫色羽绒服
+item.mcpe:puffer_yellow.name=黄色羽绒服
+item.mcpe:puffer_gray.name=灰色羽绒服
+item.mcpe:striped_sleeve_black.name=黑色条纹长袖衬衫
+item.mcpe:striped_sleeve_black.name=蓝色条纹长袖衬衫
+item.mcpe:striped_tan.name=棕褐色条纹衬衫（自下而上）
+item.mcpe:suede_black.name=黑色加绒夹克
+item.mcpe:suit_blue.name=蓝色西装
+item.mcpe:suit_brown.name=棕色西装
+item.mcpe:suit_gray.name=灰色西装
+item.mcpe:suit_tan.name=棕褐色西装
+item.mcpe:sweater_black.name=黑色毛衣
+item.mcpe:sweater_cyan.name=青色毛衣
+item.mcpe:sweater_brown.name=棕色毛衣
+item.mcpe:sweater_red.name=红色毛衣
+item.mcpe:tactical_olive.name=橄榄色战术毛衣
+item.mcpe:tactical_gray.name=灰色战术毛衣
+item.mcpe:tracksuit_yellow.name=黄色运动服
+item.mcpe:tracksuit_green.name=绿色运动服
+item.mcpe:tracksuit_cyan.name=青色运动服
+item.mcpe:tropical_black.name=黑色热带衬衫
+item.mcpe:tropical_red.name=红色热带衬衫
+item.mcpe:tropical_blue.name=蓝色热带衬衫
+item.mcpe:tshirt_cyan.name=青色T恤
+item.mcpe:varsity_black.name=黑色运动夹克
+item.mcpe:trench_coat.name=大衣
+
+
+item.mcpe:berezka_desert_bottom.name=沙漠berezka裤
+item.mcpe:berezka_forest_bottom.name=林地berezka裤
+item.mcpe:berezka_tundra_bottom.name=雪地berezka裤
+item.mcpe:desert_camo_bottom.name=沙漠迷彩裤
+item.mcpe:tundra_camo_bottom.name=雪地迷彩裤
+item.mcpe:woodland_camo_bottom.name=林地迷彩裤
+item.mcpe:field_butan_desert_bottom.name=沙漠野战butan裤
+item.mcpe:field_forest_desert_bottom.name=林地野战butan裤
+item.mcpe:field_tan_bottom.name=棕褐色野战裤
+item.mcpe:field_olive_bottom.name=橄榄色野战裤
+item.mcpe:hunting_autumn_bottom.name=秋季狩猎裤
+item.mcpe:hunting_spring_bottom.name=春季狩猎裤
+item.mcpe:hunting_winter_bottom.name=冬季狩猎裤
+item.mcpe:paramedic_blue_bottom.name=蓝色护理员裤子
+item.mcpe:paramedic_green_bottom.name=绿色护理员裤子
+item.mcpe:paramedic_red_bottom.name=红色护理员裤子
+item.mcpe:trackpants_yellow.name=黄色运动裤
+item.mcpe:trackpants_green.name=绿色运动裤
+item.mcpe:trackpants_cyan.name=青色运动裤
+item.mcpe:cargo_gray.name=灰色工装裤
+item.mcpe:firefighter_black_bottom.name=黑色消防员裤子
+item.mcpe:firefighter_tan_bottom.name=棕褐色消防员裤子
+item.mcpe:hazmat_gray_bottom.name=灰色防护裤
+item.mcpe:jean_gray.name=灰色牛仔裤
+item.mcpe:jean_green.name=绿色牛仔裤
+item.mcpe:jean_red.name=红色牛仔裤
+item.mcpe:jean_khaki.name=卡其色牛仔裤
+item.mcpe:overall_gray.name=灰色连体裤
+item.mcpe:overall_green.name=绿色连体裤
+item.mcpe:overall_khaki.name=卡其色连体裤
+item.mcpe:slack_blue.name=蓝色休闲裤
+item.mcpe:slack_brown.name=棕色休闲裤
+item.mcpe:slack_gray.name=灰色休闲裤
+item.mcpe:slack_tan.name=棕褐色休闲裤
+
+
+
+## 背包
+item.mcpe:improvised_bag.name=临时背包
+item.mcpe:school_blue_backpack.name=蓝色书包
+item.mcpe:school_green_backpack.name=绿色书包
+item.mcpe:school_red_backpack.name=红色书包
+item.mcpe:taloon_yellow_backpack.name=黄色魔爪双肩包
+item.mcpe:taloon_blue_backpack.name=蓝色魔爪双肩包
+item.mcpe:taloon_green_backpack.name=绿色魔爪双肩包
+item.mcpe:taloon_red_backpack.name=红色魔爪双肩包
+
+## 战利品
+tile.mcpe:civilian_loot.name=纸板箱
+tile.mcpe:construction_loot.name=工具箱
+tile.mcpe:firefighter_loot.name=消防员箱
+tile.mcpe:food_loot.name=食物箱
+tile.mcpe:medical_loot.name=医疗物资箱
+tile.mcpe:artic_loot.name=军用雪地物资箱
+tile.mcpe:desert_loot.name=军用沙漠物资箱
+tile.mcpe:woodland_loot.name=军用林地物资箱
+tile.mcpe:medieval_loot.name=十字军宝箱
+tile.mcpe:police_loot.name=警用物资箱
+tile.mcpe:rare_loot.name=特种部队物资箱
+tile.mcpe:supply_block.name=补给箱
+
+## 杂项
+tile.mcpe:barbed_wires.name=带刺铁丝网
+tile.mcpe:landmine.name=地雷
+tile.mcpe:nail_trap.name=改进的钉子陷阱
+tile.mcpe:fumo.name=新西兰毛绒玩具戴在你头上
+tile.mcpe:radio.name=收音机
+tile.mcpe:radio_ham.name=业余无线电
+tile.mcpe:wheat.name=小麦
+tile.mcpe:wood_stake.name=木质尖刺陷阱
+tile.mcpe:spawner_military.name=军人刷怪笼
+tile.mcpe:spawner_civilian.name=平民刷怪箱
+tile.mcpe:spawner_scavenger.name=拾荒者刷怪笼
+tile.mcpe:spawner_marauder.name=强盗刷怪箱
+tile.mcpe:server_button.name=服务器按钮
+tile.mcpe:server_button_delay.name=服务器按钮延迟
+tile.mcpe:bear_trap_close.name=关闭捕熊夹
+tile.mcpe:bear_trap_open.name=打开捕熊夹
+
+## 桶
+tile.mcpe:barrel_blue.name=蓝色桶
+tile.mcpe:barrel_explosive.name=炸药桶
+tile.mcpe:barrel_green.name=绿色桶
+tile.mcpe:barrel_red.name=红包桶
+tile.mcpe:barrel_yellow.name=黄色桶
+
+## 陈列架
+tile.mcpe:display_rack_middle_bottom.name=陈列架底部
+tile.mcpe:display_rack_middle_top.name=陈列架顶部
+tile.mcpe:display_rack_side_bottom.name=陈列架侧面底部
+tile.mcpe:display_rack_side_top.name=陈列架侧面顶部
+
+## 旗
+tile.mcpe:flag_fvla.name=Fvla旗帜
+tile.mcpe:flag_nekoi.name=猫旗帜
+tile.mcpe:flag_vostrovia.name=沃斯特罗维亚旗帜
+
+## 折叠椅
+tile.mcpe:folding_chair_blue.name=蓝色折叠椅
+tile.mcpe:folding_chair_brown.name=棕色折叠椅
+tile.mcpe:folding_chair_green.name=绿色折叠椅
+tile.mcpe:folding_chair_red.name=红色折叠椅
+
+## 防弹墙
+tile.mcpe:hesco_olive.name=橄榄绿防弹墙
+tile.mcpe:hesco_tan.name=棕褐色防弹墙
+tile.mcpe:hesco_white.name=白色防弹墙
+
+## 光
+tile.mcpe:ceiling_light_broken.name=破损的吸顶灯
+tile.mcpe:ceiling_light.name=吸顶灯
+tile.mcpe:exit_sign.name=出口标志
+tile.mcpe:worklight.name=工作灯
+
+## 大排档塑料椅
+tile.mcpe:monobloc_black.name=黑色大排档塑料椅
+tile.mcpe:monobloc_blue.name=蓝色大排档塑料椅
+tile.mcpe:monobloc_green.name=绿色大排档塑料椅
+tile.mcpe:monobloc_red.name=红色大排档塑料椅
+tile.mcpe:monobloc_tan.name=棕褐色大排档塑料椅
+tile.mcpe:monobloc_white.name=白色大排档塑料椅
+tile.mcpe:monobloc_yellow.name=黄色大排档塑料椅
+
+## 办公椅
+tile.mcpe:office_chair_black.name=黑色办公椅
+tile.mcpe:office_chair_blue.name=蓝色办公椅
+tile.mcpe:office_chair_brown.name=棕色办公椅
+tile.mcpe:office_chair_green.name=绿色办公椅
+tile.mcpe:office_chair_red.name=红色办公椅
+tile.mcpe:office_chair_white.name=白色办公椅
+
+## 塑料桌子
+tile.mcpe:plastic_black.name=黑色塑料桌
+tile.mcpe:plastic_blue.name=蓝色塑料桌
+tile.mcpe:plastic_green.name=绿色塑料桌
+tile.mcpe:plastic_red.name=红色塑料桌
+tile.mcpe:plastic_tan.name=棕褐色塑料桌
+tile.mcpe:plastic_white.name=白色塑料桌
+tile.mcpe:plastic_yellow.name=黄色塑料桌
+
+## 隔离墩
+tile.mcpe:barrier_wall.name=隔离石墙
+tile.mcpe:caution_barrier_wall.name=警告条纹隔离石墙
+tile.mcpe:caution_road_barrier.name=警告条纹隔离墩
+tile.mcpe:road_barrier.name=隔离墩
+
+## 沙袋
+tile.mcpe:sandbag_corner_olive.name=橄榄色沙袋角
+tile.mcpe:sandbag_corner_tan.name=棕褐色沙袋角
+tile.mcpe:sandbag_corner_white.name=白色沙袋角
+tile.mcpe:sandbag_olive.name=橄榄色沙袋
+tile.mcpe:sandbag_tan.name=棕褐色沙袋
+tile.mcpe:sandbag_white.name=白色沙袋
+
+## 标志
+tile.mcpe:traffic_becareful.name=注意标志
+tile.mcpe:traffic_intersection.name=交叉口标志
+tile.mcpe:traffic_no_entry.name=禁止进入标志
+tile.mcpe:traffic_no_parking.name=禁止停车标志
+tile.mcpe:traffic_parking.name=停车标志
+tile.mcpe:traffic_question.name=问号标志
+tile.mcpe:traffic_section_left.name=左侧丁字路标志
+tile.mcpe:traffic_section_right.name=右侧丁字路标志
+tile.mcpe:traffic_stop.name=停止标志
+tile.mcpe:traffic_turn_left.name=左转标志
+tile.mcpe:traffic_turn_right.name=右转标志
+tile.mcpe:traffic_rod.name=信号杆
+
+## 街头长凳
+tile.mcpe:street_bench_blue.name=蓝色街头长凳
+tile.mcpe:street_bench_green.name=绿色街道长凳
+tile.mcpe:street_bench_red.name=红色街头长凳
+tile.mcpe:street_bench_white.name=白色街头长凳
+
+## 布桌
+tile.mcpe:table_cloth_black.name=黑色布桌
+tile.mcpe:table_cloth_blue.name=蓝色布桌
+tile.mcpe:table_cloth_green.name=绿色布桌
+tile.mcpe:table_cloth_red.name=红色布桌
+
+## variant
+tile.mcpe:graffiti.name=涂鸦
+tile.mcpe:metal_rack.name=金属架
+tile.mcpe:papers.name=文件
+
+## 水泵
+tile.mcpe:water_pump.name=水泵
+tile.mcpe:water_pump_emp.name=空水泵
+
+## 更多家具
+tile.mcpe:crowd_fence.name=铁马
+tile.mcpe:construction_barrier.name=施工护栏
+tile.mcpe:microwave.name=微波炉
+tile.mcpe:monitor.name=显示器
+tile.mcpe:monitor_keyboard.name=带键盘的显示器
+tile.mcpe:reloading_table.name=重新加载表格
+tile.mcpe:sink.name=洗手台
+tile.mcpe:toilet.name=马桶
+tile.mcpe:traffic_cone.name=交通锥
+tile.mcpe:trash_bin.name=垃圾桶
+tile.mcpe:trash_can.name=垃圾桶
+tile.mcpe:tv.name=电视
+tile.mcpe:tv_old.name=老式电视
+tile.mcpe:wood_barrier.name=篱笆
+tile.mcpe:wood_chair.name=木椅
+tile.mcpe:wood_table.name=木桌
+
+## 更多块
+tile.mcpe:bath_tiles.name=浴室瓷砖
+tile.mcpe:brick_big.name=大砖块
+tile.mcpe:caution_block.name=警告方块
+tile.mcpe:corrugated_metal.name=波纹金属块
+tile.mcpe:corrugated_metal_rusty.name=生锈的波纹金属块
+tile.mcpe:crate.name=板条箱
+tile.mcpe:farm_block.name=农场方块
+tile.mcpe:filing_cabinet.name=档案柜
+tile.mcpe:hazard_block.name=危险警示方块
+tile.mcpe:military_wall.name=军用建筑方块
+tile.mcpe:smooth_stone_brick.name=光滑石砖
+tile.mcpe:tiles_bnw.name=黑白色方格
+tile.mcpe:tiles_white.name=白色瓷砖
+tile.mcpe:trace_plate.name=跟踪板
+tile.mcpe:washing_machine.name=洗衣机

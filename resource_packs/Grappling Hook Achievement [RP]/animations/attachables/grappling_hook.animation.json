@@ -1,0 +1,97 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.grappling_hook.first_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [61.09757, 59.113, -65.65816],
+					"position": [3, 23, 4]
+				}
+			}
+		},
+		"animation.grappling_hook.first_person_shoot": {
+			"animation_length": 0.5,
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [61.09757, 59.113, -65.65816],
+					"position": [3, 23, 4]
+				},
+				"hook": {
+					"position": [10, 0, -24],
+					"scale": 0
+				},
+				"circle": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -360, 0]
+					}
+				}
+			}
+		},
+		"animation.grappling_hook.first_person_pull": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"root_item": {
+					"rotation": [61.09757, 59.113, -65.65816],
+					"position": [3, 23, 4]
+				},
+				"hook": {
+					"position": [10, 0, -24],
+					"scale": 0
+				},
+				"circle": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 360, 0]
+					}
+				}
+			}
+		},
+		"animation.grappling_hook.third_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [90, 0, 0],
+					"position": [0.5, 23.72474, -0.79289]
+				}
+			}
+		},
+		"animation.grappling_hook.third_person_shoot": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"root_item": {
+					"rotation": [90, 0, 0],
+					"position": [0.5, 23.72474, -0.79289]
+				},
+				"circle": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, -360, 0]
+					}
+				}
+			}
+		},
+		"animation.player.causal.grappling.shoot": {
+			"animation_length": 1,
+			"bones": {
+				"rightArm": {
+					"rotation": [ "query.target_x_rotation - 90.0 - math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation + 28.65", "-(math.cos(query.life_time * 103.2) * 2.865) - 2.865" ]
+				}
+			}
+			
+		},
+		"animation.grappling_hook.third_person_pull": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [90, 0, 0],
+					"position": [0.5, 23.72474, -0.79289]
+				}
+			}
+		}
+	}
+}

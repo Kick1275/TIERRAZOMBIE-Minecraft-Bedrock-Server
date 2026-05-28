@@ -1,0 +1,39 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§lBy Realtern Art",
+        "name": "Security Protection Blocks v1.5.7 [B]",
+        "platform_locked" : false,
+        "uuid": "ae52d72a-9f87-4495-83aa-512a9d1ba3b5",
+        "version": [1, 5, 7],
+        "min_engine_version": [ 1, 21, 80 ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "a657b831-1668-417b-9386-eadc84f6a447",
+            "version": [0, 0, 1]
+        },
+        {
+            "uuid": "69bea18c-abc3-43da-9acd-dd57d231af65",
+	        "version": [1, 3, 2],
+	        "type": "script",
+	        "language": "javascript",
+	        "entry": "scripts/main.js"
+        }    
+    ],
+    "dependencies": [
+        {
+            "uuid": "304905db-9f3b-4757-ba08-383cbb2d46e3",
+            "version": [1, 5, 7]
+        },
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.7.0-beta"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.1.0-beta"
+        }
+    ]
+}

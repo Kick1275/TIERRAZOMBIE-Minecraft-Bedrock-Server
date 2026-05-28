@@ -1,0 +1,75 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.xp_furniture.queen_bed_right_2",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 7.33333, 3.32667]
+				},
+				{
+					"name": "bed",
+					"parent": "root",
+					"pivot": [0, 7.33333, 3.32667],
+					"cubes": [
+						{
+							"origin": [-8, 1, 4],
+							"size": [14, 5, 4],
+							"uv": {
+								"west": {"uv": [60, 38], "uv_size": [4, 5], "material_instance": "bed"},
+								"down": {"uv": [74, 32], "uv_size": [14, -4], "material_instance": "bed"}
+							}
+						},
+						{
+							"origin": [-8, 1, -0.01],
+							"size": [10, 13, 4],
+							"inflate": -0.01,
+							"uv": {
+								"north": {"uv": [14, 67], "uv_size": [10, 13], "material_instance": "bed"},
+								"south": {"uv": [38, 67], "uv_size": [10, 13], "material_instance": "bed"},
+								"up": {"uv": [14, 63], "uv_size": [10, 4], "material_instance": "bed"},
+								"down": {"uv": [34, 67], "uv_size": [10, -4], "material_instance": "bed"}
+							}
+						},
+						{
+							"origin": [2, 0, -0.01],
+							"size": [4, 16, 4],
+							"inflate": -0.01,
+							"uv": {
+								"north": {"uv": [4, 4], "uv_size": [4, 16], "material_instance": "bed"},
+								"east": {"uv": [0, 4], "uv_size": [4, 16], "material_instance": "bed"},
+								"south": {"uv": [12, 4], "uv_size": [4, 16], "material_instance": "bed"},
+								"west": {"uv": [8, 4], "uv_size": [4, 16], "material_instance": "bed"},
+								"up": {"uv": [4, 0], "uv_size": [4, 4], "material_instance": "bed"},
+								"down": {"uv": [8, 4], "uv_size": [4, -4], "material_instance": "bed"}
+							}
+						}
+					]
+				},
+				{
+					"name": "sheet",
+					"parent": "root",
+					"pivot": [0, 7.33333, 3.32667],
+					"cubes": [
+						{
+							"origin": [-8, 6, 4],
+							"size": [14, 6, 4],
+							"uv": {
+								"west": {"uv": [60, 32], "uv_size": [4, 6], "material_instance": "sheet"},
+								"up": {"uv": [46, 28], "uv_size": [14, 4], "material_instance": "sheet"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
