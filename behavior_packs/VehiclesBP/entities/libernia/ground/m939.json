@@ -217,7 +217,7 @@
 					{
 						"filters": {
 							"test": "actor_health",
-							"value": 25,
+							"value": 500,
 							"subject": "self",
 							"operator": "<="
 						},

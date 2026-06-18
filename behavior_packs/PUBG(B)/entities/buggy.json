@@ -154,8 +154,7 @@
                 "height": 1.6
             },
             "minecraft:health": {
-                "value": 500,
-                "max": 1540
+                "value": 500
             },
             "minecraft:movement": {
                 "value": 0.1

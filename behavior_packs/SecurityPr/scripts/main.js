@@ -1,7 +1,7 @@
 import { world, system } from '@minecraft/server';
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 
-console.warn("[SecurityPr] Sistema de protección iniciando...");
+console.error("[SecurityPr] Sistema de protección iniciando...");
 
 // ─── STORAGE DE PROTECCIONES ──────────────────────────────────────────────────
 
@@ -287,6 +287,24 @@ world.beforeEvents.playerBreakBlock.subscribe((event) => {
     }
 });
 
+// ─── PROTECCIÓN CONTRA INTERCCION CON BLOCKES ──────────────────────────────────
+world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
+    const blockLoc = event.block.location;
+    const check = isBlockInProtectedArea(blockLoc);
+
+    console.warn(`[SecurityPr] InteractBlock by ${event.player.name} at ${blockLoc.x},${blockLoc.y},${blockLoc.z}`);
+    if(check.protected) {
+        const hasPermission = hasPlayerPermission(event.player, check.protection);
+        console.warn(`[SecurityPr] Block in protected area. Player has permission: ${hasPermission}`);
+        
+        if (!hasPermission) {
+            event.cancel = true;
+            event.player.sendMessage("§c✗ Esta área está protegida");
+            console.warn(`[SecurityPr] BLOCKED interact by ${event.player.name}`);
+        }
+    }
+});
+
 // ─── UI DE PROTECCIÓN ──────────────────────────────────────────────────────────
 
 async function showProtectionUI(player, protection) {
@@ -353,7 +371,7 @@ async function showProtectionUI(player, protection) {
             form.button("§e⚙ Configurar Clan\n§r§7Cambiar nombre", "textures/ui/icon_setting");
         }
         
-        form.button("§8Cerrar", "textures/ui/icon_cancel");
+        form.button("§8Cerrar", "textures/ui/cancel");
 
         const res = await form.show(player);
         

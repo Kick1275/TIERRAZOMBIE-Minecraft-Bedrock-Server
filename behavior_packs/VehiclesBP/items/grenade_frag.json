@@ -19,7 +19,7 @@
 			},
 			"minecraft:cooldown": {
 				"category": "grenade_frag",
-				"duration": 5
+				"duration": 2
 			}
 		}
 	}

@@ -272,15 +272,16 @@ system.runInterval(() => {
     world.getDimension("overworld").runCommand(`scoreboard players reset @a Sents`);
 }, 6000);
 
-world.beforeEvents.chatSend.subscribe((data) => {
-    if(debugSticksHasDisabledChatModification === true){
-        return;
-    }
-    const chatDisplayEnabled = world.getDynamicProperty("chatDisplayEnabled");
-    if (chatDisplayEnabled !== false && !data.message.startsWith(main.prefix)) {
-        chat(data);
-    }
-});
+// Chat display deshabilitado — PlugsEssentials maneja el formato de chat
+// world.beforeEvents.chatSend.subscribe((data) => {
+//     if(debugSticksHasDisabledChatModification === true){
+//         return;
+//     }
+//     const chatDisplayEnabled = world.getDynamicProperty("chatDisplayEnabled");
+//     if (chatDisplayEnabled !== false && !data.message.startsWith(main.prefix)) {
+//         chat(data);
+//     }
+// });
 
 //
 // Chat Configuration Panel

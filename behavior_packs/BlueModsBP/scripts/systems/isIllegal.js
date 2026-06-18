@@ -225,7 +225,7 @@ system.runInterval(() => {
     for (const player of world.getPlayers()) {
         checkRankDisplay(player);
     }
-}, 0);
+}, 40);
 
 //
 // Anti InCombat Log

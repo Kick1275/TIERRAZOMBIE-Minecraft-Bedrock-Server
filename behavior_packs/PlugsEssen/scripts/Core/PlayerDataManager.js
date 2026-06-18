@@ -60,6 +60,7 @@ class _PlayerDataManager {
     constructor() {
         /** @type {Map<string, object>} */
         this._profiles  = new Map();
+        this._knownNames = [];
         this._dirty     = new Set();
         this._saveTimer = null;
         this._playtimeTimer = null;
@@ -98,23 +99,34 @@ class _PlayerDataManager {
         try {
             const idxRaw = world.getDynamicProperty(INDEX_KEY);
             if (!idxRaw) return;
-            const names = JSON.parse(idxRaw);
-            for (const name of names) {
-                try {
-                    const raw = world.getDynamicProperty(PROFILE_PREFIX + name);
-                    // Los campos de scoreboard (kills/deaths/money/gems) no están
-                    // en la dynamic property — se cargan desde el scoreboard al entrar.
-                    const base = raw ? JSON.parse(raw) : {};
-                    this._profiles.set(name, { ..._defaultProfile(name), ...base });
-                } catch (_) {}
-            }
+            this._knownNames = JSON.parse(idxRaw);
         } catch (_) {}
+        this._knownNames = this._knownNames || [];
+    }
+
+    /** Carga un perfil bajo demanda (evita parsear todos al iniciar el mundo). */
+    _ensureProfile(name) {
+        if (this._profiles.has(name)) return this._profiles.get(name);
+        try {
+            const raw = world.getDynamicProperty(PROFILE_PREFIX + name);
+            const base = raw ? JSON.parse(raw) : {};
+            const p = { ..._defaultProfile(name), ...base };
+            this._profiles.set(name, p);
+            if (!this._knownNames.includes(name)) {
+                this._knownNames.push(name);
+            }
+            return p;
+        } catch (_) {
+            const p = _defaultProfile(name);
+            this._profiles.set(name, p);
+            return p;
+        }
     }
 
     _save() {
         if (this._dirty.size === 0) return;
         try {
-            const allNames = Array.from(this._profiles.keys());
+            const allNames = Array.from(new Set([...this._knownNames, ...this._profiles.keys()]));
             world.setDynamicProperty(INDEX_KEY, JSON.stringify(allNames));
         } catch (_) {}
         for (const name of this._dirty) {
@@ -170,7 +182,7 @@ class _PlayerDataManager {
                     this._dirty.add(player.name);
                     // Actualizar índice inmediatamente para el nuevo jugador
                     try {
-                        const allNames = Array.from(this._profiles.keys());
+                        const allNames = Array.from(new Set([...this._knownNames, ...this._profiles.keys()]));
                         world.setDynamicProperty(INDEX_KEY, JSON.stringify(allNames));
                     } catch (_) {}
                     emitDataChange(DataEvents.FIRST_JOIN, player.name, p.firstJoin, null);
@@ -326,7 +338,8 @@ class _PlayerDataManager {
             const score = this._getScoreboardValue(name, field);
             return score ?? fallback;
         }
-        return this._profiles.get(name)?.[field] ?? fallback;
+        if (!this._profiles.has(name) && !this._knownNames.includes(name)) return fallback;
+        return this._ensureProfile(name)[field] ?? fallback;
     }
 
     /**
@@ -336,8 +349,8 @@ class _PlayerDataManager {
      * @returns {object|null}
      */
     get(name) {
-        const p = this._profiles.get(name);
-        if (!p) return null;
+        if (!this._profiles.has(name) && !this._knownNames.includes(name)) return null;
+        const p = this._ensureProfile(name);
         // Mezclar con valores live de scoreboard
         const live = { ...p };
         for (const field of SCOREBOARD_FIELDS) {
@@ -372,7 +385,7 @@ class _PlayerDataManager {
         }
 
         let p = this._profiles.get(name);
-        if (!p) { p = _defaultProfile(name); this._profiles.set(name, p); }
+        if (!p) { p = this._ensureProfile(name); }
         const old = p[field];
         p[field] = value;
         this._dirty.add(name);

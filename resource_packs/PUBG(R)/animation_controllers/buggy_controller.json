@@ -45,14 +45,14 @@
 				"default": {
 					"transitions": [
 						{
-							"fatal": "query.health <= 25"
+							"fatal": "query.health <= 125"
 						}
 					]
 				},
 				"fatal": {
 					"transitions": [
 						{
-							"default": "query.health > 25"
+							"default": "query.health > 125"
 						}
 					],
 					"particle_effects": [

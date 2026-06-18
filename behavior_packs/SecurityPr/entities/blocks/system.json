@@ -673,94 +673,94 @@
         ]
       },
       "11x11_open_event": {
-        "sequence": [
-          {
-            "add": {
-              "component_groups": [
-                "variant_11x11_open_group"
-              ]
-            },
-            "queue_command": {
-              "command": [
-                "playsound random.fizz @a ~~~",
-                "setblock ~~~ rt:11x11_openlist_block"
-              ]
-            },
-            "remove": {
-              "component_groups": [
-                "variant_11x11_group"
-              ]
-            }
-          },
-          {
-            "queue_command": {
-              "command": [
-                "function proteccion/mensaje4"
-              ],
-              "target": "other"
-            }
-          }
-        ]
+        // "sequence": [
+        //   {
+        //     "add": {
+        //       "component_groups": [
+        //         "variant_11x11_open_group"
+        //       ]
+        //     },
+        //     "queue_command": {
+        //       "command": [
+        //         "playsound random.fizz @a ~~~",
+        //         "setblock ~~~ rt:11x11_openlist_block"
+        //       ]
+        //     },
+        //     "remove": {
+        //       "component_groups": [
+        //         "variant_11x11_group"
+        //       ]
+        //     }
+        //   },
+        //   {
+        //     "queue_command": {
+        //       "command": [
+        //         "function proteccion/mensaje4"
+        //       ],
+        //       "target": "other"
+        //     }
+        //   }
+        // ]
       },
       "21x21_open_event": {
-        "sequence": [
-          {
-            "add": {
-              "component_groups": [
-                "variant_21x21_open_group"
-              ]
-            },
-            "queue_command": {
-              "command": [
-                "playsound random.fizz @a ~~~",
-                "setblock ~~~ rt:21x21_openlist_block"
-              ]
-            },
-            "remove": {
-              "component_groups": [
-                "variant_21x21_group"
-              ]
-            }
-          },
-          {
-            "queue_command": {
-              "command": [
-                "function proteccion/mensaje4"
-              ],
-              "target": "other"
-            }
-          }
-        ]
+        // "sequence": [
+        //   {
+        //     "add": {
+        //       "component_groups": [
+        //         "variant_21x21_open_group"
+        //       ]
+        //     },
+        //     "queue_command": {
+        //       "command": [
+        //         "playsound random.fizz @a ~~~",
+        //         "setblock ~~~ rt:21x21_openlist_block"
+        //       ]
+        //     },
+        //     "remove": {
+        //       "component_groups": [
+        //         "variant_21x21_group"
+        //       ]
+        //     }
+        //   },
+        //   {
+        //     "queue_command": {
+        //       "command": [
+        //         "function proteccion/mensaje4"
+        //       ],
+        //       "target": "other"
+        //     }
+        //   }
+        // ]
       },
       "31x31_open_event": {
-        "sequence": [
-          {
-            "add": {
-              "component_groups": [
-                "variant_31x31_open_group"
-              ]
-            },
-            "queue_command": {
-              "command": [
-                "playsound random.fizz @a ~~~",
-                "setblock ~~~ rt:31x31_openlist_block"
-              ]
-            },
-            "remove": {
-              "component_groups": [
-                "variant_31x31_group"
-              ]
-            }
-          },
-          {
-            "queue_command": {
-              "command": [
-                "function proteccion/mensaje4"
-              ],
-              "target": "other"
-            }
-          }
-        ]
+        // "sequence": [
+        //   {
+        //     "add": {
+        //       "component_groups": [
+        //         "variant_31x31_open_group"
+        //       ]
+        //     },
+        //     "queue_command": {
+        //       "command": [
+        //         "playsound random.fizz @a ~~~",
+        //         "setblock ~~~ rt:31x31_openlist_block"
+        //       ]
+        //     },
+        //     "remove": {
+        //       "component_groups": [
+        //         "variant_31x31_group"
+        //       ]
+        //     }
+        //   },
+        //   {
+        //     "queue_command": {
+        //       "command": [
+        //         "function proteccion/mensaje4"
+        //       ],
+        //       "target": "other"
+        //     }
+        //   }
+        // ]
       },
       "11x11_close_event": {
         "sequence": [

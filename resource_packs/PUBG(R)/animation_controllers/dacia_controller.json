@@ -45,7 +45,7 @@
 				"default": {
 					"transitions": [
 						{
-							"fatal": "query.health <= 25"
+							"fatal": "query.health <= 250"
 						}
 					]
 				},

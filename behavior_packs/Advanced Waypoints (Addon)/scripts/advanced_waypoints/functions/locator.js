@@ -45,7 +45,7 @@ system.runInterval(() => {
             catch { }
         }
     }
-}, 3);
+}, 20);
 function getWaypointPos(entity) {
     const pos = waypointsLocations.get(entity.id);
     if (!pos) {

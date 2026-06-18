@@ -129,7 +129,7 @@ function _idleFireTornado(t, a) {
                 e % 25 == 0 && _soundAt(l, c, "liquid.lava", .35, 1);
             } catch (t) {}
         } else stopIdleParticles(t);
-    }, 5);
+    }, 30);
     _idleIntervals.set(t.id, n);
 }
 
@@ -191,7 +191,7 @@ function _idleStorm(t, a) {
           "ambient.weather.rain", .4, 1)
       } catch (t) {}
     } else stopIdleParticles(t)
-  }, 5);
+  }, 30);
   _idleIntervals.set(t.id, n)
 }
 
@@ -260,7 +260,7 @@ function _idleSouls(t, a) {
           e % 70 == 0 && _soundAt(l, c, "portal.portal", .3, 1.4)
       } catch (t) {}
     } else stopIdleParticles(t)
-  }, 5);
+  }, 30);
   _idleIntervals.set(t.id, n)
 }
 
@@ -318,7 +318,7 @@ function _idleSakura(t, a) {
           "note.chime", .3, 1.6)
       } catch (t) {}
     } else stopIdleParticles(t)
-  }, 5);
+  }, 30);
   _idleIntervals.set(t.id, n)
 }
 
@@ -372,19 +372,14 @@ function _idleStar(t, a) {
             .random()), e % 85 == 0 && _soundAt(c, i, "note.chime", .25, 2)
         } catch (t) {}
       } else stopIdleParticles(t)
-    }, 5);
+    }, 30);
   _idleIntervals.set(t.id, r)
 }
 export function stopIdleParticles(t) {
   const a = _idleIntervals.get(t?.id);
   void 0 !== a && (system.clearRun(a), _idleIntervals.delete(t.id));
   const e = _idleLabels.get(t?.id);
-  e && (_idleLabels.delete(t.id), _killLabelSilent(e.labelEntity, t?.location ??
-  {
-    x: 0,
-    y: 0,
-    z: 0
-  }))
+  e && (_idleLabels.delete(t.id), _killLabelSilent(e.labelEntity, {x:0,y:0,z:0}))
 }
 export function stopAllIdleParticles() {
   for (const [id, data] of _idleLabels.entries()) {
@@ -685,10 +680,7 @@ function _stormReveal(t, a, e) {
       volume: 1
     })
   } catch (t) {}
-  try {
-    t.runCommand(
-      `summon lightning_bolt ${Math.floor(a.x)} ${Math.floor(a.y)} ${Math.floor(a.z)}`
-      )
+  try { 
       t.runCommand("effect @e[r=5] fire_resistance 10 10")
   } catch (t) {}
   for (let e = 0; e < 4; e++) system.runTimeout(() => {

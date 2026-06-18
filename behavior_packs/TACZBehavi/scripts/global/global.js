@@ -34,7 +34,7 @@ globalThis.Indoarsenal = Object.freeze({
         m870: { damage: 3, penetration: 0.5 },
         m1014: { damage: 3, penetration: 0.4 },
         db: { damage: 3, penetration: 0.3 },
-        rpg: { damage: 100, penetration: 1.0 },
+        rpg: { damage: 500, penetration: 1.0 },
         g3: { damage: 9, penetration: 0.7 },
         evolys: { damage: 10, penetration: 0.6 },
         fal: { damage: 9, penetration: 0.7 },

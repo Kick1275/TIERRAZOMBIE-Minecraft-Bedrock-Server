@@ -57,17 +57,22 @@ import "./Plugins/ResetPlayerCommand.js";
 import "./Plugins/ResetSidebarCommand.js";
 import "./Plugins/AllCommands.js";
 import "./Plugins/GameModeSystem.js";
-import "./Plugins/PetroEventSystem.js"; 
-/*import"./Plugins/TradeZoneProtection.js"*/ ;
-import "./Plugins/DailyMissions.js";
+// import "./Plugins/DailyMissions.js";
+import "./Plugins/PetroEventSystem.js";
+import "./Plugins/MusicSystem.js";
+import "./Plugins/EmoteSystem.js";
+import "./Plugins/CosmeticsSystem.js";
+import "./Plugins/TzShopSystem.js";
+/*import "./Plugins/TradeZoneProtection.js";*/
+import "./Plugins/TradeZoneProtection.js";
 import "./Plugins/WaypointExtraccion.js";
 import "./Plugins/DeadZonePlaceholders.js";
 import "./Plugins/Downed.js";
 import "./Plugins/ExtractionMachine.js";
-import {
-  initializeMinePvP
-} from "./Plugins/MinePvP/MinePvP.js";
 import "./Server/UserUI.js"; // kills/deaths y scoreboards son manejados por Core/PlayerDataManager
+// import "./Plugins/GameModeSystem.js";
+import "./Plugins/ClearLag.js";
+import "./Plugins/ProteccionBlocks.js";
 export {
   registerKillListener
 }
@@ -88,11 +93,8 @@ initializeGlobalConfig(), system.runTimeout(() => {
   try {
     initializeCrateSystem()
   } catch (t) {}
-}, 80), system.runTimeout(() => {
-  try {
-    initializeMinePvP()
-  } catch (t) {}
-}, 120), world.afterEvents.playerSpawn.subscribe(t => {
+}, 80),
+world.afterEvents.playerSpawn.subscribe(t => {
   const e = t.player;
   if (!firstPlayerJoined) {
     firstPlayerJoined = !0

@@ -1,6 +1,6 @@
 import { world, system } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
-import { onDownedKill } from "./GameModeSystem.js";
+//import { onDownedKill } from "./GameModeSystem.js";
 
 const downedPlayers = new Set();
 const moveTracker   = new Map(); // playerId -> { lastX, lastZ, movingTicks }
@@ -213,7 +213,7 @@ world.afterEvents.playerSpawn.subscribe((ev) => {
     player.runCommand("effect @s health_boost infinite 14 true");
     player.runCommand("playanimation @s animation.down q 1");
     
-
+    
     // Grace period: ignore downed check for 3 seconds after spawn
     spawnGrace.add(player.id);
     system.runTimeout(() => spawnGrace.delete(player.id), 60);

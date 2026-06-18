@@ -1,10 +1,50 @@
 import{world}from"@minecraft/server";const STORAGE_KEY="crates:data";const STORAGE_PREFIX="crate:";const INDEX_KEY="crates:index";
 
-function _loadIndex(){try{return JSON.parse(world.getDynamicProperty(INDEX_KEY)??"[]")}catch(t){return[]}}
-function _saveIndex(ids){try{world.setDynamicProperty(INDEX_KEY,JSON.stringify(ids))}catch(t){console.warn("[CrateManager] Error saving index: "+t)}}
-function _loadCrate(id){try{const raw=world.getDynamicProperty(STORAGE_PREFIX+id);return raw?JSON.parse(raw):null}catch(t){return null}}
-function _saveCrate(crate){try{world.setDynamicProperty(STORAGE_PREFIX+crate.id,JSON.stringify(crate))}catch(t){console.warn("[CrateManager] Error saving crate "+crate.id+": "+t)}}
-function _deleteCrate(id){try{world.setDynamicProperty(STORAGE_PREFIX+id,undefined)}catch(t){}}
+// ─── CACHÉ EN MEMORIA ──────────────────────────────────────────────────────────
+let _indexCache = null;          // caché del índice de IDs
+const _crateCache = new Map();   // caché por crate id
+
+function _loadIndex(){
+    if (_indexCache) return _indexCache;
+    try { _indexCache = JSON.parse(world.getDynamicProperty(INDEX_KEY)??"[]"); } catch { _indexCache = []; }
+    return _indexCache;
+}
+function _saveIndex(ids){
+    _indexCache = ids;
+    try{world.setDynamicProperty(INDEX_KEY,JSON.stringify(ids))}catch(t){console.warn("[CrateManager] Error saving index: "+t)}
+}
+function _saveCrate(crate){
+    _crateCache.set(crate.id, crate); // actualizar caché
+    try {
+        const { openLog, ...crateData } = crate;
+        const mainJson = JSON.stringify(crateData);
+        if (mainJson.length > 30000) {
+            console.warn(`[CrateManager] ADVERTENCIA: Crate ${crate.id} ocupa ${mainJson.length} chars, cerca del límite de 32768`);
+        }
+        world.setDynamicProperty(STORAGE_PREFIX+crate.id, mainJson);
+        if (openLog && openLog.length > 0) {
+            try { world.setDynamicProperty(STORAGE_PREFIX+crate.id+":log", JSON.stringify(openLog.slice(0,50))); } catch {}
+        }
+    } catch(t) { console.warn("[CrateManager] Error saving crate "+crate.id+": "+t); }
+}
+function _loadCrate(id){
+    if (_crateCache.has(id)) return _crateCache.get(id);
+    try {
+        const raw = world.getDynamicProperty(STORAGE_PREFIX+id);
+        if (!raw) return null;
+        const crate = JSON.parse(raw);
+        try {
+            const logRaw = world.getDynamicProperty(STORAGE_PREFIX+id+":log");
+            if (logRaw) crate.openLog = JSON.parse(logRaw);
+        } catch {}
+        _crateCache.set(id, crate); // guardar en caché
+        return crate;
+    } catch(t) { return null; }
+}
+function _deleteCrate(id){
+    _crateCache.delete(id);
+    try{world.setDynamicProperty(STORAGE_PREFIX+id,undefined)}catch(t){}
+}
 
 // Migración desde formato antiguo (todo en una key)
 function _migrate(){try{const old=world.getDynamicProperty(STORAGE_KEY);if(!old)return;const data=JSON.parse(old);const ids=Object.keys(data);if(ids.length===0)return;for(const id of ids){_saveCrate(data[id])}_saveIndex(ids);try{world.setDynamicProperty(STORAGE_KEY,undefined)}catch(t){}console.warn("[CrateManager] Migrated "+ids.length+" crates to per-crate storage")}catch(t){}}

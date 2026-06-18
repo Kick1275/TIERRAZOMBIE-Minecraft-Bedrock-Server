@@ -22,7 +22,7 @@
 					},
 					"particle_on_hit": {
 						"particle_type": "smoke",
-						"num_particles": 6,
+						"num_particles": 50,
 						"on_entity_hit": true,
 						"on_other_hit": true
 					},
@@ -55,7 +55,7 @@
 						"event": "af:explode"
 					},
 					"time": [
-						4,
+						2.5,
 						5
 					]
 				}
@@ -74,7 +74,7 @@
 				"queue_command": {
 					"command": [
 						"particle af:explosion_fragments ~ ~ ~",
-						"damage @e[r=8,family=!vehicle,family=!inanimate] 20 entity_explosion entity @s",
+						"damage @e[r=8,family=!vehicle,family=!inanimate] 30 entity_explosion entity @s",
 						"playsound grenade.pop @a ~ ~ ~ 5 1",
 						"playsound grenade.pop @a ~ ~ ~ 5 10"
 					]

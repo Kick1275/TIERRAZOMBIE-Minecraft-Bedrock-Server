@@ -71,3 +71,12 @@ export const apiWaypointEntity = new class ApiWaypointEntity {
         })();
     }
 };
+
+// Exponer API pública para otros behavior packs (compatibilidad)
+try {
+    globalThis.__advancedWaypointsAPI = globalThis.__advancedWaypointsAPI || {};
+    globalThis.__advancedWaypointsAPI.apiWaypointEntity = apiWaypointEntity;
+    globalThis.__advancedWaypointsAPI.apiWaypointInfo = typeof apiWaypointInfo !== "undefined" ? apiWaypointInfo : undefined;
+} catch (e) {
+    // Ignorar si no es posible asignar
+}

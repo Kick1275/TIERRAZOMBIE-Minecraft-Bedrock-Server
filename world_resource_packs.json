@@ -7,6 +7,11 @@
 	},
 	
 	{
+		"pack_id" : "7f7a1b4d-6479-5889-7d3d-c686770cff39",
+		"version" : [ 1, 8, 8 ]
+	},
+	
+	{
 		"pack_id" : "ada14474-e05b-47f6-9f18-bb70288a990d",
 		"subpack" : "br",
 		"version" : [ 1, 2, 0 ]
@@ -18,8 +23,8 @@
 	},
 	
 	{
-		"pack_id" : "7f7a1b4d-6479-5889-7d3d-c686770cff39",
-		"version" : [ 1, 8, 8 ]
+		"pack_id" : "75ae9127-8b1b-4b38-a62b-a672538b4778",
+		"version" : [ 5, 12, 1 ]
 	},
 	
 	{
@@ -40,11 +45,6 @@
 	{
 		"pack_id" : "e304a4eb-f0a0-4979-ac17-7b0f46a555c8",
 		"version" : [ 0, 10, 4 ]
-	},
-	
-	{
-		"pack_id" : "94f100b5-6196-463f-9084-4afcc58ff21d",
-		"version" : [ 7, 0, 0 ]
 	},
 	
 	{

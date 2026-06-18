@@ -79,9 +79,10 @@ export const deadzonHelmetProtection = {
     // Tactical / spec — cada uno diferente
     "mcpe:tactical_helmet_black": 0.40, "mcpe:tactical_helmet_olive": 0.42,
     "mcpe:tactical_helmet_tan": 0.43, "mcpe:tactical_helmet_white": 0.44,
-    "mcpe:spec_helmet": 0.48,
     // Assault helmet — mejor del juego, cada variante ligeramente diferente
     "mcpe:assault_helmet_black": 0.55, "mcpe:assault_helmet_olive": 0.58,
+    
+    "mcpe:spec_helmet": 0.65,
 };
 
 // ─── Tops — siempre suma al body (encima del chaleco) ─────────────────────────

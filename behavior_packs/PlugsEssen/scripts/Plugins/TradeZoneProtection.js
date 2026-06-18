@@ -4,9 +4,9 @@ console.warn("[TradeZone] Sistema de protección iniciando...");
 
 // ─── BOUNDS ───────────────────────────────────────────────────────────────────
 
-const MIN_X = -1338, MAX_X = -985;
-const MIN_Y =     0, MAX_Y =  150;
-const MIN_Z =  -217, MAX_Z =   25;
+const MIN_X = 1589, MAX_X = 1662;
+const MIN_Y =   45, MAX_Y =  200;
+const MIN_Z = 1439, MAX_Z = 1526;
 
 function inZone(loc) {
     return loc.x >= MIN_X && loc.x <= MAX_X &&
@@ -14,108 +14,118 @@ function inZone(loc) {
            loc.z >= MIN_Z && loc.z <= MAX_Z;
 }
 
-function isAdmin(player) { return player.hasTag("admin"); }
+function isAdmin(p) { return p.hasTag("admin"); }
+function deny(p, msg) { try { p.sendMessage(`§c⚠ ${msg}`); } catch {} }
 
-function deny(player, msg) {
-    try { player.sendMessage(`§c⚠ ${msg}`); } catch {}
-}
+// ─── ITEMS BLOQUEADOS ─────────────────────────────────────────────────────────
+// Armas TACZ (prefijo krep:), explosivos DeadZone y vanilla peligrosos
 
-// ─── ITEMS COMPLETAMENTE BLOQUEADOS (uso) ─────────────────────────────────────
-// Mecheros, explosivos, agua, lava, armas TACZ (krep:) detectadas por prefijo
+const BLOCKED_ITEMS = new Set([
+    // Explosivos / incendiarios DeadZone
+    "mcpe:frag_grenade", "mcpe:pipe_bomb", "mcpe:c4_explosive",
+    "mcpe:c4_detonator", "mcpe:landmine", "mcpe:smoke_grenade",
+    // Vanilla peligrosos
+    "minecraft:tnt", "minecraft:flint_and_steel", "minecraft:fire_charge",
+    // Cubetas — manejadas también por el fill de seguridad abajo
+    "minecraft:water_bucket", "minecraft:lava_bucket",
+    "minecraft:powder_snow_bucket",
+]);
+
+// Prefijos de armas TACZ (krep:) y otras que quieras agregar
+const BLOCKED_PREFIXES = ["krep:"];
 
 function isBlockedItem(typeId) {
     if (!typeId) return false;
-    // Armas de fuego TACZ
-    if (typeId.startsWith("krep:")) return true;
-    // Explosivos y mecheros
-    const blocked = new Set([
-        "mcpe:frag_grenade", "mcpe:pipe_bomb", "mcpe:c4_explosive",
-        "mcpe:c4_detonator", "mcpe:landmine", "mcpe:smoke_grenade",
-        "minecraft:tnt", "minecraft:flint_and_steel", "minecraft:fire_charge",
-        "minecraft:water_bucket", "minecraft:lava_bucket",
-        "minecraft:powder_snow_bucket",
-    ]);
-    return blocked.has(typeId);
+    for (const prefix of BLOCKED_PREFIXES) {
+        if (typeId.startsWith(prefix)) return true;
+    }
+    return BLOCKED_ITEMS.has(typeId);
 }
 
-// ─── 1. Bloquear romper bloques ───────────────────────────────────────────────
+// ─── 1 & 2. Romper / colocar bloques ─────────────────────────────────────────
 
 world.beforeEvents.playerBreakBlock.subscribe(ev => {
     try {
         if (isAdmin(ev.player)) return;
-        if (!inZone(ev.player.location)) return;
+        if (!inZone(ev.block.location)) return;
         ev.cancel = true;
         system.run(() => deny(ev.player, "No puedes romper bloques aquí."));
     } catch {}
 });
 
-// ─── 2. Bloquear colocar bloques ─────────────────────────────────────────────
-
 world.beforeEvents.playerPlaceBlock.subscribe(ev => {
     try {
         if (isAdmin(ev.player)) return;
-        if (!inZone(ev.player.location)) return;
+        if (!inZone(ev.block.location)) return;
         ev.cancel = true;
         system.run(() => deny(ev.player, "No puedes colocar bloques aquí."));
     } catch {}
 });
 
-// ─── 3. Bloquear uso de items (agua, lava, mecheros, armas TACZ, explosivos) ──
+// ─── 3. Bloquear uso de items peligrosos + fill de seguridad para fluidos ─────
 
 world.beforeEvents.itemUse.subscribe(ev => {
     try {
+        const typeId = ev.itemStack?.typeId;
+        if (!isBlockedItem(typeId)) return;
         if (isAdmin(ev.source)) return;
         if (!inZone(ev.source.location)) return;
-        if (!isBlockedItem(ev.itemStack?.typeId)) return;
         ev.cancel = true;
+
+        // Fill de seguridad solo para cubetas de fluido
+        if (typeId === "minecraft:water_bucket" || typeId === "minecraft:lava_bucket") {
+            const loc = ev.source.location;
+            const x = Math.floor(loc.x), y = Math.floor(loc.y), z = Math.floor(loc.z);
+            system.run(() => {
+                try {
+                    world.getDimension("minecraft:overworld").runCommand(
+                        `fill ${x-5} ${y-5} ${z-5} ${x+5} ${y+5} ${z+5} air replace water`
+                    );
+                    world.getDimension("minecraft:overworld").runCommand(
+                        `fill ${x-5} ${y-5} ${z-5} ${x+5} ${y+5} ${z+5} air replace lava`
+                    );
+                } catch {}
+            });
+        }
+
         system.run(() => deny(ev.source, "No puedes usar ese item aquí."));
     } catch {}
 });
 
-// playerInteractWithBlock cubre colocar agua/lava sobre un bloque
+// También bloquear interactWithBlock con cubeta (colocar fluido sobre bloque)
 world.beforeEvents.playerInteractWithBlock.subscribe(ev => {
     try {
-        if (isAdmin(ev.player)) return;
-        if (!inZone(ev.player.location)) return;
-        const inv = ev.player.getComponent("minecraft:inventory")?.container;
+        const inv  = ev.player.getComponent("minecraft:inventory")?.container;
         const item = inv?.getItem(ev.player.selectedSlotIndex);
         if (!item || !isBlockedItem(item.typeId)) return;
+        if (isAdmin(ev.player)) return;
+        if (!inZone(ev.player.location)) return;
         ev.cancel = true;
+
+        if (item.typeId === "minecraft:water_bucket" || item.typeId === "minecraft:lava_bucket") {
+            const loc = ev.player.location;
+            const x = Math.floor(loc.x), y = Math.floor(loc.y), z = Math.floor(loc.z);
+            system.run(() => {
+                try {
+                    world.getDimension("minecraft:overworld").runCommand(
+                        `fill ${x-5} ${y-5} ${z-5} ${x+5} ${y+5} ${z+5} air replace water`
+                    );
+                    world.getDimension("minecraft:overworld").runCommand(
+                        `fill ${x-5} ${y-5} ${z-5} ${x+5} ${y+5} ${z+5} air replace lava`
+                    );
+                } catch {}
+            });
+        }
+
         system.run(() => deny(ev.player, "No puedes usar ese item aquí."));
     } catch {}
 });
 
-// Respaldo: limpiar fluidos que hayan escapado
-const FLUID_BLOCKS = new Set([
-    "minecraft:water", "minecraft:flowing_water",
-    "minecraft:lava",  "minecraft:flowing_lava",
-]);
-
-system.runInterval(() => {
-    try {
-        const dim = world.getDimension("minecraft:overworld");
-        // Barrer una cuadrícula dentro de la zona buscando fluidos
-        for (let x = MIN_X; x <= MAX_X; x += 4) {
-            for (let z = MIN_Z; z <= MAX_Z; z += 4) {
-                for (let y = MIN_Y; y <= MAX_Y; y += 4) {
-                    try {
-                        const block = dim.getBlock({ x, y, z });
-                        if (block && FLUID_BLOCKS.has(block.typeId)) {
-                            block.setType("minecraft:air");
-                        }
-                    } catch {}
-                }
-            }
-        }
-    } catch {}
-}, 20);
-
-// ─── 4. Bloquear daño (PvP y cualquier daño) ─────────────────────────────────
+// ─── 4. Bloquear daño / PvP ───────────────────────────────────────────────────
 
 world.beforeEvents.entityHurt.subscribe(ev => {
     try {
         if (!inZone(ev.hurtEntity.location)) return;
-        // Admins pueden recibir daño
         if (ev.hurtEntity.typeId === "minecraft:player" && isAdmin(ev.hurtEntity)) return;
         ev.cancel = true;
     } catch {}
@@ -124,91 +134,23 @@ world.beforeEvents.entityHurt.subscribe(ev => {
 // ─── 5. Bloquear explosiones ──────────────────────────────────────────────────
 
 world.beforeEvents.explosion.subscribe(ev => {
-    try {
-        if (inZone(ev.center)) ev.cancel = true;
-    } catch {}
+    try { if (inZone(ev.center)) ev.cancel = true; } catch {}
 });
 
-// ─── 6. Eliminar proyectiles explosivos ───────────────────────────────────────
-
-const EXPLOSIVE_PROJ = new Set([
-    "bullet:rpg", "mcpe:frag_grenade", "mcpe:pipe_bomb", "mcpe:c4_explosive",
-]);
-
-system.runInterval(() => {
-    try {
-        const dim = world.getDimension("minecraft:overworld");
-        for (const e of dim.getEntities({ families: ["projectile"] })) {
-            try {
-                if (EXPLOSIVE_PROJ.has(e.typeId) && inZone(e.location)) e.remove?.();
-            } catch {}
-        }
-    } catch {}
-}, 5);
-
-// ─── 7. Eliminar mobs hostiles (family monster) ───────────────────────────────
+// ─── 6. Expulsar mobs hostiles de la zona ─────────────────────────────────────
+// runCommand fill/kill acotado por volumen — sin getEntities global.
+// Cada 5 segundos (100 ticks). El fill-kill es procesado en el game thread,
+// no en el script thread, así que no bloquea.
 
 system.runInterval(() => {
     try {
-        const dim = world.getDimension("minecraft:overworld");
-        for (const e of dim.getEntities({ families: ["monster"] })) {
-            try {
-                if (inZone(e.location)) e.kill();
-            } catch {}
-        }
+        world.getDimension("minecraft:overworld").runCommand(
+            `execute as @e[type=!player,family=monster,x=${MIN_X},y=${MIN_Y},z=${MIN_Z},dx=${MAX_X-MIN_X},dy=${MAX_Y-MIN_Y},dz=${MAX_Z-MIN_Z}] run tp @s 9999999 90 9999999`
+        );
     } catch {}
-}, 40);
+}, 100);
 
-// ─── ZONA DE CONTENCIÓN (Spawn inicial) ──────────────────────────────────────
-
-const CONTAIN_MIN_X = -1244, CONTAIN_MAX_X = -1079;
-const CONTAIN_MIN_Y =    60, CONTAIN_MAX_Y =   120;
-const CONTAIN_MIN_Z =  -122, CONTAIN_MAX_Z =   -54;
-
-function inContainZone(loc) {
-    return loc.x >= CONTAIN_MIN_X && loc.x <= CONTAIN_MAX_X &&
-           loc.y >= CONTAIN_MIN_Y && loc.y <= CONTAIN_MAX_Y &&
-           loc.z >= CONTAIN_MIN_Z && loc.z <= CONTAIN_MAX_Z;
-}
-
-const CONTAIN_CENTER = { x: -1161, y: 87, z: -88 };
-const allowedToLeave = new Set();
-
-export function allowLeaveContainZone(playerId) {
-    allowedToLeave.add(playerId);
-    system.runTimeout(() => allowedToLeave.delete(playerId), 100);
-}
-
-system.runInterval(() => {
-    try {
-        for (const player of world.getAllPlayers()) {
-            try {
-                if (isAdmin(player)) continue;
-                if (allowedToLeave.has(player.id)) continue;
-                if (!player.hasTag("tz:in_spawn")) continue;
-                if (!inContainZone(player.location)) {
-                    player.teleport(CONTAIN_CENTER, {
-                        dimension: world.getDimension("minecraft:overworld")
-                    });
-                    player.sendMessage("§c⚠ Debes usar el §eNPC Guardia §cpara salir del área de inicio.");
-                }
-            } catch {}
-        }
-    } catch {}
-}, 10);
-
-system.runInterval(() => {
-    try {
-        for (const player of world.getAllPlayers()) {
-            try {
-                if (inContainZone(player.location)) {
-                    if (!player.hasTag("tz:in_spawn")) player.addTag("tz:in_spawn");
-                } else {
-                    if (player.hasTag("tz:in_spawn")) player.removeTag("tz:in_spawn");
-                }
-            } catch {}
-        }
-    } catch {}
-}, 20);
+// allowLeaveContainZone se mantiene como no-op por compatibilidad con GameModeSystem
+export function allowLeaveContainZone(playerId) {}
 
 console.warn("[TradeZone] Protección activa");

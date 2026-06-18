@@ -75,22 +75,8 @@ registerCustomResolver("sick",  p => p.hasTag("infect") ? "§cInfectado" : "§aS
 // ── Mapa / GameMode ────────────────────────────────────
 // Estas se registran desde GameModeSystem.js: $map y $mtime
 // Aquí solo los aliases por si acaso
-registerCustomResolver("map",   () => {
-    try {
-        const raw = world.getDynamicProperty("gm:state");
-        if (raw !== "active") return "§7Enfriamiento";
-        const idx = world.getDynamicProperty("gm:mapIdx") ?? 0;
-        const names = ["The Green City","The Down Town","The Air Port","The Desert"];
-        return names[idx] ?? "?";
-    } catch { return "?"; }
-});
-registerCustomResolver("mtime", () => {
-    try {
-        const end = world.getDynamicProperty("gm:endTime") ?? 0;
-        const s = Math.max(0, end - Math.floor(Date.now() / 1000));
-        return `${Math.floor(s/60)}:${(s%60).toString().padStart(2,"0")}`;
-    } catch { return "0:00"; }
-});
+registerCustomResolver("map",   () => "§fMundo Abierto");
+registerCustomResolver("mtime", () => "§aLibre");
 
 // ── Aliases cortos de PlugsEssentials ──────────────────
 // Estos delegan a los resolvers ya registrados en PlaceholderResolver.js

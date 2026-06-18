@@ -8,7 +8,7 @@
 // https://dsc.gg/bluemods
 
 export const main = {
-    prefix: "!", // Main Prefix
+    prefix: "*", // Main Prefix
     adminTag: "admin",
     trustTag: "trusted",
     notifyTag: "notify",

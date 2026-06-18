@@ -1,5 +1,6 @@
 import { world, system } from "@minecraft/server";
 import { giveMenuBook } from "../Server/UserUI.js";
+import { onPetroEnter } from "./DailyMissions.js";
 
 console.warn("[PetroEvent] Sistema iniciando...");
 
@@ -57,24 +58,21 @@ const BOAT_MAX_CAPACITY = 6;
 
 // ─── PROP KEYS ────────────────────────────────────────────────────────────────
 
-const PROP_CONFIG        = "petro:config";
-const PROP_MATCH_COUNT   = "petro:matchCount";
-const PROP_EVENT_STATE   = "petro:eventState"; // "none" | "active" | "drop_open"
-const PROP_DROP_UNLOCK   = "petro:dropUnlockAt";
-const PROP_DROP_CLEAR    = "petro:dropClearAt";
+const PROP_CONFIG      = "petro:config";
+const PROP_EVENT_STATE = "petro:eventState";
+const PROP_DROP_UNLOCK = "petro:dropUnlockAt";
+const PROP_DROP_CLEAR  = "petro:dropClearAt";
+const PROP_ACTIVE_MAP  = "gm:active_map";
 
 // ─── CONFIG DEFAULT ───────────────────────────────────────────────────────────
 
 const DEFAULT_CONFIG = {
     enabled:          true,
-    matchInterval:    5,       // cada cuántas partidas se activa
-    matchDuration:    20,      // minutos de duración de la partida
-    dropLockMins:     15,      // minutos bloqueado el drop
-    dropClearMins:    5,       // minutos disponible antes de limpiarse
-    boatDurationSecs: 300,     // segundos antes de que el bote desaparezca
-    protectionSecs:   60,      // segundos de protección al inicio
-    cancelWindowSecs: 60,      // segundos de ventana de cancelación
-    squadMaxSize:     6,       // máximo jugadores por squad en este evento
+    dropLockMins:     15,
+    dropClearMins:    5,
+    boatDurationSecs: 300,
+    protectionSecs:   60,
+    cancelWindowSecs: 60,
 };
 
 export function getPetroConfig() {
@@ -96,82 +94,56 @@ function cfg() { return getPetroConfig(); }
 const nowSec  = () => Math.floor(Date.now() / 1000);
 const fmtTime = s  => `${Math.floor(s / 60)}:${(s % 60).toString().padStart(2, "0")}`;
 
-function getMatchCount()  { try { return world.getDynamicProperty(PROP_MATCH_COUNT)  ?? 0;      } catch { return 0; } }
-function getEventState()  { try { return world.getDynamicProperty(PROP_EVENT_STATE)  ?? "none"; } catch { return "none"; } }
-function getDropUnlock()  { try { return world.getDynamicProperty(PROP_DROP_UNLOCK)  ?? 0;      } catch { return 0; } }
-function getDropClear()   { try { return world.getDynamicProperty(PROP_DROP_CLEAR)   ?? 0;      } catch { return 0; } }
+function getEventState() { try { return world.getDynamicProperty(PROP_EVENT_STATE) ?? "none"; } catch { return "none"; } }
+function getDropUnlock() { try { return world.getDynamicProperty(PROP_DROP_UNLOCK) ?? 0; } catch { return 0; } }
+function getDropClear()  { try { return world.getDynamicProperty(PROP_DROP_CLEAR)  ?? 0; } catch { return 0; } }
 
 function setEventState(s) { world.setDynamicProperty(PROP_EVENT_STATE, s); }
 
-// Actualiza el tag del guardia para que el sistema de waypoints detecte el mapa activo
-function setPetroGuardiaTag(active) {
+function setActiveMap(mapId) {
     try {
-        const guardias = world.getDimension("minecraft:overworld").getEntities({ type: "tz:guardia_1" });
+        // Poner/quitar tag gm:map_{mapId} en el guardia — método que usa el mapWaypoints del addon
+        const dim = world.getDimension("minecraft:overworld");
+        const guardias = dim.getEntities({ type: "tz:guardia_1" });
+        const allMapIds = ["green_city","downtown","airport","desert","la_petro"];
         for (const g of guardias) {
-            // Quitar todos los tags de mapa
-            const allMapIds = ["green_city", "downtown", "airport", "desert", "la_petro"];
             for (const id of allMapIds) {
                 if (g.hasTag(`gm:map_${id}`)) g.removeTag(`gm:map_${id}`);
             }
-            if (active) g.addTag(`gm:map_${PETRO_MAP.id}`);
+            if (mapId) g.addTag(`gm:map_${mapId}`);
         }
-    } catch (e) { console.warn("[PetroEvent] setPetroGuardiaTag error: " + e); }
+    } catch (e) {
+        console.warn("[PetroEvent] setActiveMap error: " + e);
+    }
 }
 
 // ─── WAYPOINTS ────────────────────────────────────────────────────────────────
-
-const colorRBG = [
-    [200,200,200],[128,128,128],[90,90,90],[0,0,0],[70,25,0],
-    [255,0,0],[255,165,0],[255,255,0],[0,255,0],[0,128,0],
-    [25,90,180],[0,255,255],[0,0,240],[160,0,200],[90,0,140],[240,50,150]
-];
+// Los waypoints son manejados por mapWaypoints.js via gm:active_map
+// Cuando active_map = "la_petro", mapWaypoints.js crea Extracción A, B y Air Drop automáticamente
 
 function setWaypoint(player, name, pos, colorIdx, icon) {
-    try {
-        const [r, g, b] = colorRBG[colorIdx] ?? [255, 255, 255];
-        const red = r + colorIdx * 1000;
-        const dim = player.dimension.id.replace("minecraft:", "");
-        const key = `${dim}/1/${icon}/${red},${g},${b}/${Math.floor(pos.x)},${Math.floor(pos.y)},${Math.floor(pos.z)}/${name}`;
-        player.setDynamicProperty(key, true);
-    } catch (e) { console.warn(`[PetroEvent] setWaypoint error: ${e}`); }
+    // No-op: mapWaypoints.js maneja esto
 }
 
 function removeWaypoint(player, name) {
-    try {
-        const props = player.getDynamicPropertyIds();
-        for (const key of props) {
-            if (key.endsWith(`/${name}`)) player.setDynamicProperty(key, undefined);
-        }
-    } catch {}
+    // No-op: mapWaypoints.js maneja esto
 }
 
 const PETRO_WP_NAMES = ["Extracción A", "Extracción B", "Air Drop Grande"];
 function addPetroWaypoints(player) {
-    // Puntos de extracción
-    for (const ep of EXTRACTION_POINTS) {
-        setWaypoint(player, ep.name, ep.pos, ep.color, ep.icon);
-    }
-    // Waypoint del Air Drop (siempre presente en este evento)
-    setWaypoint(player, "Air Drop Grande", BIG_DROP_POS, 5, 1);
-    // Regenerar entidades de waypoints
-    system.runTimeout(() => {
-        try {
-            const { apiWaypointEntity } = globalThis.__advancedWaypointsAPI ?? {};
-            if (apiWaypointEntity) apiWaypointEntity.recoverWaypoints(player);
-        } catch {}
-    }, 20);
+    // mapWaypoints.js se encarga cuando gm:active_map = "la_petro"
 }
 
 function removePetroWaypoints(player) {
-    for (const name of PETRO_WP_NAMES) removeWaypoint(player, name);
+    // mapWaypoints.js se encarga cuando gm:active_map = undefined
 }
 
 function addPetroWaypointsAll() {
-    for (const p of world.getAllPlayers()) { try { addPetroWaypoints(p); } catch {} }
+    // mapWaypoints.js detecta gm:active_map y actualiza todos los jugadores
 }
 
 function removePetroWaypointsAll() {
-    for (const p of world.getAllPlayers()) { try { removePetroWaypoints(p); } catch {} }
+    // mapWaypoints.js detecta gm:active_map = undefined y limpia todos
 }
 
 // ─── FLOATING TEXT ────────────────────────────────────────────────────────────
@@ -299,6 +271,7 @@ function clearBigDrop() {
     deleteDropFT();
     removePetroWaypointsAll();
     setEventState("none");
+    setActiveMap(undefined);
     world.setDynamicProperty(PROP_DROP_UNLOCK, undefined);
     world.setDynamicProperty(PROP_DROP_CLEAR,  undefined);
     console.warn("[PetroEvent] Drop limpiado");
@@ -531,28 +504,18 @@ export function enterPetroMap(player, spawnPos) {
     player.runCommand("camera @s fade time 0.1 10 2");
     player.runCommand("stopsound @s");
     player.runCommand("playsound go.play @s");
-    system.runTimeout(()=>{
-    player.runCommand("playsound play.music @s");
-    },20 * 3)
+    system.runTimeout(() => player.runCommand("playsound play.music @s"), 60);
 
     system.runTimeout(() => {
         try {
             player.teleport(spawnPos, { dimension: world.getDimension("minecraft:overworld") });
             player.addTag("petro:in_map");
             player.setDynamicProperty("petro:mapId", PETRO_MAP.id);
-
-            // Spawnear bote (incluye 5s de espera con levitación internamente)
+            onPetroEnter(player);
             spawnBoatForPlayer(player, spawnPos);
-
-            // Protección inicial
             system.runTimeout(() => applyProtection(player), 15);
-
-            // Ventana de cancelación
             system.runTimeout(() => startPetroCancelWindow(player), 20);
-
-            // Waypoints
             system.runTimeout(() => addPetroWaypoints(player), 30);
-
         } catch (e) { console.warn("[PetroEvent] enterPetroMap error: " + e); }
     }, 10);
 }
@@ -575,7 +538,7 @@ export function exitPetroMap(player, toSupply = false) {
         playerBoats.delete(player.id);
     }
 
-    const SUPPLY_POST = { x: -1241.69, y: 80.00, z: -87.01 };
+    const SUPPLY_POST = { x: 1600, y: 50, z: 1489 };
     if (toSupply) {
         player.runCommand("camera @s fade time 0.1 0.5 0.5");
         player.runCommand("playsound go.play @s");
@@ -590,132 +553,48 @@ export function exitPetroMap(player, toSupply = false) {
 
 // ─── FLUJO DEL EVENTO ─────────────────────────────────────────────────────────
 
-// Llamado desde GameModeSystem cuando inicia una partida
-export function onPetroMatchStarted(globalMatchCount) {
-    const c = cfg();
-    if (!c.enabled) return;
-
-    const count = globalMatchCount;
-    world.setDynamicProperty(PROP_MATCH_COUNT, count);
-
-    if (count % c.matchInterval !== 0) return;
-
-    _activatePetroEvent();
-}
-
-// Forzar el evento sin importar el contador (usado desde el panel admin)
 export function forcePetroEvent() {
     _activatePetroEvent();
 }
 
 function _activatePetroEvent() {
-    console.warn(`[PetroEvent] ¡Activando evento especial La Petro!`);
-
-    // Poner tag del guardia para que el sistema de waypoints detecte "la_petro" como mapa activo
-    try { setPetroGuardiaTag(true); } catch (e) { console.warn("[PetroEvent] setPetroGuardiaTag error: " + e); }
-
-    // Anunciar evento a todos
+    if (getEventState() !== "none") return;
+    setActiveMap(PETRO_MAP.id);
     announceEventStart();
-
-    // Spawnear el drop grande
-    system.runTimeout(() => {
-        try { spawnBigDrop(); } catch (e) { console.warn("[PetroEvent] spawnBigDrop error: " + e); }
-    }, 20);
+    system.runTimeout(() => { try { spawnBigDrop(); } catch (e) { console.warn("[PetroEvent] spawnBigDrop: " + e); } }, 20);
 }
 
-// Llamado desde GameModeSystem cuando termina una partida
 export function onPetroMatchEnded() {
-    // 1. Limpiar drop y FT loop
     if (getEventState() !== "none") clearBigDrop();
     if (_ftInterval !== null) { system.clearRun(_ftInterval); _ftInterval = null; }
-
-    // Quitar tag del guardia
-    try { setPetroGuardiaTag(false); } catch {}
+    setActiveMap(undefined);
 
     const dim = world.getDimension("minecraft:overworld");
-    const SUPPLY_POST = { x: -1241.69, y: 80.00, z: -87.01 };
+    const SUPPLY = { x: 1600, y: 50, z: 1489 };
 
-    // 2. Eliminar soldados (inmediato)
     try {
-        const soldiers = dim.getEntities({ type: SOLDIER_TYPE });
-        for (const s of soldiers) { try { s.kill(); } catch {} }
-        console.warn(`[PetroEvent] ${soldiers.length} soldados eliminados`);
-    } catch (e) { console.warn("[PetroEvent] Error eliminando soldados: " + e); }
+        for (const s of dim.getEntities({ type: SOLDIER_TYPE })) { try { s.kill(); } catch {} }
+        for (const b of dim.getEntities({ type: BOAT_ENTITY })) { try { b.kill(); } catch {} }
+    } catch {}
+    playerBoats.clear();
 
-    // 3. Eliminar botes y sus cuerpos (1 segundo después)
-    system.runTimeout(() => {
+    for (const p of world.getAllPlayers()) {
+        if (!p.hasTag("petro:in_map")) continue;
         try {
-            const boats = dim.getEntities({ type: BOAT_ENTITY });
-            for (const b of boats) { try { b.kill(); } catch {} }
-            console.warn(`[PetroEvent] Botes eliminados`);
-        } catch (e) { console.warn("[PetroEvent] Error eliminando botes: " + e); }
-
-        // Limpiar referencias de botes
-        playerBoats.clear();
-
-        // Eliminar cuerpos de botes destruidos (medio segundo después)
-        system.runTimeout(() => {
-            try {
-                const destroyed = dim.getEntities({ type: "pubg:pg117_destroyed" });
-                for (const d of destroyed) { try { d.kill(); } catch {} }
-                console.warn(`[PetroEvent] Cuerpos de botes eliminados`);
-            } catch (e) { console.warn("[PetroEvent] Error eliminando cuerpos de botes: " + e); }
-        }, 10);
-    }, 20); // 1 segundo
-
-    // 4. Eliminar cuerpos/drops de botes — fill air en la zona del agua (2 segundos)
-    system.runTimeout(() => {
-        try {
-            // Limpiar items dropeados en el área del mapa
-            const items = dim.getEntities({
-                type: "minecraft:item",
-                location: { x: -1832, y: 80, z: 2042 },
-                maxDistance: 300
-            });
-            for (const item of items) { try { item.kill(); } catch {} }
+            p.runCommand("playsound lose @s");
+            p.runCommand("camera @s fade time 0.1 10 5");
+            p.runCommand("clear @s");
+            p.teleport(SUPPLY, { dimension: dim });
         } catch {}
-    }, 40); // 2 segundos
-
-    // 5. Teleportar jugadores que siguen en el mapa (3 segundos)
-    system.runTimeout(() => {
-        for (const p of world.getAllPlayers()) {
-            if (!p.hasTag("petro:in_map")) continue;
-            try {
-                p.runCommand("playsound lose @s");
-                p.runCommand("camera @s fade time 0.1 10 5");
-                p.runCommand("clear @s");
-                system.runTimeout(() => {
-                    try {
-                        p.onScreenDisplay.setTitle("§c§lCAÍSTE EN COMBATE", {
-                            subtitle: "§7La Petro te reclamó...",
-                            fadeInDuration: 10, stayDuration: 80, fadeOutDuration: 20
-                        });
-                        p.teleport(SUPPLY_POST, { dimension: dim });
-                    } catch {}
-                }, 5);
-            } catch {}
-            exitPetroMap(p, false);
-        }
-    }, 60); // 3 segundos
-}
-
-// ─── VERIFICAR SI ES EVENTO PETRO ────────────────────────────────────────────
-
-export function isPetroEvent(globalMatchCount) {
-    const c = cfg();
-    return c.enabled && globalMatchCount % c.matchInterval === 0;
+        exitPetroMap(p, false);
+    }
 }
 
 export function getPetroEventState()   { return getEventState(); }
-export function getPetroMatchCount()   { return getMatchCount(); }
 export function getPetroDropUnlockAt() { return getDropUnlock(); }
 export function getPetroDropClearAt()  { return getDropClear(); }
 
 // ─── PROTECCIONES DEL MAPA (CONTENEDORES) ────────────────────────────────────
-
-// Reutiliza el mismo listener de GameModeSystem via tag "petro:in_map"
-// El listener de CONTAINER_BLOCKS en GameModeSystem ya cubre gm:in_map,
-// aquí añadimos la cobertura para petro:in_map
 
 const PETRO_CONTAINER_BLOCKS = new Set([
     "minecraft:chest","minecraft:trapped_chest","minecraft:ender_chest",
@@ -762,7 +641,7 @@ world.afterEvents.entityDie.subscribe(ev => {
                 fadeInDuration: 10, stayDuration: 80, fadeOutDuration: 20
             });
             player.teleport(
-                { x: -1241.69, y: 80.00, z: -87.01 },
+                { x: 1600, y: 50, z: 1489 },
                 { dimension: world.getDimension("minecraft:overworld") }
             );
         } catch {}
@@ -804,19 +683,31 @@ export function checkPetroBoundaries(players = null) {
     }
 }
 
+world.afterEvents.playerSpawn.subscribe(ev => {
+    // mapWaypoints.js maneja la restauración de waypoints al spawnar
+});
+
 // ─── RECUPERACIÓN TRAS REINICIO ───────────────────────────────────────────────
 
 system.runTimeout(() => {
     try {
         const state = getEventState();
         if (state === "active" || state === "drop_open") {
+            setActiveMap(PETRO_MAP.id);
             const secsLeft = getDropUnlock() - nowSec();
             createDropFT(buildFTText(secsLeft, state === "drop_open"));
             startFTLoop();
-            addPetroWaypointsAll();
-            console.warn("[PetroEvent] Estado recuperado: " + state);
+            // mapWaypoints.js detecta gm:active_map y restaura waypoints automáticamente
         }
     } catch (e) { console.warn("[PetroEvent] Error en recuperación: " + e); }
 }, 140);
 
-console.warn("[PetroEvent] Sistema cargado");
+// Límites del mapa: solo jugadores dentro de La Petro
+system.runInterval(() => {
+    try {
+        const inPetro = world.getAllPlayers().filter(p => p.hasTag("petro:in_map"));
+        if (inPetro.length) checkPetroBoundaries(inPetro);
+    } catch (e) { console.warn("[PetroEvent] boundary check error: " + e); }
+}, 40);
+
+console.warn("[PetroEvent] v2 lite cargado");
