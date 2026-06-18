@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:bdu_desert_top",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.leggings"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"bdu_desert",
+					"rags",
+					"temperature_2"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "bdu_desert_top"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 200
+			},
+			"minecraft:wearable": {
+				"protection": 2,
+				"slot": "slot.armor.legs"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:bdu_desert_top.name"
+			}
+		}
+	}
+}

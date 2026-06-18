@@ -1,0 +1,19 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook:pot_water"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "mcpe:pot_water",
+    "output": {
+      "item": "mcpe:pot_cook_water",
+      "count": 1
+    }
+  }
+}

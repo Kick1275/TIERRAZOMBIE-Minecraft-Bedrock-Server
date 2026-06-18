@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.effect": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"test": "q.is_alive"
+						}
+					]
+				},
+				"test": {
+					"transitions": [
+						{
+							"default": "q.is_alive"
+						}
+					],
+					"on_entry": [
+						"/effect @e[family=player,r=2] wither 10 1",
+						"/effect @e[family=player,r=2] nausea 5 1",
+						"/effect @e[family=bandit,r=2] wither 10 1"
+					]
+				}
+			}
+		}
+	}
+}

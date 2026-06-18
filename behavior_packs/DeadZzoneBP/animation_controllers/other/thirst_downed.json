@@ -1,0 +1,60 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.thirst_down": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "thirst_down": "(q.scoreboard('thirst') >= 1)"
+            },
+            {
+              "thirst_down1": "(q.scoreboard('thirst') == 0)"
+            }
+          ]
+        },
+        "thirst_down": {
+          "on_entry": [
+            "v.thirst_delay = q.life_time;"
+          ],
+          "transitions": [
+            {
+              "reloaded_thirst_down": "(q.life_time - v.thirst_delay) >= 35"
+            }
+          ]
+        },
+        "thirst_down1": {
+          "on_entry": [
+            "v.thirst_delay = q.life_time;"
+          ],
+          "transitions": [
+            {
+              "reloaded_thirst_down1": "(q.life_time - v.thirst_delay) >= 10"
+            }
+          ]
+        },
+        "reloaded_thirst_down": {
+          "on_entry": [
+            "/scoreboard players remove @s[m=!c,scores={thirst=1..20}] thirst 1"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        },
+        "reloaded_thirst_down1": {
+          "on_entry": [
+            "/damage @s[scores={thirst=0}] 1 starve"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "pools": [
+    {
+      "rolls": {
+		    "min": 3,
+		    "max": 9
+	     },
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:adrenaline",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:morphine",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:antidote",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandage",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags",
+          "weight": 60
+        },
+        {
+          "type": "item",
+          "name": "mcpe:first_aid",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:painkiller",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:split",
+          "weight": 50
+        }
+      ]
+    }
+  ]
+}

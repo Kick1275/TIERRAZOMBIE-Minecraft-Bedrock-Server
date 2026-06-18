@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.glock17.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.3333,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.3333": "/playsound pistol.out @a[r=10]",
+        "1.0833": "/playsound pistol.in @a[r=10]",
+        "1.7083": "/playsound pistol.reload @a[r=10]",
+        "2.125": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.25": [
+          "/clear @s mcpe:ammo_9x19mm 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:glock17 1 0",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s glock17 15"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ak47.reload_npc": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.05,
+      "timeline": {
+        "0.375": "/playsound ak.out @a[r=10]",
+        "1.6667": "/playsound ak.in @a[r=10]",
+        "2.2917": "/playsound ak.reload @a[r=10]"
+      }
+    }
+  }
+}

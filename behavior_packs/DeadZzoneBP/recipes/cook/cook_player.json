@@ -1,0 +1,19 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "cook:raw_player"
+    },
+    "tags": [
+      "furnace",
+      "smoker",
+      "campfire",
+      "soul_campfire"
+    ],
+    "input": "mcpe:raw_player",
+    "output": {
+      "item": "mcpe:cooked_player",
+      "count": 1
+    }
+  }
+}

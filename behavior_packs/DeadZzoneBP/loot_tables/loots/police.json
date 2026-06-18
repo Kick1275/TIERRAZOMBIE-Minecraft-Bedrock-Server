@@ -1,0 +1,476 @@
+{
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "random_chance_with_looting",
+          "chance": 0.35,
+          "looting_multiplier": 0.3
+        }
+      ],
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        // Entradas básicas
+        { "type": "empty", "weight": 99 },
+        { "type": "item", "name": "minecraft:air", "weight": 99 },
+
+        // Nuevas municiones
+        { "type": "item", "name": "krep:m885", "weight": 10 },
+        { "type": "item", "name": "krep:mm9", "weight": 15 },
+        { "type": "item", "name": "krep:gauge12", "weight": 15 },
+        { "type": "item", "name": "krep:acp45", "weight": 10 },
+        { "type": "item", "name": "krep:mag357", "weight": 8 },
+
+        // Mantener todas las bebidas y comidas existentes
+        {
+          "type": "item",
+          "name": "mcpe:ammo_5_45x39mm",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_5_56x45mm",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_7_62x39mm",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_7_62x54mmr",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_7_62x51mm",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_44magnum",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_12gauge",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_9x19mm",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_357magnum",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_9x18mm",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beer_bottle",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_beans",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_beef_stew",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_chicken",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_chili",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_corned",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_fruit",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_ham",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_peaches",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_sardine",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_spaghetti",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_tomato",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_tuna",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:creeper_crunch",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rice",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:strawberry_jam",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:meat_jerky",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_bacon",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_ration",
+          "weight": 10
+        },
+
+        // Pistolas nuevas (reemplazando las viejas)
+        {
+          "type": "item",
+          "name": "krep:m1911",
+          "weight": 6,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:m1911_emp", "weight": 6 },
+        {
+          "type": "item",
+          "name": "krep:g17",
+          "weight": 6,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:g17_emp", "weight": 6 },
+        {
+          "type": "item",
+          "name": "krep:deagle",
+          "weight": 3,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:deagle_emp", "weight": 3 },
+
+        // Escopetas nuevas
+        {
+          "type": "item",
+          "name": "krep:m870",
+          "weight": 5,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:m870_emp", "weight": 5 },
+
+        // Subfusiles nuevos
+        {
+          "type": "item",
+          "name": "krep:mp5",
+          "weight": 4,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:mp5_emp", "weight": 4 },
+        {
+          "type": "item",
+          "name": "krep:ump",
+          "weight": 4,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:ump_emp", "weight": 4 },
+
+        // Rifles tácticos
+        {
+          "type": "item",
+          "name": "krep:m4a1",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:m4a1_emp", "weight": 2 },
+        {
+          "type": "item",
+          "name": "krep:g36",
+          "weight": 2,
+          "functions": [
+            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+          ]
+        },
+        { "type": "item", "name": "krep:g36_emp", "weight": 2 },
+
+        // Mantener todo el equipamiento policial existente
+        {
+          "type": "item",
+          "name": "mcpe:police_hat",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:police_vest",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:police_riot",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:stab_vest_gray",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:police_bottom",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:prisoner_bottom",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:police_top",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:prisoner_top",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:police_baton",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+
+        // Mantener todos los items médicos
+        { "type": "item", "name": "mcpe:splint", "weight": 17 },
+        { "type": "item", "name": "mcpe:rags", "weight": 20 },
+        { "type": "item", "name": "mcpe:bandage", "weight": 15 },
+
+        // Mantener toda la ropa policial
+        { "type": "item", "name": "mcpe:police_hat", "weight": 25, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:police_vest", "weight": 25, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:police_riot", "weight": 15, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:stab_vest_gray", "weight": 20, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:police_bottom", "weight": 25, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:prisoner_bottom", "weight": 25, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:police_top", "weight": 25, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        { "type": "item", "name": "mcpe:prisoner_top", "weight": 25, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+
+        // Mantener todos los items de utilidad
+        { "type": "item", "name": "mcpe:police_baton", "weight": 30, "functions": [
+          { "function": "set_damage", "damage": { "min": 0.3, "max": 1.0 } }
+        ]},
+        // ...existing utility items...
+
+        // Granadas y equipamiento táctico
+        { "type": "item", "name": "mcpe:flash_grenade", "weight": 10 },
+        { "type": "item", "name": "mcpe:barbed_wire", "weight": 13 },
+        // ...existing tactical equipment items...
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.garand.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.55,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.8333": "/playsound garand.in @a[r=10]",
+        "1.7083": "/playsound rifle.reload @a[r=10]",
+        "2.3": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.4": [
+          "/clear @s mcpe:ammo_7_62x51mm 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:garand 1 0",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s garand 8"
+        ]
+      }
+    }
+  }
+}

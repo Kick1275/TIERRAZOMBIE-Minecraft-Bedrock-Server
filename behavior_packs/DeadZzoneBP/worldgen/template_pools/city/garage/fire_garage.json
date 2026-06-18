@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "mcpe:firefighter/garage/garage"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/garage/firegarage_0",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 50
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/garage/firegarage_1",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 50
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/garage/firegarage_2",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 50
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/garage/firegarage_3",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 50
+      }
+    ]
+  }
+}

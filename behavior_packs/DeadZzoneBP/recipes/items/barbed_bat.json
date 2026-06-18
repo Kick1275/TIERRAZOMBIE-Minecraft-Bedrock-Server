@@ -1,0 +1,19 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "make:barbedwire_bat"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "ingredients": [
+      "mcpe:baseball_bat",
+      "mcpe:barbed_wire"
+    ],
+    "result": {
+      "item": "mcpe:barbedwire_bat"
+    }
+  }
+}

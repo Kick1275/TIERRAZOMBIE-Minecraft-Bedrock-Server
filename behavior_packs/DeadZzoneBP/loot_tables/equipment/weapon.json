@@ -1,0 +1,224 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:baseball_bat",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cleaver_knife",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:combat_knife",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:crowbar",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:engineer_shovel",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:farm_sickle",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:fireman_axe",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:frying_pan",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:pitchfork",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:golf_club",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:golok_machete",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hammer",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hatchet",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hunting_knife",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ice_hockey",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ice_pick",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:katana",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:screwdriver",
+          "weight": 16
+        },
+        {
+          "type": "item",
+          "name": "mcpe:sledgehammer",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:snow_shovel",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:splitting_axe",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:crowbar",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:metal_bat",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_axe",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_shovel",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tire_iron",
+          "weight": 16
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wrench",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:police_baton",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rolling_pin",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:sabre_sword",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:kitchen_knife",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:kukri_machete",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lead_pipe",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:machete",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:miner_pickaxe",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:nailed_bat",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:pipe_wrench",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wooden_plank",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:nailed_plank",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:barbedwire_bat",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hacksaw",
+          "weight": 10
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/human.json",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

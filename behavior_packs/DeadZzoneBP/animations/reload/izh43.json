@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.izh43.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.7917,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.2917": "/playsound shotgun.open @a[r=10]",
+        "0.6667": "/playsound shell.drop @a[r=10]",
+        "0.75": "/playsound shell.drop @a[r=10]",
+        "1.5417": "/playsound shell.load @a[r=10]",
+        "1.7083": "/playsound shell.load @a[r=10]",
+        "2.375": "/playsound shotgun.close @a[r=10]",
+        "2.5": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.6": [
+          "/clear @s mcpe:ammo_12gauge 0 1",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s izh43 2",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:izh43 1 0"
+        ]
+      }
+    }
+  }
+}

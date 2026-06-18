@@ -1,0 +1,228 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:papers",
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"block:texture": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9
+				]
+			}
+		},
+		"components": {
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "popped"
+					}
+				]
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					1,
+					16
+				]
+			},
+			"minecraft:custom_components": [
+				"mcpe:paper_placed"
+			],
+			"minecraft:loot": "loot_tables/drop/block/drop_paper.json",
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:geometry": "geometry.paper",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "paper_0",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('block:texture') == 0",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_0",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_1",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 2",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_2",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 3",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_3",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 4",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_4",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 5",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_5",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 6",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_6",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 7",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_7",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 8",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_8",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:texture') == 9",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "paper_9",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

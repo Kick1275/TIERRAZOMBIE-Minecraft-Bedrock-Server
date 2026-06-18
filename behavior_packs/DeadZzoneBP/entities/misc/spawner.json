@@ -1,0 +1,83 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "mcpe:spawner",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:instant_despawn": {},
+      "minecraft:conditional_bandwidth_optimization": {}
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+           {
+            "randomize": [
+              {
+                "weight": 15,
+                "queue_command": {
+                  "command": [
+                    "summon mcpe:militia ~~~",
+                    "summon mcpe:militia ~~~",
+                    "summon mcpe:militia ~~~"
+                  ]
+                }
+              },
+              {
+                "weight": 35,
+                "queue_command": {
+                  "command": [
+                    "function survivor_marauder"
+                  ]
+                }
+              },
+              {
+                "weight": 35,
+                "queue_command": {
+                  "command": [
+                    "function survivor_scavenger"
+                  ]
+                }
+              },
+              {
+                "weight": 20,
+                "queue_command": {
+                  "command": [
+                    "summon mcpe:commander ~~~"
+                  ]
+                }
+              },
+              {
+                "weight": 15,
+                "queue_command": {
+                  "command": [
+                    "summon mcpe:humvee ~~~"
+                  ]
+                }
+              },
+              {
+                "weight": 55,
+                "queue_command": {
+                  "command": [
+                    "function horde_civilian"
+                  ]
+                }
+              },
+              {
+                "weight": 50,
+                "queue_command": {
+                  "command": [
+                    "function horde_scream"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

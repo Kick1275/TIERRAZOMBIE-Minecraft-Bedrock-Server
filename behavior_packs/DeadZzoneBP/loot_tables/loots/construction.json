@@ -1,0 +1,646 @@
+{
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "random_chance_with_looting",
+          "chance": 0.45,
+          "looting_multiplier": 0.3
+        }
+      ],
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "minecraft:air",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:strawberry_jam",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:meat_jerky",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:crowbar",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wrench",
+          "weight": 27,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:sledgehammer",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hammer",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lead_pipe",
+          "weight": 26,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wooden_plank",
+          "weight": 27,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:engineer_shovel",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:screwdriver",
+          "weight": 27,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandage",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flashlight",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cargo_black",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cargo_brown",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cargo_green",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cargo_white",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cargo_tan",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:jean_black",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:jean_brown",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:jean_blue",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:jean_light",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plaid_blue",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plaid_gray",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plaid_olive",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plaid_red",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plaid_tan",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plaid_white",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:striped_blue",
+          "weight": 11,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:striped_white",
+          "weight": 11,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:stripeds_black",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tshirt_white",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_yellow",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_white",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_red",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_blue",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_orange",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_lime",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_orange",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_yellow",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wooden_barricade",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lockpick",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hacksaw",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags_dirty",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:nail_box",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:duct_tape",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water_emp",
+          "weight": 27
+        },
+        {
+          "type": "item",
+          "name": "mcpe:sawoff_pipe",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}

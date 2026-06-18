@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "mcpe:city/deco/deco"
+    },
+    "elements": [
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/deco/deco_0",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 35
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/deco/deco_1",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 50
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/deco/deco_2",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 50
+      },
+      {
+        "element": {
+          "element_type": "minecraft:single_pool_element",
+          "location": "city/deco/deco_3",
+          "processors": "mcpe:empty",
+          "projection": "minecraft:terrain_matching"
+        },
+        "weight": 55
+      }
+    ]
+  }
+}

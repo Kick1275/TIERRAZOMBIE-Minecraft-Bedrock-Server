@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:striped_blue",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.leggings"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"striped_blue",
+					"rags",
+					"temperature_1"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "striped_blue"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 160
+			},
+			"minecraft:wearable": {
+				"protection": 1,
+				"slot": "slot.armor.legs"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:striped_blue.name"
+			}
+		}
+	}
+}

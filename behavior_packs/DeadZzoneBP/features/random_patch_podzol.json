@@ -1,0 +1,43 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "mcpe:random_patch_podzol"
+    },
+    "count": 25,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:podzol",
+        "may_replace": [
+          {
+            "name": "minecraft:dirt",
+            "states": {
+              "dirt_type": "normal"
+            }
+          },
+          {
+            "name": "minecraft:dirt",
+            "states": {
+              "dirt_type": "coarse"
+            }
+          },
+          {
+            "name": "minecraft:grass"
+          },
+          {
+            "name": "minecraft:gravel"
+          },
+          {
+            "name": "minecraft:mycelium"
+          },
+          {
+            "name": "minecraft:sand"
+          },
+          {
+            "name": "minecraft:stained_hardened_clay"
+          }
+        ]
+      }
+    ]
+  }
+}

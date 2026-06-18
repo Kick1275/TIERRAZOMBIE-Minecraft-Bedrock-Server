@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:nailed_plank",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "nailed_plank"
+				}
+			},
+			"minecraft:damage": 8,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 210
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:nailed_plank.name"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_axe",
+					"minecraft:is_tool",
+					"minecraft:digger"
+				]
+			}
+		}
+	}
+}

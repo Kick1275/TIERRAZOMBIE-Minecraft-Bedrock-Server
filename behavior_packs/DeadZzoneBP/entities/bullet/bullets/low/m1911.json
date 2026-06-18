@@ -1,0 +1,213 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "bullet:m1911",
+      "runtime_identifier": "minecraft:snowball",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "mcpe:remove": {
+        "minecraft:instant_despawn": {}
+      },
+      "fire:sight": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "mob_effect": {
+              "effect": "slowness",
+              "durationeasy": 100,
+              "durationnormal": 100,
+              "durationhard": 100,
+              "amplifier": 3
+            },
+            "definition_event": {
+              "event_trigger": {
+                "event": "mcpe:bullet_delay"
+              }
+            },
+            "impact_damage": {
+              "knockback": false
+            },
+            "stick_in_ground": {
+              "shake_time": 0
+            }
+          },
+          "power": 8,
+          "gravity": 0,
+          "inertia": 1,
+          "liquid_inertia": 2,
+          "uncertaintyBase": 0.5,
+          "anchor": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "reflectOnHurt": false,
+          "catch_fire": false
+        }
+      },
+      "fire:unsight": {
+        "minecraft:projectile": {
+          "on_hit": {
+            "mob_effect": {
+              "effect": "slowness",
+              "durationeasy": 100,
+              "durationnormal": 100,
+              "durationhard": 100,
+              "amplifier": 1
+            },
+            "definition_event": {
+              "event_trigger": {
+                "event": "mcpe:bullet_delay"
+              }
+            },
+            "impact_damage": {
+              "knockback": false
+            },
+            "stick_in_ground": {
+              "shake_time": 0
+            }
+          },
+          "power": 8,
+          "gravity": 0,
+          "inertia": 1,
+          "liquid_inertia": 2,
+          "uncertaintyBase": 3.2,
+          "anchor": 1,
+          "offset": [
+            0,
+            0,
+            0
+          ],
+          "reflectOnHurt": false,
+          "catch_fire": false
+        }
+      },
+      "mcpe:bullet_delay": {
+        "minecraft:mark_variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "looping": true,
+          "time": 0.01,
+          "time_down_event": {
+            "event": "mcpe:bullets_impact"
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:explode": {
+        "fuseLength": 1,
+        "fuseLit": true,
+        "power": 0,
+        "causesFire": false,
+        "destroy_affected_by_griefing": true
+      },
+      "minecraft:type_family": {
+        "family": [
+          "bullet"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.01,
+        "height": 0.01
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "glass",
+          "glass_pane",
+          "stained_glass",
+          "tinted_glass",
+          "stained_glass_pane"
+        ]
+      },
+      "minecraft:physics": {}
+    },
+    "events": {
+      "mcpe:remove": {
+        "add": {
+          "component_groups": [
+            "mcpe:remove"
+          ]
+        }
+      },
+      "fire:sight": {
+        "add": {
+          "component_groups": [
+            "fire:sight"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "fire:unsight"
+          ]
+        }
+      },
+      "fire:unsight": {
+        "add": {
+          "component_groups": [
+            "fire:unsight"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "fire:sight"
+          ]
+        }
+      },
+      "fire:npc_unsight": {
+        "add": {
+          "component_groups": [
+            "fire:unsight"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "scoreboard players remove @e[family=human,r=2,c=1] m1911 1",
+            "playsound gun.m1911 @a[r=20,rm=0] ~~~ 1 1 8",
+            "playsound distant.m1911 @a[r=100] ~~~ 1 1 5",
+            "playanimation @e[family=human,r=2,c=1] animation.m1911.shoots shoot",
+            "tag @e[family=human,r=2,c=1] add light_noise",
+            "event entity @e[family=human,r=2,c=1] add_noise",
+            "fill ^^^^^1^ mcpe:fire_light replace air"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "fire:sight"
+          ]
+        }
+      },
+      "mcpe:bullet_delay": {
+        "add": {
+          "component_groups": [
+            "mcpe:bullet_delay"
+          ]
+        }
+      },
+      "mcpe:bullets_impact": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "has_tag",
+              "operator": "!=",
+              "value": "in_water"
+            },
+            "queue_command": {
+              "command": [
+                "function bullet_hole"
+              ]
+            }
+          },
+          {
+            "trigger": "mcpe:remove"
+          }
+        ]
+      }
+    }
+  }
+}

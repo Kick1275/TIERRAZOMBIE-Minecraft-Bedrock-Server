@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:webbing_green",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "webbing_green"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 260
+			},
+			"minecraft:wearable": {
+				"protection": 2,
+				"slot": "slot.armor.chest"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:webbing_green.name"
+			}
+		}
+	}
+}

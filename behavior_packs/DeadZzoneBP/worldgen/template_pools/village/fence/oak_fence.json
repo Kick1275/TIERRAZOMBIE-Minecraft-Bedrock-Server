@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:village/fence/oak_fence"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/fence/oak_fence",
+					"processors": "mcpe:empty"
+				},
+				"weight": 50
+			}
+		]
+	}
+}

@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_yellow",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_white",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_red",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_blue",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hard_orange",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_lime",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_orange",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_yellow",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

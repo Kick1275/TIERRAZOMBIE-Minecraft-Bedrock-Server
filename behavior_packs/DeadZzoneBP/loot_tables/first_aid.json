@@ -1,0 +1,62 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:rags",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandage",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "mcpe:blood_bag_emp",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:blood_test_kit",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:painkiller",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:water_purification",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "mcpe:morphine",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:adrenaline",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:splint",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:alcoholic_tinture",
+          "weight": 35
+        }
+      ]
+    }
+  ]
+}

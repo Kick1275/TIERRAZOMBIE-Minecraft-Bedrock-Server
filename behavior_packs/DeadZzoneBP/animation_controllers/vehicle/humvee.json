@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.humvee": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "humvee.start": "query.has_rider"
+            }
+          ]
+        },
+        "humvee.start": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            },
+            {
+              "humvee.idle1": "query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/playsound mob.humvee.start @a[r=20]"
+          ]
+        },
+        "humvee.idle1": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            },
+            {
+              "humvee.idle2": "query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/playsound mob.humvee.idle @e[r=10] ~ ~ ~ 0.5",
+            "/function light"
+          ]
+        },
+        "humvee.idle2": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            },
+            {
+              "humvee.idle1": "query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/playsound mob.humvee.idle @a[r=10] ~ ~ ~ 0.5",
+            "/function light"
+          ]
+        }
+      }
+    }
+  }
+}

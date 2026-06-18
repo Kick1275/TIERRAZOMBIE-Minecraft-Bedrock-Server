@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.rags": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "@s default_attack"
+          ],
+          "transitions": [
+            {
+              "make_rag": "(variable.attack_time) && query.is_sneaking && query.equipped_item_any_tag('slot.weapon.mainhand','rags') == 1"
+            }
+          ]
+        },
+        "make_rag": {
+          "on_entry": [
+            "/playsound rip_off @a[r=10] ~~~ 3 1",
+            "/replaceitem entity @s slot.weapon.mainhand 1 minecraft:air 1",
+            "/loot give @s loot rags"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.attack_time"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

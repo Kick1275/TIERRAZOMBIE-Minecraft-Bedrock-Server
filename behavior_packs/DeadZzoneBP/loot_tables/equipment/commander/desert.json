@@ -1,0 +1,57 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:peaked_tan",
+          "weight": 50
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_brown",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_black",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_tan",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_tan",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_brown",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_navy",
+          "weight": 25
+        }
+      ]
+    }
+  ]
+}

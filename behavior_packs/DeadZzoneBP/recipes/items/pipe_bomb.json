@@ -1,0 +1,20 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "make:pipe_bomb"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "ingredients": [
+      "mcpe:sawoff_pipe",
+      "mcpe:nail_box",
+      "minecraft:gunpowder"
+    ],
+    "result": {
+      "item": "mcpe:pipe_bomb"
+    }
+  }
+}

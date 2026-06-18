@@ -1,0 +1,35 @@
+{ 
+	"format_version": "1.21.20", 
+	"minecraft:processor_list": { 
+		"description": { 
+			"identifier": "mcpe:processor_paper_trash" 
+		}, 
+		"processors": [
+			{
+				"processor_type": "minecraft:rule",
+				"rules": [
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "mcpe:papers",
+							"probability": 0.3
+						},
+						"output_state": {
+							"name": "mcpe:trash"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "mcpe:trash",
+							"probability": 0.3
+						},
+						"output_state": {
+							"name": "mcpe:papers"
+						}
+					}
+				]
+			}
+		]
+	}
+}

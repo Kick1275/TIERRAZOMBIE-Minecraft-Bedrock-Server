@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.aks74u.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.05,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.375": "/playsound ak.out @a[r=10]",
+        "1.6667": "/playsound ak.in @a[r=10]",
+        "2.2917": "/playsound ak.reload @a[r=10]",
+        "2.8": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.9": [
+          "/clear @s mcpe:ammo_5_45x39mm 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:aks74u 1 0",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s aks74u 30"
+        ]
+      }
+    }
+  }
+}

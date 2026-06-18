@@ -1,0 +1,85 @@
+{ 
+	"format_version": "1.21.20", 
+	"minecraft:processor_list": { 
+		"description": { 
+			"identifier": "mcpe:processor_road_block" 
+		}, 
+		"processors": [
+			{
+				"processor_type": "minecraft:rule",
+				"rules": [
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "mcpe:road_barrier",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "mcpe:caution_road_barrier"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "mcpe:caution_road_barrier",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "mcpe:road_barrier"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "mcpe:street_bench_blue",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "mcpe:street_bench_green"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "mcpe:street_bench_green",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "mcpe:street_bench_blue"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:glass_pane",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "minecraft:air"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:glass_pane",
+							"probability": 0.4
+						},
+						"output_state": {
+							"name": "minecraft:light_gray_stained_glass_pane"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:glass_pane",
+							"probability": 0.4
+						},
+						"output_state": {
+							"name": "minecraft:gray_stained_glass_pane"
+						}
+					}
+				]
+			}
+		]
+	}
+}

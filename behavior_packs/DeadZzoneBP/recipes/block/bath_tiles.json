@@ -1,0 +1,25 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:bath_tiles"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "AC",
+      "BA"
+    ],
+    "key": {
+      "A": "minecraft:clay",
+      "B": "minecraft:blue_dye",
+      "C": "minecraft:light_blue_dye"
+    },
+    "result": {
+      "item": "mcpe:bath_tiles",
+      "count": 4
+    }
+  }
+}

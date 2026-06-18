@@ -1,0 +1,107 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "grenade:c4",
+			"runtime_identifier": "minecraft:snowball",
+			"is_spawnable": false,
+			"is_summonable": true
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["c4"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.3
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:wire_cutter"
+									}
+								]
+							},
+							"event": "get"
+						},
+						"hurt_item": 3,
+						"swing": true,
+						"play_sounds": "loot.box",
+						"interact_text": "Get C-4"
+					}
+				]
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"event_trigger": {
+							"event": "frag"
+						}
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					}
+				},
+				"power": 1.2,
+				"gravity": 0.03,
+				"angleoffset": 0.5,
+				"inertia": 1,
+				"liquid_inertia": 2,
+				"uncertaintyBase": 0.7,
+				"anchor": 1,
+				"offset": [0,0,0],
+				"reflectOnHurt": false,
+				"catch_fire": false
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": ["glass", "glass_pane", "stained_glass", "tinted_glass", "stained_glass_pane" ]
+			},
+			"minecraft:explode": {
+				"fuseLength": 300,
+				"fuseLit": true,
+				"power": 4,
+				"break_blocks": true,
+				"causes_fire": true
+			},
+			"minecraft:physics": {}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"get": {
+				"queue_command": {
+					"command": [
+						"loot spawn ~~~ loot \"drop/drop_c4\""
+					]
+				},
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

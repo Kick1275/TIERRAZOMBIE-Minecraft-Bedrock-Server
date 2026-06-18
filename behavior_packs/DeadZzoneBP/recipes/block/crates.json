@@ -1,0 +1,23 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:crate"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": "mcpe:wooden_plank"
+    },
+    "result": {
+      "item": "mcpe:crate",
+      "count": 2
+    }
+  }
+}

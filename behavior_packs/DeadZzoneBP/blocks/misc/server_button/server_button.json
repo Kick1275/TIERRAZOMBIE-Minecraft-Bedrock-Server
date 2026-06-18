@@ -1,0 +1,65 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:server_button",
+			"states": {
+				"block:stage": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:custom_components": [
+				"mcpe:server_button_int"
+			],
+			"minecraft:tick": {
+				"interval_range": [
+					400,
+					400
+				],
+				"looping": false
+			},
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "server_button",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('block:stage')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "server_button",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "!q.block_state('block:stage')",
+				"components": {
+					"minecraft:tick": {
+						"interval_range": [
+							400,
+							400
+						],
+						"looping": false
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "server_button_delay",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		]
+	}
+}

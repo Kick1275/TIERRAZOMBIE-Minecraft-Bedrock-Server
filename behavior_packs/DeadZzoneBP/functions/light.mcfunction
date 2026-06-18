@@ -1,0 +1,9 @@
+execute at @s if block ^^^ air run fill ^^^ ^^^ mcpe:flashlight_block replace air
+execute at @s if block ^^2^1 air run fill ^^^1 ^^^2 mcpe:flashlight_block replace air
+execute at @s if block ^^2^2 air run fill ^^^2 ^^^2 mcpe:flashlight_block replace air
+execute at @s if block ^^2^3 air run fill ^^^3 ^^^3 mcpe:flashlight_block replace air
+execute at @s if block ^^2^4 air run fill ^^^4 ^^^4 mcpe:flashlight_block replace air
+execute at @s if block ^^2^5 air run fill ^^^5 ^^^5 mcpe:flashlight_block replace air
+execute at @s if block ^^2^6 air run fill ^^^6 ^^^6 mcpe:flashlight_block replace air
+execute at @s if block ^^2^7 air run fill ^^^7 ^^^7 mcpe:flashlight_block replace air
+execute at @s if block ^^2^8 air run fill ^^^8 ^^^8 mcpe:flashlight_block replace air

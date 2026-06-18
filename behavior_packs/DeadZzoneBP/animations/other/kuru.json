@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.kuru.effect": {
+      "loop": true,
+      "animation_length": 25,
+      "timeline": {
+        "0.1": [
+          "/execute as @s[tag=kuru] run playsound player.laugh @a[r=15]",
+          "/tag @s[tag=kuru] add kuru_effect"
+        ],
+        "3.0": [
+          "/camerashake add @s[tag=kuru] 0.120 0.30 rotational",
+          "/effect @s[tag=kuru] nausea 7"
+        ],
+        "10.0": [
+          "/camerashake add @s[tag=kuru] 0.120 0.30 rotational",
+          "/execute as @s[tag=kuru] run playsound player.laugh @a[r=10]"
+        ],
+        "15.0": [
+          "/camerashake add @s[tag=kuru] 0.120 0.30 rotational",
+          "/tag @s[tag=kuru] add kuru_effect",
+          "/effect @s[tag=kuru] nausea 7"
+        ],
+        "20.0": "/execute as @s[tag=kuru] run playsound player.laugh @a[r=10]",
+        "23.0": "/camerashake add @s[tag=kuru] 0.120 0.30 rotational"
+      }
+    }
+  }
+}

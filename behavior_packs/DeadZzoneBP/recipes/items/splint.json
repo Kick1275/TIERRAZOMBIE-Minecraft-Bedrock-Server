@@ -1,0 +1,22 @@
+{
+	"format_version": "1.17.41",
+	
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "make:splint"
+		},
+		"tags": ["crafting_table", "altar"],
+		"pattern": [
+			"AB",
+			"BA"
+		],
+		"key": {
+			"A": "mcpe:rags",
+			"B": "minecraft:stick"
+		},
+		"result": "mcpe:splint"
+	}
+}
+
+
+

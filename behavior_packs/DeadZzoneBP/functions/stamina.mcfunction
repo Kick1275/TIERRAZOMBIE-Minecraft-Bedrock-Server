@@ -1,0 +1,1 @@
+scoreboard players set @s[scores={stamina=21..}] stamina 20

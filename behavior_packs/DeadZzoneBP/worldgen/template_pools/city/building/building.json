@@ -1,0 +1,106 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:city/building/building"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_0",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_1",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_2",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_3",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_4",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_5",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_6",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_7",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/building_8",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/radio_tower",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 25
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/electric_0",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 20
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/building/construction_0",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 25
+			}
+		]
+	}
+}

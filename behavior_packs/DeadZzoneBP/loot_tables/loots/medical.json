@@ -1,0 +1,161 @@
+{
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "random_chance_with_looting",
+          "chance": 0.57,
+          "looting_multiplier": 0.3
+        }
+      ],
+      "rolls": {
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "minecraft:air",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "mcpe:adrenaline",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:morphine",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:antidote",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandage",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:first_aid",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:painkiller",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:blood_bag_unknown",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:splint",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:paramedic_top",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:paramedic_bottom",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:alcoholic_tinture",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:water_purification",
+          "weight": 35
+        }
+      ]
+    }
+  ]
+}

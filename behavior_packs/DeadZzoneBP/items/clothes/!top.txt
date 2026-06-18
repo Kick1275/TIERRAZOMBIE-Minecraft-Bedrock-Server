@@ -1,0 +1,39 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:tracksuit_red",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.leggings"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"tracksuit_red",
+					"rags",
+					"temperature_2"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "tracksuit_red"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 165
+			},
+			"minecraft:armor": {
+				"protection": 1
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:tracksuit_red.name"
+			}
+		}
+	}
+}

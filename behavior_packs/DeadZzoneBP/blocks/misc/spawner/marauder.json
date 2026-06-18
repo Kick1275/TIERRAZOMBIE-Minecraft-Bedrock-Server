@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:spawner_marauder"
+		},
+		"components": {
+			"minecraft:custom_components": [
+				"mcpe:tick"
+			],
+			"minecraft:tick": {
+				"interval_range": [
+					100,
+					100
+				],
+				"looping": true
+			},
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": false,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:geometry": "geometry.muzzle_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "fire_light",
+					"render_method": "blend"
+				}
+			}
+		}
+	}
+}

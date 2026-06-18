@@ -1,0 +1,46 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.temperature": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "day": "(q.life_time - v.temperature_warm) >= 5 && q.is_alive"
+            },
+            {
+              "night": "(q.life_time - v.temperature_night) >= 5 && q.is_alive"
+            }
+          ],
+          "on_entry": [
+            "v.temperature_warm = q.life_time;",
+            "v.temperature_night = q.life_time;"
+          ]
+        },
+        "day": {
+          "on_entry": [
+            "v.temperature_warm = q.life_time;",
+            "/execute as @s[tag=!night] run event entity @s mcpe:temperature_warm"
+          ],
+          "transitions": [
+            {
+              "default": "q.all_animations_finished"
+            }
+          ]
+        },
+        "night": {
+          "on_entry": [
+            "v.temperature_night = q.life_time;",
+            "/execute as @s[tag=!day] run event entity @s mcpe:temperature_night"
+          ],
+          "transitions": [
+            {
+              "default": "q.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.pre_animation": {
+            "loop": true,
+            "animation_length": 99999,
+            "timeline": {
+                "0.0": [
+                    "v.random_idle_sounds = math.random_integer(1, 3);"
+                ]
+            }
+        }
+    }
+}

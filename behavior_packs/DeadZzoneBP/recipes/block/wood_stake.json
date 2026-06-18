@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:wood_stake"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "A A",
+      "AAA",
+      "A A"
+    ],
+    "key": {
+      "A": "minecraft:log"
+    },
+    "result": {
+      "item": "mcpe:wood_stake",
+      "count": 2
+    }
+  }
+}

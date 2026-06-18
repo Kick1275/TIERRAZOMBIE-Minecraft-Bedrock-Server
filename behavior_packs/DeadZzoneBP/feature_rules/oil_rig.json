@@ -1,0 +1,64 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "mcpe:oil_rig",
+      "places_feature": "mcpe:oil_rig"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "river"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "beach"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "!=",
+              "value": "lakes"
+            },
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "ocean"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 1,
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 892
+			},
+      "x": {
+        "extent": [
+          -16,
+          -15
+        ],
+        "distribution": "uniform"
+      },
+      "y": "query.heightmap(variable.worldx, variable.worldz) + -13",
+      "z": {
+        "extent": [
+          -16,
+          -15
+        ],
+        "distribution": "uniform"
+      }
+    }
+  }
+}

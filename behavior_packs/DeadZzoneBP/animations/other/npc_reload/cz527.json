@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.cz527.reload_npc": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.05,
+      "timeline": {
+        "0.3333": "/playsound sniper.out @a[r=10]",
+        "1.5833": "/playsound sniper.in @a[r=10]",
+        "2.3333": "/playsound bolt.back @a[r=10]",
+        "2.625": "/playsound bolt.forward @a[r=10]"
+      }
+    }
+  }
+}

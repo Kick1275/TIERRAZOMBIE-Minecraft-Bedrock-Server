@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:crowbar",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_sword"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "crowbar"
+				}
+			},
+			"minecraft:damage": 7,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 265
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:crowbar.name"
+			},
+			"minecraft:can_destroy_in_creative": false
+		}
+	}
+}

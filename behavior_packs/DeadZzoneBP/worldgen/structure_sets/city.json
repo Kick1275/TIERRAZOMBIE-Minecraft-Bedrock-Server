@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:structure_set": {
+		"description": {
+			"identifier": "mcpe:city"
+		},
+		"placement": {
+			"type": "minecraft:random_spread",
+			"salt": 392738,
+			"separation": 5,
+			"spacing": 19,
+			"spread_type": "triangular"
+		},
+		"structures": [
+			{
+				"structure": "mcpe:city",
+				"weight": 1
+			}
+		]
+	}
+}

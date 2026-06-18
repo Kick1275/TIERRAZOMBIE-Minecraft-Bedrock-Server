@@ -1,0 +1,28 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:city/center_street"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_center0",
+					"projection": "minecraft:rigid",
+					"processors": "mcpe:empty"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_center1",
+					"projection": "minecraft:rigid",
+					"processors": "mcpe:empty"
+				},
+				"weight": 45
+			}
+		]
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:first_aid",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 16,
+			"minecraft:icon": {
+				"textures": {
+					"default": "first_aid"
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation_modifier": 0,
+				"can_always_eat": true
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 3,
+				"movement_modifier": 0.6
+			},
+			"minecraft:use_animation": {
+				"value": "bow"
+			},
+			"minecraft:custom_components": [
+				"mcpe:aid"
+			],
+			"minecraft:display_name": {
+				"value": "item.mcpe:first_aid.name"
+			}
+		}
+	}
+}

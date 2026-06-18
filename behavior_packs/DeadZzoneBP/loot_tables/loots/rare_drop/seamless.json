@@ -1,0 +1,90 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:acu_seamless_top",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:acu_seamless_bottom",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:ballistic_blue",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ballistic_black",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_black",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_blue",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_black",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_navy",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:heavy_blue",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_black",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

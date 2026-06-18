@@ -1,0 +1,160 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:firefighter_loot",
+			"menu_category": {
+				"category": "items"
+			},
+			"traits": {
+				"minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				}
+			},
+			"states": {
+				"block:loot": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:custom_components": [
+				"mcpe:loot"
+			],
+			"minecraft:collision_box": {
+				"origin": [
+					-6,
+					0,
+					-5
+				],
+				"size": [
+					12,
+					16,
+					11
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					0,
+					-5
+				],
+				"size": [
+					12,
+					16,
+					11
+				]
+			},
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:geometry": "geometry.firefighter_box",
+			"minecraft:tick": {
+				"interval_range": [
+					18000,
+					18000
+				],
+				"looping": false
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "firefighter_box",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "!q.block_state('block:loot')",
+				"components": {
+					"minecraft:geometry": "geometry.firefighter_box",
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "firefighter_box",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('block:loot')",
+				"components": {
+					"minecraft:geometry": "geometry.firefighter_box_emp",
+					"minecraft:tick": {
+						"interval_range": [
+							18000,
+							18000
+						],
+						"looping": false
+					},
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "firefighter_box",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'north' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							180,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'south' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'east' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							90,
+							0
+						]
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('minecraft:cardinal_direction') == 'west' ",
+				"components": {
+					"minecraft:transformation": {
+						"rotation": [
+							0,
+							270,
+							0
+						]
+					}
+				}
+			}
+		]
+	}
+}

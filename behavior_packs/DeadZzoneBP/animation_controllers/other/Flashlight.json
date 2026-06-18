@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.flashlight": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "shoot": "query.get_equipped_item_name('main_hand')=='flashlight'"
+            }
+          ]
+        },
+        "shoot": {
+          "transitions": [
+            {
+              "default": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/function light"
+          ]
+        }
+      }
+    }
+  }
+}

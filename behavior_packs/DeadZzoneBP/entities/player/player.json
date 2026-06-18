@@ -1,0 +1,1166 @@
+﻿{
+  "format_version": "1.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "is_spawnable": false,
+      "is_summonable": false,
+      "is_experimental": false,
+      "properties": {
+        "mcpe:reload": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        },
+        "mcpe:bleeding": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        },
+        "mcpe:death": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        },
+        "mcpe:infected": {
+          "type": "bool",
+          "client_sync": true,
+          "default": false
+        }
+      },
+      "scripts": {
+        "animate": [
+          "asvalreloading",
+          "ss1reloading",
+          "m1897reloading",
+          "m1911reloading",
+          "cz527reloading",
+          "izh43reloading",
+          "m4a1reloading",
+          "ak47reloading",
+          "aks74ureloading",
+          "ump45reloading",
+          "pythonreloading",
+          "glock17reloading",
+          "garandreloading",
+          "mp5reloading",
+          "famasreloading",
+          "l2a3reloading",
+          "falreloading",
+          "m1014reloading",
+          "l96a1reloading",
+          "m1894creloading",
+          "rpkreloading",
+          "anacondareloading",
+          "m14reloading",
+          "ak74reloading",
+          "svdreloading",
+          "m79reloading",
+          "sksreloading",
+          "makarovreloading",
+          "mosinreloading",
+          "mosinreloading",
+          "vz65reloading",
+          "m16a1reloading",
+          "makarov_pbreloading",
+          "m870reloading",
+          "rags",
+          "flashlight",
+          "kuru",
+          "kaboom2",
+          "broken_bones",
+          "damage_sensors",
+          "water_remove",
+          "water_remove_unpure",
+          "water_remove_bleach",
+          "bleeding",
+          "death",
+          "alive",
+          "add_blood",
+          "add_infection",
+          "removd_medical",
+          "pre_animation",
+          "spawn",
+          "zaza_plushie",
+          {
+            "infected": "q.is_tamed"
+          },
+          {
+            "gasmask": "q.equipped_item_any_tag('slot.armor.head','gas_mask') && !q.is_in_water"
+          },
+          {
+            "headlamp": "q.equipped_item_any_tag('slot.armor.head','headlamp') && !q.is_in_water"
+          }
+        ]
+      },
+      "animations": {
+        "spawn": "controller.animation.spawn",
+        "zaza_plushie": "controller.animation.zaza_plushie",
+        "pre_animation": "animation.pre_animation",
+        "death": "controller.animation.player_death",
+        "alive": "controller.animation.player_alive",
+        "bleeding": "controller.animation.bleeding",
+        "bleed": "animation.bleeding",
+        "add_blood": "controller.animation.add_blood",
+        "add_infection": "controller.animation.add_infection",
+        "removd_medical": "controller.animation.removd_medical",
+        "motor": "controller.animation.motor",
+        "broken_bones": "controller.animation.broken_bones",
+        "flashlight": "controller.animation.flashlight",
+        "infected": "controller.animation.infected",
+        "rags": "controller.animation.rags",
+        
+        "ss1reloading": "controller.animation.ss1.reload",
+        "ss1reload": "animation.ss1.reload",
+        
+        "m1911reloading": "controller.animation.m1911.reload",
+        "m1911reload": "animation.m1911.reload",
+        
+        "cz527reloading": "controller.animation.cz527.reload",
+        "cz527reload": "animation.cz527.reload",
+        
+        "m1897reloading": "controller.animation.m1897.reload",
+        "m1897reload": "animation.m1897.reload",
+        
+        "ak47reloading": "controller.animation.ak47.reload",
+        "ak47reload": "animation.ak47.reload",
+        
+        "pythonreloading": "controller.animation.python.reload",
+        "pythonreload": "animation.python.reload",
+        
+        "ump45reloading": "controller.animation.ump45.reload",
+        "ump45reload": "animation.ump45.reload",
+        
+        "aks74ureloading": "controller.animation.aks74u.reload",
+        "aks74ureload": "animation.aks74u.reload",
+        
+        "m4a1reloading": "controller.animation.m4a1.reload",
+        "m4a1reload": "animation.m4a1.reload",
+        
+        "izh43reloading": "controller.animation.izh43.reload",
+        "izh43reload": "animation.izh43.reload",
+        
+        "glock17reloading": "controller.animation.glock17.reload",
+        "glock17reload": "animation.glock17.reload",
+        
+        "garandreloading": "controller.animation.garand.reload",
+        "garandreload": "animation.garand.reload",
+        
+        "mp5reloading": "controller.animation.mp5.reload",
+        "mp5reload": "animation.mp5.reload",
+        
+        "famasreloading": "controller.animation.famas.reload",
+        "famasreload": "animation.famas.reload",
+        
+        "l2a3reloading": "controller.animation.l2a3.reload",
+        "l2a3reload": "animation.l2a3.reload",
+        
+        "falreloading": "controller.animation.fal.reload",
+        "falreload": "animation.fal.reload",
+        
+        "m1014reloading": "controller.animation.m1014.reload",
+        "m1014reload": "animation.m1014.reload",
+        
+        "l96a1reloading": "controller.animation.l96a1.reload",
+        "l96a1reload": "animation.l96a1.reload",
+        
+        "m1894creloading": "controller.animation.m1894c.reload",
+        "m1894creload": "animation.m1894c.reload",
+        
+        "rpkreloading": "controller.animation.rpk.reload",
+        "rpkreload": "animation.rpk.reload",
+        
+        "anacondareloading": "controller.animation.anaconda.reload",
+        "anacondareload": "animation.anaconda.reload",
+        
+        "m14reloading": "controller.animation.m14.reload",
+        "m14reload": "animation.m14.reload",
+        
+        "ak74reloading": "controller.animation.ak74.reload",
+        "ak74reload": "animation.ak74.reload",
+        
+        "svdreloading": "controller.animation.svd.reload",
+        "svdreload": "animation.svd.reload",
+        
+        "m79reloading": "controller.animation.m79.reload",
+        "m79reload": "animation.m79.reload",
+        
+        "sksreloading": "controller.animation.sks.reload",
+        "sksreload": "animation.sks.reload",
+        
+        "makarovreloading": "controller.animation.makarov.reload",
+        "makarovreload": "animation.makarov.reload",
+        
+        "mosinreloading": "controller.animation.mosin.reload",
+        "mosinreload": "animation.mosin.reload",
+        
+        "m16a1reloading": "controller.animation.m16a1.reload",
+        "m16a1reload": "animation.m16a1.reload",
+        
+        "vz65reloading": "controller.animation.vz65.reload",
+        "vz65reload": "animation.vz65.reload",
+        
+        "makarov_pbreloading": "controller.animation.makarov_pb.reload",
+        "makarov_pbreload": "animation.makarov_pb.reload",
+        
+        "m870reloading": "controller.animation.m870.reload",
+        "m870reload": "animation.m870.reload",
+        
+        "asvalreloading": "controller.animation.asval.reload",
+        "asvalreload": "animation.asval.reload",
+        
+        "headlamp": "controller.animation.headlamp",
+        "gasmask": "controller.animation.gasmask",
+        "kuru": "animation.kuru.effect",
+        "kaboom2": "controller.animation.kaboom2",
+        "damage_sensors": "controller.animation.player.damage_sensor",
+        "water_remove_bleach": "controller.animation.remove_water_bleach",
+        "water_remove_unpure": "controller.animation.remove_water_unpure",
+        "water_remove": "controller.animation.remove_water"
+      }
+    },
+    "component_groups": {
+      "klep:reload": {
+        "minecraft:mark_variant": {
+          "value": 1
+        }
+      },
+      "klep:noreload": {
+        "minecraft:mark_variant": {
+          "value": 0
+        }
+      },
+      "add_noise": {
+        "minecraft:timer": {
+          "time": 4,
+          "looping": false,
+          "time_down_event": {
+            "event": "remove_noise"
+          }
+        }
+      },
+      "damage_sensor_on": {
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "fall",
+              "on_damage": {
+                "event": "broken_bones",
+                "target": "self"
+              }
+            },
+            {
+              "cause": "entity_attack",
+              "on_damage": {
+                "event": "random_bleeding_infected",
+                "target": "self"
+              }
+            },
+            {
+              "cause": "projectile",
+              "on_damage": {
+                "event": "bleeding_shoot",
+                "target": "self"
+              }
+            }
+          ]
+        }
+      },
+      "damage_sensor_off": {
+        "minecraft:damage_sensor": {
+          "triggers": [
+            {
+              "cause": "entity_attack",
+              "on_damage": {
+                "event": "random_bleeding_infected",
+                "target": "self"
+              }
+            },
+            {
+              "cause": "projectile",
+              "on_damage": {
+                "event": "bleeding_shoot",
+                "target": "self"
+              }
+            }
+          ]
+        }
+      },
+      "klep:on_sight": {
+        "minecraft:mark_variant": {
+          "value": 2
+        }
+      },
+      "klep:off_sight": {
+        "minecraft:mark_variant": {
+          "value": 3
+        }
+      },
+      "nekozack": {
+        "minecraft:skin_id": {
+          "value": 99
+        }
+      },
+      "scope_sniper": {
+        "minecraft:movement": {
+          "value": 0.00457
+        }
+      },
+      "scope_sniper_off": {
+        "minecraft:movement": {
+          "value": 0.1
+        }
+      },
+      "broken_bones": {
+        "minecraft:is_saddled": {}
+      },
+      "infected": {
+        "minecraft:is_tamed": {}
+      },
+      "gas_mask": {
+        "minecraft:spell_effects": {
+          "remove_effect": "wither"
+        }
+      },
+      "bleeding_shoot": {
+        "minecraft:variant": {
+          "value": 1
+        },
+        "minecraft:timer": {
+          "time": 30,
+          "looping": false,
+          "time_down_event": {
+            "event": "bleeding_remove",
+            "target": "self"
+          }
+        }
+      },
+      "zaza_plushie": {
+        "minecraft:spawn_entity": [
+          {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "single_use": true,
+            "spawn_entity": "grenade:zaza",
+            "num_to_spawn": 10
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tablesempty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {},
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:player.saturation": {
+        "value": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 4
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": -1,
+        "inhaleTime": 3.75,
+        "generatesBubbles": false
+      },
+      "minecraft:nameable": {
+        "alwaysShow": false,
+        "allowNameTagRenaming": false
+      },
+      "minecraft:on_death": {
+        "event": "on:death",
+        "target": "self"
+      },
+      "minecraft:physics": {},
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:environment_sensor": [
+        {
+          "on_environment": {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "minecraft:refresh_player"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_underground",
+                  "value": true
+                }
+              ]
+            },
+            "event": "add_tag_indoor"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_underground",
+                  "value": false
+                }
+              ]
+            },
+            "event": "remove_tag_indoor"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:cz527"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": true
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": false
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper_off"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:l96a1"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": true
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:l96a1"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": false
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper_off"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:svd"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": true
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:svd"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": false
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper_off"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:mosin"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": true
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper"
+          }
+        },
+        {
+          "on_environment": {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_equipment",
+                  "subject": "self",
+                  "domain": "hand",
+                  "value": "mcpe:mosin"
+                },
+                {
+                  "test": "is_sneaking",
+                  "subject": "self",
+                  "operator": "equals",
+                  "value": false
+                },
+                {
+                  "test": "is_family",
+                  "subject": "self",
+                  "value": "player"
+                }
+              ]
+            },
+            "event": "scope_sniper_off"
+          }
+        }
+      ],
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [
+              0.4,
+              -0.15,
+              0.04
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [
+              -0.4,
+              -0.15,
+              0.04
+            ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:scaffolding_climber": {}
+    },
+    "events": {
+      "mcpe:death_remove": {
+        "set_property": {
+          "mcpe:death": false
+        }
+      },
+      "on:death": {
+        "sequence": [
+          {
+            "set_property": {
+              "mcpe:death": true
+            },
+            "queue_command": {
+              "command": [
+                "tag @s add camera",
+                "tag @s remove kuru",
+                "tag @s remove boom",
+                "tag @s remove kuru_effect",
+                "tag @s add remove_infect",
+                "tag @s remove broken_bone",
+                "tag @s remove bleeding1",
+                "tag @s remove bleeding2",
+                "tag @s remove bleeding3",
+                "tag @s remove bleeding4",
+                "tag @s remove bleeding5",
+                "tag @s remove bleeding6",
+                "tag @s remove bleeding7",
+                "tag @s remove bleeding8",
+                "tag @s remove bleeding9",
+                "tag @s remove bleeding10",
+                "tag @s remove infection",
+                "tag @s remove blood_type_a",
+                "tag @s remove blood_type_ab",
+                "tag @s remove blood_type_b",
+                "tag @s remove blood_type_o",
+                "playsound player.death @s",
+                "camera @s set minecraft:free ease 3 in_out_sine pos ~0 ~5 ~0 rot ~90 ~",
+                "execute at @s[tag=!infect] run summon mcpe:player_corpse Corpse",
+                "execute at @s[tag=infect] run summon mcpe:player_infect_corpse Corpse",
+                "tp @e[type=item, r=8] @e[type=mcpe:player_corpse, r=8, c=1]",
+                "tp @e[type=item, r=8] @e[type=mcpe:player_infect_corpse, r=8, c=1]",
+                "scoreboard players set @s thirst 20",
+                "scoreboard players set @s blood 3500",
+                "scoreboard players set @s overdose 0",
+                "scoreboard players set @s infection 0",
+                "scoreboard players set @s bleedingTimer 0",
+                "scoreboard players set @s stamina 20",
+                "function thirst",
+                "tag @s remove heavy_noise",
+                "tag @s remove light_noise",
+                "function DZammoStart",
+                "function DZgunsDataCount"
+              ]
+            }
+          },
+          {
+            "trigger": "broken_bone_remove"
+          },
+          {
+            "trigger": "infected_remove"
+          },
+          {
+            "trigger": "bleeding_remove"
+          },
+          {
+            "trigger": "boom_remove"
+          },
+          {
+            "trigger": "remove_damage_sensor"
+          }
+        ]
+      },
+      "shot_at_broken_bones": {
+        "add": {
+          "component_groups": [
+            "broken_bones"
+          ]
+        }
+      },
+      "broken_bones": {
+        "randomize": [
+          {
+            "weight": 10,
+            "add": {
+              "component_groups": [
+                "broken_bones"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "tellraw @s {\"rawtext\":[{\"translate\":\"game.message.broken_bone_warning\"}]}",
+                "tag @s add broken_bone",
+                "scoreboard players remove @s[m=!c] blood 45",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "weight": 75
+          }
+        ]
+      },
+      "broken_bone_remove": {
+        "remove": {
+          "component_groups": [
+            "broken_bones"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "tag @s remove broken_bone"
+          ]
+        }
+      },
+      "random_bleeding_infected": {
+        "sequence": [
+          {
+            "trigger": "attacked"
+          },
+          {
+            "randomize": [
+              {
+                "trigger": "infected"
+              },
+              {
+                "trigger": "bleeding"
+              }
+            ]
+          }
+        ]
+      },
+      "bleeding": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "bleeding"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "bleeding"
+              ]
+            }
+          },
+          {
+            "randomize": [
+              {
+                "weight": 8,
+                "queue_command": {
+                  "command": [
+                    "tellraw @s {\"rawtext\":[{\"translate\":\"game.message.bleeding_warning\"}]}",
+                    "tag @s add bleeding1"
+                  ]
+                },
+                "set_property": {
+                  "mcpe:bleeding": true
+                }
+              },
+              {
+                "weight": 45
+              }
+            ]
+          }
+        ]
+      },
+      "bleeding_shoot": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "bleeding_shoot"
+              ]
+            },
+            "remove": {
+              "component_groups": [
+                "bleeding_shoot"
+              ]
+            }
+          },
+          {
+            "randomize": [
+              {
+                "weight": 35,
+                "queue_command": {
+                  "command": [
+                    "tellraw @s {\"rawtext\":[{\"translate\":\"game.message.bleeding_warning\"}]}",
+                    "tag @s add bleeding1"
+                  ]
+                },
+                "set_property": {
+                  "mcpe:bleeding": true
+                }
+              },
+              {
+                "weight": 70
+              }
+            ]
+          }
+        ]
+      },
+      "bleeding_remove": {
+        "queue_command": {
+          "command": [
+            "tag @s remove bleeding1"
+          ]
+        },
+        "set_property": {
+          "mcpe:bleeding": false
+        }
+      },
+      "kuru_effect": {
+        "queue_command": {
+          "command": [
+            "tag @s[tag=!kuru] add kuru"
+          ]
+        }
+      },
+      "boom_remove": {
+        "queue_command": {
+          "command": [
+            "tag @s[tag=!boom] remove boom"
+          ]
+        }
+      },
+      "boom": {
+        "queue_command": {
+          "command": [
+            "tag @s[tag=!boom] add boom"
+          ]
+        }
+      },
+      "infected": {
+        "randomize": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "infected"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s add infect",
+                "tag @s add infection",
+                "tag @s remove remove_infect"
+              ]
+            },
+            "weight": 35,
+            "add": {
+              "component_groups": [
+                "infected"
+              ]
+            }
+          },
+          {
+            "weight": 50
+          }
+        ]
+      },
+      "add_noise": {
+        "add": {
+          "component_groups": [
+            "add_noise"
+          ]
+        }
+      },
+      "remove_noise": {
+        "queue_command": {
+          "command": [
+            "tag @s remove light_noise",
+            "tag @s remove heavy_noise"
+          ]
+        }
+      },
+      "infected_remove_two": {
+    	"queue_command": {
+          "command": [
+            "tag @s remove infection"
+          ]
+        }
+      },
+           
+      "infected_remove": {
+        "remove": {
+          "component_groups": [
+            "infected"
+          ]
+        },
+        "queue_command": {
+          "command": [
+            "tag @s remove infect"
+          ]
+        }
+      },
+      "attacked": {
+        "randomize": [
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 31",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 19",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 27",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 82",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 26",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 18",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 50",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 48",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 22",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 24",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          },
+          {
+            "queue_command": {
+              "command": [
+                "scoreboard players remove @s[m=!c] blood 25",
+                "scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+              ]
+            }
+          }
+        ]
+      },
+      "add_tag_indoor": {
+        "queue_command": {
+          "command": [
+            "tag @s add indoor"
+          ]
+        }
+      },
+      "remove_tag_indoor": {
+        "queue_command": {
+          "command": [
+            "tag @s remove indoor"
+          ]
+        }
+      },
+      "gas_mask": {
+        "add": {
+          "component_groups": [
+            "gas_mask"
+          ]
+        }
+      },
+      "zaza_plushie": {
+        "add": {
+          "component_groups": [
+            "zaza_plushie"
+          ]
+        }
+      },
+      "temperature": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_temperature_type", 
+              "subject": "self",
+              "operator": "==",
+              "value": "mild"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s add is_warm"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_temperature_type", 
+              "subject": "self",
+              "operator": "!=",
+              "value": "mild"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s remove is_warm"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_temperature_type", 
+              "subject": "self",
+              "operator": "==",
+              "value": "cold"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s add is_cold"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_temperature_type", 
+              "subject": "self",
+              "operator": "!=",
+              "value": "cold"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s remove is_cold"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_temperature_type", 
+              "subject": "self",
+              "operator": "==",
+              "value": "warm"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s add is_hot"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_temperature_type", 
+              "subject": "self",
+              "operator": "!=",
+              "value": "warm"
+            },
+            "queue_command": {
+              "command": [
+                "tag @s remove is_hot"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

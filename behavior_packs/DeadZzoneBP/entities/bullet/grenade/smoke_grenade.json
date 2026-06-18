@@ -1,0 +1,91 @@
+{
+	"format_version": "1.20.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "grenade:smoke_gas",
+			"runtime_identifier": "minecraft:snowball",
+			"is_spawnable": false,
+			"is_summonable": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["grenade"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"event_trigger": {
+							"event": "smoke_effect"
+						}
+					},
+					"stick_in_ground": {
+						"shake_time": 2.5
+					}
+				},
+				"power": 1.2,
+				"gravity": 0.03,
+				"angleoffset": 0.5,
+				"inertia": 1,
+				"liquid_inertia": 2,
+				"uncertaintyBase": 0.7,
+				"anchor": 1,
+				"offset": [0,0,0],
+				"reflectOnHurt": false,
+				"catch_fire": false
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": ["glass", "glass_pane", "stained_glass", "tinted_glass", "stained_glass_pane" ]
+			},
+			"minecraft:physics": {}
+		},
+		"component_groups": {
+			"smoke_effect": {
+				"minecraft:timer": {
+					"looping": true,
+					"randomInterval": true,
+					"time": [1.5, 2],
+					"time_down_event": {
+						"event": "effect"
+					}
+				}
+			},
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuseLength": 60,
+					"fuseLit": true,
+					"power": 0,
+					"causesFire": false,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true,
+					"breaks_blocks": false
+				}
+			}
+		},
+		"events": {
+			"smoke_effect": {
+				"add": {
+					"component_groups": [
+						"smoke_effect"
+					]
+				}
+			},
+			"effect": {
+				"queue_command": {
+					"command": [
+						"playsound grenade.smoke @a[r=5] ~~~",
+						"particle nz:smoke_gas ^^^"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:exploding"
+					]
+				}
+			}
+		}
+	}
+}

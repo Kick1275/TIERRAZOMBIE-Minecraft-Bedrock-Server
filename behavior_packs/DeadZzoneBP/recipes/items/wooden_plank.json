@@ -1,0 +1,23 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:wooden_plank"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      " A",
+      "A "
+    ],
+    "key": {
+      "A": "minecraft:planks"
+    },
+    "result": {
+      "item": "mcpe:wooden_plank",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:village/street/street"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/path/path_0",
+					"processors": "mcpe:processor_road_block"
+				},
+				"weight": 50,
+				"projection": "rigid"
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/path/path_1",
+					"processors": "mcpe:processor_road_block"
+				},
+				"weight": 50,
+				"projection": "rigid"
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/path/path_section",
+					"processors": "mcpe:processor_road_block"
+				},
+				"weight": 50,
+				"projection": "rigid"
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/path/path_turn",
+					"processors": "mcpe:processor_road_block"
+				},
+				"weight": 50,
+				"projection": "rigid"
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/path/path_end",
+					"processors": "mcpe:processor_road_block"
+				},
+				"weight": 50,
+				"projection": "rigid"
+			}
+		],
+		"fallback": "mcpe:village/center_street"
+	}
+}

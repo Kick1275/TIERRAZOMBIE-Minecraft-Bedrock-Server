@@ -1,0 +1,58 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:wood_table",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"tag:wood": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:geometry": "geometry.wood_table",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "wood_table",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

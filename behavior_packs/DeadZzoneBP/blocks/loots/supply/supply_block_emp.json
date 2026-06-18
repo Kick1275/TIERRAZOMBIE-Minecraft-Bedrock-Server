@@ -1,0 +1,63 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:supply_block_emp"
+		},
+		"components": {
+			"tag:wood": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:custom_components": [
+				"mcpe:tick"
+			],
+			"minecraft:collision_box": {
+				"origin": [
+					-8.0,
+					0,
+					-8.0
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8.0,
+					0,
+					-8.0
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:tick": {
+				"interval_range": [
+					2400,
+					2400
+				],
+				"looping": true
+			},
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:geometry": "geometry.supply_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "supply_drop_emp",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

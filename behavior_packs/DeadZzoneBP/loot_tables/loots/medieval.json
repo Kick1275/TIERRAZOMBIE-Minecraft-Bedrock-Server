@@ -1,0 +1,379 @@
+{
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "random_chance_with_looting",
+          "chance": 0.55,
+          "looting_multiplier": 0.3
+        }
+      ],
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "minecraft:air",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rice",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:meat_jerky",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tomato",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:pear",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:banana",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:apple_green",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:apple",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:bread",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:melon",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "minecraft:potato",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cucumber",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:zucchini",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chainmail_top",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chainmail_bottom",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:crusader_top",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:great_helmet",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:knight_sword",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flanged_mace",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:sabre_sword",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:katana",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_chestplate",
+          "weight": 35,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "minecraft:iron_helmet",
+          "weight": 35,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flashlight",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lockpick",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags_dirty",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:headlamp",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water_unpure",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water_bleach",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cooking_pot",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "minecraft:stick",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bear_trap",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:splitting_axe",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wooden_plank",
+          "weight": 35,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:nail_trap",
+          "weight": 15
+        }
+      ]
+    }
+  ]
+}

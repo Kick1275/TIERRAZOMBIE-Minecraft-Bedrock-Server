@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:tiles_bnw"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "A",
+      "BB"
+    ],
+    "key": {
+      "A": "minecraft:black_dye",
+      "B": "mcpe:tiles_white"
+    },
+    "result": {
+      "item": "mcpe:tiles_bnw",
+      "count": 2
+    }
+  }
+}

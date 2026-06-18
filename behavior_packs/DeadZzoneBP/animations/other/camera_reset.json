@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.camera_reset": {
+      "animation_length": 0.1,
+      "loop": true,
+      "timeline": {
+        "0": [
+          "/stopsound @s[tag=camera] player.death",
+          "/tag @s[tag=remove_infect] remove infect",
+          "/camera @s[tag=camera] clear"
+        ]
+      }
+    }
+  }
+}

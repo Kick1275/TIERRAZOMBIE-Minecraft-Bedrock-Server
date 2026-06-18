@@ -1,0 +1,966 @@
+{
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "random_chance_with_looting",
+          "chance": 0.35,
+          "looting_multiplier": 0.3
+        }
+      ],
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "minecraft:air",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "krep:m885",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "krep:mm9",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "krep:m43",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "krep:gauge12",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "krep:acp45",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "krep:win308",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 16
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:meat_jerky",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_bacon",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_ration",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_ration",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_sandwich",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:army_artic",
+          "weight": 30,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_helmet_black",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_vest_black",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_helmet_white",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:balaclava_black",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_blue",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_green",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_red",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_artic",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_tactical",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_gray",
+          "weight": 13,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_white",
+          "weight": 13,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:skimask_black",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_helmet_white",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_helmet_black",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_black",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_white",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_black",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_white",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bdu_artic_top",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ghillie_snow_top",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bdu_artic_bottom",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ghillie_snow_bottom",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gorka_top",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gorka_bottom",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:special_top",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:special_bottom",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:spec_helmet",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:akm",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:akm_emp",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "krep:g36",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:g36_emp",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "krep:fal",
+          "weight": 13,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:fal_emp",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "krep:m4a1",
+          "weight": 6,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:m4a1_emp",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "krep:deagle",
+          "weight": 12,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:deagle_emp",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "krep:g17",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:g17_emp",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "krep:saiga12",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:saiga12_emp",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "krep:mp5",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:mp5_emp",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "krep:ump",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:ump_emp",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "krep:awp",
+          "weight": 8,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:awp_emp",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "krep:sks",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "krep:sks_emp",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:combat_knife",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:engineer_shovel",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:kukri_machete",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:machete",
+          "weight": 14,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_axe",
+          "weight": 18,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_shovel",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:adrenaline",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:morphine",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:water_purification",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:can_opener",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plastic_explosive",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:first_aid",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags",
+          "weight": 23
+        },
+        {
+          "type": "item",
+          "name": "mcpe:alcoholic_tinture",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandage",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:barbed_wire",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:nail",
+          "weight": 25
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wire_cutter",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bleach",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:walkie_talkie",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flashlight",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:m16a1",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:m16a1_emp",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:frag_grenade",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lockpick",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flash_grenade",
+          "weight": 20
+        },
+        {
+          "type": "item",
+          "name": "mcpe:smoke_grenade",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plastic_explosive",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:detonator",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:landmine",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ammo_40mm",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "minecraft:gunpowder",
+          "weight": 25
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+item.mcpe:bdu_artic_top.name=Artic camo BDU
+item.mcpe:bdu_desert_top.name=Desert camo BDU
+item.mcpe:bdu_woodland_top.name=Woodland camo BDU
+item.mcpe:chainmail_top.name=Chainmail top
+item.mcpe:clown_top.name=Clown suit
+item.mcpe:crusader_top.name=Crusaders top
+item.mcpe:firefighter_top.name=Firefighter jacket
+item.mcpe:flannel_red.name=Red flannel shirt
+item.mcpe:flannel_green.name=Green flannel shirt
+item.mcpe:flannel_blue.name=Blue flannel shirt
+item.mcpe:flannel_white.name=White flannel shirt
+item.mcpe:flannel_gray.name=Gray flannel shirt
+item.mcpe:ghillie_drygrass_top.name=Dry grass ghillie suit
+item.mcpe:ghillie_forest_top.name=Forest ghillie suit
+item.mcpe:ghillie_snow_top.name=Snow ghillie suit
+item.mcpe:gorka_top.name=Gorka uniform
+item.mcpe:hawaiian_black.name=Black hawaiian shirt
+item.mcpe:hawaiian_red.name=Red hawaiian shirt
+item.mcpe:hazmat_white_top.name=White hazmat suit
+item.mcpe:hazmat_yellow_top.name=Yellow hazmat suit
+item.mcpe:hero_flannel.name=Hero flannel shirt
+item.mcpe:hiking_black.name=Black hiking jacket
+item.mcpe:hiking_blue.name=Blue hiking jacket
+item.mcpe:hoodie_black.name=Black hoodie
+item.mcpe:hoodie_blue.name=Blue hoodie
+item.mcpe:hoodie_green.name=Green hoodie
+item.mcpe:hoodie_red.name=Red hoodie
+item.mcpe:hoodie_yellow.name=Yellow hoodie
+item.mcpe:hoodie_white.name=White hoodie
+item.mcpe:leather_black.name=Black leather jacket
+item.mcpe:leather_brown.name=Brown leather jacket
+item.mcpe:maid_top.name=Maid dress
+item.mcpe:paramedic_top.name=Paramedic jacket
+item.mcpe:plague_top.name=Plague doctor upper
+item.mcpe:plaid_red.name=Red plaid shirt
+item.mcpe:plaid_blue.name=Blue plaid shirt
+item.mcpe:plaid_olive.name=Olive plaid shirt
+item.mcpe:plaid_white.name=White plaid shirt
+item.mcpe:plaid_gray.name=Gray plaid shirt
+item.mcpe:plaid_tan.name=Tan plaid shirt
+item.mcpe:police_special_top.name=Police special force jacket
+item.mcpe:police_top.name=Police uniform
+item.mcpe:prisoner_top.name=Prisoner jacket
+item.mcpe:puffer_blue.name=Blue puffer jacket
+item.mcpe:puffer_black.name=Black puffer jacket
+item.mcpe:special_top.name=Special operation uniform
+item.mcpe:striped_blue.name=Blue striped bottom-up shirt
+item.mcpe:striped_white.name=White striped bottom-up shirt
+item.mcpe:stripeds_black.name=Black striped longsleeve shirt
+item.mcpe:suede_brown.name=Brown suede jacket
+item.mcpe:suit_black.name=Black suit
+item.mcpe:sweater_white.name=White sweater
+item.mcpe:swester_green.name=Green sweater
+item.mcpe:tactical_tan.name=Tan tactical sweater
+item.mcpe:tactical_green.name=Green tactical sweater
+item.mcpe:tactical_navy.name=Navy tactical sweater
+item.mcpe:tactical_red.name=Red tactical sweater
+item.mcpe:tactical_white.name=White tactical sweater
+item.mcpe:tracksuit_black.name=Black tracksuit
+item.mcpe:tracksuit_blue.name=Blue tracksuit
+item.mcpe:tracksuit_red.name=Red tracksuit
+item.mcpe:tshirt_black.name=Black t-shirt
+item.mcpe:tshirt_blue.name=Blue t-shirt
+item.mcpe:tshirt_red.name=Red t-shirt
+item.mcpe:tshirt_green.name=Green t-shirt
+item.mcpe:tshirt_white.name=White t-shirt
+item.mcpe:tshirt_yellow.name=Yellow t-shirt
+item.mcpe:varsity_blue.name=Blue varsity jacket
+item.mcpe:varsity_green.name=Green varsity jacket
+item.mcpe:varsity_red.name=Red varsity jacket
+item.mcpe:varsity_brown.name=Brown varsity jacket
+
+
+
+
+
+
+

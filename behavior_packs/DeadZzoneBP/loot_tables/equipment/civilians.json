@@ -1,0 +1,38 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/civilian.json",
+          "weight": 75
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/construction.json",
+          "weight": 5
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/clown.json",
+          "weight": 1
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/maid.json",
+          "weight": 1
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/plague_doctor.json",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

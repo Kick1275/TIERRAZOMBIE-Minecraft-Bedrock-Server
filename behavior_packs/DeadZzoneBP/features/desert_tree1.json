@@ -1,0 +1,21 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "mcpe:desert_tree1"
+		},
+		"structure_name": "mystructure:desert_tree1",
+		"adjustment_radius": 8,
+		"facing_direction": "random",
+		"constraints": {
+			"grounded": {},
+			"unburied": {},
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:grass",
+          "minecraft:sand"
+        ]
+      }
+		}
+	}
+}

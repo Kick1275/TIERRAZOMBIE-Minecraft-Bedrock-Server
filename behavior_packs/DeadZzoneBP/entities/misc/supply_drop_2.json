@@ -1,0 +1,81 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "mcpe:supply_drop_2",
+			"is_spawnable": false,
+			"is_summonable": true
+		},
+		"component_groups": {
+			"mcpe:remove": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["supply_drop"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.1,
+				"height": 0.1
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "on_ground",
+							"value": true
+						},
+						"event": "supply_drop_event",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
+		},
+		"events": {
+			"mcpe:remove": {
+				"add": {
+					"component_groups": [
+						"mcpe:remove"
+					]
+				}
+			},
+			
+			"supply_drop_event": {
+				"sequence": [
+					{
+						"trigger": "mcpe:remove"
+					},
+					{
+						"queue_command": {
+							"command": [
+								"fill ~~~ ~~~ mcpe:supply_block"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.anaconda.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.85,
+      "timeline": {
+        "0.0": [
+          "/event entity @s klep:off_sight",
+          "/title @s actionbar §2[Reloading..]",
+          "/function DZgunsDataCount"
+        ],
+        "0.25": "/playsound revolver.out @a[r=10]",
+        "0.6667": "/playsound bullet.drop @a[r=10]",
+        "0.7083": "/playsound bullet.drop @a[r=10]",
+        "0.75": "/playsound bullet.drop @a[r=10]",
+        "0.7917": "/playsound bullet.drop @a[r=10]",
+        "0.8333": "/playsound bullet.drop @a[r=10]",
+        "1.7083": "/playsound bullet.load @a[r=10]",
+        "2.25": "/playsound revolver.in @a[r=10]",
+        "2.7083": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.75": [
+          "/clear @s mcpe:ammo_44magnum 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:anaconda 1 0",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s anaconda 6"
+        ]
+      }
+    }
+  }
+}

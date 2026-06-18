@@ -1,0 +1,90 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:village/building/building"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_0",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_1",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_2",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_3",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_4",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_5",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_6",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_7",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_8",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_9",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 50
+			}
+		]
+	}
+}

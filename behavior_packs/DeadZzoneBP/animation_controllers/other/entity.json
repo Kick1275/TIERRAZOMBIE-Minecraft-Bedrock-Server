@@ -1,0 +1,1410 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.npc_death": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"death": "q.health <= 1"
+						}
+					]
+				},
+				"death": {
+					"on_entry": [
+						"@s death",
+						"/tag @s add death"
+					]
+				}
+			}
+		},
+		"controller.animation.add_blood": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"blood": "q.life_time > 0.5"
+						}
+					],
+					"on_entry": [
+						"v.add_blood_delay = q.life_time;"
+					]
+				},
+				"blood": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.add_blood_delay) >= 5"
+						}
+					],
+					"on_entry": [
+						"v.add_blood_delay = q.life_time;",
+						"/execute at @s run scoreboard players add @s[m=!c,tag=!bleeding] blood 1",
+						"/execute at @s run scoreboard players set @s[scores={blood=3500..}] blood 3500"
+					]
+				}
+			}
+		},
+		"controller.animation.removd_medical": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"medical": "q.life_time > 0.5"
+						}
+					],
+					"on_entry": [
+						"v.remove_medical_delay = q.life_time;"
+					]
+				},
+				"medical": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.remove_medical_delay) >= 20"
+						}
+					],
+					"on_entry": [
+						"v.remove_medical_delay = q.life_time;",
+						"/execute at @s run scoreboard players remove @s medicalUsageCount 1",
+						"/execute at @s run scoreboard players set @s[scores={medicalUsageCount=..0}] medicalUsageCount 0"
+					]
+				}
+			}
+		},
+		"controller.animation.add_infection": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"infection": "q.life_time > 0.5"
+						}
+					],
+					"on_entry": [
+						"v.add_infection_delay = q.life_time;"
+					]
+				},
+				"infection": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.add_infection_delay) >= 420"
+						}
+					],
+					"on_entry": [
+						"v.add_infection_delay = q.life_time;",
+						"/execute at @s[tag=infection] run scoreboard players add @s infection 5",
+						"/execute at @s run scoreboard players set @s[scores={infection=..0}] infection 0"
+					]
+				}
+			}
+		},
+		"controller.animation.zed_idle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"male_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"female_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);"
+					]
+				},
+				"male_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 1.05"
+					]
+				},
+				"male_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 1"
+					]
+				},
+				"male_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 10 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 0.87"
+					]
+				},
+				"female_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_female @a[r=5] ~~~ 3 1.05"
+					]
+				},
+				"female_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_female @a[r=5] ~~~ 3 1"
+					]
+				},
+				"female_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 10 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_female @a[r=5] ~~~ 3 0.87"
+					]
+				}
+			}
+		},
+		"controller.animation.zed_idle_runner": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"male_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"female_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 2);"
+					]
+				},
+				"male_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 2);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 1.25"
+					]
+				},
+				"male_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 2);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 1.3"
+					]
+				},
+				"female_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 2);",
+						"/execute at @s run playsound mob.infected_female @a[r=5] ~~~ 3 1.25"
+					]
+				},
+				"female_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 2);",
+						"/execute at @s run playsound mob.infected_female @a[r=5] ~~~ 3 1.3"
+					]
+				}
+			}
+		},
+		"controller.animation.brute_idle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"male_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);"
+					]
+				},
+				"male_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 0.66"
+					]
+				},
+				"male_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 0.66"
+					]
+				},
+				"male_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 10 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.infected_male @a[r=5] ~~~ 3 0.66"
+					]
+				}
+			}
+		},
+		"controller.animation.zed_angry": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"male_idle_1": "q.life_time > 0.5 && q.property('mcpe:gender') == 'male' && math.random_integer(1,3) == 1"
+						},
+						{
+							"male_idle_2": "q.life_time > 0.5 && q.property('mcpe:gender') == 'male' && math.random_integer(1,3) == 2"
+						},
+						{
+							"male_idle_3": "q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"female_idle_1": "q.life_time > 0.5 && q.property('mcpe:gender') == 'female' && math.random_integer(1,3) == 1"
+						},
+						{
+							"female_idle_2": "q.life_time > 0.5 && q.property('mcpe:gender') == 'female' && math.random_integer(1,3) == 2"
+						},
+						{
+							"female_idle_3": "q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;"
+					]
+				},
+				"male_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 1 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.chase_male @a[r=10] ~~~ 3 1.05"
+					]
+				},
+				"male_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 3 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.chase_male @a[r=10] ~~~ 3 1"
+					]
+				},
+				"male_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 4 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.chase_male @a[r=10] ~~~ 3 1.087"
+					]
+				},
+				"female_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 1 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.chase_female @a[r=10] ~~~ 3 1.05"
+					]
+				},
+				"female_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 3 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.chase_female @a[r=10] ~~~ 3 1"
+					]
+				},
+				"female_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 4 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.chase_female @a[r=10] ~~~ 3 0.87"
+					]
+				}
+			}
+		},
+		"controller.animation.bleeding": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bleed": "q.property('mcpe:bleeding')"
+						}
+					]
+				},
+				"bleed": {
+					"animations": [
+						"bleed"
+					],
+					"transitions": [
+						{
+							"default": "!q.property('mcpe:bleeding')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player_death": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"death": "q.property('mcpe:death') && !q.is_alive"
+						}
+					]
+				},
+				"death": {
+					"transitions": [
+						{
+							"default": "q.is_alive"
+						}
+					],
+					"on_entry": [
+						"/playsound player.death @s",
+						"/tag @s remove blood_type_a",
+						"/tag @s remove blood_type_ab",
+						"/tag @s remove blood_type_b",
+						"/tag @s remove blood_type_o",
+						"/tag @s remove infection",
+						"/camera @s set minecraft:free ease 3 in_out_sine pos ~0 ~5 ~0 rot ~90 ~"
+					]
+				}
+			}
+		},
+		"controller.animation.player_alive": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"alive": "q.is_alive"
+						}
+					]
+				},
+				"alive": {
+					"transitions": [
+						{
+							"default": "!q.is_alive"
+						}
+					],
+					"on_entry": [
+						"/event entity @s mcpe:death_remove",
+						"/stopsound @s player.death",
+						"/tag @s[tag=remove_infect] remove infect",
+						"/camera @s clear"
+					]
+				}
+			}
+		},
+		"controller.animation.zed_sensor": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sensor": "q.has_target"
+						}
+					]
+				},
+				"sensor": {
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						}
+					],
+					"on_entry": [
+						"/event entity @s[tag=!angry] spotted"
+					],
+					"on_exit": [
+						"/event entity @s become_calm_event"
+					]
+				}
+			}
+		},
+		"controller.animation.npc_climb": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"climb": "q.life_time > 0.1 && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.climb_delay = q.life_time;"
+					]
+				},
+				"climb": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.climb_delay) >= 2"
+						}
+					],
+					"on_entry": [
+						"v.climb_delay = q.life_time;",
+						"/execute as @e[family=zombie] positioned as @s if block ^0.65^^ oak_fence run effect @s levitation 1 1 true",
+						"/execute as @e[family=human] positioned as @s if block ^0.65^^ oak_fence run effect @s levitation 1 1 true",
+						"/execute as @e[family=zombie] positioned as @s if block ^^^0.65 oak_fence run effect @s levitation 1 1 true",
+						"/execute as @e[family=human] positioned as @s if block ^^^0.65 oak_fence run effect @s levitation 1 1 true"
+					]
+				}
+			}
+		},
+		"controller.animation.marauder_idle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"idle": "q.life_time > 0.1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;"
+					]
+				},
+				"idle": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"/execute at @s run playsound mob.marauder.idle @a[r=16] ~~~"
+					]
+				}
+			}
+		},
+		"controller.animation.marauder_idle_female": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"idle": "q.life_time > 0.1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;"
+					]
+				},
+				"idle": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"/execute at @s run playsound mob.marauder.idle @a[r=16] ~~~ 1 1.75 1"
+					]
+				}
+			}
+		},
+		"controller.animation.marauder_angry": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"angry": "q.life_time > 0.1 && q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.angry_delay = q.life_time;"
+					]
+				},
+				"angry": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.angry_delay) >= 2 && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.angry_delay = q.life_time;",
+						"/execute at @s run playsound mob.marauder.see @a[r=16] ~~~"
+					]
+				}
+			}
+		},
+		"controller.animation.marauder_angry_female": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"angry": "q.life_time > 0.1 && q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.angry_delay = q.life_time;"
+					]
+				},
+				"angry": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.angry_delay) >= 2 && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.angry_delay = q.life_time;",
+						"/execute at @s run playsound mob.marauder.see @a[r=10] ~~~ 1 1.75 1"
+					]
+				}
+			}
+		},
+		"controller.animation.scav_idle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"male_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"female_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);"
+					]
+				},
+				"male_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav.idle @a[r=5] ~~~"
+					]
+				},
+				"male_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav.idle @a[r=5] ~~~"
+					]
+				},
+				"male_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 10 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav.idle @a[r=5] ~~~"
+					]
+				},
+				"female_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 5 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav_female.idle @a[r=5] ~~~"
+					]
+				},
+				"female_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 6 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav_female.idle @a[r=5] ~~~"
+					]
+				},
+				"female_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 10 && !q.has_target"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav_female.idle @a[r=5] ~~~"
+					]
+				}
+			}
+		},
+		"controller.animation.scav_angry": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"male_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"male_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'male'"
+						},
+						{
+							"female_idle_1": "v.random_idle_sounds == 1 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_2": "v.random_idle_sounds == 2 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						},
+						{
+							"female_idle_3": "v.random_idle_sounds == 3 && q.life_time > 0.5 && q.property('mcpe:gender') == 'female'"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);"
+					]
+				},
+				"male_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 1 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav.see @a[r=10] ~~~"
+					]
+				},
+				"male_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 3 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav.see @a[r=10] ~~~"
+					]
+				},
+				"male_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 4 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav.see @a[r=10] ~~~"
+					]
+				},
+				"female_idle_1": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 1 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav_female.see @a[r=10] ~~~"
+					]
+				},
+				"female_idle_2": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 3 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav_female.see @a[r=10] ~~~"
+					]
+				},
+				"female_idle_3": {
+					"transitions": [
+						{
+							"default": "(q.life_time - v.idle_delay) >= 4 && q.has_target && q.health > 1"
+						}
+					],
+					"on_entry": [
+						"v.idle_delay = q.life_time;",
+						"v.random_idle_sounds = math.random_integer(1, 3);",
+						"/execute at @s run playsound mob.scav_female.see @a[r=10] ~~~"
+					]
+				}
+			}
+		},
+		"controller.animation.retreat": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"retreat": "q.health < 8"
+						}
+					],
+					"on_entry": [
+						"/event entity @s remove_return"
+					]
+				},
+				"retreat": {
+					"transitions": [
+						{
+							"default": "q.health > 15"
+						}
+					],
+					"on_entry": [
+						"/event entity @s retreat"
+					]
+				}
+			}
+		},
+		"controller.animation.npc_shoot": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"akm": "q.get_equipped_item_name=='akm' && q.facing_target_to_range_attack && q.has_target"
+						},
+						{
+							"m1911": "q.get_equipped_item_name=='m1911' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"m4a1": "q.get_equipped_item_name=='m4a1' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"mp5": "q.get_equipped_item_name=='mp5' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"ump45": "q.get_equipped_item_name=='ump45' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"cz527": "q.get_equipped_item_name=='cz527' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"garand": "q.get_equipped_item_name=='garand' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"m1897": "q.get_equipped_item_name=='m1897' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"m14": "q.get_equipped_item_name=='m14' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"mosin": "q.get_equipped_item_name=='mosin' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"m16a1": "q.get_equipped_item_name=='m16a1' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"makarov": "q.get_equipped_item_name=='makarov' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"izh43": "q.get_equipped_item_name=='izh43' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"sks": "q.get_equipped_item_name=='sks' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"vz65": "q.get_equipped_item_name=='vz65' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"m870": "q.get_equipped_item_name=='m870' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"python": "q.get_equipped_item_name=='python' && q.has_target && q.facing_target_to_range_attack"
+						},
+						{
+							"switch_weapon": "q.health > 1 && (q.scoreboard('ammo') == 0)"
+						}
+					]
+				},
+				"akm": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"akm_reloading": "q.get_equipped_item_name=='akm' && (q.scoreboard('akm') == 0)"
+						}
+					]
+				},
+				"akm_reloading": {
+					"animations": [
+						"akmreload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:akm_reload",
+						"/scoreboard players remove @s ammo 30",
+						"/playanimation @s animation.ak.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"m1911": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"m1911_reloading": "q.get_equipped_item_name=='m1911' && (q.scoreboard('m1911') == 0)"
+						}
+					]
+				},
+				"m1911_reloading": {
+					"animations": [
+						"m1911reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:m1911_reload",
+						"/scoreboard players remove @s ammo 7",
+						"/playanimation @s animation.pistol.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"m4a1": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"m4a1_reloading": "q.get_equipped_item_name=='m4a1' && (q.scoreboard('m4a1') == 0)"
+						}
+					]
+				},
+				"m4a1_reloading": {
+					"animations": [
+						"m4a1reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:m4a1_reload",
+						"/scoreboard players remove @s ammo 30",
+						"/playanimation @s animation.ar2.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"mp5": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"mp5_reloading": "q.get_equipped_item_name=='mp5' && (q.scoreboard('mp5') == 0)"
+						}
+					]
+				},
+				"mp5_reloading": {
+					"animations": [
+						"mp5reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:mp5_reload",
+						"/scoreboard players remove @s ammo 30",
+						"/playanimation @s animation.slap.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"ump45": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"ump45_reloading": "q.get_equipped_item_name=='ump45' && (q.scoreboard('ump45') == 0)"
+						}
+					]
+				},
+				"ump45_reloading": {
+					"animations": [
+						"ump45reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:ump45_reload",
+						"/scoreboard players remove @s ammo 30",
+						"/playanimation @s animation.slap.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"cz527": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"cz527_reloading": "q.get_equipped_item_name=='cz527' && (q.scoreboard('cz527') == 0)"
+						}
+					]
+				},
+				"cz527_reloading": {
+					"animations": [
+						"cz527reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:cz527_reload",
+						"/scoreboard players remove @s ammo 5",
+						"/playanimation @s animation.bolt.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"garand": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"garand_reloading": "q.get_equipped_item_name=='garand' && (q.scoreboard('garand') == 0)"
+						}
+					]
+				},
+				"garand_reloading": {
+					"animations": [
+						"garandreload"
+					],
+					"on_entry": [
+						"/playsound gun.ping @a[r=16] ~~~",
+						"/event entity @s mcpe:garand_reload",
+						"/scoreboard players remove @s ammo 8",
+						"/playanimation @s animation.clips.reload_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"m1897": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"m1897_reloading": "q.get_equipped_item_name=='m1897' && (q.scoreboard('m1897') == 0)"
+						}
+					]
+				},
+				"m1897_reloading": {
+					"animations": [
+						"m1897reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:m1897_reload",
+						"/scoreboard players remove @s ammo 7",
+						"/playanimation @s animation.pump_7.reload_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"m14": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"m14_reloading": "q.get_equipped_item_name=='m14' && (q.scoreboard('m14') == 0)"
+						}
+					]
+				},
+				"m14_reloading": {
+					"animations": [
+						"m14reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:m14_reload",
+						"/scoreboard players remove @s ammo 20",
+						"/playanimation @s animation.ak.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"mosin": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"mosin_reloading": "q.get_equipped_item_name=='mosin' && (q.scoreboard('mosin') == 0)"
+						}
+					]
+				},
+				"mosin_reloading": {
+					"animations": [
+						"mosinreload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:mosin_reload",
+						"/scoreboard players remove @s ammo 5",
+						"/playanimation @s animation.bolt.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"m16a1": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"m16a1_reloading": "q.get_equipped_item_name=='m16a1' && (q.scoreboard('m16a1') == 0)"
+						}
+					]
+				},
+				"m16a1_reloading": {
+					"animations": [
+						"m16a1reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:m16a1_reload",
+						"/scoreboard players remove @s ammo 30",
+						"/playanimation @s animation.ar.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"makarov": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"makarov_reloading": "q.get_equipped_item_name=='makarov' && (q.scoreboard('makarov') == 0)"
+						}
+					]
+				},
+				"makarov_reloading": {
+					"animations": [
+						"makarovreload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:makarov_reload",
+						"/scoreboard players remove @s ammo 8",
+						"/playanimation @s animation.pistol.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"izh43": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"izh43_reloading": "q.get_equipped_item_name=='izh43' && (q.scoreboard('izh43') == 0)"
+						}
+					]
+				},
+				"izh43_reloading": {
+					"animations": [
+						"izh43reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:izh43_reload",
+						"/scoreboard players remove @s ammo 2",
+						"/playanimation @s animation.break.reload_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"sks": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"sks_reloading": "q.get_equipped_item_name=='sks' && (q.scoreboard('sks') == 0)"
+						}
+					]
+				},
+				"sks_reloading": {
+					"animations": [
+						"sksreload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:sks_reload",
+						"/scoreboard players remove @s ammo 10",
+						"/playanimation @s animation.clips.reload_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"vz65": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"vz65_reloading": "q.get_equipped_item_name=='vz65' && (q.scoreboard('vz65') == 0)"
+						}
+					]
+				},
+				"vz65_reloading": {
+					"animations": [
+						"vz65reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:vz65_reload",
+						"/scoreboard players remove @s ammo 20",
+						"/playanimation @s animation.sub_pistol.reload_full_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"m870": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"m870_reloading": "q.get_equipped_item_name=='m870' && (q.scoreboard('m870') == 0)"
+						}
+					]
+				},
+				"m870_reloading": {
+					"animations": [
+						"m870reload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:m870_reload",
+						"/scoreboard players remove @s ammo 8",
+						"/playanimation @s animation.pump_8.reload_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"python": {
+					"on_entry": [],
+					"transitions": [
+						{
+							"default": "!q.has_target"
+						},
+						{
+							"python_reloading": "q.get_equipped_item_name=='python' && (q.scoreboard('python') == 0)"
+						}
+					]
+				},
+				"python_reloading": {
+					"animations": [
+						"pythonreload"
+					],
+					"on_entry": [
+						"/event entity @s mcpe:python_reload",
+						"/scoreboard players remove @s ammo 6",
+						"/playanimation @s animation.revolver.reload_npc reload"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				}
+			}
+		}
+	}
+}

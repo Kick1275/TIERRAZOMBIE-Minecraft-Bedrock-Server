@@ -1,0 +1,50 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "Dead§4Z§rzone Add-on [BP] V1.6.6-1",
+		"min_engine_version": [
+			1,
+			21,
+			70
+		],
+		"uuid": "b2f3b360-28b1-9106-eb57-23e076919ec5",
+		"description": "Survival zombie apocalypse addon by NekoZack",
+		"version": [
+			1,
+			0,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "364b9dcd-295a-7164-0232-72ea642e1171",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/index.js",
+			"uuid": "d2352ed7-9139-4b7e-967d-1ed7cea7f56b",
+			"version": [
+				1,
+				0,
+				1
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.19.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.3.0"
+        }
+	]
+}

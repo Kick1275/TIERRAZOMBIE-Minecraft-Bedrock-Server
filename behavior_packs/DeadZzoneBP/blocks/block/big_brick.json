@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:brick_big",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.block"
+			}
+		},
+		"components": {
+			"tag:stone": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3
+			},
+			"minecraft:destructible_by_explosion": true
+		}
+	}
+}

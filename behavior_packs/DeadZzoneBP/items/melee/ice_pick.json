@@ -1,0 +1,38 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:ice_pick",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "ice_pick"
+				}
+			},
+			"minecraft:damage": 7,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 250
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:ice_pick.name"
+			},
+			"minecraft:custom_components": [
+				"mcpe:can_opener_bad"
+			],
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_axe",
+					"minecraft:is_tool",
+					"minecraft:digger"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "1.20.50",
+  "animation_controllers": {
+    "controller.animation.player.damage_sensor": {
+      "initial_state": "inactive",
+      "states": {
+        "inactive": {
+          "on_entry": [
+            "@s remove_damage_sensor"
+          ],
+          "on_exit": [
+            "@s remove_damage_sensor"
+          ],
+          "transitions": [
+            {
+              "execute": "!q.is_on_ground"
+            }
+          ]
+        },
+        "execute": {
+          "transitions": [
+            {
+              "inactive": "q.is_on_ground"
+            },
+            {
+              "active": "!q.is_on_ground && q.vertical_speed <= -7"
+            }
+          ]
+        },
+        "active": {
+          "on_entry": [
+            "@s add_damage_sensor"
+          ],
+          "transitions": [
+            {
+              "inactive": "q.is_on_ground"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

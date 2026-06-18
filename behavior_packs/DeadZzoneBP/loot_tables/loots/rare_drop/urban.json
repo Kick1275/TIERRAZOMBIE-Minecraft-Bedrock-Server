@@ -1,0 +1,75 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:acu_artic_top",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:acu_artic_bottom",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:army_artic",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_artic",
+          "weight": 1
+        },
+        {
+          "type": "empty",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_white",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_white",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_black",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:army_woodland",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "name": "mcpe:balaclava_black",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_woodland",
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_green",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_red",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_blue",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_green",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_tactical",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_helmet_olive",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_helmet_black",
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_gray",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_olive",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_black",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_vest_black",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_vest_olive",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_olive",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_black",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_green",
+          "weight": 13
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/ghillie_forest.json",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

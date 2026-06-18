@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.broken_bones": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute": "query.is_saddled"
+						},
+						{
+							"damage_1": "q.life_time > 0.5"
+						}
+					]
+				},
+				"damage_1": {
+					"on_entry": [
+						"v.damage_delay = q.life_time;",
+						"/damage @s[m=!c,tag=broken_bone] 2",
+						"/scoreboard players remove @s[m=!c,tag=broken_bone] blood 10",
+						"/scoreboard players set @s[m=!c,scores={blood=..-1}] blood 0"
+					],
+					"transitions": [
+						{
+							"default": "q.is_sprinting && (q.life_time - v.damage_delay) >= 1"
+						}
+					]
+				},
+				"execute": {
+					"on_entry": [
+						"/effect @s slowness 1 2 true"
+					],
+					"transitions": [
+						{
+							"default": "(1.0)"
+						}
+					]
+				}
+			}
+		}
+	}
+}

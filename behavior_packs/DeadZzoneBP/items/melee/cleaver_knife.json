@@ -1,0 +1,44 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:cleaver_knife",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_sword"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "cleaver_knife"
+				}
+			},
+			"minecraft:damage": 7,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 275
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:cleaver_knife.name"
+			},
+			"minecraft:cooldown": {
+				"category": "can_opener",
+				"duration": 3
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 0.1,
+				"movement_modifier": 0.6
+			},
+			"minecraft:custom_components": [
+				"mcpe:can_opener_bad"
+			],
+			"minecraft:can_destroy_in_creative": false
+		}
+	}
+}

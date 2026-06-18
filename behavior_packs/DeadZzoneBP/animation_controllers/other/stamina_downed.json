@@ -1,0 +1,87 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.stamina_down": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "end_0": "q.is_moving && (q.scoreboard('stamina') == 0)"
+            },
+            {
+              "stamina_down": "q.is_sprinting && (q.scoreboard('stamina') >= 1)"
+            },
+            {
+              "stamina_down1": "!q.is_sprinting && (q.scoreboard('stamina') < 20)"
+            }
+          ]
+        },
+        "end_0": {
+          "on_entry": [
+            "v.stamina_delay = q.life_time;",
+            "/function stamina",
+            "/effect @s slowness 3 2 true",
+            "/effect @s weakness 3 2 true"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        },
+        "stamina_down": {
+          "on_entry": [
+            "v.stamina_delay = q.life_time;"
+          ],
+          "transitions": [
+            {
+              "reloaded_stamina_down": "q.is_sprinting && !q.is_jumping && (q.life_time - v.stamina_delay) >= 2.8"
+            },
+            {
+              "reloaded_stamina_down": "q.is_sprinting && q.is_jumping && (q.life_time - v.stamina_delay) >= 1.6"
+            },
+            {
+              "default": "!q.is_sprinting"
+            }
+          ]
+        },
+        "stamina_down1": {
+          "on_entry": [
+            "v.stamina_delay = q.life_time;"
+          ],
+          "transitions": [
+            {
+              "reloaded_stamina_down2": "!q.is_sprinting && (q.life_time - v.stamina_delay) >= 1.7"
+            },
+            {
+              "reloaded_stamina_down": "q.is_sprinting"
+            }
+          ]
+        },
+        "reloaded_stamina_down2": {
+          "on_entry": [
+            "/function stamina",
+            "/scoreboard players add @s[m=!c,scores={stamina=..19}] stamina 1"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        },
+        "reloaded_stamina_down": {
+          "on_entry": [
+            "/function stamina",
+            "/scoreboard players remove @s[m=!c,scores={stamina=1..}] stamina 1"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

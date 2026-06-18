@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ump45.reload_npc": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.9583,
+      "timeline": {
+        "0.3333": "/playsound slap.back @a[r=10]",
+        "0.625": "/playsound slap.forward @a[r=10]",
+        "1.0417": "/playsound smg.out @a[r=10]",
+        "2.0417": "/playsound smg.in @a[r=10]",
+        "2.4167": "/playsound slap.forward @a[r=10]"
+      }
+    }
+  }
+}

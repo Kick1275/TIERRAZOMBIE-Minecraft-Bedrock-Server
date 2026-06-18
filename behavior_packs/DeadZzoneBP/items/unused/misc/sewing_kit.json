@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:sewing_kit",
+			"menu_category": {
+				"is_hidden_in_commands": true,
+				"category": "none"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 16,
+			"minecraft:icon": {
+				"textures": {
+					"default": "sewing_kit"
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "item.mcpe:sewing_kit.name"
+			}
+		}
+	}
+}

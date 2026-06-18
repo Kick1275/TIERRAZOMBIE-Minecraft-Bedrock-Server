@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:ballistic_green",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.helmet"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"temperature_1"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "ballistic_green"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 330
+			},
+			"minecraft:wearable": {
+				"protection": 6,
+				"slot": "slot.armor.head"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:ballistic_green.name"
+			}
+		}
+	}
+}

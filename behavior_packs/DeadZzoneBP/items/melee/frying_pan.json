@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:frying_pan",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "frying_pan"
+				}
+			},
+			"minecraft:damage": 7,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 285
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:frying_pan.name"
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_axe",
+					"minecraft:is_tool",
+					"minecraft:digger"
+				]
+			}
+		}
+	}
+}

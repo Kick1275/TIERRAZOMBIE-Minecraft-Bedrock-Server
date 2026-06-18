@@ -1,0 +1,129 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:engineer_shovel",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "engineer_shovel"
+				}
+			},
+			"minecraft:damage": 6,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 250
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "q.any_tag('dirt', 'sand', 'grass', 'gravel', 'snow')"
+						},
+						"speed": 6
+					},
+					{
+						"block": "grass",
+						"speed": 6
+					},
+					{
+						"block": "grass_path",
+						"speed": 6
+					},
+					{
+						"block": "podzol",
+						"speed": 6
+					},
+					{
+						"block": "mycelium",
+						"speed": 6
+					},
+					{
+						"block": "dirt",
+						"speed": 6
+					},
+					{
+						"block": "dirt_with_roots",
+						"speed": 6
+					},
+					{
+						"block": "farmland",
+						"speed": 6
+					},
+					{
+						"block": "mud",
+						"speed": 6
+					},
+					{
+						"block": "muddy_mangrove_roots",
+						"speed": 6
+					},
+					{
+						"block": "packed_mud",
+						"speed": 6
+					},
+					{
+						"block": "sand",
+						"speed": 6
+					},
+					{
+						"block": "soul_sand",
+						"speed": 6
+					},
+					{
+						"block": "soul_soil",
+						"speed": 6
+					},
+					{
+						"block": "gravel",
+						"speed": 6
+					},
+					{
+						"block": "snow",
+						"speed": 6
+					},
+					{
+						"block": "snow_layer",
+						"speed": 6
+					},
+					{
+						"block": "clay",
+						"speed": 6
+					},
+					{
+						"block": "suspicious_sand",
+						"speed": 6
+					},
+					{
+						"block": "suspicious_gravel",
+						"speed": 6
+					},
+					{
+						"block": "concrete_powder",
+						"speed": 6
+					}
+				]
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:engineer_shovel.name"
+			},
+			"minecraft:custom_components": [
+				"mcpe:dig"
+			],
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_axe",
+					"minecraft:is_tool",
+					"minecraft:digger"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:tiles_white"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "AB",
+      "BA"
+    ],
+    "key": {
+      "A": "minecraft:clay",
+      "B": "minecraft:white_dye"
+    },
+    "result": {
+      "item": "mcpe:tiles_white",
+      "count": 4
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.remove_water": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "@s default_attack"
+          ],
+          "transitions": [
+            {
+              "make_rag": "(variable.attack_time) && query.is_sneaking && q.get_equipped_item_name == 'bottle_water'"
+            }
+          ]
+        },
+        "make_rag": {
+          "on_entry": [
+            "/playsound bucket.empty_powder_snow @a[r=10] ~~~ 3 1",
+            "/give @s mcpe:bottle_water_emp 1",
+            "/clear @s mcpe:bottle_water 0 1"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.attack_time"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.remove_water_unpure": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "@s default_attack"
+          ],
+          "transitions": [
+            {
+              "make_rag": "(variable.attack_time) && query.is_sneaking && q.get_equipped_item_name == 'bottle_water_unpure'"
+            }
+          ]
+        },
+        "make_rag": {
+          "on_entry": [
+            "/playsound bucket.empty_powder_snow @a[r=10] ~~~ 3 1",
+            "/give @s mcpe:bottle_water_emp 1",
+            "/clear @s mcpe:bottle_water_unpure 0 1"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.attack_time"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.remove_water_bleach": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "@s default_attack"
+          ],
+          "transitions": [
+            {
+              "make_rag": "(variable.attack_time) && query.is_sneaking && q.get_equipped_item_name == 'bottle_water_bleach'"
+            }
+          ]
+        },
+        "make_rag": {
+          "on_entry": [
+            "/playsound bucket.empty_powder_snow @a[r=10] ~~~ 3 1",
+            "/give @s mcpe:bottle_water_emp 1",
+            "/clear @s mcpe:bottle_water_bleach 0 1"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.attack_time"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

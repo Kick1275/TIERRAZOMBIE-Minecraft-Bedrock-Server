@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.headlamp": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            }
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "query.equipped_item_any_tag('slot.armor.head','headlamp') && !query.is_in_water"
+            }
+          ],
+          "on_entry": [
+            "/function light"
+          ]
+        }
+      }
+    }
+  }
+}

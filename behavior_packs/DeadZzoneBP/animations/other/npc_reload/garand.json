@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.garand.reload_npc": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.55,
+      "timeline": {
+        "0.8333": "/playsound garand.in @a[r=10]",
+        "1.7083": "/playsound rifle.reload @a[r=10]"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "make:sawoff_pipe"
+    },
+    "tags": [
+      "stonecutter"
+    ],
+    "ingredients": [
+      {
+        "item": "mcpe:lead_pipe"
+      }
+    ],
+    "unlock": [
+      {
+        "item": "mcpe:sawoff_pipe"
+      }
+    ],
+    "result": {
+      "item": "mcpe:sawoff_pipe",
+      "count": 2
+    }
+  }
+}

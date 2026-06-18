@@ -1,0 +1,15 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.delete_tag_noise": {
+      "animation_length": 4.55,
+      "timeline": {
+        "4.5": [
+          "/tag @s remove heavy_noise",
+          "/tag @s remove light_noise",
+          "/tag @s remove kuru_effect"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:makarov_pb_emp",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"guns",
+					"pistol",
+					"empty_guns"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "makarov_pb_emp"
+				}
+			},
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation_modifier": 0,
+				"can_always_eat": true
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 999,
+				"movement_modifier": 0.6
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "§cEmpty §fMakarov PB \n§7hold to reload"
+			},
+			"minecraft:can_destroy_in_creative": false
+		}
+	}
+}

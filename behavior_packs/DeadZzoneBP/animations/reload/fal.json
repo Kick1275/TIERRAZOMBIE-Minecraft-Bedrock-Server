@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.fal.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.05,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.4167": "/playsound left_rack.out @a[r=10]",
+        "1.4167": "/playsound left_rack.in @a[r=10]",
+        "2.3333": "/playsound left_rack.reload @a[r=10]",
+        "2.8": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.9": [
+          "/clear @s mcpe:ammo_7_62x51mm 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:fal 1 0",
+          "/scoreboard players set @s fal 20",
+          "/event entity @s klep:on_sight"
+        ]
+      }
+    }
+  }
+}

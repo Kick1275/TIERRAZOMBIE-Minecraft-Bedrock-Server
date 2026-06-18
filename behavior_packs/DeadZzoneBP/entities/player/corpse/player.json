@@ -1,0 +1,257 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "mcpe:player_corpse",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"properties": {
+				"mcpe:dead": {
+					"client_sync": true,
+					"type": "int",
+					"range": [1, 16],
+					"default": "math.random(1, 16)"
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:fire_immune": true,
+			"minecraft:burns_in_daylight": false,
+			"minecraft:timer": {
+				"time": 0.3,
+				"looping": false,
+				"time_down_event": {
+					"event": "set_inventory"
+				}
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:combat_knife"
+									}
+								]
+							},
+							"event": "despawn_time",
+							"target": "self"
+						},
+						"hurt_item": 3,
+						"spawn_items": {
+							"table": "loot_tables/meat.json"
+						},
+						"swing": true,
+						"play_sounds": "milk_suspiciously",
+						"interact_text": "action.interact.cut"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:kitchen_knife"
+									}
+								]
+							},
+							"event": "despawn_time",
+							"target": "self"
+						},
+						"hurt_item": 3,
+						"spawn_items": {
+							"table": "loot_tables/meat.json"
+						},
+						"swing": true,
+						"play_sounds": "milk_suspiciously",
+						"interact_text": "action.interact.cut"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:hunting_knife"
+									}
+								]
+							},
+							"event": "despawn_time",
+							"target": "self"
+						},
+						"hurt_item": 3,
+						"spawn_items": {
+							"table": "loot_tables/meat.json"
+						},
+						"swing": true,
+						"play_sounds": "milk_suspiciously",
+						"interact_text": "action.interact.cut"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:cleaver_knife"
+									}
+								]
+							},
+							"event": "despawn_time",
+							"target": "self"
+						},
+						"hurt_item": 3,
+						"spawn_items": {
+							"table": "loot_tables/meat.json"
+						},
+						"swing": true,
+						"play_sounds": "milk_suspiciously",
+						"interact_text": "action.interact.cut"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:engineer_shovel"
+									}
+								]
+							},
+							"event": "despawn",
+							"target": "self"
+						},
+						"hurt_item": 5,
+						"swing": true,
+						"play_sounds": "step.gravel",
+						"interact_text": "action.interact.bury"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "mcpe:snow_shovel"
+									}
+								]
+							},
+							"event": "despawn",
+							"target": "self"
+						},
+						"hurt_item": 5,
+						"swing": true,
+						"play_sounds": "step.gravel",
+						"interact_text": "action.interact.bury"
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [ "player_body" ]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 100.0
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk":{},
+			"minecraft:balloonable": {},
+			"minecraft:physics": {},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 0.5
+			},
+			"minecraft:nameable": {
+				"alwaysShow": false,
+				"allowNameTagRenaming": false
+			},
+			"minecraft:item_hopper": {},
+			"minecraft:inventory": {
+				"container_type": "inventory",
+				"inventory_size": 45
+			}
+		},
+		"events": {
+			"despawn_time": {
+				"queue_command": {
+					"command": [
+						"loot spawn ~~~ loot \"meat\"",
+						"kill @s",
+						"tp @s ~ ~-100 ~"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"set_inventory": {
+				"queue_command": {
+					"command": [
+						"function core/corpse_set_gear"
+					]
+				}
+			}
+		}
+	}
+}

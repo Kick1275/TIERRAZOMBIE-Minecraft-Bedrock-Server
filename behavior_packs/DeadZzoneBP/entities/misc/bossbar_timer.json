@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "dz:bossbar_timer",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:health": { "value": 1000, "max": 1000 },
+      "minecraft:boss": {
+        "should_darken_sky": false,
+        "hud_range": 99999
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [{ "cause": "all", "deals_damage": false }]
+      },
+      "minecraft:physics": { "has_collision": false, "has_gravity": false },
+      "minecraft:pushable": { "is_pushable": false, "is_pushable_by_piston": false },
+      "minecraft:collision_box": { "width": 0.001, "height": 0.001 },
+      "minecraft:scale": { "value": 0 },
+      "minecraft:type_family": { "family": ["bossbar_timer", "inanimate"] }
+    },
+    "events": {}
+  }
+}

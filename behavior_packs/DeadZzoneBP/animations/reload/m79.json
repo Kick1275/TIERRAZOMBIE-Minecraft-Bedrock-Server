@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m79.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 3.55,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.1667": "/playsound grenade.open @a[r=10]",
+        "0.875": "/playsound grenade.unload @a[r=10]",
+        "2.2917": "/playsound grenade.load @a[r=10]",
+        "2.9167": "/playsound grenade.close @a[r=10]",
+        "3.3": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "3.4": [
+          "/clear @s mcpe:ammo_40mm 0 1",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s m79 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:m79 1 0"
+        ]
+      }
+    }
+  }
+}

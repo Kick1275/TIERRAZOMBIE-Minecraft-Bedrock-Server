@@ -1,0 +1,46 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.noise": {
+			"initial_state" : "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"heavy_noise": "q.equipped_item_any_tag('slot.weapon.mainhand','is_heavy_guns') && q.is_using_item"
+						},
+						{
+							"light_noise": "q.equipped_item_any_tag('slot.weapon.mainhand','is_light_guns') && q.is_using_item"
+						}
+					]
+				},
+				"heavy_noise": {
+					"animations": [
+						"delete_noise"
+					],
+					"on_entry": [
+						"/tag @s add heavy_noise"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				},
+				"light_noise": {
+					"animations": [
+						"delete_noise"
+					],
+					"on_entry": [
+						"/tag @s add light_noise"
+					],
+					"transitions": [
+						{
+							"default": "(q.all_animations_finished)"
+						}
+					]
+				}
+			}
+		}
+	}
+}

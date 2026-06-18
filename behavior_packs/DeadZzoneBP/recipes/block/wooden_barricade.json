@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:wood_barrier"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "AA",
+      "BA"
+    ],
+    "key": {
+      "A": "mcpe:wooden_plank",
+      "B": "mcpe:nail_box"
+    },
+    "result": {
+      "item": "mcpe:wooden_barricade",
+      "count": 3
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:village/building/rare"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_rare0",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 35
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_rare1",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 45
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/house_rare2",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 20
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "village/building/village_police",
+					"processors": "mcpe:processor_block"
+				},
+				"weight": 10
+			}
+		]
+	}
+}

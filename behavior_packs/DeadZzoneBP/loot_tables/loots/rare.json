@@ -1,0 +1,316 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_ak47.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_ak74.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_aks74u.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_anaconda.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_awm.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_cz527.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_fal.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_famas.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_garand.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_glock17.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_izh43.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_l2a3.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m4a1.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m14.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m79.json",
+          "weight": 1
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m1014.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m1894c.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m1897.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_m1911.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_makarov.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_mosin.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_mp5.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_python.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_rpk.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_sks.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_ss1.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_svd.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_ump45.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_artic.json",
+          "weight": 5
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/drop_desert.json",
+          "weight": 5
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/urban.json",
+          "weight": 5
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/woodland.json",
+          "weight": 5
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/seamless.json",
+          "weight": 5
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/spec_ops.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/clown.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/gorka.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/hazmat_white.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/hazmat_yellow.json",
+          "weight": 4
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/kopassus.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/maid.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/ghillie_forest.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/ghillie_snow.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/ghillie_desert.json",
+          "weight": 3
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/pancasila.json",
+          "weight": 2
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/loots/rare_drop/plague_doctor.json",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:golok_machete",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:katana",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:sabre_sword",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:walkie_talkie",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "mcpe:frag_granade",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:smoke_grenade",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flash_grrnade",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:nerve_grenade",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "mcpe:c4_explosive",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "mcpe:detonator",
+          "weight": 3
+        },
+        {
+          "type": "item",
+          "name": "mcpe:fumo",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

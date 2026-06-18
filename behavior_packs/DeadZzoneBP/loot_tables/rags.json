@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:rags",
+          "weight": 45
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rags_dirty",
+          "weight": 50
+        }
+      ]
+    }
+  ]
+}

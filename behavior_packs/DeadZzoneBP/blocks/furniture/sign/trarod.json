@@ -1,0 +1,59 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:traffic_rod",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.traffic"
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-1,
+					0,
+					-1
+				],
+				"size": [
+					2,
+					16,
+					2
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-1,
+					0,
+					-1
+				],
+				"size": [
+					2,
+					16,
+					2
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 7
+			},
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:geometry": "geometry.traffic_rod",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "traffic_rod",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

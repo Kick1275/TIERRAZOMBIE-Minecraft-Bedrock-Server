@@ -1,0 +1,94 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:ceiling_light_broken",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.mcpelight"
+			},
+			"states": {
+				"block:power": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"tag:minecraft:is_pickaxe_item_destructible": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-6,
+					13,
+					-6
+				],
+				"size": [
+					12,
+					3,
+					12
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-6,
+					13,
+					-6
+				],
+				"size": [
+					12,
+					3,
+					12
+				]
+			},
+			"minecraft:custom_components": [
+				"mcpe:random_tick"
+			],
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:geometry": "geometry.ceiling_light",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "ceiling_light_on",
+					"render_method": "alpha_test"
+				}
+			}
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('block:power')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "ceiling_light_on",
+							"render_method": "alpha_test"
+						}
+					},
+					"minecraft:light_emission": 13
+				}
+			},
+			{
+				"condition": "!q.block_state('block:power')",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"texture": "ceiling_light_off",
+							"render_method": "alpha_test"
+						}
+					}
+				}
+			}
+		]
+	}
+}

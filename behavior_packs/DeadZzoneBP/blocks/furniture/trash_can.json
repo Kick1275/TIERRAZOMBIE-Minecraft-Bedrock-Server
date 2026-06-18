@@ -1,0 +1,58 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:trash_can",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"tag:metal": {},
+			"minecraft:liquid_detection": {
+				"detection_rules": [
+					{
+						"can_contain_liquid": true,
+						"liquid_type": "water",
+						"on_liquid_touches": "blocking"
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					14,
+					15,
+					14
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					14,
+					15,
+					14
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 5
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:geometry": "geometry.trash_can",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "trash_can",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

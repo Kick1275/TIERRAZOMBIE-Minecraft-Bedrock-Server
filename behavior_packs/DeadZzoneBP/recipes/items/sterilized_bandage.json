@@ -1,0 +1,24 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "make:sterilized_bandage"
+    },
+    "tags": [
+      "crafting_table",
+      "altar"
+    ],
+    "pattern": [
+      "AA",
+      "B"
+    ],
+    "key": {
+      "A": "mcpe:bandage",
+      "B": "mcpe:alcoholic_tinture"
+    },
+    "result": {
+      "item": "mcpe:bandage_sterilized",
+      "count": 2
+    }
+  }
+}

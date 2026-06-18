@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.radiation.particle": {
+      "loop": false,
+      "animation_length": 15.5,
+      "timeline": {
+        "0.1": "/particle nz:radiation ^^0.92^",
+        "1": "/particle nz:radiation ^^0.92^",
+        "2": "/particle nz:radiation ^^0.92^",
+        "3": "/particle nz:radiation ^^0.92^",
+        "4": "/particle nz:radiation ^^0.92^",
+        "5": "/particle nz:radiation ^^0.92^",
+        "6": "/particle nz:radiation ^^0.92^",
+        "7": "/particle nz:radiation ^^0.92^",
+        "8": "/particle nz:radiation ^^0.92^",
+        "9": "/particle nz:radiation ^^0.92^",
+        "10": "/particle nz:radiation ^^0.92^",
+        "11": "/particle nz:radiation ^^0.92^",
+        "12": "/particle nz:radiation ^^0.92^",
+        "13": "/particle nz:radiation ^^0.92^",
+        "14": "/particle nz:radiation ^^0.92^",
+        "15": "/particle nz:radiation ^^0.92^"
+      }
+    }
+  }
+}

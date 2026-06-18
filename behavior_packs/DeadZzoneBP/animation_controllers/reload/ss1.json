@@ -1,0 +1,68 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ss1.reload": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "reload_start": "q.get_equipped_item_name('main_hand') == 'ss1_emp' && query.is_using_item"
+            }
+          ]
+        },
+        "reload_start": {
+          "on_entry": [
+            "v.r = q.life_time;",
+            "/event entity @s [hasitem={item=mcpe:ammo_5_56x45mm}] klep:reload"
+          ],
+          "transitions": [
+            {
+              "reloaded": "(q.life_time - v.r) >= 0.2 && q.get_equipped_item_name == 'ss1_emp' && q.mark_variant == 1"
+            },
+            {
+              "noammo": "(q.life_time - v.r) >= 0.8 && q.get_equipped_item_name == 'ss1_emp' && q.mark_variant == 0"
+            }
+          ]
+        },
+        "noammo": {
+          "on_entry": [
+            "v.r = q.life_time;",
+            "/title @s actionbar §4No 5.56x45mm ammo in Inventory!",
+          "/playsound gun.dry @a ~~~ 0.3 1"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        },
+        "reloaded": {
+          "on_entry": [],
+          "animations": [
+            "ss1reload"
+          ],
+          "transitions": [
+            {
+              "default": "(q.all_animations_finished) && !q.is_using_item"
+            },
+            {
+              "reload_error": "q.get_equipped_item_name != 'ss1_emp'"
+            }
+          ]
+        },
+        "reload_error": {
+          "on_entry": [
+            "/playsound gun.dry @a ~~~ 0.3 1",
+            "@s klep:noreload"
+          ],
+          "transitions": [
+            {
+              "default": "1.0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

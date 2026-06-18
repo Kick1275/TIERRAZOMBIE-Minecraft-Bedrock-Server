@@ -1,0 +1,498 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "mcpe:humvee",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "scripts": {
+        "animate": [
+          "humvee",
+          "sedan_camera"
+        ]
+      },
+      "animations": {
+        "humvee": "controller.animation.humvee",
+        "vehicle_camera": "controller.animation.vehicle.camera"
+      }
+    },
+    "component_groups": {
+      "minecraft:woodland_1": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      },
+      "minecraft:woodland_2": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "minecraft:green_1": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "minecraft:green_2": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "minecraft:tan_1": {
+        "minecraft:variant": {
+          "value": 4
+        }
+      },
+      "minecraft:tan_2": {
+        "minecraft:variant": {
+          "value": 5
+        }
+      },
+      "minecraft:white_1": {
+        "minecraft:variant": {
+          "value": 6
+        }
+      },
+      "minecraft:white_2": {
+        "minecraft:variant": {
+          "value": 7
+        }
+      },
+      "minecraft:black_1": {
+        "minecraft:variant": {
+          "value": 8
+        }
+      },
+      "minecraft:black_2": {
+        "minecraft:variant": {
+          "value": 9
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "moto"
+        ]
+      },
+      "minecraft:breathable": {
+        "totalSupply": 15,
+        "suffocateTime": 0
+      },
+      "minecraft:collision_box": {
+        "height": 1.6,
+        "width": 2
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:push_through": {
+        "value": 1.0
+      },
+      "minecraft:movement": {
+        "value": 0.28,
+        "max": 0.28
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": false
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:health": {
+        "value": 2600,
+        "max": 2600
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:fall_damage": {
+        "value": 1
+      },
+      "minecraft:area_attack": {
+        "damage_range": 2,
+        "damage_per_tick": 18,
+        "cause": "contact",
+        "entity_filter": {
+          "none_of": [
+            {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "inanimate"
+            },
+            {
+              "test": "is_riding",
+              "subject": "other",
+              "operator": "==",
+              "value": false
+            },
+            {
+              "test": "is_moving",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            }
+          ]
+        }
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "damager",
+                    "operator": "==",
+                    "value": "bullet"
+                  }
+                ]
+              },
+              "event": "bullet_despawn",
+              "deals_damage": true
+            },
+            "cause": "projectile",
+            "damage_multiplier": 0.1
+          },
+          {
+            "cause": "entity_attack",
+            "on_damage": {
+              "filters": {
+                "none_of": [
+                  {
+                    "test": "is_riding",
+                    "subject": "player",
+                    "value": true
+                  }
+                ]
+              }
+            },
+            "deals_damage": true
+          },
+          {
+            "on_damage": {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_riding",
+                    "subject": "damager"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "damager",
+                    "value": "player"
+                  }
+                ]
+              }
+            },
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:healable": {
+        "items": [
+          {
+            "item": "minecraft:iron_ingot",
+            "heal_amount": 4
+          }
+        ]
+      },
+      "minecraft:rideable": {
+        "priority": 0,
+        "seat_count": 4,
+        "rider_can_interact": true,
+        "crouching_skip_interact": true,
+        "family_types": [
+          "player"
+        ],
+        "interact_text": "Drive",
+        "seats": [
+          {
+            "position": [
+              0.9,
+              0.6,
+              0.1
+            ]
+          },
+          {
+            "position": [
+              -0.9,
+              0.6,
+              0.1
+            ]
+          },
+          {
+            "position": [
+              0.9,
+              0.6,
+              -1
+            ]
+          },
+          {
+            "position": [
+              -0.9,
+              0.6,
+              -1
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 4
+          }
+        ],
+        "pull_in_entities": false
+      },
+      "minecraft:input_ground_controlled": {},
+      "minecraft:physics": {},
+      "minecraft:underwater_movement": {
+        "value": 0.1
+      },
+      "minecraft:inventory": {
+        "inventory_size": 27,
+        "container_type": "inventory"
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:knockback_resistance": {
+        "value": 100.0
+      }
+    },
+    "events": {
+      "bullet_despawn": {
+        "queue_command": {
+          "command": [
+            "kill @e[family=bullet, r=3]"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "sequence": [
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "jungle"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "flower_forest"
+                },
+                {
+                  "all_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "overworld"
+                    }
+                  ]
+                }
+              ]
+            },
+            "randomize": [
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:woodland_2"
+                  ]
+                }
+              },
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:woodland_1"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                },
+                {
+                  "all_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "overworld"
+                    }
+                  ]
+                }
+              ]
+            },
+            "randomize": [
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:tan_1"
+                  ]
+                }
+              },
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:tan_2"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "cold_taiga"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "ice_plains"
+                },
+                {
+                  "all_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "overworld"
+                    }
+                  ]
+                }
+              ]
+            },
+            "randomize": [
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:white_1"
+                  ]
+                }
+              },
+              {
+                "add": {
+                  "component_groups": [
+                    "minecraft:white_2"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "overworld"
+                },
+                {
+                  "all_of": [
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "cold_taiga"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "ice_plains"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "desert"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "mesa"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "desert"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "mesa"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "forest"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "jungle"
+                    },
+                    {
+                      "test": "has_biome_tag",
+                      "operator": "!=",
+                      "value": "flower_forest"
+                    }
+                  ]
+                }
+              ]
+            },
+            "randomize": [
+              {
+                "weight": 20,
+                "add": {
+                  "component_groups": [
+                    "minecraft:black_2"
+                  ]
+                }
+              },
+              {
+                "weight": 20,
+                "add": {
+                  "component_groups": [
+                    "minecraft:black_1"
+                  ]
+                }
+              },
+              {
+                "weight": 75,
+                "add": {
+                  "component_groups": [
+                    "minecraft:green_1"
+                  ]
+                }
+              },
+              {
+                "weight": 75,
+                "add": {
+                  "component_groups": [
+                    "minecraft:green_2"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m1897.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 5.05,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "1": "/playsound shell.load @a[r=10]",
+        "1.4583": "/playsound shell.load @a[r=10]",
+        "1.9167": "/playsound shell.load @a[r=10]",
+        "2.375": "/playsound shell.load @a[r=10]",
+        "2.8333": "/playsound shell.load @a[r=10]",
+        "3.2917": "/playsound shell.load @a[r=10]",
+        "3.75": "/playsound shell.load @a[r=10]",
+        "4.375": "/playsound pump.back @a[r=10]",
+        "4.5833": "/playsound pump.forward @a[r=10]",
+        "4.8": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "4.9": [
+          "/clear @s mcpe:ammo_12gauge 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:m1897 1 0",
+          "/scoreboard players set @s m1897 7"
+        ]
+      }
+    }
+  }
+}

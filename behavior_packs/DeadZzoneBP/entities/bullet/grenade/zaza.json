@@ -1,0 +1,86 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "grenade:zaza",
+			"runtime_identifier": "minecraft:snowball",
+			"is_spawnable": false,
+			"is_summonable": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["grenade"]
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"event_trigger": {
+							"event": "frag"
+						}
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					}
+				},
+				"power": 1.2,
+				"gravity": 0.03,
+				"angleoffset": 0.5,
+				"inertia": 1,
+				"liquid_inertia": 2,
+				"uncertaintyBase": 0.7,
+				"anchor": 1,
+				"offset": [0,0,0],
+				"reflectOnHurt": false,
+				"catch_fire": false
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": ["glass", "glass_pane", "stained_glass", "tinted_glass", "stained_glass_pane" ]
+			},
+			"minecraft:physics": {}
+		},
+		"component_groups": {
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuseLength": 0,
+					"fuseLit": true,
+					"power": 4,
+					"knockback_scaling": 0.3,
+					"negates_fall_damage": false,
+					"causes_fire": false,
+					"breaks_blocks": false,
+					"toggles_blocks": true,
+					"allow_underwater": true,
+					"damage_scaling": 4,
+					"max_resistance": 0
+				}
+			}
+		},
+		"events": {
+			"timing_out": {
+				"add": {
+					"component_groups": [
+						"timing_out"
+					]
+				}
+			},
+			"frag": {
+				"queue_command": {
+					"command": [
+						"playsound explode.distance @a[r=256] ~~~ 1 1 5",
+						"fill ^^^^^1^ mcpe:fire_light replace air",
+						"camerashake add @a[r=10] 0.8 0.6 rotational"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:exploding"
+					]
+				}
+			}
+		}
+	}
+}

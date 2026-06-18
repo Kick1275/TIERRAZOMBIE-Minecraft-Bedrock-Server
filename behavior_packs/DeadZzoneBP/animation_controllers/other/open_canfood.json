@@ -1,0 +1,488 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.open_canfood": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "open_beans_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_beans' && query.is_using_item"
+            },
+            {
+              "open_beans_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_beans' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_bacon_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_bacon' && query.is_using_item"
+            },
+            {
+              "open_bacon_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_bacon' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_beef_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_beef_stew' && query.is_using_item"
+            },
+            {
+              "open_beef_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_beef_stew' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_chicken_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_chicken' && query.is_using_item"
+            },
+            {
+              "open_chicken_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_chicken' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_chili_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_chili' && query.is_using_item"
+            },
+            {
+              "open_chili_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_chili' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_fruit_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_fruit' && query.is_using_item"
+            },
+            {
+              "open_fruit_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_fruit' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_peaches_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_peaches' && query.is_using_item"
+            },
+            {
+              "open_peaches_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_peaches' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_spaghetti_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_spaghetti' && query.is_using_item"
+            },
+            {
+              "open_spaghetti_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_spaghetti' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_tomato_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_tomato' && query.is_using_item"
+            },
+            {
+              "open_tomato_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_tomato' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_sardine_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_sardine' && query.is_using_item"
+            },
+            {
+              "open_sardine_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_sardine' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_ham_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_ham' && query.is_using_item"
+            },
+            {
+              "open_ham_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_ham' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_corned_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_corned' && query.is_using_item"
+            },
+            {
+              "open_corned_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_corned' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_tuna_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_tuna' && query.is_using_item"
+            },
+            {
+              "open_tuna_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_tuna' && (variable.attack_time) && query.is_sneaking"
+            },
+            {
+              "open_ration_1": "(q.life_time - v.tick_delay) >= 1 && query.get_equipped_item_name == 'can_opener' && query.get_equipped_item_name('off_hand') == 'canned_ration' && query.is_using_item"
+            },
+            {
+              "open_ration_2": "(q.life_time - v.tick_delay) >= 2 && query.equipped_item_any_tag('slot.weapon.mainhand','open_can') == 1 && query.get_equipped_item_name('off_hand') == 'canned_ration' && (variable.attack_time) && query.is_sneaking"
+            }
+          ]
+        },
+        "open_beans_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_beans_open 1",
+            "/clear @s mcpe:canned_beans 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_beans_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_beans_open_bad 1",
+            "/clear @s mcpe:canned_beans 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_bacon_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_bacon_open 1",
+            "/clear @s mcpe:canned_bacon 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_bacon_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_bacon_open_bad 1",
+            "/clear @s mcpe:canned_bacon 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_beef_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_beef_stew_open 1",
+            "/clear @s mcpe:canned_beef_stew 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_beef_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_beef_stew_open_bad 1",
+            "/clear @s mcpe:canned_beef_stew 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_chicken_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_chicken_open 1",
+            "/clear @s mcpe:canned_chicken 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_chicken_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_chicken_open_bad 1",
+            "/clear @s mcpe:canned_chicken 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_chili_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_chili_open 1",
+            "/clear @s mcpe:canned_chili 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_chili_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_chili_open_bad 1",
+            "/clear @s mcpe:canned_chili 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_peaches_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_peaches_open 1",
+            "/clear @s mcpe:canned_peaches 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_peaches_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_peaches_open_bad 1",
+            "/clear @s mcpe:canned_peaches 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_fruit_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_fruit_open 1",
+            "/clear @s mcpe:canned_fruit 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_fruit_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_fruit_open_bad 1",
+            "/clear @s mcpe:canned_fruit 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_sardine_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_sardine_open 1",
+            "/clear @s mcpe:canned_sardine 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_sardine_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_sardine_open_bad 1",
+            "/clear @s mcpe:canned_sardine 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_tomato_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_tomato_open 1",
+            "/clear @s mcpe:canned_tomato 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_tomato_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_tomato_open_bad 1",
+            "/clear @s mcpe:canned_tomato 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_spaghetti_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_spaghetti_open 1",
+            "/clear @s mcpe:canned_spaghetti 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_spaghetti_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_spaghetti_open_bad 1",
+            "/clear @s mcpe:canned_spaghetti 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_tuna_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_tuna_open 1",
+            "/clear @s mcpe:canned_tuna 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_tuna_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_tuna_open_bad 1",
+            "/clear @s mcpe:canned_tuna 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_ham_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_ham_open 1",
+            "/clear @s mcpe:canned_ham 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_ham_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_ham_open_bad 1",
+            "/clear @s mcpe:canned_ham 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_corned_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_corned_open 1",
+            "/clear @s mcpe:canned_corned 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_corned_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_corned_open_bad 1",
+            "/clear @s mcpe:canned_corned 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_ham_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_ham_open 1",
+            "/clear @s mcpe:canned_ham 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_ham_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_ham_open_bad 1",
+            "/clear @s mcpe:canned_ham 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_ration_1": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_ration_open 1",
+            "/clear @s mcpe:canned_ration 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        },
+        "open_ration_2": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "/playsound open.canfood @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:canned_ration_open_bad 1",
+            "/clear @s mcpe:canned_ration 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

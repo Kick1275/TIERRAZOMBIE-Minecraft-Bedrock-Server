@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.nature_sound": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "sounds": "(q.life_time - v.tick_delay) >= 8.1"
+            }
+          ],
+          "on_entry": [
+            "v.tick_delay = q.life_time;"
+          ]
+        },
+        "sounds": {
+          "on_entry": [
+            "v.tick_delay = q.life_time;",
+            "@s mcpe:nature_sounds"
+          ],
+          "transitions": [
+            {
+              "default": "query.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

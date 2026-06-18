@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.motor": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "motor.walking": "query.has_rider"
+            }
+          ]
+        },
+        "motor.walking": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            },
+            {
+              "motor.idle1": "query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/playsound mob.motor.start @a[r=20]"
+          ]
+        },
+        "motor.idle1": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            },
+            {
+              "motor.idle2": "query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/playsound mob.motor.idle @a[r=10] ~ ~ ~ 0.5",
+            "/function light"
+          ]
+        },
+        "motor.idle2": {
+          "transitions": [
+            {
+              "default": "!query.has_rider"
+            },
+            {
+              "motor.idle1": "query.has_rider"
+            }
+          ],
+          "on_entry": [
+            "/playsound mob.motor.idle @e[r=10] ~ ~ ~ 0.5",
+            "/function light"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:balaclava_black",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandana_red",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beanie_black",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beanie_brown",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beanie_olive",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beanie_white",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_blue",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_green",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_red",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_black",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_blue",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_red",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_yellow",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_white",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_woodland",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_desert",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_artic",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_green",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_tan",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_black",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cap_black",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cap_blue",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cap_green",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cap_red",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cowboy_black",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cowboy_brown",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:cowboy_white",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:durag_black",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:durag_brown",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flat_black",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flat_brown",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_tactical",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_white",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_black",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hunting_hat",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:mask_fawkes",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:mask_funni",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:mask_troll",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:night_goggles",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:respirator_mask",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_red",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:skimask_black",
+          "weight": 1
+        },
+        {
+          "type": "item",
+          "name": "mcpe:ushanka",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:welder_mask",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_blue",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_olive",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_tan",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_gray",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_brown",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bandana_blue",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:peaked_tan",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:peaked_white",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:peaked_green",
+          "weight": 6
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_vest_black",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_vest_olive",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_vest",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:biker_vest_skull",
+          "weight": 5
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hunting_brown",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hunting_navy",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:press_vest",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_lime",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_orange",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:reflective_yellow",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_black",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_brown",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_white",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_tan",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_green",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:stab_vest_gray",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:stab_vest_tan",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_gray",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_olive",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_tan",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_black",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_brown",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_white",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_green",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_tan",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chest_navy",
+          "weight": 7
+        }
+      ]
+    }
+  ]
+}

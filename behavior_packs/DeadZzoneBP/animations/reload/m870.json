@@ -1,0 +1,35 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.m870.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 5.55,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "1": "/playsound shell.load @a[r=10]",
+        "1.4583": "/playsound shell.load @a[r=10]",
+        "1.9167": "/playsound shell.load @a[r=10]",
+        "2.375": "/playsound shell.load @a[r=10]",
+        "2.8333": "/playsound shell.load @a[r=10]",
+        "3.2917": "/playsound shell.load @a[r=10]",
+        "3.75": "/playsound shell.load @a[r=10]",
+        "4.2083": "/playsound shell.load @a[r=10]",
+
+        "4.8333": "/playsound pump.back @a[r=10]",
+        "5.0417": "/playsound pump.forward @a[r=10]",
+        "5.3": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "5.4": [
+          "/clear @s mcpe:ammo_12gauge 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:m870 1 0",
+          "/scoreboard players set @s m870 8"
+        ]
+      }
+    }
+  }
+}

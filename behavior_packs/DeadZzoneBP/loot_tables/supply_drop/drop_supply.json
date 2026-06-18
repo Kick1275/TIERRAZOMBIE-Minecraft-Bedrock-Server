@@ -1,0 +1,122 @@
+{
+  "pools": [
+    {
+      "rolls": {
+		    "min": 3,
+		    "max": 9
+	     },
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:canned_beef_stew",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_chicken",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_chili",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_corned",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_fruit",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_ham",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_peaches",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_sardine",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_spaghetti",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_tomato",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_tuna",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:creeper_crunch",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rice",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:meat_jerky",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:mre",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:canned_bacon",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_sandwich",
+          "weight": 50
+        }
+      ]
+    }
+  ]
+}

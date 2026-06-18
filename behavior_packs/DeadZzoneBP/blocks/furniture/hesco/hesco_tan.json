@@ -1,0 +1,50 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mcpe:hesco_tan",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.hesco"
+			}
+		},
+		"components": {
+			"tag:dirt": {},
+			"minecraft:collision_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-8,
+					0,
+					-8
+				],
+				"size": [
+					16,
+					16,
+					16
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 2
+			},
+			"minecraft:destructible_by_explosion": true,
+			"minecraft:geometry": "geometry.justablock",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "hesco_tan",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

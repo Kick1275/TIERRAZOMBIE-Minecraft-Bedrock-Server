@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:m4a1_magazine",
+			"menu_category": {
+				"is_hidden_in_commands": true,
+				"category": "none"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "5_45x39mm"
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "item.mcpe:ammo_5_45x39mm.name"
+			}
+		}
+	}
+}

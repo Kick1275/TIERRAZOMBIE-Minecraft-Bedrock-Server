@@ -1,0 +1,42 @@
+{
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 35
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 10
+        }
+      ]
+    }
+  ]
+}

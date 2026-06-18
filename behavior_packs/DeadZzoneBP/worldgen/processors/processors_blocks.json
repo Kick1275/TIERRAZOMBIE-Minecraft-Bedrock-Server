@@ -1,0 +1,105 @@
+{ 
+	"format_version": "1.21.20", 
+	"minecraft:processor_list": { 
+		"description": { 
+			"identifier": "mcpe:processor_block" 
+		}, 
+		"processors": [
+			{
+				"processor_type": "minecraft:rule",
+				"rules": [
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:cobblestone",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "minecraft:mossy_cobblestone"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:mossy_cobblestone",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "minecraft:cobblestone"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:stone_bricks",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "minecraft:cracked_stone_bricks"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:stone_bricks",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "minecraft:mossy_stone_bricks"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:glass_pane",
+							"probability": 0.2
+						},
+						"output_state": {
+							"name": "minecraft:air"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:glass_pane",
+							"probability": 0.4
+						},
+						"output_state": {
+							"name": "minecraft:light_gray_stained_glass_pane"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "minecraft:random_block_match",
+							"block": "minecraft:glass_pane",
+							"probability": 0.4
+						},
+						"output_state": {
+							"name": "minecraft:gray_stained_glass_pane"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "mcpe:corrugated_metal",
+							"block": "mcpe:corrugated_block",
+							"probability": 0.3
+						},
+						"output_state": {
+							"name": "mcpe:corrugated_metal_rusty"
+						}
+					},
+					{
+						"input_predicate": {
+							"predicate_type": "mcpe:corrugated_metal_rusty",
+							"block": "mcpe:corrugated_block",
+							"probability": 0.3
+						},
+						"output_state": {
+							"name": "mcpe:corrugated_metal"
+						}
+					}
+				]
+			}
+		]
+	}
+}

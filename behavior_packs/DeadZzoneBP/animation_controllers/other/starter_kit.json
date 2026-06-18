@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.spawn": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.is_alive"
+						}
+					]
+				},
+				"spawn": {
+					"on_entry": [
+						"/tag @s add join",
+						"/event entity @s remove_damage_sensor"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_alive"
+						}
+					]
+				}
+			}
+		}
+	}
+}
+                    

@@ -1,0 +1,1 @@
+tellraw @a {"rawtext":[{"text":"§eThe corpse has been removed"}]}

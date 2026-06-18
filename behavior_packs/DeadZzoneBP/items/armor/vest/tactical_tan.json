@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:tactical_vest_tan",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.chestplate"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "tactical_vest_tan"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 350
+			},
+			"minecraft:wearable": {
+				"protection": 8,
+				"slot": "slot.armor.chest"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:tactical_vest_tan.name"
+			}
+		}
+	}
+}

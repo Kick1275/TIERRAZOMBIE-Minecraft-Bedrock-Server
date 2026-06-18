@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.vz65.reload": {
+      "loop": "hold_on_last_frame",
+      "animation_length": 2.85,
+      "timeline": {
+        "0.0": [
+          "/title @s actionbar §2[Reloading..]",
+          "/event entity @s klep:off_sight",
+          "/function DZgunsDataCount"
+        ],
+        "0.4167": "/playsound smg.out @a[r=10]",
+        "1.5417": "/playsound smg.in @a[r=10]",
+        "2.0833": "/playsound smg.reload @a[r=10]",
+        "2.7083": [
+          "/title @s actionbar §a[Reloaded..]"
+        ],
+        "2.75": [
+          "/clear @s mcpe:ammo_9x18mm 0 1",
+          "/replaceitem entity @s slot.weapon.mainhand 1 mcpe:vz65 1 0",
+          "/event entity @s klep:on_sight",
+          "/scoreboard players set @s vz65 20"
+        ]
+      }
+    }
+  }
+}

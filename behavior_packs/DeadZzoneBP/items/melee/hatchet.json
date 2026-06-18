@@ -1,0 +1,962 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:hatchet",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_axe",
+					"minecraft:is_tool",
+					"minecraft:digger"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "hatchet"
+				}
+			},
+			"minecraft:damage": 9,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 250
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "q.any_tag('wood','pumpkin','text_sign')"
+						},
+						"speed": 6
+					},
+					{
+						"block": "log",
+						"speed": 6
+					},
+					{
+						"block": "log2",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_log",
+						"speed": 6
+					},
+					{
+						"block": "cherry_log",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_block",
+						"speed": 6
+					},
+					{
+						"block": "crimson_stem",
+						"speed": 6
+					},
+					{
+						"block": "warped_stem",
+						"speed": 6
+					},
+					{
+						"block": "stripped_oak_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_spruce_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_birch_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_jungle_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_acacia_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_dark_oak_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_mangrove_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_cherry_log",
+						"speed": 6
+					},
+					{
+						"block": "stripped_bamboo_block",
+						"speed": 6
+					},
+					{
+						"block": "stripped_crimson_stem",
+						"speed": 6
+					},
+					{
+						"block": "stripped_warped_stem",
+						"speed": 6
+					},
+					{
+						"block": "stripped_mangrove_wood",
+						"speed": 6
+					},
+					{
+						"block": "stripped_cherry_wood",
+						"speed": 6
+					},
+					{
+						"block": "stripped_warped_stem",
+						"speed": 6
+					},
+					{
+						"block": "stripped_mangrove_wood",
+						"speed": 6
+					},
+					{
+						"block": "stripped_cherry_wood",
+						"speed": 6
+					},
+					{
+						"block": "stripped_crimson_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "stripped_warped_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "wood",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_wood",
+						"speed": 6
+					},
+					{
+						"block": "cherry_wood",
+						"speed": 6
+					},
+					{
+						"block": "crimson_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "stripped_crimson_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "stripped_warped_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "wood",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_wood",
+						"speed": 6
+					},
+					{
+						"block": "cherry_wood",
+						"speed": 6
+					},
+					{
+						"block": "crimson_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "warped_hyphae",
+						"speed": 6
+					},
+					{
+						"block": "planks",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_planks",
+						"speed": 6
+					},
+					{
+						"block": "cherry_planks",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_planks",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_mosaic",
+						"speed": 6
+					},
+					{
+						"block": "crimson_planks",
+						"speed": 6
+					},
+					{
+						"block": "warped_planks",
+						"speed": 6
+					},
+					{
+						"block": "trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "spruce_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "birch_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "jungle_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "acacia_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "cherry_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "crimson_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "warped_trapdoor",
+						"speed": 6
+					},
+					{
+						"block": "wooden_door",
+						"speed": 6
+					},
+					{
+						"block": "spruce_door",
+						"speed": 6
+					},
+					{
+						"block": "birch_door",
+						"speed": 6
+					},
+					{
+						"block": "jungle_door",
+						"speed": 6
+					},
+					{
+						"block": "acacia_door",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_door",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_door",
+						"speed": 6
+					},
+					{
+						"block": "cherry_door",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_door",
+						"speed": 6
+					},
+					{
+						"block": "crimson_door",
+						"speed": 6
+					},
+					{
+						"block": "warped_door",
+						"speed": 6
+					},
+					{
+						"block": "fence",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_fence",
+						"speed": 6
+					},
+					{
+						"block": "cherry_fence",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_fence",
+						"speed": 6
+					},
+					{
+						"block": "crimson_fence",
+						"speed": 6
+					},
+					{
+						"block": "warped_fence",
+						"speed": 6
+					},
+					{
+						"block": "fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "spruce_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "birch_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "jungle_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "acacia_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "cherry_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "crimson_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "warped_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "wooden_slab",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_slab",
+						"speed": 6
+					},
+					{
+						"block": "cherry_slab",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_slab",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_mosaic_slab",
+						"speed": 6
+					},
+					{
+						"block": "crimson_slab",
+						"speed": 6
+					},
+					{
+						"block": "warped_slab",
+						"speed": 6
+					},
+					{
+						"block": "double_wooden_slab",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "cherry_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "warped_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "wooden_slab",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_slab",
+						"speed": 6
+					},
+					{
+						"block": "cherry_slab",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_slab",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_mosaic_slab",
+						"speed": 6
+					},
+					{
+						"block": "crimson_slab",
+						"speed": 6
+					},
+					{
+						"block": "warped_slab",
+						"speed": 6
+					},
+					{
+						"block": "double_wooden_slab",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "cherry_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "crimson_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "warped_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "oak_stairs",
+						"speed": 6
+					},
+					{
+						"block": "spruce_stairs",
+						"speed": 6
+					},
+					{
+						"block": "birch_stairs",
+						"speed": 6
+					},
+					{
+						"block": "jungle_stairs",
+						"speed": 6
+					},
+					{
+						"block": "acacia_stairs",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_stairs",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_stairs",
+						"speed": 6
+					},
+					{
+						"block": "cherry_stairs",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_stairs",
+						"speed": 6
+					},
+					{
+						"block": "warped_fence_gate",
+						"speed": 6
+					},
+					{
+						"block": "wooden_slab",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_slab",
+						"speed": 6
+					},
+					{
+						"block": "cherry_slab",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_slab",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_mosaic_slab",
+						"speed": 6
+					},
+					{
+						"block": "crimson_slab",
+						"speed": 6
+					},
+					{
+						"block": "warped_slab",
+						"speed": 6
+					},
+					{
+						"block": "double_wooden_slab",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "cherry_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "crimson_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "warped_double_slab",
+						"speed": 6
+					},
+					{
+						"block": "oak_stairs",
+						"speed": 6
+					},
+					{
+						"block": "spruce_stairs",
+						"speed": 6
+					},
+					{
+						"block": "birch_stairs",
+						"speed": 6
+					},
+					{
+						"block": "jungle_stairs",
+						"speed": 6
+					},
+					{
+						"block": "acacia_stairs",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_stairs",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_stairs",
+						"speed": 6
+					},
+					{
+						"block": "cherry_stairs",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_stairs",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_mosaic_stairs",
+						"speed": 6
+					},
+					{
+						"block": "crimson_stairs",
+						"speed": 6
+					},
+					{
+						"block": "warped_stairs",
+						"speed": 6
+					},
+					{
+						"block": "standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "spruce_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "birch_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "jungle_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "acacia_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "darkoak_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "cherry_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "warped_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "crimson_standing_sign",
+						"speed": 6
+					},
+					{
+						"block": "wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "spruce_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "birch_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "jungle_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "acacia_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "darkoak_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "cherry_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "warped_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "crimson_wall_sign",
+						"speed": 6
+					},
+					{
+						"block": "oak_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "spruce_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "birch_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "jungle_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "acacia_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "cherry_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "warped_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "crimson_hanging_sign",
+						"speed": 6
+					},
+					{
+						"block": "wooden_button",
+						"speed": 6
+					},
+					{
+						"block": "spruce_button",
+						"speed": 6
+					},
+					{
+						"block": "birch_button",
+						"speed": 6
+					},
+					{
+						"block": "jungle_button",
+						"speed": 6
+					},
+					{
+						"block": "acacia_button",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_button",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_button",
+						"speed": 6
+					},
+					{
+						"block": "cherry_button",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_button",
+						"speed": 6
+					},
+					{
+						"block": "crimson_button",
+						"speed": 6
+					},
+					{
+						"block": "warped_button",
+						"speed": 6
+					},
+					{
+						"block": "wooden_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "spruce_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "birch_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "jungle_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "acacia_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "dark_oak_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "cherry_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "bamboo_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "crimson_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "warped_pressure_plate",
+						"speed": 6
+					},
+					{
+						"block": "bee_nest",
+						"speed": 6
+					},
+					{
+						"block": "brown_mushroom_block",
+						"speed": 6
+					},
+					{
+						"block": "red_mushroom_block",
+						"speed": 6
+					},
+					{
+						"block": "melon_block",
+						"speed": 6
+					},
+					{
+						"block": "pumpkin",
+						"speed": 6
+					},
+					{
+						"block": "carved_pumpkin",
+						"speed": 6
+					},
+					{
+						"block": "lit_pumpkin",
+						"speed": 6
+					},
+					{
+						"block": "mangrove_roots",
+						"speed": 6
+					},
+					{
+						"block": "bed",
+						"speed": 6
+					},
+					{
+						"block": "crafting_table",
+						"speed": 6
+					},
+					{
+						"block": "cartography_table",
+						"speed": 6
+					},
+					{
+						"block": "fletching_table",
+						"speed": 6
+					},
+					{
+						"block": "smithing_table",
+						"speed": 6
+					},
+					{
+						"block": "soul_campfire",
+						"speed": 6
+					},
+					{
+						"block": "bookshelf",
+						"speed": 6
+					},
+					{
+						"block": "chiseled_bookshelf",
+						"speed": 6
+					},
+					{
+						"block": "lectern",
+						"speed": 6
+					},
+					{
+						"block": "composter",
+						"speed": 6
+					},
+					{
+						"block": "chest",
+						"speed": 6
+					},
+					{
+						"block": "trapped_chest",
+						"speed": 6
+					},
+					{
+						"block": "barrel",
+						"speed": 6
+					},
+					{
+						"block": "noteblock",
+						"speed": 6
+					},
+					{
+						"block": "jukebox",
+						"speed": 6
+					},
+					{
+						"block": "daylight_detector",
+						"speed": 6
+					},
+					{
+						"block": "daylight_detector_inverted",
+						"speed": 6
+					},
+					{
+						"block": "scaffolding",
+						"speed": 6
+					},
+					{
+						"block": "ladder",
+						"speed": 6
+					},
+					{
+						"block": "shroomlight",
+						"speed": 6
+					},
+					{
+						"block": "chorus_plant",
+						"speed": 6
+					},
+					{
+						"block": "chorus_flower",
+						"speed": 6
+					},
+					{
+						"block": "wall_banner",
+						"speed": 6
+					},
+					{
+						"block": "standing_banner",
+						"speed": 6
+					}
+				]
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:hatchet.name"
+			},
+			"minecraft:cooldown": {
+				"category": "can_opener",
+				"duration": 3
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 0.1,
+				"movement_modifier": 0.6
+			},
+			"minecraft:custom_components": [
+				"mcpe:dig",
+				"mcpe:can_opener_bad"
+			],
+			"minecraft:can_destroy_in_creative": false
+		}
+	}
+}

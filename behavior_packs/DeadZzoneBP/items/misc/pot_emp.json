@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:cooking_pot",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 16,
+			"minecraft:icon": {
+				"textures": {
+					"default": "cooking_pot"
+				}
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:liquid_clipped": true,
+			"minecraft:display_name": {
+				"value": "item.mcpe:cooking_pot.name"
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+execute as @a[r=5,c=1] run tellraw @s {"rawtext":[{"text":"§4Wait until it turns red to use it"}]}

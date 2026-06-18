@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "mcpe:scatter_tall_grass"
+    },
+    "iterations": 96,
+    "x": {
+      "distribution": "gaussian",
+      "extent": [ -16, 16 ]
+    },
+    "y": {
+      "distribution": "gaussian",
+      "extent": [ -8, 8 ]
+    },
+    "z": {
+      "distribution": "gaussian",
+      "extent": [ -16, 16 ]
+    },
+    "coordinate_eval_order": "zyx",
+    "places_feature": "mcpe:tall_grass_feature"
+  }
+}

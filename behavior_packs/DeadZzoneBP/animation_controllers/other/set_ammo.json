@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.set_ammo": {
+			"initial_state" : "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"credits": "(q.scoreboard('ammo_enabled') == 0)"
+						}
+					],
+					"on_entry": [
+                                                "/execute as @s[tag=!no_give] run function DZgunsDataCount",
+						"/execute as @s[tag=!no_give] run function DZammoStart",
+                                                "/gamerule commandblockoutput false",
+                                                "/gamerule sendcommandfeedback false",
+                                                "/execute as @s[tag=!no_give] run scoreboard objectives add ammo_enabled dummy ammo_enabled",
+                                                "/execute as @s[tag=!no_give] run scoreboard players set @s ammo_enabled 1"
+					]
+				},
+				"credits": {
+					"transitions": [
+						{
+							"default": "(q.scoreboard('ammo_enabled') == 0)"
+						}
+					],
+					"on_entry": [
+                                                "/execute as @s[tag=!no_give] run function DZgunsDataCount",
+						"/execute as @s[tag=!no_give] run function DZammoStart",
+                                                "/gamerule commandblockoutput false",
+                                                "/gamerule sendcommandfeedback false",
+                                                "/execute as @s[tag=!no_give] run scoreboard objectives add ammo_enabled dummy ammo_enabled",
+                                                "/execute as @s[tag=!no_give] run scoreboard players set @s ammo_enabled 0"
+					]
+				}
+			}
+		}
+	}
+}

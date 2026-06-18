@@ -1,0 +1,74 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mcpe:city/street/street"
+		},
+		"elements": [
+
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_0",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 50
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_1",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 30
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_2",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 25
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_3",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 25
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_4",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 25
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_end0",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 45
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "city/street/street_end1",
+					"processors": "mcpe:empty",
+					"projection": "minecraft:terrain_matching"
+				},
+				"weight": 45
+			}
+		]
+	}
+}

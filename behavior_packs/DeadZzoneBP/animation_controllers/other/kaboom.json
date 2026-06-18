@@ -1,0 +1,53 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.kaboom": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "shoot": "query.get_equipped_item_name=='remote' && query.is_using_item"
+            }
+          ]
+        },
+        "shoot": {
+          "transitions": [
+            {
+              "default": "(q.life_time - v.kaboom) >= 0.3 && query.get_equipped_item_name=='remote' && query.is_using_item"
+            }
+          ],
+          "on_entry": [
+            "v.kaboom = q.life_time;",
+            "/execute as @e[tag=boom] at @s run summon grenade:explosive"
+          ]
+        }
+      }
+    },
+    "controller.animation.kaboom2": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "query.equipped_item_any_tag('slot.armor.chest','funi_vest') && !query.is_in_water"
+            }
+          ],
+          "on_entry": [
+            "/event entity @s boom_remove",
+            "/tag @s remove boom"
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "!query.equipped_item_any_tag('slot.armor.chest','funi_vest') && !query.is_in_water"
+            }
+          ],
+          "on_entry": [
+            "/event entity @s boom"
+          ]
+        }
+      }
+    }
+  }
+}

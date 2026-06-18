@@ -1,0 +1,136 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:army_desert",
+          "weight": 17
+        },
+        {
+          "type": "item",
+          "name": "mcpe:balaclava_black",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_red",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_desert",
+          "weight": 11
+        },
+        {
+          "type": "item",
+          "name": "mcpe:boonie_tan",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:beret_blue",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_tactical",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_helmet_tan",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_helmet_black",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_red",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_gray",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_brown",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:shemagh_tan",
+          "weight": 4
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_gray",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:plate_vest_tan",
+          "weight": 14
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_black",
+          "weight": 9
+        },
+        {
+          "type": "item",
+          "name": "mcpe:assault_vest_black",
+          "weight": 12
+        },
+        {
+          "type": "item",
+          "name": "mcpe:tactical_vest_tan",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_black",
+          "weight": 13
+        },
+        {
+          "type": "item",
+          "name": "mcpe:webbing_tan",
+          "weight": 13
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 99
+        },
+        {
+          "type": "loot_table",
+          "name": "loot_tables/equipment/clothing/ghillie_drygrass.json",
+          "weight": 3
+        }
+      ]
+    }
+  ]
+}

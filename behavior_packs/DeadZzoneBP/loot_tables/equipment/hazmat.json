@@ -1,0 +1,33 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 75
+        },
+        {
+          "type": "item",
+          "name": "mcpe:respirator_mask",
+          "weight": 50
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_white",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_black",
+          "weight": 4
+        },
+        {
+          "type": "item",
+          "name": "mcpe:gasmask_tactical",
+          "weight": 4
+        }
+      ]
+    }
+  ]
+}

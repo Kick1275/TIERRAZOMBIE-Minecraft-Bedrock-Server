@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:ss1_emp",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"guns",
+					"rifle",
+					"empty_guns"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "ss1_emp"
+				}
+			},
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation_modifier": 0,
+				"can_always_eat": true
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 999,
+				"movement_modifier": 0.6
+			},
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "§cEmpty §fSS-1 \n§7hold to reload"
+			},
+			"minecraft:can_destroy_in_creative": false
+		}
+	}
+}

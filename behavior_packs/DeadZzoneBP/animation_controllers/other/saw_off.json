@@ -1,0 +1,30 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.sawing_off": {
+      "initial_state": "setup",
+      "states": {
+        "setup": {
+          "transitions": [
+            {
+              "sawoff_pipe": "(q.life_time - v.r) >= 1 && query.get_equipped_item_name('main_hand') == 'hacksaw' && query.get_equipped_item_name('off_hand') == 'lead_pipe' && (variable.attack_time) && query.is_sneaking"
+            }
+          ]
+        },
+        "sawoff_pipe": {
+          "on_entry": [
+            "v.r = q.life_time;",
+            "/playsound sawing.off @a[r=5] ~~~ 3 1",
+            "/give @s mcpe:sawoff_pipe 2",
+            "/clear @s mcpe:lead_pipe 0 1"
+          ],
+          "transitions": [
+            {
+              "setup": "query.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

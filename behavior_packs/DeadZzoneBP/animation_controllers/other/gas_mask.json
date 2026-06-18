@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.gasmask": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "walking": "(1.0)"
+            }
+          ]
+        },
+        "walking": {
+          "transitions": [
+            {
+              "default": "query.equipped_item_any_tag('slot.armor.head','gas_mask') && !query.is_in_water"
+            }
+          ],
+          "on_entry": [
+            "@s gas_mask",
+            "/effect @s wither 0"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mcpe:police_riot",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.helmet"
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"temperature_1"
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:icon": {
+				"textures": {
+					"default": "police_riot"
+				}
+			},
+			"minecraft:durability": {
+				"max_durability": 330
+			},
+			"minecraft:wearable": {
+				"protection": 6,
+				"slot": "slot.armor.head"
+			},
+			"minecraft:display_name": {
+				"value": "item.mcpe:police_riot.name"
+			}
+		}
+	}
+}

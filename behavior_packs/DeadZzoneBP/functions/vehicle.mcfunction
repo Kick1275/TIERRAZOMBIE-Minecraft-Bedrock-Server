@@ -1,0 +1,1 @@
+scoreboard players set @e[type=mcpe:sedan,scores={fuel=1601..}] fuel 1600

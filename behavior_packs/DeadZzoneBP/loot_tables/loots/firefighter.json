@@ -1,0 +1,300 @@
+{
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "random_chance_with_looting",
+          "chance": 0.55,
+          "looting_multiplier": 0.3
+        }
+      ],
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "empty",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "minecraft:air",
+          "weight": 90
+        },
+        {
+          "type": "item",
+          "name": "mcpe:popsi_cola",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:exp_coke",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:coffee",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:grape_soda",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lemonade",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:energy_drink",
+          "weight": 8
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_potato",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chip_tortilla",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:chocolate_bar",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:creeper_crunch",
+          "weight": 6
+        },
+        {
+          "type": "item",
+          "name": "mcpe:rice",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:strawberry_jam",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:meat_jerky",
+          "weight": 7
+        },
+        {
+          "type": "item",
+          "name": "mcpe:firefighter_top",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:firefighter_bottom",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hazmat_yellow_top",
+          "weight": 45,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hazmat_yellow_bottom",
+          "weight": 45,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:fireman_axe",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:crowbar",
+          "weight": 35,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:firefighter_hat",
+          "weight": 50,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:respirator_mask",
+          "weight": 20,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.3,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:wrench",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:screwdriver",
+          "weight": 27,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:first_aid",
+          "weight": 15
+        },
+        {
+          "type": "item",
+          "name": "mcpe:flashlight",
+          "weight": 10
+        },
+        {
+          "type": "item",
+          "name": "mcpe:lockpick",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:can_opener",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:hacksaw",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.5,
+                "max": 1.0
+              }
+            }
+          ]
+        },
+        {
+          "type": "item",
+          "name": "mcpe:duct_tape",
+          "weight": 30
+        },
+        {
+          "type": "item",
+          "name": "mcpe:bottle_water_emp",
+          "weight": 27
+        }
+      ]
+    }
+  ]
+}
