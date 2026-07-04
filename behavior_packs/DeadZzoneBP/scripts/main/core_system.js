@@ -348,6 +348,71 @@ function getAmmoSymbol(currentDurability, maxDurability) {
     return ""; // Normal ammo (Green)
 }
 
+// ── Cross-pack HUD: TACZBE ammo + Ranzie's difficulty ──────────────────────
+// Packs run in isolated script contexts, but `world` (dynamic properties,
+// scoreboard) is shared, so we can read what TACZBE/Ranzie's already store
+// without modifying those packs at all.
+
+// TACZBE tracks ammo per weapon via a scoreboard objective named after the
+// bare weapon key (krep:m4a1 -> objective "m4a1"), entirely through raw
+// commands inside animation_controllers/*.json + entities/plalyer.json —
+// not through any script, which is why it wasn't visible from scripts/ alone.
+// Max values below come straight from the "scoreboard players set @s <key> <max>"
+// reload lines in those animation controllers.
+const TACZ_WEAPON_MAX_AMMO = {
+    g17: 17, g18: 17, m1911: 7, p320: 12, b93: 20, uzi: 20, db: 2,
+    deagle: 7, mp5: 30, m16a1: 20, m16: 30, m870: 5, mp7: 40,
+    ump: 25, t50: 8, cp: 6,
+    hk416: 30, g3: 20, aa12: 10, akm: 30, m4a1: 30, g36: 30, saiga12: 5,
+    qbz95: 30, sks: 10, qbz191: 30, type81: 30, m1014: 7,
+    scarh: 20, scarl: 30, fal: 20, mk14: 20,
+    evolys: 75, m249: 100, awp: 5,
+};
+
+function getTaczAmmoDisplay(item, player) {
+    const itemType = item.typeId;
+    if (!itemType.startsWith('krep:')) return null;
+
+    // Minigun: fed from the .308 Win ammo box ("win308" objective) and has its
+    // own real overheat gauge (0-100, see functions/minigun.mcfunction) — this
+    // is the "cooling level" that climbs while firing and forces an empty swap at 100.
+    if (itemType === 'krep:minigun' || itemType === 'krep:minigun_emp') {
+        const ammoObjective = mc.world.scoreboard.getObjective('win308');
+        const heatObjective = mc.world.scoreboard.getObjective('minigunoverheat');
+        const ammo = ammoObjective ? (ammoObjective.getScore(player) ?? 0) : 0;
+        const heat = heatObjective ? (heatObjective.getScore(player) ?? 0) : 0;
+        const cooling = 100 - heat;
+        const heatColor = cooling <= 0 ? "\xa74" : cooling <= 40 ? "\xa7e" : "\xa7a";
+        return `: \xa77${ammo}\xa7r \xa78| Cooling: ${heatColor}${cooling}%%%\xa7r`;
+    }
+
+    const bareKey = itemType.replace('krep:', '').replace(/_emp$/, '');
+    const objective = mc.world.scoreboard.getObjective(bareKey);
+    if (objective) {
+        const score = objective.getScore(player) ?? 0;
+        const max = TACZ_WEAPON_MAX_AMMO[bareKey];
+        const colorCode = score <= 0 ? "\xa74" : (max && score <= max / 2) ? "\xa7c" : "\xa77";
+        return max ? `: ${colorCode}${score}\xa7r/\xa7f${max}\xa7r` : `: ${colorCode}${score}\xa7r`;
+    }
+
+    // No tracked objective for this weapon (e.g. Vector, Golden Deagle, RPG) —
+    // fall back to loaded/empty state from the item id.
+    const isEmpty = itemType.endsWith('_emp');
+    return isEmpty ? ": \xa74Empty\xa7r" : ": \xa7aLoaded\xa7r";
+}
+
+// Mirrors Ranzie's own diff = currentDay / maxDay formula (fullmoon.js) using
+// the 'max_day' dynamic property it writes to the shared world. Defaults to
+// the same 100 Ranzie's itself uses (MAX_DAY) until its settings UI is saved
+// at least once — matches what Ranzie's own action bar would show either way.
+function getRanzieDifficultyDisplay() {
+    const rawMaxDay = mc.world.getDynamicProperty('max_day');
+    const maxDay = Number(rawMaxDay) || 100;
+    const currentDay = mc.world.getDay();
+    const diff = Math.min(1, currentDay / maxDay);
+    return `: \xa75${(diff * 100).toFixed(2)}%%%\xa7r`;
+}
+
 function updateDurabilityDisplay(item) {
     let durabilityComponent = item.getComponent("durability");
     let itemType = item.typeId;
@@ -380,7 +445,10 @@ function updateActionBar(player) {
 
     const inventory = player.getComponent("inventory").container;
     const selectedItem = inventory.getItem(player.selectedSlotIndex);
-    const gunDurability = selectedItem ? updateDurabilityDisplay(selectedItem) : ": 0/0";
+    const taczAmmo = selectedItem ? getTaczAmmoDisplay(selectedItem, player) : null;
+    const fallbackGunDurability = selectedItem ? updateDurabilityDisplay(selectedItem) : ": 0/0";
+    const gunDurability = taczAmmo ?? fallbackGunDurability;
+    const difficultyText = getRanzieDifficultyDisplay() ?? "";
 
     const equipmentInventory = player.getComponent("equippable");
     const mainHandItem = equipmentInventory.getEquipment(EquipmentSlot.Mainhand);
@@ -396,6 +464,7 @@ function updateActionBar(player) {
         // ELIMINADO: `${bloodSymbol}: §f${bloodPercentage}%%%`,
         // ELIMINADO: `${infectionSymbol}: §f${infection}%%%`,
         gunDurability,
+        difficultyText,
         positionText,
         bleedingText
     ].filter(text => text.trim() !== "");

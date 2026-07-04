@@ -32,12 +32,12 @@ const npcItems = [
     { id: "krep:p90",     name: { es: "P90",           en: "P90" },           buyPrice: 5200,  sellPrice: 1700, icon: "textures/ui/icon_sword.png" },
     // ── Pistolas ──────────────────────────────────────────────────────────────
     { id: "krep:g17",     name: { es: "Glock 17",      en: "Glock 17" },      buyPrice: 2000,  sellPrice: 600,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:g18",     name: { es: "Glock 18",      en: "Glock 18" },      buyPrice: 2500,  sellPrice: 800,  icon: "textures/ui/icon_sword.png" },
+    { id: "krep:g18",     name: { es: "Glock 18",      en: "Glock 18" },      buyPrice: 800,   sellPrice: 250,  icon: "textures/ui/icon_sword.png" },
     { id: "krep:m1911",   name: { es: "M1911",         en: "M1911" },         buyPrice: 2200,  sellPrice: 700,  icon: "textures/ui/icon_sword.png" },
     { id: "krep:p320",    name: { es: "P320",          en: "P320" },          buyPrice: 2300,  sellPrice: 750,  icon: "textures/ui/icon_sword.png" },
     { id: "krep:deagle",  name: { es: "Desert Eagle",  en: "Desert Eagle" },  buyPrice: 5000,  sellPrice: 1600, icon: "textures/ui/icon_sword.png" },
     { id: "krep:b93",     name: { es: "B93R",          en: "B93R" },          buyPrice: 2800,  sellPrice: 900,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:cp",      name: { es: "CP",            en: "CP" },            buyPrice: 1800,  sellPrice: 600,  icon: "textures/ui/icon_sword.png" },
+    { id: "krep:cp",      name: { es: "CP",            en: "CP" },            buyPrice: 4200,  sellPrice: 1300, icon: "textures/ui/icon_sword.png" },
     { id: "krep:t50",     name: { es: "T50",           en: "T50" },           buyPrice: 4500,  sellPrice: 1500, icon: "textures/ui/icon_sword.png" },
     // ── Escopetas ─────────────────────────────────────────────────────────────
     { id: "krep:m870",    name: { es: "M870",          en: "M870" },          buyPrice: 5500,  sellPrice: 1800, icon: "textures/ui/icon_sword.png" },

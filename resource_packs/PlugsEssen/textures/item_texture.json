@@ -4,6 +4,21 @@
   "texture_data": {
     "crate_spawner": {
       "textures": "textures/items/crate_spawner"
+    },
+    "wooden_key": {
+      "textures": "textures/items/wooden_key"
+    },
+    "golden_key": {
+      "textures": "textures/items/golden_key"
+    },
+    "emerald_key": {
+      "textures": "textures/items/emerald_key"
+    },
+    "diamond_key": {
+      "textures": "textures/items/diamond_key"
+    },
+    "netherite_key": {
+      "textures": "textures/items/netherite_key"
     }
   }
 }

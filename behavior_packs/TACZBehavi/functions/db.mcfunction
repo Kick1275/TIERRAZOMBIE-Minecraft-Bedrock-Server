@@ -1,2 +1,1 @@
-titleraw @s[scores={db=1..2}] actionbar {"rawtext":[{"score":{"name":"@s","objective":"db"}},{"text":"/2 \n12 Gauge"}]}
-titleraw @s[scores={db=0}] actionbar {"rawtext":[{"text":"§cNo Ammunition"},{"text":"\n12 Gauge"}]}
+# HUD de balas desactivado: ahora lo muestra DeadZone (core_system.js) para evitar conflicto.

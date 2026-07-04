@@ -1,1 +1,70 @@
-import{ItemStack}from"@minecraft/server";const KEY_PROP="crate:keyId";export function buildKeyItem(t,e,n=1){try{const r=new ItemStack(t.typeId??"minecraft:tripwire_hook",n);r.nameTag=t.nameTag??"§6§lLlave de Crate";const o=[...t.lore??["§7Usa esta llave para abrir una crate"]];if(o.push(`§r§0§k${e}`),r.setLore(o),t.enchanted)try{const t=r.getComponent("minecraft:enchantable");t&&t.addEnchantment({type:"unbreaking",level:1})}catch(t){}return r}catch(t){return null}}export function findKeySlot(t,e){try{const n=t.getComponent("minecraft:inventory")?.container;if(!n)return-1;const r=`§r§0§k${e}`;for(let t=0;t<n.size;t++){const e=n.getItem(t);if(!e)continue;if((e.getLore?.()??[]).some(t=>t.includes(r)))return t}}catch(t){}return-1}export function playerHasKey(t,e){return-1!==findKeySlot(t,e)}export function consumeKey(t,e){try{const n=t.getComponent("minecraft:inventory")?.container;if(!n)return!1;const r=findKeySlot(t,e);if(-1===r)return!1;const o=n.getItem(r);return!!o&&(o.amount>1?(o.amount-=1,n.setItem(r,o)):n.setItem(r,void 0),!0)}catch(t){return!1}}export function giveKeys(t,e,n=1){try{const r=t.getComponent("minecraft:inventory")?.container;if(!r)return;const o=buildKeyItem(e.key,e.id,Math.min(n,64));if(!o)return;r.addItem(o)}catch(t){}}
+import { ItemStack } from "@minecraft/server";
+
+// Construye el item visual de una llave (nombre, lore, encantado) según la
+// configuración de la crate. Ya no incrusta ningún identificador oculto en el
+// lore — la llave se reconoce únicamente por su typeId, así que un /give
+// normal del mismo item también sirve para abrir la crate.
+export function buildKeyItem(keyConfig, _crateId, amount = 1) {
+    try {
+        const item = new ItemStack(keyConfig.typeId ?? "minecraft:tripwire_hook", amount);
+        item.nameTag = keyConfig.nameTag ?? "§6§lLlave de Crate";
+        item.setLore(keyConfig.lore ?? ["§7Usa esta llave para abrir una crate"]);
+        if (keyConfig.enchanted) {
+            try {
+                const ench = item.getComponent("minecraft:enchantable");
+                if (ench) ench.addEnchantment({ type: "unbreaking", level: 1 });
+            } catch {}
+        }
+        return item;
+    } catch {
+        return null;
+    }
+}
+
+// Busca en todo el inventario un item cuyo typeId coincida con la llave de esta crate.
+export function findKeySlot(player, crate) {
+    try {
+        const inv = player.getComponent("minecraft:inventory")?.container;
+        if (!inv) return -1;
+        const keyTypeId = crate.key?.typeId ?? "minecraft:tripwire_hook";
+        for (let i = 0; i < inv.size; i++) {
+            const item = inv.getItem(i);
+            if (item && item.typeId === keyTypeId) return i;
+        }
+    } catch {}
+    return -1;
+}
+
+export function playerHasKey(player, crate) {
+    return findKeySlot(player, crate) !== -1;
+}
+
+export function consumeKey(player, crate) {
+    try {
+        const inv = player.getComponent("minecraft:inventory")?.container;
+        if (!inv) return false;
+        const slot = findKeySlot(player, crate);
+        if (slot === -1) return false;
+        const item = inv.getItem(slot);
+        if (!item) return false;
+        if (item.amount > 1) {
+            item.amount -= 1;
+            inv.setItem(slot, item);
+        } else {
+            inv.setItem(slot, undefined);
+        }
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+export function giveKeys(player, crate, amount = 1) {
+    try {
+        const inv = player.getComponent("minecraft:inventory")?.container;
+        if (!inv) return;
+        const item = buildKeyItem(crate.key, crate.id, Math.min(amount, 64));
+        if (!item) return;
+        inv.addItem(item);
+    } catch {}
+}

@@ -4,7 +4,7 @@ import { ActionFormData, ModalFormData } from "@minecraft/server-ui";
 const SCORE_MONEY = "money";
 const SCORE_GEMS = "gems";
 const OPEN_WORLD_TAG = "gm:in_open_world";
-const MISSIONS_ENABLED = false;
+const MISSIONS_ENABLED = true;
 
 function isMissionsEnabled() {
     return MISSIONS_ENABLED;
@@ -48,8 +48,6 @@ const DAILY_MISSIONS = [
     { id: "d_run_3k",       type: "movimiento",  desc: { es: "Correr 3,000 bloques",           en: "Run 3,000 blocks" },            goal: 3000, reward: { money: 700 },   track: "blocks_run" },
     { id: "d_fall_10",      type: "movimiento",  desc: { es: "Caer desde 10 bloques de altura", en: "Fall from 10 blocks" },        goal: 1,    reward: { money: 200 },   track: "big_falls" },
     { id: "d_swim_100",     type: "movimiento",  desc: { es: "Nadar 100 bloques",              en: "Swim 100 blocks" },             goal: 100,  reward: { money: 300 },   track: "blocks_swum" },
-    { id: "d_team_invite2", type: "social",      desc: { es: "Invitar a 2 jugadores a tu equipo", en: "Invite 2 players to team" }, goal: 2, reward: { money: 400 }, track: "team_invites" },
-    { id: "d_team_kill3",   type: "social",      desc: { es: "Matar 3 jugadores en equipo",    en: "Kill 3 players while teamed" }, goal: 3,    reward: { money: 700 },   track: "team_kills" },
     { id: "d_login",        type: "misc",        desc: { es: "Conectarse al servidor",         en: "Connect to the server" },       goal: 1,    reward: { money: 200 },   track: "logins" },
     { id: "d_play_30m",     type: "misc",        desc: { es: "Jugar 30 minutos",               en: "Play 30 minutes" },             goal: 1800, reward: { money: 800 },   track: "playtime" },
     { id: "d_die_5",        type: "misc",        desc: { es: "Morir 5 veces",                  en: "Die 5 times" },                 goal: 5,    reward: { money: 300 },   track: "deaths_today" },
@@ -80,8 +78,6 @@ const WEEKLY_MISSIONS = [
     { id: "w_run_20k",        type: "movimiento",  desc: { es: "Correr 20,000 bloques",               en: "Run 20,000 blocks" },              goal: 20000,reward: { money: 10000 }, track: "blocks_run" },
     { id: "w_swim_2k",        type: "movimiento",  desc: { es: "Nadar 2,000 bloques",                 en: "Swim 2,000 blocks" },              goal: 2000, reward: { money: 5000 },  track: "blocks_swum" },
     { id: "w_walk_day5k",     type: "movimiento",  desc: { es: "Caminar 5,000 bloques en un día",     en: "Walk 5,000 blocks in one day" },   goal: 5000, reward: { money: 10000 }, track: "blocks_walked_day" },
-    { id: "w_team_kill50",    type: "social",      desc: { es: "Matar 50 jugadores en equipo",        en: "Kill 50 players while teamed" },   goal: 50,   reward: { money: 30000 }, track: "team_kills" },
-    { id: "w_team_invite5",   type: "social",      desc: { es: "Invitar a 5 jugadores distintos",     en: "Invite 5 different players" },     goal: 5,    reward: { money: 5000 },  track: "team_invites" },
     { id: "w_prog_daily5",    type: "progresion",  desc: { es: "Completar diarias 5 días seguidos",   en: "Complete dailies 5 days in a row" }, goal: 5, reward: { gems: 100 }, track: "daily_streak" },
     { id: "w_prog_daily7",    type: "progresion",  desc: { es: "Completar diarias los 7 días",        en: "Complete dailies all 7 days" },    goal: 7,    reward: { gems: 120 },    track: "daily_streak" },
     { id: "w_prog_first",     type: "progresion",  desc: { es: "Ser el primero en completar semanal", en: "First to complete a weekly" },     goal: 1,    reward: { gems: 40 },     track: "weekly_first" },
@@ -92,11 +88,24 @@ const WEEKLY_MISSIONS = [
 const DAILY_TYPES = [...new Set(DAILY_MISSIONS.map(m => m.type))];
 const WEEKLY_TYPES = [...new Set(WEEKLY_MISSIONS.filter(m => m.type !== "progresion").map(m => m.type))];
 
+// ─── Índices precalculados (evitan recorrer los arrays completos en caliente) ──
+// MISSION_MAP: id -> definición, O(1) en vez de .find() sobre 25+ misiones.
+const MISSION_MAP = new Map();
+for (const m of DAILY_MISSIONS) MISSION_MAP.set(m.id, m);
+for (const m of WEEKLY_MISSIONS) MISSION_MAP.set(m.id, m);
+
+function findMissionDef(id) {
+    return MISSION_MAP.get(id);
+}
+
 const KEY_DAILY_MISSIONS = "dm:daily";
 const KEY_WEEKLY_MISSIONS = "dm:weekly";
 const KEY_PROG_DATA = "dm:prog";
 const KEY_WEEKLY_FIRST = "dm:wfirst";
 
+// dirty: {daily,weekly} marca si hay cambios sin escribir a disco todavía —
+// el progreso vive solo en RAM hasta el siguiente flush (periódico, al
+// desconectarse, o inmediato si una misión se completó).
 const missionCache = new Map();
 
 function getPlayerLang(player) {
@@ -109,10 +118,29 @@ function getLang(obj, player) {
     return obj[l] ?? obj.es;
 }
 
+// Cachea las referencias de scoreboard objective — getObjective() recorre la
+// tabla de objectives del mundo cada vez; con esto se llama una sola vez por
+// objective y se reintenta solo si la referencia cacheada deja de servir.
+const _objectiveCache = new Map();
+function getObjectiveCached(name) {
+    let obj = _objectiveCache.get(name);
+    if (obj) {
+        try { obj.getScore; return obj; } catch { _objectiveCache.delete(name); }
+    }
+    try {
+        obj = world.scoreboard.getObjective(name);
+        if (obj) _objectiveCache.set(name, obj);
+        return obj;
+    } catch { return null; }
+}
+
 function addScore(player, objective, amount) {
     try {
-        let obj = world.scoreboard.getObjective(objective);
-        if (!obj) obj = world.scoreboard.addObjective(objective, objective);
+        let obj = getObjectiveCached(objective);
+        if (!obj) {
+            obj = world.scoreboard.addObjective(objective, objective);
+            _objectiveCache.set(objective, obj);
+        }
         obj.setScore(player, (obj.getScore(player) ?? 0) + amount);
     } catch (e) { console.warn("[Missions] addScore: " + e); }
 }
@@ -186,6 +214,7 @@ function getCachedMissions(player) {
         weekly: assignWeeklyMissions(player),
         dailyDate: todayKey(),
         weeklyDate: weekKey(),
+        dirty: { daily: false, weekly: false },
     };
     const today = todayKey();
     const week = weekKey();
@@ -197,10 +226,27 @@ function getCachedMissions(player) {
             weekly: assignWeeklyMissions(player),
             dailyDate: today,
             weeklyDate: week,
+            dirty: { daily: false, weekly: false },
         };
         missionCache.set(player.id, cache);
     }
     return cache;
+}
+
+// Escribe a disco solo lo que cambió desde el último flush. Se llama desde el
+// flush periódico, al desconectarse, y de inmediato si se completó una misión.
+function flushPlayerMissions(player, cache) {
+    if (!cache?.dirty) return;
+    try {
+        if (cache.dirty.daily) {
+            player.setDynamicProperty(KEY_DAILY_MISSIONS, JSON.stringify(cache.daily));
+            cache.dirty.daily = false;
+        }
+        if (cache.dirty.weekly) {
+            player.setDynamicProperty(KEY_WEEKLY_MISSIONS, JSON.stringify(cache.weekly));
+            cache.dirty.weekly = false;
+        }
+    } catch (e) { console.warn("[Missions] flush: " + e); }
 }
 
 function grantReward(player, reward) {
@@ -215,44 +261,61 @@ function rewardText(reward) {
     return parts.join(" + ");
 }
 
-function findMissionDef(id) {
-    return DAILY_MISSIONS.find(m => m.id === id) ?? WEEKLY_MISSIONS.find(m => m.id === id);
-}
+// Aplica uno o más avances de track en una sola pasada por las misiones activas
+// del jugador (en vez de una pasada completa por cada track, como antes).
+// `updates`: [{ track, amount, extra? }, ...]
+function _applyUpdates(player, updates) {
+    if (!isMissionsEnabled() || !updates.length) return;
 
-function progressMission(player, trackKey, amount = 1, extra = {}) {
-    if (!isMissionsEnabled()) return;
+    // Índice track -> {amount, extra} para esta tanda — lookup O(1) por misión
+    // en vez de recorrer la lista de updates por cada slot activo.
+    const byTrack = new Map();
+    for (const u of updates) {
+        const prev = byTrack.get(u.track);
+        if (prev) prev.amount += u.amount;
+        else byTrack.set(u.track, { amount: u.amount, extra: u.extra });
+    }
+
     const cache = getCachedMissions(player);
     const daily = cache.daily;
     const weekly = cache.weekly;
     let dailyChanged = false, weeklyChanged = false;
 
-    const apply = (slot, pool) => {
+    const applySlot = (slot, isDaily) => {
         if (slot.done) return;
-        const def = pool.find(m => m.id === slot.id);
-        if (!def || def.track !== trackKey) return;
-        if (def.extra?.map && extra.map !== def.extra.map) return;
-        slot.progress = Math.min(slot.progress + amount, def.goal);
+        const def = MISSION_MAP.get(slot.id);
+        if (!def) return;
+        const u = byTrack.get(def.track);
+        if (!u) return;
+        if (def.extra?.map && u.extra?.map !== def.extra.map) return;
+
+        slot.progress = Math.min(slot.progress + u.amount, def.goal);
+        if (isDaily) dailyChanged = true; else weeklyChanged = true;
+
         if (slot.progress >= def.goal) {
             slot.done = true;
             grantReward(player, def.reward);
             player.sendMessage(`§a✓ §lMisión completada: §r§f${getLang(def.desc, player)}\n§e+${rewardText(def.reward)}`);
-            if (pool === DAILY_MISSIONS) checkDailyAllDone(player, daily);
-            if (pool === WEEKLY_MISSIONS && def.type !== "progresion") {
+            if (isDaily) {
+                checkDailyAllDone(player, daily);
+            } else if (def.type !== "progresion") {
                 checkWeeklyFirst(player, weekly);
                 checkWeeklyTypesAndCount(player, weekly);
             }
         }
-        return true;
     };
 
-    for (const slot of daily.missions) if (apply(slot, DAILY_MISSIONS)) dailyChanged = true;
-    for (const slot of weekly.missions) if (apply(slot, WEEKLY_MISSIONS)) weeklyChanged = true;
-    for (const slot of (weekly.prog ?? [])) if (apply(slot, WEEKLY_MISSIONS)) weeklyChanged = true;
+    for (const slot of daily.missions) applySlot(slot, true);
+    for (const slot of weekly.missions) applySlot(slot, false);
+    for (const slot of (weekly.prog ?? [])) applySlot(slot, false);
 
-    if (dailyChanged) player.setDynamicProperty(KEY_DAILY_MISSIONS, JSON.stringify(daily));
-    if (weeklyChanged) player.setDynamicProperty(KEY_WEEKLY_MISSIONS, JSON.stringify(weekly));
-    if (dailyChanged) cache.daily = daily;
-    if (weeklyChanged) cache.weekly = weekly;
+    if (dailyChanged) cache.dirty.daily = true;
+    if (weeklyChanged) cache.dirty.weekly = true;
+}
+
+// API pública sin cambios — internamente delega a _applyUpdates con un solo track.
+function progressMission(player, trackKey, amount = 1, extra = {}) {
+    _applyUpdates(player, [{ track: trackKey, amount, extra }]);
 }
 
 function checkDailyAllDone(player, daily) {
@@ -268,7 +331,7 @@ function checkDailyAllDone(player, daily) {
     const weekly = assignWeeklyMissions(player);
     for (const slot of (weekly.prog ?? [])) {
         if (slot.done) continue;
-        const def = WEEKLY_MISSIONS.find(m => m.id === slot.id);
+        const def = MISSION_MAP.get(slot.id);
         if (!def || def.track !== "daily_streak") continue;
         slot.progress = prog.daily_streak;
         if (slot.progress >= def.goal) {
@@ -289,7 +352,7 @@ function checkWeeklyFirst(player, weekly) {
         world.setDynamicProperty(KEY_WEEKLY_FIRST, JSON.stringify({ week, player: player.id }));
         for (const slot of (weekly.prog ?? [])) {
             if (slot.done) continue;
-            const def = WEEKLY_MISSIONS.find(m => m.id === slot.id);
+            const def = MISSION_MAP.get(slot.id);
             if (!def || def.track !== "weekly_first") continue;
             slot.progress = 1;
             slot.done = true;
@@ -304,7 +367,7 @@ function checkWeeklyTypesAndCount(player, weekly) {
     const doneCount = weekly.missions.filter(s => s.done).length;
     for (const slot of (weekly.prog ?? [])) {
         if (slot.done) continue;
-        const def = WEEKLY_MISSIONS.find(m => m.id === slot.id);
+        const def = MISSION_MAP.get(slot.id);
         if (!def) continue;
         if (def.track === "mission_types_done") slot.progress = doneTypes.size;
         if (def.track === "weekly_completed") slot.progress = doneCount;
@@ -321,6 +384,17 @@ function progressBar(current, goal) {
     const filled = Math.floor((current / goal) * 10);
     return "§a" + "█".repeat(filled) + "§8" + "█".repeat(10 - filled);
 }
+
+// Ícono por tipo de misión — usado para decorar cada botón en las listas.
+const TYPE_ICON = {
+    combate:     "textures/items/diamond_sword",
+    recoleccion: "textures/ui/icon_recipe_item",
+    exploracion: "textures/ui/world_glyph_color",
+    economia:    "textures/ui/trade_icon",
+    movimiento:  "textures/items/diamond_boots",
+    misc:        "textures/ui/icon_book_writable",
+    progresion:  "textures/ui/icon_best_3",
+};
 
 export async function showMissionsUI(player) {
     if (!isMissionsEnabled()) {
@@ -343,41 +417,54 @@ export async function showMissionsUI(player) {
 }
 
 async function showDailyUI(player, daily) {
-    const lang = getPlayerLang(player);
     const resetIn = getMidnightUTC() + 86400000 - Date.now();
-    let body = `§7Reset: §e${Math.floor(resetIn / 3600000)}h ${Math.floor((resetIn % 3600000) / 60000)}m\n\n`;
+    const header = `§7Reset: §e${Math.floor(resetIn / 3600000)}h ${Math.floor((resetIn % 3600000) / 60000)}m\n` +
+        `§7Completadas: §e${daily.missions.filter(s => s.done).length}§7/§f5`;
+    const form = new ActionFormData().title("§l§aMisiones Diarias").body(header);
     for (const slot of daily.missions) {
         const def = findMissionDef(slot.id);
         if (!def) continue;
-        body += `${slot.done ? "§a" : "§f"}${getLang(def.desc, player)}\n`;
-        body += `${progressBar(slot.progress, def.goal)} ${slot.done ? "§a✓" : `§e${slot.progress}§7/§f${def.goal}`}  §e+${rewardText(def.reward)}\n\n`;
+        const color = slot.done ? "§´§a" : "§f";
+        const status = slot.done
+            ? "§a✓ Completada"
+            : `${progressBar(slot.progress, def.goal)} §e${slot.progress}§7/§f${def.goal}`;
+        form.button(`§´${color}${getLang(def.desc, player)}\n${status}\n§6+${rewardText(def.reward)}`, TYPE_ICON[def.type] ?? TYPE_ICON.misc);
     }
-    body += `§7Completadas: §e${daily.missions.filter(s => s.done).length}§7/§f5`;
-    await new ActionFormData().title("§l§aMisiones Diarias").body(body).button("§8Cerrar").show(player);
+    form.button("§8Cerrar", "textures/ui/cancel");
+    await form.show(player).catch(() => null);
 }
 
 async function showWeeklyUI(player, weekly) {
     const resetIn = getWeekStartUTC() + 7 * 86400000 - Date.now();
-    let body = `§7Reset: §e${Math.floor(resetIn / 86400000)}d ${Math.floor((resetIn % 86400000) / 3600000)}h\n\n`;
+    const header = `§7Reset: §e${Math.floor(resetIn / 86400000)}d ${Math.floor((resetIn % 86400000) / 3600000)}h\n` +
+        `§7Completadas: §e${weekly.missions.filter(s => s.done).length}§7/§f7`;
+    const form = new ActionFormData().title("§l§bMisiones Semanales").body(header);
     for (const slot of weekly.missions) {
         const def = findMissionDef(slot.id);
         if (!def) continue;
-        body += `${slot.done ? "§a" : "§f"}${getLang(def.desc, player)}\n`;
-        body += `${progressBar(slot.progress, def.goal)} ${slot.done ? "§a✓" : `§e${slot.progress}§7/§f${def.goal}`}  §e+${rewardText(def.reward)}\n\n`;
+        const color = slot.done ? "§´§a" : "§f";
+        const status = slot.done
+            ? "§a✓ Completada"
+            : `${progressBar(slot.progress, def.goal)} §e${slot.progress}§7/§f${def.goal}`;
+        form.button(`§´${color}${getLang(def.desc, player)}\n${status}\n§6+${rewardText(def.reward)}`, TYPE_ICON[def.type] ?? TYPE_ICON.misc);
     }
-    body += `§7Completadas: §e${weekly.missions.filter(s => s.done).length}§7/§f7`;
-    await new ActionFormData().title("§l§bMisiones Semanales").body(body).button("§8Cerrar").show(player);
+    form.button("§8Cerrar", "textures/ui/cancel");
+    await form.show(player).catch(() => null);
 }
 
 async function showProgUI(player, weekly) {
-    let body = "§7Objetivos permanentes:\n\n";
+    const form = new ActionFormData().title("§l§dProgresión").body("§7Objetivos permanentes:");
     for (const slot of (weekly.prog ?? [])) {
         const def = findMissionDef(slot.id);
         if (!def) continue;
-        body += `${slot.done ? "§a" : "§f"}${getLang(def.desc, player)}\n`;
-        body += `${progressBar(slot.progress, def.goal)} ${slot.done ? "§a✓" : `§e${slot.progress}§7/§f${def.goal}`}  §e+${rewardText(def.reward)}\n\n`;
+        const color = slot.done ? "§a" : "§f";
+        const status = slot.done
+            ? "§a✓ Completada"
+            : `${progressBar(slot.progress, def.goal)} §e${slot.progress}§7/§f${def.goal}`;
+        form.button(`§´${color}${getLang(def.desc, player)}\n${status}\n§6+${rewardText(def.reward)}`, TYPE_ICON.progresion);
     }
-    await new ActionFormData().title("§l§dProgresión").body(body).button("§8Cerrar").show(player);
+    form.button("§8Cerrar", "textures/ui/cancel");
+    await form.show(player).catch(() => null);
 }
 
 const FOOD_IDS = new Set(["mcpe:canned_peaches","mcpe:canned_beans","mcpe:canned_beef_stew","mcpe:canned_chicken","mcpe:canned_chili","mcpe:canned_corned","mcpe:canned_fruit","mcpe:canned_ham","mcpe:canned_ration","mcpe:canned_sardine","mcpe:canned_spaghetti","mcpe:canned_tuna","mcpe:canned_tomato","mcpe:canned_bacon","mcpe:chip_potato","mcpe:chip_tortilla","mcpe:creeper_crunch","mcpe:meat_jerky","mcpe:mre","mcpe:rice","mcpe:strawberry_jam","mcpe:tactical_sandwich","mcpe:chocolate_bar","mcpe:apple_green","mcpe:banana","mcpe:tomato","mcpe:cucumber","mcpe:pear","mcpe:zucchini","mcpe:coffee","mcpe:energy_drink","mcpe:grape_soda","mcpe:lemonade","mcpe:popsi_cola","mcpe:red_wine","mcpe:vodka","mcpe:whiskey","mcpe:beer_bottle","mcpe:milk_gallon","mcpe:bottle_water","mcpe:pot_cook_water","mcpe:pot_water"]);
@@ -389,6 +476,7 @@ export const PISTOL_IDS = new Set(["krep:g17","krep:g18","krep:m1911","krep:p320
 
 const lastPos = new Map();
 const prevMoney = new Map();
+
 world.afterEvents.playerSpawn.subscribe(ev => {
     if (!ev.initialSpawn || !isMissionsEnabled()) return;
     system.runTimeout(() => {
@@ -400,6 +488,16 @@ world.afterEvents.playerSpawn.subscribe(ev => {
     }, 60);
 });
 
+// Antes de que el jugador se desconecte el objeto Player todavía es válido —
+// es la única oportunidad de persistir el progreso pendiente sin esperar al
+// flush periódico. afterEvents.playerLeave ya no entrega un Player usable,
+// así que ahí solo limpiamos la cache en memoria.
+world.beforeEvents.playerLeave.subscribe(ev => {
+    try {
+        const cache = missionCache.get(ev.player.id);
+        if (cache) flushPlayerMissions(ev.player, cache);
+    } catch {}
+});
 world.afterEvents.playerLeave.subscribe(ev => { missionCache.delete(ev.playerId); });
 
 world.afterEvents.entityDie.subscribe(ev => {
@@ -416,11 +514,12 @@ function trackInventoryGain(player, item) {
     if (!player?.id || !item?.typeId) return;
     const id = item.typeId;
     const amount = item.amount ?? 1;
-    progressMission(player, "items_picked", amount);
-    if (FOOD_IDS.has(id)) progressMission(player, "food_picked", amount);
-    if (MED_IDS.has(id)) progressMission(player, "meds_picked", amount);
-    if (AMMO_IDS.has(id)) progressMission(player, "ammo_picked", amount);
-    if (ARMOR_IDS.has(id)) progressMission(player, "armor_picked", amount);
+    const updates = [{ track: "items_picked", amount }];
+    if (FOOD_IDS.has(id)) updates.push({ track: "food_picked", amount });
+    if (MED_IDS.has(id)) updates.push({ track: "meds_picked", amount });
+    if (AMMO_IDS.has(id)) updates.push({ track: "ammo_picked", amount });
+    if (ARMOR_IDS.has(id)) updates.push({ track: "armor_picked", amount });
+    _applyUpdates(player, updates);
 }
 
 world.afterEvents.playerInventoryItemChange?.subscribe?.(ev => {
@@ -428,55 +527,78 @@ world.afterEvents.playerInventoryItemChange?.subscribe?.(ev => {
     system.run(() => { try { trackInventoryGain(ev.player, ev.itemStack); } catch {} });
 });
 
+// Intervalo único (antes eran dos: movimiento/economía cada 80 ticks y
+// playtime cada 1200) — recorre la lista de jugadores una sola vez y junta
+// todos los avances detectados en esa pasada en un solo _applyUpdates.
+const PLAYTIME_EVERY_N_TICKS = 1200 / 80; // = 15, conserva el mismo intervalo real (1200 ticks)
+let _playtimeCounter = 0;
+
 system.runInterval(() => {
     if (!isMissionsEnabled()) return;
     const players = world.getAllPlayers();
     if (!players.length) return;
 
+    _playtimeCounter++;
+    const doPlaytime = _playtimeCounter >= PLAYTIME_EVERY_N_TICKS;
+    if (doPlaytime) _playtimeCounter = 0;
+
+    const moneyObj = getObjectiveCached(SCORE_MONEY);
+
     for (const player of players) {
         try {
+            const updates = [];
             const pos = player.location;
             const prevPos = lastPos.get(player.id);
             if (prevPos) {
                 const dx = pos.x - prevPos.x;
                 const dz = pos.z - prevPos.z;
-                const dist = Math.sqrt(dx * dx + dz * dz);
-                if (dist > 0.05 && dist < 15) {
+                const dist2 = dx * dx + dz * dz;
+                // Pre-filtro sin raíz cuadrada: equivale a "dist > 0.05 && dist < 15"
+                // (0.05^2 = 0.0025, 15^2 = 225) pero evita el sqrt en el caso más
+                // común (jugador prácticamente quieto) y en saltos absurdos (teleport).
+                if (dist2 > 0.0025 && dist2 < 225) {
+                    const dist = Math.sqrt(dist2);
                     const distInt = Math.floor(dist);
                     const inWater = player.isInWater ?? player.isSwimming;
                     if (inWater) {
-                        progressMission(player, "blocks_swum", distInt);
+                        updates.push({ track: "blocks_swum", amount: distInt });
                     } else if (distInt > 0) {
-                        progressMission(player, "blocks_walked", distInt);
-                        if (player.hasTag(OPEN_WORLD_TAG)) progressMission(player, "blocks_walked_day", distInt);
-                        if (dist > 0.25) progressMission(player, "blocks_run", distInt);
+                        updates.push({ track: "blocks_walked", amount: distInt });
+                        if (player.hasTag(OPEN_WORLD_TAG)) updates.push({ track: "blocks_walked_day", amount: distInt });
+                        if (dist > 0.25) updates.push({ track: "blocks_run", amount: distInt });
                     }
                 }
                 const fall = prevPos.y - pos.y;
-                if (fall >= 10) progressMission(player, "big_falls", 1);
+                if (fall >= 10) updates.push({ track: "big_falls", amount: 1 });
             }
             lastPos.set(player.id, { x: pos.x, y: pos.y, z: pos.z });
 
-            const obj = world.scoreboard.getObjective(SCORE_MONEY);
-            if (obj) {
-                const curMoney = obj.getScore(player) ?? 0;
+            if (moneyObj) {
+                const curMoney = moneyObj.getScore(player) ?? 0;
                 const prevM = prevMoney.get(player.id);
                 if (prevM !== undefined && curMoney < prevM) {
-                    progressMission(player, "money_spent", prevM - curMoney);
-                    progressMission(player, "npc_transactions", 1);
+                    updates.push({ track: "money_spent", amount: prevM - curMoney });
+                    updates.push({ track: "npc_transactions", amount: 1 });
                 }
                 prevMoney.set(player.id, curMoney);
             }
+
+            if (doPlaytime) updates.push({ track: "playtime", amount: 60 });
+
+            if (updates.length) _applyUpdates(player, updates);
         } catch {}
     }
 }, 80);
 
+// Flush periódico de todo lo que quedó pendiente en RAM (cada 600 ticks = 30s).
+// Cubre el caso de un cierre abrupto del servidor entre flushes puntuales.
 system.runInterval(() => {
-    if (!isMissionsEnabled()) return;
+    if (missionCache.size === 0) return;
     for (const player of world.getAllPlayers()) {
-        try { progressMission(player, "playtime", 60); } catch {}
+        const cache = missionCache.get(player.id);
+        if (cache) flushPlayerMissions(player, cache);
     }
-}, 1200);
+}, 600);
 
 export function onMarketSell(player) { try { progressMission(player, "market_sells", 1); } catch {} }
 export function onMarketBuy(player) { try { progressMission(player, "market_buys", 1); } catch {} }
@@ -488,26 +610,88 @@ export function onPetroEnter(player) { try { progressMission(player, "petro_entr
 export function onPetroExtract(player) { try { progressMission(player, "petro_extractions", 1); } catch {} }
 export { progressMission };
 
+// Marca todas las misiones de una lista como completadas y otorga su recompensa —
+// solo para testing rápido del admin, no se usa en el flujo normal de un jugador.
+function _forceCompleteSlots(player, slots, pool) {
+    let changed = false;
+    for (const slot of slots) {
+        if (slot.done) continue;
+        const def = pool.find(m => m.id === slot.id);
+        if (!def) continue;
+        slot.progress = def.goal;
+        slot.done = true;
+        grantReward(player, def.reward);
+        changed = true;
+    }
+    return changed;
+}
+
+function _forceCompleteDaily(player) {
+    const daily = assignDailyMissions(player);
+    if (_forceCompleteSlots(player, daily.missions, DAILY_MISSIONS)) {
+        player.setDynamicProperty(KEY_DAILY_MISSIONS, JSON.stringify(daily));
+        missionCache.delete(player.id);
+        checkDailyAllDone(player, daily);
+    }
+    player.sendMessage("§a✓ Todas las misiones diarias fueron completadas y recompensadas.");
+}
+
+function _forceCompleteWeekly(player) {
+    const weekly = assignWeeklyMissions(player);
+    if (_forceCompleteSlots(player, weekly.missions, WEEKLY_MISSIONS)) {
+        player.setDynamicProperty(KEY_WEEKLY_MISSIONS, JSON.stringify(weekly));
+        missionCache.delete(player.id);
+        checkWeeklyFirst(player, weekly);
+        checkWeeklyTypesAndCount(player, weekly);
+    }
+    player.sendMessage("§a✓ Todas las misiones semanales fueron completadas y recompensadas.");
+}
+
+function _forceCompleteProg(player) {
+    const weekly = assignWeeklyMissions(player);
+    if (_forceCompleteSlots(player, weekly.prog ?? [], WEEKLY_MISSIONS)) {
+        player.setDynamicProperty(KEY_WEEKLY_MISSIONS, JSON.stringify(weekly));
+        missionCache.delete(player.id);
+    }
+    player.sendMessage("§a✓ Toda la progresión fue completada y recompensada.");
+}
+
 export async function showMissionsAdminPanel(player) {
     const res = await new ActionFormData()
         .title("§c§lAdmin - Misiones")
-        .body("§7Gestiona misiones")
-        .button("§c🗑 Reset diarias")
-        .button("§c🗑 Reset semanales")
-        .button("§8Cerrar")
+        .body("§7Herramientas de testing. Completar otorga las recompensas reales.")
+        .button("§aCompletar TODAS las diarias", "textures/ui/icon_book_writable.png")
+        .button("§bCompletar TODAS las semanales", "textures/ui/icon_recipe_nature.png")
+        .button("§dCompletar TODA la progresión", "textures/ui/icon_best_3.png")
+        .button("§eCompletar absolutamente todo", "textures/ui/confirm")
+        .button("§cReset diarias", "textures/ui/icon_trash.png")
+        .button("§cReset semanales", "textures/ui/icon_trash.png")
+        .button("§8Cerrar", "textures/ui/cancel")
         .show(player);
-    if (res.canceled || res.selection === 2) return;
+    if (res.canceled || res.selection === 6) return;
+
     if (res.selection === 0) {
+        _forceCompleteDaily(player);
+    } else if (res.selection === 1) {
+        _forceCompleteWeekly(player);
+    } else if (res.selection === 2) {
+        _forceCompleteProg(player);
+    } else if (res.selection === 3) {
+        _forceCompleteDaily(player);
+        _forceCompleteWeekly(player);
+        _forceCompleteProg(player);
+    } else if (res.selection === 4) {
         player.setDynamicProperty(KEY_DAILY_MISSIONS, undefined);
         missionCache.delete(player.id);
         assignDailyMissions(player);
         player.sendMessage("§a✓ Misiones diarias reseteadas.");
-    } else if (res.selection === 1) {
+    } else if (res.selection === 5) {
         player.setDynamicProperty(KEY_WEEKLY_MISSIONS, undefined);
         missionCache.delete(player.id);
         assignWeeklyMissions(player);
         player.sendMessage("§a✓ Misiones semanales reseteadas.");
     }
+    await showMissionsAdminPanel(player);
 }
 
-console.warn("[DailyMissions] v2 lite cargado (misiones DESHABILITADAS)");
+console.warn("[DailyMissions] v3 optimizado cargado (misiones ACTIVADAS)");

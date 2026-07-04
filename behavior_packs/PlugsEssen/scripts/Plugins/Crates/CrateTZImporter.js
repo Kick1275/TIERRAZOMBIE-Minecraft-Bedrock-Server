@@ -2,7 +2,7 @@ import { ActionFormData, MessageFormData } from "@minecraft/server-ui";
 import { saveCrate, generateLotId } from "./CrateManager.js";
 
 // Items exactos de cada crate según DeadZzoneBP/scripts/TZ/scripts/Entidades/Creates.js
-const TZ_CRATES = [
+export const TZ_CRATES = [
     {
         id: "tz_oak",
         name: "Crate de Roble",

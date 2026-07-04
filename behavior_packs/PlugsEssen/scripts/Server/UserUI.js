@@ -61,6 +61,9 @@ import {
 	showMissionsAdminPanel,
 	trackMenuOpen
 } from "../Plugins/DailyMissions.js";
+import {
+	showDailyRewardsUI
+} from "../Plugins/DailyRewards.js";
 
 function getUserUIText(e, t, n = {}) {
 	let s = getText(e, `userUI.${t}`);
@@ -168,7 +171,7 @@ export function openMainUI(e) {
 			}[t.id];
 			return !(n && !isModuleEnabled(n))
 		});
-	// Orden: G1(warps,tpa,homes) → Misiones,Emotes,Cosméticos → G2(ranks,clans,stats,jobs,rules,userProfile,playerMarket,bank) → Música → G3(settings,credits) → Admin
+	// Orden: G1(warps,tpa,homes) → Misiones,Recompensas Diarias,Emotes,Cosméticos → G2(ranks,clans,stats,jobs,rules,userProfile,playerMarket,bank) → Música → G3(settings,credits) → Admin
 	const G1 = ["warps","tpa","homes"];
 	const G2 = ["ranks","clans","stats","jobs","rules","userProfile","playerMarket","bank"];
 	const G3 = ["settings","credits"];
@@ -182,6 +185,7 @@ export function openMainUI(e) {
 	// Añadir botones al form en orden correcto
 	rg1.forEach(b => s.button(`${b.title}\n${b.description}`, b.icon));
 	s.button("§e§l§´ Misiones\n§r§7Diarias y Semanales",                  "textures/ui/icon_book_writable.png");
+	s.button("§b§l§´ Recompensas Diarias\n§r§7Reclama tu premio del día",  "textures/items/gold_ingot");
 	s.button("§d§l§´ Emotes\n§r§7Ejecuta emotes y compra nuevos",          "textures/ui/icon_multiplayer");
 	s.button("§5§l§´ Cosméticos\n§r§7Ver y equipar tus cosméticos",        "textures/ui/MashupIcon");
 	rg2.forEach(b => s.button(`${b.title}\n${b.description}`, b.icon));
@@ -189,20 +193,21 @@ export function openMainUI(e) {
 	rg3.forEach(b => s.button(`${b.title}\n${b.description}`, b.icon));
 	rgX.forEach(b => s.button(`${b.title}\n${b.description}`, b.icon));
 	let o = -1;
-	const totalBeforeAdmin = rg1.length + 3 + rg2.length + 1 + rg3.length + rgX.length;
+	const totalBeforeAdmin = rg1.length + 4 + rg2.length + 1 + rg3.length + rgX.length;
 	isAdmin(e) && (s.button(getUserUIText(t, "adminButton"), "textures/ui/permissions_op_crown"), o = totalBeforeAdmin);
 
 	// Calcular índices de botones fijos
-	const missionsIdx = rg1.length;
-	const emoteIdx    = rg1.length + 1;
-	const cosmeticIdx = rg1.length + 2;
-	const musicIdx    = rg1.length + 3 + rg2.length;
+	const missionsIdx     = rg1.length;
+	const dailyRewardsIdx = rg1.length + 1;
+	const emoteIdx        = rg1.length + 2;
+	const cosmeticIdx     = rg1.length + 3;
+	const musicIdx        = rg1.length + 4 + rg2.length;
 
 	// Construir mapa selección→botón para botones configurables
 	const cfgMap = new Map(); // índice → botón
 	let ci = 0;
 	rg1.forEach(b => cfgMap.set(ci++, b));
-	ci += 3; // Misiones, Emotes, Cosméticos
+	ci += 4; // Misiones, Recompensas Diarias, Emotes, Cosméticos
 	rg2.forEach(b => cfgMap.set(ci++, b));
 	ci += 1; // Música
 	rg3.forEach(b => cfgMap.set(ci++, b));
@@ -211,10 +216,11 @@ export function openMainUI(e) {
 	s.show(e).then(async n => {
 		if (!n.canceled) {
 			const sel = n.selection;
-			if (sel === missionsIdx) { showMissionsUI(e); return; }
-			if (sel === emoteIdx)    { showEmoteUI(e); return; }
-			if (sel === cosmeticIdx) { showMyCosmeticsUI(e); return; }
-			if (sel === musicIdx)    { showMusicUI(e); return; }
+			if (sel === missionsIdx)     { showMissionsUI(e); return; }
+			if (sel === dailyRewardsIdx) { showDailyRewardsUI(e); return; }
+			if (sel === emoteIdx)        { showEmoteUI(e); return; }
+			if (sel === cosmeticIdx)     { showMyCosmeticsUI(e); return; }
+			if (sel === musicIdx)        { showMusicUI(e); return; }
 			if (sel === o && isAdmin(e)) { openAdminPanel(e); return; }
 			const b = cfgMap.get(sel);
 			if (b) {

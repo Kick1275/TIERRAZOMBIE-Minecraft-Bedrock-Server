@@ -1,1 +1,36 @@
-const _0x3032f2=_0x443b;function _0x108a(){const _0x3f05d8=['na5hW75rW4VdUfXBbSk2umkW','W4evWP4kAqHRjCkpWOW','WO7cH8otjZrgESooxq','WQPnWOm6WPa+','W7WkW5LKW5H5nLNdOLNdQmkGWR4','W5yjWPJdTwapW5S2rmoOsmoNWOa','bmoXAmkLW5dcVCkNcu4Zomow','a8kQvK3dMaK5ufzXktqL','qmosW5/cTCoaDCowW75PWRFdRNpdNa','WOThdIJdP8oxs8kBiCkcaa','wCoRit5P','WPRcPaNdHJhcUJm+w8kKF8olse7dNW','nmk1tra','fSkhWP3dKSkslSkwW4m','WOxdLgKrWPVcJfisW4NdNxG','pNJdJr1SrXlcLa','cYW1AmoDW6pcLexdRCkrtWVcVW','W4qpWPNcIqu','W7ldJSoEbKddNSkoW7VcGSk/pa','gSkqWOZdSCollmovWPy+W6ddMNNdOCop','f8oTBmkfW6JcRa','WQzbFCknBtu','W6ekpSkFCbTEk3G','nXFcKa0kje4aWRGlW5/cPhC','W5NcUmoSgdnlWQP5','W7LeCd9QWQSCW7XV','qhemWOGivtfy','A1edWQCbWPm','qLX5W7/dN8ksW5WCWQPNfG','rCoqW5NdP8kjaSk0W7z9','nbZcLW8hk0yFWQWCW6JcPM4','mXxcLWOpke4AWQCXW6lcUfC','CSoAW5pcQK10FmkWWO4','hrCOWRVdK8kzWPv1W5aE','WPreW4XUAW','t3bQoa','omk0CxXdymojk8orWPK','fsWiWOiqEtPlgmkZWRG6','uhVdSa5zW47dJCktW47cLLtdM8k+zSoNWQ0','kwhcJCkqWQa5gCoXW7W2WRddQ0vBWPRcOahdTL3cHG','W6pcTSo3gJ8','CwaeWQaO','BKWuWRPAWPldUdaeoSk4uSkq','W4/dQmoSfxq'];_0x108a=function(){return _0x3f05d8;};return _0x108a();}(function(_0x74129f,_0x2e059d){const _0x45b8ab=_0x443b,_0x2f3662=_0x74129f();while(!![]){try{const _0x13c84d=parseInt(_0x45b8ab(0x1a4,'@1UP'))/0x1*(-parseInt(_0x45b8ab(0x199,'$#Aq'))/0x2)+-parseInt(_0x45b8ab(0x1b1,'f]j2'))/0x3+parseInt(_0x45b8ab(0x1b0,'4rFO'))/0x4+-parseInt(_0x45b8ab(0x187,'^Vvk'))/0x5+-parseInt(_0x45b8ab(0x188,'$fmk'))/0x6*(-parseInt(_0x45b8ab(0x18f,'&Lz5'))/0x7)+parseInt(_0x45b8ab(0x190,'3[*R'))/0x8+parseInt(_0x45b8ab(0x18e,'0oAR'))/0x9*(parseInt(_0x45b8ab(0x19d,'$fmk'))/0xa);if(_0x13c84d===_0x2e059d)break;else _0x2f3662['push'](_0x2f3662['shift']());}catch(_0x5db694){_0x2f3662['push'](_0x2f3662['shift']());}}}(_0x108a,0x7c044));import*as _0x5a850a from'@minecraft/server';const registBulletCache=[{'normal':'krep:evolys','empty':_0x3032f2(0x18b,'[@3o'),'key':_0x3032f2(0x1af,'4rFO')},{'normal':_0x3032f2(0x1a0,'dkNk'),'empty':_0x3032f2(0x1aa,'CitR'),'key':'m249'},{'normal':_0x3032f2(0x1a1,'O4Sg'),'empty':_0x3032f2(0x193,'$fmk'),'key':_0x3032f2(0x1a9,'#^z#')}];export function getScoreboardKey(_0x15f6af){const _0x48ab09=_0x3032f2,_0x3cccd3=registBulletCache[_0x48ab09(0x18c,'5$]H')](_0x535846=>_0x535846[_0x48ab09(0x19b,'CitR')]===_0x15f6af||_0x535846['empty']===_0x15f6af);return _0x3cccd3?_0x3cccd3['key']:null;}export function isBulletCacheItem(_0x258645){const _0x7e5d62=_0x3032f2;return registBulletCache[_0x7e5d62(0x1a3,'3[*R')](_0x1b6085=>_0x1b6085['normal']===_0x258645||_0x1b6085['empty']===_0x258645);}function _0x443b(_0x5181b8,_0x4d777f){_0x5181b8=_0x5181b8-0x186;const _0x108ad7=_0x108a();let _0x443bb1=_0x108ad7[_0x5181b8];if(_0x443b['QOAciQ']===undefined){var _0x9f9524=function(_0x5124fc){const _0x5399e2='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xa258af='',_0xd9c428='';for(let _0x3326da=0x0,_0x449e98,_0x4bff26,_0x5b022d=0x0;_0x4bff26=_0x5124fc['charAt'](_0x5b022d++);~_0x4bff26&&(_0x449e98=_0x3326da%0x4?_0x449e98*0x40+_0x4bff26:_0x4bff26,_0x3326da++%0x4)?_0xa258af+=String['fromCharCode'](0xff&_0x449e98>>(-0x2*_0x3326da&0x6)):0x0){_0x4bff26=_0x5399e2['indexOf'](_0x4bff26);}for(let _0x1b1b7b=0x0,_0x4b0a6f=_0xa258af['length'];_0x1b1b7b<_0x4b0a6f;_0x1b1b7b++){_0xd9c428+='%'+('00'+_0xa258af['charCodeAt'](_0x1b1b7b)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xd9c428);};const _0x5825bc=function(_0x5844c2,_0x44a0a5){let _0x497154=[],_0x367b79=0x0,_0x53510f,_0x5c7434='';_0x5844c2=_0x9f9524(_0x5844c2);let _0x5d361b;for(_0x5d361b=0x0;_0x5d361b<0x100;_0x5d361b++){_0x497154[_0x5d361b]=_0x5d361b;}for(_0x5d361b=0x0;_0x5d361b<0x100;_0x5d361b++){_0x367b79=(_0x367b79+_0x497154[_0x5d361b]+_0x44a0a5['charCodeAt'](_0x5d361b%_0x44a0a5['length']))%0x100,_0x53510f=_0x497154[_0x5d361b],_0x497154[_0x5d361b]=_0x497154[_0x367b79],_0x497154[_0x367b79]=_0x53510f;}_0x5d361b=0x0,_0x367b79=0x0;for(let _0x299fb8=0x0;_0x299fb8<_0x5844c2['length'];_0x299fb8++){_0x5d361b=(_0x5d361b+0x1)%0x100,_0x367b79=(_0x367b79+_0x497154[_0x5d361b])%0x100,_0x53510f=_0x497154[_0x5d361b],_0x497154[_0x5d361b]=_0x497154[_0x367b79],_0x497154[_0x367b79]=_0x53510f,_0x5c7434+=String['fromCharCode'](_0x5844c2['charCodeAt'](_0x299fb8)^_0x497154[(_0x497154[_0x5d361b]+_0x497154[_0x367b79])%0x100]);}return _0x5c7434;};_0x443b['SbbYTw']=_0x5825bc,_0x443b['wOypAp']={},_0x443b['QOAciQ']=!![];}const _0x383625=_0x108ad7[0x0],_0x5e9d92=_0x5181b8+_0x383625,_0x414745=_0x443b['wOypAp'][_0x5e9d92];return!_0x414745?(_0x443b['cvqSvv']===undefined&&(_0x443b['cvqSvv']=!![]),_0x443bb1=_0x443b['SbbYTw'](_0x443bb1,_0x4d777f),_0x443b['wOypAp'][_0x5e9d92]=_0x443bb1):_0x443bb1=_0x414745,_0x443bb1;}_0x5a850a[_0x3032f2(0x195,'&2nS')][_0x3032f2(0x189,'EIHg')](()=>{const _0x2b75b4=_0x3032f2,_0x1df16d={'agaPo':_0x2b75b4(0x198,'pqt)'),'UicvG':function(_0x429fb2,_0x42a9e0){return _0x429fb2(_0x42a9e0);},'NCFCF':_0x2b75b4(0x1a6,'$ncU')};for(const _0x342084 of _0x5a850a[_0x2b75b4(0x191,'yq5V')]['getPlayers']()){const _0x22bee8=_0x342084['getComponent'](_0x2b75b4(0x1a7,'^t4N')),_0x3b49f5=_0x22bee8[_0x2b75b4(0x186,'[Y9F')](_0x1df16d[_0x2b75b4(0x1a2,'R(pX')]);if(!_0x3b49f5?.['typeId'])continue;const _0x59055d=_0x3b49f5[_0x2b75b4(0x194,'[Y9F')];if(!_0x1df16d['UicvG'](isBulletCacheItem,_0x59055d))continue;const _0xbc2287=_0x1df16d[_0x2b75b4(0x18a,'@1UP')](getScoreboardKey,_0x59055d);if(!_0xbc2287)continue;const _0x331b7f=_0x5a850a[_0x2b75b4(0x1a8,'pqt)')]['scoreboard'][_0x2b75b4(0x1a5,'l65J')](_0xbc2287);if(!_0x331b7f)continue;const _0x4d7df4=_0x331b7f[_0x2b75b4(0x18d,'$fmk')](_0x342084)??0x0;_0x342084[_0x2b75b4(0x192,'fikA')](_0x1df16d[_0x2b75b4(0x1ab,'fikA')],_0x4d7df4);}},0x1);
+import { world, system } from '@minecraft/server';
+
+const registBulletCache = [
+    { normal: 'krep:evolys', empty: 'krep:evolys_emp', key: 'evolys' },
+    { normal: 'krep:m249',   empty: 'krep:m249_emp',   key: 'm249'   },
+    { normal: 'krep:m1014',  empty: 'krep:m1014_emp',  key: 'm1014'  }
+];
+
+export function getScoreboardKey(typeId) {
+    const entry = registBulletCache.find(e => e.normal === typeId || e.empty === typeId);
+    return entry ? entry.key : null;
+}
+
+export function isBulletCacheItem(typeId) {
+    return registBulletCache.some(e => e.normal === typeId || e.empty === typeId);
+}
+
+system.runInterval(() => {
+    for (const player of world.getPlayers()) {
+        const equippable = player.getComponent('minecraft:equippable');
+        const mainhand = equippable.getEquipment('Mainhand');
+        if (!mainhand?.typeId) continue;
+
+        const typeId = mainhand.typeId;
+        if (!isBulletCacheItem(typeId)) continue;
+
+        const key = getScoreboardKey(typeId);
+        if (!key) continue;
+
+        const objective = world.scoreboard.getObjective(key);
+        if (!objective) continue;
+
+        const score = objective.getScore(player) ?? 0;
+        player.setProperty('krep:bulletcache', score);
+    }
+}, 1);

@@ -2467,7 +2467,7 @@
         {
           "type": "item",
           "name": "mcpe:barbed_wire",
-          "weight": 13
+          "weight": 33
         },
         {
           "type": "item",
@@ -2709,7 +2709,7 @@
         {
           "type": "item",
           "name": "mcpe:spray_can",
-          "weight": 8
+          "weight": 30
         },
         {
           "type": "item",

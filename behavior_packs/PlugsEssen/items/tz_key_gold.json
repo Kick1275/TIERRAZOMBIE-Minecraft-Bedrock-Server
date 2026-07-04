@@ -1,0 +1,19 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tz:key_gold",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": "golden_key",
+      "minecraft:display_name": {
+        "value": "§e§lLlave de Crate de Oro"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:hand_equipped": false
+    }
+  }
+}

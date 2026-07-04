@@ -2682,8 +2682,13 @@
     "play.music":{
       "category" : "music",
       "sounds" : [
-        "sounds/TZ/play_music1",
-        "sounds/TZ/play_music2"
+        "sounds/TZ/sound_1",
+        "sounds/TZ/sound_2",
+        "sounds/TZ/sound_3",
+        "sounds/TZ/sound_4",
+        "sounds/TZ/sound_5",
+        "sounds/TZ/sound_6",
+        "sounds/TZ/sound_7"
       ]
     },    
     "safe.zone":{

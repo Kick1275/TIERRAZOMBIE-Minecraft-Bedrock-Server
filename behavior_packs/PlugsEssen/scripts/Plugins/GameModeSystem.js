@@ -14,6 +14,7 @@ import {
     randomBorderSpawn,
 } from "./PetroEventSystem.js";
 import { allowLeaveContainZone } from "./TradeZoneProtection.js";
+import { tmOnPlayGuardia } from "./TutorialMissions.js";
 
 console.warn("[GameMode] v3 lite - iniciando...");
 
@@ -482,6 +483,7 @@ export async function showGuardiaForm(player) {
     let idx = 0;
     if (res.selection === idx++) {
         allowLeaveContainZone(player.id);
+        try { tmOnPlayGuardia(player); } catch {}
         const map = PLAY_MAPS[Math.floor(Math.random() * PLAY_MAPS.length)];
         enterMap(player, map);
         return;

@@ -232,6 +232,7 @@ world.afterEvents.playerSpawn.subscribe((ev) => {
                 const pos = player.location;
                 moveTracker.set(player.id, { lastX: pos.x, lastZ: pos.z, movingTicks: 0 });
                 player.addEffect("slowness",       999999, { amplifier: SLOWNESS_AMP, showParticles: false });
+                player.addEffect("weakness",       999999, { amplifier: SLOWNESS_AMP, showParticles: false });
                 player.addEffect("mining_fatigue", 999999, { amplifier: 255,          showParticles: false });
                 console.warn(`[Downed] ${player.name} restaurado como tumbado tras reload`);
             });

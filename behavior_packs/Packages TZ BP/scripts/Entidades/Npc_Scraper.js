@@ -19,7 +19,7 @@ const npcItems = [
     { id: "mcpe:landmines",          name: { es: "Mina Terrestre",        en: "Landmine" },             buyPrice: 3450, sellPrice: 2150, icon: "textures/items/misc/landmine.png" },
     { id: "mcpe:lockpick",           name: { es: "Ganzúa",                en: "Lockpick" },             buyPrice: 4120, sellPrice: 2040, icon: "textures/items/misc/lockpick.png" },
     { id: "mcpe:nail_box",           name: { es: "Caja de Clavos",        en: "Nail Box" },             buyPrice: 2360, sellPrice: 1520, icon: "textures/items/misc/.nail_boxpng" },
-    { id: "mcpe:plastic_explosive",  name: { es: "Explosivo Plástico",    en: "Plastic Explosive" },    buyPrice: 3900, sellPrice: 2300, icon: "textures/items/misc/plastic_explosive.png" },
+    { id: "mcpe:plastic_explosive",  name: { es: "Explosivo Plástico",    en: "Plastic Explosive" },    buyPrice: 13400, sellPrice: 5360, icon: "textures/items/misc/plastic_explosive.png" },
     { id: "mcpe:cooking_pot",        name: { es: "Olla de Cocina",        en: "Cooking Pot" },          buyPrice: 250,  sellPrice: 150,  icon: "textures/items/misc/cooking_pot.png" },
     { id: "mcpe:radios",             name: { es: "Radio",                 en: "Radio" },                buyPrice: 2240, sellPrice: 1180, icon: "textures/items/misc/radio.png" },
     { id: "mcpe:nail_box",           name: { es: "Caja de Clavos",        en: "Nail Box" },             buyPrice: 15,   sellPrice: 5,    icon: "textures/items/misc/random_paper.png" },

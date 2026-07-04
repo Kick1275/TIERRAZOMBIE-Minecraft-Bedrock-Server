@@ -49,7 +49,7 @@ const npcItems = [
     { id: "mcpe:ham_radios",         name: { en_US: "Ham Radio",            es_ES: "Radio Aficionado"        }, sellPrice: 1440, buyPrice: 3600,  icon: "textures/items/misc/ham_radio.png" },
     { id: "mcpe:landmines",          name: { en_US: "Landmine",             es_ES: "Mina Terrestre"          }, sellPrice: 2800, buyPrice: 7000,  icon: "textures/items/misc/landmine.png" },
     { id: "mcpe:lockpick",           name: { en_US: "Lockpick",             es_ES: "Ganzúa"                  }, sellPrice: 8000, buyPrice: 17500, icon: "textures/items/misc/lockpick.png" },
-    { id: "mcpe:plastic_explosive",  name: { en_US: "Plastic Explosive",    es_ES: "Explosivo Plástico"      }, sellPrice: 3200, buyPrice: 18000, icon: "textures/items/misc/plastic_explosive.png" },
+    { id: "mcpe:plastic_explosive",  name: { en_US: "Plastic Explosive",    es_ES: "Explosivo Plástico"      }, sellPrice: 2380, buyPrice: 13400, icon: "textures/items/misc/plastic_explosive.png" },
     { id: "mcpe:cooking_pot",        name: { en_US: "Cooking Pot",          es_ES: "Olla de Cocina"          }, sellPrice: 160,  buyPrice: 400,   icon: "textures/items/misc/cooking_pot.png" },
     { id: "mcpe:radios",             name: { en_US: "Radio",                es_ES: "Radio"                   }, sellPrice: 1440, buyPrice: 3600,  icon: "textures/items/misc/radio.png" },
     { id: "mcpe:random_paper",       name: { en_US: "Random Paper",         es_ES: "Papel Aleatorio"         }, sellPrice: 6,    buyPrice: 15,    icon: "textures/items/misc/random_paper.png" },

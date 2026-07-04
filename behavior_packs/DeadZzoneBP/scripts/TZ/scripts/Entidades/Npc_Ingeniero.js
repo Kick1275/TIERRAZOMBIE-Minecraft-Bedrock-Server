@@ -64,12 +64,12 @@ const npcItems = [
     { id: "krep:p90",     name: { en_US: "P90",           es_ES: "P90" },           sellPrice: 15200, buyPrice: 38000,  icon: "textures/items/p90.png" },
     // ── Pistolas ──────────────────────────────────────────────────────────────
     { id: "krep:g17",     name: { en_US: "Glock 17",      es_ES: "Glock 17" },      sellPrice: 2800,  buyPrice: 7000,   icon: "textures/items/g17.png" },
-    { id: "krep:g18",     name: { en_US: "Glock 18",      es_ES: "Glock 18" },      sellPrice: 4000,  buyPrice: 10000,  icon: "textures/items/g18.png" },
+    { id: "krep:g18",     name: { en_US: "Glock 18",      es_ES: "Glock 18" },      sellPrice: 1600,  buyPrice: 4000,   icon: "textures/items/g18.png" },
     { id: "krep:m1911",   name: { en_US: "M1911",         es_ES: "M1911" },         sellPrice: 3600,  buyPrice: 9000,   icon: "textures/items/m1911.png" },
     { id: "krep:p320",    name: { en_US: "P320",          es_ES: "P320" },          sellPrice: 3600,  buyPrice: 9000,   icon: "textures/items/p320.png" },
     { id: "krep:deagle",  name: { en_US: "Desert Eagle",  es_ES: "Desert Eagle" },  sellPrice: 11200, buyPrice: 28000,  icon: "textures/items/deagle.png" },
     { id: "krep:b93",     name: { en_US: "B93R",          es_ES: "B93R" },          sellPrice: 4800,  buyPrice: 12000,  icon: "textures/items/b93.png" },
-    { id: "krep:cp",      name: { en_US: "CP",            es_ES: "CP" },            sellPrice: 2400,  buyPrice: 6000,   icon: "textures/items/cp.png" },
+    { id: "krep:cp",      name: { en_US: "CP",            es_ES: "CP" },            sellPrice: 8800,  buyPrice: 22000,  icon: "textures/items/cp.png" },
     { id: "krep:t50",     name: { en_US: "T50",           es_ES: "T50" },           sellPrice: 10000, buyPrice: 25000,  icon: "textures/items/t50.png" },
     // ── Escopetas ─────────────────────────────────────────────────────────────
     { id: "krep:m870",    name: { en_US: "M870",          es_ES: "M870" },          sellPrice: 14000, buyPrice: 35000,  icon: "textures/items/m870.png" },

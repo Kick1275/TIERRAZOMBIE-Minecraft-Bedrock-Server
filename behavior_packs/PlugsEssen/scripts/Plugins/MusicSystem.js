@@ -22,14 +22,15 @@ system.runInterval(() => {
 export function startMusic(player) {
     try {
         const vol = (() => { try { const v = player.getDynamicProperty("music:volume"); return typeof v === "number" ? v : 1; } catch { return 1; } })();
+         player.runCommand(`stopsound @s`)
+        system.runTimeout(() => {
         player.runCommand(`playsound ${pickSong()} @s ~ ~ ~ ${vol}`);
+      }, 20 * 2);
     } catch {}
 }
 
 export function stopMusic(player) {
-    for (const s of SONGS) {
-        try { player.runCommand(`stopsound @s ${s}`); } catch {}
-    }
+    try { player.runCommand(`stopsound @s`); } catch {}
 }
 
 console.warn("[MusicSystem] Cargado");

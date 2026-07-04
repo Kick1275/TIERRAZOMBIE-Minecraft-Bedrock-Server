@@ -47,10 +47,12 @@ function setScore(player, obj, val) {
 
 export function equipCosmetic(player, cosmetic) {
     try {
-        // item_lock evita moverlo, keep_on_death evita perderlo al morir
+        // item_lock evita moverlo, keep_on_death evita perderlo al morir.
+        // El "0" tras el slot es el índice de slot que exige replaceitem
+        // (siempre 0 para slots de armadura) — sin él el comando falla.
         const nbt = `{"item_lock":{"mode":"lock_in_slot"},"keep_on_death":{}}`;
         player.runCommand(
-            `replaceitem entity @s ${cosmetic.slot} ${cosmetic.itemId} 1 0 ${nbt}`
+            `replaceitem entity @s ${cosmetic.slot} 0 ${cosmetic.itemId} 1 0 ${nbt}`
         );
         if (!player.hasTag(EQUIP_TAG + cosmetic.key)) player.addTag(EQUIP_TAG + cosmetic.key);
     } catch (e) {
@@ -61,7 +63,7 @@ export function equipCosmetic(player, cosmetic) {
 export function unequipCosmetic(player, cosmetic) {
     try {
         // Quitar el cosmético usando replaceitem con air
-        player.runCommand(`replaceitem entity @s ${cosmetic.slot} air`);
+        player.runCommand(`replaceitem entity @s ${cosmetic.slot} 0 air`);
         if (player.hasTag(EQUIP_TAG + cosmetic.key)) player.removeTag(EQUIP_TAG + cosmetic.key);
     } catch (e) {
         console.warn("[Cosmetics] unequipCosmetic error: " + e);
