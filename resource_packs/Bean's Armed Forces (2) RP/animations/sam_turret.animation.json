@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sam_turret.spin": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"rotation": [
+						"query.target_x_rotation+25",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		}
+	}
+}

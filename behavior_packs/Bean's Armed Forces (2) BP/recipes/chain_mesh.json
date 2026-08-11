@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:chain_mesh"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:iron_ingot"
+			},
+			"N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"ANA",
+			"NAN",
+			"ANA"
+		],
+		"result": {
+			"item": "af:chain_mesh",
+			"count": 32
+		}
+	}
+}

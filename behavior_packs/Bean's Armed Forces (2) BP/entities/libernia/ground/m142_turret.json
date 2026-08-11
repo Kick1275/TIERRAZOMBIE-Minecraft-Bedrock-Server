@@ -1,0 +1,455 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:m142_turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"af:fired": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.25,
+					"duration": 1,
+					"knockback_horizontal_strength": 8,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"test": "is_riding",
+								"subject": "other"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"knockback_range": 0,
+					"knockback_damage": 20,
+					"on_roar_end": {
+						"event": "af:stop_fired",
+						"target": "self"
+					}
+				}
+			},
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"m142",
+						"libernia",
+						"turret"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"m142",
+						"telslakia",
+						"turret"
+					]
+				}
+			},
+			"camo_baf": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			},
+			"camo_irl": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"m142",
+					"turret"
+				]
+			},
+			"minecraft:health": {
+				"value": 5000
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"cause": "suffocation"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0.8
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"target": "self",
+						"event": "af:empty",
+						"filters": {
+							"test": "has_tag",
+							"subject": "self",
+							"value": "R_loaded",
+							"operator": "!="
+						}
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:rangefinder"
+									},
+									{
+										"test": "is_leashed",
+										"value": true,
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:fire_range_m142",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:inform_speed",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "R_loaded",
+									"subject": "self",
+									"operator": "=="
+								},
+								{
+									"test": "has_mob_effect",
+									"subject": "self",
+									"value": "slowness",
+									"operator": "=="
+								}
+							]
+						},
+						"interact_text": "action.interact.fire_r"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:fire_hydra_m142",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "R_loaded",
+									"subject": "self",
+									"operator": "=="
+								},
+								{
+									"test": "has_mob_effect",
+									"subject": "self",
+									"value": "slowness",
+									"operator": "!="
+								}
+							]
+						},
+						"interact_text": "action.interact.fire_r",
+						"cooldown": 0.5
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:hydra_rocket"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "is_riding",
+										"subject": "other",
+										"value": false,
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:inform",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_r"
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add RocketAmmo dummy",
+						"scoreboard objectives add RocketLoaded dummy",
+						"scoreboard objectives add RocketRemaining dummy",
+						"scoreboard players set @s RocketAmmo 0",
+						"scoreboard players set @s RocketLoaded 0",
+						"scoreboard players set @s RocketRemaining 0"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:shot_fired": {
+				"queue_command": {
+					"command": [
+						"tag @s remove loading",
+						"playsound tank.fire_inside @p[r=2]",
+						"playsound missile.fire @a ~ ~ ~ 100 1",
+						"particle af:launch_smoke ~ ~ ~",
+						"scoreboard players add @s RocketAmmo 1",
+						"scoreboard players operation @s RocketRemaining = @s RocketLoaded",
+						"scoreboard players operation @s RocketRemaining -= @s RocketAmmo",
+						"title @p[r=5] actionbar {\"rawtext\":[{\"text\":\"(\"},{\"score\":{\"name\":\"@s\",\"objective\":\"RocketRemaining\"}},{\"text\":\"/\"},{\"score\":{\"name\":\"@s\",\"objective\":\"RocketLoaded\"}},{\"text\":\") Rockets\"}]}",
+						"tag @s remove magazine_empty",
+						"execute as @s if score @s RocketAmmo = @s RocketLoaded run tag @s add magazine_empty",
+						"execute as @s[tag=magazine_empty] run tag @s remove R_loaded",
+						"execute as @s[tag=magazine_empty] run tag @s remove full",
+						"execute as @s[tag=magazine_empty] at @s run tag @e[type=af:m142,r=3,c=1] remove full",
+						"execute as @s[tag=magazine_empty] run scoreboard players set @s RocketAmmo 0",
+						"execute as @s[tag=magazine_empty] run scoreboard players set @s RocketLoaded 0",
+						"tag @s remove magazine_empty"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:fired"
+					]
+				}
+			},
+			"af:stop_fired": {
+				"remove": {
+					"component_groups": [
+						"af:fired"
+					]
+				}
+			},
+			"af:R_loaded": {
+				"queue_command": {
+					"command": [
+						"execute as @s unless score @s RocketLoaded matches 6.. run scoreboard players add @s RocketLoaded 1",
+						"tag @s add R_loaded",
+						"scoreboard players operation @s RocketRemaining = @s RocketLoaded",
+						"scoreboard players operation @s RocketRemaining -= @s RocketAmmo",
+						"title @a[r=8] actionbar {\"rawtext\":[{\"text\":\"§aRocket loaded (\"},{\"score\":{\"name\":\"@s\",\"objective\":\"RocketLoaded\"}},{\"text\":\"/6)\"}]}",
+						"execute as @s if score @s RocketLoaded matches 6 run tag @s add full",
+						"execute as @s if score @s RocketLoaded matches 6 at @s run tag @e[type=af:m142,r=3,c=1] add full"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main",
+						"camera @a[r=5] clear"
+					]
+				}
+			},
+			"af:inform": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar exit the Vehicle to load this item."
+					]
+				}
+			},
+			"af:inform_speed": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar you can not fire whilst moving."
+					]
+				}
+			},
+			"af:empty": {
+				"queue_command": {
+					"command": [
+						"playanimation @s animation.m142.empty"
+					]
+				}
+			},
+			"af:camo_baf": {
+				"add": {
+					"component_groups": [
+						"camo_baf"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"camo_irl"
+					]
+				}
+			},
+			"af:camo_irl": {
+				"add": {
+					"component_groups": [
+						"camo_irl"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"camo_baf"
+					]
+				}
+			},
+			"af:rangefind": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar Predicting Impact Coords..."
+					]
+				}
+			},
+			"af:fire_range_m142": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			},
+			"af:fire_hydra_m142": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:dyeable_combat_suit"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:leather"
+			},
+			"I": {
+				"item": "minecraft:white_dye"
+			}
+		},
+		"pattern": [
+			"LIL",
+			" L "
+		],
+		"result": {
+			"item": "af:dyeable_combat_suit",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+    "animations": {
+        "animation.ride_phantom": {
+            "animation_length": 0.2,
+            "loop": true,
+            "timeline": {
+                "0.1": "/ride @e[type=creeper,r=3] start_riding @s teleport_rider",
+    "0.11": "/ride @e[type=zombie,r=3] start_riding @s teleport_rider",
+    "0.12": "/execute at @s as @s if entity @a[r=6] run ride @e[type=zombie,r=1,c=1] stop_riding",
+    "0.13": "/execute at @s as @s if entity @a[r=6] run event entity @e[type=creeper,c=3] minecraft:start_exploding_forced",
+    "0.14": "/playanimation @e[r=3,type=zombie] animation.armor_stand.honor_pose f 5"
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}
+

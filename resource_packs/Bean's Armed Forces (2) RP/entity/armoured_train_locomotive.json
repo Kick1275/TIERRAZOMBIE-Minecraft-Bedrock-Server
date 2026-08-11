@@ -1,0 +1,31 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:armoured_train_locomotive",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/armoured_train_locomotive"
+			},
+			"geometry": {
+				"default": "geometry.armoured_train_locomotive"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default"
+			],
+			"spawn_egg": {
+				"texture": "af_armoured_train_locomotive_egg"
+			},
+			"animations": {
+				"move": "animation.armoured_train.pitch"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			}
+		}
+	}
+}

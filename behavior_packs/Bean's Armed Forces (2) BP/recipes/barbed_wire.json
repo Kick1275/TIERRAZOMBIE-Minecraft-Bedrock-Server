@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:barbed_wire"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"S": {
+				"item": "af:steel_ingot"
+			},
+			"N": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"pattern": [
+			"N N",
+			" S ",
+			"N N"
+		],
+		"result": {
+			"item": "af:barbed_wire_item",
+			"count": 32
+		}
+	}
+}

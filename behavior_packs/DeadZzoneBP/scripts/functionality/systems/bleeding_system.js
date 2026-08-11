@@ -1,10 +1,14 @@
 import * as mc from "@minecraft/server";
 import { getScore, setScore } from "../utils/scoreboard_utils.js";
 
+// Compartido a nivel de módulo: nunca se muta (solo .some/.forEach/.length), así que no hace
+// falta reconstruir el array de 9 strings en cada instancia (reduce presión de GC).
+const BLEEDING_TAGS = Array.from({ length: 9 }, (_, i) => "bleeding" + (i + 1));
+
 class BleedingSystem {
     constructor(player) {
         this.player = player;
-        this.bleedingTags = Array.from({ length: 9 }, (_, i) => "bleeding" + (i + 1));
+        this.bleedingTags = BLEEDING_TAGS;
     }
 
     hasBleeding() {
@@ -105,9 +109,15 @@ class BleedingSystem {
 mc.world.afterEvents.projectileHitEntity.subscribe(BleedingSystem.handleProjectileHit);
 mc.world.afterEvents.entityHitEntity.subscribe(BleedingSystem.handleEntityHit);
 
+// Fusionado: los dos loops de 20 ticks (updateBleeding + increaseBleedingChance) comparten
+// un solo getAllPlayers() y una sola instancia BleedingSystem por jugador. Por jugador se
+// conserva el mismo orden (updateBleeding → increaseBleedingChance) y los jugadores son
+// independientes, así que el resultado es idéntico.
 mc.system.runInterval(() => {
     mc.world.getAllPlayers().forEach(player => {
-        new BleedingSystem(player).updateBleeding();
+        const bleedingSystem = new BleedingSystem(player);
+        bleedingSystem.updateBleeding();
+        bleedingSystem.increaseBleedingChance();
     });
 }, 20);
 
@@ -116,12 +126,6 @@ mc.system.runInterval(() => {
         new BleedingSystem(player).applyBleedingDamage();
     });
 }, 10 * 20);
-
-mc.system.runInterval(() => {
-    mc.world.getAllPlayers().forEach(player => {
-        new BleedingSystem(player).increaseBleedingChance();
-    });
-}, 20);
 
 mc.system.runInterval(() => {
 	mc.world.getAllPlayers().forEach(player => {

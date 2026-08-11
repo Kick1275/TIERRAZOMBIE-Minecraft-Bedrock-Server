@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:af_16ddh",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/16ddh/16ddh",
+				"libernia": "textures/entity/16ddh/16ddh_libernia",
+				"telslakia": "textures/entity/16ddh/16ddh_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.16ddh"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_16ddh_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.16ddh.scale",
+				"water_wake": "controller.animation.water_wake"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"water_wake"
+				]
+			},
+			"particle_effects": {
+				"wake": "af:wake_loop_large"
+			}
+		}
+	}
+}

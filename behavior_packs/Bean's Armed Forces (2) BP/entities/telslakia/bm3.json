@@ -1,0 +1,246 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:bm3",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"within_radius": 64,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "monster"
+								}
+							]
+						},
+						"must_see": true,
+						"max_dist": 64
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"none_of": [
+												{
+													"test": "has_tag",
+													"subject": "other",
+													"value": "telslakia",
+													"operator": "=="
+												},
+												{
+													"test": "is_family",
+													"subject": "other",
+													"value": "telslakia",
+													"operator": "=="
+												}
+											]
+										}
+									]
+								},
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "libernia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "vehicle",
+											"operator": "!="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "sentry",
+											"operator": "!="
+										}
+									]
+								}
+							]
+						},
+						"max_dist": 128,
+						"must_see": true
+					}
+				],
+				"reselect_targets": true,
+				"must_see": true
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:manual",
+									"domain": "hand"
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "purr"
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1005
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 0.9
+			},
+			"minecraft:type_family": {
+				"family": [
+					"telslakia",
+					"inanimate",
+					"sentry"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia"
+										}
+									]
+								}
+							]
+						},
+						"deals_damage": false
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": true
+			},
+			"minecraft:movement.generic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_path_from_air": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/bm3.json"
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 2,
+				"attack_interval": 5,
+				"attack_radius": 64
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "minecraft:iron_ingot",
+						"heal_amount": 15
+					}
+				]
+			},
+			"minecraft:shooter": {
+				"def": "af:m24sniper_bullet<af:turret>"
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:renders_when_invisible": {},
+			"minecraft:behavior.look_at_player": {
+				"priority": 4,
+				"look_distance": 32,
+				"probability": 1
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar drops on death, attacks non-Telslakians.",
+						"summon af:sentry_base",
+						"playsound place.iron @a ~ ~ ~"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar attacks non-Telslakians."
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function block_break"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

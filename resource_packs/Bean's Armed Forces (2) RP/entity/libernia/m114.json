@@ -1,0 +1,55 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:m114",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/m114"
+			},
+			"geometry": {
+				"default": "geometry.m114"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default"
+			],
+			"spawn_egg": {
+				"texture": "af_m114_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"look_at_target": "animation.m114.look_at_target",
+				"shoot": "animation.m114.shoot",
+				"move": "animation.m114.move",
+				"ready": "animation.m114.ready",
+				"transport": "animation.m114.transport",
+				"scale": "animation.m114.scale"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"scale",
+					{
+						"transport": "query.is_leashed"
+					},
+					{
+						"move": "query.modified_move_speed"
+					},
+					{
+						"shoot": "query.is_roaring"
+					},
+					{
+						"ready": "query.is_ignited"
+					}
+				]
+			},
+			"particle_effects": {
+				"smoke": "af:artillery_smoke",
+				"flash": "af:tank_flash",
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

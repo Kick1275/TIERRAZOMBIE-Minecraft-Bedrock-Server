@@ -2,12 +2,12 @@ import { system, world } from "@minecraft/server";
 
 // ─── Armadura vanilla ─────────────────────────────────────────────────────────
 export const armorProtection = {
-    leather:   { helmet: 0.04, chestplate: 0.10, leggings: 0.07, boots: 0.02 },
-    chainmail: { helmet: 0.10, chestplate: 0.20, leggings: 0.14, boots: 0.05 },
-    iron:      { helmet: 0.15, chestplate: 0.28, leggings: 0.20, boots: 0.08 },
-    diamond:   { helmet: 0.22, chestplate: 0.38, leggings: 0.28, boots: 0.11 },
-    netherite: { helmet: 0.28, chestplate: 0.45, leggings: 0.33, boots: 0.14 },
-    golden:    { helmet: 0.06, chestplate: 0.14, leggings: 0.10, boots: 0.04 },
+    leather:   { helmet: 0.01,   chestplate: 0.025,  leggings: 0.0175, boots: 0.005  },
+    chainmail: { helmet: 0.025,  chestplate: 0.05,   leggings: 0.035,  boots: 0.0125 },
+    iron:      { helmet: 0.0375, chestplate: 0.07,   leggings: 0.05,   boots: 0.02   },
+    diamond:   { helmet: 0.055,  chestplate: 0.095,  leggings: 0.07,   boots: 0.0275 },
+    netherite: { helmet: 0.07,   chestplate: 0.1125, leggings: 0.0825, boots: 0.035  },
+    golden:    { helmet: 0.015,  chestplate: 0.035,  leggings: 0.025,  boots: 0.01   },
 };
 
 // ─── Chalecos DeadZzone — reducción body shot ─────────────────────────────────

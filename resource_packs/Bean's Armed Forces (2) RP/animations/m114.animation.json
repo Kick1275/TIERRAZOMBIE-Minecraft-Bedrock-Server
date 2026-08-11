@@ -1,0 +1,617 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.m114.look_at_target": {
+			"loop": true,
+			"bones": {
+				"gun": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				},
+				"body": {
+					"rotation": [
+						0,
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.m114.shoot": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							-2.5,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0833": [
+							0,
+							1,
+							1
+						],
+						"0.1667": [
+							0,
+							0,
+							1
+						],
+						"0.4167": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"gun": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							0,
+							0,
+							3
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"right_stand": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							1,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"left_stand": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							-1,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"wheels": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							-15,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"armour": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0833": [
+							-5,
+							0,
+							0
+						],
+						"0.125": [
+							5,
+							0,
+							0
+						],
+						"0.2083": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "flash",
+					"locator": "particle"
+				},
+				"1.0": {
+					"effect": "smoke",
+					"locator": "particle"
+				}
+			}
+		},
+		"animation.m114.move": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [
+								-5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.75": {
+							"post": [
+								5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": {
+							"post": [
+								-5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.75": {
+							"post": [
+								5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"position": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [
+								0,
+								2,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.75": {
+							"post": [
+								0,
+								2,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": {
+							"post": [
+								0,
+								2,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.75": {
+							"post": [
+								0,
+								2,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"gun": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5": {
+							"post": [
+								-5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"stands": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							10,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						],
+						"0.75": [
+							-5,
+							0,
+							0
+						],
+						"1.0": [
+							5,
+							0,
+							0
+						],
+						"1.25": [
+							5,
+							0,
+							0
+						],
+						"1.5": [
+							0,
+							0,
+							0
+						],
+						"1.75": [
+							-5,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"wheels": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							-360,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.m114.ready": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"gun": {
+					"scale": {
+						"0.0": {
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.125": {
+							"post": [
+								1.01,
+								1.01,
+								1.01
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.375": {
+							"post": [
+								1.01,
+								1.01,
+								1.01
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.625": {
+							"post": [
+								1.01,
+								1.01,
+								1.01
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.75": {
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.875": {
+							"post": [
+								1.01,
+								1.01,
+								1.01
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.m114.transport": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						0,
+						180,
+						0
+					]
+				},
+				"stands": {
+					"rotation": [
+						10,
+						0,
+						0
+					]
+				},
+				"right_stand": {
+					"rotation": [
+						0,
+						-27.5,
+						0
+					]
+				},
+				"left_stand": {
+					"rotation": [
+						0,
+						27.5,
+						0
+					]
+				}
+			}
+		},
+		"animation.m114.transport2": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						0,
+						180,
+						0
+					]
+				},
+				"stands": {
+					"rotation": [
+						10,
+						0,
+						0
+					]
+				},
+				"right_stand": {
+					"rotation": [
+						0,
+						-23,
+						0
+					]
+				},
+				"left_stand": {
+					"rotation": [
+						0,
+						23,
+						0
+					]
+				}
+			}
+		},
+		"animation.m114.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 2.65
+				}
+			}
+		}
+	}
+}

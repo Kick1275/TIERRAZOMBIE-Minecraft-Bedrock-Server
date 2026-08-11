@@ -1,0 +1,28 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.c_ram.target": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"active": "q.facing_target_to_range_attack"
+						}
+					],
+					"blend_transition": 1
+				},
+				"active": {
+					"animations": [
+						"spin"
+					],
+					"transitions": [
+						{
+							"default": "!q.facing_target_to_range_attack"
+						}
+					],
+					"blend_transition": 1
+				}
+			}
+		}
+	}
+}

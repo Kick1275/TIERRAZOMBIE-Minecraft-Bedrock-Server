@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "af:deportation_papers"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:book",
+				"count": 1
+			},
+			{
+				"item": "minecraft:red_dye",
+				"count": 1
+			}
+		],
+		"result": {
+			"item": "af:neutral_id",
+			"count": 1
+		}
+	}
+}

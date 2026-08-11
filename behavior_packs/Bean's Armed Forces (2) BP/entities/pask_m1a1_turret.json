@@ -1,0 +1,513 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:pask_m1a1_turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"af:HE": {
+				"minecraft:shooter": {
+					"def": "af:he_shell<af:m1a1>"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 0,
+					"attack_radius": 64,
+					"attack_interval_max": 10,
+					"attack_interval_min": 5
+				}
+			},
+			"af:AP": {
+				"minecraft:shooter": {
+					"def": "af:ap_shell<af:m1a1>"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 0,
+					"attack_radius": 64,
+					"attack_interval_max": 10,
+					"attack_interval_min": 5
+				}
+			},
+			"af:MG": {
+				"minecraft:shooter": {
+					"def": "af:bullet<af:m1a1>"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 0,
+					"attack_radius": 64,
+					"attack_interval_max": 3,
+					"attack_radius_min": 1,
+					"burst_shots": 8,
+					"burst_interval": 0.1
+				}
+			},
+			"attack_all": {
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": true,
+					"reselect_targets": true,
+					"within_radius": 32,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "monster"
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "player"
+											},
+											{
+												"any_of": [
+													{
+														"test": "has_tag",
+														"subject": "other",
+														"value": "telslakia"
+													},
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "telslakia"
+													},
+													{
+														"test": "has_tag",
+														"subject": "other",
+														"value": "libernia"
+													},
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "libernia"
+													}
+												]
+											}
+										]
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "vehicle"
+											},
+											{
+												"any_of": [
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "telslakia"
+													},
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "libernia"
+													}
+												]
+											},
+											{
+												"test": "rider_count",
+												"subject": "other",
+												"value": 1,
+												"operator": ">="
+											}
+										]
+									}
+								]
+							},
+							"max_dist": 32,
+							"reevaluate_description": true
+						}
+					]
+				},
+				"minecraft:is_ignited": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"composite",
+					"m1a1",
+					"turret",
+					"pask",
+					"pask_m1a1_turret"
+				]
+			},
+			"minecraft:health": {
+				"value": 500
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 0.5
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "libernia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "libernia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "telslakia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"cause": "suffocation"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0.8
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 5
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 50,
+							"subject": "self",
+							"operator": "<="
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": [
+							{
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "target",
+										"value": "vehicle"
+									},
+									{
+										"test": "is_family",
+										"subject": "target",
+										"value": "composite",
+										"operator": "=="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "AP",
+										"operator": "!="
+									}
+								]
+							}
+						],
+						"event": "af:use_AP",
+						"target": "self"
+					},
+					{
+						"filters": [
+							{
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "target",
+										"value": "vehicle"
+									},
+									{
+										"test": "is_family",
+										"subject": "target",
+										"value": "composite",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "HE",
+										"operator": "!="
+									}
+								]
+							}
+						],
+						"event": "af:use_HE",
+						"target": "self"
+					},
+					{
+						"filters": [
+							{
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "target",
+										"value": "vehicle",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "MG",
+										"operator": "!="
+									}
+								]
+							}
+						],
+						"event": "af:use_MG",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"glass",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"dandelion",
+					"azalea",
+					"flowering_azalea",
+					"azalea_leaves",
+					"azalea_leaves_flowered",
+					"cave_vines",
+					"cave_vines_body_with_berries",
+					"cave_vines_head_with_berries",
+					"small_dripleaf_block",
+					"big_dripleaf",
+					"spore_blossom",
+					"hanging_roots",
+					"mangrove_leaves",
+					"minecraft:acacia_log",
+					"minecraft:birch_log",
+					"minecraft:cherry_log",
+					"minecraft:dark_oak_log",
+					"minecraft:jungle_log",
+					"minecraft:mangrove_log",
+					"minecraft:oak_log",
+					"minecraft:spruce_log"
+				]
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 0,
+				"attack_radius": 64,
+				"attack_interval_max": 5,
+				"attack_radius_min": 3
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 10
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": false,
+				"avoid_water": true
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:jump.static": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": []
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main",
+						"camera @a[r=5] clear"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ^ ^1 ^-2"
+					]
+				}
+			},
+			"af:use_AP": {
+				"add": {
+					"component_groups": [
+						"af:AP"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:HE",
+						"af:MG"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add AP",
+						"tag @s remove HE",
+						"tag @s remove MG"
+					]
+				}
+			},
+			"af:use_HE": {
+				"add": {
+					"component_groups": [
+						"af:HE"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:AP",
+						"af:MG"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add HE",
+						"tag @s remove AP",
+						"tag @s remove MG"
+					]
+				}
+			},
+			"af:use_MG": {
+				"add": {
+					"component_groups": [
+						"af:MG"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:HE",
+						"af:AP"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add MG",
+						"tag @s remove HE",
+						"tag @s remove AP"
+					]
+				}
+			},
+			"af:attack_none": {
+				"remove": {
+					"component_groups": [
+						"attack_all"
+					]
+				}
+			},
+			"af:attack_all": {
+				"add": {
+					"component_groups": [
+						"attack_all"
+					]
+				}
+			}
+		}
+	}
+}

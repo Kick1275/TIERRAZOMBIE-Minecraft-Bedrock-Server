@@ -8,7 +8,7 @@ const STATE_KEY = "tm:state";
 const SCORE_MONEY = "money";
 const INTRO_DELAY_TICKS = 100;   // 5 segundos
 const REMINDER_INTERVAL_TICKS = 300; // 15 segundos
-const PROGRESS_POLL_TICKS = 20;  // 1 segundo
+const PROGRESS_POLL_TICKS = 40;  // 2 segundos (suficiente para el poll de inventario del tutorial)
 
 const MISSIONS = [
     null, // índice 0 sin usar — las misiones van de 1 a 6
@@ -46,17 +46,41 @@ const LOOT_BLOCK_IDS = new Set([
 
 // ─── Estado ─────────────────────────────────────────────────────────────────────
 
+// Caché en memoria del estado por jugador. Evita hacer getDynamicProperty + JSON.parse
+// por cada jugador en cada pasada de los intervalos (poll de 2 s y recordatorio de 15 s).
+// La dynamic property sigue siendo la fuente persistida; el caché es un espejo en RAM
+// que se mantiene sincronizado en saveState. saveState es el ÚNICO punto de escritura
+// interno del estado, así que el espejo nunca diverge dentro de este módulo.
+const stateCache = new Map(); // playerId -> state
+
 function getState(player) {
+    const cached = stateCache.get(player.id);
+    if (cached) return cached;
+    let state = null;
     try {
         const raw = player.getDynamicProperty(STATE_KEY);
-        if (raw) return JSON.parse(raw);
+        if (raw) state = JSON.parse(raw);
     } catch {}
-    return { step: 0, introduced: false, m2Last: "", m4: { table: false, ammo: false } };
+    if (!state) state = { step: 0, introduced: false, m2Last: "", m4: { table: false, ammo: false } };
+    stateCache.set(player.id, state);
+    return state;
 }
 
 function saveState(player, state) {
+    stateCache.set(player.id, state);
     try { player.setDynamicProperty(STATE_KEY, JSON.stringify(state)); } catch {}
 }
+
+// Invalida el espejo en RAM. Debe llamarse cuando algo EXTERNO a este módulo modifica
+// la dynamic property tm:state de un jugador conectado (p. ej. el reset con .simnuevo).
+export function clearTutorialCache(player) {
+    try { stateCache.delete(player.id); } catch {}
+}
+
+// Liberar el caché cuando el jugador se desconecta (evita fuga de memoria).
+world.afterEvents.playerLeave.subscribe(({ playerId }) => {
+    stateCache.delete(playerId);
+});
 
 function addScore(player, objective, amount) {
     try {
@@ -70,7 +94,7 @@ function addScore(player, objective, amount) {
 
 function buildBar(current, goal) {
     const filled = Math.max(0, Math.min(10, Math.floor((current / goal) * 10)));
-    return "§a" + "█".repeat(filled) + "§8" + "█".repeat(10 - filled);
+    return "§´§a" + "█".repeat(filled) + "§8" + "█".repeat(10 - filled);
 }
 
 function buildMissionListText() {
@@ -106,7 +130,7 @@ function showCurrentMissionReminder(player, step) {
 
 function showMissionProgress(player, label, current, goal) {
     try {
-        player.onScreenDisplay.setActionBar(`§e${label} ${buildBar(current, goal)} §f${current}/${goal}`);
+        player.sendMessage(`§e${label} ${buildBar(current, goal)} §f${current}/${goal}`);
         player.playSound("note.pling");
     } catch {}
 }
@@ -129,7 +153,7 @@ function grantMissionReward(player, step) {
             player.runCommand("give @s minecraft:red_bed 3");
             break;
         case 4:
-            player.runCommand("give @s krep:g18 1");
+            player.runCommand("give @s krep:g17 1");
             player.runCommand("give @s krep:mm9 32");
             break;
         case 5:

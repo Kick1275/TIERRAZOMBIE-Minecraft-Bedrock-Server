@@ -1,0 +1,58 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:type142a_turret",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/type142a/type142a",
+				"libernia": "textures/entity/type142a/type142a_libernia",
+				"telslakia": "textures/entity/type142a/type142a_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.type142a"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_type142a_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.16ddh.scale",
+				"is_turret": "animation.tank.is_turret",
+				"is_body": "animation.tank.is_body",
+				"move": "animation.strb90h.move",
+				"turret_offset": "animation.type142a.turret_offset",
+				"look": "animation.tank.look_at_target",
+				"particle": "controller.animation.artillery_particle",
+				"fire": "animation.tank.fire",
+				"shoot": "controller.animation.tank.fire"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"is_turret",
+					"turret_offset",
+					"shoot",
+					"look",
+					{
+						"move": "query.modified_move_speed"
+					},
+					{
+						"particle": "query.is_roaring"
+					}
+				]
+			},
+			"particle_effects": {
+				"smoke": "af:artillery_smoke",
+				"flash": "af:tank_flash",
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

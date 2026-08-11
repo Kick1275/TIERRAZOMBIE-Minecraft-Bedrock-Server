@@ -1,0 +1,139 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.antitank_mine",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [
+					0,
+					0.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "antitank_mine",
+					"pivot": [
+						0,
+						7,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								7.8,
+								-2
+							],
+							"size": [
+								4,
+								2,
+								4
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-8,
+								3.8,
+								-8
+							],
+							"size": [
+								16,
+								4,
+								16
+							],
+							"inflate": -0.01,
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								4,
+								16
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										16,
+										20
+									],
+									"uv_size": [
+										16,
+										4
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										20
+									],
+									"uv_size": [
+										16,
+										4
+									]
+								},
+								"south": {
+									"uv": [
+										48,
+										20
+									],
+									"uv_size": [
+										16,
+										4
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										20
+									],
+									"uv_size": [
+										16,
+										4
+									]
+								},
+								"up": {
+									"uv": [
+										16,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									]
+								},
+								"down": {
+									"uv": [
+										32,
+										16
+									],
+									"uv_size": [
+										16,
+										-16
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

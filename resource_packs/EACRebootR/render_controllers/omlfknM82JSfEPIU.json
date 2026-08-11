@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","render_controllers":{"controller.render.scope.m157":{"geometry":"geometry.m157_scope","materials":[{"*":"material.guns"},{"glow":"material.glow"}],"part_visibility":[{"*":true}],"textures":["texture.m157_scope"],"is_hurt_color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0},"on_fire_color":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}}}

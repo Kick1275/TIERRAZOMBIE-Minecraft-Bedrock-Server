@@ -1,0 +1,281 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:type142a_turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"AP_fired": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.25,
+					"duration": 1,
+					"knockback_horizontal_strength": 8,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"test": "is_riding",
+								"subject": "other"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"knockback_range": 0,
+					"knockback_damage": 20,
+					"on_roar_end": {
+						"event": "af:stop_fired",
+						"target": "self"
+					}
+				},
+				"minecraft:spawn_entity": {
+					"entities": {
+						"num_to_spawn": 1,
+						"spawn_entity": "af:ap_shell",
+						"should_leash": false,
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"single_use": true,
+						"spawn_sound": "shoot",
+						"spawn_event": "af:m2a2"
+					}
+				}
+			},
+			"HE_fired": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.25,
+					"duration": 1,
+					"knockback_horizontal_strength": 8,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"test": "is_riding",
+								"subject": "other"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"knockback_range": 0,
+					"knockback_damage": 20,
+					"on_roar_end": {
+						"event": "af:stop_fired",
+						"target": "self"
+					}
+				},
+				"minecraft:spawn_entity": {
+					"entities": {
+						"num_to_spawn": 1,
+						"spawn_entity": "af:he_shell",
+						"should_leash": false,
+						"min_wait_time": 0,
+						"max_wait_time": 0,
+						"single_use": true,
+						"spawn_sound": "shoot",
+						"spawn_event": "af:m2a2"
+					}
+				}
+			},
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"type142a",
+						"boat",
+						"libernia",
+						"turret"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"type142a",
+						"boat",
+						"telslakia",
+						"turret"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"type142a",
+					"boat",
+					"turret"
+				]
+			},
+			"minecraft:health": {
+				"value": 5000
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0.8
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:body_rotation_always_follows_head": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:AP_fired": {
+				"queue_command": {
+					"command": [
+						"playsound tank.fire @a ~ ~ ~ 100 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"AP_fired"
+					]
+				}
+			},
+			"af:HE_fired": {
+				"queue_command": {
+					"command": [
+						"playsound tank.fire @a ~ ~ ~ 100 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"HE_fired"
+					]
+				}
+			},
+			"af:stop_fired": {
+				"remove": {
+					"component_groups": [
+						"AP_fired",
+						"HE_fired"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main",
+						"camera @a[r=5] clear"
+					]
+				}
+			}
+		}
+	}
+}

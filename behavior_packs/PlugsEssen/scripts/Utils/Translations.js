@@ -6164,6 +6164,47 @@ export const TRANSLATIONS = {
             errorGettingAdminTag: "[Sanctions] Error obteniendo tag de admin global, usando por defecto",
             errorGettingConfig: "[Sanctions] Error obteniendo configuración global, usando prefijo por defecto",
             closeButton: "§´§l§8✖ CERRAR MENÚ\n§r§´§7Salir del sistema de sanciones"
+        },
+
+        // ─── Pantalla de bienvenida / reglas ─────────────────────────────────
+        welcome: {
+            title: "§l§6TZ §8— §fBienvenida",
+            body: "§l§6¿QUÉ ES TZ?§r\n§7Servidor de supervivencia zombie semianárquico. Saquea el mundo, equípate con armas tácticas, compite con otros jugadores y construye tu economía.\n\n§l§ePRIMEROS PASOS§r\n§71. Abre el §fMenú §7con tu Libro.\n§72. Presiona §fDesplegarse §7para ir al mundo abierto.\n§73. Vende loot a los §fNPCs §7y completa §fMisiones Diarias §7para ganar TzCoins.\n\n§l§bCHAT DE VOZ§r\n§7TZ tiene chat de voz de proximidad. Para conectarte:\n\n§f→ §7Copia esta URL en tu navegador:\n§b  [PENDIENTE — URL del video]\n\n§f→ §7¿Pereza de copiar? Búscalo en nuestros grupos:\n§f  Discord: §b[PENDIENTE]\n§7    → Canal: §fChat de voz / Voice Chat\n§f  WhatsApp: §b[PENDIENTE]\n§7    → Descripción del grupo\n\n§l§cREGLAS§r\n§71. No hacks, exploits ni abuso de bugs.\n§72. No texturas con ventaja (PvP, wallhack, etc.).\n§73. No farmear kills al mismo jugador repetidamente.\n§74. No arruinar la experiencia de jugadores nuevos.\n§75. No insultos graves, doxing ni acoso.\n§76. No suplantación de staff o del dueño.\n§77. PvP libre fuera de zonas seguras (servidor semi-anárquico).\n§78. El staff puede sancionar según su criterio e interpretación.\n\n§l§aCOMUNIDAD§r\n§fDiscord: §b[PENDIENTE] §7— anuncios, soporte, chat de voz\n§fWhatsApp: §b[PENDIENTE] §7— grupo principal",
+            toggleLabel: "He leído todas las reglas y me comprometo a cumplirlas",
+            errorAlert: "§c⚠ Debes activar la casilla al final para continuar.\n§c  Actívala y presiona Enviar.",
+            chatError: "§c[TZ] Activa la casilla al final del formulario para poder continuar.",
+            skipMessage: "§e[TZ] Puedes jugar, pero las reglas siguen aplicando. Léelas cuando puedas en Discord.",
+            accepted: "§a[TZ] ¡Bienvenido/a! Gracias por leer las reglas. ¡Disfruta el servidor!"
+        },
+
+        // ─── Sistema de Reparación de Vehículos ──────────────────────────────
+        vehicleRepair: {
+            title: "§l§6Reparar Vehiculo",
+            statusHeader: "§l§6Estado del vehiculo§r",
+            hp: "§7HP:",
+            separator: "§7/",
+            damageLabel: "§7Daño:",
+            levelLeve: "Leve",
+            levelModerado: "Moderado",
+            levelGrave: "Grave",
+            levelCritico: "Critico",
+            fullHealth: "§a§lEl vehiculo esta en perfecto estado.",
+            materialsHeader: "§l§bMateriales para reparar",
+            hpLabel: "§bHP:",
+            toolsHeader: "§l§eHerramientas requeridas:",
+            wearLabel: "§7(-@@dur)",
+            statusOk: "§a[OK]",
+            statusMissing: "§c[FALTA]",
+            noMaterials: "§c§lNo tienes los materiales/herramientas suficientes para reparar.",
+            willRepair: "§a§l→ Se repararan @@hp HP con los materiales disponibles.",
+            btnRepair: "§l§aReparar",
+            btnNoMaterials: "§l§8Sin materiales",
+            btnClose: "§l§cCerrar",
+            notRepairable: "§c§lError: §r§cEste vehiculo no es reparable con este sistema.",
+            alreadyFull: "§a§lEl vehiculo ya tiene vida completa.",
+            notEnoughConfirm: "§c§lYa no tienes los materiales necesarios.",
+            repairSuccess: "§a§l+ §r§aReparado §f@@hp HP§a en @@vehicle.",
+            durLabel: "§7(-@@dur dur)"
         }
     },
     
@@ -12127,6 +12168,47 @@ export const TRANSLATIONS = {
             winMessage: "§r§l§6✦═══ You Won ═══✦§r\n§a{items}",
             adminShiftHint: "§7[Shift + Click for admin menu]",
             keyNotInHand: "§cYou must hold the key in your hand to open the crate.",
+        },
+
+        // ─── Welcome screen / rules ───────────────────────────────────────────
+        welcome: {
+            title: "§l§6TZ §8— §fWelcome",
+            body: "§l§6WHAT IS TZ?§r\n§7A semi-anarchic zombie survival server. Loot the world, gear up with tactical weapons, compete with other players and build your economy.\n\n§l§eFIRST STEPS§r\n§71. Open the §fMenu §7with your Book.\n§72. Press §fDeploy §7to go to the open world.\n§73. Sell loot to §fNPCs §7and do §fDaily Missions §7to earn TzCoins.\n\n§l§bVOICE CHAT§r\n§7TZ has proximity voice chat. To connect:\n\n§f→ §7Paste this URL into your browser:\n§b  [PENDING — video link]\n\n§f→ §7Too lazy to copy? Find it in our official groups:\n§f  Discord: §b[PENDING]\n§7    → Channel: §fChat de voz / Voice Chat\n§f  WhatsApp: §b[PENDING]\n§7    → Group description\n\n§l§cRULES§r\n§71. No hacks, exploits, or bug abuse.\n§72. No textures that provide an advantage (PvP textures, wallhack, etc.).\n§73. No kill farming the same player repeatedly.\n§74. Do not ruin the experience of new players.\n§75. No serious insults, doxing, or harassment.\n§76. No impersonating staff or the owner.\n§77. PvP is free outside safe zones (semi-anarchic server).\n§78. Staff may sanction at their own discretion and interpretation.\n\n§l§aCOMMUNITY§r\n§fDiscord: §b[PENDING] §7— announcements, support, voice chat\n§fWhatsApp: §b[PENDING] §7— main group",
+            toggleLabel: "I have read all the rules and commit to following them",
+            errorAlert: "§c⚠ You must activate the checkbox at the bottom to continue.\n§c  Check it and press Submit.",
+            chatError: "§c[TZ] Activate the checkbox at the bottom of the form to continue.",
+            skipMessage: "§e[TZ] You can play, but the rules still apply. Read them later on Discord.",
+            accepted: "§a[TZ] Welcome! Thanks for reading the rules. Enjoy the server!"
+        },
+
+        // ─── Vehicle Repair System ────────────────────────────────────────────
+        vehicleRepair: {
+            title: "§l§6Repair Vehicle",
+            statusHeader: "§l§6Vehicle Status§r",
+            hp: "§7HP:",
+            separator: "§7/",
+            damageLabel: "§7Damage:",
+            levelLeve: "Minor",
+            levelModerado: "Moderate",
+            levelGrave: "Severe",
+            levelCritico: "Critical",
+            fullHealth: "§a§lThe vehicle is in perfect condition.",
+            materialsHeader: "§l§bMaterials to repair",
+            hpLabel: "§bHP:",
+            toolsHeader: "§l§eRequired Tools:",
+            wearLabel: "§7(-@@dur dur)",
+            statusOk: "§a[OK]",
+            statusMissing: "§c[MISSING]",
+            noMaterials: "§c§lYou don't have enough materials/tools to repair.",
+            willRepair: "§a§l→ Will repair @@hp HP with available materials.",
+            btnRepair: "§l§aRepair",
+            btnNoMaterials: "§l§8No materials",
+            btnClose: "§l§cClose",
+            notRepairable: "§c§lError: §r§cThis vehicle cannot be repaired with this system.",
+            alreadyFull: "§a§lThe vehicle already has full health.",
+            notEnoughConfirm: "§c§lYou no longer have the required materials.",
+            repairSuccess: "§a§l+ §r§aRepaired §f@@hp HP§a on @@vehicle.",
+            durLabel: "§7(-@@dur dur)"
         }
     }
 };

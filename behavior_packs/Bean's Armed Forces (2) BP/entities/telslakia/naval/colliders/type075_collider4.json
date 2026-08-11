@@ -1,0 +1,82 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:type075_collider4",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:collider.offset-x": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-y": {
+					"type": "int",
+					"default": 105,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-z": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-1000,
+						1000
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"type075",
+					"inanimate",
+					"collider"
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:collision_box": {
+				"width": 25,
+				"height": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:is_collidable": {},
+			"minecraft:rideable": {
+				"family_types": [
+					"aerial"
+				],
+				"seats": [
+					{
+						"lock_rider_rotation": 1,
+						"max_rider_count": 1,
+						"min_rider_count": 0,
+						"position": [
+							5,
+							0,
+							0
+						]
+					}
+				]
+			}
+		}
+	}
+}

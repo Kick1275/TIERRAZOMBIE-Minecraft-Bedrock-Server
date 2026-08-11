@@ -1,0 +1,1348 @@
+{
+  "format_version": "1.21.90",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:zombie",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "scripts": {
+        "animate": [
+          "level","place","place1","place2"
+        ]
+      },
+      "animations": {
+      "speed": "controller.animation.speed",
+        "level": "controller.animation.zombie.level",
+        "cdig": "controller.animation.zombie.uhm",
+        "place": "controller.animation.zombie.place",
+        "place1": "controller.animation.zombie.place1",
+        "place2": "controller.animation.zombie.place2",
+        "explode": "animation.explode",
+        "break1": "animation.break1",
+        "break2": "animation.break2",
+        "break3": "animation.break3",
+        "break4": "animation.break4",
+        "cbreak1": "controller.animation.holding_iron_pickaxe1",
+        "cbreak2": "controller.animation.holding_iron_pickaxe2",
+        "cbreak3": "controller.animation.holding_iron_pickaxe3",
+        "cbreak4": "controller.animation.holding_iron_pickaxe4",
+        "ride": "animation.ride",
+        "jump": "animation.jump",
+        "bridge": "animation.bridge",
+        "jump1": "animation.jump1",
+        "bridge1": "animation.bridge1",
+        "jump2": "animation.jump2",
+        "bridge2": "animation.bridge2",
+        "dig": "animation.dig",
+        "sound": "animation.sound",
+        "climb": "animation.climb",
+        "cclimb": "controller.animation.zombie.climb"
+      }
+    },
+    "component_groups": {
+    "minecraft:zombie_baby": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:is_baby": {},
+        "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:collision_box": {
+        "width": 1.9,
+        "height": 0.6
+      },
+        "minecraft:movement": {
+          "value": 0.17
+        }
+      },
+      "zombie_giant": {
+      "minecraft:boss": {
+        "should_darken_sky": true,
+        "hud_range": 30
+      },
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 900 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:scale": {
+          "value": 1.5
+        },
+        "minecraft:health": {
+        "value": 200,
+        "max": 200
+      },
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 4,
+          "range_max": 5
+        }
+      },
+        
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      
+        "minecraft:movement": {
+          "value": 0.12
+        },
+        "minecraft:behavior.summon_entity": {
+        "priority": 2,
+        "summon_choices": [
+          {
+            "min_activation_range": 0.0,
+            "max_activation_range": 10.0,
+            "cooldown_time": 10.0,
+            "weight": 3,
+            "cast_duration": 2.0,
+            "particle_color": "#FF664D59",
+            "start_sound_event": "cast.spell",
+            "sequence": [
+              {
+                "shape": "line",
+                "target": "self",
+                "base_delay": 0.0,
+                "delay_per_summon": 0.05,
+                "num_entities_spawned": 10,
+                "entity_type": "minecraft:evocation_fang",
+                "size": 10,
+                "entity_lifespan": 1.1
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie_giant.json"
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "bamboo",
+          "bamboo_sapling",
+          "beetroot",
+          "brown_mushroom",
+          "carrots",
+          "carved_pumpkin",
+          "chorus_flower",
+          "chorus_plant",
+          "deadbush",
+          "double_plant",
+          "leaves",
+          "leaves2",
+          "lit_pumpkin",
+          "melon_block",
+          "melon_stem",
+          "potatoes",
+          "pumpkin",
+          "pumpkin_stem",
+          "red_flower",
+          "red_mushroom",
+          "crimson_fungus",
+          "warped_fungus",
+          "reeds",
+          "sapling",
+          "snow_layer",
+          "sweet_berry_bush",
+          "tallgrass",
+          "turtle_egg",
+          "vine",
+          "waterlily",
+          "wheat",
+          "dandelion",
+          "azalea",
+          "flowering_azalea",
+          "azalea_leaves",
+          "azalea_leaves_flowered",
+          "cave_vines",
+          "cave_vines_body_with_berries",
+          "cave_vines_head_with_berries",
+          "small_dripleaf_block",
+          "big_dripleaf",
+          "spore_blossom",
+          "hanging_roots",
+          "mangrove_leaves",
+          "pale_hanging_moss",
+          "cherry_leaves",
+          "pale_oak_leaves",
+          "firefly_bush",
+          "bush"
+        ]
+      },
+      
+      "minecraft:behavior.stalk_and_pounce_on_target": {
+        "priority": 1,
+        "stalk_speed": 1.0,
+        "max_stalk_dist": 12.0,
+        "leap_height": 1.0,
+        "leap_dist": 1.0,
+        "pounce_max_dist": 5.0,
+        "interest_time": 0.01,
+        "stuck_time": 0.0,
+        "strike_dist": 2.0,
+        "stuck_blocks": { "test": "is_block", "subject": "block", "operator": "==", "value": "snow_layer" }
+      }
+      
+      
+      
+      },
+      
+      "zombie_summoner": {
+      "minecraft:boss": {
+        "should_darken_sky": true,
+        "hud_range": 30
+      },
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 900 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:scale": {
+          "value": 2.0
+        },
+        "minecraft:health": {
+        "value": 300,
+        "max": 300
+      },
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 4,
+          "range_max": 5
+        }
+      },
+        
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      
+        "minecraft:movement": {
+          "value": 0.12
+        },
+        "minecraft:behavior.summon_entity": {
+        "priority": 1,
+        "summon_choices": [
+          {
+            "min_activation_range": 0.0,
+            "max_activation_range": 10.0,
+            "cooldown_time": 10.0,
+            "weight": 3,
+            "cast_duration": 2.0,
+            "particle_color": "#FF664D59",
+            "start_sound_event": "cast.spell",
+            "sequence": [
+              {
+                "shape": "circle",
+                "target": "self",
+                "base_delay": 0.0,
+                "delay_per_summon": 0.05,
+                "num_entities_spawned": 10,
+                "entity_type": "minecraft:zombie",
+                "size": 5,
+                "entity_lifespan": 10.0
+              }
+            ]
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie_giant.json"
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "bamboo",
+          "bamboo_sapling",
+          "beetroot",
+          "brown_mushroom",
+          "carrots",
+          "carved_pumpkin",
+          "chorus_flower",
+          "chorus_plant",
+          "deadbush",
+          "double_plant",
+          "leaves",
+          "leaves2",
+          "lit_pumpkin",
+          "melon_block",
+          "melon_stem",
+          "potatoes",
+          "pumpkin",
+          "pumpkin_stem",
+          "red_flower",
+          "red_mushroom",
+          "crimson_fungus",
+          "warped_fungus",
+          "reeds",
+          "sapling",
+          "snow_layer",
+          "sweet_berry_bush",
+          "tallgrass",
+          "turtle_egg",
+          "vine",
+          "waterlily",
+          "wheat",
+          "dandelion",
+          "azalea",
+          "flowering_azalea",
+          "azalea_leaves",
+          "azalea_leaves_flowered",
+          "cave_vines",
+          "cave_vines_body_with_berries",
+          "cave_vines_head_with_berries",
+          "small_dripleaf_block",
+          "big_dripleaf",
+          "spore_blossom",
+          "hanging_roots",
+          "mangrove_leaves",
+          "pale_hanging_moss",
+          "cherry_leaves",
+          "pale_oak_leaves",
+          "firefly_bush",
+          "bush"
+        ]
+      }
+      
+      },
+      
+      "zombie_tank": {
+      "minecraft:boss": {
+        "should_darken_sky": true,
+        "hud_range": 30
+      },
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 900 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:scale": {
+          "value": 3.0
+        },
+        "minecraft:health": {
+        "value": 700,
+        "max": 700
+      },
+      "minecraft:attack": {
+        "damage": {
+          "range_min": 4,
+          "range_max": 5
+        },
+        "effect_name": "slowness",
+        "effect_duration": 5
+      },
+        
+      "minecraft:knockback_resistance": {
+        "value": 1.0
+      },
+      
+        "minecraft:movement": {
+          "value": 0.10
+        },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie_giant.json"
+      },
+      "minecraft:break_blocks": {
+        "breakable_blocks": [
+          "bamboo",
+          "bamboo_sapling",
+          "beetroot",
+          "brown_mushroom",
+          "carrots",
+          "carved_pumpkin",
+          "chorus_flower",
+          "chorus_plant",
+          "deadbush",
+          "double_plant",
+          "leaves",
+          "leaves2",
+          "lit_pumpkin",
+          "melon_block",
+          "melon_stem",
+          "potatoes",
+          "pumpkin",
+          "pumpkin_stem",
+          "red_flower",
+          "red_mushroom",
+          "crimson_fungus",
+          "warped_fungus",
+          "reeds",
+          "sapling",
+          "snow_layer",
+          "sweet_berry_bush",
+          "tallgrass",
+          "turtle_egg",
+          "vine",
+          "waterlily",
+          "wheat",
+          "dandelion",
+          "azalea",
+          "flowering_azalea",
+          "azalea_leaves",
+          "azalea_leaves_flowered",
+          "cave_vines",
+          "cave_vines_body_with_berries",
+          "cave_vines_head_with_berries",
+          "small_dripleaf_block",
+          "big_dripleaf",
+          "spore_blossom",
+          "hanging_roots",
+          "mangrove_leaves",
+          "pale_hanging_moss",
+          "cherry_leaves",
+          "pale_oak_leaves",
+          "firefly_bush",
+          "bush"
+        ]
+      }
+      
+      },
+      
+      "flying": {
+      "minecraft:is_baby": {},
+      "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:collision_box": {
+        "width": 1.9,
+        "height": 0.6
+      },
+      "minecraft:physics": {
+        "has_gravity": false
+      },
+      
+      
+      
+        "minecraft:movement": {
+          "value": 1.8
+        },
+        
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "fall",
+          "deals_damage": "no"
+        }
+      },
+      
+      
+      "minecraft:behavior.swoop_attack": {
+        "priority": 2,
+        "damage_reach": 1.5,
+        "speed_multiplier": 1.0,
+        "delay_range": 1
+      },
+      "minecraft:movement.glide": {
+        "start_speed": 0.1,
+        "speed_when_turning": 0.2
+      },
+      "minecraft:behavior.circle_around_anchor": {
+        "priority": 3,
+        "radius_change": 1.0,
+        "radius_adjustment_chance": 1.0,
+        "height_adjustment_chance": 1.0,
+        "goal_radius": 1.0,
+        "angle_change": 1.0,
+        "radius_range": 1,
+        "height_offset_range": 1,
+        "height_above_target_range": 5
+      }
+
+},
+     
+     "screamer": {
+"minecraft:entity_sensor": {
+  "subsensors": [
+    {
+      "event": "start_horde",
+      "range": [5, 5],
+      "minimum_count": 1,
+      "event_filters": {
+        "test": "is_family",
+        "subject": "other",
+        "value": "player"
+      }
+    }
+  ]
+},
+"minecraft:behavior.avoid_mob_type": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test" :  "is_family", "subject" : "other", "value" :  "player"}
+              ]
+            },
+            "max_dist": 4,
+            "sprint_speed_multiplier": 1.5
+          }
+        ]
+      }
+
+},
+
+"screamed": {
+"minecraft:behavior.avoid_mob_type": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test" :  "is_family", "subject" : "other", "value" :  "player"}
+              ]
+            },
+            "max_dist": 10,
+            "sprint_speed_multiplier": 1.3
+          }
+        ]
+      }
+
+},
+      
+      "despawning": {
+        "minecraft:instant_despawn": {}
+      },
+      "ram": {
+      "minecraft:behavior.ram_attack": {
+          "priority": 0,
+          "run_speed": 0.7,
+          "ram_speed": 1.8,
+          "min_ram_distance": 1,
+          "ram_distance": 7,
+          "knockback_force": 3.0,
+          "knockback_height": 0.5,
+          "pre_ram_sound": "pre_ram",
+          "ram_impact_sound": "ram_impact",
+          "cooldown_range": [
+            1,
+            3
+          ]
+        }
+        },
+      "awareness": {
+      			"minecraft:follow_range": {
+				"value": 128,
+				"max": 128
+			},
+"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"must_see": false,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								}
+							]
+						},
+						"max_dist": 128,
+						"must_see": false
+					}
+				]
+			}
+},
+
+"death":{
+				"minecraft:transformation": {
+					"begin_transform_sound": "random.pop",
+					"drop_equipment": false,
+					"drop_inventory": true,
+					"keep_level": false,
+					"keep_owner": false,
+					"preserve_equipment": true,
+					"into": "ranzie:corpse",
+					"transformation_sound": "random.pop"
+				}
+			},
+			"alive":{
+"minecraft:item_hopper": {}
+},
+
+"nawareness": {
+      			"minecraft:follow_range": {
+				"value": 32,
+				"max": 32
+			},
+"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"must_see": true,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "player"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								}
+							]
+						},
+						"max_dist": 32,
+						"must_see": true
+					}
+				]
+			}
+},
+
+
+"bomber": {
+        "minecraft:behavior.ranged_attack": {
+          "priority": 1,
+          "attack_interval_min": 2.0,
+          "attack_interval_max":2.0,
+          "attack_radius": 25.0,
+          "attack_radius_min": 5,
+		  "speed_multiplier": 1.2
+        },
+        "minecraft:loot": {
+        "table": "loot_tables/entities/zombie_bomber.json"
+      },
+        "minecraft:shooter": {
+          "def": "minecraft:tnt",
+          "sound": "bow"
+        }
+        },
+        
+        "spitter": {
+        "minecraft:behavior.ranged_attack": {
+          "priority": 1,
+          "attack_interval_min": 2.0,
+          "attack_interval_max":2.0,
+          "attack_radius": 25.0,
+          "attack_radius_min": 5,
+		  "speed_multiplier": 1.2
+        },
+        "minecraft:shooter": {
+          "def": "minecraft:llama_spit",
+          "sound": "spit"
+        }
+        },
+        
+        "jump": {
+        "minecraft:behavior.jump_to_block": {
+        "priority": 3,
+        "search_width": 15,
+        "search_height": 15,
+        "minimum_path_length": 8,
+        "minimum_distance": 1,
+        "scale_factor": 0.0,
+        "cooldown_range": [
+          1,
+          6
+        ]
+      },
+      "minecraft:behavior.stalk_and_pounce_on_target": {
+        "priority": 1,
+        "stalk_speed": 1.0,
+        "max_stalk_dist": 12.0,
+        "leap_height": 1.0,
+        "leap_dist": 1.0,
+        "pounce_max_dist": 5.0,
+        "interest_time": 0.01,
+        "stuck_time": 0.0,
+        "strike_dist": 2.0,
+        "stuck_blocks": { "test": "is_block", "subject": "block", "operator": "==", "value": "snow_layer" }
+      }
+        },
+        
+        "mage": {
+"minecraft:behavior.ranged_attack": {
+          "priority": 1,
+          "attack_interval_min": 2.0,
+          "attack_interval_max":2.0,
+          "attack_radius": 25.0
+        },
+      "minecraft:shooter": {
+        "power" : 0.75,
+        "def": "minecraft:splash_potion",
+        "aux_val" : 23,   // harming
+        "sound" : "throw",
+        "projectiles" : [
+          {
+            "def" : "minecraft:splash_potion",
+            "aux_val" : 23, // healing
+            "filters" : {
+              "all_of" : [
+                { "test": "actor_health", "subject": "other", "value": 4, "operator" : "<=" }
+              ]
+            },
+            "lose_target" : true
+          },
+          {
+            "def" : "minecraft:splash_potion",
+            "aux_val" : 23, // regeneration
+            "lose_target" : true
+          },
+          {
+            "def" : "minecraft:splash_potion",
+            "aux_val" : 23, // slowness
+            "filters" : {
+              "all_of" : [
+                { "test" : "target_distance", "subject" : "self", "value" : 8.0, "operator" : ">="},
+                {
+                  "none_of":[
+                    { "test": "has_mob_effect", "subject": "other", "value": "slowness" }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "def" : "minecraft:splash_potion",
+            "aux_val" : 23, // poison
+            "filters" : {
+              "all_of" : [
+                { "test" : "actor_health", "subject" : "other", "value" : 8, "operator" : ">="},
+                {
+                  "none_of": [
+                    { "test": "has_mob_effect", "subject": "other", "value": "poison" }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "def" : "minecraft:splash_potion",
+            "aux_val" : 23, // weakness
+            "filters" : {
+              "all_of" : [
+                { "test" : "target_distance", "subject" : "self", "value" : 3, "operator" : "<="},
+                {
+                  "none_of":[
+                    { "test": "has_mob_effect", "subject": "other", "value": "weakness" }
+                  ]
+                }
+              ]
+            },
+            "chance" : 1.0
+          }
+        ],
+                "magic" : true
+      },
+      "minecraft:behavior.drink_potion": {
+        "priority": 1,
+        "speed_modifier": -0.25,
+        "potions": [
+          {
+            "id": 12, // Fire resistance
+            "chance": 1.0,
+            "filters": {
+              "all_of": [
+                {
+                  "any_of": [
+                    { "test": "on_fire", "subject": "self", "value": true },
+                    { "test": "on_hot_block", "subject": "self", "value": true },
+                    { "test": "taking_fire_damage", "subject": "self", "value": true }
+                  ]
+                },
+                {
+                  "none_of": [
+                    { "test": "has_mob_effect", "subject": "self", "value": "fire_resistance" }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "id": 23, // Healing
+            "chance": 1.0,
+            "filters": {
+              "all_of": [
+                { "test": "is_missing_health", "subject": "self", "value": true }
+              ]
+            }
+          },
+          {
+            "id": 14, // Swiftness
+            "chance": 1.0,
+            "filters": {
+              "all_of": [
+                { "test": "has_target", "subject": "self", "value": true },
+                {
+                  "none_of": [
+                    { "test": "has_mob_effect", "subject": "self", "value": "speed" }
+                  ]
+                },
+                { "test": "target_distance", "subject": "self", "value": 11.0, "operator": ">=" }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/witch.json"
+      }
+},
+
+"teleport": {
+"minecraft:teleport": {
+        "random_teleport_cube": [ 32, 32, 32 ],
+        "target_distance": 32,
+        "target_teleport_chance": 1.0
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie_ender.json"
+      }
+},
+
+"hp":{
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      }
+},
+"hptwo":{
+      "minecraft:health": {
+        "value": 25,
+        "max": 25
+      }
+},
+"hpthree":{
+      "minecraft:health": {
+        "value": 30,
+        "max": 30
+      }
+},
+"hpfour":{
+      "minecraft:health": {
+        "value": 35,
+        "max": 35
+      }
+},
+"hpfive":{
+      "minecraft:health": {
+        "value": 40,
+        "max": 40
+      }
+},
+
+
+      "normalnav": {
+      "minecraft:navigation.generic": {
+        "is_amphibious": false,
+        "can_pass_doors": true,
+        "can_walk": true,
+        "can_sink": true,
+        "can_swim": true,
+        "can_break_doors": true,
+        "can_path_from_air": true
+        }
+      },
+      "climbernav": {
+      "minecraft:navigation.climb": {
+	"can_float": true,
+	"avoid_water": false,
+        "is_amphibious": false,
+        "can_pass_doors": true,
+        "can_walk": true,
+        "can_break_doors": true,
+        "can_swim": true
+        }
+      },
+      
+      "minecraft:zombie_adult": {
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+        },
+        "minecraft:movement": {
+          "value": 0.16
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "zombie"
+          ],
+          "seats": {
+            "position": [ 0.0, 1.175, -0.35 ],
+            "lock_rider_rotation": 0
+          }
+        },
+        "minecraft:behavior.mount_pathing": {
+          "priority": 2,
+          "speed_multiplier": 1.25,
+          "target_dist": 0.0,
+          "track_target": true
+        }
+      }
+      },
+
+    "components": {
+      "minecraft:is_hidden_when_invisible": {
+      },
+      
+
+      // Zombie Components
+      "minecraft:type_family": {
+        "family": [ "zombie", "undead", "monster", "mob" ]
+      },
+      "minecraft:equip_item": {
+      },
+      "minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"always_show": true
+			},
+			"minecraft:behavior.equip_item": {
+				"priority": 1
+			},
+      
+
+			"minecraft:inventory": { 
+				"container_type": "inventory",
+				"inventory_size": 54,
+				"restrict_to_owner": true
+			  },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:movement.basic": {
+        "max_turn":  180.0
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 3,
+        "entity_types": [
+          {
+            "filters": {
+              "any_of": [
+                { "test" :  "is_family", "subject" : "other", "value" :  "feared"},
+                { "test" :  "is_family", "subject" : "other", "value" :  "tnt"}
+              ]
+            },
+            "max_dist": 6,
+            "sprint_speed_multiplier": 1.2
+          }
+        ]
+      },
+      "minecraft:behavior.melee_box_attack": {
+        "can_spread_on_fire": true,
+        "horizontal_reach": 0.2,
+        "priority": 3
+      },
+      
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "value": "undead"
+            }
+          },
+          "deals_damage": false
+        }
+      },
+      
+      "minecraft:underwater_movement": {
+        "value": 0.14
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
+      },
+     
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": { "test": "in_lava", "subject": "self", "operator": "==", "value": true },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": true,
+        "breathes_water": true
+      },
+      "minecraft:attack": {
+        "damage": 2
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie.json"
+      },
+
+    "minecraft:despawn": {
+      "despawn_from_distance": {}
+     },
+     
+           
+
+      // Zombie Behaviors
+      
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 1
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:behavior.hurt_by_target": {
+        "priority": 1,
+        "entity_types": [
+          {
+            "filters": {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "zombie"
+            }
+          }
+        ]
+      },
+      
+
+
+"minecraft:conditional_bandwidth_optimization": {
+      },
+      
+      
+      
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+
+    "events": {
+      "minecraft:entity_spawned": {
+  "sequence": [
+    {
+      "randomize": [
+        {
+          "weight": 380,
+          "remove": {},
+          "add": {
+            "component_groups": [
+              "minecraft:zombie_adult",
+              "nawareness",
+              "alive",
+              "normalnav",
+              "hp"
+            ]
+          }
+        },
+        {
+          "weight": 0,
+          "remove": {},
+          "add": {
+            "component_groups": [
+              "bomber"
+            ]
+          },
+          "sequence": [
+            {
+              "run_command": {
+                "command": [
+                  "tag @s add bomber"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+
+          
+          "start_horde": {
+  "sequence": [
+    {
+      "remove": { "component_groups": ["screamer"] }
+    },
+    {
+      "add": { "component_groups": ["screamed"] }
+    },
+    {
+      "queue_command": {
+        "command": [
+          "execute as @s[tag=!screamed] at @s[tag=!screamed] run event entity @e[type=zombie] aware",
+          "execute as @s[tag=!screamed] at @s[tag=!screamed] run playsound ranzie.horde @a ~~~ 0.8",
+          "execute as @s[tag=!screamed] at @s[tag=!screamed] run tag @s add screamed"
+        ]
+      }
+    }
+  ]
+},
+
+          "minecraft:start_despawn": {
+        "add": {
+          "component_groups": [
+            "despawning"
+          ]
+        }
+      },
+    
+      "minecraft:zombie_adult": {
+        "add": {
+          "component_groups": [
+            "minecraft:zombie_adult"
+          ]
+        }
+      },
+      "as_giant": {
+        "add": {
+          "component_groups": [
+            "zombie_giant",
+            "normalnav",
+            "awareness"
+          ]
+        }
+      },
+      "summoner": {
+        "add": {
+          "component_groups": [
+            "zombie_summoner",
+            "normalnav",
+            "awareness"
+          ]
+        }
+      },
+      "tank": {
+        "add": {
+          "component_groups": [
+            "zombie_tank",
+            "normalnav",
+            "awareness"
+          ]
+        }
+      },
+      "rammer": {
+        "add": {
+          "component_groups": [
+            "ram"
+          ]
+        }
+      },
+      "revealer": {
+        "add": {
+          "component_groups": [
+            "screamer"
+          ]
+        }
+      },
+      "kaboom": {
+  "add": {
+    "component_groups": [
+      "bomber"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "minecraft:mode_switcher",
+      "minecraft:ranged_mode"
+    ]
+  }
+},
+"spit": {
+  "add": {
+    "component_groups": [
+      "spitter"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "minecraft:mode_switcher",
+      "minecraft:ranged_mode"
+    ]
+  }
+},
+      "mlg": {
+        "add": {
+          "component_groups": [
+            "jump"
+          ]
+        }
+      },
+      "witch": {
+  "add": {
+    "component_groups": [
+      "mage"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "minecraft:mode_switcher",
+      "minecraft:ranged_mode"
+    ]
+  }
+},
+      "aware": {
+  "add": {
+    "component_groups": [
+      "awareness"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "nawareness"
+    ]
+  }
+},
+"climber": {
+  "add": {
+    "component_groups": [
+      "climbernav"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "normalnav"
+    ]
+  }
+},
+"notmalnav": {
+  "add": {
+    "component_groups": [
+      "notmalnav"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "climbernav"
+    ]
+  }
+},
+      "ender": {
+        "add": {
+          "component_groups": [
+            "teleport"
+          ]
+        }
+      },
+      "crawler": {
+        "add": {
+          "component_groups": [
+            "minecraft:zombie_baby"
+          ]
+        }
+      },
+      "flyer": {
+        "add": {
+          "component_groups": [
+            "flying"
+          ]
+        }
+      },
+      
+      "two": {
+  "add": {
+    "component_groups": [
+      "hptwo"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "hp",
+      "hpthree",
+      "hpfour",
+      "hpfive"
+    ]
+  }
+},
+"three": {
+  "add": {
+    "component_groups": [
+      "hpthree"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "hp",
+      "hptwo",
+      "hpfour",
+      "hpfive"
+    ]
+  }
+},
+"four": {
+  "add": {
+    "component_groups": [
+      "hpfour"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "hp",
+      "hptwo",
+      "hpthree",
+      "hpfive"
+    ]
+  }
+},
+"five": {
+  "add": {
+    "component_groups": [
+      "hpfive"
+    ]
+  },
+  "remove": {
+    "component_groups": [
+      "hp",
+      "hptwo",
+      "hpfour",
+      "hpthree"
+    ]
+  }
+},
+"kill": {
+				"add": {
+					"component_groups": [ "death" ]
+				},
+				"remove": {
+    "component_groups": [
+      "alive"
+    ]
+  }
+			},
+      
+      "minecraft:switch_to_melee": {
+        "remove": {
+          "component_groups": [
+            "minecraft:ranged_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:melee_mode"
+          ]
+        }
+      },
+      "minecraft:switch_to_ranged": {
+        "remove": {
+          "component_groups": [
+            "minecraft:melee_mode"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:ranged_mode"
+          ]
+        }
+      }
+    }
+  }
+}

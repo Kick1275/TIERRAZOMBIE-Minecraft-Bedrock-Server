@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:cd_hc"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:aluminium_ingot"
+			},
+			"D": {
+				"item": "minecraft:rose_bush"
+			}
+		},
+		"pattern": [
+			" N ",
+			"NDN",
+			" N "
+		],
+		"result": {
+			"item": "af:cd_hc",
+			"count": 1
+		}
+	}
+}

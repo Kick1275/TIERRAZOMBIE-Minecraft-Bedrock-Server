@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:manual",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/manual"
+			},
+			"geometry": {
+				"default": "geometry.manual"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"open": "animation.manual.open"
+			},
+			"scripts": {
+				"animate": [
+					"open"
+				]
+			}
+		}
+	}
+}

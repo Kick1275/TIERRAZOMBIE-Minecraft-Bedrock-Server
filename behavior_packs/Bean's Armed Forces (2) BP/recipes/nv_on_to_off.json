@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:nv_on_to_off"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"G": {
+				"item": "af:nightvision_goggles"
+			}
+		},
+		"pattern": [
+			"G"
+		],
+		"result": {
+			"item": "af:nightvision_goggles_off",
+			"count": 1
+		}
+	}
+}

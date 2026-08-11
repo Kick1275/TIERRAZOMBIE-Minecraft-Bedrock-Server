@@ -1,0 +1,210 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.yak141.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 4.7
+				}
+			}
+		},
+		"animation.yak141.fly": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								-2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								0,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"frontgear": {
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				},
+				"gear0": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						2,
+						0,
+						0
+					],
+					"scale": [
+						0.5,
+						1,
+						0
+					]
+				},
+				"gear1": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						-2,
+						0,
+						0
+					],
+					"scale": [
+						0.5,
+						1,
+						0
+					]
+				}
+			}
+		},
+		"animation.yak141.hover": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								2.5,
+								0,
+								-2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.4": {
+							"post": [
+								0,
+								0,
+								-2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								-2.5,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"frontgear": {
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				},
+				"gear0": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						2,
+						0,
+						0
+					],
+					"scale": [
+						0.5,
+						1,
+						0
+					]
+				},
+				"gear1": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						-2,
+						0,
+						0
+					],
+					"scale": [
+						0.5,
+						1,
+						0
+					]
+				},
+				"nozzle": {
+					"rotation": [
+						-90,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

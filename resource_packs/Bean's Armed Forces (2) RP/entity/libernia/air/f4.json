@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:f4",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/f4/f4",
+				"libernia": "textures/entity/f4/f4_libernia",
+				"telslakia": "textures/entity/f4/f4_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.f4"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_f4_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"fly": "animation.f4.fly",
+				"landed": "controller.animation.aircraft.landed",
+				"pitch": "animation.aircraft.pitch",
+				"yaw": "animation.aircraft.yaw",
+				"rotations": "animation.aircraft.rotations",
+				"scale": "animation.f4.scale",
+				"particles": "animation.aircraft.particles",
+				"smooth_land": "controller.animation.aircraft.smooth_land",
+				"engine": "animation.f4.engine"
+			},
+			"scripts": {
+				"animate": [
+					"landed",
+					"scale",
+					"pitch",
+					"yaw",
+					"engine",
+					"smooth_land",
+					{
+						"particles": "query.modified_move_speed>=0.5&&!query.is_on_ground"
+					}
+				],
+				"should_update_bones_and_effects_offscreen": true,
+				"should_update_effects_offscreen": true
+			},
+			"particle_effects": {
+				"engine": "af:jet_fire",
+				"contrail": "af:contrail"
+			}
+		}
+	}
+}

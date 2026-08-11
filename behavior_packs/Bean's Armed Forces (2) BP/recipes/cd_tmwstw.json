@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:cd_tmwstw"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:aluminium_ingot"
+			},
+			"D": {
+				"item": "af:taxpayer_coin"
+			}
+		},
+		"pattern": [
+			" N ",
+			"NDN",
+			" N "
+		],
+		"result": {
+			"item": "af:cd_tmwstw",
+			"count": 1
+		}
+	}
+}

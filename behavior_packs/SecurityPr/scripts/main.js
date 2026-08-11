@@ -292,7 +292,7 @@ world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
     const blockLoc = event.block.location;
     const check = isBlockInProtectedArea(blockLoc);
 
-    console.warn(`[SecurityPr] InteractBlock by ${event.player.name} at ${blockLoc.x},${blockLoc.y},${blockLoc.z}`);
+    // console.warn(`[SecurityPr] InteractBlock by ${event.player.name} at ${blockLoc.x},${blockLoc.y},${blockLoc.z}`);
     if(check.protected) {
         const hasPermission = hasPlayerPermission(event.player, check.protection);
         console.warn(`[SecurityPr] Block in protected area. Player has permission: ${hasPermission}`);

@@ -22,7 +22,7 @@ world.beforeEvents.playerPlaceBlock.subscribe((ev) => {
 world.beforeEvents.itemUse.subscribe((ev) => {
     const itemType = ev.itemStack.type.id;
     const player = ev.source;
-    if (itemType === "minecraft:lava_bucket" || itemType === "minecraft:oak_boat" || itemType === "minecraft:birch_boat" || itemType === "minecraft:spruce_boat" || itemType === "minecraft:jungle_boat" || itemType === "minecraft:acacia_boat" || itemType === "minecraft:dark_oak_boat" || itemType === "minecraft:mangrove_boat" || itemType === "minecraft:cherry_boat" || itemType === "minecraft:pale_oak_boat" || itemType === "minecraft:chest_boat" || itemType === "minecraft:oak_chest_boat" || itemType === "minecraft:birch_chest_boat" || itemType === "minecraft:spruce_chest_boat" || itemType === "minecraft:jungle_chest_boat" || itemType === "minecraft:acacia_chest_boat" || itemType === "minecraft:dark_oak_chest_boat" || itemType === "minecraft:mangrove_chest_boat" || itemType === "minecraft:cherry_chest_boat" || itemType === "minecraft:pale_oak_chest_boat") {
+    if (itemType === "minecraft:lava_bucket" || itemType === "minecraft:oak_boat" || itemType === "minecraft:birch_boat" || itemType === "minecraft:spruce_boat" || itemType === "minecraft:jungle_boat" || itemType === "minecraft:acacia_boat" || itemType === "minecraft:dark_oak_boat" || itemType === "minecraft:mangrove_boat" || itemType === "minecraft:cherry_boat" || itemType === "minecraft:pale_oak_boat" || itemType === "minecraft:chest_boat" || itemType === "minecraft:oak_chest_boat" || itemType === "minecraft:birch_chest_boat" || itemType === "minecraft:spruce_chest_boat" || itemType === "minecraft:jungle_chest_boat" || itemType === "minecraft:acacia_chest_boat" || itemType === "minecraft:dark_oak_chest_boat" || itemType === "minecraft:mangrove_chest_boat" || itemType === "minecraft:cherry_chest_boat" || itemType === "minecraft:pale_oak_chest_boat" || itemType === "minecraft:tnt" || itemType === "minecraft:tnt_minecart") {
         ev.cancel = true;
         ev.source.sendMessage(`§cNo puedes usar este item.`);
         deleteItems();
@@ -34,7 +34,10 @@ world.beforeEvents.itemUse.subscribe((ev) => {
         player.runCommand(`clear @s ${itemType}`);
         player.runCommand(`kill @e[type=minecraft:boat]`);
         player.runCommand(`kill @e[type=minecraft:chest_boat]`);
+        player.runCommand(`kill @e[type=minecraft:tnt]`);
+        player.runCommand(`kill @e[type=minecraft:tnt_minecart]`);
         player.runCommand(`fill ~-10 ~-10 ~-10 ~10 ~10 ~10 air replace minecraft:lava`);
+        player.runCommand(`fill ~-10 ~-10 ~-10 ~10 ~10 ~10 air replace minecraft:tnt`);
     });
     
 }});

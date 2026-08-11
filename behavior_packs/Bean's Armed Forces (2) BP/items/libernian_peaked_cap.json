@@ -1,0 +1,51 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:libernian_peaked_cap",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.helmet"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 528,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				}
+			},
+			"minecraft:wearable": {
+				"slot": "slot.armor.head",
+				"protection": 2
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:leather"
+						],
+						"repair_amount": "query.max_durability*0.25"
+					},
+					{
+						"items": [
+							"af:libernian_peaked_cap"
+						],
+						"repair_amount": "context.other->query.remaining_durability+0.12*context.other->query.max_durability"
+					}
+				]
+			},
+			"minecraft:dyeable": {
+				"default_color": "#727953"
+			},
+			"minecraft:icon": {
+				"textures": {
+					"default": "af_libernian_peaked_cap",
+					"dyed": "af_libernian_peaked_cap"
+				}
+			}
+		}
+	}
+}

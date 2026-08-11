@@ -1,0 +1,30 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:glock17_bullet",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:can_destroy_in_creative": true,
+			"minecraft:hand_equipped": false,
+			"minecraft:allow_off_hand": true,
+			"minecraft:max_stack_size": 64,
+			"minecraft:damage": 0,
+			"minecraft:icon": {
+				"textures": {
+					"default": "af_glock17_bullet"
+				}
+			},
+			"minecraft:display_name": {
+				"value": "item.af:glock17_bullet"
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "af:glock17_bullet<minecraft:entity_spawned>",
+				"minimum_critical_power": 0
+			}
+		}
+	}
+}

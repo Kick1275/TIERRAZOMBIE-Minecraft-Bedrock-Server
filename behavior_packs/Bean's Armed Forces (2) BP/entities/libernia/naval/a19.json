@@ -1,0 +1,427 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:a19",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:vehicle.rotation-speed": {
+					"type": "int",
+					"default": 30,
+					"range": [
+						1,
+						500
+					]
+				},
+				"af:vehicle.transmission": {
+					"type": "enum",
+					"default": "mono",
+					"values": [
+						"mono",
+						"dual"
+					]
+				},
+				"af:camera.distance": {
+					"type": "int",
+					"default": 25,
+					"range": [
+						1,
+						30
+					]
+				},
+				"af:vehicle.amphibious": {
+					"type": "int",
+					"default": 50,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:vehicle.acceleration": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:radar-angle": {
+					"type": "int",
+					"default": 180,
+					"range": [
+						1,
+						500
+					]
+				},
+				"af:radar-range": {
+					"type": "int",
+					"default": 64,
+					"range": [
+						1,
+						256
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:type_family": {
+					"family": [
+						"libernia",
+						"vehicle",
+						"boat"
+					]
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"telslakia": {
+				"minecraft:type_family": {
+					"family": [
+						"telslakia",
+						"vehicle",
+						"boat"
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"neutral",
+					"vehicle",
+					"boat"
+				]
+			},
+			"minecraft:health": {
+				"value": 2500
+			},
+			"minecraft:collision_box": {
+				"width": 8,
+				"height": 8
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:movement": {
+				"value": 0.01
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"interact_text": "action.interact.mount",
+				"family_types": [
+					"player"
+				],
+				"controlling_seat": 0,
+				"rider_can_interact": true,
+				"seats": [
+					{
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": "no"
+					},
+					{
+						"deals_damage": "no",
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:torpedo"
+									}
+								]
+							},
+							"event": "af:fire_torpedo",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.fire_t",
+						"cooldown": 1,
+						"use_item": true
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": true
+						},
+						"event": "af:is_moving",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 5,
+							"subject": "self",
+							"operator": "<"
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": ">="
+						},
+						"event": "af:player_invis",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.1,
+				"cause": "fly_into_wall",
+				"damage_per_tick": 15,
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						{
+							"test": "is_riding",
+							"subject": "other",
+							"value": true,
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "vehicle",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "inanimate",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_moving",
+							"subject": "self",
+							"value": true,
+							"operator": "=="
+						}
+					]
+				},
+				"play_attack_sound": true,
+				"damage_cooldown": 1
+			},
+			"minecraft:navigation.generic": {
+				"is_amphibious": false,
+				"can_path_over_water": false,
+				"can_swim": true,
+				"can_walk": false,
+				"can_breach": false,
+				"can_sink": false
+			},
+			"minecraft:body_rotation_always_follows_head": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add submarine"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:join_neutral": {
+				"remove": {
+					"component_groups": [
+						"libernia",
+						"telslakia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar uses: torpedoes"
+					]
+				}
+			},
+			"af:is_moving": {
+				"queue_command": {
+					"command": [
+						"camerashake add @a[r=32] 0.01 0.1 positional",
+						"playsound vehicle.drive @a ~ ~ ~ 5 0.8"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main",
+						"summon af:a19_corpse ~~~~~"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ^ ^1 ^2"
+					]
+				}
+			},
+			"af:player_invis": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider"
+					]
+				}
+			},
+			"af:fire_torpedo": {
+				"queue_command": {
+					"command": [
+						"summon af:torpedo ^ ^ ^16 ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

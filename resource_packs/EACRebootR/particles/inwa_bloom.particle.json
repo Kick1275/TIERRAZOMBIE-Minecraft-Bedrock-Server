@@ -1,0 +1,57 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "krep:inwa_bloom",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particle/particles"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "1"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.1
+			},
+			"minecraft:emitter_shape_point": {
+           "offset": [0, 0, 0]
+         },
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.2
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": 1
+			},
+			"minecraft:particle_initial_speed": 0,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [0, 0, 0],
+				"linear_drag_coefficient": 6
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["0.25 + v.particle_random_1 * 1", "0.25 + v.particle_random_1 * 1"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [4, 2],
+					"uv_size": [4, 4]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_radius": 0.1
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.0": "#50FAF7DA",
+						"0.22": "#00FAF7DA",
+						"1.0": "#00FAF7DA"
+					}
+				}
+			}
+		}
+	}
+}

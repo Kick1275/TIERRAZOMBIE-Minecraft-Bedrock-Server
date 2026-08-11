@@ -1,0 +1,215 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.af_anygun.bullet.spawn.firing": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.2,
+			"bones": {
+				"bean_righthand_items_90_degrees": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "firing"
+				}
+			},
+			"particle_effects": {
+				"0.15": {
+					"effect": "firing",
+					"locator": "projectile_particle"
+				}
+			}
+		},
+		"animation.af_anygun.model_adjust": {
+			"loop": true,
+			"bones": {
+				"bean_righthand_items_90_degrees": {
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				},
+				"bean_gun_barrel_righthand": {
+					"scale": 1.05
+				}
+			}
+		},
+		"animation.af_anygun.1st_person.no_sneak": {
+			"loop": true,
+			"bones": {
+				"bean_righthand_items": {
+					"rotation": [
+						5,
+						60,
+						-45
+					],
+					"scale": 1.25
+				},
+				"rightItem": {
+					"rotation": [
+						45,
+						30,
+						-28
+					]
+				}
+			}
+		},
+		"animation.af_anygun.1st_person.sneaking": {
+			"loop": true,
+			"bones": {
+				"bean_righthand_items": {
+					"rotation": [
+						-5,
+						60,
+						-55
+					],
+					"position": [
+						-0.5,
+						8,
+						-6.5
+					],
+					"scale": 1.75
+				},
+				"rightItem": {
+					"rotation": [
+						69,
+						-4,
+						5
+					],
+					"position": [
+						0,
+						0,
+						8
+					]
+				}
+			}
+		},
+		"animation.af_anygun.1st_person.shoot": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.2,
+			"bones": {
+				"bean_gun_righthand": {
+					"rotation": {
+						"0.0": [
+							-2.5,
+							0,
+							0
+						],
+						"0.05": [
+							-2.5,
+							0,
+							0
+						],
+						"0.15": [
+							1.25,
+							0,
+							0
+						],
+						"0.2": [
+							0,
+							0,
+							0
+						]
+					},
+					"scale": {
+						"0.0": [
+							1.1,
+							1.1,
+							0.9
+						],
+						"0.05": [
+							1.1,
+							1.1,
+							0.9
+						],
+						"0.2": [
+							1,
+							1,
+							1
+						]
+					}
+				}
+			}
+		},
+		"animation.af_anygun.3rd_person.no_sneak": {
+			"loop": true,
+			"bones": {
+				"bean_righthand_items": {
+					"rotation": [
+						-10,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.af_anygun.3rd_person.sneaking": {
+			"loop": true,
+			"bones": {
+				"bean_righthand_items": {
+					"rotation": [
+						-20,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.af_anygun.shoot": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.2,
+			"bones": {
+				"bean_gun_barrel_righthand": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							1.5
+						],
+						"0.05": [
+							0,
+							0,
+							1.5
+						],
+						"0.15": [
+							0,
+							0,
+							-0.75
+						],
+						"0.2": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "trigger"
+				},
+				"0.15": {
+					"effect": "reload"
+				}
+			}
+		},
+		"animation.af_anygun.no_reload": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"bean_gun_righthand": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

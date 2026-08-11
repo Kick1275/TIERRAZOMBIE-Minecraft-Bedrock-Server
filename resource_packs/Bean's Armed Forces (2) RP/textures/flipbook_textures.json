@@ -1,0 +1,8 @@
+[
+	{
+		"atlas_tile": "af_oil",
+		"flipbook_texture": "textures/oil_atlas",
+		"blend_frames": true,
+		"ticks_per_frame": 16
+	}
+]

@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.80",
+	"render_controllers": {
+		"controller.render.af_non_dye": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.non_dye"
+				}
+			],
+			"textures": [
+				"texture.non_dye"
+			]
+		}
+	}
+}

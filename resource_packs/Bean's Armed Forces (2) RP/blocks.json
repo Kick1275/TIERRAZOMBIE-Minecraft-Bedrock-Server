@@ -1,0 +1,118 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"af:weapon_table": {
+		"sound": "copper",
+		"textures": {
+			"up": "af_weapontable_top",
+			"down": "oak_planks",
+			"side": "af_weapontable_side"
+		}
+	},
+	"af:wasteland_grass": {
+		"sound": "dirt_with_roots",
+		"textures": {
+			"up": "af_wasteland_grass_top",
+			"side": "af_wasteland_grass_side",
+			"down": "dirt"
+		},
+		"isotropic": {
+			"up": true
+		}
+	},
+	"af:uranium_ore": {
+		"sound": "amethyst_cluster",
+		"textures": "af_uranium_ore"
+	},
+	"af:steel_frame": {
+		"sound": "copper_grate",
+		"textures": {
+			"side": "af_steel_frame_side",
+			"up": "af_steel_frame_top",
+			"down": "af_steel_frame_top"
+		}
+	},
+	"af:aluminium_ore": {
+		"sound": "stone",
+		"textures": "af_aluminium_ore"
+	},
+	"af:titanium_ore": {
+		"sound": "stone",
+		"textures": "af_titanium_ore"
+	},
+	"af:oil": {
+		"sound": "honey_block",
+		"textures": "af_oil",
+		"isotropic": true
+	},
+	"af:oil_dirt": {
+		"sound": "honey_block",
+		"textures": "af_oil_dirt"
+	},
+	"af:oil_sand": {
+		"sound": "honey_block",
+		"textures": "af_oil_sand"
+	},
+	"af:oil_stone": {
+		"sound": "honey_block",
+		"textures": "af_oil_stone"
+	},
+	"af:refined_oil": {
+		"sound": "slime",
+		"textures": "af_refined_oil"
+	},
+	"af:chain_mesh": {
+		"sound": "chain",
+		"textures": "af_chain_mesh"
+	},
+	"af:asphalt_black": {
+		"sound": "ancient_debris",
+		"textures": "af_asphalt_black"
+	},
+	"af:asphalt_red": {
+		"sound": "ancient_debris",
+		"textures": "af_asphalt_red"
+	},
+	"af:asphalt_white": {
+		"sound": "ancient_debris",
+		"textures": "af_asphalt_white"
+	},
+	"af:asphalt_yellow": {
+		"sound": "ancient_debris",
+		"textures": "af_asphalt_yellow"
+	},
+	"af:barbed_wire": {
+		"sound": "chain",
+		"textures": "af_barbed_wire"
+	},
+	"af:taxpayer_dollar_block": {
+		"sound": "mangrove_roots",
+		"textures": {
+			"up": "af_taxpayer_dollar_block_top",
+			"north": "af_taxpayer_dollar_block_side1",
+			"east": "af_taxpayer_dollar_block_side2",
+			"south": "af_taxpayer_dollar_block_side1",
+			"west": "af_taxpayer_dollar_block_side2",
+			"down": "oak_planks"
+		}
+	},
+	"af:taxpayer_coin_block": {
+		"sound": "chain",
+		"textures": {
+			"up": "af_taxpayer_coin_block_top",
+			"side": "af_taxpayer_coin_block_side",
+			"down": "af_taxpayer_coin_block_bottom"
+		}
+	},
+	"af:sandbag_block": {
+		"sound": "sand",
+		"textures": {
+			"up": "af_sandbag_block_top",
+			"side": "af_sandbag_block_side",
+			"down": "af_sandbag_block_bottom"
+		}
+	}
+}

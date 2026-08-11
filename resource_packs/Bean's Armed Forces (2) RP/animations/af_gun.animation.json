@@ -1,0 +1,320 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.af_gun.tp_wield": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"scale": 0
+				},
+				"rightArm": {
+					"scale": 1
+				},
+				"scope": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.af_gun.fp_wield": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"position": [
+						0,
+						7,
+						-5
+					],
+					"scale": 1
+				},
+				"rightArm": {
+					"scale": 0
+				},
+				"scope": {
+					"position": [
+						-64,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.af_gun.fp_nosneak": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [
+						0,
+						-5,
+						0
+					],
+					"position": [
+						-8,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.af_gun.fp_sneak": {
+			"loop": true
+		},
+		"animation.af_gun.fp_scope": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"scale": 0
+				},
+				"scope": {
+					"position": [
+						64,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.af_gun.fp_run": {
+			"loop": true,
+			"bones": {
+				"weapon": {
+					"rotation": [
+						15,
+						-45,
+						0
+					]
+				}
+			}
+		},
+		"animation.af_gun.fp_reload": {
+			"animation_length": 1,
+			"bones": {
+				"weapon": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [
+								0,
+								-4,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [
+								-5,
+								-5,
+								-25
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.7917": {
+							"post": [
+								-10,
+								-10,
+								-25
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"position": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.1667": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [
+								-4.69,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.875": {
+							"post": [
+								-4.69,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"scale": 1
+				},
+				"mag": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						],
+						"0.4167": [
+							0,
+							0,
+							-90
+						],
+						"0.5": {
+							"pre": [
+								0,
+								0,
+								-90
+							],
+							"post": [
+								40,
+								0,
+								0
+							]
+						},
+						"0.75": [
+							40,
+							0,
+							0
+						],
+						"0.875": [
+							-5,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							-2,
+							-4,
+							-3
+						],
+						"0.4167": [
+							-7,
+							-13,
+							13
+						],
+						"0.5": {
+							"pre": [
+								-7,
+								-13,
+								13
+							],
+							"post": [
+								-5,
+								-7,
+								3
+							]
+						},
+						"0.625": [
+							0,
+							-5,
+							-1
+						],
+						"0.75": [
+							0,
+							-2,
+							0
+						],
+						"0.875": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"slide": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.2917": [
+							0,
+							0,
+							0
+						],
+						"0.375": [
+							0,
+							0,
+							2.5
+						],
+						"0.625": [
+							0,
+							0,
+							2.5
+						],
+						"0.7083": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "reload"
+				}
+			}
+		}
+	}
+}

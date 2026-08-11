@@ -1,0 +1,52 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.af_gun.general": {
+			"states": {
+				"default": {
+					"animations": [
+						"fp_wield",
+						"fp_nosneak"
+					],
+					"transitions": [
+						{
+							"sneak": "q.is_sneaking"
+						},
+						{
+							"run": "!q.is_using_item&&!q.vertical_speed&&q.ground_speed>5"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"sneak": {
+					"animations": [
+						"fp_wield",
+						"fp_sneak"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_sneaking"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"run": {
+					"animations": [
+						"fp_wield",
+						"fp_nosneak",
+						"fp_run"
+					],
+					"transitions": [
+						{
+							"default": "q.ground_speed<5||q.is_using_item"
+						},
+						{
+							"sneak": "q.is_sneaking"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

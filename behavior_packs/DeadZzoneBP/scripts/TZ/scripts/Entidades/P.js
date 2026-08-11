@@ -50,7 +50,8 @@ world.afterEvents.playerSpawn.subscribe(async (data) => {
         player.runCommand('effect @s resistance 30 255 true')
         player.runCommand('effect @s weakness 30 255 true')
         player.runCommand('camera @s fade time 0.1 1 1')
-        player.runCommand('playsound safe.zone @s')
+        const _vol = player.getDynamicProperty("music:volume") ?? 1.0;
+        player.runCommand(`playsound safe.zone @s ~ ~ ~ ${_vol}`)
         //player.runCommand('title @s title §l§6¡HAHAHA! §2¡Tierra §4Zombie!')
         // player.runCommand('title @s subtitle §l§7¡Explore, protect and survive.!')
         player.runCommand('effect @s regeneration 10 250')
@@ -64,7 +65,7 @@ world.afterEvents.playerSpawn.subscribe(async (data) => {
             player.runCommand('give @s bed 1 0 {"keep_on_death":{}}')
             player.runCommand('give @s bed 1 0 {"keep_on_death":{}}')
             player.runCommand('camera @s fade time 5 1 1')
-            player.runCommand('playsound safe.zone @s')
+            player.runCommand(`playsound safe.zone @s ~ ~ ~ ${_vol}`)
             player.runCommand('title @s title §l§6¡Bienvenido a §2Tierra §4Zombie!')
             player.runCommand('title @s subtitle §l§7¡Explore, protect and survive.!')
            // player.runCommand('tag @s add radio_connected')

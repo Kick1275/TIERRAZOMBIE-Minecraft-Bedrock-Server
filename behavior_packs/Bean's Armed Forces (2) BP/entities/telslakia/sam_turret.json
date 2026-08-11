@@ -1,0 +1,234 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:sam_turret",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"active": {
+				"minecraft:shooter": {
+					"def": "af:missile_air"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 2,
+					"attack_interval": 5,
+					"attack_radius": 200,
+					"burst_shots": 4,
+					"burst_interval": 2.5
+				}
+			},
+			"inactive": {}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"telslakia",
+					"vehicle",
+					"inanimate"
+				]
+			},
+			"minecraft:health": {
+				"value": 1050
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 3.5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:on_death": {
+				"event": "af:explode",
+				"target": "self"
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"test": "on_ground",
+								"subject": "self",
+								"value": false
+							}
+						],
+						"event": "af:explode",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 0,
+				"within_radius": 256,
+				"entity_types": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "libernia"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "aerial"
+								},
+								{
+									"test": "on_ground",
+									"subject": "other",
+									"value": false
+								}
+							]
+						},
+						"max_dist": 256
+					}
+				],
+				"reselect_targets": true,
+				"must_see": false,
+				"target_search_height": 256,
+				"scan_interval": 50
+			},
+			"minecraft:movement.generic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_path_from_air": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:follow_range": {
+				"value": 500
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/sam_turret.json"
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "minecraft:iron_ingot",
+						"heal_amount": 15
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.5,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:manual",
+									"domain": "hand"
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar needs active RADAR within 16 blocks.",
+						"summon af:c_ram_base"
+					]
+				}
+			},
+			"af:explode": {
+				"queue_command": {
+					"command": [
+						"kill @s",
+						"kill @e[r=1,type=af:c_ram_base]",
+						"function explosion_effects"
+					]
+				}
+			},
+			"af:has_signal": {
+				"add": {
+					"component_groups": [
+						"active"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"inactive"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add has_signal"
+					]
+				}
+			},
+			"af:no_signal": {
+				"add": {
+					"component_groups": [
+						"inactive"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"active"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s remove has_signal"
+					]
+				}
+			},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=!has_signal] at @s if entity @e[type=af:radar,tag=radar_on,r=16] run event entity @s af:has_signal",
+						"execute as @s[tag=has_signal] at @s unless entity @e[type=af:radar,tag=radar_on,r=16] run event entity @s af:no_signal"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar needs active RADAR within 16 blocks, will fire at Libernian aircraft."
+					]
+				}
+			}
+		}
+	}
+}

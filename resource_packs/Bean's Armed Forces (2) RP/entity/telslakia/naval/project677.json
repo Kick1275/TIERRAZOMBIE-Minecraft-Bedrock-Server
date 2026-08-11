@@ -1,0 +1,39 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:project677",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/project677/project677",
+				"libernia": "textures/entity/project677/project677_libernia",
+				"telslakia": "textures/entity/project677/project677_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.project677"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_project677_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.strb90h.move",
+				"scale": "animation.16ddh.scale"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					{
+						"move": "query.modified_move_speed"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:ak630",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/ak630"
+			},
+			"geometry": {
+				"default": "geometry.ak630"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default"
+			],
+			"spawn_egg": {
+				"texture": "af_ak630_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"spin": "animation.c_ram.spin",
+				"scale": "animation.c_ram.scale",
+				"target": "controller.animation.c_ram.target",
+				"look": "animation.c_ram.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"target",
+					"scale",
+					"look"
+				]
+			},
+			"sound_effects": {
+				"spin": "c_ram.spin"
+			}
+		}
+	}
+}

@@ -1,0 +1,222 @@
+{
+	"tiers": [
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "minecraft:iron_ingot",
+									"quantity": 1
+								}
+							],
+							"gives": [
+								{
+									"item": "af:manual",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 0
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:iron_ingot",
+									"quantity": 1
+								}
+							],
+							"gives": [
+								{
+									"item": "af:telslakia_id",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 0
+						},
+						{
+							"wants": [
+								{
+									"item": "minecraft:gold_ingot",
+									"price_multiplier": 1,
+									"quantity": 16
+								}
+							],
+							"gives": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 0
+						},
+						{
+							"wants": [
+								{
+									"item": "af:refined_oil_bucket",
+									"price_multiplier": 1,
+									"quantity": 64
+								}
+							],
+							"gives": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 4
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 0
+						},
+						{
+							"wants": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 30
+								}
+							],
+							"gives": [
+								{
+									"item": "af:mig21_spawn_egg",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 35
+								}
+							],
+							"gives": [
+								{
+									"item": "af:su25_spawn_egg",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 40
+								}
+							],
+							"gives": [
+								{
+									"item": "af:mig29_spawn_egg",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 64
+								}
+							],
+							"gives": [
+								{
+									"item": "af:j20_spawn_egg",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 64
+								},
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 16
+								}
+							],
+							"gives": [
+								{
+									"item": "af:su57_spawn_egg",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"groups": [
+				{
+					"trades": [
+						{
+							"wants": [
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 64
+								},
+								{
+									"item": "af:taxpayer_dollar",
+									"quantity": 64
+								}
+							],
+							"gives": [
+								{
+									"item": "af:tu160_spawn_egg",
+									"quantity": 1
+								}
+							],
+							"max_uses": -1,
+							"trader_exp": 1
+						}
+					]
+				}
+			]
+		}
+	]
+}

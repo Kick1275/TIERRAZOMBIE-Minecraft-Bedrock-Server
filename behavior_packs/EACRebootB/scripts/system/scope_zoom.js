@@ -1,0 +1,9 @@
+import{world,system}from"@minecraft/server";const RIFLE_ITEMS=["krep:m16a4","krep:hk416","krep:ak12","krep:m8",'krep:qbz191',"krep:qbu191","krep:type95","krep:m7","krep:arka","krep:t112",];const SCOPE_VALUES=[7,13];const FOV_ZOOM="/camera @s fov_set 40 0.18 linear";const FOV_CLEAR="/camera @s fov_clear 0.05 linear";const zoomState=new Map();system.runInterval(()=>{for(const player of world.getPlayers()){const id=player.id;const markVariantComp=player.getComponent("minecraft:mark_variant");if(!markVariantComp||markVariantComp.value!==0){clearZoom(player,id);continue;}
+const skinIdComp=player.getComponent("minecraft:skin_id");if(!skinIdComp||skinIdComp.value!==0){clearZoom(player,id);continue;}
+if(!player.isSneaking){clearZoom(player,id);continue;}
+const heldItem=player.getComponent("minecraft:equippable")?.getEquipment("Mainhand");if(!heldItem||!RIFLE_ITEMS.includes(heldItem.typeId)){clearZoom(player,id);continue;}
+let scopeValue;try{scopeValue=player.getProperty("krep:scope");}catch{clearZoom(player,id);continue;}
+if(!SCOPE_VALUES.includes(scopeValue)){clearZoom(player,id);continue;}
+applyZoom(player,id);}},2);function applyZoom(player,id){if(zoomState.get(id)===true)return;try{player.runCommand(FOV_ZOOM);zoomState.set(id,true);}catch(e){console.warn(`[ScopeZoom] Failed to apply zoom for ${player.name}: ${e}`);}}
+function clearZoom(player,id){if(zoomState.get(id)!==true)return;try{player.runCommand(FOV_CLEAR);zoomState.set(id,false);}catch(e){console.warn(`[ScopeZoom] Failed to clear zoom for ${player.name}: ${e}`);}}
+world.afterEvents.playerLeave.subscribe(({playerId})=>{zoomState.delete(playerId);});

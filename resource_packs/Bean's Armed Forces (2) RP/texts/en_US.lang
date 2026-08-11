@@ -1,0 +1,511 @@
+pack.name=Bean's Armed Forces RP
+pack.description=Fight for Freedom!! Or commit war crimes...
+
+trade.level.6=Warlord
+
+af:itemGroup.name.bullet=Weapon Ammo
+af:itemGroup.name.gun=Weapons
+af:itemGroup.name.vehicle_ammo=Vehicle Ammo
+af:itemGroup.name.af_materials=Materials
+af:itemGroup.name.cd=CDs
+
+potion.wither=Radiation
+
+item.af:handgun.name=HandGun §8Thankyou to JFC-Guns' creator for lending help with the guns.§r§f
+entity.af:handgun_bullet_entity.name=HandGun Bullet  §8Thankyou to JFC-Guns' creator for lending help with the guns.§r§f
+
+item.af:shotgun.name=ShotGun §8Thankyou to JFC-Guns' creator for lending help with the guns.§r§f
+entity.af:shotgun_bullet_entity.name=ShotGun Bullet §8Thankyou to JFC-Guns' creator for lending help with the guns.§r§f
+
+action.interact.fire_artillery=Fire
+action.interact.load_artillery=Load
+action.interact.adjust_artillery=Adjust
+
+action.interact.load_ap=Load AP
+action.interact.load_he=Load HE
+action.interact.fire_ap=Fire AP
+action.interact.fire_he=Fire HE
+action.interact.shoot_ac=Shoot Autocannon
+action.interact.load_ac=Load Autocannon
+
+action.interact.load_gm=Load Missile
+action.interact.fire_gm=Fire Missile
+
+action.interact.load_r=Load Rocket
+action.interact.fire_r=Fire Rocket
+action.interact.shoot_mg=Shoot MG
+action.interact.fire_smoke=Fire Smoke
+action.interact.fire_t=Fire Torpedo
+
+item.spawn_egg.entity.af:artillery.name=Place Artillery §t"Howitzer"§r§f
+entity.af:artillery.name=Artillery §t"Howitzer"§r§f
+
+item.spawn_egg.entity.af:m1a1.name=Place M1A1 §q"Abrams"§r§f \n§r§8Main Battle Tank§r§f
+entity.af:m1a1.name=M1A1
+entity.af:m1a1_turret.name=M1A1 Turret
+action.hint.exit.af:m1a1=Tap sneak to dismount
+
+item.spawn_egg.entity.af:f16.name=Place F-16 §q"Falcon"§r§f \n§r§8Fighter Aircraft§r§f
+entity.af:f16.name=F-16
+action.hint.exit.af:f16=Tap sneak to dismount
+
+entity.af:missile_air.name=Missile
+entity.af:guided_missile.name=Guided Missile
+
+item.af:autopilot=Autopilot \n§r§8hold in aircraft§r§f
+
+item.af:he_shell=HE Shell \n§r§8High-Explosive | use in vehicle§r§f
+item.af:ap_shell=AP Shell \n§r§8Armour-Piercing | use in vehicle§r§f
+item.af:he_belt=HE Belt \n§r§8High-Explosive | use in vehicle§r§f
+item.af:ap_belt=AP Belt \n§r§8Armour-Piercing | use in vehicle§r§f
+item.af:guided_missile=ATG Missile \n§r§8Anti-Tank, Guided | use in vehicle§r§f
+item.af:sp_shell=SP Shell \n§r§8Stabilized-Piercing | use in artillery§r§f
+
+item.af:hydra_rocket=AG Rocket \n§r§8Anti-Ground | use in vehicle§r§f
+item.af:missile_air=AA Missile \n§r§8Anti-Air | use in aircraft§r§f
+item.af:missile_ground=AG Missile \n§r§8Anti-Ground | use in aircraft§r§f
+item.af:generalpurpose_bomb=GP Bomb \n§r§8General-Purpose | drop from aircraft§r§f
+item.af:torpedo=GP Torpedo \n§r§8General-Purpose | use in vehicle§r§f
+
+item.af:wrench=Wrench \n§r§8use on artillery§r§f
+
+item.af:flare=§cChaff/Flare §r\n§r§8use in jet§r§f
+entity.af:flare_entity.name=§cChaff/Flare§r§f
+
+item.spawn_egg.entity.af:recruiter.name=Spawn §6Arms Dealer §r\n§r§8sells vehicles§r§f
+entity.af:recruiter.name=Arms Dealer
+
+item.af:telslakia_id=§tTelslakian Passport§r\n§r§8converts vehicle/player faction§r§f
+item.af:libernia_id=§qLibernian Passport§r\n§r§8converts vehicle/player faction§r§f
+item.af:neutral_id=Deportation Papers\n§8removes player faction§r§f
+
+item.af:manual=§6BAF Manual §r\n§r§8place down to read§r§f
+
+item.spawn_egg.entity.af:mq9.name=Place MQ-9 §q"Reaper"§r§f \n§r§8Unmanned Aerial Vehicle§r§f
+entity.af:mq9.name=MQ-9
+action.hint.exit.af:mq9=Tap sneak to return
+
+item.spawn_egg.entity.af:mig21.name=Place MiG-21 §t"Fishbed"§r§f \n§r§8Interceptor Aircraft§r§f
+entity.af:mig21.name=MiG-21
+action.hint.exit.af:mig21=Tap sneak to dismount
+
+item.spawn_egg.entity.af:f35a.name=Place F-35A §q"Hive-mind"§r§f \n§r§8Stealth Fighter§r§f
+entity.af:f35a.name=F-35A
+action.hint.exit.af:f35a=Tap sneak to dismount
+
+item.spawn_egg.entity.af:b2.name=Place B-2 §q"Spirit"§r§f \n§r§8Stealth Bomber§r§f
+entity.af:b2.name=B-2
+action.hint.exit.af:b2=Tap sneak to dismount
+
+item.spawn_egg.entity.af:c_ram.name=Place C-RAM §q"Centurion"§r§f \n§r§8Air-Defence System§r§f
+entity.af:c_ram.name=C-RAM
+
+item.spawn_egg.entity.af:j20.name=Place J-20 §t"Basilisk"§r§f \n§r§8Stealth Fighter§r§f
+entity.af:j20.name=J-20
+action.hint.exit.af:j20=Tap sneak to dismount
+
+item.spawn_egg.entity.af:m1151.name=Place M1151 §q"Humvee"§r§f \n§r§8Infantry Mobility Vehicle§r§f
+entity.af:m1151.name=M1151
+entity.af:m1151_turret.name=M1151 Turret
+action.hint.exit.af:m1151=Tap sneak to dismount
+
+tile.af:oil.name=Crude-Oil Block
+
+item.spawn_egg.entity.af:war_table.name=Place War Table
+entity.af:war_table.name=War Table
+action.interact.war_table=Pick up
+
+tile.af:weapon_table.name=Weapons Table
+
+item.spawn_egg.entity.af:sam_turret.name=Place S-400 §t"Growler"§r§f \n§r§8Air-Defence System§r§f
+entity.af:sam_turret.name=S-400
+
+entity.af:sam_missile.name=SAM Missile
+
+item.spawn_egg.entity.af:t90m.name=Place T-90M §t"Proryv"§r§f \n§r§8Main Battle Tank§r§f
+entity.af:t90m.name=T-90M
+entity.af:t90m_turret.name=T-90M Turret
+action.hint.exit.af:t90m=Tap sneak to dismount
+
+item.spawn_egg.entity.af:siren_pole.name=Place Siren Pole
+entity.af:siren_pole.name=Siren Pole
+
+item.spawn_egg.entity.af:antitank_mine.name=Place Anti-Tank Mine
+entity.af:antitank_mine.name=Anti-Tank Mine
+
+entity.af:communist_explosion.name=Communism
+
+entity.af:vehicle_explosion.name=a Vehicle
+
+item.af:oil_bucket=Crude-Oil Bucket \n§r§8smelt in furnace§r§f
+item.af:refined_oil_bucket=Refined-Oil Bucket \n§r§8trade with Arms-dealer§r§f
+
+entity.af:bullet.name=Bullet
+
+entity.af:bunkerbuster_bomb.name=Bunker-buster Bomb
+item.af:bunkerbuster_bomb_item=Bunker-buster Bomb §q"MOP"§r§f \n§r§8drop from B-2§r§f
+
+item.af:thermobaric_bomb_item=Thermobaric Bomb §t"FOAB"§r§f \n§r§8drop from Tu-160§r§f
+
+action.interact.bomb.drop=Drop
+action.interact.mop.drop=Drop Bunker-Buster
+action.interact.mop.load=Load Bunker-Buster
+
+action.interact.foab.drop=Drop Thermobaric Bomb
+action.interact.foab.load=Load Thermobaric Bomb
+
+entity.af:generalpurpose_bomb.name=General-purpose Bomb
+
+item.spawn_egg.entity.af:type16.name=Place Type 16 §q"Ferret"§r§f \n§r§8Maneuver Combat Vehicle§r§f
+entity.af:type16.name=Type 16
+entity.af:type16_turret.name=Type 16 Turret
+action.hint.exit.af:type16=Tap sneak to dismount
+
+item.af:charged_tnt=Bundled TNT \n§r§8recipe item
+
+item.spawn_egg.entity.af:bmpt72.name=Place BMPT-72 §t"Terminator"§r§f \n§r§8Tank Support Vehicle§r§f
+entity.af:bmpt72.name=BMPT-72
+entity.af:bmpt72_turret.name=BMPT-72 Turret
+action.hint.exit.af:bmpt72=Tap sneak to dismount
+
+item.af:gas_mask=Gas Mask [West] \n§r§8offhand equip§r§f
+item.af:gas_mask_east=Gas Mask [East] \n§r§8offhand equip§r§f
+
+item.spawn_egg.entity.af:su57.name=Place Su-57 §t"Felon"§r§f \n§r§8Stealth Fighter§r§f
+entity.af:su57.name=Su-57
+action.hint.exit.af:su57=Tap sneak to dismount
+
+item.af:jackboots=Jackboots
+
+item.spawn_egg.entity.af:btr80.name=Place BTR-80 §t"War-beaver"§r§f \n§r§8Amphibious Assault Carrier§r§f
+entity.af:btr80.name=BTR-80
+entity.af:btr80_turret.name=BTR-80 Turret
+action.hint.exit.af:btr80=Tap sneak to dismount
+
+item.spawn_egg.entity.af:ah64.name=Place AH-64 §q"Apache"§r§f \n§r§8Attack Helicopter§r§f
+entity.af:ah64.name=AH-64
+action.hint.exit.af:ah64=Tap sneak to dismount
+
+item.spawn_egg.entity.af:gas_canister.name=Place Gas Canister
+entity.af:gas_canister.name=Gas Canister
+
+item.spawn_egg.entity.af:mi24.name=Place Mi-24 §t"Hind"§r§f \n§r§8Attack Helicopter§r§f
+entity.af:mi24.name=Mi-24
+action.hint.exit.af:mi24=Tap sneak to dismount
+
+item.spawn_egg.entity.af:flag_pole.name=Place Flag Pole
+entity.af:flag_pole.name=Flag Pole
+
+item.spawn_egg.entity.af:turret.name=Place Anti-Infantry Turret
+entity.af:turret.name=Anti-Infantry Turret
+item.af:telslakian_helmet=Telslakian Helmet \n§r§8dyeable§r§f
+item.af:libernian_helmet=Libernian Helmet \n§r§8dyeable§r§f
+item.af:multicam_helmet=Combat Helmet \n§r§8ucp§r§f
+item.af:pilot_helmet=Pilot Helmet \n§r§8dyeable§r§f
+
+item.spawn_egg.entity.af:kamaz65224.name=Place KamAZ-65224  §t"Workhorse"§r§f \n§r§8Transport Vehicle§r§f
+entity.af:kamaz65224.name=KamAZ-65224
+action.hint.exit.af:kamaz65224=Tap sneak to dismount
+
+item.spawn_egg.entity.af:b61_nuke.name=Spawn B61 Nuclear Bomb
+entity.af:b61_nuke.name=B61 Nuclear Bomb
+item.spawn_egg.entity.af:an602.name=Spawn AN602 Nuclear Bomb
+entity.af:an602_nuke.name=AN602 Nuclear Bomb "Tsar Bomba"
+tile.af:wasteland_grass.name=Wasteland Grass
+
+item.spawn_egg.entity.af:m939.name=Place M939 §q"Hudson"§r§f \n§r§8Transport Vehicle§r§f
+entity.af:m939.name=M939
+action.hint.exit.af:m939=Tap sneak to dismount
+
+item.af:mq9_remote=MQ-9 Remote \n§r§8use on Radio Tower, connects to closest MQ-9§r§f
+
+item.spawn_egg.entity.af:radio_tower.name=Place Radio Tower \n§r§8use with Remote§r§f
+entity.af:radio_tower.name=Radio Tower
+
+item.af:glock17=Glock 17 \n§r§8Handgun§r§f
+item.af:glock17_bullet=Glock 17 Bullet
+
+item.af:m4carbine=M4 Carbine \n§r§8Assault Rifle§r§f
+item.af:m4carbine_bullet=M4 Carbine Bullet
+
+item.af:m24sniper=M24 Sniper \n§r§8Sniper Rifle§r§f
+item.af:m24sniper_bullet=M24 Sniper Bullet
+
+item.af:spas12=SPAS-12 \n§r§8Shotgun§r§f
+item.af:spas12_bullet=SPAS-12 Bullet
+
+item.af:balaclava=Balaclava
+item.af:telslakian_vest=Telslakian Vest \n§r§8dyeable§r§f
+item.af:libernian_vest=Libernian Vest \n§r§8dyeable§r§f
+item.af:multicam_vest=Combat Vest \n§r§8ucp§r§f
+
+item.spawn_egg.entity.af:cd_player.name=Place CD Player
+entity.af:cd_player.name=CD Player
+
+item.af:cd_c=CD:  \n§r§8The Vessel (Boris Rizhiy)§r§f
+item.af:cd_cd=CD:  \n§r§8California Dreamin'§r§f
+item.af:cd_ewtrtw=CD:  \n§r§8Everybody Wants To Rule The World§r§f
+item.af:cd_fmttm=CD:  \n§r§8Fly Me To The Moon§r§f
+item.af:cd_hc=CD:  \n§r§8Hotel California§r§f
+item.af:cd_swm=CD:  \n§r§8Stay With Me§r§f
+item.af:cd_tmwstw=CD:  \n§r§8The Man Who Sold The World§r§f
+item.af:cd_idwtstwof=CD:  \n§r§8I Don't Want to Set the World on Fire§r§f
+
+item.spawn_egg.entity.af:m551.name=Place M551 §q"Sheridan"§r§f \n§r§8Amphibious Light Tank§r§f
+entity.af:m551.name=M551
+entity.af:m551_turret.name=M551 Turret
+action.hint.exit.af:m551=Tap sneak to dismount
+
+item.af:raw_uranium=Raw Uranium \n§r§8use centrifuge cylinder to enrich§r§f
+tile.af:uranium_ore.name=Uranium Ore
+
+item.spawn_egg.entity.af:f4.name=Place F-4 §q"Phantom"§r§f \n§r§8Fighter Aircraft§r§f
+entity.af:f4.name=F-4
+action.hint.exit.af:f4=Tap sneak to dismount
+
+item.af:nightvision_goggles=Night-Vision Goggles [ON] \n§r§8toggle via crafting | offhand equip§r§f
+item.af:nightvision_goggles_off=Night-Vision Goggles [OFF] \n§r§8toggle via crafting | offhand equip§r§f
+item.af:libernian_combat_suit=Combat Suit \n§r§8forest§r§f
+item.af:telslakian_combat_suit=Combat Suit \n§r§8desert§r§f
+item.af:multicam_combat_suit=Combat Suit \n§r§8ucp§r§f
+item.af:dyeable_combat_suit=Combat Suit \n§r§8dyeable§r§f
+item.af:libernian_uniform=Libernian Uniform \n§r§8dyeable§r§f
+item.af:telslakian_uniform=Telslakian Uniform \n§r§8dyeable§r§f
+
+item.spawn_egg.entity.af:mig29.name=Place MiG-29 §t"Fulcrum"§r§f \n§r§8Fighter Aircraft§r§f
+entity.af:mig29.name=MiG-29
+action.hint.exit.af:mig29=Tap sneak to dismount
+
+item.spawn_egg.entity.af:f22.name=Place F-22 §q"Raptor"§r§f \n§r§8Stealth Fighter§r§f
+entity.af:f22.name=F-22
+action.hint.exit.af:f22=Tap sneak to dismount
+
+item.af:cd_player=CD Player \n§r§8can play CDs§r§f
+
+item.af:grenade_frag=Grenade \n§r§8Fragmentation§r§f
+entity.af:thrown_grenade_frag.name=Grenade Fragmentation
+
+item.af:grenade_stun=Grenade \n§r§8Flashbang§r§f
+entity.af:thrown_grenade_stun.name=Grenade Flashbang
+
+item.af:grenade_smoke=Grenade \n§r§8Smoke§r§f
+entity.af:thrown_grenade_smoke.name=Grenade Smoke
+
+item.spawn_egg.entity.af:m114.name=Place M114 §q"Locum"§r§f \n§r§8155mm Artillery§r§f
+entity.af:m114.name=M114
+
+item.spawn_egg.entity.af:d20.name=Place D-20 §t"Petrov"§r§f \n§r§8152mm Artillery§r§f
+entity.af:d20.name=D-20
+
+item.spawn_egg.entity.af:t72a.name=Place T-72A §t"Ural"§r§f \n§r§8Main Battle Tank§r§f
+entity.af:t72a.name=T-72A
+entity.af:t72a_turret.name=T-72A Turret
+action.hint.exit.af:t72a=Tap sneak to dismount
+
+tile.af:steel_frame.name=Steel Frame
+
+item.af:aluminium_ingot=Aluminium Ingot \n§r§8can be found above y0§r§f
+item.af:steel_ingot=Steel Ingot \n§r§8smelt iron block§r§f
+item.af:titanium_ingot=Titanium Ingot \n§r§8can be found below y0§r§f
+
+item.af:taxpayer_dollar=Taxpayer Dollar \n§r§8Arms-Dealer currency
+item.af:taxpayer_coin=Taxpayer Coin \n§r§8Player currency
+
+item.af:gj2_remote=GJ-2 Remote \n§r§8use on Radio Tower, connects to closest GJ-2§r§f
+
+item.spawn_egg.entity.af:gj2.name=Place GJ-2 §t"Wing Loong"§r§f \n§r§8Unmanned Aerial Vehicle§r§f
+entity.af:gj2.name=GJ-2
+action.hint.exit.af:gj2=Tap sneak to return
+
+item.spawn_egg.entity.af:eq2050.name=Place EQ2050 §t"Hanma"§r§f \n§r§8Infantry Mobility Vehicle§r§f
+entity.af:eq2050.name=EQ2050
+entity.af:eq2050_turret.name=EQ2050 Turret
+action.hint.exit.af:eq2050=Tap sneak to dismount
+
+item.spawn_egg.entity.af:ak630.name=Place AK-630 §t"Duet"§r§f \n§r§8Air-Defence System§r§f
+entity.af:ak630.name=AK-630 §t"Duet"§r§f
+
+item.spawn_egg.entity.af:nasams.name=Place NASAMS §q"Norge"§r§f \n§r§8Air-Defence System§r§f
+entity.af:nasams.name=NASAMS §q"Norge"§r§f
+
+item.spawn_egg.entity.af:m2a2.name=Place M2A2 §q"Bradley"§r§f \n§r§8Infantry Fighting Vehicle§r§f
+entity.af:m2a2.name=M2A2
+entity.af:m2a2_turret.name=M2A2 Turret
+action.hint.exit.af:m2a2=Tap sneak to dismount
+
+item.af:throttle=Throttle \n§r§8hold in aircraft§r§f
+
+item.spawn_egg.entity.af:mounted_gun.name=Place Mounted Gun
+entity.af:mounted_gun.name=Mounted Gun
+
+entity.af:sentry_base.name=Sentry Base
+
+item.spawn_egg.entity.af:bm3.name=Place BM-3 §t"Marker"§r§f \n§r§8Anti-Infantry Sentry§r§f
+entity.af:bm3.name=BM-3
+
+item.spawn_egg.entity.af:sgra1.name=Place SGR-A1 §q"Pillbox"§r§f \n§r§8Anti-Infantry Sentry§r§f
+entity.af:sgra1.name=SGR-A1
+
+item.spawn_egg.entity.af:tu160.name=Place Tu-160 §t"Blackjack"§r§f \n§r§8Supersonic Bomber§r§f
+entity.af:tu160.name=Tu-160
+action.hint.exit.af:tu160=Tap sneak to dismount
+
+item.spawn_egg.entity.af:a10.name=Place A-10 §q"Warthog"§r§f \n§r§8Attack Aircraft§r§f
+entity.af:a10.name=A-10
+action.hint.exit.af:a10=Tap sneak to dismount
+
+item.spawn_egg.entity.af:su25.name=Place Su-25 §t"Frogfoot"§r§f \n§r§8Attack Aircraft§r§f
+entity.af:su25.name=Su-25
+action.hint.exit.af:su25=Tap sneak to dismount
+
+item.spawn_egg.entity.af:libernian_soldier.name=Spawn Libernian Soldier
+entity.af:libernian_soldier.name=Libernian Soldier
+
+item.spawn_egg.entity.af:telslakian_soldier.name=Spawn Telslakian Soldier
+entity.af:telslakian_soldier.name=Telslakian Soldier
+
+tile.af:aluminium_ore.name=Aluminium Ore
+tile.af:titanium_ore.name=Titanium Ore
+
+item.af:rations=Rations \n§r§8can heal soldiers§r§f
+item.af:kevlar=Kevlar \n§r§8recipe item
+item.af:uav_remote=UAV Remote \n§r§8use on UAV to link
+
+item.spawn_egg.entity.af:af_16ddh.name=Place 16DDH §q"Hyuga-class"§r§f \n§r§8Aircraft Carrier§r§f
+entity.af:af_16ddh.name=16DDH
+action.hint.exit.af:af_16ddh=Tap sneak to dismount
+
+tile.af:oil_dirt.name=Oil Dirt
+tile.af:oil_sand.name=Oil Sand
+tile.af:oil_stone.name=Oil Stone
+tile.af:refined_oil.name=Refined-Oil Block
+
+item.spawn_egg.entity.af:leopard2a4.name=Place Leopard 2A4 §q"Spitmaus"§r§f \n§r§8Main Battle Tank§r§f
+entity.af:leopard2a4.name=Leopard 2A4
+entity.af:leopard2a4_turret.name=Leopard 2A4
+action.hint.exit.af:leopard2a4=Tap sneak to dismount
+
+item.spawn_egg.entity.af:m142.name=Place M142 §q"HIMARS"§r§f \n§r§8Self-propelled Artillery§r§f
+entity.af:m142.name=M142
+entity.af:m142_turret.name=M142 Turret
+action.hint.exit.af:m142=Tap sneak to dismount
+
+item.spawn_egg.entity.af:af_2s38.name=Place 2S38 §t"Derivatsiya"§r§f \n§r§8Anti-Aircraft§r§f
+entity.af:af_2s38.name=2S38
+entity.af:af_2s38_turret.name=2S38 Turret
+action.hint.exit.af:af_2s38=Tap sneak to dismount
+
+entity.af:manual.name=Manual
+
+item.spawn_egg.entity.af:strb90h.name=Place STRB 90 H §q"CB90-class"§r§f \n§r§8Patrol Boat§r§f
+entity.af:strb90h.name=STRB 90H
+entity.af:strb90h_turret.name=STRB 90 H Turret
+action.hint.exit.af:strb90h=Tap sneak to dismount
+
+tile.af:chain_mesh.name=Chain Mesh
+tile.af:barbed_wire.name=Barbed Wire
+
+tile.af:asphalt_black.name=Black Asphalt \n§r§8runway block§r§f
+tile.af:asphalt_red.name=Red Asphalt
+tile.af:asphalt_white.name=White Asphalt
+tile.af:asphalt_yellow.name=Yellow Asphalt
+
+item.spawn_egg.entity.af:naval_mine.name=Place Naval Mine
+entity.af:naval_mine.name=Naval Mine
+
+item.af:cable_cutter=Cable Cutter
+
+item.af:handheld_oil_drill=Handheld Oil-Drill
+
+item.af:camo_bucket=Camo Bucket \n§r§8use on vehicle§r§f
+item.af:metal_detector=Metal Detector \n§r§8use to find mines§r§f
+item.af:rangefinder=Coord Rangefinder
+
+item.spawn_egg.entity.af:radar_receiver.name=Place RADAR Receiver
+entity.af:radar_receiver.name=RADAR Receiver
+item.spawn_egg.entity.af:radar.name=Place RADAR
+entity.af:radar.name=RADAR
+
+tile.af:taxpayer_dollar_block.name=Taxpayer Dollar Pile
+tile.af:taxpayer_coin_block.name=Taxpayer Coin Pile
+
+item.af:telslakian_peaked_cap=Telslakian Peaked Cap \n§r§8dyeable§r§f
+item.af:libernian_peaked_cap=Libernian Peaked Cap \n§r§8dyeable§r§f
+
+item.af:barbed_wire_item=Barbed Wire
+tile.af:sandbag_block.name=Sandbag Block
+item.af:anzac_biscuit=ANZAC Biscuit
+
+
+item.spawn_egg.entity.af:armoured_train_carriage.name=Place Armoured Train Carriage
+entity.af:armoured_train_carriage.name=Armoured Train Carriage
+item.spawn_egg.entity.af:armoured_train_platform.name=Place Armoured Train Platform
+entity.af:armoured_train_platform.name=Armoured Train Platform
+item.spawn_egg.entity.af:armoured_train_locomotive.name=Place Armoured Train Locomotive
+entity.af:armoured_train_locomotive.name=Armoured Train Locomotive
+
+item.af:vehicle_periscope=Vehicle Periscope \n§r§8use in vehicle to toggle pov§r§f
+
+item.spawn_egg.entity.af:bm30.name=Place BM-30 §t"Smerch"§r§f \n§r§8Self-propelled Artillery§r§f
+entity.af:bm30.name=BM-30
+entity.af:bm30_turret.name=BM-30 Turret
+action.hint.exit.af:bm30=Tap sneak to dismount
+
+item.spawn_egg.entity.af:type142a.name=Place Type 142A §q"Gepard-class"§r§f \n§r§8Fast-attack Craft§r§f
+entity.af:type142a.name=Type 142A
+action.hint.exit.af:type142a=Tap sneak to dismount
+
+item.af:pask_helmet=PASK Helmet \n§r§8Peace, Alliance, Security, Knowledge§r§f
+
+item.af:uranium_ingot=Uranium Ingot
+item.af:uranium_nugget=Enriched Uranium
+item.af:uranium_rod=Uranium Rod
+item.af:b61_nuke_item=B61 Nuclear Bomb \n§r§8drop from B-2 or Tu-160§r§f
+item.af:uranium_implosive=Uranium Implosive
+item.af:uranium_core=Uranium Core
+
+item.spawn_egg.entity.af:centrifuge_cylinder.name=Place Centrifuge Cylinder \n§r§8use to enrich uranium§r§f
+entity.af:centrifuge_cylinder.name=Centrifuge Cylinder
+
+item.af:communist_manifesto=Communist Manifesto
+item.af:capitalist_manifesto=Capitalist Manifesto
+
+death.attack.magic=%1$s went painfully
+item.spawn_egg.entity.af:demon_core.name=Place Demon Core
+entity.af:demon_core.name=Demon Core
+
+item.spawn_egg.entity.af:type075.name=Place Type 075 §t"Yunshen-class"§r§f \n§r§8Aircraft Carrier§r§f
+entity.af:type075.name=Type 075
+action.hint.exit.af:type075=Tap sneak to dismount
+
+item.spawn_egg.entity.af:f18.name=Place F/A-18 §q"Hornet"§r§f \n§r§8Carrier Aircraft§r§f
+entity.af:f18.name=F-18
+action.hint.exit.af:f18=Tap sneak to dismount
+
+item.spawn_egg.entity.af:f14.name=Place F-14 §q"Tomcat"§r§f \n§r§8CarrierAircraft§r§f
+entity.af:f14.name=F-14
+action.hint.exit.af:f14=Tap sneak to dismount
+
+item.spawn_egg.entity.af:yak141.name=Place Yak-141 §t"Freestyle"§r§f \n§r§8CarrierrAircraft§r§f
+entity.af:yak141.name=Yak-141
+action.hint.exit.af:yak141=Tap sneak to dismount
+
+item.spawn_egg.entity.af:su33.name=Place Su-33 §t"Flanker"§r§f \n§r§8Carrier Aircraft§r§f
+entity.af:su33.name=Su-33
+action.hint.exit.af:su33=Tap sneak to dismount
+
+item.spawn_egg.entity.af:a19.name=Place A19 §q"Gotland-class"§r§f \n§r§8Attack Submarine§r§f
+entity.af:a19.name=A19
+action.hint.exit.af:a19=Tap sneak to dismount
+
+item.spawn_egg.entity.af:project1241.name=Place Project 1241 §t"Tarantul-class"§r§f \n§r§8Missile Corvette§r§f
+entity.af:project1241.name=Project 1241
+action.hint.exit.af:project1241=Tap sneak to dismount
+
+item.spawn_egg.entity.af:project677.name=Place Project 677 §t"Lada-class"§r§f \n§r§8Attack Submarine§r§f
+entity.af:project677.name=Project 677
+action.hint.exit.af:project677=Tap sneak to dismount
+
+item.spawn_egg.entity.af:project03160.name=Place Project 03160  §t"Raptor-class"§r§f \n§r§8Patrol Boat§r§f
+entity.af:project03160.name=Project 03160
+action.hint.exit.af:project03160=Tap sneak to dismount

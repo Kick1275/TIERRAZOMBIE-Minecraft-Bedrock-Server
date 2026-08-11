@@ -2732,6 +2732,44 @@
       "sounds" : [
         "sounds/TZ/lose2"
       ]
+    },
+    "bandage":{
+      "category" : "hostile",
+      "sounds" : [
+        "sounds/TZ/bandage"
+      ]
+    },
+    "tz.jeringa": {
+      "category": "hostile",
+      "sounds": ["sounds/TZ/jeringa"]
+    },
+    "tz.pilldoras": {
+      "category": "hostile",
+      "sounds": ["sounds/TZ/Pilldoras"]
+    },
+    "tz.bandage": {
+      "category": "hostile",
+      "sounds": ["sounds/TZ/bandage"]
+    },
+    "tz.bolsadevendaje": {
+      "category": "hostile",
+      "sounds": ["sounds/TZ/bolsadevendaje"]
+    },
+    "NPC.Buy":{
+      "category": "hostile",
+      "sounds": ["sounds/TZ/BuySound"]
+    },
+    "Unloking":{
+      "category": "hostile",
+      "sounds":["sounds/TZ/Unloking"]
+    },
+    "loked":{
+      "category": "hostile",
+      "sounds":["sounds/TZ/loked"]
+    },
+    "notLoked":{
+      "category": "hostile",
+      "sounds":["sounds/TZ/notLoked"]
     }
   }
 }

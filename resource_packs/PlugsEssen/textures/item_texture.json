@@ -19,6 +19,18 @@
     },
     "netherite_key": {
       "textures": "textures/items/netherite_key"
+    },
+    "ganzua1": {
+      "textures" : "textures/items/ganzua1"
+    },
+    "ganzua2": {
+      "textures" : "textures/items/ganzua2"
+    },
+    "ganzua3": {
+      "textures" : "textures/items/ganzua3"
+    },
+    "BloqueadorDeVehiculos": {
+      "textures" : "textures/items/BloqueadorDeVehiculos"
     }
   }
 }

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.artillery.adjust": {
+			"initial_state": "down",
+			"states": {
+				"down": {
+					"transitions": [
+						{
+							"up": "q.is_ignited"
+						}
+					],
+					"blend_transition": 1
+				},
+				"up": {
+					"animations": [
+						"facing_up"
+					],
+					"transitions": [
+						{
+							"down": "!q.is_ignited"
+						}
+					],
+					"blend_transition": 1,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

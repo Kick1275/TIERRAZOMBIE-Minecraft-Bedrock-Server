@@ -1,0 +1,7 @@
+{
+	"menu": {
+		"event_name": "music.snare",
+		"max_delay": 10,
+		"min_delay": 0
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"format_version" : "1.20.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "ranzie:wired_wall"
+		},
+		"components" : {
+			"minecraft:creative_category" : {
+				"category": "construction",
+				"group": "itemGroup.name.fence"
+			},
+			"minecraft:icon" : {
+				"texture" : "wired_wall_item"
+			},
+			"minecraft:block_placer" : {
+				"block" : "ranzie:wired_wall_block"
+			}
+		}
+	}
+}

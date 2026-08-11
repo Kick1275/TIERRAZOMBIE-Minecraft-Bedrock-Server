@@ -54,15 +54,12 @@ import "./TZ/scripts/Plugs/Clans.js"
 import "./TZ/scripts/Plugs/DR.js"
 import "./TZ/scripts/Plugs/EffectShop.js"
 */
-import "./TZ/scripts/Entidades/P.js"
 
 import { system, world } from "@minecraft/server";
 import { tick } from "./main/flashbang.js";
 
+// flashbang tick() ya recorre a todos los jugadores internamente; llamarlo una sola vez
+// por tick (antes se llamaba una vez POR jugador, causando raycasts redundantes O(N²)).
 system.runInterval(() => {
-    const players = world.getAllPlayers();
-    for (let i = 0; i < players.length; i++) {
-        const player = players[i];
-        tick(player);
-    };
+    tick();
 }, 1);

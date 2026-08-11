@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:bm3",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/bm3"
+			},
+			"geometry": {
+				"default": "geometry.bm3"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity"
+			],
+			"spawn_egg": {
+				"texture": "af_bm3_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"look": "animation.sentry.look"
+			},
+			"scripts": {
+				"animate": [
+					"look"
+				]
+			}
+		}
+	}
+}

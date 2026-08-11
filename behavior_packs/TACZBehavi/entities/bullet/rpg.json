@@ -17,7 +17,9 @@
           "causes_fire": false,
           "fire_affected_by_griefing": false,
           "destroy_affected_by_griefing": false,
-          "breaks_blocks": true
+          "breaks_blocks": true,
+          "max_resistance": 10
+
         }
       }
     },

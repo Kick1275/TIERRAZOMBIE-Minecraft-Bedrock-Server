@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:m4carbine_bullet"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "minecraft:copper_ingot"
+			},
+			"N": {
+				"item": "minecraft:copper_nugget"
+			}
+		},
+		"pattern": [
+			"R"
+		],
+		"result": {
+			"item": "af:m4carbine_bullet",
+			"count": 5
+		}
+	}
+}

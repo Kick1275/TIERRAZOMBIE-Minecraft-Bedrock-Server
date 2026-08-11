@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "club"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "#A",
+      "#A#",
+      "#B"
+    ],
+    "key": {
+      "A": { "item": "minecraft:log" },
+      "B": { "item": "minecraft:stick", "data": 0 }
+    },
+    "result": {
+      "item": "ranzie:club",
+      "count": 1
+    }
+  }
+}

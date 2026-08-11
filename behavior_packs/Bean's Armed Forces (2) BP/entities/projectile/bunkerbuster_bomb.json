@@ -1,0 +1,109 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:bunkerbuster_bomb",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"cause": "entity_explosion",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"test": "on_ground",
+								"subject": "self",
+								"operator": "=="
+							},
+							{
+								"test": "has_tag",
+								"value": "going_to_explode",
+								"subject": "self",
+								"operator": "!="
+							}
+						],
+						"event": "af:explode",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.1,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			}
+		},
+		"events": {
+			"af:explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add going_to_explode",
+						"function explosion_effects"
+					]
+				}
+			},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=going_to_explode] at @s run fill ~1 ~1 ~1 ~-1 ~-3 ~-1 air destroy"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"explode": {
+				"minecraft:explode": {
+					"fuse_length": 3,
+					"power": 20,
+					"fuse_lit": true,
+					"causes_fire": true,
+					"breaks_blocks": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			}
+		}
+	}
+}

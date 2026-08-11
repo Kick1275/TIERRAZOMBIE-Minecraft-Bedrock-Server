@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:spruce_spiked_plate"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "AAA",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stick"
+      },
+      "B": {
+        "item": "minecraft:spruce_log"
+      }
+    },
+    "result": {
+      "item": "ranzie:spruce_spiked_plate_block",
+      "count": 4
+    }
+  }
+}

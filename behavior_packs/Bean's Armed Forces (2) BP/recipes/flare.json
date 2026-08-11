@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:flare"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"F": {
+				"item": "minecraft:flint_and_steel"
+			},
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "minecraft:netherrack"
+			}
+		},
+		"pattern": [
+			"RNR",
+			"RFR",
+			"RNR"
+		],
+		"result": {
+			"item": "af:flare",
+			"count": 8
+		}
+	}
+}

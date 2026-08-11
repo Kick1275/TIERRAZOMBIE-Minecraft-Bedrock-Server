@@ -1,0 +1,326 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:recruiter",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"neutral": {
+				"minecraft:npc": {},
+				"minecraft:nameable": {
+					"always_show": false,
+					"allow_name_tag_renaming": true
+				}
+			},
+			"libernia_army": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "Army",
+					"new_screen": true,
+					"table": "trading/army_libernia.json"
+				}
+			},
+			"telslakia_army": {
+				"minecraft:variant": {
+					"value": 2
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "Army",
+					"new_screen": true,
+					"table": "trading/army_telslakia.json"
+				}
+			},
+			"libernia_air": {
+				"minecraft:variant": {
+					"value": 3
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "Airforce",
+					"new_screen": true,
+					"table": "trading/air_libernia.json"
+				}
+			},
+			"telslakia_air": {
+				"minecraft:variant": {
+					"value": 4
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "Airforce",
+					"new_screen": true,
+					"table": "trading/air_telslakia.json"
+				}
+			},
+			"libernia_navy": {
+				"minecraft:variant": {
+					"value": 5
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "Navy",
+					"new_screen": true,
+					"table": "trading/navy_libernia.json"
+				}
+			},
+			"telslakia_navy": {
+				"minecraft:variant": {
+					"value": 6
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "Navy",
+					"new_screen": true,
+					"table": "trading/navy_telslakia.json"
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc",
+					"inanimate"
+				]
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 6,
+				"look_distance": 8,
+				"probability": 0.02
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 10
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:home": {
+				"restriction_radius": 16
+			},
+			"minecraft:behavior.go_home": {
+				"goal_radius": 0.5
+			},
+			"minecraft:behavior.float": {
+				"priority": 5
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_walk": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"event": "af:faction_join",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "libernia",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "telslakia",
+										"operator": "!="
+									}
+								]
+							},
+							"target": "self"
+						},
+						"play_sounds": "milk",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"event": "af:branch_join",
+							"filters": {
+								"all_of": [
+									{
+										"any_of": [
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "libernia",
+												"operator": "=="
+											},
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "telslakia",
+												"operator": "=="
+											}
+										]
+									},
+									{
+										"all_of": [
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "army",
+												"operator": "!="
+											},
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "air",
+												"operator": "!="
+											},
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "navy",
+												"operator": "!="
+											}
+										]
+									}
+								]
+							},
+							"target": "self"
+						},
+						"play_sounds": "milk",
+						"interact_text": "action.interact.use"
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar player can be used to buy vehicles"
+					]
+				}
+			},
+			"af:faction_join": {
+				"queue_command": {
+					"command": [
+						"dialogue open @s @p choose_faction"
+					]
+				}
+			},
+			"af:branch_join": {
+				"queue_command": {
+					"command": [
+						"dialogue open @s @p choose_branch"
+					]
+				}
+			},
+			"af:libernia_army": {
+				"add": {
+					"component_groups": [
+						"libernia_army"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			},
+			"af:telslakia_army": {
+				"add": {
+					"component_groups": [
+						"telslakia_army"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			},
+			"af:libernia_air": {
+				"add": {
+					"component_groups": [
+						"libernia_air"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			},
+			"af:telslakia_air": {
+				"add": {
+					"component_groups": [
+						"telslakia_air"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			},
+			"af:libernia_navy": {
+				"add": {
+					"component_groups": [
+						"libernia_navy"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			},
+			"af:telslakia_navy": {
+				"add": {
+					"component_groups": [
+						"telslakia_navy"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			}
+		}
+	}
+}

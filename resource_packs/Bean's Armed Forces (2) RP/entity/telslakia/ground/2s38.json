@@ -1,0 +1,62 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:af_2s38",
+			"materials": {
+				"default": "entity_alphatest",
+				"effect": "entity_alphatest"
+			},
+			"textures": {
+				"effect": "textures/entity/2s38/2s38_effects",
+				"libernia": "textures/entity/2s38/2s38_libernia",
+				"telslakia": "textures/entity/2s38/2s38_telslakia",
+				"camo_baf": "textures/entity/2s38/2s38",
+				"camo_irl": "textures/entity/2s38/2s38_irl"
+			},
+			"geometry": {
+				"default": "geometry.2s38"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_camo",
+				"controller.render.faction_emblems",
+				"controller.render.vehicle_effect"
+			],
+			"spawn_egg": {
+				"texture": "af_2s38_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"fire": "animation.tank.fire",
+				"shoot": "controller.animation.tank.fire",
+				"move": "animation.tank.move",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.tank.brake",
+				"particle": "controller.animation.artillery_particle",
+				"scale": "animation.2s38.scale",
+				"look": "animation.tank.look_at_target",
+				"rotations": "animation.vehicle.rotations",
+				"is_turret": "animation.tank.is_turret",
+				"is_body": "animation.tank.is_body"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"drive",
+					"look",
+					"shoot",
+					"rotations",
+					{
+						"particle": "query.is_roaring"
+					},
+					"is_body"
+				]
+			},
+			"particle_effects": {
+				"smoke": "af:artillery_smoke",
+				"flash": "af:mg_flash",
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

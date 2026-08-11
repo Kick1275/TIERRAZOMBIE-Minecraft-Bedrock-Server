@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:flare",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": "af_flare",
+			"minecraft:throwable": {
+				"do_swing_animation": true,
+				"launch_power_scale": 2
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "af:flare_entity<af:thrown>"
+			},
+			"minecraft:cooldown": {
+				"category": "flare",
+				"duration": 1
+			}
+		}
+	}
+}

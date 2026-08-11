@@ -1,0 +1,44 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "EAC Reboot BP",
+    "description": "By : PT. RI Mencari Cinta Sejati Persero AKA Akang Krep",
+    "uuid": "11111111-2222-3333-4444-555555555555",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 70]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "22222222-3333-4444-5555-666666666666",
+      "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "33333333-4444-5555-6666-777777777777",
+      "entry": "scripts/main.js",
+      "version": [1, 0, 0]
+    }
+  ],
+  "capabilities": [
+    "script_eval"
+  ],
+  "dependencies": [
+    {
+      "uuid": "99999999-8888-7777-6666-555555555555",
+      "version": [1, 0, 0]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.3.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ],
+  "metadata": {
+    "product_type": "addon"
+  }
+}

@@ -1,0 +1,111 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:torpedo",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:missile.speed": {
+					"type": "int",
+					"default": 5,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:radar-angle": {
+					"type": "int",
+					"default": 90,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:radar-range": {
+					"type": "int",
+					"default": 64,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:missile.turn-rate": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						1,
+						100
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate",
+					"missile",
+					"torpedo"
+				]
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 16,
+				"time_down_event": {
+					"event": "minecraft:explode"
+				}
+			}
+		},
+		"events": {
+			"minecraft:explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=!exploded] at @s run damage @e[r=5,family=!inanimate] 100 entity_explosion entity @s",
+						"execute as @s[tag=!exploded] at @s run function explosion_effects",
+						"tag @s add exploded",
+						"kill @e[family=missile,r=4]"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"playsound missile.fire @a ~ ~ ~ 10 1"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"explode": {
+				"minecraft:explode": {
+					"fuse_length": 0.1,
+					"fuse_lit": true,
+					"power": 3,
+					"causes_fire": true,
+					"breaks_blocks": true,
+					"destroy_affected_by_griefing": true
+				}
+			}
+		}
+	}
+}

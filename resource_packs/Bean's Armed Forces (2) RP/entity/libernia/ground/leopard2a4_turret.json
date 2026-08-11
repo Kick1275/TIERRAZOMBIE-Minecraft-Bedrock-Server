@@ -1,0 +1,62 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:leopard2a4_turret",
+			"materials": {
+				"default": "entity_alphatest",
+				"effect": "entity_alphatest"
+			},
+			"textures": {
+				"libernia": "textures/entity/leopard2a4/leopard2a4_libernia",
+				"telslakia": "textures/entity/leopard2a4/leopard2a4_telslakia",
+				"effect": "textures/entity/leopard2a4/leopard2a4_effect",
+				"default": "textures/entity/leopard2a4/leopard2a4"
+			},
+			"geometry": {
+				"default": "geometry.leopard2a4"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems",
+				"controller.render.vehicle_effect"
+			],
+			"spawn_egg": {
+				"texture": "af_m1a1_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"fire": "animation.tank.fire",
+				"shoot": "controller.animation.tank.fire",
+				"move": "animation.tank.move",
+				"drive": "controller.animation.tank.drive",
+				"brake": "animation.tank.brake",
+				"particle": "controller.animation.artillery_particle",
+				"look": "animation.tank.look_at_target",
+				"scale": "animation.m1a1.scale",
+				"is_turret": "animation.tank.is_turret",
+				"is_body": "animation.tank.is_body",
+				"rotations": "animation.vehicle.rotations",
+				"rotations_reverse": "animation.vehicle.rotations_reverse"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"look",
+					"drive",
+					"shoot",
+					"is_turret",
+					"rotations",
+					{
+						"particle": "query.is_roaring"
+					}
+				]
+			},
+			"particle_effects": {
+				"smoke": "af:artillery_smoke",
+				"flash": "af:tank_flash",
+				"dust": "af:vehicle_dust"
+			}
+		}
+	}
+}

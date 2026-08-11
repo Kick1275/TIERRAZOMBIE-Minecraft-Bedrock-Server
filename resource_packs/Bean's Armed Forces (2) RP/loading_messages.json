@@ -1,0 +1,17 @@
+{
+	"loading_messages": [
+		"Remember to use the Manual on equipment to know what ammo it uses, or what it can be used for.",
+		"The Vehicle will only show 200 of it's hearts, don't be fooled.",
+		"Choose a faction by using an ID on a recruiter/arms-dealer",
+		"Shift to aim a gun while improving accuracy",
+		"Shift to toggle night-vision goggles",
+		"Use an ID on vehicles to change it's faction",
+		"Homing missiles will lock onto the closest enemy vehicle",
+		"Guided-Missiles will go where you look!",
+		"Mines can be dug up when interacted with a Shovel",
+		"Barbed wire can be destroyed with Shears",
+		"AP shells deal more damage, but require you to hit your target directly.",
+		"HE shells deal less damage, but will still deal damage if it lands near your target.",
+		"Use your vehicle's machine-gun to know where your Tank's shell will land."
+	]
+}

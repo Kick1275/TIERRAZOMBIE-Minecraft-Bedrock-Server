@@ -1,0 +1,30 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "katana_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "##A",
+      "#A#",
+      "#B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:iron_ingot",
+        "data": 0
+      },
+      "B": {
+        "item": "minecraft:stick",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "ranzie:iron_katana",
+      "count": 1
+    }
+  }
+}

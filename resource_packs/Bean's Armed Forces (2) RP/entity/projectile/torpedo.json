@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:torpedo",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/torpedo"
+			},
+			"geometry": {
+				"default": "geometry.homing_missile"
+			},
+			"render_controllers": [
+				"controller.render.homing_missile"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"move": "animation.common.look_at_target"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			}
+		}
+	}
+}

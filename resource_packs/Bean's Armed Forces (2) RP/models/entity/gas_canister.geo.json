@@ -1,0 +1,228 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.gas_canister",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						2,
+						7
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1,
+								5.8,
+								-8.05
+							],
+							"size": [
+								2,
+								2,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										1
+									],
+									"uv_size": [
+										8,
+										8
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										1
+									],
+									"uv_size": [
+										0,
+										8
+									]
+								},
+								"south": {
+									"uv": [
+										8,
+										1
+									],
+									"uv_size": [
+										8,
+										8
+									]
+								},
+								"west": {
+									"uv": [
+										8,
+										1
+									],
+									"uv_size": [
+										0,
+										8
+									]
+								},
+								"up": {
+									"uv": [
+										0,
+										1
+									],
+									"uv_size": [
+										8,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										8,
+										1
+									],
+									"uv_size": [
+										8,
+										0
+									]
+								}
+							}
+						},
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								12,
+								16
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-8,
+								12,
+								-8
+							],
+							"size": [
+								2,
+								2,
+								16
+							],
+							"uv": [
+								0,
+								28
+							]
+						},
+						{
+							"origin": [
+								6,
+								12,
+								-8
+							],
+							"size": [
+								2,
+								2,
+								16
+							],
+							"uv": [
+								36,
+								28
+							]
+						},
+						{
+							"origin": [
+								-6,
+								12,
+								6
+							],
+							"size": [
+								12,
+								2,
+								2
+							],
+							"uv": [
+								32,
+								46
+							]
+						},
+						{
+							"origin": [
+								-4,
+								12,
+								-4
+							],
+							"size": [
+								8,
+								2,
+								8
+							],
+							"uv": [
+								0,
+								46
+							]
+						},
+						{
+							"origin": [
+								-6,
+								12,
+								-8
+							],
+							"size": [
+								12,
+								2,
+								2
+							],
+							"uv": [
+								32,
+								50
+							]
+						}
+					]
+				},
+				{
+					"name": "filter",
+					"parent": "body",
+					"pivot": [
+						0,
+						18,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								10,
+								-2
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								32,
+								54
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

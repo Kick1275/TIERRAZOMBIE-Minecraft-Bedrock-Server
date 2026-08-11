@@ -1,0 +1,57 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:yak141",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/yak141/yak141",
+				"libernia": "textures/entity/yak141/yak141_libernia",
+				"telslakia": "textures/entity/yak141/yak141_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.yak141"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_yak141_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"fly": "animation.yak141.fly",
+				"landed": "controller.animation.aircraft.landed",
+				"pitch": "animation.aircraft.pitch",
+				"yaw": "animation.aircraft.yaw",
+				"rotations": "animation.aircraft.rotations",
+				"scale": "animation.yak141.scale",
+				"particles": "animation.aircraft.particles",
+				"smooth_land": "controller.animation.aircraft.smooth_land",
+				"vtol": "controller.animation.aircraft.vtol",
+				"hover": "animation.yak141.hover"
+			},
+			"scripts": {
+				"animate": [
+					"landed",
+					"scale",
+					"pitch",
+					"yaw",
+					"smooth_land",
+					"vtol",
+					{
+						"particles": "query.modified_move_speed>=0.5&&!query.is_on_ground"
+					}
+				]
+			},
+			"particle_effects": {
+				"engine": "af:jet_fire",
+				"contrail": "af:contrail",
+				"engine_vtol": "af:jet_fire_vtol"
+			}
+		}
+	}
+}

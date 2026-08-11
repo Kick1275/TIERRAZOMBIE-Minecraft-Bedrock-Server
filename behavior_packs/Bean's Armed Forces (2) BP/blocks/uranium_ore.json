@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:uranium_ore",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.ore"
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 60
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 1000
+			},
+			"minecraft:map_color": "#c8ff3c",
+			"minecraft:loot": "loot_tables/raw_uranium.json",
+			"tag:minecraft:is_pickaxe_item_destructible": {}
+		}
+	}
+}

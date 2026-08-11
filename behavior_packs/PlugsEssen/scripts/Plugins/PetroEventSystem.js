@@ -405,20 +405,20 @@ function applyProtection(player) {
     }, c.protectionSecs * 20);
 }
 
-// Bloquear daño a jugadores protegidos
+// Bloquear daño cuando la víctima O el atacante estén protegidos.
+// Un solo subscriber cubre ambos casos (antes eran dos callbacks por cada golpe).
 world.beforeEvents.entityHurt.subscribe(ev => {
     try {
-        if (ev.hurtEntity?.typeId !== "minecraft:player") return;
-        if (petroProtected.has(ev.hurtEntity.id)) ev.cancel = true;
-    } catch {}
-});
-
-// Bloquear daño hecho por jugadores protegidos a otros
-world.beforeEvents.entityHurt.subscribe(ev => {
-    try {
+        // Víctima protegida
+        if (ev.hurtEntity?.typeId === "minecraft:player" && petroProtected.has(ev.hurtEntity.id)) {
+            ev.cancel = true;
+            return;
+        }
+        // Atacante protegido
         const source = ev.damageSource?.damagingEntity;
-        if (!source || source.typeId !== "minecraft:player") return;
-        if (petroProtected.has(source.id)) ev.cancel = true;
+        if (source && source.typeId === "minecraft:player" && petroProtected.has(source.id)) {
+            ev.cancel = true;
+        }
     } catch {}
 });
 

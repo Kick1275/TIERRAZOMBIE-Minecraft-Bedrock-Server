@@ -1,0 +1,58 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:cable_cutter",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": "af_cable_cutter",
+			"minecraft:max_stack_size": 1,
+			"minecraft:digger": {
+				"destroy_speeds": [
+					{
+						"block": "af:steel_frame",
+						"speed": 4
+					},
+					{
+						"block": "af:chain_mesh",
+						"speed": 4
+					},
+					{
+						"block": "af:barbed_wire",
+						"speed": 4
+					}
+				]
+			},
+			"minecraft:durability": {
+				"max_durability": 100,
+				"damage_chance": {
+					"min": 1,
+					"max": 2
+				}
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:iron_ingot"
+						],
+						"repair_amount": "query.max_durability*0.25"
+					},
+					{
+						"items": [
+							"af:cable_cutter"
+						],
+						"repair_amount": "context.other->query.remaining_durability+0.12*context.other->query.max_durability"
+					}
+				]
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe",
+				"value": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"longsword_stone"},"tags":["crafting_table"],"pattern":["#A","#A","ABA"],"key":{"A":{"item":"minecraft:cobblestone","data":0},"B":{"item":"minecraft:stick","data":0}},"result":{"item":"ranzie:stone_longsword","count":1}}}

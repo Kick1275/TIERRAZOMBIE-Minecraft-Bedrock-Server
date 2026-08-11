@@ -1,0 +1,191 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:radar",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:radar-angle": {
+					"type": "int",
+					"default": 45,
+					"range": [
+						-90,
+						90
+					]
+				},
+				"af:radar-range": {
+					"type": "int",
+					"default": 256,
+					"range": [
+						1,
+						256
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"active": {
+				"minecraft:is_charged": {}
+			},
+			"inactive": {},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/radar.json"
+			},
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0.9,
+				"height": 0.9
+			},
+			"minecraft:is_collidable": {},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.1,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:manual",
+									"domain": "hand"
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:renders_when_invisible": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"tp @s ~~~ 0 0",
+						"summon af:radar_base",
+						"title @p actionbar place on top of redstone block to enable.",
+						"playsound place.iron @a ~ ~ ~",
+						"effect @s invisibility infinite 1 true"
+					]
+				}
+			},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=!radar_on] at @s if block ~ ~-0.5 ~ redstone_block run event entity @s af:has_power",
+						"execute as @s[tag=radar_on] at @s unless block ~ ~-0.5 ~ redstone_block run event entity @s af:no_power",
+						"tp @s[tag=radar_on] ~ ~ ~ ~45 ~"
+					]
+				}
+			},
+			"af:has_power": {
+				"add": {
+					"component_groups": [
+						"active"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"inactive"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s remove radar_off",
+						"tag @s add radar_on",
+						"title @a[r=8] actionbar RADAR active"
+					]
+				}
+			},
+			"af:no_power": {
+				"add": {
+					"component_groups": [
+						"inactive"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"active"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add radar_off",
+						"tag @s remove radar_on",
+						"title @a[r=8] actionbar RADAR deactivated"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar place on top of redstone block to enable, use RADAR Receiver to collect results."
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function block_break"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

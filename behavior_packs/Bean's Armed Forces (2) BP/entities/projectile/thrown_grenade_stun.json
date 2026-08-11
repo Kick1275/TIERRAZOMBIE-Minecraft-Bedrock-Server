@@ -1,0 +1,90 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:thrown_grenade_stun",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": 5,
+						"knockback": true,
+						"destroy_on_hit": false
+					},
+					"particle_on_hit": {
+						"particle_type": "smoke",
+						"num_particles": 6,
+						"on_entity_hit": true,
+						"on_other_hit": true
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					}
+				},
+				"anchor": 1,
+				"power": 1.5,
+				"gravity": 0.1,
+				"angle_offset": 0,
+				"offset": [
+					0,
+					-0.1,
+					0
+				],
+				"should_bounce": true
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			}
+		},
+		"component_groups": {
+			"exploding": {
+				"minecraft:timer": {
+					"looping": false,
+					"time_down_event": {
+						"event": "af:explode"
+					},
+					"time": 5
+				}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"af:explode": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_single",
+						"particle af:explosionball_sparks",
+						"camera @a[r=8] fade time 0.1 0 10 color 255 255 255",
+						"playsound grenade.pop @a ~ ~ ~ 5 1",
+						"playsound grenade.pop @a ~ ~ ~ 5 10"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"exploding"
+					]
+				}
+			}
+		}
+	}
+}

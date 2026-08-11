@@ -1,0 +1,22 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:craft_settings"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:dirt",
+        "data": 0
+      }
+    },
+    "result": {
+      "item": "ranzie:settings",
+      "count": 1
+    }
+  }
+}

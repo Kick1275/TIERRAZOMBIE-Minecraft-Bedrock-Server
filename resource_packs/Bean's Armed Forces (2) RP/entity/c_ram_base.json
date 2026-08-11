@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:c_ram_base",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/c_ram"
+			},
+			"geometry": {
+				"default": "geometry.c_ram_base"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default"
+			],
+			"spawn_egg": {
+				"texture": "af_c_ram_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.c_ram.scale"
+			},
+			"scripts": {
+				"animate": [
+					"scale"
+				]
+			},
+			"sound_effects": {
+				"spin": "c_ram.spin"
+			}
+		}
+	}
+}

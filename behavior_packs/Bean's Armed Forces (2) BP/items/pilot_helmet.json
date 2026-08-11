@@ -1,0 +1,35 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:pilot_helmet",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.helmet"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:wearable": {
+				"slot": "slot.armor.head",
+				"protection": 5
+			},
+			"minecraft:durability": {
+				"max_durability": 528,
+				"damage_chance": {
+					"min": 1,
+					"max": 2
+				}
+			},
+			"minecraft:dyeable": {
+				"default_color": "#FFFFFF"
+			},
+			"minecraft:icon": {
+				"textures": {
+					"default": "af_pilot_helmet",
+					"dyed": "af_pilot_helmet"
+				}
+			}
+		}
+	}
+}

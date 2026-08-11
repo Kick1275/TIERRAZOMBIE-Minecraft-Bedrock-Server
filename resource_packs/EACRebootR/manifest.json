@@ -1,0 +1,23 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "EAC Reboot RP",
+    "description": "By : PT. RI Mencari Cinta Sejati Persero AKA Akang Krep",
+    "uuid": "99999999-8888-7777-6666-555555555555",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 70]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "88888888-7777-6666-5555-444444444444",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "11111111-2222-3333-4444-555555555555",
+      "version": [1, 0, 0]
+    }
+  ]
+}

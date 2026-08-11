@@ -1,0 +1,49 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:type142a",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/type142a/type142a",
+				"libernia": "textures/entity/type142a/type142a_libernia",
+				"telslakia": "textures/entity/type142a/type142a_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.type142a"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_type142a_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"scale": "animation.16ddh.scale",
+				"is_turret": "animation.tank.is_turret",
+				"is_body": "animation.tank.is_body",
+				"move": "animation.strb90h.move",
+				"look": "animation.tank.look_at_target",
+				"water_wake": "controller.animation.water_wake"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					"is_body",
+					"look",
+					"water_wake",
+					{
+						"move": "query.modified_move_speed"
+					}
+				]
+			},
+			"particle_effects": {
+				"wake": "af:wake_loop"
+			}
+		}
+	}
+}

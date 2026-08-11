@@ -1,0 +1,853 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:bullet",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 80,
+					"max_dropped_ticks": 10,
+					"use_motion_prediction_hints": true
+				}
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 5,
+				"time_down_event": {
+					"event": "af:despawn",
+					"target": "self"
+				}
+			},
+			"minecraft:projectile": {
+				"power": 5,
+				"gravity": 0,
+				"uncertainty_base": 8,
+				"uncertainty_multiplier": 16,
+				"anchor": 0,
+				"reflect_on_hurt": false,
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"shoot_sound": "shoot",
+				"angle_offset": 0,
+				"on_hit": {
+					"impact_damage": {
+						"destroy_on_hit": false,
+						"damage": 5,
+						"knockback": false
+					},
+					"particle_on_hit": {
+						"particle_type": "lava",
+						"num_particles": 0,
+						"on_entity_hit": true,
+						"on_other_hit": true
+					},
+					"definition_event": {
+						"affect_projectile": true,
+						"event_trigger": {
+							"event": "af:land",
+							"target": "self"
+						}
+					}
+				},
+				"destroy_on_hurt": true,
+				"should_bounce": true,
+				"hit_sound": "hurt",
+				"hit_ground_sound": "hurt"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"bullet"
+				]
+			},
+			"minecraft:ambient_sound_interval": {
+				"range": 0,
+				"value": 0,
+				"event_name": "ambient"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"minecraft:acacia_leaves",
+					"minecraft:azalea_leaves",
+					"minecraft:azalea_leaves_flowered",
+					"minecraft:birch_leaves",
+					"minecraft:cherry_leaves",
+					"minecraft:dark_oak_leaves",
+					"minecraft:jungle_leaves",
+					"minecraft:mangrove_leaves",
+					"minecraft:oak_leaves",
+					"minecraft:pale_oak_leaves",
+					"minecraft:spruce_leaves",
+					"minecraft:glass",
+					"minecraft:glass_pane",
+					"minecraft:acacia_planks",
+					"minecraft:bamboo_planks",
+					"minecraft:birch_planks",
+					"minecraft:cherry_planks",
+					"minecraft:crimson_planks",
+					"minecraft:dark_oak_planks",
+					"minecraft:jungle_planks",
+					"minecraft:jungle_planks",
+					"minecraft:mangrove_planks",
+					"minecraft:oak_planks",
+					"minecraft:pale_oak_planks",
+					"minecraft:spruce_planks",
+					"minecraft:warped_planks",
+					"minecraft:bamboo"
+				]
+			}
+		},
+		"events": {
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:land": {
+				"queue_command": {
+					"command": [
+						"playsound bullet.hit @a ~ ~ ~ 50 1",
+						"camerashake add @a[r=16] 0.1 0.1 positional",
+						"particle af:explosionrise_single",
+						"particle af:explosionball_single",
+						"damage @e[r=1.5,family=!vehicle,family=!inanimate] 30 projectile entity @s"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:a10_land": {
+				"queue_command": {
+					"command": [
+						"fill ~-4 ~-4 ~-4 ~4 ~4 ~4 dirt replace grass_block",
+						"fill ~-2 ~-2 ~-2 ~2 ~2 ~2 fire replace air",
+						"playsound random.explode @a ~ ~ ~ 50 1",
+						"camerashake add @a[r=16] 0.1 0.1 rotational",
+						"damage @e[r=5,family=!inanimate] 100 entity_explosion entity @s",
+						"particle af:explosionball_main",
+						"particle af:explosionball_light"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:bmpt72": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"add": {
+									"component_groups": [
+										"bmpt72"
+									]
+								},
+								"weight": 50
+							},
+							{
+								"add": {
+									"component_groups": [
+										"bmpt72_2"
+									]
+								},
+								"weight": 50
+							}
+						]
+					}
+				],
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:turret": {
+				"add": {
+					"component_groups": [
+						"turret"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:turret_p": {
+				"add": {
+					"component_groups": [
+						"turret_p"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:m1a1": {
+				"add": {
+					"component_groups": [
+						"m1a1"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:m1151": {
+				"add": {
+					"component_groups": [
+						"m1151"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:m551": {
+				"add": {
+					"component_groups": [
+						"m551"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:m2a2": {
+				"add": {
+					"component_groups": [
+						"m2a2"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:mounted_gun": {
+				"add": {
+					"component_groups": [
+						"mounted_gun"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:plane": {
+				"add": {
+					"component_groups": [
+						"plane"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:heli": {
+				"add": {
+					"component_groups": [
+						"heli"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:a10": {
+				"add": {
+					"component_groups": [
+						"a10"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			},
+			"af:strb90h": {
+				"add": {
+					"component_groups": [
+						"strb90h"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash",
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"turret": {
+				"minecraft:projectile": {
+					"power": 2,
+					"gravity": 0.002,
+					"uncertainty_base": 8,
+					"uncertainty_multiplier": 16,
+					"anchor": 0,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						0.9,
+						0.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 10,
+							"destroy_on_hit": true,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt"
+				}
+			},
+			"turret_p": {
+				"minecraft:projectile": {
+					"power": 2,
+					"gravity": 0.002,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 0,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						0.9,
+						0.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 10,
+							"destroy_on_hit": true,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt"
+				}
+			},
+			"m1a1": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.005,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						-0.2,
+						2.5,
+						3
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 2,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			},
+			"m1151": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 2,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						2.5,
+						3
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 5,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			},
+			"bmpt72": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						-0.2,
+						3,
+						5
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 10,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			},
+			"bmpt72_2": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						0.2,
+						3,
+						3
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 10,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			},
+			"m551": {
+				"minecraft:projectile": {
+					"power": 3,
+					"gravity": 0.01,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						-0.2,
+						2.5,
+						3
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 2,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			},
+			"m2a2": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						-0.2,
+						3.5,
+						3
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 10,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			},
+			"mounted_gun": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 1,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						0.6,
+						1
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": true,
+							"damage": 10,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": -10
+				}
+			},
+			"plane": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 0,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						1.5,
+						1.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 5,
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 50,
+							"knockback": false
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"destroy_on_hurt": true,
+					"should_bounce": true,
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt"
+				}
+			},
+			"heli": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 1,
+					"uncertainty_multiplier": 0,
+					"anchor": 0,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						-0.5,
+						1.5
+					],
+					"shoot_sound": "shoot",
+					"angle_offset": 0,
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 25,
+							"knockback": false
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"destroy_on_hurt": true,
+					"should_bounce": true,
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt"
+				}
+			},
+			"a10": {
+				"minecraft:projectile": {
+					"power": 5,
+					"gravity": 0.01,
+					"uncertainty_base": 2,
+					"uncertainty_multiplier": 0,
+					"anchor": 0,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						1,
+						1
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 100,
+							"knockback": false
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:a10_land",
+								"target": "self"
+							}
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						}
+					},
+					"destroy_on_hurt": true,
+					"should_bounce": true,
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt"
+				}
+			},
+			"strb90h": {
+				"minecraft:projectile": {
+					"power": 6,
+					"gravity": 0.001,
+					"uncertainty_base": 2,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"reflect_on_hurt": false,
+					"offset": [
+						0,
+						3.5,
+						3
+					],
+					"shoot_sound": "shoot",
+					"on_hit": {
+						"impact_damage": {
+							"destroy_on_hit": false,
+							"damage": 5,
+							"knockback": true
+						},
+						"particle_on_hit": {
+							"particle_type": "lava",
+							"num_particles": 0,
+							"on_entity_hit": true,
+							"on_other_hit": true
+						},
+						"definition_event": {
+							"affect_projectile": true,
+							"event_trigger": {
+								"event": "af:land",
+								"target": "self"
+							}
+						}
+					},
+					"hit_sound": "hurt",
+					"hit_ground_sound": "hurt",
+					"angle_offset": 0
+				}
+			}
+		}
+	}
+}

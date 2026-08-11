@@ -83,7 +83,8 @@ function _spawnLabel(t, a) {
       y: t.location.y + 1.6,
       z: t.location.z
     });
-    return e && (e.nameTag = _idleLabelText(a)), e
+    if (e) { e.nameTag = _idleLabelText(a); e.addTag("crate_label"); }
+    return e
   } catch (t) {
     return null
   }

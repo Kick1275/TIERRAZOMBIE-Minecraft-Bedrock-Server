@@ -1,0 +1,34 @@
+{
+    "format_version": 2,
+    "metadata": {
+        "authors": [
+            "Kick1275."
+        ]
+    },
+    "header": {
+        "name": "PlugsEssentials RP",
+        "description": "Resource Pack for PlugsEssentials v0.1.1",
+        "min_engine_version": [
+            1,
+            21,
+            120
+        ],
+        "uuid": "288d1664-4b73-4dbf-b82a-d988ab19327a",
+        "version": [
+            1,
+            0,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "be859fb4-ef9c-44dc-a013-3a787a119a34",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

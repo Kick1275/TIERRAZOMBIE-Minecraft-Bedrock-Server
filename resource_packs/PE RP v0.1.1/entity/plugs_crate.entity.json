@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "plugs:crate",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/crate"
+      },
+      "geometry": {
+        "default": "geometry.plugs_crate"
+      },
+      "animations": {
+        "open": "animation.crate.open",
+        "interact": "animation.crate.interact"
+      },
+      "scripts": {
+        "animate": [
+          { "interact": "query.is_alive" }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.plugs_crate"
+      ]
+    }
+  }
+}

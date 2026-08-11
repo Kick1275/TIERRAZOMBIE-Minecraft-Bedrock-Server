@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:libernian_helmet"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:kevlar"
+			},
+			"S": {
+				"item": "minecraft:string"
+			},
+			"D": {
+				"item": "af:libernia_id"
+			}
+		},
+		"pattern": [
+			"NNN",
+			"SDS",
+			" S "
+		],
+		"result": {
+			"item": "af:libernian_helmet",
+			"count": 1
+		}
+	}
+}

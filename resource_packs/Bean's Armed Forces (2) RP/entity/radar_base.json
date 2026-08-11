@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:radar_base",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/radar"
+			},
+			"geometry": {
+				"default": "geometry.radar"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity"
+			],
+			"spawn_egg": {
+				"texture": "af_radar_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"is_turret": "animation.tank.is_turret",
+				"is_body": "animation.tank.is_body"
+			},
+			"scripts": {
+				"animate": [
+					"is_body"
+				]
+			}
+		}
+	}
+}

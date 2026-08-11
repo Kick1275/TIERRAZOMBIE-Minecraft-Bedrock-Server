@@ -1,0 +1,28 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:libernian_vest",
+			"materials": {
+				"default": "armor_leather",
+				"enchanted": "armor_enchanted",
+				"non_dye": "armor"
+			},
+			"textures": {
+				"default": "textures/armor/combat_vest",
+				"enchanted": "textures/misc/enchanted_item_glint",
+				"non_dye": "textures/armor/combat_vest_libernia"
+			},
+			"geometry": {
+				"default": "geometry.combat_vest"
+			},
+			"scripts": {
+				"parent_setup": "variable.chest_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.armor.leather",
+				"controller.render.af_non_dye"
+			]
+		}
+	}
+}

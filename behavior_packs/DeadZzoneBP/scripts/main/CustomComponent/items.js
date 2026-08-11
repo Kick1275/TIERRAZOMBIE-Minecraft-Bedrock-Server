@@ -17,7 +17,7 @@ const walkieTalkieCooldown = new Map();
 
 function spawnAirSupply(player) {
     const playerPos = player.location;
-    
+    player.runCommand("clear @s mcpe:walkie_talkie 0 1");
     const offsetX = Math.random() * (42 - 32) + 32;
     const offsetZ = Math.random() * (42 - 32) + 32;
     const finalOffsetX = Math.random() < 0.5 ? offsetX : -offsetX;
@@ -30,7 +30,6 @@ function spawnAirSupply(player) {
 
     system.runTimeout(() => {
         player.runCommand("summon mcpe:supply_drop " + spawnPos.x + " 156 " + spawnPos.z);
-        player.runCommand("clear @s mcpe:walkie_talkie 0 1");
         player.runCommand("playsound walkie.talkie @p[r=15]");
         player.runCommand('tellraw @s {"rawtext":[{"text":"§2Air Supply Arrived at X:' + spawnPos.x + ', Z:' + spawnPos.z + '!"}]}');
         walkieTalkieCooldown.delete(player.name);

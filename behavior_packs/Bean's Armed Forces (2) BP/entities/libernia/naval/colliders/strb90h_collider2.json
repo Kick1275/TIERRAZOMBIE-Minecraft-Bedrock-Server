@@ -1,0 +1,61 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:strb90h_collider2",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:collider.offset-x": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-y": {
+					"type": "int",
+					"default": 20,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-z": {
+					"type": "int",
+					"default": -10,
+					"range": [
+						-1000,
+						1000
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"strb90h",
+					"inanimate",
+					"collider"
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:collision_box": {
+				"width": 3.8,
+				"height": 0
+			},
+			"minecraft:is_collidable": {}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:sandbag_block",
+			"menu_category": {
+				"group": "construction",
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 5
+			}
+		}
+	}
+}

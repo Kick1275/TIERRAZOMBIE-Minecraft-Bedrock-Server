@@ -1,0 +1,36 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:cd_player",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/cd_player"
+			},
+			"geometry": {
+				"default": "geometry.cd_player"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"open": "animation.cd_player.open",
+				"close": "animation.cd_player.close",
+				"enter": "animation.cd_player.enter",
+				"general": "controller.animation.cd_player.general"
+			},
+			"scripts": {
+				"animate": [
+					"general"
+				],
+				"should_update_bones_and_effects_offscreen": true
+			}
+		}
+	}
+}

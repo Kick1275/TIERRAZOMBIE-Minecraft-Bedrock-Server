@@ -1,0 +1,21 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "af:manual"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:book",
+				"count": 1
+			}
+		],
+		"result": {
+			"item": "af:manual",
+			"count": 1
+		}
+	}
+}

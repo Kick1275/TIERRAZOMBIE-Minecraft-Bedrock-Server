@@ -1,0 +1,84 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:manual",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "fall",
+					"deals_damage": "no"
+				}
+			},
+			"minecraft:collision_box": {
+				"width": 0.4,
+				"height": 0.4
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:npc": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:read",
+							"target": "self"
+						},
+						"interact_text": "action.interact.read"
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"always_show": false
+			},
+			"minecraft:renders_when_invisible": {},
+			"minecraft:health": {
+				"value": 2
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/manual.json"
+			},
+			"minecraft:on_death": {
+				"event": "af:despawn"
+			}
+		},
+		"events": {
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:read": {
+				"queue_command": {
+					"command": [
+						"dialogue open @s @p manual_p1"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"effect @s invisibility infinite 1 true"
+					]
+				}
+			}
+		}
+	}
+}

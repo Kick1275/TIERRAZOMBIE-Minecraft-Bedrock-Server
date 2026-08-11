@@ -1,0 +1,39 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:a19",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/a19/a19",
+				"libernia": "textures/entity/a19/a19_libernia",
+				"telslakia": "textures/entity/a19/a19_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.a19"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_a19_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"move": "animation.strb90h.move",
+				"scale": "animation.16ddh.scale"
+			},
+			"scripts": {
+				"animate": [
+					"scale",
+					{
+						"move": "query.modified_move_speed"
+					}
+				]
+			}
+		}
+	}
+}

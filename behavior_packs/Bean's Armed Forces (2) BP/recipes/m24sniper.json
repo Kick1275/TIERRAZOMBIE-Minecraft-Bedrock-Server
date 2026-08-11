@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:m24sniper"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"RNR",
+			"RRR",
+			" NR"
+		],
+		"result": {
+			"item": "af:m24sniper",
+			"count": 1
+		}
+	}
+}

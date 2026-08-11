@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:m4carbine"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"NNR",
+			"RRR",
+			"N R"
+		],
+		"result": {
+			"item": "af:m4carbine",
+			"count": 1
+		}
+	}
+}

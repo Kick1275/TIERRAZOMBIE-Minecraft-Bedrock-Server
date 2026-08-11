@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:centrifuge_cylinder"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"A": {
+				"item": "af:aluminium_ingot"
+			},
+			"P": {
+				"item": "minecraft:piston"
+			}
+		},
+		"pattern": [
+			"IPI",
+			"A A",
+			"AAA"
+		],
+		"result": {
+			"item": "af:centrifuge_cylinder_spawn_egg",
+			"count": 1
+		}
+	}
+}

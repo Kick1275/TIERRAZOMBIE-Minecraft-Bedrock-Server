@@ -1,0 +1,52 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:b2",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/b2/b2",
+				"libernia": "textures/entity/b2/b2_libernia",
+				"telslakia": "textures/entity/b2/b2_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.b2"
+			},
+			"render_controllers": [
+				"controller.render.vehicle_default",
+				"controller.render.faction_emblems"
+			],
+			"spawn_egg": {
+				"texture": "af_b2_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"fly": "animation.b2.fly",
+				"landed": "controller.animation.aircraft.landed",
+				"pitch": "animation.aircraft.pitch",
+				"yaw": "animation.aircraft.yaw",
+				"rotations": "animation.aircraft.rotations",
+				"scale": "animation.b2.scale",
+				"particles": "animation.aircraft.particles",
+				"smooth_land": "controller.animation.aircraft.smooth_land"
+			},
+			"scripts": {
+				"animate": [
+					"landed",
+					"scale",
+					"pitch",
+					"yaw",
+					"smooth_land",
+					{
+						"particles": "query.modified_move_speed>=0.5&&!query.is_on_ground"
+					}
+				]
+			},
+			"particle_effects": {
+				"contrail": "af:contrail"
+			}
+		}
+	}
+}

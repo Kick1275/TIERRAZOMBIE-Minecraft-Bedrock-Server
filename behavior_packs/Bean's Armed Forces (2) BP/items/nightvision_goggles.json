@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:nightvision_goggles",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": "af_nightvision_goggles",
+			"minecraft:max_stack_size": 1,
+			"minecraft:wearable": {
+				"slot": "slot.weapon.offhand",
+				"protection": 2
+			}
+		}
+	}
+}

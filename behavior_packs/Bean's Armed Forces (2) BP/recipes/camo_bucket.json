@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:camo_bucket"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"B": {
+				"item": "minecraft:bucket"
+			},
+			"G": {
+				"item": "minecraft:leaves"
+			},
+			"D": {
+				"item": "minecraft:sand"
+			},
+			"L": {
+				"item": "minecraft:bone_meal"
+			}
+		},
+		"pattern": [
+			"GLD",
+			" B "
+		],
+		"result": {
+			"item": "af:camo_bucket",
+			"count": 1
+		}
+	}
+}

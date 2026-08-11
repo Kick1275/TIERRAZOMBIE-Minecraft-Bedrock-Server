@@ -1,0 +1,30 @@
+{
+	"format_version": "1.16.0",
+	"render_controllers": {
+		"controller.render.faction_emblems": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.libernia",
+						"Texture.telslakia"
+					]
+				}
+			},
+			"textures": [
+				"array.skins[query.variant]"
+			],
+			"is_hurt_color": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		}
+	}
+}

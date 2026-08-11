@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.kamaz65224.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 2.7
+				}
+			}
+		}
+	}
+}

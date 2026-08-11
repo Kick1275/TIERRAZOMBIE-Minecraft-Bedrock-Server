@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:sandbag"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:sand"
+			},
+			"L": {
+				"item": "minecraft:leather"
+			}
+		},
+		"pattern": [
+			"LSL",
+			"SSS",
+			"LSL"
+		],
+		"result": {
+			"item": "af:sandbag_block",
+			"count": 32
+		}
+	}
+}

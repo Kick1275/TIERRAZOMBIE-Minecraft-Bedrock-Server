@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:metal_detector"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"S": {
+				"item": "af:steel_ingot"
+			},
+			"I": {
+				"item": "af:aluminium_ingot"
+			},
+			"O": {
+				"item": "minecraft:observer"
+			}
+		},
+		"pattern": [
+			"SO ",
+			" I ",
+			" I "
+		],
+		"result": {
+			"item": "af:metal_detector",
+			"count": 1
+		}
+	}
+}

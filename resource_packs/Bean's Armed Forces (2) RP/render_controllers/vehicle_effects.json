@@ -1,0 +1,23 @@
+{
+	"format_version": "1.16.0",
+	"render_controllers": {
+		"controller.render.vehicle_effect": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.effect"
+				}
+			],
+			"textures": [
+				"texture.effect"
+			],
+			"ignore_lighting": true,
+			"is_hurt_color": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		}
+	}
+}

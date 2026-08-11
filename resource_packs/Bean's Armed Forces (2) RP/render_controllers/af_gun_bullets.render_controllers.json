@@ -1,0 +1,18 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.af_anygun.bullet.entity": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"is_hurt_color": {},
+			"on_fire_color": {}
+		}
+	}
+}

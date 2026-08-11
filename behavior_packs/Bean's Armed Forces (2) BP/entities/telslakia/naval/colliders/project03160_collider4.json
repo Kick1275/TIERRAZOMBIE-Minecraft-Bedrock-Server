@@ -1,0 +1,111 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:project03160_collider4",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:collider.offset-x": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-y": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-z": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-1000,
+						1000
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"strb90h",
+					"inanimate",
+					"collider"
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:addrider",
+							"target": "self",
+							"filters": {
+								"test": "is_riding",
+								"subject": "other",
+								"operator": "!=",
+								"value": true
+							}
+						},
+						"interact_text": "action.interact.ride.boat"
+					},
+					{
+						"on_interact": {
+							"event": "af:fire_turret",
+							"target": "self",
+							"filters": {
+								"test": "is_riding",
+								"subject": "other",
+								"operator": "==",
+								"value": true
+							}
+						},
+						"interact_text": "action.interact.shoot_mg",
+						"play_sounds": "shoot"
+					}
+				]
+			}
+		},
+		"events": {
+			"af:addrider": {
+				"queue_command": {
+					"command": [
+						"ride @p start_riding @n[type=af:project03160] teleport_rider until_full"
+					]
+				}
+			},
+			"af:fire_turret": {
+				"queue_command": {
+					"command": [
+						"event entity @n[type=af:project03160_turret] af:MG_fired"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+
+{"format_version":"1.20.10","minecraft:recipe_furnace":{"description":{"identifier":"ranzie:cookedflesh"},"tags":["furnace","smoker","campfire","soul_campfire"],"input":"ranzie:raw_flesh","output":"ranzie:cooked_flesh"}}

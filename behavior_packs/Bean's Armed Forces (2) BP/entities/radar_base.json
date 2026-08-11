@@ -1,0 +1,73 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:radar_base",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0.1,
+				"height": 0.1
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.5,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": "no"
+				}
+			},
+			"minecraft:body_rotation_axis_aligned": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s unless entity @e[type=af:radar,r=1] run kill @s"
+					]
+				}
+			},
+			"af:death": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

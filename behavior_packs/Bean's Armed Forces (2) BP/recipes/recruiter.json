@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "af:recruiter"
+		},
+		"tags": [
+			"crafting_table",
+			"af_weapon"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:paper",
+				"count": 1
+			},
+			{
+				"item": "minecraft:ink_sac",
+				"count": 1
+			}
+		],
+		"result": {
+			"item": "af:recruiter_spawn_egg",
+			"count": 1
+		}
+	}
+}

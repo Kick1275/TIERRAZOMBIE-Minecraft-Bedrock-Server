@@ -43,7 +43,7 @@ const npcItems = [
     { id: "mcpe:bottle_water_emp",   name: { en_US: "Empty Water Bottle",   es_ES: "Botella de Agua Vacía"   }, sellPrice: 12,   buyPrice: 30,    icon: "textures/items/misc/.png" },
     { id: "mcpe:can_opener",         name: { en_US: "Can Opener",           es_ES: "Abrelatas"               }, sellPrice: 360,  buyPrice: 900,   icon: "textures/items/misc/can_opener.png" },
     { id: "mcpe:detonator",          name: { en_US: "Detonator",            es_ES: "Detonador"               }, sellPrice: 7800, buyPrice: 14500, icon: "textures/items/grenade/c4_detonator.png" },
-    { id: "mcpe:duct_tape",          name: { en_US: "Duct Tape",            es_ES: "Cinta Adhesiva"          }, sellPrice: 61440,buyPrice: 13600, icon: "textures/items/misc/duct_tape.png" },
+    { id: "mcpe:duct_tape",          name: { en_US: "Duct Tape",            es_ES: "Cinta Adhesiva"          }, sellPrice: 7240, buyPrice: 14600, icon: "textures/items/misc/duct_tape.png" },
     { id: "mcpe:electric_scrap",     name: { en_US: "Electric Scrap",       es_ES: "Chatarra Eléctrica"      }, sellPrice: 7400, buyPrice: 16000, icon: "textures/items/misc/electric_scrap.png" },
     { id: "mcpe:flashlight",         name: { en_US: "Flashlight",           es_ES: "Linterna"                }, sellPrice: 72,   buyPrice: 180,   icon: "textures/items/misc/flashlight.png" },
     { id: "mcpe:ham_radios",         name: { en_US: "Ham Radio",            es_ES: "Radio Aficionado"        }, sellPrice: 1440, buyPrice: 3600,  icon: "textures/items/misc/ham_radio.png" },

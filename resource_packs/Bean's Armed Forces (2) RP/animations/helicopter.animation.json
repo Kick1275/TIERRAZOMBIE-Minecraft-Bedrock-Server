@@ -1,0 +1,366 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.helicopter.rotor": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"propeller": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							1440,
+							0
+						]
+					}
+				},
+				"tail_blade": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							1440,
+							0,
+							0
+						]
+					}
+				},
+				"propeller2": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							-90,
+							0
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"0.0833": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						},
+						"0.1667": {
+							"pre": [
+								0,
+								0,
+								0
+							],
+							"post": [
+								1,
+								1,
+								1
+							]
+						},
+						"0.25": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						},
+						"0.3333": {
+							"pre": [
+								0,
+								0,
+								0
+							],
+							"post": [
+								1,
+								1,
+								1
+							]
+						},
+						"0.4167": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						},
+						"0.5": {
+							"pre": [
+								0,
+								0,
+								0
+							],
+							"post": [
+								1,
+								1,
+								1
+							]
+						},
+						"0.5833": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						},
+						"0.6667": {
+							"pre": [
+								0,
+								0,
+								0
+							],
+							"post": [
+								1,
+								1,
+								1
+							]
+						},
+						"0.75": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						},
+						"0.8333": {
+							"pre": [
+								0,
+								0,
+								0
+							],
+							"post": [
+								1,
+								1,
+								1
+							]
+						},
+						"0.9167": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						},
+						"1.0": {
+							"pre": [
+								0,
+								0,
+								0
+							],
+							"post": [
+								1,
+								1,
+								1
+							]
+						}
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "spin"
+				},
+				"0.0833": {
+					"effect": "spin"
+				},
+				"0.1667": {
+					"effect": "spin"
+				},
+				"0.25": {
+					"effect": "spin"
+				},
+				"0.3333": {
+					"effect": "spin"
+				},
+				"0.4167": {
+					"effect": "spin"
+				},
+				"0.5": {
+					"effect": "spin"
+				},
+				"0.5833": {
+					"effect": "spin"
+				},
+				"0.6667": {
+					"effect": "spin"
+				},
+				"0.75": {
+					"effect": "spin"
+				},
+				"0.8333": {
+					"effect": "spin"
+				},
+				"0.9167": {
+					"effect": "spin"
+				},
+				"1.0": {
+					"effect": "spin"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "dust_radius"
+				},
+				"0.1667": {
+					"effect": "dust_radius"
+				},
+				"0.3333": {
+					"effect": "dust_radius"
+				},
+				"0.5": {
+					"effect": "dust_radius"
+				},
+				"0.6667": {
+					"effect": "dust_radius"
+				},
+				"0.8333": {
+					"effect": "dust_radius"
+				},
+				"1.0": {
+					"effect": "dust_radius"
+				}
+			}
+		},
+		"animation.helicopter.rotations": {
+			"loop": true,
+			"bones": {
+				"main": {
+					"rotation": [
+						"q.target_x_rotation",
+						"q.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.helicopter.fly": {
+			"loop": true,
+			"animation_length": 10,
+			"bones": {
+				"main": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.75": {
+							"post": [
+								2.8568,
+								0.01558,
+								-1.07138
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								5,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.5": {
+							"post": [
+								1.32609,
+								-0.16005,
+								1.9184
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"6.25": {
+							"post": [
+								-2.33163,
+								-0.4222,
+								-3.66219
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"8.0": {
+							"post": [
+								-1.30135,
+								0.09688,
+								2.95446
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"10.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			}
+		},
+		"animation.helicopter.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 3.3
+				}
+			}
+		},
+		"animation.helicopter.look": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"rotation": [
+						"q.target_x_rotation-this",
+						"q.target_y_rotation-this",
+						0
+					]
+				}
+			}
+		}
+	}
+}

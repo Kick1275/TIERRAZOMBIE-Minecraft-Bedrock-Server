@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:chain_mesh",
+			"menu_category": {
+				"group": "construction",
+				"category": "construction"
+			},
+			"traits": {
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:block_face"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"ambient_occlusion": true,
+					"face_dimming": true,
+					"render_method": "blend",
+					"texture": "af_chain_mesh"
+				}
+			}
+		}
+	}
+}

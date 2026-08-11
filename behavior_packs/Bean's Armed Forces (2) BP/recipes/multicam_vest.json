@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:multicam_vest"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"K": {
+				"item": "af:kevlar"
+			},
+			"L": {
+				"item": "minecraft:leather"
+			},
+			"I": {
+				"item": "minecraft:gray_dye"
+			}
+		},
+		"pattern": [
+			"LIL",
+			"LKL",
+			"LKL"
+		],
+		"result": {
+			"item": "af:multicam_vest",
+			"count": 1
+		}
+	}
+}

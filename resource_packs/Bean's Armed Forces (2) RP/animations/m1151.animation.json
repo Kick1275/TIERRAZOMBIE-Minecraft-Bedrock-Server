@@ -1,0 +1,329 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.m1151.move": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"frontwheel1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							720,
+							0,
+							0
+						]
+					}
+				},
+				"frontwheel0": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							720,
+							0,
+							0
+						]
+					}
+				},
+				"backwheel0": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							720,
+							0,
+							0
+						]
+					}
+				},
+				"backwheel1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							720,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.m1151.brake": {
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.125": {
+							"post": [
+								1,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [
+								2.5,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					},
+					"position": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.125": {
+							"post": [
+								0,
+								-1,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.25": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"turret": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							5,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"barrel": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							-7.5,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"frontwheel1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							-5,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							1,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"frontwheel0": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							-5,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							1,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"backwheel0": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							-5,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"backwheel1": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							-5,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.m1151.turn": {
+			"loop": true,
+			"bones": {
+				"frontwheel1": {
+					"rotation": [
+						0,
+						"query.yaw_speed*0.3",
+						0
+					]
+				},
+				"frontwheel0": {
+					"rotation": [
+						0,
+						"query.yaw_speed*0.3",
+						0
+					]
+				},
+				"steer": {
+					"rotation": [
+						0,
+						0,
+						"query.yaw_speed*-0.5"
+					]
+				}
+			}
+		},
+		"animation.m1151.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 1.7
+				}
+			}
+		}
+	}
+}

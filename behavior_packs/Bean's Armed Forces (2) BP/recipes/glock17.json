@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:glock17"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"R": {
+				"item": "af:aluminium_ingot"
+			},
+			"N": {
+				"item": "minecraft:iron_nugget"
+			}
+		},
+		"pattern": [
+			"RRN",
+			" NR"
+		],
+		"result": {
+			"item": "af:glock17",
+			"count": 1
+		}
+	}
+}

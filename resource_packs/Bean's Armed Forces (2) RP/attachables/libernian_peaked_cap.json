@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:libernian_peaked_cap",
+			"materials": {
+				"default": "armor_leather",
+				"enchanted": "armor_enchanted",
+				"non_dye": "armor"
+			},
+			"textures": {
+				"default": "textures/armor/libernian_peaked_cap",
+				"enchanted": "textures/misc/enchanted_item_glint",
+				"non_dye": "textures/armor/libernian_peaked_cap_nondye"
+			},
+			"geometry": {
+				"default": "geometry.libernian_peaked_cap"
+			},
+			"scripts": {
+				"parent_setup": "variable.helmet_layer_visible = 0.0;"
+			},
+			"render_controllers": [
+				"controller.render.armor",
+				"controller.render.af_non_dye"
+			]
+		}
+	}
+}

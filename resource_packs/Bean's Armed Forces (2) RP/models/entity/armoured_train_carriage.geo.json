@@ -1,0 +1,292 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.armoured_train_carriage",
+				"texture_width": 512,
+				"texture_height": 512,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [
+					0,
+					1.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								8,
+								-21
+							],
+							"size": [
+								32,
+								14,
+								42
+							],
+							"inflate": 0.1,
+							"uv": [
+								6,
+								6
+							]
+						},
+						{
+							"origin": [
+								-8,
+								0,
+								-21
+							],
+							"size": [
+								16,
+								36,
+								42
+							],
+							"inflate": -0.1,
+							"uv": [
+								6,
+								68
+							]
+						},
+						{
+							"origin": [
+								6,
+								5,
+								-24
+							],
+							"size": [
+								2,
+								2,
+								48
+							],
+							"uv": [
+								114,
+								180
+							]
+						},
+						{
+							"origin": [
+								-2,
+								5,
+								-26
+							],
+							"size": [
+								4,
+								0,
+								5
+							],
+							"uv": [
+								183,
+								117
+							]
+						},
+						{
+							"origin": [
+								-2,
+								5,
+								21
+							],
+							"size": [
+								4,
+								0,
+								5
+							],
+							"uv": [
+								183,
+								62
+							]
+						},
+						{
+							"origin": [
+								-8,
+								5,
+								-24
+							],
+							"size": [
+								2,
+								2,
+								48
+							],
+							"uv": [
+								226,
+								180
+							]
+						},
+						{
+							"origin": [
+								-2,
+								3,
+								-22
+							],
+							"size": [
+								4,
+								5,
+								44
+							],
+							"inflate": 0.1,
+							"uv": [
+								6,
+								214
+							]
+						},
+						{
+							"origin": [
+								-6,
+								5,
+								-22
+							],
+							"size": [
+								12,
+								2,
+								44
+							],
+							"uv": [
+								134,
+								128
+							]
+						}
+					]
+				},
+				{
+					"name": "side0",
+					"parent": "body",
+					"pivot": [
+						-14,
+						22,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						25
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								22,
+								-21
+							],
+							"size": [
+								6,
+								14,
+								42
+							],
+							"uv": [
+								166,
+								6
+							]
+						}
+					]
+				},
+				{
+					"name": "side1",
+					"parent": "body",
+					"pivot": [
+						14,
+						22,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						-25
+					],
+					"cubes": [
+						{
+							"origin": [
+								8,
+								22,
+								-21
+							],
+							"size": [
+								6,
+								14,
+								42
+							],
+							"uv": [
+								6,
+								152
+							]
+						}
+					]
+				},
+				{
+					"name": "lowerside0",
+					"parent": "body",
+					"pivot": [
+						-16,
+						8,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						-45
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								0,
+								-16
+							],
+							"size": [
+								2,
+								8,
+								32
+							],
+							"inflate": -0.1,
+							"uv": [
+								108,
+								230
+							]
+						}
+					]
+				},
+				{
+					"name": "lowerside1",
+					"parent": "body",
+					"pivot": [
+						16,
+						8,
+						0
+					],
+					"rotation": [
+						0,
+						0,
+						45
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								0,
+								-16
+							],
+							"size": [
+								2,
+								8,
+								32
+							],
+							"inflate": -0.1,
+							"uv": [
+								176,
+								230
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

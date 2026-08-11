@@ -1,0 +1,681 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:tu160",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:plane.max-speed": {
+					"type": "int",
+					"default": 20,
+					"range": [
+						1,
+						50
+					]
+				},
+				"af:plane.takeoffspeed": {
+					"type": "int",
+					"default": 15,
+					"range": [
+						1,
+						20
+					]
+				},
+				"af:plane.turnrate-yaw": {
+					"type": "int",
+					"default": 16,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:plane.turnrate-pitch": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:camera.distance": {
+					"type": "int",
+					"default": 40,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:radar-angle": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						1,
+						90
+					]
+				},
+				"af:radar-range": {
+					"type": "int",
+					"default": 64,
+					"range": [
+						1,
+						256
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:type_family": {
+					"family": [
+						"libernia",
+						"vehicle",
+						"aerial",
+						"bomber"
+					]
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"telslakia": {
+				"minecraft:type_family": {
+					"family": [
+						"telslakia",
+						"vehicle",
+						"aerial",
+						"bomber"
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"engine": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"target": "self",
+						"event": "af:engine_sound",
+						"filters": [
+							{
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									}
+								]
+							}
+						]
+					},
+					"looping": true,
+					"time": [
+						0.5,
+						0.5
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"neutral",
+					"vehicle",
+					"aerial",
+					"bomber"
+				]
+			},
+			"minecraft:health": {
+				"value": 3000,
+				"max": 3000
+			},
+			"minecraft:collision_box": {
+				"width": 14,
+				"height": 8
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"interact_text": "action.interact.mount",
+				"seats": [
+					{
+						"position": [
+							0,
+							1,
+							0
+						],
+						"min_rider_count": 0,
+						"max_rider_count": 1
+					}
+				],
+				"family_types": [
+					"player"
+				],
+				"controlling_seat": 0,
+				"rider_can_interact": true
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:conditional_bandwidth_optimization": {
+				"default_values": {
+					"max_optimized_distance": 60,
+					"max_dropped_ticks": 20,
+					"use_motion_prediction_hints": true
+				},
+				"conditional_values": [
+					{
+						"max_optimized_distance": 0,
+						"max_dropped_ticks": 0,
+						"use_motion_prediction_hints": true,
+						"conditional_values": [
+							{
+								"test": "is_moving",
+								"subject": "self",
+								"operator": "==",
+								"value": true
+							}
+						]
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "rider_count",
+							"value": 1,
+							"subject": "self"
+						},
+						"event": "af:run_camera",
+						"target": "self"
+					},
+					{
+						"event": "af:on_ground",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "rider_count",
+									"subject": "self",
+									"value": 1
+								},
+								{
+									"test": "on_ground",
+									"subject": "self",
+									"value": true
+								}
+							]
+						}
+					},
+					{
+						"event": "af:in_air",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "rider_count",
+									"subject": "self",
+									"value": 1
+								},
+								{
+									"test": "on_ground",
+									"subject": "self",
+									"value": false
+								}
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"value": 0,
+							"subject": "self"
+						},
+						"event": "af:clear_camera",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:explode",
+				"target": "self"
+			},
+			"minecraft:timer": {
+				"time_down_event": {
+					"target": "self",
+					"event": "af:engine_sound",
+					"filters": [
+						{
+							"all_of": [
+								{
+									"test": "rider_count",
+									"subject": "self",
+									"value": 1
+								}
+							]
+						}
+					]
+				},
+				"looping": true,
+				"time": [
+					0.5,
+					0.5
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:generalpurpose_bomb"
+									},
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_payload",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:bomb_dropped",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery",
+						"spawn_entities": [
+							"af:generalpurpose_bomb"
+						]
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:thermobaric_bomb_item"
+									},
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_payload",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:largebomb_dropped",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery",
+						"spawn_entities": [
+							"af:thermobaric_bomb"
+						]
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:b61_nuke_item"
+									},
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_payload",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:largebomb_dropped",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery",
+						"spawn_entities": [
+							"af:b61_nuke"
+						]
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:flare"
+									}
+								]
+							},
+							"event": "af:flare_deploy",
+							"target": "self"
+						},
+						"use_item": true,
+						"spawn_entities": [
+							"af:flare_entity"
+						],
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "rider_count",
+										"subject": "self",
+										"value": 1
+									},
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "no_payload",
+										"operator": "=="
+									},
+									{
+										"any_of": [
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"subject": "other",
+												"value": "af:missile_ground"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"subject": "other",
+												"value": "af:missile_air"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"subject": "other",
+												"value": "af:hydra_rocket"
+											},
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"subject": "other",
+												"value": "af:generalpurpose_bomb"
+											}
+										]
+									}
+								]
+							},
+							"event": "af:inform_ammo",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_artillery"
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					}
+				]
+			},
+			"minecraft:fire_immune": true
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"telslakia",
+						"engine"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"scoreboard objectives add ChainAmmo dummy",
+						"scoreboard objectives add PayloadAmmo dummy"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar uses: Flare, General-purpose Bomb."
+					]
+				}
+			},
+			"af:flare_deploy": {
+				"queue_command": {
+					"command": [
+						"playsound jet.flare @p"
+					]
+				}
+			},
+			"af:run_camera": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider"
+					]
+				}
+			},
+			"af:in_air": {},
+			"af:on_ground": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s if score @s PayloadAmmo matches 1.. if block ~ ~-1 ~ af:asphalt_black run title @p actionbar aircraft restocked",
+						"execute as @s at @s if score @s PayloadAmmo matches 1.. if block ~ ~-1 ~ af:asphalt_black run tag @s remove no_payload",
+						"execute as @s at @s if score @s PayloadAmmo matches 1.. if block ~ ~-1 ~ af:asphalt_black run scoreboard players set @s PayloadAmmo 0"
+					]
+				}
+			},
+			"af:clear_camera": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=2] clear"
+					]
+				}
+			},
+			"af:explode": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=5] clear",
+						"function explosion_effects",
+						"kill @s"
+					]
+				}
+			},
+			"af:engine_sound": {
+				"queue_command": {
+					"command": [
+						"playsound jet.fly @a  ~ ~ ~ 10 1",
+						"function english_rwr"
+					]
+				}
+			},
+			"af:bomb_dropped": {
+				"queue_command": {
+					"command": [
+						"scoreboard players add @s PayloadAmmo 1",
+						"execute as @s if score @s PayloadAmmo matches 80.. run tag @s add no_payload",
+						"execute as @s if score @s PayloadAmmo matches 80.. run title @p actionbar land aircraft on asphalt to restock"
+					]
+				}
+			},
+			"af:largebomb_dropped": {
+				"queue_command": {
+					"command": [
+						"scoreboard players add @s PayloadAmmo 1",
+						"execute as @s if score @s PayloadAmmo matches 2.. run tag @s add no_payload",
+						"execute as @s if score @s PayloadAmmo matches 2.. run title @p actionbar land aircraft on asphalt to restock"
+					]
+				}
+			},
+			"af:inform_ammo": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar land aircraft on asphalt to restock"
+					]
+				}
+			}
+		}
+	}
+}

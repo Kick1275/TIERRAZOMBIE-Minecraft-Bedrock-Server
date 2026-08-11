@@ -1,0 +1,33 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "af:aluminium_ingot",
+					"weight": 1,
+					"conditions": [
+						{
+							"condition": "killed_by_player_or_pets"
+						}
+					]
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_ingot",
+					"weight": 1,
+					"conditions": [
+						{
+							"condition": "killed_by_player_or_pets"
+						}
+					]
+				},
+				{
+					"type": "empty",
+					"weight": 1
+				}
+			]
+		}
+	]
+}

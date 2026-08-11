@@ -1,0 +1,133 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:radio_tower",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 2
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 8
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:is_stackable": {},
+			"minecraft:loot": {
+				"table": "loot_tables/radio_tower.json"
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:despawn",
+							"target": "self",
+							"filters": {
+								"test": "is_sneaking",
+								"subject": "other",
+								"value": true
+							}
+						},
+						"add_items": {
+							"table": "loot_tables/radio_tower.json"
+						}
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:manual",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:manual"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "purr"
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:control_drone",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:manual"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "milk"
+					}
+				]
+			},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar Sneak and interact to pick up."
+					]
+				}
+			},
+			"af:despawn": {
+				"queue_command": {
+					"command": [
+						"kill @s"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar this entity no longer has purpose"
+					]
+				}
+			},
+			"af:control_drone": {}
+		},
+		"component_groups": {}
+	}
+}

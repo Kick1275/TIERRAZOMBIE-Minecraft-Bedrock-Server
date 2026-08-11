@@ -1,0 +1,73 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "af:explosionball_sparks",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/bullet_spark"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 20
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 5
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [
+					0,
+					1,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(4,10)"
+			},
+			"minecraft:particle_initial_speed": 30,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					-9.8,
+					0
+				],
+				"linear_drag_coefficient": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0.5,
+					0.5
+				],
+				"facing_camera_mode": "direction_y",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 5,
+				"collision_radius": 0.1
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.0": "#ffffffff",
+						"0.3": "#FFFFC282",
+						"0.69": "#57000000",
+						"1.0": "#00000000"
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,407 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:centrifuge_cylinder",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"is_heated": {
+				"minecraft:is_ignited": {}
+			},
+			"is_powered": {
+				"minecraft:is_charged": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:body_rotation_axis_aligned": {},
+			"minecraft:loot": {
+				"table": "loot_tables/centrifuge_cylinder.json"
+			},
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 2.9
+			},
+			"minecraft:is_collidable": {},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:manual",
+									"domain": "hand"
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "milk"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"value": "af:raw_uranium",
+											"domain": "hand"
+										},
+										{
+											"test": "has_tag",
+											"value": "is_refining",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "is_heated",
+											"subject": "self",
+											"operator": "=="
+										},
+										{
+											"test": "has_tag",
+											"value": "is_powered",
+											"subject": "self",
+											"operator": "=="
+										},
+										{
+											"test": "has_tag",
+											"value": "has_result",
+											"subject": "self",
+											"operator": "!="
+										}
+									]
+								}
+							],
+							"event": "af:start_process",
+							"target": "self"
+						},
+						"use_item": true,
+						"interact_text": "action.interact.use",
+						"play_sounds": "flap"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_tag",
+									"subject": "self",
+									"value": "has_result",
+									"operator": "=="
+								}
+							],
+							"event": "af:collect_results",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"any_of": [
+										{
+											"test": "has_tag",
+											"value": "is_heated",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "is_powered",
+											"subject": "self",
+											"operator": "!="
+										}
+									],
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"value": "af:raw_uranium",
+											"domain": "hand"
+										},
+										{
+											"test": "has_tag",
+											"value": "has_result",
+											"subject": "self",
+											"operator": "!="
+										}
+									]
+								}
+							],
+							"event": "af:inform_specific",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"any_of": [
+										{
+											"test": "has_tag",
+											"value": "is_refining",
+											"subject": "self",
+											"operator": "=="
+										}
+									],
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"value": "af:raw_uranium",
+											"domain": "hand"
+										},
+										{
+											"test": "has_tag",
+											"value": "has_result",
+											"subject": "self",
+											"operator": "!="
+										}
+									]
+								}
+							],
+							"event": "af:inform_using",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use"
+					}
+				]
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.5,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			},
+			"minecraft:renders_when_invisible": {},
+			"minecraft:tick_world": {
+				"never_despawn": true
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"test": "has_tag",
+								"subject": "self",
+								"value": "is_powered"
+							}
+						],
+						"event": "af:is_powered",
+						"target": "self"
+					},
+					{
+						"filters": [
+							{
+								"test": "has_tag",
+								"subject": "self",
+								"value": "is_heated"
+							}
+						],
+						"event": "af:is_heated",
+						"target": "self"
+					},
+					{
+						"filters": [
+							{
+								"any_of": [
+									{
+										"all_of": [
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "is_heated",
+												"operator": "!="
+											},
+											{
+												"test": "has_component",
+												"subject": "self",
+												"value": "minecraft:is_ignited",
+												"operator": "=="
+											}
+										]
+									},
+									{
+										"all_of": [
+											{
+												"test": "has_tag",
+												"subject": "self",
+												"value": "is_powered",
+												"operator": "!="
+											},
+											{
+												"test": "has_component",
+												"subject": "self",
+												"value": "minecraft:is_charged",
+												"operator": "=="
+											}
+										]
+									}
+								]
+							}
+						],
+						"event": "af:remove_status",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar needs campfire underneath, redstone block overhead.",
+						"effect @s invisibility infinite 1 true",
+						"scoreboard objectives add RefineTime dummy",
+						"playsound place.iron @a ~ ~ ~"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar campfire underneath, redstone block on top for 1/8th chance to enrich uranium."
+					]
+				}
+			},
+			"af:inform_specific": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar needs campfire underneath, redstone block overhead."
+					]
+				}
+			},
+			"af:inform_using": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar this centrifuge is currently in use."
+					]
+				}
+			},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"function centrifuge"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function block_break",
+						"execute as @s[tag=is_refining] at @s run summon af:centrifuge_results ^^^1 ~~ af:interupt",
+						"execute as @s[tag=has_result] at @s run summon af:centrifuge_results ^^^1 ~~ af:result"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:remove_status": {
+				"remove": {
+					"component_groups": [
+						"is_heated",
+						"is_powered"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=is_refining] at @s run summon af:centrifuge_results ^^^1 ~~ af:interupt",
+						"execute as @s[tag=has_result] at @s run summon af:centrifuge_results ^^^1 ~~ af:result",
+						"tag @s remove is_refining",
+						"tag @s remove has_result",
+						"scoreboard players set @s RefineTime 0"
+					]
+				}
+			},
+			"af:is_heated": {
+				"add": {
+					"component_groups": [
+						"is_heated"
+					]
+				}
+			},
+			"af:is_powered": {
+				"add": {
+					"component_groups": [
+						"is_powered"
+					]
+				}
+			},
+			"af:start_process": {
+				"queue_command": {
+					"command": [
+						"tag @s add is_refining",
+						"title @a[r=8] actionbar refining uranium..."
+					]
+				}
+			},
+			"af:finish_process": {
+				"queue_command": {
+					"command": [
+						"tag @s remove is_refining",
+						"tag @s add has_result",
+						"title @a[r=16] actionbar refinement finished.",
+						"scoreboard players set @s RefineTime 0"
+					]
+				}
+			},
+			"af:collect_results": {
+				"queue_command": {
+					"command": [
+						"tag @s remove has_result",
+						"summon af:centrifuge_results ^^^1 ~~ af:result",
+						"title @p actionbar 1/8th chance of getting uranium"
+					]
+				}
+			}
+		}
+	}
+}

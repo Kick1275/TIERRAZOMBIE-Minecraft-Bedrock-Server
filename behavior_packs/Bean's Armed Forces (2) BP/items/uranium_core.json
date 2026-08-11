@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:uranium_core",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "af_uranium_core",
+			"minecraft:entity_placer": {
+				"entity": "af:demon_core"
+			}
+		}
+	}
+}

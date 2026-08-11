@@ -1,0 +1,46 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:recruiter",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/recruiter/recruiter",
+				"libernia_army": "textures/entity/recruiter/recruiter_army_libernia",
+				"telslakia_army": "textures/entity/recruiter/recruiter_army_telslakia",
+				"libernia_air": "textures/entity/recruiter/recruiter_air_libernia",
+				"telslakia_air": "textures/entity/recruiter/recruiter_air_telslakia",
+				"libernia_navy": "textures/entity/recruiter/recruiter_navy_libernia",
+				"telslakia_navy": "textures/entity/recruiter/recruiter_navy_telslakia"
+			},
+			"geometry": {
+				"default": "geometry.recruiter"
+			},
+			"render_controllers": [
+				"controller.render.recruiter"
+			],
+			"scripts": {
+				"scale": "0.9375",
+				"animate": [
+					"general_con",
+					"move_con",
+					"look_at_target"
+				]
+			},
+			"animations": {
+				"general": "animation.villager.general",
+				"look_at_target": "animation.common.look_at_target",
+				"raise_arms": "animation.villager.raise_arms",
+				"move": "animation.villager.move",
+				"general_con": "controller.animation.villager.general",
+				"move_con": "controller.animation.villager.move"
+			},
+			"spawn_egg": {
+				"texture": "af_call_recruiter"
+			},
+			"enable_attachables": true
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:asphalt"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"C": {
+				"item": "minecraft:cobblestone"
+			},
+			"B": {
+				"item": "af:oil_bucket"
+			}
+		},
+		"pattern": [
+			"CCC",
+			"CBC",
+			"CCC"
+		],
+		"result": {
+			"item": "af:asphalt_black",
+			"count": 64
+		}
+	}
+}

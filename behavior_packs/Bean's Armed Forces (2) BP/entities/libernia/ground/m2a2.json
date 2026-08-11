@@ -1,0 +1,562 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:m2a2",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:vehicle.rotation-speed": {
+					"type": "int",
+					"default": 40,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:vehicle.transmission": {
+					"type": "enum",
+					"default": "dual",
+					"values": [
+						"mono",
+						"dual"
+					]
+				},
+				"af:camera.distance": {
+					"type": "int",
+					"default": 9,
+					"range": [
+						1,
+						30
+					]
+				},
+				"af:trails.type": {
+					"type": "enum",
+					"default": "heavy",
+					"values": [
+						"light",
+						"heavy"
+					]
+				},
+				"af:trails.width": {
+					"type": "int",
+					"default": 4,
+					"range": [
+						1,
+						10
+					]
+				},
+				"af:has_turret": {
+					"type": "bool",
+					"default": true
+				},
+				"af:turret.speed": {
+					"type": "int",
+					"default": 60,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:has_scopeview": {
+					"type": "bool",
+					"default": true
+				},
+				"af:scope.camera.offset-y": {
+					"type": "int",
+					"default": 40,
+					"range": [
+						-100,
+						100
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"composite",
+						"m2a2",
+						"libernia"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"composite",
+						"m2a2",
+						"telslakia"
+					]
+				}
+			},
+			"camo_baf": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			},
+			"camo_irl": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"composite",
+					"m2a2"
+				]
+			},
+			"minecraft:health": {
+				"value": 2050
+			},
+			"minecraft:collision_box": {
+				"width": 3.2,
+				"height": 2.98
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:movement": {
+				"value": 0.5
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					}
+				]
+			},
+			"minecraft:rideable": {
+				"seat_count": 7,
+				"interact_text": "action.interact.mount",
+				"family_types": [
+					"player"
+				],
+				"seats": [
+					{
+						"position": [
+							0,
+							1,
+							0
+						]
+					},
+					{
+						"position": [
+							0,
+							0,
+							-2
+						]
+					},
+					{
+						"position": [
+							0,
+							0,
+							-2
+						]
+					},
+					{
+						"position": [
+							0,
+							0,
+							-2
+						]
+					},
+					{
+						"position": [
+							0,
+							0,
+							-2
+						]
+					},
+					{
+						"position": [
+							0,
+							0,
+							-2
+						]
+					},
+					{
+						"position": [
+							0,
+							0,
+							-2
+						]
+					}
+				],
+				"controlling_seat": 0,
+				"rider_can_interact": false
+			},
+			"minecraft:variable_max_auto_step": {
+				"base_value": 1,
+				"controlled_value": 1.5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 15,
+							"subject": "self",
+							"operator": "<"
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": true
+						},
+						"event": "af:is_moving",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": ">="
+						},
+						"event": "af:player_invis",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.1,
+				"cause": "fly_into_wall",
+				"damage_per_tick": 20,
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						{
+							"test": "is_riding",
+							"subject": "other",
+							"value": true,
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "vehicle",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "inanimate",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_moving",
+							"subject": "self",
+							"value": true,
+							"operator": "=="
+						}
+					]
+				},
+				"play_attack_sound": true,
+				"damage_cooldown": 1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:camo_bucket"
+									}
+								]
+							},
+							"event": "af:change_camo",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					}
+				]
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"waterlily",
+					"big_dripleaf",
+					"leaves",
+					"leaves2",
+					"mangrove_leaves"
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"queue_command": {
+					"command": [
+						"event entity @e[family=turret,r=1,c=1] af:join_telslakia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"queue_command": {
+					"command": [
+						"event entity @e[family=turret,r=1,c=1] af:join_libernia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar uses: AP/HE Belts, Guided Missiles. Can carry 6 passengers."
+					]
+				}
+			},
+			"af:is_moving": {
+				"queue_command": {
+					"command": [
+						"camerashake add @a[r=32] 0.01 0.1 positional",
+						"playsound tank.move @a ~ ~ ~ 10 0.7"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main",
+						"camera @a[r=5] clear",
+						"kill @e[family=turret,r=1,c=1]",
+						"summon af:m2a2_corpse ~ ~ ~ ~ ~"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ^ ^1 ^-2"
+					]
+				}
+			},
+			"af:player_invis": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider",
+						"effect @p[r=3] resistance 1 10 true",
+						"effect @p[r=3] water_breathing 1 10 true",
+						"effect @p[r=3] fire_resistance 1 10 true",
+						"playsound tank.drive @a ~ ~ ~ 0.2 0.8"
+					]
+				}
+			},
+			"af:change_camo": {
+				"sequence": [
+					{
+						"queue_command": {
+							"command": [
+								"title @a[r=8] Randomized Camo"
+							]
+						},
+						"randomize": [
+							{
+								"filters": {
+									"test": "is_mark_variant",
+									"subject": "self",
+									"value": 0,
+									"operator": "!="
+								},
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"camo_baf"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"camo_irl"
+									]
+								},
+								"queue_command": {
+									"command": [
+										"event entity @n[family=turret,r=1] af:camo_baf"
+									]
+								}
+							},
+							{
+								"filters": {
+									"test": "is_mark_variant",
+									"subject": "self",
+									"value": 1,
+									"operator": "!="
+								},
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"camo_irl"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"camo_baf"
+									]
+								},
+								"queue_command": {
+									"command": [
+										"event entity @n[family=turret,r=1] af:camo_irl"
+									]
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	}
+}

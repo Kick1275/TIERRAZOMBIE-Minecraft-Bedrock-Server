@@ -1,0 +1,679 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:d20",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"af:cooldown_HE": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:HE_loaded",
+						"target": "self"
+					},
+					"time": [
+						3,
+						5
+					]
+				}
+			},
+			"af:cooldown_AP": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:AP_loaded",
+						"target": "self"
+					},
+					"time": [
+						3,
+						5
+					]
+				}
+			},
+			"af:fired": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.25,
+					"duration": 2,
+					"knockback_horizontal_strength": 2,
+					"knockback_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"damage_filters": {
+						"none_of": [
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "inanimate"
+							},
+							{
+								"test": "is_riding",
+								"subject": "other"
+							},
+							{
+								"subject": "other",
+								"test": "is_family",
+								"value": "vehicle"
+							}
+						]
+					},
+					"knockback_range": 0,
+					"knockback_damage": 2,
+					"on_roar_end": {
+						"event": "af:stop_fired",
+						"target": "self"
+					}
+				}
+			},
+			"af:ready": {
+				"minecraft:is_ignited": {}
+			},
+			"af:follow": {
+				"minecraft:navigation.walk": {
+					"avoid_damage_blocks": false,
+					"avoid_water": true,
+					"can_path_from_air": true
+				},
+				"minecraft:behavior.look_at_player": {
+					"priority": 0,
+					"look_distance": 16,
+					"probability": 1
+				},
+				"minecraft:follow_range": {
+					"value": 64
+				},
+				"minecraft:jump.static": {},
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:variable_max_auto_step": {
+					"base_value": 1.5,
+					"jump_prevented_value": 1,
+					"controlled_value": 1.5
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"d20",
+					"artillery"
+				]
+			},
+			"minecraft:health": {
+				"value": 1050
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"deals_damage": false,
+						"cause": "suffocation"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:environment_sensor": {
+				"triggers": []
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"glass",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"dandelion",
+					"azalea",
+					"flowering_azalea",
+					"azalea_leaves",
+					"azalea_leaves_flowered",
+					"cave_vines",
+					"cave_vines_body_with_berries",
+					"cave_vines_head_with_berries",
+					"small_dripleaf_block",
+					"big_dripleaf",
+					"spore_blossom",
+					"hanging_roots",
+					"mangrove_leaves"
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:sp_shell"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_AP",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_ap"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:he_shell"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_HE",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_he"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:fire_ap_m114",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "AP_loaded",
+									"subject": "self",
+									"operator": "=="
+								}
+							]
+						},
+						"interact_text": "action.interact.fire_ap"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:ap_shell"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:warn_AP",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:fire_he_m114",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "HE_loaded",
+									"subject": "self",
+									"operator": "=="
+								}
+							]
+						},
+						"interact_text": "action.interact.fire_he"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:wrench"
+									},
+									{
+										"test": "is_leashed",
+										"value": true,
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "adjustable",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:start_adjust",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.adjust_artillery"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:wrench"
+									},
+									{
+										"test": "is_leashed",
+										"value": true,
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "adjustable",
+										"subject": "self",
+										"operator": "=="
+									}
+								]
+							},
+							"event": "af:stop_adjust",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.adjust_artillery"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:rangefinder"
+									},
+									{
+										"test": "is_leashed",
+										"value": true,
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:fire_range_m114",
+							"target": "self"
+						},
+						"play_sounds": "flap",
+						"interact_text": "action.interact.use"
+					}
+				]
+			},
+			"minecraft:leashable": {
+				"soft_distance": 6,
+				"hard_distance": 8,
+				"max_distance": 32,
+				"on_leash": {
+					"event": "af:leashed",
+					"target": "self"
+				},
+				"on_unleash": {
+					"event": "af:unleashed",
+					"target": "self"
+				}
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar move with Leash, adjust with Wrench.",
+						"tag @s add persistantRotation",
+						"title @p actionbar use SP shells for precision strikes."
+					]
+				}
+			},
+			"af:shot_fired": {
+				"queue_command": {
+					"command": [
+						"tag @s remove HE_loaded",
+						"tag @s remove AP_loaded",
+						"tag @s remove loading",
+						"playsound tank.fire @a ~ ~ ~ 100 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:fired"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:ready"
+					]
+				}
+			},
+			"af:stop_fired": {
+				"remove": {
+					"component_groups": [
+						"af:fired"
+					]
+				}
+			},
+			"af:load_AP": {
+				"add": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar SP Shell loading",
+						"tag @s add loading"
+					]
+				}
+			},
+			"af:AP_loaded": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar SP Shell loaded",
+						"tag @s add AP_loaded"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:ready"
+					]
+				}
+			},
+			"af:load_HE": {
+				"add": {
+					"component_groups": [
+						"af:cooldown_HE"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar HE Shell loading",
+						"tag @s add loading"
+					]
+				}
+			},
+			"af:HE_loaded": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar HE Shell loaded",
+						"tag @s add HE_loaded"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:ready"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main"
+					]
+				}
+			},
+			"af:leashed": {
+				"add": {
+					"component_groups": [
+						"af:follow"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add adjustable"
+					]
+				}
+			},
+			"af:unleashed": {
+				"remove": {
+					"component_groups": [
+						"af:follow"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s remove adjustable"
+					]
+				}
+			},
+			"af:start_adjust": {
+				"queue_command": {
+					"command": [
+						"tag @s add adjustable",
+						"title @p actionbar position unlocked."
+					]
+				}
+			},
+			"af:stop_adjust": {
+				"queue_command": {
+					"command": [
+						"tag @s remove adjustable",
+						"title @p actionbar position locked."
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar uses: SP/HE shells, toggle adjustment with Wrench."
+					]
+				}
+			},
+			"af:rangefind": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar Predicting Impact Coords..."
+					]
+				}
+			},
+			"af:warn_AP": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar use SP shells for precision strikes."
+					]
+				}
+			},
+			"af:fire_ap_m114": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			},
+			"af:fire_he_m114": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			},
+			"af:fire_range_m114": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			}
+		}
+	}
+}

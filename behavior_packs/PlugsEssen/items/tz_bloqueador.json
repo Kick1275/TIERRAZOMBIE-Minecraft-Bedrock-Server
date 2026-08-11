@@ -1,0 +1,23 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tz:bloqueador",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+       "minecraft:icon": {
+         "textures": {
+          "default": "BloqueadorDeVehiculos"
+     }
+    },
+      "minecraft:display_name": {
+        "value": "§b§lLlave Bloqueadora de Vehiculos"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:hand_equipped": false
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:oil_stone",
+			"menu_category": {
+				"group": "nature",
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"size": [
+					8,
+					8,
+					8
+				],
+				"origin": [
+					-4,
+					0,
+					-4
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:loot": "loot_tables/oil.json",
+			"minecraft:flammable": {
+				"destroy_chance_modifier": 20,
+				"catch_chance_modifier": 200
+			},
+			"minecraft:selection_box": {
+				"size": [
+					16,
+					16,
+					16
+				],
+				"origin": [
+					-8,
+					0,
+					-8
+				]
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 8
+			}
+		}
+	}
+}

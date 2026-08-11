@@ -1,0 +1,337 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:flag_pole",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"up": {
+				"minecraft:is_ignited": {}
+			},
+			"down": {},
+			"neutral": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:join_telslakia",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:telslakia_id"
+										},
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "!=",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "eat"
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:join_libernia",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:libernia_id"
+										},
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "!=",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "eat"
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:join_neutral",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:neutral_id"
+										},
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "!=",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "eat"
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:manual",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:manual"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "purr"
+					},
+					{
+						"interact_text": "action.interact.use",
+						"on_interact": {
+							"event": "af:up",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "!=",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "milk",
+						"cooldown": 2
+					},
+					{
+						"on_interact": {
+							"event": "af:down",
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "==",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							]
+						},
+						"play_sounds": "milk",
+						"cooldown": 2
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 8
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:is_stackable": {},
+			"minecraft:loot": {
+				"table": "loot_tables/flag_pole.json"
+			},
+			"minecraft:is_collidable": {},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:renders_when_invisible": {},
+			"minecraft:mark_variant": {
+				"value": 0
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar drops on death, use passports to change flag.",
+						"tp @s ~~~ 0 0",
+						"playsound place.iron @a ~ ~ ~",
+						"effect @s invisibility infinite 1 true"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"down"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar will display flag of the passport you use on it."
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia",
+						"neutral"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia",
+						"neutral"
+					]
+				}
+			},
+			"af:up": {
+				"add": {
+					"component_groups": [
+						"up"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"down"
+					]
+				}
+			},
+			"af:down": {
+				"add": {
+					"component_groups": [
+						"down"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"up"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function block_break"
+					]
+				}
+			},
+			"af:join_neutral": {
+				"remove": {
+					"component_groups": [
+						"libernia",
+						"telslakia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"neutral"
+					]
+				}
+			}
+		}
+	}
+}

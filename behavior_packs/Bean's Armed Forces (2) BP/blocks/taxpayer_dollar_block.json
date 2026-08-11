@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:taxpayer_dollar_block",
+			"menu_category": {
+				"group": "items",
+				"category": "items"
+			}
+		},
+		"components": {}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:barbed_wire_item",
+			"menu_category": {
+				"category": "construction"
+			}
+		},
+		"components": {
+			"minecraft:icon": "af_barbed_wire_item",
+			"minecraft:block_placer": {
+				"block": "af:barbed_wire"
+			}
+		}
+	}
+}

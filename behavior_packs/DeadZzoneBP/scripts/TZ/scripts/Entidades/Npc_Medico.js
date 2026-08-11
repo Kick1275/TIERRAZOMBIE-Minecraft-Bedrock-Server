@@ -39,7 +39,7 @@ const npcLanguages = {
 const npcItems = [
     { id: "mcpe:adrenaline",          name: { en_US: "Adrenaline",               es_ES: "Adrenalina"                    }, sellPrice: 720,  buyPrice: 1800,  icon: "textures/items/medic/adrenaline.png" },
     { id: "mcpe:alcoholic_tinture",   name: { en_US: "Alcoholic Tincture",       es_ES: "Tintura Alcohólica"            }, sellPrice: 140,  buyPrice: 350,   icon: "textures/items/medic/alcoholic_tinture.png" },
-    { id: "mcpe:antidote",            name: { en_US: "Antidote",                 es_ES: "Antídoto"                      }, sellPrice: 1400, buyPrice: 3500,  icon: "textures/items/medic/antidote.png" },
+    { id: "mcpe:antidote",            name: { en_US: "Self-Revive Syringe",                 es_ES: "Auto-Reanimador (Jeringa)"                      }, sellPrice: 7400, buyPrice: 10500,  icon: "textures/items/medic/antidote.png" },
     { id: "mcpe:bandage_sterilized",  name: { en_US: "Sterilized Bandage",       es_ES: "Vendaje Esterilizado"          }, sellPrice: 200,  buyPrice: 500,   icon: "textures/items/medic/bandage_sterilized.png" },
     { id: "mcpe:bandage",             name: { en_US: "Bandage",                  es_ES: "Vendaje"                       }, sellPrice: 120,  buyPrice: 300,   icon: "textures/items/medic/bandage.png" },
     { id: "mcpe:blood_bag_type_a",    name: { en_US: "Blood Bag (Type A)",       es_ES: "Bolsa de Sangre (Tipo A)"      }, sellPrice: 300,  buyPrice: 750,   icon: "textures/items/medic/blood_bag.png" },

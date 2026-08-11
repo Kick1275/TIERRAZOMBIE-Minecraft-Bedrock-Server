@@ -1,0 +1,24 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:naval_mine",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/naval_mine"
+			},
+			"geometry": {
+				"default": "geometry.naval_mine"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity"
+			],
+			"spawn_egg": {
+				"texture": "af_naval_mine_egg",
+				"texture_index": 0
+			}
+		}
+	}
+}

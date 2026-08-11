@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.siren_pole.speak": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"speakers": {
+					"scale": {
+						"0.0": [
+							1.01,
+							1.01,
+							1.01
+						],
+						"0.25": [
+							1,
+							1,
+							1
+						],
+						"0.5": [
+							1.01,
+							1.01,
+							1.01
+						]
+					}
+				}
+			}
+		}
+	}
+}

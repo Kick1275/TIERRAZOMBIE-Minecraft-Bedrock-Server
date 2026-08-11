@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.antitank_mine.sink": {
+			"loop": true,
+			"bones": {
+				"antitank_mine": {
+					"position": [
+						0,
+						"q.mark_variant*-2",
+						0
+					]
+				}
+			}
+		}
+	}
+}

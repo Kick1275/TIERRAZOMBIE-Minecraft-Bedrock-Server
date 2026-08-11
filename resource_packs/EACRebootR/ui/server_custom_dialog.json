@@ -1,0 +1,40 @@
+/********************************************************
++*   (c) Mojang. All rights reserved                       *
++*   (c) Microsoft. All rights reserved.                   *
++*********************************************************/
+
+{
+  "namespace": "test_dialog",
+
+  "main_panel_no_buttons": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$text_name|default": "",
+    "$panel_indent_size|default": [ "100% - 5px", "100%" ],
+    "$show_close_button": false,
+    "$custom_background|default": "",
+    "controls": [
+      {
+        "title_label@common_dialogs.title_label": {}
+      },
+      {
+        "panel_indent": {
+          "type": "panel",
+          "size": "$panel_indent_size",
+          "offset": [ 0, 0 ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            { "inside_header_panel@$child_control": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "background_image": {
+    "type": "image",
+    "texture": "textures/ui/control"
+  }
+}

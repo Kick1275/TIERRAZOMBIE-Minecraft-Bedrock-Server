@@ -1,0 +1,21 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:ore_feature": {
+		"description": {
+			"identifier": "af:desert_oil"
+		},
+		"count": 32,
+		"replace_rules": [
+			{
+				"places_block": "af:oil_sand",
+				"may_replace": [
+					"minecraft:sandstone",
+					"minecraft:red_sandstone",
+					"minecraft:red_terracotta",
+					"minecraft:hardened_clay",
+					"minecraft:orange_terracotta"
+				]
+			}
+		]
+	}
+}

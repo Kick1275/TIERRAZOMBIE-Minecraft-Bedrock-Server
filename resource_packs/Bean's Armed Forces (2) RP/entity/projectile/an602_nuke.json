@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:an602_nuke",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/b61_nuke"
+			},
+			"geometry": {
+				"default": "geometry.b61_nuke"
+			},
+			"render_controllers": [
+				"controller.render.b61_nuke"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"fall": "animation.bomb.fall"
+			},
+			"scripts": {
+				"animate": [
+					"fall"
+				]
+			}
+		}
+	}
+}

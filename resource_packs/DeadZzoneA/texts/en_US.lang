@@ -188,7 +188,7 @@ item.mcpe:morphine.name=Morphine auto injector
 item.mcpe:splint.name=Splint
 item.mcpe:water_purification.name=Water purification table
 item.mcpe:alcoholic_tinture.name=Alcoholic Tincture
-item.mcpe:antidote.name=Antidote syringe
+item.mcpe:antidote.name=Self-Revive Syringe
 
 
 item.mcpe:avatar_custome.name=Character customization

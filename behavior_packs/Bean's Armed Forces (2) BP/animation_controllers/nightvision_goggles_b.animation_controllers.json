@@ -1,0 +1,48 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.nightvision_goggles_b.toggle": {
+			"initial_state": "goggles_off_transfer",
+			"states": {
+				"goggles_off": {
+					"transitions": [
+						{
+							"goggles_off_transfer": "!q.is_sneaking&&q.any_animation_finished&&query.get_equipped_item_name=='nightvision_goggles'"
+						}
+					],
+					"blend_transition": 0.5,
+					"on_entry": [
+						"/effect @s night_vision 0 0 true"
+					]
+				},
+				"goggles_off_transfer": {
+					"transitions": [
+						{
+							"goggles_on": "q.is_sneaking&&q.any_animation_finished&&query.get_equipped_item_name=='nightvision_goggles'"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"goggles_on": {
+					"transitions": [
+						{
+							"goggles_on_transfer": "!q.is_sneaking&&q.any_animation_finished&&query.get_equipped_item_name=='nightvision_goggles'"
+						}
+					],
+					"blend_transition": 0.5,
+					"on_entry": [
+						"/effect @s night_vision infinite 1 true"
+					]
+				},
+				"goggles_on_transfer": {
+					"transitions": [
+						{
+							"goggles_off": "q.is_sneaking&&q.any_animation_finished&&query.get_equipped_item_name=='nightvision_goggles'"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		}
+	}
+}

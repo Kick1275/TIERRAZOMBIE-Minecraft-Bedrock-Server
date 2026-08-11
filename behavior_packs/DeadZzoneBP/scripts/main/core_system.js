@@ -565,11 +565,13 @@ mc.system.runInterval(() => {
 }, 200);
 */
 
+// DESHABILITADO: Sistema de sangre eliminado — blood == 0 no mata
+/*
 mc.system.runInterval(() => {
     const players = mc.world.getAllPlayers();
     players.forEach((player) => {
         const gameMode = player.getGameMode();
-        
+
         if (gameMode === GameMode.creative || gameMode === GameMode.spectator) return;
 
         const blood = getScore("blood", player);
@@ -579,6 +581,7 @@ mc.system.runInterval(() => {
         }
     });
 }, 20);
+*/
 
 // play nature sounds
 mc.system.runInterval(() => {
@@ -588,27 +591,17 @@ mc.system.runInterval(() => {
     });
 }, 160);
 
+// Fusionado: avatar / config / list — un solo getAllPlayers() y un solo bucle cada 30 ticks
+// (antes eran 3 intervals separados, cada uno con su propio getAllPlayers()). Lógica idéntica.
 mc.system.runInterval(() => {
     const players = mc.world.getAllPlayers();
-    players.forEach(async (pl) => {
-        if (pl.hasTag("avatar")) {
-            pl.removeTag("avatar");
+    players.forEach((player) => {
+        if (player.hasTag("avatar")) {
+            player.removeTag("avatar");
         }
-    });
-}, 30);
-
-mc.system.runInterval(() => {
-    const players = mc.world.getAllPlayers();
-    players.forEach(async (player) => {
         if (player.hasTag("config")) {
             configUI(player);
         }
-    });
-}, 30);
-
-mc.system.runInterval(() => {
-    const players = mc.world.getAllPlayers();
-    players.forEach(async (player) => {
         if (player.hasTag("list")) {
             showAdvancementUI(player);
             player.runCommandAsync(`tag @s remove list`);
@@ -616,20 +609,26 @@ mc.system.runInterval(() => {
     });
 }, 30);
 
+// Clamps de stamina/thirst: un solo comando @a GLOBAL por tick en vez de @s por jugador
+// (antes: 3·N comandos/tick). El selector @a[scores={...}] filtra a quién aplica, igual que @s.
+const __ow_dim = mc.world.getDimension("overworld");
 mc.system.runInterval(() => {
-	const players = mc.world.getAllPlayers();
-	players.forEach((source) => {
-		// ELIMINADO: source.runCommandAsync(`effect @s[scores={infection=..20}] hunger 0 0 true`);
-		source.runCommandAsync(`scoreboard players set @s[scores={stamina=21..}] stamina 20`);
-		source.runCommandAsync(`scoreboard players set @s[scores={stamina=..-1}] stamina 0`);
-		source.runCommandAsync(`scoreboard players set @s[scores={thirst=21..}] thirst 20`);
-		// ELIMINADO: source.runCommandAsync(`scoreboard players set @s[scores={blood=3501..}] blood 3500`);
-		// ELIMINADO: source.runCommandAsync(`scoreboard players set @s[scores={infection=..-1}] infection 0`);
-		source.runCommandAsync(`gamerule showcoordinates false`);
-		source.runCommandAsync(`gamerule showdaysplayed true`);
-		source.runCommandAsync(`gamerule sendcommandfeedback false`);
-    });
+    try {
+        __ow_dim.runCommand(`scoreboard players set @a[scores={stamina=21..}] stamina 20`);
+        __ow_dim.runCommand(`scoreboard players set @a[scores={stamina=..-1}] stamina 0`);
+        __ow_dim.runCommand(`scoreboard players set @a[scores={thirst=21..}] thirst 20`);
+    } catch (e) {}
 }, 1);
+
+// Gamerules: son globales y constantes. Reafirmarlos con baja frecuencia (cada 200 ticks)
+// en vez de por jugador y por tick (antes: 3·N comandos/tick). Efecto idéntico: se mantienen fijos.
+mc.system.runInterval(() => {
+    try {
+        __ow_dim.runCommand(`gamerule showcoordinates false`);
+        __ow_dim.runCommand(`gamerule showdaysplayed true`);
+        __ow_dim.runCommand(`gamerule sendcommandfeedback false`);
+    } catch (e) {}
+}, 200);
 
 mc.system.runInterval(() => {
     const players = mc.world.getAllPlayers();

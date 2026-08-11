@@ -1,0 +1,19 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tz:ganzua2",
+      "menu_category": {
+        "category": "items"
+      }
+    },
+    "components": {
+      "minecraft:icon": "ganzua2",
+      "minecraft:display_name": {
+        "value": "§b§lGanzua Nivel 2"
+      },
+      "minecraft:max_stack_size": 64,
+      "minecraft:hand_equipped": false
+    }
+  }
+}

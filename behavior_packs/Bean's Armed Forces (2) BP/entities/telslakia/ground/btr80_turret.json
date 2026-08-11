@@ -1,0 +1,281 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:btr80_turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"btr80",
+						"libernia",
+						"turret"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"btr80",
+						"telslakia",
+						"turret"
+					]
+				}
+			},
+			"camo_baf": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			},
+			"camo_irl": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"btr80",
+					"turret"
+				]
+			},
+			"minecraft:health": {
+				"value": 5000
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 3
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"deals_damage": false,
+						"cause": "projectile"
+					},
+					{
+						"deals_damage": false,
+						"cause": "suffocation"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0.8
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:movement.basic": {
+				"max_turn": 45
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:scope",
+							"target": "self",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:vehicle_periscope"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "af:grenade_smoke"
+										}
+									]
+								}
+							],
+							"event": "af:fire_smoke_vehicle"
+						},
+						"interact_text": "action.interact.fire_smoke",
+						"use_item": true,
+						"cooldown": 3
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_riding",
+											"value": true,
+											"subject": "other",
+											"operator": "=="
+										}
+									]
+								}
+							],
+							"event": "af:fire_bullet_m1151"
+						},
+						"play_sounds": "shoot",
+						"cooldown": 0.25,
+						"interact_text": "action.interact.shoot_mg"
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main"
+					]
+				}
+			},
+			"af:MG_fired": {
+				"queue_command": {
+					"command": [
+						"particle af:mg_flash ^ ^2 ^2"
+					]
+				}
+			},
+			"af:scope": {
+				"queue_command": {
+					"command": [
+						"execute as @p at @s run tag @s[tag=scopeview] add scope_toggle",
+						"execute as @p at @s run tag @s[tag=scope_toggle] remove scopeview",
+						"execute as @p at @s run tag @s[tag=!scope_toggle] add scopeview",
+						"execute as @p at @s run tag @s remove scope_toggle"
+					]
+				}
+			},
+			"af:camo_baf": {
+				"add": {
+					"component_groups": [
+						"camo_baf"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"camo_irl"
+					]
+				}
+			},
+			"af:camo_irl": {
+				"add": {
+					"component_groups": [
+						"camo_irl"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"camo_baf"
+					]
+				}
+			},
+			"af:fire_smoke_vehicle": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			},
+			"af:fire_bullet_m1151": {
+				"queue_command": {
+					"command": [
+						"tag @s add af_fire_script",
+						"tag @s remove af_fire_script"
+					]
+				}
+			}
+		}
+	}
+}

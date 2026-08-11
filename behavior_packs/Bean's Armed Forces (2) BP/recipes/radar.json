@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:radar"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"A": {
+				"item": "af:aluminium_ingot"
+			},
+			"O": {
+				"item": "minecraft:observer"
+			}
+		},
+		"pattern": [
+			"AAA",
+			"AOA",
+			"III"
+		],
+		"result": {
+			"item": "af:radar_spawn_egg",
+			"count": 1
+		}
+	}
+}

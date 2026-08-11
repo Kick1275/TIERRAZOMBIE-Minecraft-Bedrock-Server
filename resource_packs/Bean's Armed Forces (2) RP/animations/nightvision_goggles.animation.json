@@ -1,0 +1,73 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.nightvision_goggles.active": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"goggles": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							90,
+							0,
+							0
+						]
+					}
+				},
+				"tint": {
+					"position": {
+						"0.0": [
+							0,
+							64,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.nightvision_goggles.inactive": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"tint": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							64,
+							0
+						]
+					}
+				},
+				"goggles": {
+					"rotation": {
+						"0.0": [
+							90,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

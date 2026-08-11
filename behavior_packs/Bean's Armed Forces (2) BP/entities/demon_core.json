@@ -1,0 +1,219 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:demon_core",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"opened": {
+				"minecraft:is_ignited": {}
+			},
+			"closed": {},
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.9,
+				"height": 0.9
+			},
+			"minecraft:health": {
+				"value": 5
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/demon_core.json"
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:wrench"
+										},
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "!=",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							],
+							"event": "af:open",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "milk"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:wrench"
+										},
+										{
+											"test": "has_component",
+											"subject": "self",
+											"operator": "==",
+											"value": "minecraft:is_ignited"
+										}
+									]
+								}
+							],
+							"event": "af:close",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "eat"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"subject": "other",
+											"domain": "hand",
+											"value": "af:manual"
+										}
+									]
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "purr"
+					}
+				]
+			},
+			"minecraft:body_rotation_axis_aligned": {},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:renders_when_invisible": {},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.5,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			},
+			"minecraft:is_collidable": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar will drop on death, use wrench to close.",
+						"effect @s invisibility infinite 1 true",
+						"playsound place.iron @a ~ ~ ~"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"closed"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar open/close with wrench."
+					]
+				}
+			},
+			"af:open": {
+				"add": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"closed"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s add gas_open"
+					]
+				}
+			},
+			"af:close": {
+				"add": {
+					"component_groups": [
+						"closed"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"opened"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tag @s remove gas_open"
+					]
+				}
+			},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"execute as @s[tag=gas_open] at @s run particle af:radiation_centrifuge ~ ~ ~",
+						"execute as @s[tag=gas_open] at @s run effect @e[r=8,family=!undead,family=!vehicle,family=!inanimate,tag=!has_hazmat] wither 60 0 true",
+						"execute as @s[tag=gas_open] at @s run playsound radiation.loop @a ~~~ 1 1"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function block_break"
+					]
+				}
+			},
+			"af:despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

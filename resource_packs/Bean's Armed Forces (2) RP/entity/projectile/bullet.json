@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:bullet",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/cape_invisible"
+			},
+			"geometry": {
+				"default": "geometry.ap_shell"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"move": "animation.arrow.move"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.random_rot=Math.random_integer(0,1)*80-40;"
+				],
+				"pre_animation": [
+					"variable.shake = query.shake_time - query.frame_alpha;",
+					"variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+				],
+				"animate": [
+					"move"
+				],
+				"should_update_bones_and_effects_offscreen": true,
+				"should_update_effects_offscreen": true
+			}
+		}
+	}
+}

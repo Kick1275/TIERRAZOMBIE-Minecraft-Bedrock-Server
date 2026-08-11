@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:mangrove_spiked"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "BAB",
+      "BAB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stick"
+      },
+      "B": {
+        "item": "minecraft:mangrove_log"
+      }
+    },
+    "result": {
+      "item": "ranzie:mangrove_spiked_fence",
+      "count": 4
+    }
+  }
+}

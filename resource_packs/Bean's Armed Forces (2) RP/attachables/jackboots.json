@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:jackboots",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/armor/jackboots"
+			},
+			"geometry": {
+				"default": "geometry.jackboots"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.boot_layer_visible = 0.0;"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

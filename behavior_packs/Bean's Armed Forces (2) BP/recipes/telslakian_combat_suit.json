@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:telslakian_combat_suit"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:leather"
+			},
+			"I": {
+				"item": "minecraft:sand"
+			}
+		},
+		"pattern": [
+			"LIL",
+			" L "
+		],
+		"result": {
+			"item": "af:telslakian_combat_suit",
+			"count": 1
+		}
+	}
+}

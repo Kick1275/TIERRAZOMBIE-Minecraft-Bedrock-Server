@@ -1,0 +1,109 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.aircraft.landed": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fly": "!q.is_on_ground"
+						}
+					],
+					"blend_transition": 2.5
+				},
+				"fly": {
+					"animations": [
+						"fly"
+					],
+					"transitions": [
+						{
+							"default": "q.is_on_ground"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.aircraft.smooth_land": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fly": "!query.is_on_ground"
+						}
+					],
+					"blend_transition": 1,
+					"blend_via_shortest_path": true
+				},
+				"fly": {
+					"animations": [
+						"rotations"
+					],
+					"transitions": [
+						{
+							"default": "q.is_on_ground"
+						}
+					],
+					"blend_transition": 1,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.aircraft.swing_wing": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"active": "!query.has_rider||query.ground_speed>30"
+						}
+					],
+					"blend_via_shortest_path": true,
+					"blend_transition": 1
+				},
+				"active": {
+					"animations": [
+						"swing_wing"
+					],
+					"transitions": [
+						{
+							"default": "query.has_rider&&query.ground_speed<20"
+						}
+					],
+					"blend_transition": 1,
+					"blend_via_shortest_path": true
+				}
+			}
+		},
+		"controller.animation.aircraft.vtol": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"active": "!query.is_on_ground&&query.ground_speed<20"
+						}
+					],
+					"blend_via_shortest_path": true,
+					"blend_transition": 1
+				},
+				"active": {
+					"animations": [
+						"hover"
+					],
+					"transitions": [
+						{
+							"default": "query.is_on_ground||query.ground_speed>10"
+						}
+					],
+					"blend_transition": 1,
+					"blend_via_shortest_path": true,
+					"particle_effects": [
+						{
+							"effect": "engine_vtol",
+							"locator": "engine"
+						}
+					]
+				}
+			}
+		}
+	}
+}

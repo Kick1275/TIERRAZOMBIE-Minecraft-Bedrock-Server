@@ -1,0 +1,28 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:thrown_grenade_smoke",
+			"materials": {
+				"default": "snowball"
+			},
+			"textures": {
+				"default": "textures/items/grenade_smoke"
+			},
+			"geometry": {
+				"default": "geometry.item_sprite"
+			},
+			"render_controllers": [
+				"controller.render.item_sprite"
+			],
+			"animations": {
+				"flying": "animation.actor.billboard"
+			},
+			"scripts": {
+				"animate": [
+					"flying"
+				]
+			}
+		}
+	}
+}

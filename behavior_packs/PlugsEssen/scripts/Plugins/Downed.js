@@ -7,6 +7,7 @@ const moveTracker   = new Map(); // playerId -> { lastX, lastZ, movingTicks }
 const spawnGrace    = new Set(); // playerIds recently spawned, immune to downed check
 const executionState = new Map(); // playerId -> { target, startTick, startPos, isReviving }
 const executionLocked = new Set(); // playerIds being executed (can't move)
+const lockedTargetPos = new Map(); // targetId -> { x, y, z } frozen position during execution
 
 // HP total: 4 hileras = 80 HP (health_boost 13 = +60 HP extra sobre 20 base = 80 HP = 40 corazones)
 const TOTAL_HP       = 80;
@@ -31,6 +32,7 @@ function downPlayer(player) {
 
     player.addEffect("slowness",       999999, { amplifier: SLOWNESS_AMP, showParticles: false });
     player.addEffect("mining_fatigue", 999999, { amplifier: 255,          showParticles: false });
+    player.addEffect("weakness",       999999, { amplifier: 255,          showParticles: false });
     player.runCommand("playsound down @a[r=50]");
     player.runCommand("summon minecraft:fireworks_rocket ~ ~ ~ ");
     // Ejecutar animación de caída
@@ -57,12 +59,19 @@ function revivePlayer(player) {
 
     player.removeEffect("slowness");
     player.removeEffect("mining_fatigue");
-    player.runCommand("playanimation @s animation.down a 1");
-    getHealth(player).setCurrentValue(REVIVE_HP);
+    player.removeEffect("weakness");
+    lockedTargetPos.delete(player.id);
 
-    // Grace period after revive: 3 seconds immune to downed check
+    // Vida y grace period ANTES del runCommand: si el comando de animación
+    // lanza una excepción, esto ya quedó aplicado y no se vuelve a tumbar
+    // por error en el siguiente tick (hp seguía <20 y sin spawnGrace).
+    const hc = getHealth(player);
+    if (hc) hc.setCurrentValue(REVIVE_HP);
+
     spawnGrace.add(player.id);
     system.runTimeout(() => spawnGrace.delete(player.id), 60);
+
+    try { player.runCommand("playanimation @s animation.down a 1"); } catch {}
 
     player.onScreenDisplay.setTitle("§a§lLEVANTADO", {
         subtitle: "§7Tienes 2 hileras de corazones. ¡Cúrate!",
@@ -80,6 +89,8 @@ function killDowned(player, executor) {
 
     player.removeEffect("slowness");
     player.removeEffect("mining_fatigue");
+    player.removeEffect("weakness");
+    lockedTargetPos.delete(player.id);
 
     // Usar damage con el executor como fuente para que entityDie detecte el killer
     if (executor) {
@@ -143,7 +154,8 @@ function startExecution(executor, target, isReviving) {
     });
     
     executionLocked.add(target.id);
-    
+    lockedTargetPos.set(target.id, { x: target.location.x, y: target.location.y, z: target.location.z });
+
     // Bloquear movimiento del objetivo
     target.addEffect("slowness", EXECUTION_DURATION + 20, { amplifier: 255, showParticles: false });
     target.addEffect("mining_fatigue", EXECUTION_DURATION + 20, { amplifier: 255, showParticles: false });
@@ -158,17 +170,18 @@ function startExecution(executor, target, isReviving) {
     console.warn(`[Execution] ${executor.name} ${isReviving ? "reviviendo" : "rematando"} a ${target.name}`);
 }
 
-function cancelExecution(executor, reason) {
+function cancelExecution(executor, reason, byId) {
     const state = executionState.get(executor.id);
     if (!state) return;
-    
+
     executionState.delete(executor.id);
     executionLocked.delete(state.target);
-    
+    lockedTargetPos.delete(state.target);
+
     executor.sendMessage(`§c✗ Ejecución cancelada: ${reason}`);
-    
+
     // Buscar el objetivo y notificarle
-    const target = world.getAllPlayers().find(p => p.id === state.target);
+    const target = byId ? byId.get(state.target) : world.getAllPlayers().find(p => p.id === state.target);
     if (target) {
         target.sendMessage("§eEjecución cancelada.");
         // Restaurar efectos de tumbado si sigue tumbado
@@ -181,14 +194,15 @@ function cancelExecution(executor, reason) {
     console.warn(`[Execution] Cancelada: ${reason}`);
 }
 
-function completeExecution(executor) {
+function completeExecution(executor, byId) {
     const state = executionState.get(executor.id);
     if (!state) return;
-    
+
     executionState.delete(executor.id);
     executionLocked.delete(state.target);
-    
-    const target = world.getAllPlayers().find(p => p.id === state.target);
+    lockedTargetPos.delete(state.target);
+
+    const target = byId ? byId.get(state.target) : world.getAllPlayers().find(p => p.id === state.target);
     if (!target) {
         executor.sendMessage("§cEl objetivo desapareció.");
         return;
@@ -232,8 +246,8 @@ world.afterEvents.playerSpawn.subscribe((ev) => {
                 const pos = player.location;
                 moveTracker.set(player.id, { lastX: pos.x, lastZ: pos.z, movingTicks: 0 });
                 player.addEffect("slowness",       999999, { amplifier: SLOWNESS_AMP, showParticles: false });
-                player.addEffect("weakness",       999999, { amplifier: SLOWNESS_AMP, showParticles: false });
                 player.addEffect("mining_fatigue", 999999, { amplifier: 255,          showParticles: false });
+                player.addEffect("weakness",       999999, { amplifier: 255,          showParticles: false });
                 console.warn(`[Downed] ${player.name} restaurado como tumbado tras reload`);
             });
         }
@@ -244,7 +258,40 @@ world.afterEvents.playerSpawn.subscribe((ev) => {
 
 world.beforeEvents.itemUse.subscribe((ev) => {
     if (!isDown(ev.source)) return;
+    if (ev.itemStack.typeId === "mcpe:antidote") return;
     ev.cancel = true;
+});
+// Antídoto: un solo subscriber cubre ambos casos (tumbado y sano).
+world.afterEvents.itemCompleteUse.subscribe((ev) => {
+    if (ev.itemStack.typeId !== "mcpe:antidote") return;
+    const player = ev.source;
+
+    if (downedPlayers.has(player.id)) {
+        // ── Estaba tumbado → auto-reanimar y restaurar salud completa ──
+        downedPlayers.delete(player.id);
+        moveTracker.delete(player.id);
+        player.removeTag(DOWNED_TAG);
+        player.removeEffect("slowness");
+        player.removeEffect("mining_fatigue");
+        player.removeEffect("weakness");
+
+        const hc = getHealth(player);
+        if (hc) hc.setCurrentValue(TOTAL_HP);
+        spawnGrace.add(player.id);
+        system.runTimeout(() => spawnGrace.delete(player.id), 60);
+
+        try { player.runCommand("playanimation @s animation.down a 1"); } catch {}
+        player.onScreenDisplay.setTitle("§a§lAUTO-REANIMADO", {
+            subtitle: "§7¡Salud completamente restaurada!",
+            fadeInDuration: 5, stayDuration: 60, fadeOutDuration: 10
+        });
+        player.sendMessage("§a[!] §fTe has auto-reanimado. ¡Salud al máximo!");
+    } else {
+        // ── Sano → restaurar toda la vida igualmente ──
+        const hc = getHealth(player);
+        if (hc) hc.setCurrentValue(TOTAL_HP);
+        player.sendMessage("§a[!] §fVida restaurada al máximo.");
+    }
 });
 
 world.beforeEvents.playerInteractWithBlock.subscribe((ev) => {
@@ -277,8 +324,8 @@ function checkDownedInteractions(players) {
 
         for (const downed of downedList) {
             const p1 = helper.location, p2 = downed.location;
-            const dist = Math.sqrt((p1.x-p2.x)**2 + (p1.y-p2.y)**2 + (p1.z-p2.z)**2);
-            if (dist <= 3) {
+            const dx = p1.x-p2.x, dy = p1.y-p2.y, dz = p1.z-p2.z;
+            if (dx*dx + dy*dy + dz*dz <= 9) {
                 sneakCooldown.set(helper.id, _debugTick);
                 system.run(() => showDownedMenu(helper, downed));
                 break;
@@ -294,21 +341,23 @@ const breakSoundPlayed = new Map(); // playerId -> bool
 
 system.runInterval(() => {
     _debugTick++;
+
+    // Fast-path: sin tumbados ni ejecuciones activas, solo revisar HP cada 2 ticks
+    const hasActivity = downedPlayers.size > 0 || executionState.size > 0;
+    if (!hasActivity && _debugTick % 2 !== 0) return;
+
     const players = world.getAllPlayers();
 
-    // Log cada 2 segundos para debug
-    if (_debugTick % 40 === 0) {
-        for (const p of players) {
-            const hc = getHealth(p);
-            //console.warn(`[Downed DEBUG] ${p.name} hp=${hc ? hc.currentValue : "NULL"} down=${isDown(p)}`);
-        }
-    }
+    // checkDownedInteractions solo tiene costo real cuando hay tumbados
+    if (downedPlayers.size) checkDownedInteractions(players);
 
-    checkDownedInteractions(players);
-    
+    // Índice id→player construido una sola vez para las búsquedas del loop de
+    // ejecuciones (evita players.find() O(n) anidado por cada ejecución activa).
+    const byId = executionState.size ? new Map(players.map(p => [p.id, p])) : null;
+
     // ── Procesar ejecuciones activas ──
     for (const [executorId, state] of executionState.entries()) {
-        const executor = players.find(p => p.id === executorId);
+        const executor = byId.get(executorId);
         if (!executor) {
             executionState.delete(executorId);
             executionLocked.delete(state.target);
@@ -323,14 +372,14 @@ system.runInterval(() => {
                      Math.abs(currentPos.z - state.startPos.z) > 0.3;
         
         if (moved) {
-            cancelExecution(executor, "te moviste");
+            cancelExecution(executor, "te moviste", byId);
             continue;
         }
-        
+
         // Verificar si el objetivo sigue tumbado
-        const target = players.find(p => p.id === state.target);
+        const target = byId.get(state.target);
         if (!target || !isDown(target)) {
-            cancelExecution(executor, "el objetivo ya no está tumbado");
+            cancelExecution(executor, "el objetivo ya no está tumbado", byId);
             continue;
         }
         
@@ -366,7 +415,7 @@ system.runInterval(() => {
         
         // Completar ejecución
         if (elapsed >= EXECUTION_DURATION) {
-            completeExecution(executor);
+            completeExecution(executor, byId);
         }
     }
 
@@ -391,17 +440,21 @@ system.runInterval(() => {
             } else if (hp > 40) {
                 breakSoundPlayed.set(player.id, false);
             }
-            // Hint en actionbar si hay tumbado cerca
-            const downedNearby = players.find(p => {
-                if (!isDown(p)) return false;
-                const p1 = player.location, p2 = p.location;
-                return Math.sqrt((p1.x-p2.x)**2+(p1.y-p2.y)**2+(p1.z-p2.z)**2) <= 3;
-            });
-            if (downedNearby && !executionState.has(player.id)) {
-                player.onScreenDisplay.setTitle(" ", {
-                    subtitle: `§e[AGÁCHATE] §fpara interactuar con §c${downedNearby.name}`,
-                    fadeInDuration: 0, stayDuration: 40, fadeOutDuration: 0
+            // Hint cada 10 ticks — evitar sqrt y setTitle cada tick
+            if (_debugTick % 10 === 0) {
+                const p1 = player.location;
+                const downedNearby = players.find(p => {
+                    if (!isDown(p)) return false;
+                    const p2 = p.location;
+                    const dx = p1.x-p2.x, dy = p1.y-p2.y, dz = p1.z-p2.z;
+                    return dx*dx + dy*dy + dz*dz <= 9; // 3² = 9
                 });
+                if (downedNearby && !executionState.has(player.id)) {
+                    player.onScreenDisplay.setTitle(" ", {
+                        subtitle: `§e[AGÁCHATE] §fpara interactuar con §c${downedNearby.name}`,
+                        fadeInDuration: 0, stayDuration: 25, fadeOutDuration: 0
+                    });
+                }
             }
             continue;
         }
@@ -420,11 +473,22 @@ system.runInterval(() => {
             hc.setCurrentValue(DOWNED_THRESH);
         }        
 
-        // Renovar efectos (solo si no está siendo ejecutado)
-        if (!executionLocked.has(player.id)) {
+        // Renovar efectos cada 80 ticks (duración 100) — downPlayer ya aplica 999999,
+        // esto solo cubre el caso de que algo externo haya quitado el efecto.
+        if (_debugTick % 80 === 0 && !executionLocked.has(player.id)) {
             player.addEffect("slowness",       100, { amplifier: SLOWNESS_AMP, showParticles: false });
             player.addEffect("mining_fatigue", 100, { amplifier: 255,          showParticles: false });
+            player.addEffect("weakness",       100, { amplifier: 255,          showParticles: false });
         }
+
+        // TP de congelación si está siendo ejecutado/rematado
+        if (executionLocked.has(player.id)) {
+            const frozenPos = lockedTargetPos.get(player.id);
+            if (frozenPos) {
+                try { player.teleport(frozenPos, { dimension: player.dimension }); } catch {}
+            }
+        }
+
 
         // Tracker de movimiento → sangrado (solo si no está siendo ejecutado)
         if (!executionLocked.has(player.id)) {

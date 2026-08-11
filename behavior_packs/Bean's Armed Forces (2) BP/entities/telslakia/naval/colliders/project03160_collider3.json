@@ -1,0 +1,65 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:project03160_collider3",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:collider.offset-x": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-y": {
+					"type": "int",
+					"default": 11,
+					"range": [
+						-1000,
+						1000
+					]
+				},
+				"af:collider.offset-z": {
+					"type": "int",
+					"default": -60,
+					"range": [
+						-1000,
+						1000
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"strb90h",
+					"inanimate",
+					"collider"
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:collision_box": {
+				"width": 3.8,
+				"height": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:is_collidable": {}
+		}
+	}
+}

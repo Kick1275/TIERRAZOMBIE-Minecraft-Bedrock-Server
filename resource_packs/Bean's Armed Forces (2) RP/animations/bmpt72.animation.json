@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bmpt72.shoot": {
+			"loop": true,
+			"animation_length": 0.2,
+			"bones": {
+				"MG": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							2
+						],
+						"0.1": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "flash",
+						"locator": "particle"
+					},
+					{
+						"effect": "flash",
+						"locator": "particle2"
+					}
+				],
+				"0.1": {
+					"effect": "smoke",
+					"locator": "particle"
+				}
+			}
+		},
+		"animation.bmpt72.look_at_target": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"rotation": [
+						"query.target_x_rotation*2",
+						0,
+						0
+					]
+				},
+				"gun": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				},
+				"gun2": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						0
+					]
+				},
+				"launchers": {
+					"rotation": [
+						"math.clamp(query.target_x_rotation,-25,5)",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

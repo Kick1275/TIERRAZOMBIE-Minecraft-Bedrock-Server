@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "af:pilot_helmet",
+			"materials": {
+				"default": "armor_leather",
+				"non_dye": "armor"
+			},
+			"textures": {
+				"default": "textures/armor/pilot_helmet",
+				"non_dye": "textures/armor/pilot_helmet_nondye"
+			},
+			"geometry": {
+				"default": "geometry.pilot_helmet"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.helmet_layer_visible = 0.0;"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default",
+				"controller.render.af_non_dye"
+			]
+		}
+	}
+}

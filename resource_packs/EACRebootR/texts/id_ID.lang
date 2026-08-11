@@ -1,0 +1,83 @@
+item.krep.type95.lore=§r§fWelcome to Shanghai Recker!
+item.krep.qjb95.lore=§r§fAvaan? kagak kedengeran, mesin tempur gwe kekencengan!
+item.krep.ak12.lore=§r§fKolot tapi handal ngapain harus diganti?
+item.krep.m7.lore=§r§fHasil dari paranoid, seenggaknya dibayar lunas.
+item.krep.m8.lore=§r§fBUKAN SENJATA EPEP ITU NYET!
+item.krep.t112.lore=§r§fGak semuanya buatan Jerman, ini HK416 buatan Formosa
+item.krep.k2.lore=§r§fAwalnya pengen jadi M16, malah jadi FNC
+item.krep.qjb201.lore=§r§fRingan buat SMR, tapi keberatan buat Senapan serbu, iya gak sih?
+item.krep.qbz191.lore=§r§fEra Bullpup berakhir, dan inilah simbol modernisasi sesungguhnya!
+item.krep.qbu191.lore=§r§fIya iya, gabakalan nembak kayak SMR, belum aja
+item.krep.qsz92.lore=§r§fFive seveN? Ini Five eighT!
+item.krep.hk416.lore=§r§fDelta Force gaada yang lajang, ini bini nya btw
+item.krep.m16a4.lore=§r§fKalem, ganti rezim itu jawaban daripada kemerdekaan yang lu harepin, §odalam versi kami
+item.krep.qcq171.lore=§r§fBlack Campaign barat bakalan bilang kalo SMG ini macet pas kompetisi
+item.krep.type88.lore=§r§fKlasik, loh? oalah buatan Korut.
+item.krep.type89.lore=§r§fSquad Itami seenggaknya dikasih Tongkat Sihir Premium sekarang 
+item.krep.type882.lore=§r§fKlasik, Tapi......
+item.krep.arka.lore=§r§fKagak ngilangin Idealisme, cuman ngikut tren aja
+
+item.krep:arka=FN ARKA
+item.krep:hk416=HK416
+item.krep:m16a4=M16A4
+item.krep:qbu191=QBU-191
+item.krep:qbz191=QBZ-191
+item.krep:qjb201=QJB-201
+item.krep:qsz92=QSZ-92
+item.krep:type88=Tipe 88
+item.krep:type89=Tipe 89
+item.krep:type882=Tipe 88 Magasin Heliks
+item.krep:type95=QBZ-95-1
+item.krep:qjb95=QJB-95
+item.krep:ak12=AK-12
+item.krep:m7=M7
+item.krep:m8=M8
+item.krep:t112=T112
+item.krep:k2=K2
+item.krep:qcq171=QCQ-171
+item.krep:creativeammo=Peluru Kreatif
+
+tile.krep:craftingdesk.name=Meja Serbaguna
+
+form.krep.faction.title=Choose Faction
+form.krep.faction.dropdown_label=Faction
+form.krep.faction.option.0=Default
+form.krep.faction.option.1=PLA
+form.krep.faction.option.2=US
+form.krep.faction.option.3=ROC
+form.krep.faction.option.4=ROK
+form.krep.faction.success_prefix=Current Faction: 
+
+menu.krep.crafting_station=Meja Serbaguna
+menu.krep.choose_category=Pilih Kategori
+menu.krep.weapon_crafting=Bikin Senapan
+menu.krep.ammo_crafting=Bikin Peluru
+menu.krep.attachment_crafting=Bikin Aksesoris
+menu.krep.select_weapon=Pilih Senjata
+menu.krep.select_ammo=Pilih Peluru
+menu.krep.select_attachment=Pilih Aksesoris
+menu.krep.close=Tutup
+menu.krep.craft=Bikin
+menu.krep.back=Balik
+menu.krep.getconfig=Dapatkan Config
+
+krep:itemGroup.name.ar=Senapan Serbu
+krep:itemGroup.name.sm=Pistol Mitraliur
+krep:itemGroup.name.p=Kaliber kecil
+krep:itemGroup.name.sr=Senapan Runduk
+krep:itemGroup.name.lmg=Senapan Mesin Ringan
+krep:itemGroup.name.sg=Shotgun
+krep:itemGroup.name.scope=Alat Bidik
+krep:itemGroup.name.supp=Peredam
+krep:itemGroup.name.grip=Pegangan
+krep:itemGroup.name.ammo=Peluru
+krep:itemGroup.name.empty=Kosong
+
+
+item.krep.mm58.desc=§fKaliber : 5.8x42mm
+item.krep.mm5821.desc=§fKaliber : 5.8x21mm
+item.krep.mm545.desc=§fKaliber : 5.45x39mm
+item.krep.mm762.desc=§fKaliber : 7.62x39mm
+item.krep.mm556.desc=§fKaliber : 5.56x45mm
+item.krep.fury277.desc=§fKaliber : .277 Fury
+item.krep.mm9.desc=§fKaliber : 9x19mm

@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.vehicle.rotations": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						"query.vertical_speed*-2",
+						"query.target_y_rotation-this",
+						0
+					],
+					"scale": 1.2
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "dust"
+				}
+			}
+		},
+		"animation.vehicle.rotations_reverse": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						"query.vertical_speed*2",
+						"query.target_y_rotation-this",
+						0
+					],
+					"scale": 1.2
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "dust"
+				}
+			}
+		}
+	}
+}

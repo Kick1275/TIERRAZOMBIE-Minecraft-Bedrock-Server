@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:cd_fmttm"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:aluminium_ingot"
+			},
+			"D": {
+				"item": "minecraft:glowstone_dust"
+			}
+		},
+		"pattern": [
+			" N ",
+			"NDN",
+			" N "
+		],
+		"result": {
+			"item": "af:cd_fmttm",
+			"count": 1
+		}
+	}
+}

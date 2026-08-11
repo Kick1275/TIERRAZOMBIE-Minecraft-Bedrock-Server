@@ -1,0 +1,30 @@
+{
+  "format_version": "1.20.20",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ranzie:house6_feature"
+    },
+    "structure_name": "mystructure:house6",
+    "adjustment_radius": 16,
+    "facing_direction": "random",
+    "constraints": {
+      "block_intersection": {
+        "block_allowlist": [
+          "minecraft:grass_block",
+          "minecraft:stone",
+          "minecraft:dirt",
+          "minecraft:sand",
+          "minecraft:gravel",
+          "minecraft:andesite",
+          "minecraft:diorite",
+          "minecraft:granite",
+          "minecraft:snow",
+          "minecraft:sandstone",
+          "minecraft:air"
+        ]
+      },
+      "grounded": {},
+	   "unburied": {}
+    }
+  }
+}

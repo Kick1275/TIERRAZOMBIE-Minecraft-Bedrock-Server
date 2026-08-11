@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.particle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "particle",
+							"locator": "particle_locator"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.water_wake": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "wake",
+							"locator": "wake"
+						}
+					]
+				}
+			}
+		}
+	}
+}

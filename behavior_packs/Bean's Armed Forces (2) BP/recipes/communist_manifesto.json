@@ -1,0 +1,34 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:communist_manifesto"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"W": {
+				"item": "minecraft:golden_axe"
+			},
+			"X": {
+				"item": "minecraft:book"
+			},
+			"S": {
+				"item": "minecraft:golden_pickaxe"
+			},
+			"R": {
+				"item": "minecraft:red_dye"
+			}
+		},
+		"pattern": [
+			" R ",
+			"SXW",
+			" R "
+		],
+		"result": {
+			"item": "af:communist_manifesto",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,28 @@
+END USER LICENSE AGREEMENT (EULA) FOR EAST ASIA CONFLICT ADDON
+
+Last Updated: June 4 2026
+
+Please read this End User License Agreement (EULA) carefully before downloading, installing, or using the "East Asia Conflict" Addon developed by Akang Krep. 
+
+By downloading, installing, or using the Addon, you agree to be bound by the terms of this Agreement. If you do not agree, do not use the Addon.
+
+1. NON-AFFILIATION AND OWNERSHIP
+This Addon is an independent modification for Minecraft: Bedrock Edition. This Addon is not affiliated with, authorized, endorsed, or sponsored by Mojang Studios, Microsoft, or any of their affiliates. Minecraft is a registered trademark of Mojang Synergies AB. All original code, logic, and custom assets created within this Addon are the sole intellectual property of the Developer.
+
+2. LICENSE AND PERMITTED USE
+The Developer grants you a personal, non-exclusive, non-transferable, and revocable license to use the Addon for personal, non-commercial entertainment purposes within Minecraft: Bedrock Edition.
+
+3. STRICT RESTRICTIONS (ANTI-PIRACY & MODIFICATION)
+You are strictly prohibited from:
+- Re-uploading, redistributing, or mirroring this Addon (including its .mcpack, .zip, or extracted files) to any third-party websites, apps, or cloud storage services without the Developer's express written consent.
+- Modifying, altering, reverse-engineering, or rewriting the source code, scripting API, or logic of this Addon.
+- Merging, re-packaging, or re-bundling the code of this Addon with unauthorized, stolen, or third-party assets to create a "remix" or "modified version."
+- Monetizing this Addon or any modified version of it through direct sales, paywalls, or unauthorized advertising links.
+
+4. DISCLAIMER OF LIABILITY (THIRD-PARTY MODIFICATIONS)
+THE ADDON IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. THE DEVELOPER SHALL NOT BE HELD LIABLE FOR ANY DAMAGE TO YOUR GAME, DEVICE, SAVE DATA, OR WORLD FILES RESULTING FROM THE USE OF THIS ADDON.
+
+FURTHERMORE, THE DEVELOPER STRICTLY DISCLAIMS ANY LIABILITY OR RESPONSIBILITY FOR ILLEGAL, UNAUTHORIZED MODIFICATIONS OF THIS ADDON CREATED BY THIRD PARTIES. IF A THIRD PARTY MODIFIES THIS ADDON USING STOLEN ASSETS, COPYRIGHTED MATERIAL, OR INFRINGING CONTENT, THE ORIGINAL DEVELOPER IS NOT RESPONSIBLE AND SHALL BE HELD HARMLESS FROM ANY LEGAL DISPUTES, COMPLAINTS, OR CLAIMS ARISING FROM SUCH ACTIONS.
+
+5. TERMINATION AND ENFORCEMENT
+Any breach of this Agreement will automatically terminate your license to use the Addon. The Developer reserves the right to issue DMCA Takedown Notices, copyright strikes, or formal complaints to any platform or hosting provider hosting unauthorized, modified, or infringing versions of this Addon.

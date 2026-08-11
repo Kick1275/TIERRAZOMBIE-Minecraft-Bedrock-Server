@@ -1,0 +1,211 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.libernian_helmet",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [
+					0,
+					1.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [
+						0,
+						12,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								24,
+								-4
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"inflate": 0.25,
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-5,
+								30.5,
+								-4.35
+							],
+							"size": [
+								10,
+								2,
+								3
+							],
+							"inflate": -0.1,
+							"uv": {
+								"north": {
+									"uv": [
+										31,
+										46
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										46
+									],
+									"uv_size": [
+										30,
+										18
+									]
+								},
+								"south": {
+									"uv": [
+										60,
+										46
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"west": {
+									"uv": [
+										0,
+										46
+									],
+									"uv_size": [
+										30,
+										18
+									]
+								},
+								"up": {
+									"uv": [
+										63,
+										34
+									],
+									"uv_size": [
+										0,
+										30
+									]
+								},
+								"down": {
+									"uv": [
+										64,
+										64
+									],
+									"uv_size": [
+										0,
+										-30
+									]
+								}
+							}
+						},
+						{
+							"origin": [
+								-4,
+								30,
+								-5
+							],
+							"size": [
+								8,
+								3,
+								9
+							],
+							"inflate": 0.8,
+							"uv": [
+								0,
+								16
+							]
+						},
+						{
+							"origin": [
+								-5,
+								27,
+								-0.5
+							],
+							"size": [
+								10,
+								2,
+								6
+							],
+							"inflate": 0.5,
+							"uv": [
+								24,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [
+						5,
+						22,
+						0
+					]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [
+						6,
+						15,
+						1
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					]
+				}
+			]
+		}
+	]
+}

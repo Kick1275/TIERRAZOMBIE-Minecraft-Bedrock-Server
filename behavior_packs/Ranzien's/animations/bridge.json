@@ -1,0 +1,16 @@
+{
+    "animations": {
+        "animation.bridge": {
+            "animation_length": 0.5,
+            "loop": true,
+            "timeline": {
+                //bridge
+                "0.11": "/execute as @s[rx=45,rxm=-45,tag=place] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone if block ^ ^-0.6 ^1 air run replaceitem entity @s slot.weapon.mainhand 0 cobblestone",
+                "0.2": "/execute as @s[rx=45,rxm=-45,tag=place] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone if block ^ ^-0.6 ^1 air run playanimation @s animation.humanoid.bow_and_arrow f 0.3",
+                "0.3": "/execute as @s[rx=45,rxm=-45,tag=place] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone if block ^ ^-0.6 ^1 air run setblock ^ ^-0.6 ^1 cobblestone keep",
+                "0.35": "/execute as @s[rx=45,rxm=-45,tag=place] at @s positioned ~ ~ ~ if block ~ ~-1 ~ cobblestone if block ^ ^-0.6 ^1 air run playsound dig.stone @a ~ ~ ~"
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}  

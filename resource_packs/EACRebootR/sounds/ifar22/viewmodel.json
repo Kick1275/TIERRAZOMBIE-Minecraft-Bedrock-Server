@@ -1,0 +1,62 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.viewmodel": {
+      "initial_state": "ground",
+      "states": {
+        "ground": {
+          "blend_transition": 0.5,
+          "animations": [
+            {
+              "vm_jatuh": "v.holding_all_guns"
+            }
+          ],
+          "transitions": [
+            {
+              "fall": "q.is_jumping"
+            }
+          ]
+        },
+        "fall": {
+          "blend_transition": 0.2,
+          "animations": [
+            {
+              "vm_mabur": "v.holding_all_guns"
+            }
+          ],
+          "transitions": [
+            {
+              "ground": "q.is_on_ground"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.weapon_walk": {
+      "initial_state": "pre",
+      "states": {
+        "pre": {
+          "blend_transition": 0.2,
+          "transitions": [
+            {
+              "post": "q.is_on_ground && q.is_moving && !q.is_sprinting && !q.is_sneaking"
+            }
+          ]
+        },
+        "post": {
+          "blend_transition": 0.2,
+          "animations": [
+            {
+              "universal_fp_walk": "v.holding_all_guns"
+            }
+          ],
+          "transitions": [
+            {
+              "pre": "!q.is_on_ground || !q.is_moving || q.is_sprinting || q.is_sneaking"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

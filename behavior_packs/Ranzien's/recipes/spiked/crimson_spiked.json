@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ranzie:crimson_spiked"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "BAB",
+      "BAB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:stick"
+      },
+      "B": {
+        "item": "minecraft:crimson_stem"
+      }
+    },
+    "result": {
+      "item": "ranzie:crimson_spiked_fence",
+      "count": 4
+    }
+  }
+}

@@ -1,4 +1,4 @@
-{
+﻿{
   "pools": [
     {
       "conditions": [
@@ -2781,7 +2781,11 @@
           "type": "item",
           "name": "minecraft:gunpowder",
           "weight": 35
-        }
+        },
+        { "type": "item", "name": "tz:bloqueador", "weight": 8 },
+        { "type": "item", "name": "tz:ganzua1", "weight": 10 },
+        { "type": "item", "name": "tz:ganzua2", "weight": 6 },
+        { "type": "item", "name": "tz:ganzua3", "weight": 3 }
       ]
     }
   ]

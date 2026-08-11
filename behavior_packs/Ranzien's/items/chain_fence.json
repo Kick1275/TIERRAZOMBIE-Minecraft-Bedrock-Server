@@ -1,0 +1,20 @@
+{
+	"format_version" : "1.20.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "ranzie:chain_fence"
+		},
+		"components" : {
+			"minecraft:creative_category" : {
+				"category": "construction",
+				"group": "itemGroup.name.fence"
+			},
+			"minecraft:icon" : {
+				"texture" : "chain_fence_item"
+			},
+			"minecraft:block_placer" : {
+				"block" : "ranzie:chain_fence_block"
+			}
+		}
+	}
+}

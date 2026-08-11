@@ -1,0 +1,50 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "af:oil_featurerule",
+			"places_feature": "af:oil"
+		},
+		"conditions": {
+			"placement_pass": "after_underground_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "warm"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 6,
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					-32,
+					64
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}

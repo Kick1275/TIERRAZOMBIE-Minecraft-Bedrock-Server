@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:mounted_gun_stand",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mounted_gun"
+			},
+			"geometry": {
+				"default": "geometry.mounted_gun"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity"
+			],
+			"spawn_egg": {
+				"texture": "af_mounted_gun_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"lookat": "animation.common.look_at_target",
+				"is_turret": "animation.mounted_gun.is_turret",
+				"is_body": "animation.mounted_gun.is_body"
+			},
+			"scripts": {
+				"animate": [
+					"lookat",
+					"is_body"
+				]
+			}
+		}
+	}
+}

@@ -1,5 +1,14 @@
 import { system, world } from "@minecraft/server";
 
+// world.beforeEvents.itemUse.subscribe((ev) => {
+//     const player = ev.source;
+//     if (ev.itemStack.typeId === "minecraft:diamond") {
+//      system.run(() => player.runCommand(`playsound random.break @s`));
+//      system.run(() => player.runCommand(`say Hello!`));
+
+//     }
+// });
+
 const TICKS_PER_SECOND = 20;
 
 const CLEAR_INTERVAL_SECONDS = 60 * 10;

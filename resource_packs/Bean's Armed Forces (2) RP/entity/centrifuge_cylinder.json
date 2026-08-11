@@ -1,0 +1,44 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "af:centrifuge_cylinder",
+			"materials": {
+				"default": "entity_alphatest",
+				"effect": "entity_alphablend"
+			},
+			"textures": {
+				"default": "textures/entity/centrifuge_cylinder",
+				"effect": "textures/entity/centrifuge_cylinder_effect"
+			},
+			"geometry": {
+				"default": "geometry.centrifuge_cylinder"
+			},
+			"render_controllers": [
+				"controller.render.af_block_entity",
+				"controller.render.vehicle_effect"
+			],
+			"spawn_egg": {
+				"texture": "af_centrifuge_cylinder_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"hide_redstone": "animation.centrifuge_cylinder.hide_redstone",
+				"hide_heat": "animation.centrifuge_cylinder.hide_heat",
+				"idle": "animation.centrifuge_cylinder.idle",
+				"has_results": "animation.centrifuge_cylinder.has_results"
+			},
+			"scripts": {
+				"animate": [
+					"idle",
+					{
+						"hide_heat": "!query.is_ignited"
+					},
+					{
+						"hide_redstone": "!query.is_powered"
+					}
+				]
+			}
+		}
+	}
+}

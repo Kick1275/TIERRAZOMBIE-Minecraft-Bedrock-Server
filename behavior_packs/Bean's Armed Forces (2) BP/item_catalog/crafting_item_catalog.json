@@ -1,0 +1,111 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:crafting_items_catalog": {
+		"categories": [
+			{
+				"category_name": "equipment",
+				"groups": [
+					{
+						"group_identifier": {
+							"icon": "af:m4carbine",
+							"name": "af:itemGroup.name.gun"
+						},
+						"items": [
+							"af:glock17",
+							"af:m4carbine",
+							"af:spas12",
+							"af:m24sniper",
+							"af:grenade_frag",
+							"af:grenade_stun",
+							"af:grenade_smoke"
+						]
+					},
+					{
+						"group_identifier": {
+							"icon": "af:m24sniper_bullet",
+							"name": "af:itemGroup.name.bullet"
+						},
+						"items": [
+							"af:glock17_bullet",
+							"af:m4carbine_bullet",
+							"af:spas12_bullet",
+							"af:m24sniper_bullet"
+						]
+					},
+					{
+						"group_identifier": {
+							"icon": "af:ap_shell",
+							"name": "af:itemGroup.name.vehicle_ammo"
+						},
+						"items": [
+							"af:ap_shell",
+							"af:he_shell",
+							"af:sp_shell",
+							"af:guided_missile",
+							"af:ap_belt",
+							"af:he_belt",
+							"af:missile_air",
+							"af:missile_ground",
+							"af:hydra_rocket",
+							"af:torpedo",
+							"af:generalpurpose_bomb",
+							"af:flare",
+							"af:bunkerbuster_bomb_item",
+							"af:thermobaric_bomb_item",
+							"af:b61_nuke_item"
+						]
+					}
+				]
+			},
+			{
+				"category_name": "items",
+				"groups": [
+					{
+						"group_identifier": {
+							"icon": "af:steel_ingot",
+							"name": "af:itemGroup.name.af_materials"
+						},
+						"items": [
+							"af:steel_ingot",
+							"af:titanium_ingot",
+							"af:aluminium_ingot",
+							"af:charged_tnt",
+							"af:kevlar",
+							"af:raw_uranium",
+							"af:uranium_nugget",
+							"af:uranium_ingot",
+							"af:uranium_rod"
+						]
+					},
+					{
+						"group_identifier": {
+							"icon": "af:cd_player",
+							"name": "af:itemGroup.name.cd"
+						},
+						"items": [
+							"af:cd_player",
+							"af:cd_ewtrtw",
+							"af:cd_c",
+							"af:cd_cd",
+							"af:cd_fmttm",
+							"af:cd_hc",
+							"af:cd_idwtstwof",
+							"af:cd_swm",
+							"af:cd_tmwstw"
+						]
+					},
+					{
+						"group_identifier": {
+							"icon": "af:m114_spawn_egg",
+							"name": "af:itemGroup.name.vehicle_ammo"
+						},
+						"items": [
+							"af:m114_spawn_egg",
+							"af:d20_spawn_egg"
+						]
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:grenade_stun",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 16,
+			"minecraft:icon": "af_grenade_stun",
+			"minecraft:throwable": {
+				"do_swing_animation": true,
+				"launch_power_scale": 2
+			},
+			"minecraft:projectile": {
+				"projectile_entity": "af:thrown_grenade_stun"
+			},
+			"minecraft:cooldown": {
+				"category": "grenade_stun",
+				"duration": 5
+			}
+		}
+	}
+}

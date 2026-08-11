@@ -1,0 +1,20 @@
+{
+	"format_version" : "1.20.10",
+	"minecraft:item" : {
+		"description" : {
+			"identifier" : "ranzie:cherry_spiked_fence",
+			"menu_category": {
+				"category": "construction",
+				"group": "itemGroup.name.fence"
+			}
+		},
+		"components" : {
+			"minecraft:icon" : {
+				"texture" : "cherry_spiked_fence_item"
+			},
+			"minecraft:block_placer" : {
+				"block" : "ranzie:cherry_upgraded_spiked_fence_block"
+			}
+		}
+	}
+}

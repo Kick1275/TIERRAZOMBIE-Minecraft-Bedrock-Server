@@ -1,0 +1,26 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ranzie:reinforced_pale_spiked_plate"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "minecraft:obsidian",
+        "data": 0
+      },
+      {
+        "item": "ranzie:pale_spiked_plate_block",
+        "data": 0
+      }
+    ],
+    "result": {
+      "item": "ranzie:pale_reinforced_spiked_plate_block",
+      "count": 1,
+      "data": 0
+    }
+  }
+}

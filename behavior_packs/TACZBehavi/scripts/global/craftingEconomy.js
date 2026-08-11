@@ -79,7 +79,7 @@ export function t(player, key) {
 const MATERIAL_NAMES = {
     iron_ingot: { es: 'Lingote de Hierro', en: 'Iron Ingot' },
     gold_ingot: { es: 'Lingote de Oro', en: 'Gold Ingot' },
-    copper_ingot: { es: 'Lingote de Cobre', en: 'Copper Ingot' },
+    coal: { es: 'Carbon', en: 'Coal' },
     diamond: { es: 'Diamante', en: 'Diamond' },
     lapis_lazuli: { es: 'Lapislázuli', en: 'Lapis Lazuli' },
     quartz: { es: 'Cuarzo', en: 'Quartz' },
@@ -104,6 +104,23 @@ const MATERIAL_NAMES = {
     'mcpe:crowbar': { es: 'Palanca', en: 'Crowbar' },
     'mcpe:can_opener': { es: 'Abrelatas', en: 'Can Opener' },
     'mcpe:lockpick': { es: 'Ganzúa', en: 'Lockpick' },
+    // Bean's Armed Forces materials
+    'af:steel_ingot':       { es: 'Lingote de Acero', en: 'Steel Ingot' },
+    'af:aluminium_ingot':   { es: 'Lingote de Aluminio', en: 'Aluminium Ingot' },
+    'af:titanium_ingot':    { es: 'Lingote de Titanio', en: 'Titanium Ingot' },
+    'af:oil_bucket':        { es: 'Petroleo Crudo', en: 'Crude Oil' },
+    'af:refined_oil_bucket':{ es: 'Combustible Refinado', en: 'Refined Fuel' },
+    'af:raw_uranium':       { es: 'Uranio Bruto', en: 'Raw Uranium' },
+    'af:uranium_nugget':    { es: 'Pepita de Uranio', en: 'Uranium Nugget' },
+    'af:uranium_ingot':     { es: 'Lingote de Uranio', en: 'Uranium Ingot' },
+    'af:uranium_rod':       { es: 'Barra de Uranio', en: 'Uranium Rod' },
+    'af:uranium_core':      { es: 'Nucleo de Uranio', en: 'Uranium Core' },
+    'af:uranium_implosive': { es: 'Implosivo de Uranio', en: 'Uranium Implosive' },
+    // vanilla extras
+    redstone:        { es: 'Redstone', en: 'Redstone' },
+    copper_ingot:    { es: 'Lingote de Cobre', en: 'Copper Ingot' },
+    glass:           { es: 'Vidrio', en: 'Glass' },
+    netherite_ingot: { es: 'Lingote de Netherita', en: 'Netherite Ingot' },
 };
 
 export function prettify(id, lang = 'es') {
@@ -117,8 +134,8 @@ export function buildRecipe(tier, vanilla, opts = {}) {
     return {
         tier,
         vanilla,
-        dz: opts.dz || DZ_BASE_BY_TIER[tier],
-        tools: opts.tools || TOOLSET_BY_TIER[tier],
+        dz: opts.dz !== undefined ? opts.dz : DZ_BASE_BY_TIER[tier],
+        tools: opts.tools !== undefined ? opts.tools : TOOLSET_BY_TIER[tier],
     };
 }
 
@@ -126,21 +143,27 @@ export function buildAmmoRecipe(tier, vanilla, opts = {}) {
     return {
         tier,
         vanilla,
-        dz: opts.dz || AMMO_DZ_BY_TIER[tier],
-        tools: opts.tools || AMMO_TOOLSET_BY_TIER[tier],
+        dz: opts.dz !== undefined ? opts.dz : AMMO_DZ_BY_TIER[tier],
+        tools: opts.tools !== undefined ? opts.tools : AMMO_TOOLSET_BY_TIER[tier],
     };
+}
+
+// Normaliza un item ID: si no tiene namespace, asume 'minecraft:'
+function normalizeId(id) {
+    return id.includes(':') ? id : `minecraft:${id}`;
 }
 
 // Cuenta cuantas unidades de un item tiene el jugador en todo su inventario
 // (no solo la mano), para poder mostrar el indicador de "tienes/te falta".
 export function countItemInInventory(player, itemId) {
+    const nid = normalizeId(itemId);
     let total = 0;
     try {
         const inv = player.getComponent('minecraft:inventory')?.container;
         if (!inv) return 0;
         for (let i = 0; i < inv.size; i++) {
             const item = inv.getItem(i);
-            if (item && item.typeId === itemId) total += item.amount;
+            if (item && item.typeId === nid) total += item.amount;
         }
     } catch {}
     return total;
@@ -160,11 +183,12 @@ function checkToolStatus(player, tools) {
     let container;
     try { container = player.getComponent('minecraft:inventory').container; } catch { return tools.map(t => ({ ...t, status: 'missing' })); }
     return tools.map(tool => {
+        const nid = normalizeId(tool.id);
         let foundAny = false;
         let bestRemaining = -1;
         for (let i = 0; i < container.size; i++) {
             const item = container.getItem(i);
-            if (!item || item.typeId !== tool.id) continue;
+            if (!item || item.typeId !== nid) continue;
             foundAny = true;
             const dur = item.getComponent('minecraft:durability');
             if (!dur) continue;
@@ -206,10 +230,11 @@ export function describeRecipe(recipe, player) {
 function findToolSlots(player, tools) {
     const container = player.getComponent('minecraft:inventory').container;
     const found = tools.map(tool => {
+        const nid = normalizeId(tool.id);
         let match = null;
         for (let i = 0; i < container.size; i++) {
             const item = container.getItem(i);
-            if (!item || item.typeId !== tool.id) continue;
+            if (!item || item.typeId !== nid) continue;
             const dur = item.getComponent('minecraft:durability');
             if (!dur) continue;
             const remaining = dur.maxDurability - dur.damage;
@@ -241,7 +266,10 @@ export function executeCraft(player, recipe, giveItemId, giveAmount, onResult) {
     }
 
     const allMats = { ...recipe.vanilla, ...recipe.dz };
-    const hasitem = Object.entries(allMats).map(([id, qty]) => `{item=${id},quantity=${qty}..}`).join(',');
+    // Normalizar IDs para comandos — vanilla necesita 'minecraft:' prefix
+    const hasitem = Object.entries(allMats)
+        .map(([id, qty]) => `{item=${normalizeId(id)},quantity=${qty}..}`)
+        .join(',');
     const selector = `@s[hasitem=[${hasitem}]]`;
     const giveCmd = `give ${selector} ${giveItemId}${giveAmount ? ' ' + giveAmount : ''}`;
 
@@ -252,7 +280,7 @@ export function executeCraft(player, recipe, giveItemId, giveAmount, onResult) {
             return;
         }
         for (const [id, qty] of Object.entries(allMats)) {
-            player.runCommandAsync(`clear ${selector} ${id} 0 ${qty}`);
+            player.runCommandAsync(`clear @s ${normalizeId(id)} 0 ${qty}`);
         }
         applyToolWear(container, found);
         onResult(true);

@@ -1,0 +1,58 @@
+//bridge-file-version: #2
+{
+	"format_version": "1.8.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "minecraft:zombie_pigman",
+			"population_control": "monster"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_underground": {},
+				"minecraft:spawns_on_block_prevented_filter": [
+					"minecraft:nether_wart_block",
+					"minecraft:shroomlight"
+				],
+				"minecraft:difficulty_filter": {
+					"min": "easy",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 200
+				},
+				"minecraft:herd": {
+					"min_size": 4,
+					"max_size": 8
+				},
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "spawn_zombified_piglin"
+				}
+			},
+			{
+				"minecraft:spawns_underground": {},
+				"minecraft:spawns_on_block_prevented_filter": [
+					"minecraft:nether_wart_block",
+					"minecraft:shroomlight"
+				],
+				"minecraft:weight": {
+					"default": 2
+				},
+				"minecraft:difficulty_filter": {
+					"min": "easy",
+					"max": "hard"
+				},
+				"minecraft:herd": {
+					"min_size": 2,
+					"max_size": 8
+				},
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "spawn_few_zombified_piglins"
+				}
+			}
+		]
+	}
+}

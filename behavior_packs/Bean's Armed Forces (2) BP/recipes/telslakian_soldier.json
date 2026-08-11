@@ -1,0 +1,37 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:telslakian_soldier"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"H": {
+				"item": "af:telslakian_helmet"
+			},
+			"C": {
+				"item": "af:telslakian_vest"
+			},
+			"L": {
+				"item": "af:telslakian_combat_suit"
+			},
+			"B": {
+				"item": "af:jackboots"
+			},
+			"G": {
+				"item": "af:m4carbine"
+			}
+		},
+		"pattern": [
+			" H ",
+			" CG",
+			" LB"
+		],
+		"result": {
+			"item": "af:telslakian_soldier_spawn_egg",
+			"count": 1
+		}
+	}
+}

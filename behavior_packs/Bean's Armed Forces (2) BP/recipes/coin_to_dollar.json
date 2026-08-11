@@ -1,0 +1,21 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "af:coin_to_dollar"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"ingredients": [
+			{
+				"item": "af:taxpayer_coin",
+				"count": 9
+			}
+		],
+		"result": {
+			"item": "af:taxpayer_dollar",
+			"count": 1
+		}
+	}
+}

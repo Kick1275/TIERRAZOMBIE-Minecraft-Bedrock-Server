@@ -1,0 +1,109 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ranzie:corpse",
+      "is_experimental": false,
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+
+    "component_groups": {
+      "despawn_group": {
+        "minecraft:instant_despawn": {}
+      },
+      "giant": {
+"minecraft:scale": {
+          "value": 1.5
+        }
+},
+"summoner": {
+"minecraft:scale": {
+          "value": 2.0
+        }
+},
+"tank": {
+"minecraft:scale": {
+          "value": 3.0
+        }
+}
+    },
+
+    "components": {
+      "minecraft:loot": {
+        "table": "loot_tables/entities/zombie.json"
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+
+      "minecraft:pushable": {
+        "is_pushable": true
+      },
+
+      "minecraft:collision_box": {
+        "height": 0.3,
+        "width": 0.3
+      },
+
+      "minecraft:persistent": {},
+
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+
+      "minecraft:timer": {
+        "time": 10,
+        "time_down_event": {
+          "event": "anim:despawn"
+        }
+      }
+    },
+
+    "events": {
+      "anim:despawn": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": [
+                "playanimation @s animation.zombie.v1.8.despawn f 100",
+                "kill @s"
+              ]
+            }
+          }
+        ]
+      },
+      "giant": {
+        "add": {
+          "component_groups": [
+            "giant"
+          ]
+        }
+      },
+      "summoner": {
+        "add": {
+          "component_groups": [
+            "summoner"
+          ]
+        }
+      },
+      "tank": {
+        "add": {
+          "component_groups": [
+            "tank"
+          ]
+        }
+      },
+
+      "minecraft:despawn": {
+        "die": {}
+      }
+    }
+  }
+}

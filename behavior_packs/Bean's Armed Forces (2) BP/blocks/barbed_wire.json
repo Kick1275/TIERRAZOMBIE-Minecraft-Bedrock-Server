@@ -1,0 +1,41 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:barbed_wire",
+			"menu_category": {
+				"category": "none"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"size": [
+					0,
+					0,
+					0
+				],
+				"origin": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 10
+			},
+			"minecraft:light_dampening": 0,
+			"minecraft:material_instances": {
+				"*": {
+					"ambient_occlusion": true,
+					"face_dimming": false,
+					"render_method": "blend",
+					"texture": "af_barbed_wire"
+				}
+			},
+			"minecraft:geometry": {
+				"identifier": "minecraft:geometry.cross"
+			},
+			"minecraft:loot": "loot_tables/barbed_wire_item.json"
+		}
+	}
+}

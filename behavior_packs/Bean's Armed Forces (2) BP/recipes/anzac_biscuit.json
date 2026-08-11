@@ -1,0 +1,26 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:anzac_biscuit"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"W": {
+				"item": "minecraft:wheat"
+			},
+			"X": {
+				"item": "minecraft:sugar"
+			}
+		},
+		"pattern": [
+			"WXW"
+		],
+		"result": {
+			"item": "af:anzac_biscuit",
+			"count": 4
+		}
+	}
+}

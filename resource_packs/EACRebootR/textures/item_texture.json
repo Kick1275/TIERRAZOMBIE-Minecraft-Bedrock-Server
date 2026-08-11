@@ -1,0 +1,135 @@
+{
+  "resource_pack_name": "M2543",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "config": {
+      "textures": "textures/ui/gear"
+    },
+    "creativeammo": {
+      "textures": "textures/items/ammo/creativeammo"
+    },
+    "9mm": {
+      "textures": "textures/items/ammo/mm9"
+    },
+    "fury277": {
+      "textures": "textures/items/ammo/fury277"
+    },
+    "mm556": {
+      "textures": "textures/items/ammo/mm556"
+    },
+    "mm5842": {
+      "textures": "textures/items/ammo/mm5842"
+    },
+    "mm5821": {
+      "textures": "textures/items/ammo/mm5821"
+    },
+    "mm545": {
+      "textures": "textures/items/ammo/mm545"
+    },
+    "eotech": {
+      "textures": "textures/ui/scope1"
+    },
+    "compm4": {
+      "textures": "textures/ui/scope2"
+    },
+    "1p87": {
+      "textures": "textures/ui/scope3"
+    },
+    "m157": {
+      "textures": "textures/ui/scope6"
+    },
+    "acog": {
+      "textures": "textures/ui/scope10"
+    },
+    "afg": {
+      "textures": "textures/ui/grip1"
+    },
+    "kacgrip": {
+      "textures": "textures/ui/grip2"
+    },
+    "gripod": {
+      "textures": "textures/ui/grip3"
+    },
+    "anpeq": {
+      "textures": "textures/ui/laser1"
+    },
+    "stdsup": {
+      "textures": "textures/ui/muzzle1"
+    },
+    "ngswsup": {
+      "textures": "textures/ui/muzzle2"
+    },
+    "heavysup": {
+      "textures": "textures/ui/muzzle3"
+    },
+    "arka": {
+      "textures": "textures/items/arka"
+    },
+    "type88": {
+      "textures": "textures/items/type88"
+    },
+    "type882": {
+      "textures": "textures/items/type882"
+    },
+    "type89": {
+      "textures": "textures/items/type89"
+    },
+    "pm9": {
+      "textures": "textures/items/pm9"
+    },
+    "k2": {
+      "textures": "textures/items/k2"
+    },
+    "k7": {
+      "textures": "textures/items/k7"
+    },
+    "qbz191": {
+      "textures": "textures/items/qbz191"
+    },
+    "hk416": {
+      "textures": "textures/items/hk416"
+    },
+    "m16a4": {
+      "textures": "textures/items/m16a4"
+    },
+    "qbu191": {
+      "textures": "textures/items/qbz191"
+    },
+    "qcq171": {
+      "textures": "textures/items/qcq171"
+    },
+    "type95": {
+      "textures": "textures/items/type95"
+    },
+    "m7": {
+      "textures": "textures/items/m7"
+    },
+    "m8": {
+      "textures": "textures/items/m8"
+    },
+    "qjb201": {
+      "textures": "textures/items/qjb201"
+    },
+    "qjb95": {
+      "textures": "textures/items/qjb95"
+    },
+    "m250": {
+      "textures": "textures/items/m250"
+    },
+    "t91": {
+      "textures": "textures/items/t91"
+    },
+    "qsz92": {
+      "textures": "textures/items/qsz92"
+    },
+    "t112": {
+      "textures": "textures/items/t112"
+    },
+    "ak12": {
+      "textures": "textures/items/ak12"
+    },
+    "m99": {
+      "textures": "textures/items/m99"
+    }
+  }
+}

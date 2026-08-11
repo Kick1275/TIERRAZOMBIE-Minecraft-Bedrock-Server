@@ -1,0 +1,94 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mig21.scale": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": 4.4
+				}
+			}
+		},
+		"animation.mig21.fly": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								-2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								0,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"frontgear": {
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				},
+				"gear0": {
+					"rotation": [
+						0,
+						0,
+						-90
+					],
+					"scale": [
+						0.6,
+						1,
+						1
+					]
+				},
+				"gear1": {
+					"rotation": [
+						0,
+						0,
+						90
+					],
+					"scale": [
+						0.6,
+						1,
+						1
+					]
+				}
+			}
+		}
+	}
+}

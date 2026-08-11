@@ -1,0 +1,43 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "af:libernian_combat_suit",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.leggings"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 528,
+				"damage_chance": {
+					"min": 60,
+					"max": 100
+				}
+			},
+			"minecraft:icon": "af_libernian_combat_suit",
+			"minecraft:wearable": {
+				"slot": "slot.armor.legs",
+				"protection": 6
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"minecraft:leather"
+						],
+						"repair_amount": "query.max_durability*0.25"
+					},
+					{
+						"items": [
+							"af:libernian_combat_suit"
+						],
+						"repair_amount": "context.other->query.remaining_durability+0.12*context.other->query.max_durability"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.btr80.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 1.55
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:armoured_train_locomotive",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"train",
+					"minecart",
+					"inanimate"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2.5
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.1,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self",
+					"filters": {
+						"test": "on_ground",
+						"subject": "self",
+						"operator": "=="
+					}
+				}
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:inventory": {
+				"container_type": "minecart_chest",
+				"inventory_size": 26,
+				"can_be_siphoned_from": true
+			},
+			"minecraft:rideable": {
+				"seats": {
+					"position": [
+						0,
+						0.7,
+						0
+					]
+				},
+				"family_types": [
+					"player"
+				],
+				"seat_count": 1
+			},
+			"minecraft:body_rotation_axis_aligned": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"function train"
+					]
+				}
+			}
+		}
+	}
+}

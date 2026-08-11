@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:flag_pole"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"J": {
+				"item": "minecraft:wool"
+			},
+			"A": {
+				"item": "af:aluminium_ingot"
+			}
+		},
+		"pattern": [
+			" AJ",
+			" A ",
+			" A "
+		],
+		"result": {
+			"item": "af:flag_pole_spawn_egg",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,13 @@
+{
+    "animations": {
+        "animation.ride": {
+            "animation_length": 0.2,
+            "loop": true,
+            "timeline": {
+                "0.2": "/ride @e[type=creeper,r=3] start_riding @s teleport_rider"
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}
+

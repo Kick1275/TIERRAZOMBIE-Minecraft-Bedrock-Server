@@ -1,0 +1,652 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:pask_m1a1",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"not_moving": {
+				"minecraft:body_rotation_blocked": {}
+			},
+			"attack_all": {
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_see": true,
+					"reselect_targets": true,
+					"within_radius": 32,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "monster"
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "player"
+											},
+											{
+												"any_of": [
+													{
+														"test": "has_tag",
+														"subject": "other",
+														"value": "telslakia"
+													},
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "telslakia"
+													},
+													{
+														"test": "has_tag",
+														"subject": "other",
+														"value": "libernia"
+													},
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "libernia"
+													}
+												]
+											}
+										]
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "vehicle"
+											},
+											{
+												"any_of": [
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "telslakia"
+													},
+													{
+														"test": "is_family",
+														"subject": "other",
+														"value": "libernia"
+													}
+												]
+											},
+											{
+												"test": "rider_count",
+												"subject": "other",
+												"value": 1,
+												"operator": ">="
+											}
+										]
+									}
+								]
+							},
+							"max_dist": 32,
+							"reevaluate_description": true
+						}
+					]
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 4,
+					"attack_radius": 32,
+					"attack_interval": 1,
+					"attack_radius_min": 16
+				},
+				"minecraft:is_ignited": {},
+				"minecraft:behavior.random_stroll": {
+					"priority": 8,
+					"speed_multiplier": 1
+				},
+				"minecraft:home": {
+					"restriction_radius": 32
+				},
+				"minecraft:behavior.move_towards_home_restriction": {
+					"priority": 5,
+					"speed_multiplier": 1.25
+				}
+			},
+			"attack_none": {},
+			"angry": {
+				"minecraft:angry": {
+					"duration": 25,
+					"broadcast_anger": true,
+					"broadcast_range": 8,
+					"calm_event": {
+						"event": "minecraft:on_calm",
+						"target": "self"
+					},
+					"broadcast_targets": [
+						"pask"
+					],
+					"angry_sound": "mad"
+				}
+			},
+			"calm": {
+				"minecraft:on_target_acquired": {
+					"event": "minecraft:become_angry",
+					"target": "self"
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"composite",
+					"m1a1",
+					"pask"
+				]
+			},
+			"minecraft:health": {
+				"value": 500
+			},
+			"minecraft:collision_box": {
+				"width": 3.66,
+				"height": 2.44
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:movement": {
+				"value": 0.2
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "libernia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "libernia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "is_family",
+											"subject": "self",
+											"value": "telslakia",
+											"operator": "=="
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "telslakia",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					},
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_component",
+											"subject": "other",
+											"value": "minecraft:projectile",
+											"operator": "=="
+										},
+										{
+											"test": "has_component",
+											"subject": "other",
+											"value": "minecraft:ambient_sound_interval",
+											"operator": "=="
+										}
+									]
+								}
+							]
+						}
+					}
+				]
+			},
+			"minecraft:variable_max_auto_step": {
+				"base_value": 1.5,
+				"controlled_value": 1.5
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 50,
+							"subject": "self",
+							"operator": "<="
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": true
+						},
+						"event": "af:is_moving",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": false
+						},
+						"event": "af:not_moving",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.1,
+				"cause": "fly_into_wall",
+				"damage_per_tick": 20,
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						{
+							"test": "is_riding",
+							"subject": "other",
+							"value": true,
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "vehicle",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "inanimate",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_moving",
+							"subject": "self",
+							"value": true,
+							"operator": "=="
+						}
+					]
+				},
+				"play_attack_sound": true,
+				"damage_cooldown": 1
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"bamboo",
+					"bamboo_sapling",
+					"beetroot",
+					"brown_mushroom",
+					"carrots",
+					"carved_pumpkin",
+					"chorus_flower",
+					"chorus_plant",
+					"deadbush",
+					"double_plant",
+					"leaves",
+					"leaves2",
+					"lit_pumpkin",
+					"melon_block",
+					"melon_stem",
+					"potatoes",
+					"pumpkin",
+					"pumpkin_stem",
+					"red_flower",
+					"red_mushroom",
+					"crimson_fungus",
+					"warped_fungus",
+					"reeds",
+					"sapling",
+					"glass",
+					"sweet_berry_bush",
+					"tallgrass",
+					"turtle_egg",
+					"vine",
+					"waterlily",
+					"wheat",
+					"dandelion",
+					"azalea",
+					"flowering_azalea",
+					"azalea_leaves",
+					"azalea_leaves_flowered",
+					"cave_vines",
+					"cave_vines_body_with_berries",
+					"cave_vines_head_with_berries",
+					"small_dripleaf_block",
+					"big_dripleaf",
+					"spore_blossom",
+					"hanging_roots",
+					"mangrove_leaves",
+					"minecraft:acacia_log",
+					"minecraft:birch_log",
+					"minecraft:cherry_log",
+					"minecraft:dark_oak_log",
+					"minecraft:jungle_log",
+					"minecraft:mangrove_log",
+					"minecraft:oak_log",
+					"minecraft:spruce_log"
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:wrench"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"value": "minecraft:is_ignited"
+									}
+								]
+							},
+							"event": "af:attack_none",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:wrench"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"value": "minecraft:is_ignited",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:attack_all",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					}
+				]
+			},
+			"minecraft:behavior.tempt": {
+				"priority": 7,
+				"can_tempt_vertically": true,
+				"within_radius": 32,
+				"items": [
+					"minecraft:dragon_breath"
+				]
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": false,
+				"avoid_water": true
+			},
+			"minecraft:leashable": {
+				"soft_distance": 6,
+				"hard_distance": 8,
+				"max_distance": 32
+			},
+			"minecraft:on_hurt": {
+				"filters": {
+					"subject": "other",
+					"test": "is_family",
+					"value": "pask",
+					"operator": "!="
+				},
+				"event": "minecraft:become_angry",
+				"target": "self"
+			},
+			"minecraft:jump.static": {},
+			"minecraft:movement.basic": {
+				"max_turn": 5
+			},
+			"minecraft:rideable": {
+				"family_types": [
+					"pask_m1a1_turret"
+				]
+			},
+			"minecraft:addrider": {
+				"entity_type": "af:pask_m1a1_turret",
+				"spawn_event": "minecraft:entity_spawned"
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"attack_none",
+						"calm"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar no information on this vehicle."
+					]
+				}
+			},
+			"af:is_moving": {
+				"queue_command": {
+					"command": [
+						"camerashake add @a[r=16] 0.1 0.1 positional"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"not_moving"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:explosionball_main",
+						"camera @a[r=5] clear",
+						"kill @e[family=turret,r=1,c=1]",
+						"summon af:m1a1_corpse ~ ~ ~ ~ ~"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ^ ^1 ^-2"
+					]
+				}
+			},
+			"af:not_moving": {
+				"add": {
+					"component_groups": [
+						"not_moving"
+					]
+				}
+			},
+			"af:attack_none": {
+				"add": {
+					"component_groups": [
+						"attack_none"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"attack_all"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar order: Standby",
+						"event entity @e[c=1,r=8,type=af:pask_m1a1_turret] af:attack_none"
+					]
+				}
+			},
+			"af:attack_all": {
+				"add": {
+					"component_groups": [
+						"attack_all"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"attack_none"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar order: Attack either Factions",
+						"event entity @e[c=1,r=8,type=af:pask_m1a1_turret] af:attack_all"
+					]
+				}
+			},
+			"minecraft:become_angry": {
+				"add": {
+					"component_groups": [
+						"angry"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"calm"
+					]
+				}
+			},
+			"minecraft:on_calm": {
+				"add": {
+					"component_groups": [
+						"calm"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"angry"
+					]
+				}
+			}
+		}
+	}
+}

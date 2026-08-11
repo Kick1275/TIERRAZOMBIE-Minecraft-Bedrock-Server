@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:asphalt_yellow"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"A": {
+				"item": "af:asphalt_black"
+			},
+			"D": {
+				"item": "minecraft:yellow_dye"
+			}
+		},
+		"pattern": [
+			"AAA",
+			"ADA",
+			"AAA"
+		],
+		"result": {
+			"item": "af:asphalt_yellow",
+			"count": 8
+		}
+	}
+}

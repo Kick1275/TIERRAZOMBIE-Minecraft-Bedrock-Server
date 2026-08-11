@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.16ddh.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 8
+				}
+			}
+		},
+		"animation.16ddh.idle": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"radar": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							-360,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

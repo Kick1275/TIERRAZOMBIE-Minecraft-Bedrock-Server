@@ -1,0 +1,141 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.c_ram.spin": {
+			"loop": true,
+			"animation_length": 0.25,
+			"bones": {
+				"turret": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							0,
+							1,
+							0
+						],
+						"0.125": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							0,
+							1,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"barrel": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							0.5,
+							0,
+							0
+						],
+						"0.125": [
+							0,
+							0,
+							0
+						],
+						"0.1667": [
+							-0.5,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"gun": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							360
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "spin"
+				},
+				"0.0417": {
+					"effect": "spin"
+				},
+				"0.0833": {
+					"effect": "spin"
+				},
+				"0.125": {
+					"effect": "spin"
+				},
+				"0.1667": {
+					"effect": "spin"
+				},
+				"0.2083": {
+					"effect": "spin"
+				},
+				"0.25": {
+					"effect": "spin"
+				}
+			}
+		},
+		"animation.c_ram.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 1.7
+				}
+			}
+		},
+		"animation.c_ram.look_at_target": {
+			"loop": true,
+			"bones": {
+				"barrel": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						"query.target_x_rotation",
+						"query.target_y_rotation",
+						0
+					],
+					"scale": 1.7
+				},
+				"turret": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						0,
+						"query.target_y_rotation-this",
+						0
+					],
+					"scale": 1.7
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:libernian_uniform"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"L": {
+				"item": "minecraft:leather"
+			},
+			"I": {
+				"item": "af:libernia_id"
+			}
+		},
+		"pattern": [
+			"LIL",
+			" L "
+		],
+		"result": {
+			"item": "af:libernian_uniform",
+			"count": 1
+		}
+	}
+}

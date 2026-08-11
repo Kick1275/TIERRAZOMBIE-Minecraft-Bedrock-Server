@@ -46,6 +46,54 @@ const COLISEUM = {
 
 const KIT_GOLDEN_APPLES = { id: "minecraft:golden_apple", count: 64 };
 const PROP_COLISEUM_KIT = "col:kit";
+// Lista completa de scoreboards de magazine de TACZBE (uno por arma).
+// Cada scoreboard trackea las balas en el cargador del arma correspondiente.
+const TACZBE_AMMO_SCOREBOARDS = [
+    "aa12","akm","awp","b93","car15","cp","db","deagle","deagleg",
+    "evolys","fal","g17","g18","g3","g36","hk416",
+    "m1014","m1014_emp","m107","m16","m16a1","m1911","m249","m4a1","m870",
+    "mk14","mp5","mp7","p320","p90","pkm",
+    "qbz191","qbz95","saiga12","scarh","scarl","sks",
+    "t50","tabuksr","type81","ump","uzi","vector","win308",
+];
+
+// Cachea las referencias de scoreboard objective de munición — getObjective()
+// recorre la tabla de objectives del mundo cada vez; con esto se llama una
+// sola vez por objective (mismo patrón que DailyMissions.js:getObjectiveCached).
+const _ammoObjectiveCache = new Map();
+function getAmmoObjective(name) {
+    let obj = _ammoObjectiveCache.get(name);
+    if (obj) {
+        try { obj.getScore; return obj; } catch { _ammoObjectiveCache.delete(name); }
+    }
+    try {
+        obj = world.scoreboard.getObjective(name);
+        if (obj) _ammoObjectiveCache.set(name, obj);
+        return obj;
+    } catch { return null; }
+}
+
+function saveAmmoScores(player) {
+    for (const key of TACZBE_AMMO_SCOREBOARDS) {
+        try {
+            const obj = getAmmoObjective(key);
+            if (obj) player.setDynamicProperty(`col:ammo_${key}`, obj.getScore(player) ?? 0);
+        } catch {}
+    }
+}
+
+function restoreAmmoScores(player) {
+    for (const key of TACZBE_AMMO_SCOREBOARDS) {
+        try {
+            const saved = player.getDynamicProperty(`col:ammo_${key}`);
+            if (saved !== undefined && saved !== null) {
+                const obj = getAmmoObjective(key);
+                if (obj) obj.setScore(player, saved);
+            }
+        } catch {}
+        try { player.setDynamicProperty(`col:ammo_${key}`, undefined); } catch {}
+    }
+}
 
 const WEAPON_POOL = [
     { cmds: ["give @s krep:m4a1 1",    "give @s krep:m43 256"]      },
@@ -185,10 +233,45 @@ function cancelDeploy(player) {
     restoreUIItem(player);
     player.removeTag(OPEN_WORLD_TAG);
     player.setDynamicProperty("gm:mapId", undefined);
-    player.runCommand("effect @s clear");
+    player.runCommand("effect @s resistance 1 0 true");
+    player.runCommand("effect @s slow_falling 1 0 true");
     doWarpTP(player, REFUGE, L(player) === "es" ? "Refugio" : "Refuge");
     player.sendMessage("§a✓ Despliegue cancelado.");
 }
+
+// ─── Anti-atrapamiento en bloques (compartido) ────────────────────────────────
+// Un solo interval para todos los jugadores en vez de uno nuevo por cada
+// enterMap() — con muchos jugadores desplegándose a la vez esto evita abrir
+// decenas de system.runInterval paralelos haciendo getBlock() cada 5 ticks.
+const antiBlockPlayers = new Map(); // playerId -> { player, elapsed }
+
+function startAntiBlockCheck(player) {
+    antiBlockPlayers.set(player.id, { player, elapsed: 0 });
+}
+
+system.runInterval(() => {
+    if (antiBlockPlayers.size === 0) return;
+    for (const [id, entry] of antiBlockPlayers) {
+        entry.elapsed += 5;
+        const player = entry.player;
+        if (entry.elapsed > ANTI_BLOCK_TICKS || !player.hasTag(OPEN_WORLD_TAG)) {
+            antiBlockPlayers.delete(id);
+            continue;
+        }
+        try {
+            const pos = player.location;
+            const dim = player.dimension;
+            const fx = Math.floor(pos.x), fy = Math.floor(pos.y), fz = Math.floor(pos.z);
+            const feet = dim.getBlock({ x: fx, y: fy,     z: fz });
+            const head = dim.getBlock({ x: fx, y: fy + 1, z: fz });
+            if ((feet && !feet.isAir) || (head && !head.isAir)) {
+                player.teleport({ x: pos.x, y: pos.y + 1, z: pos.z }, { dimension: dim });
+            }
+        } catch {
+            antiBlockPlayers.delete(id);
+        }
+    }
+}, 5);
 
 // ─── JUGAR (TP aleatorio) ─────────────────────────────────────────────────────
 
@@ -204,7 +287,8 @@ function enterMap(player, map, pos) {
     player.runCommand("stopsound @s");
     player.runCommand("playsound go.play @s");
     system.runTimeout(() => {
-        player.playSound("play.music", { volume: 1, pitch: 1 });
+        const vol = player.getDynamicProperty("music:volume") ?? 1.0;
+        player.playSound("play.music", { volume: vol, pitch: 1 });
     }, 20 * 2);
     system.runTimeout(() => {
         try {
@@ -218,32 +302,7 @@ function enterMap(player, map, pos) {
     }, 20);
 
     // Anti-atrapamiento en bloques: 30 segundos tras el TP
-    system.runTimeout(() => {
-        let elapsed = 0;
-        const blockCheckId = system.runInterval(() => {
-            elapsed += 5;
-            if (elapsed > ANTI_BLOCK_TICKS) {
-                system.clearRun(blockCheckId);
-                return;
-            }
-            try {
-                if (!player.hasTag(OPEN_WORLD_TAG)) {
-                    system.clearRun(blockCheckId);
-                    return;
-                }
-                const pos = player.location;
-                const dim = player.dimension;
-                const fx = Math.floor(pos.x), fy = Math.floor(pos.y), fz = Math.floor(pos.z);
-                const feet = dim.getBlock({ x: fx, y: fy,     z: fz });
-                const head = dim.getBlock({ x: fx, y: fy + 1, z: fz });
-                if ((feet && !feet.isAir) || (head && !head.isAir)) {
-                    player.teleport({ x: pos.x, y: pos.y + 1, z: pos.z }, { dimension: dim });
-                }
-            } catch {
-                system.clearRun(blockCheckId);
-            }
-        }, 5);
-    }, 15);
+    system.runTimeout(() => startAntiBlockCheck(player), 15);
 }
 function enterPetroEvent(player) {
     const petroState = getPetroEventState();
@@ -423,6 +482,7 @@ function enterColiseum(player) {
         return;
     }
 
+    saveAmmoScores(player); // guardar antes del teleport — estado 100% original
     const spawnPos = randomColiseumPos(20);
     player.sendMessage(L(player) === "es" ? "§7Viajando a §eColiseo§7..." : "§7Traveling to §eColiseum§7...");
     player.runCommand("camera @s fade time 0.1 0.5 0.5");
@@ -440,6 +500,7 @@ function enterColiseum(player) {
 
 function exitColiseum(player) {
     clearKitItems(player);
+    restoreAmmoScores(player);
     const inv = player.getComponent("minecraft:inventory")?.container;
     if (inv) {
         for (let i = 0; i < inv.size; i++) {
@@ -467,8 +528,6 @@ export async function showGuardiaForm(player) {
         .body("§7Selecciona una acción.")
         .button("§l§a▶ JUGAR\n§r§7§oDespliegue táctico aleatorio", "textures/ui/icon_map.png")
         .button("§l§c⚔ Coliseo\n§r§7PvP con kits aleatorios", "textures/ui/strength_effect.png")
-        .button("§l§e Puesto de Suministros\n§r§7Compra y vende objetos", "textures/ui/icon_deals.png")
-        .button("§l§b Refugio\n§r§7Tu base segura", "textures/ui/fire_resistance_effect.png");
 
     if (petroAvailable) {
         form.button("§l§6⚡ IR AL EVENTO\n§r§7La Petro está activa", "textures/ui/world_glyph_color_2x.png");
@@ -493,17 +552,6 @@ export async function showGuardiaForm(player) {
         enterColiseum(player);
         return;
     }
-    if (res.selection === idx++) {
-        allowLeaveContainZone(player.id);
-        doWarpTP(player, SUPPLY_POST, L(player) === "es" ? "Puesto de Suministros" : "Supply Post");
-        return;
-    }
-    if (res.selection === idx++) {
-        allowLeaveContainZone(player.id);
-        doWarpTP(player, REFUGE, L(player) === "es" ? "Refugio" : "Refuge");
-        return;
-    }
-
     if (petroAvailable && res.selection === idx++) {
         allowLeaveContainZone(player.id);
         enterPetroEvent(player);
@@ -740,33 +788,7 @@ async function safeShowGuardiaForm(player) {
     }
 }
 
-// Límite del coliseo: no salir del área
-// Optimización: sólo iterar cuando existe al menos un jugador en el Coliseo
-system.runInterval(() => {
-    const players = world.getAllPlayers();
-    // Quick exit if no players in coliseum — avoids scanning on empty servers
-    const anyInColiseum = players.some(p => p.hasTag && p.hasTag(COLISEUM_TAG));
-    if (!anyInColiseum) return;
-
-    for (const p of players) {
-        if (!p.hasTag || !p.hasTag(COLISEUM_TAG)) continue;
-        if (isInColiseum(p)) continue;
-
-        const pos = p.location;
-        const MARGIN = 2;
-        const safeX = Math.min(COLISEUM.max.x - MARGIN, Math.max(COLISEUM.min.x + MARGIN, pos.x));
-        const safeZ = Math.min(COLISEUM.max.z - MARGIN, Math.max(COLISEUM.min.z + MARGIN, pos.z));
-        const centerX = (COLISEUM.min.x + COLISEUM.max.x) / 2;
-        const centerZ = (COLISEUM.min.z + COLISEUM.max.z) / 2;
-        const yaw = Math.atan2(-(centerX - safeX), centerZ - safeZ) * (180 / Math.PI);
-
-        try {
-            p.teleport({ x: safeX, y: pos.y, z: safeZ }, { dimension: p.dimension, rotation: { x: 0, y: yaw } });
-            p.sendMessage("§c⚠ No puedes salir del Coliseo.");
-            p.runCommand("playsound note.bass @s ~ ~ ~ 1 0.5");
-        } catch {}
-    }
-}, 200);
+// Protección TP del Coliseo eliminada — los jugadores pueden salir libremente
 
 world.afterEvents.playerInteractWithEntity.subscribe(ev => {
     if (ev.target.typeId === "tz:guardia_1") safeShowGuardiaForm(ev.player);
@@ -839,6 +861,22 @@ world.afterEvents.playerSpawn.subscribe(ev => {
     const player = ev.player;
     system.runTimeout(() => {
         try {
+            // Reconexión mientras estaba dentro del Coliseo → sacarlo y restaurar ammo
+            if (ev.initialSpawn === true && player.hasTag(COLISEUM_TAG)) {
+                clearKitItems(player);
+                restoreAmmoScores(player);
+                player.removeTag(COLISEUM_TAG);
+                const inv = player.getComponent("minecraft:inventory")?.container;
+                if (inv) {
+                    for (let i = 0; i < inv.size; i++) {
+                        if (inv.getItem(i)?.typeId === "minecraft:paper") inv.setItem(i, undefined);
+                    }
+                }
+                player.teleport(SUPPLY_POST, { dimension: world.getDimension("minecraft:overworld") });
+                player.sendMessage("§e[TZ] Fuiste removido del Coliseo al reconectarte.");
+                return;
+            }
+
             if (ev.initialSpawn === false && player.hasTag(COLISEUM_TAG)) {
                 player.teleport(randomColiseumPos(20), { dimension: world.getDimension("minecraft:overworld") });
                 player.runCommand("effect @s resistance 10 255 true");

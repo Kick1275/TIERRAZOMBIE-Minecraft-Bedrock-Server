@@ -1,0 +1,14 @@
+{
+    "animations": {
+        "animation.climb": {
+            "animation_length": 0.3,
+            "loop": true,
+            "timeline": {
+                "0.0": "/playanimation @s animation.zombie.v1.8.attack_time f 0.5",
+                "0.01": "/effect @s levitation 1 1 true"
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}
+

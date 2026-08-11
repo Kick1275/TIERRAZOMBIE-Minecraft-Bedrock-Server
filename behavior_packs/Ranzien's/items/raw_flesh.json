@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ranzie:raw_flesh",
+      "menu_category": {
+        "category": "items",
+        "group": "itemGroup.name.food"
+      }
+    },
+    "components": {
+      "minecraft:food": {
+        "nutrition": 3
+      },
+      "minecraft:display_name": {
+        "value": "item.raw_flesh.name"
+      },
+      "minecraft:use_modifiers": {
+        "use_duration": 1.6,
+        "movement_modifier": 0.4
+      },
+      "minecraft:icon": "raw_flesh",
+      "minecraft:use_animation": "eat"
+    }
+  }
+}

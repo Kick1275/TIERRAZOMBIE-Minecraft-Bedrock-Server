@@ -1,0 +1,130 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.f18.engine": {
+			"loop": true,
+			"animation_length": 0.0833,
+			"bones": {
+				"engine": {
+					"position": {
+						"0.0": [
+							2,
+							0,
+							0
+						],
+						"0.0417": {
+							"pre": [
+								2,
+								0,
+								0
+							],
+							"post": [
+								-2,
+								0,
+								0
+							]
+						},
+						"0.0833": {
+							"pre": [
+								-2,
+								0,
+								0
+							],
+							"post": [
+								2,
+								0,
+								0
+							]
+						}
+					}
+				}
+			}
+		},
+		"animation.f18.fly": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								-2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								0,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"frontgear": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						0,
+						1,
+						0
+					]
+				},
+				"gear0": {
+					"rotation": [
+						0,
+						0,
+						149
+					],
+					"scale": [
+						0,
+						1,
+						1
+					]
+				},
+				"gear1": {
+					"rotation": [
+						0,
+						0,
+						-149
+					],
+					"scale": [
+						0,
+						1,
+						1
+					]
+				}
+			}
+		}
+	}
+}

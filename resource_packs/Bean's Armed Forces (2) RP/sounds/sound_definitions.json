@@ -1,0 +1,626 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"music.snare": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"max_distance": null,
+			"min_distance": null,
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/battotai",
+					"stream": true,
+					"volume": 0.2
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/over_there",
+					"stream": true,
+					"volume": 0.2
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/snare_drums",
+					"stream": true,
+					"volume": 0.2
+				},
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/af_music/teufelslied",
+					"stream": true,
+					"volume": 0.2
+				}
+			]
+		},
+		"artillery.move": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_artillery/artillery_move"
+			]
+		},
+		"artillery.hurt": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_artillery/artillery_hurt"
+			]
+		},
+		"artillery.fire": {
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_artillery/artillery_fire"
+			],
+			"min_distance": 0,
+			"max_distance": 80
+		},
+		"rwr.altitude": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/altitude",
+					"volume": 2
+				}
+			]
+		},
+		"rwr.bingo": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/bingo",
+					"volume": 2
+				}
+			]
+		},
+		"rwr.flare": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/flare",
+					"volume": 2
+				}
+			]
+		},
+		"rwr.high_beep": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/high_beep",
+					"volume": 2
+				}
+			]
+		},
+		"rwr.lock": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/lock",
+					"volume": 2
+				}
+			]
+		},
+		"rwr.loud_beep": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/loud_beep",
+					"volume": 2
+				}
+			]
+		},
+		"rwr.pull_up": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/pull_up",
+					"volume": 2
+				}
+			]
+		},
+		"jet.warning": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				{
+					"name": "sounds/af_rwr/warning",
+					"volume": 2
+				}
+			]
+		},
+		"jet.fly": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_jet/jet1",
+					"volume": 5
+				},
+				{
+					"name": "sounds/af_jet/jet2",
+					"volume": 5
+				},
+				{
+					"name": "sounds/af_jet/jet3",
+					"volume": 5
+				},
+				{
+					"name": "sounds/af_jet/jet4",
+					"volume": 5
+				}
+			]
+		},
+		"vehicle.chaingun_fire": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_chaingun/shoot1",
+					"volume": 10
+				},
+				{
+					"name": "sounds/af_chaingun/shoot2",
+					"volume": 10
+				},
+				{
+					"name": "sounds/af_chaingun/shoot3",
+					"volume": 10
+				},
+				{
+					"name": "sounds/af_chaingun/shoot4",
+					"volume": 10
+				}
+			]
+		},
+		"vehicle.gun_fire": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/bullet_shoot"
+			]
+		},
+		"c_ram.spin": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/c_ram_spin"
+			]
+		},
+		"libernia.speaker": {
+			"category": "ambient",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/libernia_speaker"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"telslakia.speaker": {
+			"category": "ambient",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/telslakia_speaker"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"bullet.hit": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_bullet/hit1",
+				"sounds/af_bullet/hit2"
+			]
+		},
+		"bullet.pass": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_bullet/pass1",
+				"sounds/af_bullet/pass2"
+			]
+		},
+		"af.attachables.gun.reload": {
+			"sounds": [
+				"sounds/af/attachables/gun/reload"
+			]
+		},
+		"af.attachables.gun.trigger": {
+			"sounds": [
+				"sounds/af/attachables/gun/trigger"
+			]
+		},
+		"af.entity.gun.bullet.firing": {
+			"max_distance": 16,
+			"sounds": [
+				"sounds/af/entity/gun_bullet/firing"
+			]
+		},
+		"nuke.shockwave": {
+			"__use_legacy_max_distance": false,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/nuke_shockwave",
+					"volume": 50
+				}
+			]
+		},
+		"tank.load": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/load1",
+				"sounds/af_tank/load2",
+				"sounds/af_tank/load3",
+				"sounds/af_tank/load4"
+			]
+		},
+		"tank.autoload": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/autoload"
+			]
+		},
+		"tank.hit": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/tank_hit"
+			]
+		},
+		"tank.drive": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_tank/tank_drive",
+					"volume": 5
+				}
+			]
+		},
+		"electric.drive": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_common/electric_drive",
+					"volume": 2.5
+				}
+			]
+		},
+		"vehicle.drive": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_common/vehicle_drive2",
+					"volume": 1
+				},
+				{
+					"name": "sounds/af_common/vehicle_drive",
+					"volume": 1
+				}
+			]
+		},
+		"vehicle.explode": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"volume": 30,
+					"name": "sounds/af_common/vehicle_explosion"
+				}
+			]
+		},
+		"vehicle.mg_fire": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_common/mg_fire1",
+					"volume": 6
+				},
+				{
+					"name": "sounds/af_common/mg_fire2",
+					"volume": 6
+				},
+				{
+					"name": "sounds/af_common/mg_fire3",
+					"volume": 6
+				}
+			]
+		},
+		"vehicle.load": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/vehicle_load"
+			]
+		},
+		"tank.move": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_tank/move1",
+					"volume": 1
+				},
+				{
+					"name": "sounds/af_tank/move2",
+					"volume": 1
+				},
+				{
+					"name": "sounds/af_tank/move3",
+					"volume": 1
+				}
+			]
+		},
+		"tank.fire": {
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_tank/tank_fire",
+					"volume": 8
+				}
+			]
+		},
+		"tank.beep": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/tank_beep"
+			]
+		},
+		"tank.fire_inside": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_tank/tank_fire2"
+			]
+		},
+		"vehicle.system_load": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_common/system_load"
+			]
+		},
+		"missile.fire": {
+			"category": "ambient",
+			"sounds": [
+				{
+					"volume": 20,
+					"name": "sounds/af_common/missile_fire_new"
+				}
+			]
+		},
+		"cd.ewtrtw": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/EWTRTW"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.c": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/C"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.cd": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/CD"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.fmttm": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/FMTTM"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.hc": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/HC"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.idwtstwof": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/IDWTSTWOF"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.swm": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/SWM"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"cd.tmwstw": {
+			"category": "record",
+			"sounds": [
+				{
+					"volume": 5,
+					"name": "sounds/af_cd/TMWSTW"
+				}
+			],
+			"__use_legacy_max_distance": true
+		},
+		"grenade.pop": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/grenade_pop"
+			]
+		},
+		"heli.blades": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"volume": 20,
+					"name": "sounds/af_heli/heli1"
+				},
+				{
+					"volume": 20,
+					"name": "sounds/af_heli/heli2"
+				},
+				{
+					"volume": 20,
+					"name": "sounds/af_heli/heli3"
+				}
+			]
+		},
+		"vehicle.brt": {
+			"__use_legacy_max_distance": true,
+			"category": "music",
+			"sounds": [
+				"sounds/af_brt/brt1",
+				"sounds/af_brt/brt2",
+				"sounds/af_brt/brt3"
+			]
+		},
+		"item.pistol.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/pistol_shoot",
+				"sounds/af_gun/pistol_shoot1",
+				"sounds/af_gun/pistol_shoot2"
+			]
+		},
+		"item.pistol.rack": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/pistol_rack"
+			]
+		},
+		"item.rifle.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/rifle_shoot"
+			]
+		},
+		"item.rifle.rack": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/rifle_rack"
+			]
+		},
+		"item.shotgun.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/shotgun_shoot"
+			]
+		},
+		"item.shotgun.rack": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/shotgun_rack",
+				"sounds/af_gun/shotgun_rack1"
+			]
+		},
+		"item.sniper.shoot": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/bullet_shoot"
+			]
+		},
+		"item.sniper.rack": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_gun/sniper_rack"
+			]
+		},
+		"metal.detect": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_common/metal_detect",
+					"volume": 2
+				}
+			]
+		},
+		"vehicle.idle": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_common/vehicle_idle",
+					"volume": 5
+				},
+				{
+					"name": "sounds/af_common/vehicle_idle",
+					"volume": 1
+				}
+			]
+		},
+		"radiation.long": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				{
+					"name": "sounds/af_common/radiation_long",
+					"volume": 2
+				}
+			]
+		},
+		"radiation.loop": {
+			"__use_legacy_max_distance": true,
+			"category": "ambient",
+			"sounds": [
+				"sounds/af_common/radiation1",
+				"sounds/af_common/radiation2",
+				"sounds/af_common/radiation3",
+				"sounds/af_common/radiation4"
+			]
+		}
+	}
+}

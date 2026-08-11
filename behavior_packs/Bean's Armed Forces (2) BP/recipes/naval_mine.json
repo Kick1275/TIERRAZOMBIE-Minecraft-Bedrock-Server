@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:naval_mine"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"N": {
+				"item": "af:charged_tnt"
+			},
+			"P": {
+				"item": "minecraft:lever"
+			},
+			"T": {
+				"item": "af:titanium_ingot"
+			}
+		},
+		"pattern": [
+			"PTP",
+			"TNT",
+			"PTP"
+		],
+		"result": {
+			"item": "af:naval_mine_spawn_egg",
+			"count": 1
+		}
+	}
+}

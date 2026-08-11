@@ -223,7 +223,7 @@ function tickExtraction() {
                 const dx = p.location.x - data.machineX;
                 const dz = p.location.z - data.machineZ;
                 const dy = p.location.y - data.machineY;
-                return Math.sqrt(dx * dx + dz * dz) <= radius && dy >= 0 && dy <= 3;
+                return dx * dx + dz * dz <= radius * radius && dy >= 0 && dy <= 3;
             });
 
             for (const ally of nearby) {

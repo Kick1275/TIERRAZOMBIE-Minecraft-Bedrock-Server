@@ -610,6 +610,10 @@ export function onPetroEnter(player) { try { progressMission(player, "petro_entr
 export function onPetroExtract(player) { try { progressMission(player, "petro_extractions", 1); } catch {} }
 export { progressMission };
 
+export function clearPlayerMissionsCache(player) {
+    missionCache.delete(player.id);
+}
+
 // Marca todas las misiones de una lista como completadas y otorga su recompensa —
 // solo para testing rápido del admin, no se usa en el flujo normal de un jugador.
 function _forceCompleteSlots(player, slots, pool) {

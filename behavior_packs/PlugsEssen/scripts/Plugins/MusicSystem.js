@@ -8,24 +8,33 @@ function pickSong() {
     return SONGS[Math.floor(Math.random() * SONGS.length)];
 }
 
-// Un solo interval global — recorre todos los jugadores
+// Lee el volumen guardado del jugador (por defecto 1.0). Un solo helper reutilizable.
+function getVolume(player) {
+    try {
+        const v = player.getDynamicProperty("music:volume");
+        return typeof v === "number" ? v : 1;
+    } catch { return 1; }
+}
+
+// Un solo interval global — recorre todos los jugadores.
+// Usa la API directa player.playSound() en vez de runCommand("playsound ...")
+// para evitar el parser de comandos por jugador (mismo sonido y volumen).
 system.runInterval(() => {
     for (const player of world.getAllPlayers()) {
         if (player.hasTag(TAG_DISABLED)) continue;
         try {
-            const vol = (() => { try { const v = player.getDynamicProperty("music:volume"); return typeof v === "number" ? v : 1; } catch { return 1; } })();
-            player.runCommand(`playsound ${pickSong()} @s ~ ~ ~ ${vol}`);
+            player.playSound(pickSong(), { volume: getVolume(player) });
         } catch {}
     }
 }, INTERVAL);
 
 export function startMusic(player) {
     try {
-        const vol = (() => { try { const v = player.getDynamicProperty("music:volume"); return typeof v === "number" ? v : 1; } catch { return 1; } })();
-         player.runCommand(`stopsound @s`)
+        const vol = getVolume(player);
+        player.runCommand(`stopsound @s`);
         system.runTimeout(() => {
-        player.runCommand(`playsound ${pickSong()} @s ~ ~ ~ ${vol}`);
-      }, 20 * 2);
+            try { player.playSound(pickSong(), { volume: vol }); } catch {}
+        }, 20 * 2);
     } catch {}
 }
 

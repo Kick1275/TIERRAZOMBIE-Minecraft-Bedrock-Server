@@ -148,7 +148,7 @@ system.runInterval(() => {
             `execute as @e[type=!player,family=monster,x=${MIN_X},y=${MIN_Y},z=${MIN_Z},dx=${MAX_X-MIN_X},dy=${MAX_Y-MIN_Y},dz=${MAX_Z-MIN_Z}] run tp @s 9999999 90 9999999`
         );
     } catch {}
-}, 100);
+}, 200);
 
 // allowLeaveContainZone se mantiene como no-op por compatibilidad con GameModeSystem
 export function allowLeaveContainZone(playerId) {}

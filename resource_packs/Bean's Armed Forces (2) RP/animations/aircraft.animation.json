@@ -1,0 +1,220 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.aircraft.particles": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "contrail",
+						"locator": "contrail0"
+					},
+					{
+						"effect": "engine",
+						"locator": "engine"
+					},
+					{
+						"effect": "contrail",
+						"locator": "contrail1"
+					}
+				]
+			}
+		},
+		"animation.aircraft.yaw": {
+			"loop": true,
+			"bones": {
+				"tailflap1": {
+					"rotation": [
+						"query.yaw_speed*-0.3",
+						0,
+						0
+					]
+				},
+				"tailflap0": {
+					"rotation": [
+						"query.yaw_speed*0.3",
+						0,
+						0
+					]
+				},
+				"backflap1": {
+					"rotation": [
+						"query.yaw_speed*0.3",
+						0,
+						0
+					]
+				},
+				"backflap0": {
+					"rotation": [
+						"query.yaw_speed*-0.3",
+						0,
+						0
+					]
+				},
+				"canard0": {
+					"rotation": [
+						"query.yaw_speed*0.3",
+						0,
+						0
+					]
+				},
+				"canard1": {
+					"rotation": [
+						"query.yaw_speed*-0.3",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.aircraft.pitch": {
+			"loop": true,
+			"bones": {
+				"tailflap1": {
+					"rotation": [
+						"query.target_x_rotation*-0.5",
+						0,
+						0
+					]
+				},
+				"tailflap0": {
+					"rotation": [
+						"query.target_x_rotation*-0.5",
+						0,
+						0
+					]
+				},
+				"backflap1": {
+					"rotation": [
+						"query.target_x_rotation*-0.5",
+						0,
+						0
+					]
+				},
+				"backflap0": {
+					"rotation": [
+						"query.target_x_rotation*-0.5",
+						0,
+						0
+					]
+				},
+				"canard0": {
+					"rotation": [
+						"query.target_x_rotation*-1",
+						0,
+						0
+					]
+				},
+				"canard1": {
+					"rotation": [
+						"query.target_x_rotation*-1",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.aircraft.fly": {
+			"loop": true,
+			"animation_length": 4,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								-2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.0": {
+							"post": [
+								0,
+								0,
+								2.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"4.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"frontgear": {
+					"rotation": [
+						90,
+						0,
+						0
+					]
+				},
+				"gear0": {
+					"rotation": [
+						0,
+						0,
+						99
+					],
+					"scale": [
+						0.8,
+						1,
+						1
+					]
+				},
+				"gear1": {
+					"rotation": [
+						0,
+						0,
+						-99
+					],
+					"scale": [
+						0.8,
+						1,
+						1
+					]
+				}
+			}
+		},
+		"animation.aircraft.rotations": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"rotation": [
+						"query.target_x_rotation",
+						0,
+						"query.yaw_speed*-0.5"
+					]
+				}
+			}
+		},
+		"animation.aircraft.scale": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": 4
+				}
+			}
+		}
+	}
+}

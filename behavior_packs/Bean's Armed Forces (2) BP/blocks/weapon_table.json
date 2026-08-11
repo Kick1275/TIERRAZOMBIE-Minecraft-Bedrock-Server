@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "af:weapon_table",
+			"menu_category": {
+				"group": "equipment",
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:crafting_table": {
+				"table_name": "Weapons Table",
+				"grid_size": 3,
+				"crafting_tags": [
+					"af_weapon"
+				]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:map_color": "#FFFFFF"
+		}
+	}
+}

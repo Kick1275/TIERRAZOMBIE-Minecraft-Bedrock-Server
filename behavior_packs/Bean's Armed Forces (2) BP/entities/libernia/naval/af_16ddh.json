@@ -1,0 +1,464 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:af_16ddh",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:vehicle.rotation-speed": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:vehicle.transmission": {
+					"type": "enum",
+					"default": "mono",
+					"values": [
+						"mono",
+						"dual"
+					]
+				},
+				"af:camera.distance": {
+					"type": "int",
+					"default": 50,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:vehicle.amphibious": {
+					"type": "int",
+					"default": 200,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:vehicle.acceleration": {
+					"type": "int",
+					"default": 20,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:radar-angle": {
+					"type": "int",
+					"default": 180,
+					"range": [
+						1,
+						500
+					]
+				},
+				"af:radar-range": {
+					"type": "int",
+					"default": 64,
+					"range": [
+						1,
+						256
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"16ddh",
+						"aircraft_carrier",
+						"boat",
+						"libernia"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"16ddh",
+						"aircraft_carrier",
+						"boat",
+						"telslakia"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"16ddh",
+					"aircraft_carrier",
+					"boat"
+				]
+			},
+			"minecraft:health": {
+				"value": 3000
+			},
+			"minecraft:collision_box": {
+				"width": 21,
+				"height": 8
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"interact_text": "action.interact.mount",
+				"family_types": [
+					"player"
+				],
+				"seats": {
+					"min_rider_count": 0,
+					"max_rider_count": 1,
+					"position": [
+						-3,
+						8,
+						0
+					]
+				},
+				"controlling_seat": 0,
+				"rider_can_interact": false
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": "no"
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						},
+						"deals_damage": "no"
+					}
+				]
+			},
+			"minecraft:variable_max_auto_step": {
+				"base_value": -1,
+				"controlled_value": -1,
+				"jump_prevented_value": -1
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 50,
+							"subject": "self",
+							"operator": "<="
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": true
+						},
+						"event": "af:is_moving",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						"event": "af:player_invis",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "<"
+						},
+						"event": "af:clear_camera",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.1,
+				"cause": "fly_into_wall",
+				"damage_per_tick": 10,
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						{
+							"test": "is_riding",
+							"subject": "other",
+							"value": true,
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "vehicle",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "inanimate",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_moving",
+							"subject": "self",
+							"value": true,
+							"operator": "=="
+						}
+					]
+				},
+				"play_attack_sound": true,
+				"damage_cooldown": 1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					}
+				]
+			},
+			"minecraft:behavior.rise_to_liquid_level": {
+				"priority": 0,
+				"liquid_y_offset": -1,
+				"rise_delta": 0.05,
+				"sink_delta": 0.02
+			},
+			"minecraft:body_rotation_always_follows_head": {},
+			"minecraft:underwater_movement": {
+				"value": 5
+			},
+			"minecraft:movement": {
+				"value": 0.05
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 0.1,
+				"time_down_event": {
+					"event": "af:update",
+					"target": "self"
+				}
+			},
+			"minecraft:navigation.swim": {
+				"can_sink": false
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar naval planes will mount the carrier when it moves"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"queue_command": {
+					"command": [
+						"event entity @e[family=turret,r=1,c=1] af:join_telslakia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"queue_command": {
+					"command": [
+						"event entity @e[family=turret,r=1,c=1] af:join_libernia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar naval planes will mount the carrier when it moves"
+					]
+				}
+			},
+			"af:is_moving": {
+				"queue_command": {
+					"command": [
+						"camerashake add @a[r=32] 0.01 0.1 positional",
+						"playsound electric.drive @a ~ ~ ~ 5 0.8"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function explosion_effects",
+						"camera @a[r=5] clear",
+						"summon af:af_16ddh_corpse ~ ~ ~ ~ ~"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ^-6 ^14 ^-9",
+						"particle af:vehicle_fire ^-6 ^14 ^0.5"
+					]
+				}
+			},
+			"af:player_invis": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider",
+						"playsound electric.drive @a ~ ~ ~ 0.5 0.8"
+					]
+				}
+			},
+			"af:clear_camera": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=2] clear"
+					]
+				}
+			},
+			"af:update": {
+				"queue_command": {
+					"command": [
+						"execute as @e[r=64,family=collider,family=16ddh] at @s run execute as @n[r=4,tag=carrier_capable] as @s if score @s PayloadAmmo matches 1.. run tag @s remove no_payload",
+						"execute as @e[r=64,family=collider,family=16ddh] at @s run execute as @n[r=4,tag=carrier_capable] as @s if score @s PayloadAmmo matches 1.. run title @p actionbar aircraft restocked",
+						"execute as @e[r=64,family=collider,family=16ddh] at @s run execute as @n[r=4,tag=carrier_capable] as @s if score @s PayloadAmmo matches 1.. run scoreboard players set @s PayloadAmmo 0",
+						"execute as @e[r=64,family=collider,family=16ddh] at @s run tp @n[r=16,tag=carrier_capable,tag=!has_rider] ^4 ^0.1 ^ ~ ~"
+					]
+				}
+			}
+		}
+	}
+}

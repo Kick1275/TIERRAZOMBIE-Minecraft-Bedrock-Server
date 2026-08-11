@@ -1,0 +1,59 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:vehicle_explosion",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 50
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:movement": {
+				"value": 0,
+				"max": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:explode": {
+				"fuse_length": 0,
+				"power": 5,
+				"causes_fire": true,
+				"breaks_blocks": true,
+				"fuse_lit": true,
+				"fire_affected_by_griefing": true,
+				"destroy_affected_by_griefing": true
+			},
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {}
+		}
+	}
+}

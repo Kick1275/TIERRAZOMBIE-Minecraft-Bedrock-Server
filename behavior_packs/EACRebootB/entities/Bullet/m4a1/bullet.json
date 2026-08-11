@@ -1,0 +1,20 @@
+{
+  "format_version": "1.13",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "eac:boss_damage_trigger",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "runtime_identifier": "minecraft:arrow"
+    },
+    "components": {
+      "minecraft:collision_box": { "width": 0.1, "height": 0.1 },
+      "minecraft:physics": {},
+      "minecraft:type_family": { "family": ["eac_boss_trigger"] },
+      "minecraft:despawn": {
+        "despawn_from_distance": { "min_distance": 0, "max_distance": 9999 }
+      }
+    }
+  }
+}

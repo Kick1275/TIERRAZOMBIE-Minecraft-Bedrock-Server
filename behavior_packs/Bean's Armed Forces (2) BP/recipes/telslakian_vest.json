@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "af:telslakian_vest"
+		},
+		"tags": [
+			"af_weapon"
+		],
+		"key": {
+			"K": {
+				"item": "af:kevlar"
+			},
+			"L": {
+				"item": "minecraft:leather"
+			},
+			"I": {
+				"item": "af:telslakia_id"
+			}
+		},
+		"pattern": [
+			"LIL",
+			"LKL",
+			"LKL"
+		],
+		"result": {
+			"item": "af:telslakian_vest",
+			"count": 1
+		}
+	}
+}

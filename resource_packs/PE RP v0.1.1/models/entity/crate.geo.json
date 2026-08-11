@@ -1,0 +1,48 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.plugs_crate",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 5, 0]
+				},
+				{
+					"name": "lid",
+					"parent": "root",
+					"pivot": [0, 9, 7],
+					"rotation": [180, 0, 0],
+					"cubes": [
+						{"origin": [-7, 4, 7], "size": [14, 5, 14], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "knob",
+					"parent": "lid",
+					"pivot": [-8, 9, 36],
+					"rotation": [180, 0, 0],
+					"cubes": [
+						{"origin": [-1, 7, 50], "size": [2, 4, 1], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "base",
+					"parent": "root",
+					"pivot": [-8, 0, 8],
+					"rotation": [180, 0, 0],
+					"cubes": [
+						{"origin": [-7, -10, 9], "size": [14, 10, 14], "uv": [0, 19]}
+					]
+				}
+			]
+		}
+	]
+}

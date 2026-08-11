@@ -1,0 +1,975 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:project1241",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"af:vehicle.rotation-speed": {
+					"type": "int",
+					"default": 20,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:vehicle.transmission": {
+					"type": "enum",
+					"default": "mono",
+					"values": [
+						"mono",
+						"dual"
+					]
+				},
+				"af:camera.distance": {
+					"type": "int",
+					"default": 15,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:vehicle.amphibious": {
+					"type": "int",
+					"default": 200,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:vehicle.acceleration": {
+					"type": "int",
+					"default": 10,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:has_turret": {
+					"type": "bool",
+					"default": true
+				},
+				"af:turret.speed": {
+					"type": "int",
+					"default": 80,
+					"range": [
+						1,
+						100
+					]
+				},
+				"af:turret.offset-z": {
+					"type": "int",
+					"default": 70,
+					"range": [
+						0,
+						500
+					]
+				},
+				"af:radar-angle": {
+					"type": "int",
+					"default": 180,
+					"range": [
+						1,
+						500
+					]
+				},
+				"af:radar-range": {
+					"type": "int",
+					"default": 64,
+					"range": [
+						1,
+						256
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"project1241",
+						"boat",
+						"libernia"
+					]
+				}
+			},
+			"telslakia": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:type_family": {
+					"family": [
+						"vehicle",
+						"project1241",
+						"boat",
+						"telslakia"
+					]
+				}
+			},
+			"af:cooldown_AP": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:AP_loaded",
+						"target": "self"
+					},
+					"time": [
+						5,
+						6
+					]
+				}
+			},
+			"af:cooldown_HE": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:HE_loaded",
+						"target": "self"
+					},
+					"time": [
+						5,
+						6
+					]
+				}
+			},
+			"af:cooldown_GM": {
+				"minecraft:timer": {
+					"time_down_event": {
+						"event": "af:GM_loaded",
+						"target": "self"
+					},
+					"time": [
+						10,
+						15
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"vehicle",
+					"project1241",
+					"boat"
+				]
+			},
+			"minecraft:health": {
+				"value": 2350
+			},
+			"minecraft:collision_box": {
+				"width": 8,
+				"height": 6
+			},
+			"minecraft:rideable": {
+				"seat_count": 1,
+				"interact_text": "action.interact.mount",
+				"family_types": [
+					"player"
+				],
+				"seats": {
+					"min_rider_count": 0,
+					"max_rider_count": 1,
+					"position": [
+						0,
+						2,
+						0
+					]
+				},
+				"controlling_seat": 0,
+				"rider_can_interact": true
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": "no"
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"test": "is_riding",
+								"value": true,
+								"subject": "other",
+								"operator": "=="
+							}
+						},
+						"deals_damage": "no"
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "af:steel_ingot",
+						"heal_amount": 30
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "actor_health",
+							"value": 25,
+							"subject": "self",
+							"operator": "<="
+						},
+						"event": "af:damaged",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "is_moving",
+							"subject": "self",
+							"value": true
+						},
+						"event": "af:is_moving",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						"event": "af:player_invis",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "<"
+						},
+						"event": "af:clear_camera",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:reflect_projectiles": {
+				"reflected_projectiles": [
+					"minecraft:arrow",
+					"minecraft:wind_charge_projectile"
+				],
+				"reflection_scale": 0.25,
+				"azimuth_angle": "180.0 + Math.random(-20.0, 20.0)"
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:area_attack": {
+				"damage_range": 0.1,
+				"cause": "fly_into_wall",
+				"damage_per_tick": 15,
+				"entity_filter": {
+					"all_of": [
+						{
+							"test": "rider_count",
+							"subject": "self",
+							"value": 1,
+							"operator": "=="
+						},
+						{
+							"test": "is_riding",
+							"subject": "other",
+							"value": true,
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "vehicle",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_family",
+							"value": "inanimate",
+							"subject": "other",
+							"operator": "!="
+						},
+						{
+							"test": "is_moving",
+							"subject": "self",
+							"value": true,
+							"operator": "=="
+						}
+					]
+				},
+				"play_attack_sound": true,
+				"damage_cooldown": 1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "af:scope",
+							"target": "self",
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:vehicle_periscope"
+									}
+								]
+							}
+						}
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"event": "af:GM_fired",
+							"filters": [
+								{
+									"test": "has_tag",
+									"value": "GM_loaded",
+									"subject": "self",
+									"operator": "=="
+								}
+							]
+						},
+						"interact_text": "action.interact.fire_gm"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:guided_missile"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_fired",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_loaded",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_GM",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_gm"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:manual"
+									}
+								]
+							},
+							"event": "af:manual",
+							"target": "self"
+						},
+						"play_sounds": "purr",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:telslakia_id"
+									}
+								]
+							},
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:libernia_id"
+									}
+								]
+							},
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"play_sounds": "eat",
+						"interact_text": "action.interact.use"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "GM_loaded",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "GM_fired",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "AC_loaded",
+											"subject": "self",
+											"operator": "=="
+										},
+										{
+											"test": "is_riding",
+											"value": true,
+											"subject": "other",
+											"operator": "=="
+										},
+										{
+											"test": "has_tag",
+											"value": "AP_loaded",
+											"subject": "self",
+											"operator": "=="
+										}
+									]
+								}
+							],
+							"event": "af:AC_fired"
+						},
+						"play_sounds": "shoot",
+						"cooldown": 0.3,
+						"interact_text": "action.interact.shoot_ac"
+					},
+					{
+						"on_interact": {
+							"target": "self",
+							"filters": [
+								{
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "GM_loaded",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "GM_fired",
+											"subject": "self",
+											"operator": "!="
+										},
+										{
+											"test": "has_tag",
+											"value": "AC_loaded",
+											"subject": "self",
+											"operator": "=="
+										},
+										{
+											"test": "is_riding",
+											"value": true,
+											"subject": "other",
+											"operator": "=="
+										},
+										{
+											"test": "has_tag",
+											"value": "HE_loaded",
+											"subject": "self",
+											"operator": "=="
+										}
+									]
+								}
+							],
+							"event": "af:AC_fired"
+						},
+						"play_sounds": "shoot",
+						"cooldown": 0.3,
+						"interact_text": "action.interact.shoot_ac"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:he_belt"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_fired",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_HE",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_ac"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:ap_belt"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_fired",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:load_AP",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.load_ac"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:missile_air"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_fired",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_loaded",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:AA_fired",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_gm",
+						"cooldown": 3
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "af:missile_ground"
+									},
+									{
+										"test": "has_tag",
+										"value": "loading",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_fired",
+										"subject": "self",
+										"operator": "!="
+									},
+									{
+										"test": "has_tag",
+										"value": "GM_loaded",
+										"subject": "self",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "af:AG_fired",
+							"target": "self"
+						},
+						"use_item": true,
+						"play_sounds": "milk",
+						"interact_text": "action.interact.fire_gm",
+						"cooldown": 3
+					}
+				]
+			},
+			"minecraft:behavior.rise_to_liquid_level": {
+				"priority": 0,
+				"liquid_y_offset": -1,
+				"rise_delta": 0.05,
+				"sink_delta": 0.02
+			},
+			"minecraft:body_rotation_always_follows_head": {},
+			"minecraft:underwater_movement": {
+				"value": 5
+			},
+			"minecraft:movement": {
+				"value": 0.05
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar uses: AP/HE belts, AA & AG Missiles, ATG Missiles.",
+						"scoreboard objectives add CannonAmmo dummy"
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"queue_command": {
+					"command": [
+						"event entity @n[family=type142a,r=8] af:join_telslakia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"queue_command": {
+					"command": [
+						"event entity @n[family=type142a,r=8] af:join_libernia"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar uses: AP/HE belts, AA & AG Missiles, ATG Missiles."
+					]
+				}
+			},
+			"af:is_moving": {
+				"queue_command": {
+					"command": [
+						"camerashake add @a[r=32] 0.01 0.1 positional",
+						"playsound vehicle.drive @a ~ ~ ~ 5 0.5"
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"function explosion_effects",
+						"camera @a[r=5] clear",
+						"summon af:project1241_corpse ~ ~ ~ ~ ~",
+						"kill @n[family=project1241,family=turret,r=16]"
+					]
+				}
+			},
+			"af:damaged": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ^ ^3 ^-1"
+					]
+				}
+			},
+			"af:player_invis": {
+				"queue_command": {
+					"command": [
+						"execute as @s at @s run function player_rider"
+					]
+				}
+			},
+			"af:clear_camera": {
+				"queue_command": {
+					"command": [
+						"camera @a[r=2] clear"
+					]
+				}
+			},
+			"af:load_AP": {
+				"queue_command": {
+					"command": [
+						"playsound tank.autoload @p",
+						"title @p actionbar AP Belt loading",
+						"tag @s add loading"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				}
+			},
+			"af:AP_loaded": {
+				"queue_command": {
+					"command": [
+						"playsound tank.beep @p",
+						"tag @s add AP_loaded",
+						"tag @s add AC_loaded",
+						"tag @s remove loading",
+						"scoreboard players set @s CannonAmmo 0",
+						"title @p[r=5] actionbar (16/16) AP Shells"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				}
+			},
+			"af:AC_fired": {
+				"queue_command": {
+					"command": [
+						"scoreboard players add @s CannonAmmo 1",
+						"execute as @s if score @s CannonAmmo matches 1 run title @p[r=5] actionbar (15/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 2 run title @p[r=5] actionbar (14/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 3 run title @p[r=5] actionbar (13/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 4 run title @p[r=5] actionbar (12/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 5 run title @p[r=5] actionbar (11/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 6 run title @p[r=5] actionbar (10/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 7 run title @p[r=5] actionbar (9/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 8 run title @p[r=5] actionbar (8/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 9 run title @p[r=5] actionbar (7/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 10 run title @p[r=5] actionbar (6/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 11 run title @p[r=5] actionbar (5/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 12 run title @p[r=5] actionbar (4/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 13 run title @p[r=5] actionbar (3/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 14 run title @p[r=5] actionbar (2/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 15 run title @p[r=5] actionbar (1/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 16.. run title @p[r=5] actionbar (0/16) Shells",
+						"execute as @s if score @s CannonAmmo matches 16.. run tag @s remove AC_loaded",
+						"execute as @s if score @s CannonAmmo matches 16.. run tag @s remove AP_loaded",
+						"execute as @s if score @s CannonAmmo matches 16.. run tag @s remove HE_loaded",
+						"execute as @s[tag=AP_loaded] at @s run event entity @n[type=af:project1241_turret] af:AP_fired",
+						"execute as @s[tag=HE_loaded] at @s run event entity @n[type=af:project1241_turret] af:HE_fired"
+					]
+				}
+			},
+			"af:load_HE": {
+				"queue_command": {
+					"command": [
+						"playsound tank.autoload @p",
+						"title @p actionbar HE Belt loading",
+						"tag @s add loading"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"af:cooldown_HE"
+					]
+				}
+			},
+			"af:HE_loaded": {
+				"queue_command": {
+					"command": [
+						"playsound tank.beep @p",
+						"tag @s add HE_loaded",
+						"tag @s add AC_loaded",
+						"tag @s remove loading",
+						"scoreboard players set @s CannonAmmo 0",
+						"title @p[r=5] actionbar (16/16) HE Shells"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_AP"
+					]
+				}
+			},
+			"af:scope": {
+				"queue_command": {
+					"command": [
+						"execute as @p at @s run tag @s[tag=scopeview] add scope_toggle",
+						"execute as @p at @s run tag @s[tag=scope_toggle] remove scopeview",
+						"execute as @p at @s run tag @s[tag=!scope_toggle] add scopeview",
+						"execute as @p at @s run tag @s remove scope_toggle"
+					]
+				}
+			},
+			"af:GM_detonated": {
+				"queue_command": {
+					"command": [
+						"tag @s remove GM_fired"
+					]
+				}
+			},
+			"af:GM_fired": {
+				"queue_command": {
+					"command": [
+						"tag @s remove loading",
+						"playsound tank.fire_inside @p[r=2]",
+						"playsound missile.fire @a ~ ~ ~ 100 1",
+						"tag @s remove GM_loaded",
+						"tag @s add GM_fired"
+					]
+				}
+			},
+			"af:load_GM": {
+				"add": {
+					"component_groups": [
+						"af:cooldown_GM"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"title @p actionbar Missile System loading",
+						"tag @s add loading",
+						"playsound vehicle.system_load @p[r=2]"
+					]
+				}
+			},
+			"af:GM_loaded": {
+				"queue_command": {
+					"command": [
+						"tag @s add GM_loaded",
+						"playsound tank.beep @p[r=2]",
+						"title @p[r=1] actionbar Missile ready",
+						"tag @s remove loading"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"af:cooldown_GM"
+					]
+				}
+			},
+			"af:AA_fired": {
+				"queue_command": {
+					"command": [
+						"summon af:missile_air ^-3 ^7 ^8 ~ -45",
+						"title @p actionbar 3s cooldown..."
+					]
+				}
+			},
+			"af:AG_fired": {
+				"queue_command": {
+					"command": [
+						"summon af:missile_ground ^3 ^7 ^8 ~ -45",
+						"title @p actionbar 3s cooldown..."
+					]
+				}
+			}
+		}
+	}
+}

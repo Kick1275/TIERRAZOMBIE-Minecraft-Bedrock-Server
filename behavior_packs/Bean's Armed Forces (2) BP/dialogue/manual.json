@@ -1,0 +1,131 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "manual_p1",
+				"npc_name": "Manual uses",
+				"text": "Holding this book, interact with vehicles to find out what Ammo type they use, or just any added BAF entities. (recommendation: read every page)",
+				"buttons": [
+					{
+						"name": "§vManual",
+						"commands": [
+							"/dialogue open @s @p manual_p1"
+						]
+					},
+					{
+						"name": "Items",
+						"commands": [
+							"/dialogue open @s @p manual_p2"
+						]
+					},
+					{
+						"name": "Vehicles",
+						"commands": [
+							"/dialogue open @s @p manual_p3"
+						]
+					},
+					{
+						"name": "Gameplay",
+						"commands": [
+							"/dialogue open @s @p manual_p4"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "manual_p2",
+				"npc_name": "Getting Items",
+				"text": "To craft Vehicle Ammo, uniforms, guns, and almost everything else in the Add-On, you'll need a Weapons Table. Put one Crafting Table and one Titanium in a crafting grid.",
+				"buttons": [
+					{
+						"name": "Manual",
+						"commands": [
+							"/dialogue open @s @p manual_p1"
+						]
+					},
+					{
+						"name": "§vItems",
+						"commands": [
+							"/dialogue open @s @p manual_p2"
+						]
+					},
+					{
+						"name": "Vehicles",
+						"commands": [
+							"/dialogue open @s @p manual_p3"
+						]
+					},
+					{
+						"name": "Gameplay",
+						"commands": [
+							"/dialogue open @s @p manual_p4"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "manual_p3",
+				"npc_name": "Getting Vehicles",
+				"text": "To get vehicles, craft an Arms-dealer in the Weapons Table and trade Taxpayer Dollars for vehicles. To get Taxpayer Dollars, mine Crude-Oil that will generate in chunks around the world, smelt it, and then trade in the Refined-Oil for Taxpayer Dollars.",
+				"buttons": [
+					{
+						"name": "Manual",
+						"commands": [
+							"/dialogue open @s @p manual_p1"
+						]
+					},
+					{
+						"name": "Items",
+						"commands": [
+							"/dialogue open @s @p manual_p2"
+						]
+					},
+					{
+						"name": "§vVehicles",
+						"commands": [
+							"/dialogue open @s @p manual_p3"
+						]
+					},
+					{
+						"name": "Gameplay",
+						"commands": [
+							"/dialogue open @s @p manual_p4"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "manual_p4",
+				"npc_name": "Gameplay Features",
+				"text": "Using Faction Passports on a vehicle converts it to that faction! Additionally, you can use Steel ingots to repair damaged vehicles.",
+				"buttons": [
+					{
+						"name": "Manual",
+						"commands": [
+							"/dialogue open @s @p manual_p1"
+						]
+					},
+					{
+						"name": "Items",
+						"commands": [
+							"/dialogue open @s @p manual_p2"
+						]
+					},
+					{
+						"name": "Vehicles",
+						"commands": [
+							"/dialogue open @s @p manual_p3"
+						]
+					},
+					{
+						"name": "§vGameplay",
+						"commands": [
+							"/dialogue open @s @p manual_p4"
+						]
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,94 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:generalpurpose_bomb",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					},
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"cause": "entity_explosion",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": true,
+						"on_damage": {
+							"event": "af:explode",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": [
+							{
+								"test": "on_ground",
+								"subject": "self",
+								"operator": "=="
+							}
+						],
+						"event": "af:explode",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:health": {
+				"value": 100
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:tick_world": {
+				"never_despawn": true
+			}
+		},
+		"events": {
+			"af:explode": {
+				"add": {
+					"component_groups": [
+						"explode"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"function explosion_effects"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"explode": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"power": 2,
+					"fuse_lit": true,
+					"causes_fire": false,
+					"breaks_blocks": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			}
+		}
+	}
+}

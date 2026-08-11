@@ -1,0 +1,12 @@
+{
+    "animations": {
+        "animation.sound": {
+            "animation_length": 0.0,
+            "loop": false,
+            "timeline": {
+            }
+        }
+    },
+    "format_version": "1.8.0"
+}
+

@@ -1,0 +1,369 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.flag_pole",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 10,
+				"visible_bounds_offset": [
+					0,
+					4,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1,
+								-0.1,
+								-1
+							],
+							"size": [
+								2,
+								128,
+								2
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										2,
+										2
+									],
+									"uv_size": [
+										2,
+										126
+									]
+								},
+								"east": {
+									"uv": [
+										2,
+										2
+									],
+									"uv_size": [
+										-2,
+										126
+									]
+								},
+								"south": {
+									"uv": [
+										6,
+										2
+									],
+									"uv_size": [
+										2,
+										126
+									]
+								},
+								"west": {
+									"uv": [
+										6,
+										2
+									],
+									"uv_size": [
+										-2,
+										126
+									]
+								},
+								"up": {
+									"uv": [
+										2,
+										0
+									],
+									"uv_size": [
+										2,
+										2
+									]
+								},
+								"down": {
+									"uv": [
+										4,
+										2
+									],
+									"uv_size": [
+										2,
+										-2
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "holder",
+					"parent": "body",
+					"pivot": [
+						0,
+						128,
+						0
+					]
+				},
+				{
+					"name": "flag_line",
+					"parent": "holder",
+					"pivot": [
+						2,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								0,
+								0
+							],
+							"size": [
+								1,
+								110,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										8,
+										0
+									],
+									"uv_size": [
+										1,
+										107
+									]
+								},
+								"east": {
+									"uv": [
+										8,
+										0
+									],
+									"uv_size": [
+										0,
+										107
+									]
+								},
+								"south": {
+									"uv": [
+										9,
+										0
+									],
+									"uv_size": [
+										1,
+										107
+									]
+								},
+								"west": {
+									"uv": [
+										9,
+										0
+									],
+									"uv_size": [
+										0,
+										107
+									]
+								},
+								"up": {
+									"uv": [
+										8,
+										0
+									],
+									"uv_size": [
+										1,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										9,
+										0
+									],
+									"uv_size": [
+										1,
+										0
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "flag_start",
+					"parent": "holder",
+					"pivot": [
+						1,
+						128,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								110,
+								0
+							],
+							"size": [
+								15,
+								18,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										10,
+										18
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"east": {
+									"uv": [
+										10,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"south": {
+									"uv": [
+										113,
+										110
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"west": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"up": {
+									"uv": [
+										10,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "flag_end",
+					"parent": "flag_start",
+					"pivot": [
+						16,
+						128,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								16,
+								110,
+								0
+							],
+							"size": [
+								15,
+								18,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"east": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"south": {
+									"uv": [
+										113,
+										110
+									],
+									"uv_size": [
+										15,
+										18
+									]
+								},
+								"west": {
+									"uv": [
+										40,
+										18
+									],
+									"uv_size": [
+										0,
+										18
+									]
+								},
+								"up": {
+									"uv": [
+										25,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								},
+								"down": {
+									"uv": [
+										40,
+										18
+									],
+									"uv_size": [
+										15,
+										0
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

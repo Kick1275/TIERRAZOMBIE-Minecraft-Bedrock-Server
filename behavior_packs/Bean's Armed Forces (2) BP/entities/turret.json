@@ -1,0 +1,412 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "af:turret",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"libernia": {
+				"minecraft:type_family": {
+					"family": [
+						"libernia",
+						"inanimate"
+					]
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "libernia"
+											}
+										]
+									}
+								]
+							},
+							"deals_damage": false
+						},
+						{
+							"cause": "fall",
+							"deals_damage": false
+						}
+					]
+				},
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 0,
+					"within_radius": 64,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "telslakia"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ghast"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "phantom"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "wither"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "dragon"
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "player"
+											},
+											{
+												"test": "has_tag",
+												"subject": "other",
+												"value": "libernia",
+												"operator": "!="
+											}
+										]
+									}
+								]
+							},
+							"must_see": true,
+							"max_dist": 64
+						}
+					],
+					"reselect_targets": true,
+					"must_see": true
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:manual",
+										"domain": "hand"
+									}
+								],
+								"event": "af:manual",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "purr"
+						}
+					]
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"telslakia": {
+				"minecraft:type_family": {
+					"family": [
+						"telslakia",
+						"inanimate"
+					]
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": [
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "telslakia"
+											}
+										]
+									}
+								]
+							},
+							"deals_damage": false
+						},
+						{
+							"cause": "fall",
+							"deals_damage": false
+						}
+					]
+				},
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": [
+									{
+										"test": "has_equipment",
+										"subject": "other",
+										"value": "af:manual",
+										"domain": "hand"
+									}
+								],
+								"event": "af:manual",
+								"target": "self"
+							},
+							"interact_text": "action.interact.use",
+							"play_sounds": "purr"
+						}
+					]
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 0,
+					"within_radius": 64,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "libernia"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "ghast"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "phantom"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "wither"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "dragon"
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "player"
+											},
+											{
+												"test": "has_tag",
+												"subject": "other",
+												"value": "telslakia",
+												"operator": "!="
+											}
+										]
+									}
+								]
+							},
+							"must_see": true,
+							"max_dist": 64
+						}
+					],
+					"reselect_targets": true,
+					"must_see": true
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"inanimate"
+				]
+			},
+			"minecraft:health": {
+				"value": 20
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 1.2
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:on_death": {
+				"event": "af:death",
+				"target": "self"
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:movement.generic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_path_from_air": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/turret.json"
+			},
+			"minecraft:behavior.ranged_attack": {
+				"priority": 2,
+				"attack_interval": 2,
+				"attack_radius": 64,
+				"burst_shots": 12,
+				"burst_interval": 0.1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:libernia_id",
+									"domain": "hand"
+								}
+							],
+							"event": "af:join_libernia",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "milk"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:telslakia_id",
+									"domain": "hand"
+								}
+							],
+							"event": "af:join_telslakia",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "milk"
+					},
+					{
+						"on_interact": {
+							"filters": [
+								{
+									"test": "has_equipment",
+									"subject": "other",
+									"value": "af:manual",
+									"domain": "hand"
+								}
+							],
+							"event": "af:manual",
+							"target": "self"
+						},
+						"interact_text": "action.interact.use",
+						"play_sounds": "purr"
+					}
+				]
+			},
+			"minecraft:shooter": {
+				"def": "af:bullet<af:turret>"
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "minecraft:iron_ingot",
+						"heal_amount": 15
+					}
+				]
+			},
+			"minecraft:behavior.random_look_around": {
+				"look_time": [
+					0,
+					2
+				],
+				"priority": 9,
+				"look_distance": 32
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar Will drop itself on death."
+					]
+				}
+			},
+			"af:death": {
+				"queue_command": {
+					"command": [
+						"particle af:vehicle_fire ~ ~ ~"
+					]
+				}
+			},
+			"af:manual": {
+				"queue_command": {
+					"command": [
+						"title @p actionbar will fire at enemy players, can be picked up on destruction, toggle with Wrench."
+					]
+				}
+			},
+			"af:join_telslakia": {
+				"add": {
+					"component_groups": [
+						"telslakia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"libernia"
+					]
+				}
+			},
+			"af:join_libernia": {
+				"add": {
+					"component_groups": [
+						"libernia"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"telslakia"
+					]
+				}
+			}
+		}
+	}
+}

@@ -46,7 +46,7 @@ import {
 import {
   initializeCrateSystem
 } from "./Plugins/Crates/CrateSystem.js";
-import "./Plugins/FloatingText/FloatingTextSystem.js";
+import { floatingTextSystem } from "./Plugins/FloatingText/FloatingTextSystem.js";
 import "./Plugins/InventoryViewer/InventoryViewerInit.js";
 import "./Plugins/ItemSidebar.js";
 import "./Plugins/RankCommands.js";
@@ -59,6 +59,8 @@ import "./Plugins/AllCommands.js";
 import "./Plugins/GameModeSystem.js";
 import "./Plugins/DailyMissions.js";
 import "./Plugins/TutorialMissions.js";
+import "./Plugins/WelcomeScreen.js";
+import "./Plugins/NewPlayerTest.js";
 import "./Plugins/DailyRewards.js";
 import "./Plugins/PetroEventSystem.js";
 import "./Plugins/MusicSystem.js";
@@ -70,11 +72,15 @@ import "./Plugins/TradeZoneProtection.js";
 import "./Plugins/WaypointExtraccion.js";
 import "./Plugins/DeadZonePlaceholders.js";
 import "./Plugins/Downed.js";
+import "./Plugins/HealingSounds.js";
 import "./Plugins/ExtractionMachine.js";
 import "./Server/UserUI.js"; // kills/deaths y scoreboards son manejados por Core/PlayerDataManager
 // import "./Plugins/GameModeSystem.js";
 import "./Plugins/ClearLag.js";
 import "./Plugins/ProteccionBlocks.js";
+import "./Plugins/BlockVehicle.js";
+import "./Plugins/VehicleRepair.js";
+import "./Plugins/ZombieLootFix.js";
 export {
   registerKillListener
 }
@@ -95,7 +101,9 @@ initializeGlobalConfig(), system.runTimeout(() => {
   try {
     initializeCrateSystem()
   } catch (t) {}
-}, 80),
+}, 80), system.runTimeout(() => {
+  try { floatingTextSystem.initialize(); } catch (t) {}
+}, 100),
 world.afterEvents.playerSpawn.subscribe(t => {
   const e = t.player;
   if (!firstPlayerJoined) {

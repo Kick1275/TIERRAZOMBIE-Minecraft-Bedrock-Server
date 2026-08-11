@@ -1,0 +1,111 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mq9.fly": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5": {
+							"post": [
+								0,
+								0,
+								-1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.5": {
+							"post": [
+								0,
+								0,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"2.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"frontgear": {
+					"rotation": [
+						-45,
+						0,
+						0
+					]
+				},
+				"gear0": {
+					"rotation": [
+						0,
+						0,
+						45
+					]
+				},
+				"gear1": {
+					"rotation": [
+						0,
+						0,
+						-45
+					]
+				},
+				"head": {
+					"rotation": [
+						0,
+						"-query.yaw_speed*0.2",
+						0
+					]
+				}
+			}
+		},
+		"animation.mq9.scale": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 2.5
+				}
+			}
+		},
+		"animation.mq9.prop": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"propeller": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"2.0": [
+							0,
+							0,
+							3600
+						]
+					}
+				}
+			}
+		}
+	}
+}

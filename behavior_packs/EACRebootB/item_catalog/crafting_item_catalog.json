@@ -1,0 +1,104 @@
+{
+   "format_version": "1.21.60",
+   "minecraft:crafting_items_catalog": {
+      "categories": [
+         {
+            "category_name": "equipment",
+            "groups": [
+               {
+                  "group_identifier": {
+                     "icon": "krep:m7",
+                     "name": "krep:itemGroup.name.ar"
+                  },
+                  "items": [
+                     "krep:ak12",
+                     "krep:arka",
+                     "krep:m7",
+                     "krep:m8",
+                     "krep:m16a4",
+                     "krep:hk416",
+                     "krep:k2",
+                     "krep:t112",
+                     "krep:type95",
+                     "krep:qbu191",
+                     "krep:qbz191",
+                     "krep:type88",
+                     "krep:type882",
+                     "krep:type89"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:qsz92",
+                     "name": "krep:itemGroup.name.p"
+                  },
+                  "items": [
+                     "krep:qsz92",
+                     "krep:qcq171"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:qjb201",
+                     "name": "krep:itemGroup.name.lmg"
+                  },
+                  "items": [
+                     "krep:qjb201",
+                     "krep:qjb95"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:stdsup",
+                     "name": "krep:itemGroup.name.supp"
+                  },
+                  "items": [
+                     "krep:stdsup",
+                     "krep:ngswsup",
+                     "krep:heavysup"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:acog",
+                     "name": "krep:itemGroup.name.scope"
+                  },
+                  "items": [
+                     "krep:eotech",
+                     "krep:compm4",
+                     "krep:sight1p87",
+                     "krep:m157",
+                     "krep:acog"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:afg",
+                     "name": "krep:itemGroup.name.grip"
+                  },
+                  "items": [
+                     "krep:afg",
+                     "krep:kacgrip",
+                     "krep:gripod"
+                  ]
+               },
+               {
+                  "group_identifier": {
+                     "icon": "krep:mm556",
+                     "name": "krep:itemGroup.name.ammo"
+                  },
+                  "items": [
+                     "krep:mm556",
+                     "krep:mm5842",
+                     "krep:mm5821",
+                     "krep:mm545",
+                     "krep:fury277",
+                     "krep:mm9",
+                     "krep:creativeammo"
+                  ]
+               }
+            ]
+         }
+      ]
+   }
+}

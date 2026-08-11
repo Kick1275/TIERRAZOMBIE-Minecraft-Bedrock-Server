@@ -1,0 +1,47 @@
+{
+	"format_version": "1.16.0",
+	"render_controllers": {
+		"controller.render.vehicle_camo": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.camo_baf",
+						"Texture.camo_irl"
+					]
+				}
+			},
+			"textures": [
+				"array.skins[query.mark_variant]"
+			],
+			"is_hurt_color": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		},
+		"controller.render.vehicle_default": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"is_hurt_color": {
+				"r": 0,
+				"g": 0,
+				"b": 0,
+				"a": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+item.krep.type95.lore=§r§f欢迎来到上海，Recker！
+item.krep.qjb95.lore=§r§f你说啥？大声点听不见！我的制式步枪声音有点炸！
+item.krep.ak12.lore=§r§f保守从来不是一个坏的选择
+item.krep.m7.lore=§r§f妄想症的产物。这把步枪付出了代价。
+item.krep.m8.lore=§r§f我才不是那把咸鱼枪！
+item.krep.t112.lore=§r§f来自东方的 HK416 远房亲戚。
+item.krep.k2.lore=§r§f一心想成为 M16，却又太像 FNC。
+item.krep.qjb201.lore=§r§f作为机枪太轻，作为步枪又太重了，大概吧？
+item.krep.qbz191.lore=§r§f无托时代已经结束，这是我们现代化的新象征！
+item.krep.qbu191.lore=§r§f好啦好啦，我不会把精确射手步枪当全自动步枪用的，至少现在不会。
+item.krep.qsz92.lore=§r§fFive-seveN？不，这是 Five-eighT！
+item.krep.hk416.lore=§r§f三角洲特种部队的老婆（？）
+item.krep.m16a4.lore=§r§f别担心亲爱的，政权更迭就是你通往自由的答案——至少在我们这个版本里是。
+item.krep.qcq171.lore=§r§f如果你在比赛里看到这枪卡壳，那纯粹是恶意宣传。
+item.krep.type88.lore=§r§f真是经典，对吧？等一下，这居然是朝鲜产的？
+item.krep.type882.lore=§r§f经典永不过时，对吧？……
+item.krep.type89.lore=§r§f伊丹小队的专属高级“魔法棒”
+item.krep.arka.lore=§r§f没有丢掉理想主义，只是顺应了时代的潮流。
+
+item.krep:arka=FN ARKA
+item.krep:hk416=HK416
+item.krep:m16a4=M16A4
+item.krep:qbu191=QBU-191
+item.krep:qbz191=QBZ-191
+item.krep:qjb201=QJB-201
+item.krep:qsz92=QSZ-92G
+item.krep:type89=89式突击步枪
+item.krep:type88=88式突击步枪
+item.krep:type882=88-2式突击步枪
+item.krep:type95=QBZ-95-1
+item.krep:qjb95=QJB-95
+item.krep:ak12=AK-12
+item.krep:m7=M7
+item.krep:m8=M8 卡宾枪
+item.krep:t112=T112
+item.krep:k2=K2
+item.krep:qcq171=QCQ-171
+item.krep:creativeammo=创意弹药
+
+tile.krep:craftingdesk.name=工作台
+
+form.krep.faction.title=选择阵营
+form.krep.faction.dropdown_label=阵营
+form.krep.faction.option.0=默认值
+form.krep.faction.option.1=中国人民解放军 (PLA)
+form.krep.faction.option.2=美军 (US)
+form.krep.faction.option.3=中国国民党军 (KMT)
+form.krep.faction.option.4=大韩民国国军 (ROK)
+form.krep.faction.success_prefix=当前阵营：
+
+menu.krep.crafting_station=武器制造台
+menu.krep.choose_category=请选择分类。
+menu.krep.weapon_crafting=武器枪械制造
+menu.krep.ammo_crafting=弹药制造
+menu.krep.attachment_crafting=配件制造
+menu.krep.select_weapon=选择武器。
+menu.krep.select_ammo=选择弹药。
+menu.krep.select_attachment=选择配件。
+menu.krep.close=关闭
+menu.krep.craft=制造
+menu.krep.back=返回
+menu.krep.getconfig=获取配置
+
+krep:itemGroup.name.ar=突击步枪
+krep:itemGroup.name.sm=冲锋枪
+krep:itemGroup.name.p=小口径子弹
+krep:itemGroup.name.sr=狙击步枪
+krep:itemGroup.name.lmg=轻机枪
+krep:itemGroup.name.sg=霰弹枪
+krep:itemGroup.name.scope=瞄准镜
+krep:itemGroup.name.supp=抑制器
+krep:itemGroup.name.grip=握把
+krep:itemGroup.name.ammo=弹药
+
+
+item.krep.mm58.desc=§f口径 : 5.8x42mm
+item.krep.mm5821.desc=§f口径 : 5.8x21mm
+item.krep.mm545.desc=§f口径 : 5.45x39mm
+item.krep.mm762.desc=§f口径 : 7.62x39mm
+item.krep.mm556.desc=§f口径 : 5.56x45mm
+item.krep.fury277.desc=§f口径 : .277 Fury
+item.krep.mm9.desc=§f口径 : 9x19mm

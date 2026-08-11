@@ -1,0 +1,53 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "af:overworld_underground_uranium_ore",
+			"places_feature": "af:uranium_ore_feature"
+		},
+		"conditions": {
+			"placement_pass": "underground_pass",
+			"minecraft:biome_filter": [
+				{
+					"any_of": [
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "overworld"
+						},
+						{
+							"test": "has_biome_tag",
+							"operator": "==",
+							"value": "overworld_generation"
+						}
+					]
+				}
+			]
+		},
+		"distribution": {
+			"iterations": 5,
+			"coordinate_eval_order": "zyx",
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": {
+				"distribution": "uniform",
+				"extent": [
+					-64,
+					-54
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			}
+		}
+	}
+}
