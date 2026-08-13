@@ -1,4 +1,4 @@
-import { world } from '@minecraft/server';
+﻿import { world } from '@minecraft/server';
 import { ActionFormData, ModalFormData } from '@minecraft/server-ui';
 
 console.warn("Npc_Ingeniero correctamente");
@@ -6,58 +6,41 @@ console.warn("Npc_Ingeniero correctamente");
 const SCORE = "money";
 
 const npcItems = [
-    // ── Rifles de Asalto ──────────────────────────────────────────────────────
-    { id: "krep:m4a1",    name: { es: "M4A1",          en: "M4A1" },          buyPrice: 6500,  sellPrice: 2000, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:akm",     name: { es: "AKM",           en: "AKM" },           buyPrice: 5500,  sellPrice: 1800, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:hk416",   name: { es: "HK416",         en: "HK416" },         buyPrice: 7000,  sellPrice: 2200, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:scarl",   name: { es: "SCAR-L",        en: "SCAR-L" },        buyPrice: 7500,  sellPrice: 2500, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:m16",     name: { es: "M16",           en: "M16" },           buyPrice: 5000,  sellPrice: 1600, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:m16a1",   name: { es: "M16A1",         en: "M16A1" },         buyPrice: 4800,  sellPrice: 1500, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:g36",     name: { es: "G36",           en: "G36" },           buyPrice: 6000,  sellPrice: 2000, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:qbz95",   name: { es: "QBZ-95",        en: "QBZ-95" },        buyPrice: 6200,  sellPrice: 2000, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:qbz191",  name: { es: "QBZ-191",       en: "QBZ-191" },       buyPrice: 7200,  sellPrice: 2300, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:type81",  name: { es: "Type 81",       en: "Type 81" },       buyPrice: 5800,  sellPrice: 1900, icon: "textures/ui/icon_sword.png" },
-    // ── Battle Rifles ─────────────────────────────────────────────────────────
-    { id: "krep:scarh",   name: { es: "SCAR-H",        en: "SCAR-H" },        buyPrice: 8500,  sellPrice: 2800, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:fal",     name: { es: "FAL",           en: "FAL" },           buyPrice: 7800,  sellPrice: 2500, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:g3",      name: { es: "G3",            en: "G3" },            buyPrice: 7000,  sellPrice: 2200, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:mk14",    name: { es: "MK14",          en: "MK14" },          buyPrice: 9000,  sellPrice: 3000, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:sks",     name: { es: "SKS",           en: "SKS" },           buyPrice: 6500,  sellPrice: 2100, icon: "textures/ui/icon_sword.png" },
-    // ── SMGs ──────────────────────────────────────────────────────────────────
-    { id: "krep:mp5",     name: { es: "MP5",           en: "MP5" },           buyPrice: 4500,  sellPrice: 1500, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:uzi",     name: { es: "UZI",           en: "UZI" },           buyPrice: 3800,  sellPrice: 1200, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:vector",  name: { es: "Vector",        en: "Vector" },        buyPrice: 5500,  sellPrice: 1800, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:ump",     name: { es: "UMP-45",        en: "UMP-45" },        buyPrice: 4200,  sellPrice: 1400, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:mp7",     name: { es: "MP7",           en: "MP7" },           buyPrice: 5000,  sellPrice: 1600, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:p90",     name: { es: "P90",           en: "P90" },           buyPrice: 5200,  sellPrice: 1700, icon: "textures/ui/icon_sword.png" },
-    // ── Pistolas ──────────────────────────────────────────────────────────────
-    { id: "krep:g17",     name: { es: "Glock 17",      en: "Glock 17" },      buyPrice: 2000,  sellPrice: 600,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:g18",     name: { es: "Glock 18",      en: "Glock 18" },      buyPrice: 800,   sellPrice: 250,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:m1911",   name: { es: "M1911",         en: "M1911" },         buyPrice: 2200,  sellPrice: 700,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:p320",    name: { es: "P320",          en: "P320" },          buyPrice: 2300,  sellPrice: 750,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:deagle",  name: { es: "Desert Eagle",  en: "Desert Eagle" },  buyPrice: 5000,  sellPrice: 1600, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:b93",     name: { es: "B93R",          en: "B93R" },          buyPrice: 2800,  sellPrice: 900,  icon: "textures/ui/icon_sword.png" },
-    { id: "krep:cp",      name: { es: "CP",            en: "CP" },            buyPrice: 4200,  sellPrice: 1300, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:t50",     name: { es: "T50",           en: "T50" },           buyPrice: 4500,  sellPrice: 1500, icon: "textures/ui/icon_sword.png" },
-    // ── Escopetas ─────────────────────────────────────────────────────────────
-    { id: "krep:m870",    name: { es: "M870",          en: "M870" },          buyPrice: 5500,  sellPrice: 1800, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:aa12",    name: { es: "AA-12",         en: "AA-12" },         buyPrice: 7000,  sellPrice: 2300, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:saiga12", name: { es: "Saiga-12",      en: "Saiga-12" },      buyPrice: 6500,  sellPrice: 2100, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:m1014",   name: { es: "M1014",         en: "M1014" },         buyPrice: 6000,  sellPrice: 2000, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:db",      name: { es: "Double Barrel", en: "Double Barrel" }, buyPrice: 3500,  sellPrice: 1100, icon: "textures/ui/icon_sword.png" },
-    // ── Francotiradores ───────────────────────────────────────────────────────
-    { id: "krep:awp",     name: { es: "AWP",           en: "AWP" },           buyPrice: 12000, sellPrice: 4000, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:m885",    name: { es: "M88.5",         en: "M88.5" },         buyPrice: 13000, sellPrice: 4300, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:win308",  name: { es: "Win 308",       en: "Win 308" },       buyPrice: 10000, sellPrice: 3300, icon: "textures/ui/icon_sword.png" },
-    // ── Munición ──────────────────────────────────────────────────────────────
-    { id: "krep:m43",      name: { es: "Mun. 7.62x39 (x60)",   en: "7.62x39 Ammo (x60)" },   buyPrice: 800,  sellPrice: 200, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:mm9",      name: { es: "Mun. 9mm (x60)",        en: "9mm Ammo (x60)" },        buyPrice: 500,  sellPrice: 150, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:acp45",    name: { es: "Mun. .45 ACP (x60)",    en: ".45 ACP Ammo (x60)" },    buyPrice: 600,  sellPrice: 180, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:mm4630",   name: { es: "Mun. 4.6x30 (x60)",    en: "4.6x30 Ammo (x60)" },    buyPrice: 700,  sellPrice: 200, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:mm5728",   name: { es: "Mun. 5.7x28 (x60)",    en: "5.7x28 Ammo (x60)" },    buyPrice: 700,  sellPrice: 200, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:ae50",     name: { es: "Mun. .50 AE (x20)",     en: ".50 AE Ammo (x20)" },     buyPrice: 900,  sellPrice: 280, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:gauge12",  name: { es: "Cart. 12 Gauge (x20)",  en: "12 Gauge Shells (x20)" }, buyPrice: 600,  sellPrice: 180, icon: "textures/ui/icon_sword.png" },
-    { id: "krep:lapua338", name: { es: "Mun. .338 Lapua (x20)", en: ".338 Lapua Ammo (x20)" }, buyPrice: 1200, sellPrice: 400, icon: "textures/ui/icon_sword.png" },
+    // ── Pistola
+    { id: "krep:qsz92",   name: { es: "QSZ-92",     en: "QSZ-92" },     buyPrice: 2000,  sellPrice: 600,  icon: "textures/items/qsz92" },
+    // ── SMG
+    { id: "krep:qcq171",  name: { es: "QCQ-171",    en: "QCQ-171" },    buyPrice: 4500,  sellPrice: 1500, icon: "textures/items/qcq171" },
+    // ── ARs T2
+    { id: "krep:t112",    name: { es: "T-112",       en: "T-112" },      buyPrice: 4800,  sellPrice: 1500, icon: "textures/items/t112" },
+    { id: "krep:m16a4",   name: { es: "M16A4",       en: "M16A4" },      buyPrice: 5200,  sellPrice: 1600, icon: "textures/items/m16a4" },
+    // ── ARs T3
+    { id: "krep:hk416",   name: { es: "HK416",       en: "HK416" },      buyPrice: 6500,  sellPrice: 2100, icon: "textures/items/hk416" },
+    { id: "krep:type88",  name: { es: "Type 88",     en: "Type 88" },    buyPrice: 6000,  sellPrice: 2000, icon: "textures/items/type88" },
+    { id: "krep:type89",  name: { es: "Type 89",     en: "Type 89" },    buyPrice: 6000,  sellPrice: 2000, icon: "textures/items/type89" },
+    { id: "krep:k2",      name: { es: "K2",          en: "K2" },         buyPrice: 7500,  sellPrice: 2500, icon: "textures/items/k2" },
+    { id: "krep:type95",  name: { es: "Type 95",     en: "Type 95" },    buyPrice: 7500,  sellPrice: 2500, icon: "textures/items/type95" },
+    { id: "krep:qbz191",  name: { es: "QBZ-191",     en: "QBZ-191" },    buyPrice: 7200,  sellPrice: 2300, icon: "textures/items/qbz191" },
+    { id: "krep:qjb95",   name: { es: "QJB-95",      en: "QJB-95" },     buyPrice: 6200,  sellPrice: 2000, icon: "textures/items/qjb95" },
+    // ── ARs T4
+    { id: "krep:ak12",    name: { es: "AK-12",       en: "AK-12" },      buyPrice: 5500,  sellPrice: 1800, icon: "textures/items/ak12" },
+    { id: "krep:arka",    name: { es: "ARKA",         en: "ARKA" },       buyPrice: 5800,  sellPrice: 1900, icon: "textures/items/arka" },
+    { id: "krep:type882", name: { es: "Type 88-2",   en: "Type 88-2" },  buyPrice: 8000,  sellPrice: 2600, icon: "textures/items/type882" },
+    // ── T5 Battle Rifles / DMR
+    { id: "krep:m8",      name: { es: "M8",          en: "M8" },         buyPrice: 7800,  sellPrice: 2500, icon: "textures/items/m8" },
+    { id: "krep:m7",      name: { es: "M7",          en: "M7" },         buyPrice: 9500,  sellPrice: 3100, icon: "textures/items/m7" },
+    { id: "krep:qbu191",  name: { es: "QBU-191",     en: "QBU-191" },    buyPrice: 9500,  sellPrice: 3100, icon: "textures/items/qbz191" },
+    { id: "krep:qjb201",  name: { es: "QJB-201",     en: "QJB-201" },    buyPrice: 11000, sellPrice: 3600, icon: "textures/items/qjb201" },
+    // ── EXCEPCIONES
+    { id: "krep:awp",     name: { es: "AWP",         en: "AWP" },        buyPrice: 12000, sellPrice: 4000, icon: "textures/ui/icon_sword.png" },
+    { id: "krep:minigun", name: { es: "Minigun",     en: "Minigun" },    buyPrice: 25000, sellPrice: 8000, icon: "textures/ui/icon_sword.png" },
+    // ── Municion
+    { id: "krep:mm5821",  name: { es: "Mun. 5.8x21 (QSZ) x48",   en: "5.8x21 Ammo x48" },   buyPrice: 450,  sellPrice: 130, icon: "textures/items/ammo/mm5821" },
+    { id: "krep:mm9",     name: { es: "Mun. 9mm (QCQ) x64",       en: "9mm Ammo x64" },      buyPrice: 500,  sellPrice: 150, icon: "textures/items/ammo/mm9" },
+    { id: "krep:mm556",   name: { es: "Mun. 5.56 x30",            en: "5.56 Ammo x30" },     buyPrice: 650,  sellPrice: 200, icon: "textures/items/ammo/mm556" },
+    { id: "krep:mm545",   name: { es: "Mun. 5.45 x30",            en: "5.45 Ammo x30" },     buyPrice: 650,  sellPrice: 200, icon: "textures/items/ammo/mm545" },
+    { id: "krep:mm5842",  name: { es: "Mun. 5.8x42 x30",          en: "5.8x42 Ammo x30" },   buyPrice: 750,  sellPrice: 230, icon: "textures/items/ammo/mm5842" },
+    { id: "krep:fury277", name: { es: "Mun. .277 Fury x20",       en: ".277 Fury x20" },     buyPrice: 900,  sellPrice: 280, icon: "textures/items/ammo/fury277" },
+    { id: "krep:lapua338",name: { es: "Mun. .338 Lapua x20",      en: ".338 Lapua x20" },    buyPrice: 1200, sellPrice: 400, icon: "textures/items/lapua308" },
 ];
 
 function getLang(p) { return p.hasTag("lang_es_ES") ? "es" : "en"; }

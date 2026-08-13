@@ -96,22 +96,25 @@ function restoreAmmoScores(player) {
 }
 
 const WEAPON_POOL = [
-    { cmds: ["give @s krep:m4a1 1",    "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:akm 1",     "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:hk416 1",   "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:scarl 1",   "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:m16 1",     "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:g36 1",     "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:mp5 1",     "give @s krep:mm9 256"]      },
-    { cmds: ["give @s krep:vector 1",  "give @s krep:acp45 256"]    },
-    { cmds: ["give @s krep:ump 1",     "give @s krep:acp45 256"]    },
-    { cmds: ["give @s krep:g17 1",     "give @s krep:mm9 256"]      },
-    { cmds: ["give @s krep:deagle 1",  "give @s krep:ae50 256"]     },
-    { cmds: ["give @s krep:m870 1",    "give @s krep:gauge12 256"]  },
-    { cmds: ["give @s krep:aa12 1",    "give @s krep:gauge12 256"]  },
+    // ── ARs — EACRebootB (Fase 8 migración) ──────────────────────────────────
+    // Munición: mm556 para armas de familia 5.56, mm545 para familia AK, mm9 para SMG
+    { cmds: ["give @s krep:type95 1",  "give @s krep:mm5842 256"]   }, // reemplaza m4a1
+    { cmds: ["give @s krep:ak12 1",    "give @s krep:mm545 256"]    }, // reemplaza akm
+    { cmds: ["give @s krep:hk416 1",   "give @s krep:mm556 256"]    }, // mismo ID
+    { cmds: ["give @s krep:k2 1",      "give @s krep:mm556 256"]    }, // reemplaza scarl
+    { cmds: ["give @s krep:m16a4 1",   "give @s krep:mm556 256"]    }, // reemplaza m16
+    { cmds: ["give @s krep:type89 1",  "give @s krep:mm556 256"]    }, // reemplaza g36
+    { cmds: ["give @s krep:arka 1",    "give @s krep:mm545 256"]    }, // reemplaza type81
+    { cmds: ["give @s krep:t112 1",    "give @s krep:mm556 256"]    }, // reemplaza m16a1
+    // ── SMG ──────────────────────────────────────────────────────────────────
+    { cmds: ["give @s krep:qcq171 1",  "give @s krep:mm9 256"]      }, // reemplaza mp5/vector/ump
+    // ── Pistola ───────────────────────────────────────────────────────────────
+    { cmds: ["give @s krep:qsz92 1",   "give @s krep:mm5821 256"]   }, // reemplaza g17/deagle
+    // ── Battle Rifles ─────────────────────────────────────────────────────────
+    { cmds: ["give @s krep:m7 1",      "give @s krep:fury277 256"]  }, // reemplaza scarh/fal/g3
+    { cmds: ["give @s krep:qbu191 1",  "give @s krep:mm5842 256"]   }, // reemplaza mk14/sks
+    // ── EXCEPCIONES — sin cambio ──────────────────────────────────────────────
     { cmds: ["give @s krep:awp 1",     "give @s krep:lapua338 256"] },
-    { cmds: ["give @s krep:mk14 1",    "give @s krep:m43 256"]      },
-    { cmds: ["give @s krep:p90 1",     "give @s krep:mm5728 256"]   },
 ];
 const CANCEL_ITEM = "minecraft:paper";
 const UI_SLOT = 8;

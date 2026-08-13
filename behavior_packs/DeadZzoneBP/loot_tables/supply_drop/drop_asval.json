@@ -1,4 +1,4 @@
-{
+﻿{
   "pools": [
     {
       "rolls": 1,
@@ -30,11 +30,6 @@
         "max": 5
       },
       "entries": [
-        {
-          "type": "item",
-          "name": "krep:m885",
-          "weight": 99
-        }
       ]
     },
     {

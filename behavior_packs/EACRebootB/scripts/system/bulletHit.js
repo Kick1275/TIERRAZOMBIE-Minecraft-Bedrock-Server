@@ -1,32 +1,205 @@
 import { world, system, EntityDamageCause } from "@minecraft/server";
 
 const WEAPONS = {
-    "type95": { damage: 6.5, maxDistance: 100, adsSpread: 0.01, hipSpread: 0.12, armorPen: 0.3, protPen: 0.2 },
-    "qjb95":  { damage: 6.2, maxDistance: 120, adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.3, protPen: 0.2 },
-    "qjb201": { damage: 6.2, maxDistance: 120, adsSpread: 0.01, hipSpread: 0.25, armorPen: 0.3, protPen: 0.2 },
-    "ak12":   { damage: 6.2, maxDistance: 80,  adsSpread: 0.01, hipSpread: 0.18, armorPen: 0.4, protPen: 0.3 },
-    "t112":   { damage: 6.0, maxDistance: 100, adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "arka":   { damage: 6.0, maxDistance: 100, adsSpread: 0.007,hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "hk416":  { damage: 6.0, maxDistance: 80,  adsSpread: 0.01, hipSpread: 0.19, armorPen: 0.4, protPen: 0.3 },
-    "m16a4":  { damage: 6.0, maxDistance: 130, adsSpread: 0.006,hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "k2":     { damage: 6.1, maxDistance: 90,  adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "type89": { damage: 6.5, maxDistance: 90,  adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "qsz92":  { damage: 6.0, maxDistance: 20,  adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "qcq171": { damage: 4.6, maxDistance: 50,  adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "type88": { damage: 6.0, maxDistance: 100, adsSpread: 0.01, hipSpread: 0.2,  armorPen: 0.4, protPen: 0.3 },
-    "type882": { damage: 5.5, maxDistance: 80, adsSpread: 0.015, hipSpread: 0.25,  armorPen: 0.4, protPen: 0.3 },
-    "m7":     { damage: 8.0, maxDistance: 150, adsSpread: 0.01, hipSpread: 0.25, armorPen: 0.3, protPen: 0.2 },
-    "m8":     { damage: 7.8, maxDistance: 75,  adsSpread: 0.012,hipSpread: 0.25, armorPen: 0.3, protPen: 0.2 },
-    "qbz191": { damage: 6.2, maxDistance: 100, adsSpread: 0.01, hipSpread: 0.17, armorPen: 0.4, protPen: 0.3 },
-    "qbu191": { damage: 8.0, maxDistance: 150, adsSpread: 0.003,hipSpread: 0.3,  armorPen: 0.4, protPen: 0.3 },
+    // ── Fase 1: daños ajustados al equivalente TACZBE ──────────────────────────
+    // TACZ equiv: m4a1 (8) → type95 era 6.5 → ahora 8.0
+    "type95":  { damage: 8.0, maxDistance: 100, adsSpread: 0.01,  hipSpread: 0.12, armorPen: 0.32, protPen: 0.3 },
+    // TACZ equiv: qbz95 (7 / pen 0.7) → qjb95 era 6.2 → ahora 7.0
+    "qjb95":   { damage: 7.0, maxDistance: 120, adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.70, protPen: 0.35 },
+    // TACZ equiv: evolys (10 / pen 0.6) → qjb201 era 6.2 → ahora 10.0
+    "qjb201":  { damage: 10.0, maxDistance: 120, adsSpread: 0.01, hipSpread: 0.25, armorPen: 0.30, protPen: 0.3 },
+    // TACZ equiv: akm (9 / pen 0.65) → ak12 era 6.2 → ahora 9.0
+    "ak12":    { damage: 9.0, maxDistance: 80,  adsSpread: 0.01,  hipSpread: 0.18, armorPen: 0.35, protPen: 0.3 },
+    // TACZ equiv: m16a1 (6 / pen 0.6) → t112 era 6.0 → sin cambio
+    "t112":    { damage: 6.0, maxDistance: 100, adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.30, protPen: 0.3 },
+    // TACZ equiv: type81 (9 / pen 0.65) → arka era 6.0 → ahora 9.0
+    "arka":    { damage: 9.0, maxDistance: 100, adsSpread: 0.007, hipSpread: 0.2,  armorPen: 0.32, protPen: 0.3 },
+    // TACZ equiv: hk416 (5 / pen 0.6) → hk416 era 6.0 → ahora 5.0
+    "hk416":   { damage: 5.0, maxDistance: 80,  adsSpread: 0.01,  hipSpread: 0.19, armorPen: 0.30, protPen: 0.3 },
+    // TACZ equiv: m16 (6 / pen 0.6) → m16a4 era 6.0 → sin cambio
+    "m16a4":   { damage: 6.0, maxDistance: 130, adsSpread: 0.006, hipSpread: 0.2,  armorPen: 0.30, protPen: 0.3 },
+    // TACZ equiv: scarl (7 / pen 0.65) → k2 era 6.1 → ahora 7.0
+    "k2":      { damage: 7.0, maxDistance: 90,  adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.32, protPen: 0.3 },
+    // TACZ equiv: g36 (7 / pen 0.65) → type89 era 6.5 → ahora 7.0
+    "type89":  { damage: 7.0, maxDistance: 90,  adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.32, protPen: 0.3 },
+    // TACZ equiv: g17 (6 / pen 0.5) → qsz92 era 6.0 → sin cambio
+    "qsz92":   { damage: 6.0, maxDistance: 20,  adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.25, protPen: 0.25 },
+    // TACZ equiv: mp5 (6.5 / pen 0.45) → qcq171 era 4.6 → ahora 6.5
+    "qcq171":  { damage: 6.5, maxDistance: 50,  adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.22, protPen: 0.25 },
+    // Sin equivalente TACZ — daño original conservado
+    "type88":  { damage: 6.0, maxDistance: 100, adsSpread: 0.01,  hipSpread: 0.2,  armorPen: 0.4,  protPen: 0.3 },
+    // TACZ equiv: m249 (7 / pen 0.65) → type882 era 5.5 → ahora 7.0
+    "type882": { damage: 7.0, maxDistance: 80,  adsSpread: 0.015, hipSpread: 0.25, armorPen: 0.32, protPen: 0.3 },
+    // TACZ equiv: scarh/fal/g3 (9 / pen 0.7) → m7 era 8.0 → ahora 9.0
+    "m7":      { damage: 9.0, maxDistance: 150, adsSpread: 0.01,  hipSpread: 0.25, armorPen: 0.70, protPen: 0.35 },
+    // TACZ equiv: g3/fal (9 / pen 0.7) → m8 era 7.8 → ahora 9.0
+    "m8":      { damage: 9.0, maxDistance: 75,  adsSpread: 0.012, hipSpread: 0.25, armorPen: 0.70, protPen: 0.35 },
+    // TACZ equiv: qbz191 (7 / pen 0.7) → qbz191 era 6.2 → ahora 7.0
+    "qbz191":  { damage: 7.0, maxDistance: 100, adsSpread: 0.01,  hipSpread: 0.17, armorPen: 0.70, protPen: 0.35 },
+    // TACZ equiv: fal/sks (9 / pen 0.7) → qbu191 era 8.0 → ahora 9.0
+    "qbu191":  { damage: 12.0, maxDistance: 150, adsSpread: 0.003, hipSpread: 0.3,  armorPen: 0.70, protPen: 0.35 },
 };
 
-const ARMOR_VALS = {
-    leather:   [1, 3, 2, 1, 0],
-    iron:      [2, 6, 5, 2, 0],
-    diamond:   [3, 8, 6, 3, 2],
-    netherite: [3, 8, 6, 3, 3]
+// ── Fase 2: Sistema de armadura DeadZone (portado desde TACZBE/armorDetection.js) ──
+
+const DZ_VEST = {
+    "mcpe:biker_vest":0.15,"mcpe:biker_vest_skull":0.15,"mcpe:reflective_lime":0.15,"mcpe:reflective_orange":0.15,"mcpe:reflective_yellow":0.15,
+    "mcpe:hunting_brown":0.15,"mcpe:hunting_navy":0.15,
+    "mcpe:webbing_black":0.20,"mcpe:webbing_brown":0.20,"mcpe:webbing_green":0.20,"mcpe:webbing_tan":0.20,"mcpe:webbing_white":0.20,
+    "mcpe:chest_brown":0.25,"mcpe:chest_green":0.25,"mcpe:chest_navy":0.25,"mcpe:chest_tan":0.25,"mcpe:chest_white":0.25,
+    "mcpe:press_vest":0.35,
+    //police vest 0.45
+    "mcpe:plate_vest_gray":0.55,"mcpe:plate_vest_olive":0.55,"mcpe:plate_vest_tan":0.55,"mcpe:plate_vest_white":0.55,
+    "mcpe:assault_vest_black":0.65,"mcpe:assault_vest_olive":0.65,"mcpe:police_vest":0.65,
+    "mcpe:stab_vest_gray":0.75,"mcpe:stab_vest_tan":0.75,"mcpe:stab_vest_white":0.75,
+    "mcpe:combat_olive":0.85,"mcpe:combat_tan":0.85,"mcpe:combat_white":0.85,
+    "mcpe:tactical_vest_black":0.95,"mcpe:tactical_vest_olive":0.95,"mcpe:tactical_vest_tan":0.95,"mcpe:tactical_vest_white":0.95,
 };
+const DZ_HELMET = {
+    "mcpe:cap_black":0.02,"mcpe:cap_blue":0.02,"mcpe:cap_green":0.02,"mcpe:cap_red":0.02,
+    "mcpe:peaked_green":0.02,"mcpe:peaked_tan":0.02,"mcpe:peaked_white":0.02,"mcpe:police_hat":0.02,
+    "mcpe:flat_black":0.02,"mcpe:flat_brown":0.02,"mcpe:durag_black":0.02,"mcpe:durag_brown":0.02,
+    "mcpe:maid_bonnet":0.02,"mcpe:bandana_blue":0.02,"mcpe:bandana_green":0.02,"mcpe:bandana_red":0.02,
+    "mcpe:beanie_black":0.03,"mcpe:beanie_brown":0.03,"mcpe:beanie_olive":0.03,"mcpe:beanie_white":0.03,
+    "mcpe:beret_blue":0.03,"mcpe:beret_green":0.03,"mcpe:beret_red":0.03,
+    "mcpe:boonie_artic":0.03,"mcpe:boonie_black":0.03,"mcpe:boonie_desert":0.03,"mcpe:boonie_green":0.03,
+    "mcpe:boonie_tan":0.03,"mcpe:boonie_woodland":0.03,"mcpe:cowboy_black":0.03,"mcpe:cowboy_brown":0.03,
+    "mcpe:cowboy_white":0.03,"mcpe:headlamp":0.03,
+    "mcpe:shemagh_blue":0.05,"mcpe:shemagh_brown":0.05,"mcpe:shemagh_gray":0.05,"mcpe:shemagh_olive":0.05,
+    "mcpe:shemagh_red":0.05,"mcpe:shemagh_tan":0.05,"mcpe:skimask_black":0.05,"mcpe:balaclava_black":0.05,
+    "mcpe:night_goggles":0.05,"mcpe:ushanka":0.05,"mcpe:hunting_hat":0.05,"mcpe:clown_wig":0.05,
+    "mcpe:mask_fawkes":0.07,"mcpe:mask_funni":0.07,"mcpe:mask_troll":0.07,"mcpe:respirator_mask":0.07,"mcpe:plague_hat":0.07,
+    "mcpe:gasmask_black":0.10,"mcpe:gasmask_tactical":0.10,"mcpe:gasmask_white":0.10,"mcpe:welder_mask":0.10,
+    "mcpe:hard_blue":0.48,"mcpe:hard_orange":0.48,"mcpe:hard_red":0.48,"mcpe:hard_white":0.48,"mcpe:hard_yellow":0.48,
+    "mcpe:biker_black":0.58,"mcpe:biker_blue":0.58,"mcpe:biker_red":0.58,"mcpe:biker_white":0.58,"mcpe:biker_yellow":0.58,
+    "mcpe:firefighter_hat":0.50,"mcpe:army_artic":0.68,"mcpe:army_desert":0.68,"mcpe:army_woodland":0.68,"mcpe:great_helmet":0.68,
+    "mcpe:un_helmet":0.84,"mcpe:police_riot":0.55,
+    "mcpe:ballistic_black":0.76,"mcpe:ballistic_green":0.76,"mcpe:ballistic_tan":0.76,"mcpe:ballistic_white":0.76,
+    "mcpe:tactical_helmet_black":0.84,"mcpe:tactical_helmet_olive":0.84,"mcpe:tactical_helmet_tan":0.84,"mcpe:tactical_helmet_white":0.84,
+    "mcpe:assault_helmet_black":0.90,"mcpe:assault_helmet_olive":0.90,"mcpe:spec_helmet":0.95,
+};
+const DZ_TOP = {
+    "mcpe:tshirt_black":0.03,"mcpe:tshirt_blue":0.03,"mcpe:tshirt_green":0.03,"mcpe:tshirt_red":0.03,"mcpe:tshirt_white":0.03,"mcpe:tshirt_yellow":0.03,
+    "mcpe:hawaiian_black":0.03,"mcpe:hawaiian_red":0.03,"mcpe:flannel_blue":0.03,"mcpe:flannel_gray":0.03,"mcpe:flannel_green":0.03,
+    "mcpe:flannel_red":0.03,"mcpe:flannel_white":0.03,"mcpe:plaid_blue":0.03,"mcpe:plaid_gray":0.03,"mcpe:plaid_olive":0.03,
+    "mcpe:plaid_red":0.03,"mcpe:plaid_tan":0.03,"mcpe:plaid_white":0.03,"mcpe:striped_blue":0.03,"mcpe:striped_white":0.03,
+    "mcpe:stripeds_black":0.03,"mcpe:maid_top":0.03,"mcpe:clown_top":0.03,
+    "mcpe:hoodie_black":0.05,"mcpe:hoodie_blue":0.05,"mcpe:hoodie_green":0.05,"mcpe:hoodie_red":0.05,"mcpe:hoodie_white":0.05,"mcpe:hoodie_yellow":0.05,
+    "mcpe:puffer_black":0.06,"mcpe:puffer_blue":0.06,"mcpe:varsity_blue":0.05,"mcpe:varsity_brown":0.05,
+    "mcpe:varsity_green":0.05,"mcpe:varsity_red":0.05,"mcpe:tracksuit_black":0.05,"mcpe:tracksuit_blue":0.05,"mcpe:tracksuit_red":0.05,
+    "mcpe:sweater_green":0.05,"mcpe:sweater_white":0.05,"mcpe:leather_black":0.07,"mcpe:leather_brown":0.07,"mcpe:suede_brown":0.05,
+    "mcpe:suit_top_black":0.08,"mcpe:hiking_black":0.08,"mcpe:hiking_blue":0.08,"mcpe:hero_flannel":0.08,"mcpe:prisoner_top":0.08,
+    "mcpe:police_top":0.15,"mcpe:paramedic_top":0.10,
+    "mcpe:tactical_green":0.12,"mcpe:tactical_navy":0.12,"mcpe:tactical_red":0.13,"mcpe:tactical_tan":0.13,"mcpe:tactical_white":0.12,
+    "mcpe:police_special_top":0.20,
+    "mcpe:bdu_desert_top":0.20,"mcpe:bdu_artic_top":0.20,"mcpe:bdu_woodland_top":0.20,"mcpe:special_top":0.30,
+    "mcpe:gorka_top":0.15,"mcpe:hazmat_yellow_top":0.15,"mcpe:hazmat_white_top":0.15,
+    "mcpe:ghillie_drygrass_top":0.20,"mcpe:ghillie_forest_top":0.20,"mcpe:ghillie_snow_top":0.20,
+    "mcpe:plague_top":0.15,"mcpe:firefighter_top":0.15,"mcpe:chainmail_top":0.15,"mcpe:crusader_top":0.15,
+};
+const DZ_BOTTOM = {
+    // Civil básica — sin cambios (el top tampoco cambió)
+    "mcpe:jean_black":0.02,"mcpe:jean_blue":0.02,"mcpe:jean_brown":0.02,"mcpe:jean_light":0.02,
+    "mcpe:cargo_black":0.02,"mcpe:cargo_brown":0.02,"mcpe:cargo_green":0.02,"mcpe:cargo_tan":0.02,"mcpe:cargo_white":0.02,
+    "mcpe:trackpants_black":0.02,"mcpe:trackpants_blue":0.02,"mcpe:trackpants_red":0.02,
+    "mcpe:overall_black":0.02,"mcpe:overall_blue":0.02,"mcpe:overall_brown":0.02,
+    "mcpe:slack_black":0.02,"mcpe:khaki_light":0.02,"mcpe:maid_bottom":0.02,"mcpe:suspender_black":0.02,"mcpe:clown_bottom":0.02,
+
+    // Uniforme civil / paramédico — sin cambios
+    "mcpe:prisoner_bottom":0.03,"mcpe:paramedic_bottom":0.04,
+
+    // Policial — top subió 0.10→0.15, bottom recalculado (0.15 * 0.9)
+    "mcpe:police_bottom":0.13,
+
+    // Policial especial — top subió 0.14→0.20, bottom recalculado (0.20 * 0.9)
+    "mcpe:police_special_bottom":0.18,
+
+    // BDU — tops unificados a 0.20, bottoms unificados también (0.20 * 0.9)
+    "mcpe:bdu_desert_bottom":0.18,"mcpe:bdu_artic_bottom":0.18,"mcpe:bdu_woodland_bottom":0.18,
+
+    // Spec ops — top subió 0.26→0.30, bottom = 0.27 (tu propio ejemplo)
+    "mcpe:special_bottom":0.27,
+
+    // Gorka — top subió 0.12→0.15, bottom recalculado (0.15 * 0.9)
+    "mcpe:gorka_bottom":0.14,
+
+    // Hazmat — tops unificados a 0.15, bottoms unificados también (0.15 * 0.9)
+    "mcpe:hazmat_yellow_bottom":0.14,"mcpe:hazmat_white_bottom":0.14,
+
+    // Ghillie — tops unificados a 0.20, bottoms unificados también (0.20 * 0.9)
+    "mcpe:ghillie_drygrass_bottom":0.18,"mcpe:ghillie_forest_bottom":0.18,"mcpe:ghillie_snow_bottom":0.18,
+
+    // Plague — top subió 0.10→0.15, bottom recalculado (0.15 * 0.9)
+    "mcpe:plague_bottom":0.14,
+
+    // Bombero — top subió 0.13→0.15, bottom recalculado (0.15 * 0.9)
+    "mcpe:firefighter_bottom":0.14,
+
+    // Medieval — sin cambios
+    "mcpe:chainmail_bottom":0.10,
+};
+const VANILLA_ARM = { leather:[1,3,2,1,0], chainmail:[2,5,4,2,0], iron:[2,6,5,2,0], diamond:[3,8,6,3,2], netherite:[3,8,6,3,3], golden:[2,5,3,1,0] };
+
+/**
+ * Lee la armadura de una entidad y devuelve reducciones separadas.
+ * Para jugadores: prioriza DZ, luego vanilla.
+ * Para no-jugadores: solo vanilla.
+ * @returns {{ vestR, helmetR, topR, bottomR }} — valores 0.0–1.0
+ */
+function getDZReductions(entity) {
+    let vestR = 0, helmetR = 0, topR = 0, bottomR = 0;
+    const equip = entity.getComponent("minecraft:equippable");
+    if (!equip) return { vestR, helmetR, topR, bottomR };
+
+    const chest = equip.getEquipmentSlot("Chest").getItem();
+    if (chest) {
+        const id = chest.typeId;
+        if (DZ_VEST[id] !== undefined)    vestR = DZ_VEST[id];
+        else if (DZ_TOP[id] !== undefined) topR  = DZ_TOP[id];
+        else {
+            const mat = _vanillaMat(id);
+            if (mat) vestR = (VANILLA_ARM[mat]?.[1] ?? 0) / 25;
+        }
+    }
+    const head = equip.getEquipmentSlot("Head").getItem();
+    if (head) {
+        const id = head.typeId;
+        if (DZ_HELMET[id] !== undefined) helmetR = DZ_HELMET[id];
+        else {
+            const mat = _vanillaMat(id);
+            if (mat) helmetR = (VANILLA_ARM[mat]?.[0] ?? 0) / 25;
+        }
+    }
+    const legs = equip.getEquipmentSlot("Legs").getItem();
+    if (legs) {
+        const id = legs.typeId;
+        if (DZ_BOTTOM[id] !== undefined) bottomR = DZ_BOTTOM[id];
+        else {
+            const mat = _vanillaMat(id);
+            if (mat) bottomR = (VANILLA_ARM[mat]?.[2] ?? 0) / 25;
+        }
+    }
+    return { vestR, helmetR, topR, bottomR };
+}
+
+function _vanillaMat(typeId) {
+    const id = typeId.replace("minecraft:","").toLowerCase();
+    if (id.includes("netherite")) return "netherite";
+    if (id.includes("diamond"))   return "diamond";
+    if (id.includes("iron"))      return "iron";
+    if (id.includes("chainmail")) return "chainmail";
+    if (id.includes("golden"))    return "golden";
+    if (id.includes("leather"))   return "leather";
+    return null;
+}
+
+// penFactor: mayor penetración → la armadura aplica menos. pen 0.9 → 55%, pen 0.3 → 85%
+function applyDZReduction(damage, reduction, penetration) {
+    const penFactor = 1 - (penetration * 0.45);
+    return Math.max(1, damage * (1 - reduction * penFactor));
+}
+
+
 
 
 const DESTRUCTIBLE_BLOCKS = new Set([
@@ -147,21 +320,6 @@ const MAX_PENETRATION_DEPTH = 2;
 
 const DIMENSIONS = ["overworld", "nether", "the_end"];
 
-function getArmorStats(entity) {
-    let def = 0, tough = 0, prot = 0;
-    const equip = entity.getComponent("minecraft:equippable");
-    if (!equip) return { def, tough, prot };
-    ["Head", "Chest", "Legs", "Feet"].forEach((s, i) => {
-        const item = equip.getEquipmentSlot(s).getItem();
-        if (!item) return;
-        const type = Object.keys(ARMOR_VALS).find(k => item.typeId.includes(k));
-        if (type) { def += ARMOR_VALS[type][i]; tough += ARMOR_VALS[type][4]; }
-        const enchants = item.getComponent("minecraft:enchantments")?.enchantments;
-        prot += enchants?.getEnchantment("protection")?.level || 0;
-    });
-    return { def, tough, prot };
-}
-
 function isADS(player) {
     return player.isSneaking;
 }
@@ -185,14 +343,9 @@ function getShootVector(player, spread) {
     };
 }
 
-function calcDamage(base, armorStats, armorPen, protPen) {
-    const { def, tough, prot } = armorStats;
-    const effDef  = def  * (1 - armorPen);
-    const effTough = tough * (1 - armorPen);
-    const effProt = prot * (1 - protPen);
-    const defReduction  = Math.min(20, Math.max(effDef / 5, effDef - (4 * base) / (effTough + 8))) / 25;
-    const protReduction = Math.min(0.8, 0.04 * effProt);
-    return base * (1 - defReduction) * (1 - protReduction);
+function calcDamage(base, _unused, armorPen, protPen) {
+    // Mantenida por compatibilidad — la reducción real la hace applyDZReduction
+    return base;
 }
 
 function getImpactLocation(blockHit, shootVector) {
@@ -316,11 +469,24 @@ function fireHitscan(player, weaponName, depth = 0, damageMult = 1.0, overrideOr
 
         if (entityDistance > blockDistance) break;
 
-        
+        // ── Fase 2: armadura DZ con headshot/bodyshot ───────────────────────
         const baseDmg = damage * damageMult;
-        const dmg = calcDamage(baseDmg, getArmorStats(hit.entity), armorPen, protPen);
+        const { vestR, helmetR, topR, bottomR } = getDZReductions(hit.entity);
+        const hitLoc = hit.entity.location;
+        const isHeadshot = (headLoc.y - 0.1) > (hitLoc.y + 1.5);
+
+        let finalDmg;
+        if (isHeadshot) {
+            // Headshot: daño x2, reducido por casco
+            finalDmg = applyDZReduction(baseDmg * 2, helmetR, armorPen);
+        } else {
+            // Bodyshot: chaleco + top + pantalón suman (máx 90%)
+            const totalBodyR = Math.min(0.90, vestR + topR + bottomR);
+            finalDmg = applyDZReduction(baseDmg, totalBodyR, armorPen);
+        }
+
         hit.entity.setDynamicProperty("eac:ticking_damage",
-            (hit.entity.getDynamicProperty("eac:ticking_damage") ?? 0) + dmg
+            (hit.entity.getDynamicProperty("eac:ticking_damage") ?? 0) + finalDmg
         );
 
         

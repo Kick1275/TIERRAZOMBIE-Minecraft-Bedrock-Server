@@ -133,6 +133,18 @@
           "default": 0,
           "type": "int",
           "client_sync": true
+        },
+        "krep:awpscope": {
+          "values": ["nothing","elcan","acog","coyote","standard_8"],
+          "default": "nothing",
+          "type": "enum",
+          "client_sync": true
+        },
+        "krep:ammoreload": {
+          "range": [0, 9999],
+          "default": 30,
+          "type": "int",
+          "client_sync": true
         }
       },
       "scripts": {
@@ -213,7 +225,18 @@
             "type89": "!query.is_item_name_any('slot.weapon.offhand', 0, 'krep:config')"
           },
           "type89reloading",
-          "scope"
+          "scope",
+          // ── Excepciones TACZBE — AWP, RPG, Minigun ──────────────────────
+          {
+            "awp": "query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp'"
+          },
+          "awpreloading",
+          "awpscope",
+          {
+            "rpg": "query.get_equipped_item_name=='rpg' || query.get_equipped_item_name=='rpg_emp'"
+          },
+          "rpgreloading",
+          "minigun"
         ]
       },
       "animations": {
@@ -308,10 +331,62 @@
         "arkashoot": "animation.arka.shoot",
         "arkareload": "animation.arka.reload",
         "arkareloadtac": "animation.arka.reload.tac",
-        "scope": "controller.animation.scope"
+        "scope": "controller.animation.scope",
+
+        "awp": "controller.animation.awp",
+        "awpreloading": "controller.animation.awp.reload",
+        "awpshoot": "animation.awp.shoot",
+        "awpdelay": "animation.awp.delay",
+        "awpbolt": "animation.awp.bolt",
+        "awpreload": "animation.awp.reload",
+        "awpreloadtac": "animation.awp.reload.tac",
+        "awpscope": "controller.animation.awp.scope",
+
+        "rpg": "controller.animation.rpg",
+        "rpgreloading": "controller.animation.rpg.reload",
+        "rpgshoot": "animation.rpg.shoot",
+        "rpgreload": "animation.rpg.reload",
+
+        "minigun": "controller.animation.minigun",
+        "minigundelay": "animation.minigun.delay",
+        "minigunoverheat": "animation.minigun.overheat",
+        "minigunshoot": "animation.minigun.shoot",
+        "minigunloop": "animation.minigun.loop"
       }
     },
     "component_groups": {
+      "krep:awp_firest": {
+        "minecraft:spawn_entity": {
+          "entities": [{ "min_wait_time": 0, "max_wait_time": 0, "single_use": true, "spawn_entity": "bullet:awp", "spawn_event": "awp:nsight", "num_to_spawn": 1 }]
+        }
+      },
+      "krep:awp_fires": {
+        "minecraft:spawn_entity": {
+          "entities": [{ "min_wait_time": 0, "max_wait_time": 0, "single_use": true, "spawn_entity": "bullet:awp", "spawn_event": "awp:sight", "num_to_spawn": 1 }]
+        }
+      },
+      "krep:rpg_fires": {
+        "minecraft:spawn_entity": {
+          "entities": [{ "min_wait_time": 0, "max_wait_time": 0, "single_use": true, "spawn_entity": "bullet:rpg", "num_to_spawn": 1 }]
+        }
+      },
+      "krep:minigun_firest": {
+        "minecraft:spawn_entity": {
+          "entities": [{ "min_wait_time": 0, "max_wait_time": 0, "single_use": true, "spawn_entity": "bullet:minigun", "spawn_event": "minigun:nsight", "num_to_spawn": 1 }]
+        }
+      },
+      "krep:minigun_fires": {
+        "minecraft:spawn_entity": {
+          "entities": [{ "min_wait_time": 0, "max_wait_time": 0, "single_use": true, "spawn_entity": "bullet:minigun", "spawn_event": "minigun:sight", "num_to_spawn": 1 }]
+        }
+      },
+      "krep:scope4x": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            { "effect": "slowness", "amplifier": 6, "duration": 9999999, "visible": false }
+          ]
+        }
+      },
       "krep:scope": {
         "minecraft:spell_effects": {
           "add_effects": [
@@ -4274,6 +4349,127 @@
             "queue_command": {
               "command": [
                 "scriptevent jawir:peluru_100"
+              ]
+            }
+          }
+        ]
+      },
+      // ── Excepciones TACZBE — fire events para AWP, RPG, Minigun ──────────
+      "krep:awp_fire": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_sneaking",
+              "value": true,
+              "subject": "self"
+            },
+            "add": {
+              "component_groups": [
+                "krep:awp_fires"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s[r=0.5] animation.awp.shoot shoot",
+                "camerashake add @s[r=0.5] 0.032 0.15 rotational"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_sneaking",
+              "value": false,
+              "subject": "self"
+            },
+            "add": {
+              "component_groups": [
+                "krep:awp_firest"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s[r=0.5] animation.awp.shoot shoot",
+                "camerashake add @s[r=0.5] 0.045 0.17 rotational"
+              ]
+            }
+          }
+        ]
+      },
+      "krep:rpg_fire": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_sneaking",
+              "value": true,
+              "subject": "self"
+            },
+            "add": {
+              "component_groups": [
+                "krep:rpg_fires"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s[r=0.5] animation.rpg.shoot shoot",
+                "camerashake add @s[r=0.5] 0.032 0.28 rotational"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_sneaking",
+              "value": false,
+              "subject": "self"
+            },
+            "add": {
+              "component_groups": [
+                "krep:rpg_fires"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s[r=0.5] animation.rpg.shoot shoot",
+                "camerashake add @s[r=0.5] 0.032 0.3 rotational"
+              ]
+            }
+          }
+        ]
+      },
+      "krep:minigun_fire": {
+        "sequence": [
+          {
+            "filters": {
+              "test": "is_sneaking",
+              "value": true,
+              "subject": "self"
+            },
+            "add": {
+              "component_groups": [
+                "krep:minigun_fires"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s[r=0.5] animation.minigun.shoot shoot",
+                "camerashake add @s[r=0.5] 0.015 0.27 rotational"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "is_sneaking",
+              "value": false,
+              "subject": "self"
+            },
+            "add": {
+              "component_groups": [
+                "krep:minigun_firest"
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playanimation @s[r=0.5] animation.minigun.shoot shoot",
+                "camerashake add @s[r=0.5] 0.022 0.28 rotational"
               ]
             }
           }

@@ -1,30 +1,30 @@
-import { system, world } from "@minecraft/server";
+﻿import { system, world } from "@minecraft/server";
 
 // Lista completa de todas las armas TACZ (con munición y vacías) - ACTUALIZADA
 const taczWeapons = [
     // Armas con munición (basado en el tick.json de TACZ)
-    "krep:testis", "krep:m16a1", "krep:vector", "krep:g3", "krep:p90", "krep:hk416",
-    "krep:deagle", "krep:scarh", "krep:scarl", "krep:m16", "krep:mp5", "krep:aa12",
-    "krep:g17", "krep:awp", "krep:m870", "krep:akm", "krep:m4a1", "krep:m1911",
-    "krep:minigun", "krep:g36", "krep:mp7", "krep:deagleg", "krep:uzi", "krep:db",
-    "krep:g18", "krep:saiga12", "krep:fal", "krep:qbz95", "krep:m107", "krep:ump",
-    "krep:b93", "krep:sks", "krep:rpg",
+    "krep:testis", "krep:t112", "krep:qcq171", "krep:m8", "krep:qcq171", "krep:hk416",
+    "krep:qsz92", "krep:m7", "krep:k2", "krep:m16", "krep:qcq171", "krep:qcq171",
+    "krep:qsz92", "krep:awp", "krep:qcq171", "krep:ak12", "krep:type95", "krep:qsz92",
+    "krep:minigun", "krep:type89", "krep:qcq171", "krep:qsz92g", "krep:qcq171", "krep:qcq171",
+    "krep:g18", "krep:qcq171", "krep:m8", "krep:qjb95", "krep:m107", "krep:qcq171",
+    "krep:b93", "krep:qbu191", "krep:rpg",
     
     // NUEVAS ARMAS AGREGADAS EN LA ACTUALIZACIÓN
-    "krep:type81", "krep:m1014", "krep:qbz191", "krep:m249", "krep:p320", 
-    "krep:evolys", "krep:mk14", "krep:cp",
+    "krep:arka", "krep:qcq171", "krep:qbz191", "krep:type882", "krep:qsz92", 
+    "krep:qjb201", "krep:qbu191", "krep:cp",
     
     // Armas vacías (sin munición - terminan en _emp)
-    "krep:testis_emp", "krep:m16a1_emp", "krep:vector_emp", "krep:g3_emp", "krep:p90_emp", "krep:hk416_emp",
-    "krep:deagle_emp", "krep:scarh_emp", "krep:scarl_emp", "krep:m16_emp", "krep:mp5_emp", "krep:aa12_emp",
-    "krep:g17_emp", "krep:awp_emp", "krep:m870_emp", "krep:akm_emp", "krep:m4a1_emp", "krep:m1911_emp",
-    "krep:minigun_emp", "krep:g36_emp", "krep:mp7_emp", "krep:deagleg_emp", "krep:uzi_emp", "krep:db_emp",
-    "krep:g18_emp", "krep:saiga12_emp", "krep:fal_emp", "krep:qbz95_emp", "krep:m107_emp", "krep:ump_emp",
-    "krep:b93_emp", "krep:sks_emp", "krep:rpg_emp",
+    "krep:testis_emp", "krep:t112_emp", "krep:qcq171_emp", "krep:m8_emp", "krep:qcq171_emp", "krep:hk416_emp",
+    "krep:qsz92_emp", "krep:m7_emp", "krep:k2_emp", "krep:m16_emp", "krep:qcq171_emp", "krep:qcq171_emp",
+    "krep:qsz92_emp", "krep:awp_emp", "krep:qcq171_emp", "krep:ak12_emp", "krep:type95_emp", "krep:qsz92_emp",
+    "krep:minigun_emp", "krep:type89_emp", "krep:qcq171_emp", "krep:qsz92g_emp", "krep:qcq171_emp", "krep:qcq171_emp",
+    "krep:g18_emp", "krep:qcq171_emp", "krep:m8_emp", "krep:qjb95_emp", "krep:m107_emp", "krep:qcq171_emp",
+    "krep:b93_emp", "krep:qbu191_emp", "krep:rpg_emp",
     
     // NUEVAS ARMAS VACÍAS AGREGADAS EN LA ACTUALIZACIÓN
-    "krep:type81_emp", "krep:m1014_emp", "krep:qbz191_emp", "krep:m249_emp", "krep:p320_emp", 
-    "krep:evolys_emp", "krep:mk14_emp", "krep:cp_emp"
+    "krep:arka_emp", "krep:qcq171_emp", "krep:qbz191_emp", "krep:type882_emp", "krep:qsz92_emp", 
+    "krep:qjb201_emp", "krep:qbu191_emp", "krep:cp_emp"
 ];
 
 // Sistema de detección de armas TACZ

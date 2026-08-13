@@ -18,72 +18,40 @@
 
         // Municiones nuevas (más comunes en civiles)
         { "type": "item", "name": "krep:mm9", "weight": 9 },
-        { "type": "item", "name": "krep:acp45", "weight": 9 },
-        { "type": "item", "name": "krep:m885", "weight": 8 },
-        { "type": "item", "name": "krep:gauge12", "weight": 9 },
-        { "type": "item", "name": "krep:mag357", "weight": 6 },
 
-        // Pistolas nuevas
+        // Pistolas nuevas }
+          ]
+        },
         {
           "type": "item",
-          "name": "krep:m1911",
+          "name": "krep:qsz92",
           "weight": 5,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:m1911_emp", "weight": 5 },
-        {
-          "type": "item",
-          "name": "krep:g17",
-          "weight": 5,
-          "functions": [
-            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+        { "type": "item", "name": "krep:qsz92_emp", "weight": 5 } }
           ]
         },
-        { "type": "item", "name": "krep:g17_emp", "weight": 5 },
-        {
-          "type": "item",
-          "name": "krep:deagle",
-          "weight": 4,
-          "functions": [
-            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
-          ]
-        },
-        { "type": "item", "name": "krep:deagle_emp", "weight": 4 },
 
         // Subfusiles sencillos
         {
           "type": "item",
-          "name": "krep:mp5",
+          "name": "krep:qcq171",
           "weight": 4,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:mp5_emp", "weight": 4 },
+        { "type": "item", "name": "krep:qcq171_emp", "weight": 4 },
 
-        // Escopetas
-        {
-          "type": "item",
-          "name": "krep:m870",
-          "weight": 4,
-          "functions": [
-            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+        // Escopetas }
           ]
         },
-        { "type": "item", "name": "krep:m870_emp", "weight": 4 },
 
-        // Rifles civiles (pocos y con bajo peso)
-        {
-          "type": "item",
-          "name": "krep:saiga12",
-          "weight": 2,
-          "functions": [
-            { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
+        // Rifles civiles (pocos y con bajo peso) }
           ]
         },
-        { "type": "item", "name": "krep:saiga12_emp", "weight": 2 },
 
         // Mantén el resto de objetos civiles, ropa, comida, medicina, herramientas, etc.
         {
@@ -1954,7 +1922,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:garand",
+          "name": "krep:t112",
           "weight": 3,
           "functions": [
             {
@@ -1968,12 +1936,12 @@
         },
         {
           "type": "item",
-          "name": "mcpe:garand_emp",
+          "name": "krep:t112_emp",
           "weight": 3
         },
         {
           "type": "item",
-          "name": "mcpe:m14",
+          "name": "krep:qbu191",
           "weight": 4,
           "functions": [
             {
@@ -1987,7 +1955,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:m14_emp",
+          "name": "krep:qbu191_emp",
           "weight": 4
         },
         {
@@ -2011,7 +1979,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:izh43",
+          "name": "krep:qcq171",
           "weight": 6,
           "functions": [
             {
@@ -2025,12 +1993,12 @@
         },
         {
           "type": "item",
-          "name": "mcpe:izh43_emp",
+          "name": "krep:qcq171_emp",
           "weight": 6
         },
         {
           "type": "item",
-          "name": "mcpe:m1897",
+          "name": "krep:qcq171",
           "weight": 4,
           "functions": [
             {
@@ -2044,12 +2012,12 @@
         },
         {
           "type": "item",
-          "name": "mcpe:m1897_emp",
+          "name": "krep:qcq171_emp",
           "weight": 4
         },
         {
           "type": "item",
-          "name": "mcpe:cz527",
+          "name": "krep:qbu191",
           "weight": 3,
           "functions": [
             {
@@ -2063,7 +2031,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:cz527_emp",
+          "name": "krep:qbu191_emp",
           "weight": 3
         },
         {
@@ -2515,7 +2483,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:sks",
+          "name": "krep:qbu191",
           "weight": 4,
           "functions": [
             {
@@ -2529,12 +2497,12 @@
         },
         {
           "type": "item",
-          "name": "mcpe:sks_emp",
+          "name": "krep:qbu191_emp",
           "weight": 4
         },
         {
           "type": "item",
-          "name": "mcpe:makarov",
+          "name": "krep:qsz92",
           "weight": 5,
           "functions": [
             {
@@ -2548,7 +2516,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:makarov_emp",
+          "name": "krep:qsz92_emp",
           "weight": 5
         },
         {
@@ -2660,7 +2628,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:makarov_pb",
+          "name": "krep:qsz92",
           "weight": 2,
           "functions": [
             {
@@ -2674,7 +2642,7 @@
         },
         {
           "type": "item",
-          "name": "mcpe:makarov_pb_emp",
+          "name": "krep:qsz92_emp",
           "weight": 2
         },
         {

@@ -2,61 +2,98 @@ import { world, system } from '@minecraft/server';
 import { ActionFormData } from '@minecraft/server-ui';
 import { buildRecipe, describeRecipe, executeCraft, t } from '../global/craftingEconomy';
 
-// ── Recetas armas (vanilla + DeadZone) ───────────────────────────────────────
+// ── Recetas armas — EACRebootB (rebalanceadas Vanilla + Beans + DZ) ───────────
+// DZ variado por arma para incentivar exploración en distintas cajas:
+//   nail_box:          construction(35) + woodland(25) → COMUN
+//   duct_tape:         construction(30) + civilian(25) → COMUN
+//   sawoff_pipe:       construction(15)                → SEMI-RARO
+//   electric_scrap:    civilian(35)                   → SEMI-RARO
+//   barbed_wire:       woodland(25)                   → SEMI-RARO
+//   wire_cutter:       woodland(20)                   → SEMI-RARO
+//   hacksaw:           construction(20)               → SEMI-RARO
+//   plastic_explosive: artic/desert/woodland(10-15)   → RARO
+
 const RECIPES = {
-    g17:     buildRecipe(1, { iron_ingot: 70, coal: 30 }),
-    m1911:   buildRecipe(1, { iron_ingot: 65, log: 8 }),
-    p320:    buildRecipe(1, { iron_ingot: 70, gold_ingot: 8 }),
-    b93:     buildRecipe(1, { iron_ingot: 60, log: 8, lapis_lazuli: 6 }),
-    uzi:     buildRecipe(1, { iron_ingot: 80, coal: 20 }),
-    g18:     buildRecipe(1, { iron_ingot: 55, coal: 20 }),
-    db:      buildRecipe(1, { iron_ingot: 45, log: 20 }),
-    deagle:  buildRecipe(2, { iron_ingot: 90, gold_ingot: 15, diamond: 4 }),
-    mp5:     buildRecipe(2, { iron_ingot: 85, lapis_lazuli: 8 }),
-    vector:  buildRecipe(2, { iron_ingot: 90, gold_ingot: 10, lapis_lazuli: 10 }),
-    p90:     buildRecipe(2, { iron_ingot: 95, gold_ingot: 10, diamond: 2 }),
-    m16a1:   buildRecipe(2, { iron_ingot: 90, lapis_lazuli: 10, log: 14 }),
-    m16:     buildRecipe(2, { iron_ingot: 95, lapis_lazuli: 12, log: 14 }),
-    m870:    buildRecipe(2, { iron_ingot: 70, log: 25 }),
-    mp7:     buildRecipe(2, { iron_ingot: 90, gold_ingot: 12, diamond: 2 }),
-    deagleg: buildRecipe(2, { iron_ingot: 90, gold_ingot: 28, diamond: 4 }),
-    ump:     buildRecipe(2, { iron_ingot: 95, gold_ingot: 10 }),
-    t50:     buildRecipe(2, { iron_ingot: 85, gold_ingot: 12, diamond: 2 }),
-    cp:      buildRecipe(2, { iron_ingot: 80, gold_ingot: 12, lapis_lazuli: 5 }),
-    hk416:   buildRecipe(3, { iron_ingot: 90, gold_ingot: 18, diamond: 3 }),
-    g3:      buildRecipe(3, { iron_ingot: 100, gold_ingot: 14 }),
-    aa12:    buildRecipe(3, { iron_ingot: 90, diamond: 10, gold_ingot: 14 }),
-    akm:     buildRecipe(3, { iron_ingot: 95, lapis_lazuli: 12, log: 16 }),
-    m4a1:    buildRecipe(3, { iron_ingot: 100, gold_ingot: 16, diamond: 4 }),
-    g36:     buildRecipe(3, { iron_ingot: 90, log: 18 }),
-    saiga12: buildRecipe(3, { iron_ingot: 70, lapis_lazuli: 4 }),
-    qbz95:   buildRecipe(3, { iron_ingot: 95, lapis_lazuli: 12, log: 14 }),
-    sks:     buildRecipe(3, { iron_ingot: 95, lapis_lazuli: 14, log: 20 }),
-    qbz191:  buildRecipe(3, { iron_ingot: 100, lapis_lazuli: 16, gold_ingot: 10 }),
-    type81:  buildRecipe(3, { iron_ingot: 90, log: 16, gold_ingot: 6 }),
-    m1014:   buildRecipe(3, { iron_ingot: 95, gold_ingot: 14, diamond: 2, lapis_lazuli: 4 }),
-    scarh:   buildRecipe(4, { iron_ingot: 150, gold_ingot: 32, diamond: 6 }),
-    scarl:   buildRecipe(4, { iron_ingot: 120, gold_ingot: 25, diamond: 4 }),
-    fal:     buildRecipe(4, { iron_ingot: 130, gold_ingot: 28, diamond: 5 }),
-    mk14:    buildRecipe(4, { iron_ingot: 120, gold_ingot: 35, diamond: 6 }),
-    evolys:  buildRecipe(5, { iron_ingot: 200, gold_ingot: 32, diamond: 8 }),
-    m249:    buildRecipe(5, { iron_ingot: 200, gold_ingot: 35, diamond: 8 }),
+    // ── T1 — Pistola (inicio, asequible) ─────────────────────────────────────
+    // Solo civilian/construction — zona segura de inicio
+    qsz92:   buildRecipe(1, { iron_ingot: 60, coal: 40 },
+        { dz: { 'mcpe:duct_tape': 1 } }),
+
+    // ── T2 — SMG (requiere exploración inicial) ───────────────────────────────
+    // Nail_box (construction) + duct_tape (civilian) → 2 cajas distintas
+    qcq171:  buildRecipe(2, { iron_ingot: 80, coal: 40, 'af:aluminium_ingot': 4 },
+        { dz: { 'mcpe:nail_box': 2, 'mcpe:duct_tape': 1 } }),
+
+    // ── T2 — ARs ligeros (combinar construction + woodland) ──────────────────
+    // t112: nail_box(construction) + sawoff_pipe(construction) — todo en 1 caja pero semi-raro
+    t112:    buildRecipe(2, { iron_ingot: 90, coal: 40, 'af:aluminium_ingot': 4 },
+        { dz: { 'mcpe:nail_box': 2, 'mcpe:sawoff_pipe': 1 } }),
+    // m16a4: duct_tape(construction/civilian) + hacksaw(construction)
+    m16a4:   buildRecipe(2, { iron_ingot: 100, coal: 40, 'af:aluminium_ingot': 5 },
+        { dz: { 'mcpe:duct_tape': 2, 'mcpe:hacksaw': 1 } }),
+
+    // ── T3 — ARs estándar (forzar exploración en múltiples zonas) ────────────
+    // hk416: construction + woodland (barbed_wire)
+    hk416:   buildRecipe(3, { iron_ingot: 120, coal: 30, 'af:aluminium_ingot': 8, 'af:steel_ingot': 4 },
+        { dz: { 'mcpe:nail_box': 2, 'mcpe:barbed_wire': 2 } }),
+    // type89: civilian + construction (hacksaw)
+    type89:  buildRecipe(3, { iron_ingot: 130, coal: 30, 'af:aluminium_ingot': 8, 'af:steel_ingot': 4 },
+        { dz: { 'mcpe:electric_scrap': 1, 'mcpe:hacksaw': 1, 'mcpe:nail_box': 1 } }),
+    // k2: woodland (wire_cutter + barbed_wire) — necesita explorar bosque
+    k2:      buildRecipe(3, { iron_ingot: 130, coal: 30, 'af:aluminium_ingot': 8, 'af:steel_ingot': 4 },
+        { dz: { 'mcpe:wire_cutter': 1, 'mcpe:barbed_wire': 3 } }),
+    // type95: civilian (electric_scrap) + construction (sawoff_pipe) — 2 cajas
+    type95:  buildRecipe(3, { iron_ingot: 150, coal: 25, 'af:aluminium_ingot': 8, 'af:steel_ingot': 6 },
+        { dz: { 'mcpe:electric_scrap': 2, 'mcpe:sawoff_pipe': 1 } }),
+    // type88 LMG: construction intensivo (nail + hacksaw + sawoff)
+    type88:  buildRecipe(3, { iron_ingot: 120, coal: 30, 'af:aluminium_ingot': 10, 'af:steel_ingot': 4 },
+        { dz: { 'mcpe:nail_box': 3, 'mcpe:hacksaw': 1, 'mcpe:sawoff_pipe': 1 } }),
+    // qbz191: alta pen → necesita civilian + woodland
+    qbz191:  buildRecipe(3, { iron_ingot: 150, coal: 25, 'af:aluminium_ingot': 8, 'af:steel_ingot': 6 },
+        { dz: { 'mcpe:electric_scrap': 2, 'mcpe:wire_cutter': 1, 'mcpe:barbed_wire': 2 } }),
+    // qjb95 LMG/AR: woodland intensivo (barbed + wire_cutter) + construction
+    qjb95:   buildRecipe(3, { iron_ingot: 140, coal: 25, 'af:aluminium_ingot': 10, 'af:steel_ingot': 5 },
+        { dz: { 'mcpe:barbed_wire': 4, 'mcpe:wire_cutter': 2, 'mcpe:nail_box': 1 } }),
+
+    // ── T4 — ARs potentes / LMG (múltiples cajas obligatorio) ────────────────
+    // ak12: construction + civilian + woodland — las 3 zonas básicas
+    ak12:    buildRecipe(4, { iron_ingot: 160, coal: 20, 'af:steel_ingot': 8 },
+        { dz: { 'mcpe:duct_tape': 2, 'mcpe:electric_scrap': 1, 'mcpe:barbed_wire': 2 } }),
+    // arka: construction heavy (sawoff x2 + hacksaw)
+    arka:    buildRecipe(4, { iron_ingot: 160, coal: 20, 'af:steel_ingot': 8 },
+        { dz: { 'mcpe:sawoff_pipe': 2, 'mcpe:hacksaw': 2, 'mcpe:duct_tape': 1 } }),
+    // type882 LMG: woodland (wire_cutter + barbed) + construction (sawoff)
+    type882: buildRecipe(4, { iron_ingot: 180, coal: 15, 'af:steel_ingot': 10 },
+        { dz: { 'mcpe:wire_cutter': 2, 'mcpe:barbed_wire': 4, 'mcpe:sawoff_pipe': 2 } }),
+
+    // ── T5 — Battle rifles / DMR / LMG pesado (endgame, todo difícil) ────────
+    // m7: artic/desert (plastic) + civilian (electric) + construction (duct)
+    m7:      buildRecipe(5, { iron_ingot: 200, coal: 15, 'af:steel_ingot': 12 },
+        { dz: { 'mcpe:plastic_explosive': 1, 'mcpe:electric_scrap': 2, 'mcpe:duct_tape': 2 } }),
+    // m8: construction+civilian+woodland — las 3 zonas
+    m8:      buildRecipe(5, { iron_ingot: 180, coal: 15, 'af:steel_ingot': 10 },
+        { dz: { 'mcpe:electric_scrap': 2, 'mcpe:sawoff_pipe': 2, 'mcpe:wire_cutter': 1 } }),
+    // qbu191 DMR: alta precisión → rare+artic (plastic) + civilian (electric)
+    qbu191:  buildRecipe(5, { iron_ingot: 190, coal: 15, 'af:steel_ingot': 10, 'af:aluminium_ingot': 6 },
+        { dz: { 'mcpe:plastic_explosive': 1, 'mcpe:electric_scrap': 3, 'mcpe:hacksaw': 1 } }),
+    // qjb201 LMG endgame: todo — el más costoso en DZ
+    qjb201:  buildRecipe(5, { iron_ingot: 220, coal: 10, 'af:steel_ingot': 14, 'af:aluminium_ingot': 8 },
+        { dz: { 'mcpe:plastic_explosive': 2, 'mcpe:electric_scrap': 3, 'mcpe:barbed_wire': 4, 'mcpe:wire_cutter': 2 } }),
+
+    // ── EXCEPCIONES — conservadas sin cambio ─────────────────────────────────
     awp:     buildRecipe(5, { iron_ingot: 300, gold_ingot: 60, diamond: 15 }),
     minigun: buildRecipe(5, { iron_ingot: 500, gold_ingot: 80, diamond: 40 },
         { dz: { 'mcpe:electric_scrap': 5, 'mcpe:nail_box': 3, 'mcpe:detonator': 2, 'mcpe:duct_tape': 3, 'mcpe:plastic_explosive': 1 } }),
     rpg:     buildRecipe(5, { iron_ingot: 100, gold_ingot: 60, diamond: 20, log: 20 },
         { dz: { 'mcpe:electric_scrap': 2, 'mcpe:plastic_explosive': 2, 'mcpe:nail_box': 2, 'mcpe:detonator': 2, 'mcpe:duct_tape': 2 } }),
-    // Ganzúas + Bloqueador (en sección Herramientas)
-    // Bloqueador: x2 acero + x1 cinta adhesiva (sin barbed_wire, spray, electric_scrap)
+
+    // ── Herramientas (sin cambio) ─────────────────────────────────────────────
     bloqueador: buildRecipe(1, { 'af:steel_ingot': 2 },
         { dz: { 'mcpe:duct_tape': 1 } }),
-    // Ganzúa 1: x2 aluminio + x16 carbón + x1 caja de clavos
     ganzua1:    buildRecipe(1, { 'af:aluminium_ingot': 2, coal: 16 },
         { dz: { 'mcpe:nail_box': 1 } }),
-    // Ganzúa 2: x4 aluminio + x32 carbón + x1 caja de clavos
     ganzua2:    buildRecipe(1, { 'af:aluminium_ingot': 4, coal: 32 },
         { dz: { 'mcpe:nail_box': 1 } }),
-    // Ganzúa 3: x6 aluminio + x5 oro + x1 caja de clavos + x64 carbón
     ganzua3:    buildRecipe(1, { 'af:aluminium_ingot': 6, gold_ingot: 5, coal: 64 },
         { dz: { 'mcpe:nail_box': 1 } }),
 };
@@ -346,76 +383,66 @@ function mainMenu(player) {
 }
 
 // ═══════════════════════════════════════════════════════════════════
-//  ARMAS DE FUEGO
+//  ARMAS DE FUEGO — EACRebootB (Fase 3 migración)
 // ═══════════════════════════════════════════════════════════════════
 function weaponsMenu(player) {
     new ActionFormData()
         .title('§l§fArmas de Fuego')
         .body('§r§7Selecciona un arma:')
-        .button('§l§7Desert Eagle',   'textures/items/deagle')
-        .button('§l§7MP5',            'textures/items/mp5')
-        .button('§l§7Vector',         'textures/items/vector')
-        .button('§l§7P90',            'textures/items/p90')
-        .button('§l§7M16A1',          'textures/items/m16a1')
-        .button('§l§7M16',            'textures/items/m16')
-        .button('§l§7HK416',          'textures/items/hk416')
-        .button('§l§7SCAR-H',         'textures/items/scarh')
-        .button('§l§7G3',             'textures/items/g3')
-        .button('§l§7AA-12',          'textures/items/aa12')
-        .button('§l§7RPG',            'textures/items/rpg')
-        .button('§l§7M870',           'textures/items/m870')
-        .button('§l§7AWP',            'textures/items/awp')
-        .button('§l§7G17',            'textures/items/g17')
-        .button('§l§7M1911',          'textures/items/m1911')
-        .button('§l§7AKM',            'textures/items/akm')
-        .button('§l§7M4A1',           'textures/items/m4a1')
-        .button('§l§7SCAR-L',         'textures/items/scarl')
-        .button('§l§7G36K',           'textures/items/g36')
-        .button('§l§7MP7',            'textures/items/mp7')
-        .button('§l§7M134 Minigun',   'textures/items/minigun')
-        .button('§l§7UZI',            'textures/items/uzi')
-        .button('§l§7G18',            'textures/items/g18')
-        .button('§l§7Double Barrel',  'textures/items/db')
-        .button('§l§7Deagle Gold',    'textures/items/deagleg')
-        .button('§l§7Saiga-12',       'textures/items/saiga12')
-        .button('§l§7FAL',            'textures/items/fal')
-        .button('§l§7QBZ-95',         'textures/items/qbz95')
-        .button('§l§7UMP',            'textures/items/ump')
-        .button('§l§7B93R',           'textures/items/b93r')
-        .button('§l§7SKS',            'textures/items/sks')
-        .button('§l§7MK14',           'textures/items/mk14')
-        .button('§l§7QBZ-191',        'textures/items/qbz191')
-        .button('§l§7Type 81',        'textures/items/type81')
-        .button('§l§7Evolys',         'textures/items/evolys')
-        .button('§l§7M249',           'textures/items/m249')
-        .button('§l§7Timeless 50',    'textures/items/t50')
-        .button('§l§7CP',             'textures/items/cp')
-        .button('§l§7M1014',          'textures/items/m1014')
-        .button('§l§7P320',           'textures/items/p320')
+        // ── Pistola ──────────────────────────────────────────────────────────
+        .button('§l§7QSZ-92 §8(Pistola)',      'textures/items/qsz92')
+        // ── SMG ──────────────────────────────────────────────────────────────
+        .button('§l§7QCQ-171 §8(SMG)',          'textures/items/qcq171')
+        // ── ARs tier 2 ───────────────────────────────────────────────────────
+        .button('§l§7T-112 §8(AR)',             'textures/items/t112')
+        .button('§l§7M16A4 §8(AR)',             'textures/items/m16a4')
+        // ── ARs tier 3 ───────────────────────────────────────────────────────
+        .button('§l§7HK416 §8(AR)',             'textures/items/hk416')
+        .button('§l§7K2 §8(AR)',                'textures/items/k2')
+        .button('§l§7Type 89 §8(AR)',           'textures/items/type89')
+        .button('§l§7Type 95 §8(AR)',           'textures/items/type95')
+        .button('§l§7QBZ-191 §8(AR)',           'textures/items/qbz191')
+        .button('§l§7QJB-95 §8(AR/LMG)',       'textures/items/qjb95')
+        .button('§l§7Type 88 §8(LMG)',          'textures/items/type88')
+        // ── ARs pesados tier 3 ───────────────────────────────────────────────
+        .button('§l§7AK-12 §8(AR/BR)',          'textures/items/ak12')
+        .button('§l§7ARKA §8(AR)',              'textures/items/arka')
+        // ── Battle Rifles tier 4 ─────────────────────────────────────────────
+        .button('§l§7M7 §8(BR)',                'textures/items/m7')
+        .button('§l§7M8 §8(BR)',                'textures/items/m8')
+        .button('§l§7QBU-191 §8(DMR)',          'textures/items/qbu191')
+        // ── LMG tier 4-5 ─────────────────────────────────────────────────────
+        .button('§l§7Type 88-2 §8(LMG)',        'textures/items/type882')
+        .button('§l§4QJB-201 §8(LMG)',          'textures/items/qjb201')
+        // ── EXCEPCIONES ───────────────────────────────────────────────────────
+        .button('§l§7AWP §8(Sniper)',           'textures/items/awp')
+        .button('§l§7M134 Minigun',            'textures/items/minigun')
+        .button('§l§7RPG',                     'textures/items/rpg')
         .show(player)
         .then(res => {
             if (res.canceled) { mainMenu(player); return; }
             const map = [
-                ['deagle','Desert Eagle','krep:deagle'],['mp5','MP5','krep:mp5'],
-                ['vector','Vector','krep:vector'],['p90','P90','krep:p90'],
-                ['m16a1','M16A1','krep:m16a1'],['m16','M16','krep:m16'],
-                ['hk416','HK416','krep:hk416'],['scarh','SCAR-H','krep:scarh'],
-                ['g3','G3','krep:g3'],['aa12','AA-12','krep:aa12'],
-                ['rpg','RPG','krep:rpg'],['m870','M870','krep:m870'],
-                ['awp','AWP','krep:awp'],['g17','G17','krep:g17'],
-                ['m1911','M1911','krep:m1911'],['akm','AKM','krep:akm'],
-                ['m4a1','M4A1','krep:m4a1'],['scarl','SCAR-L','krep:scarl'],
-                ['g36','G36K','krep:g36'],['mp7','MP7','krep:mp7'],
-                ['minigun','M134 Minigun','krep:minigun'],['uzi','UZI','krep:uzi'],
-                ['g18','G18','krep:g18'],['db','Double Barrel','krep:db'],
-                ['deagleg','Deagle Gold','krep:deagleg'],['saiga12','Saiga-12','krep:saiga12'],
-                ['fal','FAL','krep:fal'],['qbz95','QBZ-95','krep:qbz95'],
-                ['ump','UMP','krep:ump'],['b93','Beretta 93R','krep:b93r'],
-                ['sks','SKS','krep:sks'],['mk14','MK14','krep:mk14'],
-                ['qbz191','QBZ-191','krep:qbz191'],['type81','Type 81','krep:type81'],
-                ['evolys','Evolys','krep:evolys'],['m249','M249','krep:m249'],
-                ['t50','Timeless 50','krep:t50'],['cp','CP','krep:cp'],
-                ['m1014','M1014','krep:m1014'],['p320','P320','krep:p320'],
+                ['qsz92',   'QSZ-92',     'krep:qsz92'],
+                ['qcq171',  'QCQ-171',    'krep:qcq171'],
+                ['t112',    'T-112',      'krep:t112'],
+                ['m16a4',   'M16A4',      'krep:m16a4'],
+                ['hk416',   'HK416',      'krep:hk416'],
+                ['k2',      'K2',         'krep:k2'],
+                ['type89',  'Type 89',    'krep:type89'],
+                ['type95',  'Type 95',    'krep:type95'],
+                ['qbz191',  'QBZ-191',    'krep:qbz191'],
+                ['qjb95',   'QJB-95',     'krep:qjb95'],
+                ['type88',  'Type 88',    'krep:type88'],
+                ['ak12',    'AK-12',      'krep:ak12'],
+                ['arka',    'ARKA',       'krep:arka'],
+                ['m7',      'M7',         'krep:m7'],
+                ['m8',      'M8',         'krep:m8'],
+                ['qbu191',  'QBU-191',    'krep:qbu191'],
+                ['type882', 'Type 88-2',  'krep:type882'],
+                ['qjb201',  'QJB-201',    'krep:qjb201'],
+                ['awp',     'AWP',        'krep:awp'],
+                ['minigun', 'M134 Minigun','krep:minigun'],
+                ['rpg',     'RPG',        'krep:rpg'],
             ];
             const [key, title, id] = map[res.selection];
             weaponConfirm(player, key, title, id);

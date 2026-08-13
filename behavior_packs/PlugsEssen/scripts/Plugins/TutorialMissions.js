@@ -153,7 +153,7 @@ function grantMissionReward(player, step) {
             player.runCommand("give @s minecraft:red_bed 3");
             break;
         case 4:
-            player.runCommand("give @s krep:g17 1");
+            player.runCommand("give @s krep:qsz92 1");
             player.runCommand("give @s krep:mm9 32");
             break;
         case 5:

@@ -2,31 +2,31 @@ import { world, system } from '@minecraft/server';
 import { ActionFormData } from '@minecraft/server-ui';
 import { buildAmmoRecipe, describeRecipe, executeCraft, t } from '../global/craftingEconomy';
 
-// ── Recetas de balas ──────────────────────────────────────────────────────────
-// Rebalanceado: vanilla (hierro, carbón, pólvora) + Beans (aluminio, acero)
-// DZ solo en calibres altos (.338 Lapua, RPG).
+// ── Recetas de balas — EACRebootB (rebalanceadas) ─────────────────────────────
+// Filosofía: accesibles, sin DZ hasta calibres altos. Beans solo en calibres medios+.
 // Se pasa dz:{} explícitamente para anular el default de AMMO_DZ_BY_TIER.
 const RECIPES = {
-    // Calibres pistola/SMG — solo vanilla
-    mm9:       { recipe: buildAmmoRecipe(1, { iron_nugget: 20, gunpowder: 16,  coal: 30 }, { dz: {} }), yield: 64 },
-    acp45:     { recipe: buildAmmoRecipe(1, { iron_nugget: 18, gunpowder: 26,  coal: 30 }, { dz: {} }), yield: 30 },
-    gauge12:   { recipe: buildAmmoRecipe(1, { iron_nugget: 40, gunpowder: 18, coal: 60 }, { dz: {} }), yield: 12 },
-    // Calibres rifles intermedios — vanilla + aluminio Beans
+    // ── Pistola — mm5821 (QSZ-92) ─────────────────────────────────────────────
+    // Calibre ligero. Solo vanilla, alto yield. Primera bala del juego.
+    mm5821:    { recipe: buildAmmoRecipe(1, { iron_nugget: 18, gunpowder: 6,  coal: 25 }, { dz: {} }), yield: 48 },
+    // ── SMG — mm9 (QCQ-171) ───────────────────────────────────────────────────
+    // Ligeramente más cara que la pistola por el mayor yield.
+    mm9:       { recipe: buildAmmoRecipe(1, { iron_nugget: 20, gunpowder: 8,  coal: 30 }, { dz: {} }), yield: 64 },
+    // ── ARs 5.56 — mm556 (HK416, T112, M16A4, K2, Type89, Type95, ARKA) ──────
+    // Primer calibre con Beans: 1 aluminium. Muy accesible.
     mm556:     { recipe: buildAmmoRecipe(2, { iron_nugget: 15, gunpowder: 9,  coal: 50, 'af:aluminium_ingot': 1 }, { dz: {} }), yield: 30 },
-    m43:       { recipe: buildAmmoRecipe(2, { iron_nugget: 12, gunpowder: 9,  coal: 50, 'af:aluminium_ingot': 1 }, { dz: {} }), yield: 30 },
-    mm5728:    { recipe: buildAmmoRecipe(2, { iron_nugget: 14, gunpowder: 6,  coal: 45, 'af:aluminium_ingot': 1 }, { dz: {} }), yield: 48 },
-    mm4630:    { recipe: buildAmmoRecipe(2, { iron_nugget: 10, gunpowder: 10, coal: 60, 'af:aluminium_ingot': 1 }, { dz: {} }), yield: 48 },
+    // ── ARs 5.45 — mm545 (AK12, Type88, Type882) ──────────────────────────────
+    // Similar al 5.56. Mismo tier, ligera variación de materiales.
+    mm545:     { recipe: buildAmmoRecipe(2, { iron_nugget: 12, gunpowder: 9,  coal: 50, 'af:aluminium_ingot': 1 }, { dz: {} }), yield: 30 },
+    // ── ARs 5.8 — mm5842 (Type95, QBZ191, QBU191, QJB95, QJB201) ────────────
+    // Calibre avanzado chino. Más aluminio por ser más preciso/potente.
     mm5842:    { recipe: buildAmmoRecipe(3, { iron_nugget: 12, gunpowder: 9,  coal: 60, 'af:aluminium_ingot': 2 }, { dz: {} }), yield: 30 },
-    // .357 Mag — calibre revólver pesado, solo vanilla
-    mag357:    { recipe: buildAmmoRecipe(2, { iron_nugget: 25, gunpowder: 18, coal: 80 }, { dz: {} }), yield: 30 },
-    // Calibres francotirador — vanilla + aluminio, sin DZ
-    win308:    { recipe: buildAmmoRecipe(3, { iron_ingot: 2, gunpowder: 20, coal: 80, 'af:aluminium_ingot': 2 }, { dz: {} }), yield: 20 },
-    win308box: { recipe: buildAmmoRecipe(3, { iron_ingot: 2, gunpowder: 20, coal: 80, 'af:aluminium_ingot': 2 }, { dz: {} }), yield: 1  },
-    // .50 AE — primer uso de acero Beans, sin DZ
-    ae50:      { recipe: buildAmmoRecipe(3, { iron_ingot: 3, gunpowder: 18, coal: 90, 'af:steel_ingot': 1 }, { dz: {} }), yield: 36 },
-    // .338 Lapua — calibre élite, acero + duct_tape (DZ mínimo, fácil de conseguir)
-    lapua308:  { recipe: buildAmmoRecipe(4, { iron_ingot: 4, gunpowder: 25, coal: 100, 'af:steel_ingot': 2 }, { dz: { 'mcpe:duct_tape': 1 } }), yield: 30 },
-    // RPG Rocket — explosivo, DZ moderado sin detonador
+    // ── Battle Rifles — fury277 (M7, M8) ─────────────────────────────────────
+    // Calibre élite. Acero Beans + DZ mínimo (duct_tape: fácil en construction).
+    fury277:   { recipe: buildAmmoRecipe(4, { iron_ingot: 4,  gunpowder: 25, coal: 100, 'af:steel_ingot': 2 }, { dz: { 'mcpe:duct_tape': 1 } }), yield: 20 },
+    // ── Sniper — lapua308/lapua338 (AWP) — EXCEPCIÓN ──────────────────────────
+    lapua308:  { recipe: buildAmmoRecipe(4, { iron_ingot: 4,  gunpowder: 25, coal: 100, 'af:steel_ingot': 2 }, { dz: { 'mcpe:duct_tape': 1 } }), yield: 30 },
+    // ── RPG Rocket — EXCEPCIÓN ────────────────────────────────────────────────
     rpgrockete:{ recipe: buildAmmoRecipe(5, { iron_ingot: 9, gunpowder: 36, 'af:steel_ingot': 2 }, { dz: { 'mcpe:plastic_explosive': 2, 'mcpe:nail_box': 1 } }), yield: 1 },
 };
 
@@ -287,29 +287,22 @@ function ammoMainMenu(player) {
         });
 }
 
-// ─── Balas ───────────────────────────────────────────────────────────────────
+// ─── Balas — EACRebootB ───────────────────────────────────────────────────────
 function craftammo(player) {
     new ActionFormData()
         .title('§l§fBalas')
-        .button('5.56x45mm',    'textures/items/m885')
-        .button('9x19mm',       'textures/items/9mm')
-        .button('.45 ACP',      'textures/items/45acp')
-        .button('.50 AE',       'textures/items/50ae')
-        .button('12 Gauge',     'textures/items/12gauge')
-        .button('5.7x28mm',     'textures/items/5728mm')
-        .button('.308 Win',     'textures/items/308win')
-        .button('RPG Rocket',   'textures/items/rpgrocket')
-        .button('.308 Lapua',   'textures/items/lapua308')
-        .button('7.62x39mm',    'textures/items/m43')
-        .button('4.6x30mm',     'textures/items/4630mm')
-        .button('.357 Mag',     'textures/items/357mag')
-        .button('5.8x42mm',     'textures/items/5842mm')
-        .button('.308 Win Box', 'textures/items/308winbox')
+        .button('5.8x21mm §8(QSZ-92)',         'textures/items/ammo/mm5821')
+        .button('9x19mm §8(QCQ-171)',           'textures/items/ammo/mm9')
+        .button('5.56x45mm §8(HK/T112/M16/K2/Type89/95/ARKA)', 'textures/items/ammo/mm556')
+        .button('5.45x39mm §8(AK12/Type88/882)','textures/items/ammo/mm545')
+        .button('5.8x42mm §8(QBZ191/QJB95/QBU191/201)', 'textures/items/ammo/mm5842')
+        .button('.277 Fury §8(M7/M8)',           'textures/items/ammo/fury277')
+        .button('.338 Lapua §8(AWP)',            'textures/items/lapua308')
+        .button('RPG Rocket §8(EXCEPCION)',      'textures/items/rpgrocket')
         .show(player)
         .then(res => {
             if (res.canceled) { ammoMainMenu(player); return; }
-            const fns = [mm556c,mm9c,acp45c,ae50c,gauge12c,mm5728c,win308c,
-                         rpgrocketec,lapua308c,m43c,mm4630c,mag357c,mm5842c,win308boxc];
+            const fns = [mm5821c, mm9c, mm556c, mm545c, mm5842c, fury277c, lapua308c, rpgrocketec];
             if (fns[res.selection]) fns[res.selection](player);
         });
 }
@@ -333,20 +326,14 @@ function craftConfirm(player, key, title, id) {
         });
 }
 
-function mm556c(p)      { craftConfirm(p,'mm556',    '5.56x45mm',    'krep:mm556'); }
-function mm9c(p)        { craftConfirm(p,'mm9',      '9x19mm',       'krep:mm9'); }
-function acp45c(p)      { craftConfirm(p,'acp45',    '.45 ACP',      'krep:acp45'); }
-function ae50c(p)       { craftConfirm(p,'ae50',     '.50 AE',       'krep:ae50'); }
-function gauge12c(p)    { craftConfirm(p,'gauge12',  '12 Gauge',     'krep:12gauge'); }
-function mm5728c(p)     { craftConfirm(p,'mm5728',   '5.7x28mm',     'krep:mm5728'); }
-function win308c(p)     { craftConfirm(p,'win308',   '.308 Win',     'krep:win308'); }
-function win308boxc(p)  { craftConfirm(p,'win308box','.308 Win Box', 'krep:win308box'); }
-function rpgrocketec(p) { craftConfirm(p,'rpgrockete','RPG Rocket',  'krep:rpgrocket'); }
-function lapua308c(p)   { craftConfirm(p,'lapua308', '.308 Lapua',   'krep:lapua338'); }
-function m43c(p)        { craftConfirm(p,'m43',      '7.62x39mm',    'krep:m43'); }
-function mm4630c(p)     { craftConfirm(p,'mm4630',   '4.6x30mm',     'krep:mm4630'); }
-function mag357c(p)     { craftConfirm(p,'mag357',   '.357 Mag',     'krep:mag357'); }
-function mm5842c(p)     { craftConfirm(p,'mm5842',   '5.8x42mm',     'krep:mm5842'); }
+function mm5821c(p)     { craftConfirm(p,'mm5821',    '5.8x21mm',     'krep:mm5821'); }
+function mm9c(p)        { craftConfirm(p,'mm9',       '9x19mm',       'krep:mm9'); }
+function mm556c(p)      { craftConfirm(p,'mm556',     '5.56x45mm',    'krep:mm556'); }
+function mm545c(p)      { craftConfirm(p,'mm545',     '5.45x39mm',    'krep:mm545'); }
+function mm5842c(p)     { craftConfirm(p,'mm5842',    '5.8x42mm',     'krep:mm5842'); }
+function fury277c(p)    { craftConfirm(p,'fury277',   '.277 Fury',    'krep:fury277'); }
+function lapua308c(p)   { craftConfirm(p,'lapua308',  '.338 Lapua',   'krep:lapua338'); }
+function rpgrocketec(p) { craftConfirm(p,'rpgrockete','RPG Rocket',   'krep:rpgrocket'); }
 
 // ═══════════════════════════════════════════════════════════════════
 //  MUNICIÓN DE VEHÍCULOS

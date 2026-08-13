@@ -1,11 +1,11 @@
-{
+﻿{
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "item",
-          "name": "krep:m16a1",
+          "name": "krep:t112",
           "weight": 50,
           "functions": [
             {
@@ -19,7 +19,7 @@
         },
         {
           "type": "item",
-          "name": "krep:m16a1_emp",
+          "name": "krep:t112_emp",
           "weight": 50
         }
       ]
@@ -32,7 +32,7 @@
       "entries": [
         {
           "type": "item",
-          "name": "krep:m885",
+          "name": "krep:awp",
           "weight": 2
         },
         {

@@ -17,14 +17,19 @@
 	},
 	
 	{
-		"pack_id" : "ada14474-e05b-47f6-9f18-bb70288a990d",
-		"subpack" : "t",
-		"version" : [ 1, 2, 0 ]
+		"pack_id" : "9d8e7f6a-5b4c-3d2e-1f0a-9b8c7d6e5f4a",
+		"version" : [ 1, 0, 0 ]
 	},
 	
 	{
 		"pack_id" : "288d1664-4b73-4dbf-b82a-d988ab19327a",
 		"version" : [ 1, 0, 0 ]
+	},
+	
+	{
+		"pack_id" : "ada14474-e05b-47f6-9f18-bb70288a990d",
+		"subpack" : "t",
+		"version" : [ 1, 2, 0 ]
 	},
 	
 	{

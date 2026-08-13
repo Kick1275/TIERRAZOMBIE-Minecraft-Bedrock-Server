@@ -1,4 +1,4 @@
-{
+﻿{
   "pools": [
     {
       "conditions": [
@@ -18,7 +18,7 @@
         { "type": "item", "name": "minecraft:air", "weight": 99 },
 
         // Nuevas municiones
-        { "type": "item", "name": "krep:m885", "weight": 10 },
+        { "type": "item", "name": "krep:awp", "weight": 10 },
         { "type": "item", "name": "krep:mm9", "weight": 15 },
         { "type": "item", "name": "krep:gauge12", "weight": 15 },
         { "type": "item", "name": "krep:acp45", "weight": 10 },
@@ -224,82 +224,82 @@
         // Pistolas nuevas (reemplazando las viejas)
         {
           "type": "item",
-          "name": "krep:m1911",
+          "name": "krep:qsz92",
           "weight": 6,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:m1911_emp", "weight": 6 },
+        { "type": "item", "name": "krep:qsz92_emp", "weight": 6 },
         {
           "type": "item",
-          "name": "krep:g17",
+          "name": "krep:qsz92",
           "weight": 6,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:g17_emp", "weight": 6 },
+        { "type": "item", "name": "krep:qsz92_emp", "weight": 6 },
         {
           "type": "item",
-          "name": "krep:deagle",
+          "name": "krep:qsz92",
           "weight": 3,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:deagle_emp", "weight": 3 },
+        { "type": "item", "name": "krep:qsz92_emp", "weight": 3 },
 
         // Escopetas nuevas
         {
           "type": "item",
-          "name": "krep:m870",
+          "name": "krep:qcq171",
           "weight": 5,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:m870_emp", "weight": 5 },
+        { "type": "item", "name": "krep:qcq171_emp", "weight": 5 },
 
         // Subfusiles nuevos
         {
           "type": "item",
-          "name": "krep:mp5",
+          "name": "krep:qcq171",
           "weight": 4,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:mp5_emp", "weight": 4 },
+        { "type": "item", "name": "krep:qcq171_emp", "weight": 4 },
         {
           "type": "item",
-          "name": "krep:ump",
+          "name": "krep:qcq171",
           "weight": 4,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:ump_emp", "weight": 4 },
+        { "type": "item", "name": "krep:qcq171_emp", "weight": 4 },
 
         // Rifles tácticos
         {
           "type": "item",
-          "name": "krep:m4a1",
+          "name": "krep:type95",
           "weight": 2,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:m4a1_emp", "weight": 2 },
+        { "type": "item", "name": "krep:type95_emp", "weight": 2 },
         {
           "type": "item",
-          "name": "krep:g36",
+          "name": "krep:type89",
           "weight": 2,
           "functions": [
             { "function": "set_damage", "damage": { "min": 0.1, "max": 1.0 } }
           ]
         },
-        { "type": "item", "name": "krep:g36_emp", "weight": 2 },
+        { "type": "item", "name": "krep:type89_emp", "weight": 2 },
 
         // Mantener todo el equipamiento policial existente
         {

@@ -18,6 +18,9 @@
         "cape": "textures/entity/cape_invisible",
         "m157_scope": "textures/scope/m157",
         "acog_scope": "textures/scope/acog",
+        "rpg": "textures/gun/rpg",
+        "awp": "textures/gun/awp",
+        "minigun": "textures/gun/minigun",
         "type95": "textures/guns/type95",
         "m7": "textures/guns/m7",
         "t112": "textures/guns/t112",
@@ -43,6 +46,9 @@
         "m157_scope": "geometry.m157_scope",
         "acog_scope": "geometry.acog_scope",
         "universalroot": "geometry.universalroot",
+        "minigun": "geometry.minigun",
+        "rpg": "geometry.rpg",
+        "awp": "geometry.awp",
         "type95": "geometry.type95",
         "m7": "geometry.m7",
         "t112": "geometry.t112",
@@ -161,7 +167,16 @@
           "variable.type88 = query.get_equipped_item_name=='type88';",
           "variable.arka = query.get_equipped_item_name=='arka';",
           "variable.type89 = query.get_equipped_item_name=='type89';",
-          "variable.holding_all_guns = query.get_equipped_item_name=='qjb201' || query.get_equipped_item_name=='m8' || query.get_equipped_item_name=='type95' || query.get_equipped_item_name=='m7' || query.get_equipped_item_name=='t112' || query.get_equipped_item_name=='k2' || query.get_equipped_item_name=='ak12' || query.get_equipped_item_name=='pm2' || query.get_equipped_item_name=='qbz191' || query.get_equipped_item_name=='qsz92' || query.get_equipped_item_name=='hk416' || query.get_equipped_item_name=='qbu191' || query.get_equipped_item_name=='qjb95' || query.get_equipped_item_name=='m16a4' || query.get_equipped_item_name=='qcq171' || query.get_equipped_item_name=='type88' || query.get_equipped_item_name=='arka' || query.get_equipped_item_name=='type89' || query.get_equipped_item_name=='type882';",
+          "variable.awp = query.get_equipped_item_name=='awp' || query.get_equipped_item_name=='awp_emp';",
+          "variable.awpb = query.get_equipped_item_name=='awp';",
+          "variable.awpemp = query.get_equipped_item_name=='awp_emp';",
+          "variable.rpg = query.get_equipped_item_name=='rpg' || query.get_equipped_item_name=='rpg_emp';",
+          "variable.rpgb = query.get_equipped_item_name=='rpg';",
+          "variable.rpgemp = query.get_equipped_item_name=='rpg_emp';",
+          "variable.minigun = query.get_equipped_item_name=='minigun' || query.get_equipped_item_name=='minigun_emp';",
+          "variable.minigunb = query.get_equipped_item_name=='minigun';",
+          "variable.minigunemp = query.get_equipped_item_name=='minigun_emp';",
+          "variable.holding_all_guns = query.get_equipped_item_name=='qjb201' || query.get_equipped_item_name=='m8' || query.get_equipped_item_name=='type95' || query.get_equipped_item_name=='m7' || query.get_equipped_item_name=='t112' || query.get_equipped_item_name=='k2' || query.get_equipped_item_name=='ak12' || query.get_equipped_item_name=='pm2' || query.get_equipped_item_name=='qbz191' || query.get_equipped_item_name=='qsz92' || query.get_equipped_item_name=='hk416' || query.get_equipped_item_name=='qbu191' || query.get_equipped_item_name=='qjb95' || query.get_equipped_item_name=='m16a4' || query.get_equipped_item_name=='qcq171' || query.get_equipped_item_name=='type88' || query.get_equipped_item_name=='arka' || query.get_equipped_item_name=='type89' || query.get_equipped_item_name=='type882' || variable.awp || variable.rpg || variable.minigun;",
           "variable.type882 = query.get_equipped_item_name=='type882';"
         ],
         "animate": [
@@ -294,6 +309,33 @@
           },
           {
             "type882_tp": "v.type882 && !v.is_first_person"
+          },
+          {
+            "minigun_fp": "variable.is_first_person && variable.minigun"
+          },
+          {
+            "minigun_walk_ac": "variable.is_first_person && variable.minigun"
+          },
+          {
+            "minigun_tp": "variable.minigun && variable.is_third_person"
+          },
+          {
+            "awp_fp": "variable.is_first_person && variable.awp"
+          },
+          {
+            "awp_walk_ac": "variable.is_first_person && variable.awp"
+          },
+          {
+            "awp_tp": "variable.awp && variable.is_third_person"
+          },
+          {
+            "rpg_fp": "variable.is_first_person && variable.rpg"
+          },
+          {
+            "rpg_walk_ac": "variable.is_first_person && variable.rpg"
+          },
+          {
+            "rpg_tp": "variable.rpg && variable.is_third_person"
           }
         ],
         "should_update_effects_offscreen": "1.0"
@@ -657,7 +699,36 @@
         "type882_fp_inspect": "animation.type882.fp.inspect",
         "type882_fp_sight": "animation.type882.fp.sight",
         "type882_fp_reload": "animation.type882.fp.reload",
-        "type882_fp_reload_tac": "animation.type882.fp.tac"
+        "type882_fp_reload_tac": "animation.type882.fp.tac",
+        "awp_tp": "controller.animation.awp.tp",
+        "awp_tp_hold": "animation.awp.tp.hold",
+        "awp_tp_sprint": "animation.awp.tp.sprint",
+        "awp_tp_sight": "animation.awp.tp.sight",
+        "awp_fp": "controller.animation.awp.fp",
+        "awp_fp_draw": "animation.awp.draw",
+        "awp_fp_hold": "animation.awp.fp.hold",
+        "awp_fp_sprint": "animation.awp.fp.sprint",
+        "awp_fp_sight": "animation.awp.fp.sight",
+        "awp_fp_reload": "animation.awp.fp.reload",
+        "awp_fp_reload_tac": "animation.awp.fp.tac",
+        "awp_walk_ac": "controller.animation.awp.walk",
+        "rpg_tp": "controller.animation.rpg.tp",
+        "rpg_tp_hold": "animation.rpg.tp.hold",
+        "rpg_tp_sprint": "animation.rpg.tp.sprint",
+        "rpg_fp": "controller.animation.rpg.fp",
+        "rpg_fp_draw": "animation.rpg.draw",
+        "rpg_fp_hold": "animation.rpg.fp.hold",
+        "rpg_fp_sprint": "animation.rpg.fp.sprint",
+        "rpg_fp_reload": "animation.rpg.fp.reload",
+        "rpg_walk_ac": "controller.animation.rpg.walk",
+        "minigun_tp": "controller.animation.minigun.tp",
+        "minigun_tp_hold": "animation.minigun.tp.hold",
+        "minigun_tp_sprint": "animation.minigun.tp.sprint",
+        "minigun_fp": "controller.animation.minigun.fp",
+        "minigun_fp_draw": "animation.minigun.draw",
+        "minigun_fp_hold": "animation.minigun.fp.hold",
+        "minigun_fp_sprint": "animation.minigun.fp.sprint",
+        "minigun_walk_ac": "controller.animation.minigun.walk"
       },
       "sound_effects": {
         "wfoly_ar_galima_inspect_01": "wfoly_ar_galima_inspect_01",
@@ -914,6 +985,15 @@
         },
         {
           "controller.render.type882": "variable.type882"
+        },
+        {
+          "controller.render.awp": "variable.awp"
+        },
+        {
+          "controller.render.rpg": "variable.rpg"
+        },
+        {
+          "controller.render.minigun": "variable.minigun"
         }
       ],
       "enable_attachables": true
